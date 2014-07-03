@@ -1,4 +1,4 @@
-// REVISION 25JUN14
+// REVISION 02JUL14
 
 // class CfgVehicles
 // {
@@ -139,6 +139,26 @@
 				count = 10;
 				name = "ItemcTabHCam";
 			};
+			class _xx_UGL_FlareCIR_F {
+				count = 25;
+				name = "UGL_FlareCIR_F";
+			};
+			class _xx_UGL_FlareGreen_F {
+				count = 25;
+				name = "UGL_FlareGreen_F";
+			};
+			class _xx_UGL_FlareRed_F {
+				count = 25;
+				name = "UGL_FlareRed_F";
+			};
+			class _xx_UGL_FlareWhite_F {
+				count = 25;
+				name = "UGL_FlareWhite_F";
+			};
+			class _xx_AGM_EarBuds {
+				count = 50;
+				name = "AGM_EarBuds";
+			};
 
 // UNIFORMS
 			class _xx_V_mas_mar_PlateCarrier1_rgr_d {
@@ -152,6 +172,14 @@
 			class _xx_V_mas_mar_PlateCarrier2_rgr_d {
 				count = 10;
 				name = "V_mas_mar_PlateCarrier2_rgr_d";
+			};
+			class _xx_U_mas_mar_B_CombatUniform_veg {
+				count = 10;
+				name = "U_mas_mar_B_CombatUniform_veg";
+			};
+			class _xx_U_mas_mar_B_IndUniform1_v {
+				count = 10;
+				name = "U_mas_mar_B_IndUniform1_v";
 			};
 			
 // MEDICAL

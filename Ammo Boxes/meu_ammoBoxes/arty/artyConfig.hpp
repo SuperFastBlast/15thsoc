@@ -1,4 +1,4 @@
-// REVISION 25JUN14
+// REVISION 02JUL14
 
 // class CfgVehicles
 // {
@@ -70,6 +70,10 @@
 			class _xx_FHQ_optic_HWS_G33 {
 				count = 15;
 				name = "FHQ_optic_HWS_G33";
+			};
+			class _xx_AGM_EarBuds {
+				count = 50;
+				name = "AGM_EarBuds";
 			};
 
 // HELMETS

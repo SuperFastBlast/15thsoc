@@ -61,5 +61,6 @@
  _unit additem "acc_flashlight";
  _unit additem "AGM_Bandage";
  _unit additem "AGM_Bandage";
+ _unit additem "AGM_EarBuds";
 
  _unit adduniform "U_mas_mar_B_IndUniform1_v";
