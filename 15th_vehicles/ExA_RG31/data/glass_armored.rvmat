@@ -1,0 +1,11 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.29
+//Wed Apr 09 20:47:33 2014 : Source 'file' date Wed Apr 09 20:47:33 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class C:/Program Files (x86)/Steam/SteamApps/common/Arma 2/AddOns/Ca/Ca/data/penetration/glass_armored.rvmat{
+surfaceInfo = "ExA_RG31\data\glass_armored.bisurf";
+//};

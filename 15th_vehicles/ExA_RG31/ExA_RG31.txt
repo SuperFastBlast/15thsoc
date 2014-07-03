@@ -1,0 +1,242 @@
+ADDON : ExA RG31 made by ExplosiveAids & Stiltman
+
+Version : 1.3 (Closed Beta)
+
+Release Date : 2013-07-03
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+http://creativecommons.org/licenses/by-nc-nd/3.0/
+
+======================
+CONTACT INFORMATION :
+======================
+
+Stiltman
+leros@home.se
+Http://www.ratdd.se
+
+
+======================
+IMPORTANT NOTE :
+======================
+
+Requirement: Community Base Addons (CBA)
+
+This addon is Created with Arma 2 Combined Ops
+it has NOT been tested with Arma 2 standalone.
+it has NOT been tested with Arma 2 Operation Arrowhead standalone.
+
+
+THIS IS A BETA, IF YOU HAVE NOT BEEN INVITED YOU ARE NOT ALLOWED TO HAVE THIS FILE
+PLEASE DELETE IT!!!
+
+IF YOU DO NOT WANT TO DELETE IT ATLEAST DO NOT SHARE IT WITH OTHERS!!!
+
+IF YOU DO SHARE IT WITH OTHERS, WELL JUST DONT!!!!
+
+
+
+======================
+DESCRIPTION :
+======================
+
+This is a Cooperation between ExplosiveAids (ExA) and Stiltman (STI).
+
+The RG31 mk5 is a 4×4 armoured mine-protected personnel carrier vehicle (MPV)
+developed by BAE Systems in South Africa. The mk5 is a standard variant
+in the RG-31 family and specially designed for resisting improvised explosives and mines.
+
+
+
+
+==============================
+CONTENT/FEATURES :
+==============================
+
+- RG31 Mk5 M2
+
+- RG31 Mk5 M2 with Gyrocam
+
+- RG31 Mk5 Mk.19
+
+- RG31 Mk5E
+
+
+
+-- Modules --
+
+There are now 4 modules in the editor
+
+1 (ExA) Satcom - for showing the Satcom antennas
+1 (ExA) Crewduke - for showing the CREW antennas
+1 (ExA) Boomerang - for showing the Boomerang shotfinder antenna
+
+1 (ExA) Spare wheels (ACE) - Only for use with ACE makes sparewheels
+			     disappear as you take them out of the car
+
+Synchronize the ones you want with the vehicles you want to show the
+antennas / have spare wheels
+
+-- Animations --
+
+optional VS17 panel can be animated by putting 
+
+this animate ["vs17", 0]
+
+in the units init field in the editor
+
+
+Optional hiding/showing of the turret camo netting on desert variants.
+
+this animate ["camonet", 0] //to show
+this animate ["camonet", 1] //to hide
+
+
+Optional show and hide antennas via init instead of module
+
+this animate ["SYS_satcom", 0]
+this animate ["SYS_crewduke", 0]
+this animate ["SYS_boomerang", 0]
+
+
+-- Hidden Textures --
+
+Changing Branch, ID letter numbers.
+hidden textures as follows
+0 Branch
+1 ID letter
+2 ID number
+
+Branch ID can be set by adding code to the units INIT field
+For US Army:
+this setObjectTexture [0,"\exa_rg31\data\id\id_army_ca.paa"];
+
+For USMC (default branch):
+this setObjectTexture [0,"\exa_rg31\data\id\id_usmc_ca.paa"];
+
+
+ID Letter and numbers can be mixed and matched as prefered
+Assigning the place by a 1 or 2 before the texture path
+and by changing the X to any letter or number a-z 1-0
+
+
+this setObjectTexture [1,"\exa_rg31\data\id\id_X_ca.paa"];
+
+making possible combinations like A1, A2, F3 or HQ, AS etc.
+
+Example for HQ:
+this setObjectTexture [1,"\exa_rg31\data\id\id_h_ca.paa"];this setObjectTexture [2,"\exa_rg31\data\id\id_q_ca.paa"];
+
+==============================
+CHANGES/BUGS :
+==============================
+
+1.3
+-Upped the armor values hopefully
+-Gyrocam version
+-Mk5E alpha version
+-incresed cargo size to 6+2 for Mk5 and 8+2 for Mk5E
+
+1.0(.0)
+-Public Release
+-Small fixes to make ready for release
+
+0.9.8 RC2
+-Added antenna SATCOM and module
+-various fixes and tweaks for finalization
+
+0.9.8 RC1
+-Added modules for showing crewduke, boomerang
+-Added module for showing/hiding sparewheels in ACE when wheel in cargo
+-Added Branch, and ID planes
+-Randomized serial numbers
+-ACRE tweaks
+-New sparewheel mounts
+-Changed all versions to 4cargo versions
+-Tweaks on geometry LOD
+-Front windows now bulletproof
+-Smoother normalmap for inside windows
+-Clearer front windows for driver
+-The two softantennas now animated
+
+0.9.2
+-Changed Driver to commander, no more gunner controling lights
+-Fixed hopefully so gunner can switch from cargo to gunnerseat even with more people
+-Various fixes and editing of ACE and ACRE values
+
+0.9.1
+-Fixed displayname short was wrong on mk19
+-Fixed so you dont loose ACE ruck on driver/gunner
+-Changed terrainCoef to have it a little faster offroad
+-Added ACRE configs
+-Fixed headlight sprite visible with lights turned off
+
+0.9.0
+-Added Mk.19 variant in TAN and OD
+-Added Option to hide/show the camonet on the turret
+-Added/updated the new JSRS sounds
+
+0.8.5
+-Added test version with 4 cargo seats
+-Added OD M2 variant
+-Added Optional VS17 panel that can be animated to show
+-Incresed Armor to 150
+
+0.8.1
+-Fixed texture bug with headlights and rearlights.
+-Fixed M2 turret not able to aim properly becouse of things like hands when aiming up.
+-Added some more ACE values.
+-Changed turning so it should be a bit heavier feel.
+-Adjusted cargo proxies so feet do not stick into the floor.
+
+
+0.8
+-Beta Release
+
+
+
+======================
+CLASSNAMES :
+======================
+
+ExA_RG31_M2
+ExA_RG31_M2_OD
+ExA_RG31_Mk19
+ExA_RG31_Mk19_OD
+
+
+======================
+INSTALLATION :
+======================
+
+The PBO and Sign files in the archive need to be extracted into your ArmA/Addons folder.
+However the mod folder method is the better solution.
+Copy the following URL into your browser to view a Mod Folder Tutorial : http://tinyurl.com/armamodfolder
+
+
+======================
+CREDITS AND THANKS :
+======================
+
+-ExplosiveAids (ExA) for his awesome modeling and texturing.
+-Stiltman (STI) for everything related to bringing these into arma 2.
+-LordJarhead of JSRS for the new awesome sounds, thanks alot!
+-Norrin for scripting help and scripts.
+-BIS for ArmA, ArmA2, Arrowhead.
+-BIS for M2 and Mk19 models from the sample models.
+-Everyone else that i have asked questions and/or forgotten ;)
+
+Also special thanks to all our beta testers who have helped us put the RG
+through its paces, you have all given us good input and suggestions.
+So thank you!
+
+
+======================
+DISCLAIMER :
+======================
+
+I take no responsibility for (im)possible damage to your game/system that may be caused
+by installation of this Addon. This Addon is also prohibited to be used in any commercial product.
+
+This readme has been made by using the ArmedAssault.info Readme Generator.
+Check ArmedAssault.info to get the latest ArmA news !

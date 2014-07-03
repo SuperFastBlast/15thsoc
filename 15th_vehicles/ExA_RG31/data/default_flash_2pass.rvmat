@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.29
+//Wed Apr 09 20:35:52 2014 : Source 'file' date Wed Apr 09 20:35:52 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class C:/Program Files (x86)/Steam/SteamApps/common/Arma 2/AddOns/Ca/Ca/data/data/flash-pass2.rvmat{
+ambient[] = {1,1,1,1};
+diffuse[] = {1,1,1,1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,0};
+specular[] = {0,0,0,0};
+specularPower = 0;
+PixelShaderID = "AlphaNoShadow";
+VertexShaderID = "Basic";
+renderFlags[] = {"NoColorWrite"};
+//};

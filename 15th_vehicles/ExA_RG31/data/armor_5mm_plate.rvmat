@@ -1,0 +1,22 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.29
+//Wed Apr 09 20:45:24 2014 : Source 'file' date Wed Apr 09 20:45:24 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class C:/Program Files (x86)/Steam/SteamApps/common/Arma 2/AddOns/Ca/Ca/data/penetration/armor_5mm_plate.bisurf{
+Density = 7800;
+Thickness = 5;
+rough = 0.1;
+dust = 0;
+bulletPenetrability = 200;
+bulletPenetrabilityWithThickness = 13;
+soundEnviron = "Empty";
+isWater = "false";
+friction = 0.7;
+restitution = 0.3;
+impact = "Hit_Metal";
+soundHit = "metal";
+//};
