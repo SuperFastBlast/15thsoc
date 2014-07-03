@@ -1,6 +1,6 @@
 //15th Corpsman Loadout
 //By: SSgt Callaghan/C. Johnston
-//updated 25JUN14
+//updated 02JUL14
 
 
  _unit = _this select 1;
@@ -28,14 +28,13 @@
  _unit assignitem "itemGPS";
 
  _unit additem "itemRadio";
- _unit additem "itemRadio";
 
  _unit addbackpack "B_Carryall_cbr";
 
- (unitBackpack _unit) additemCargo ["AGM_Bandage" ,15];
- (unitBackpack _unit) additemCargo ["AGM_Epipen" ,5];
- (unitBackpack _unit) additemCargo ["AGM_Morphine" ,5];
- (unitBackpack _unit) additemCargo ["AGM_Bloodbag" ,5];
+ (unitBackpack _unit) additemCargo ["AGM_Bandage" ,30];
+ (unitBackpack _unit) additemCargo ["AGM_Epipen" ,10];
+ (unitBackpack _unit) additemCargo ["AGM_Morphine" ,20];
+ (unitBackpack _unit) additemCargo ["AGM_Bloodbag" ,2];
 
  _unit addmagazine "30Rnd_556x45_Stanag";
  _unit addmagazine "30Rnd_556x45_Stanag";
@@ -45,8 +44,7 @@
  _unit addmagazine "30Rnd_556x45_Stanag";
  _unit addmagazine "30Rnd_556x45_Stanag";
  
- _unit addweapon "arifle_mas_m4";
- _unit addPrimaryWeaponItem "FHQ_optic_MicroCCO";
+ _unit addweapon "arifle_mas_m4_m203";
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
 
  _unit addmagazine "rh_15rnd_9x19_m9";
@@ -59,11 +57,8 @@
  _unit addmagazine "SmokeShellBlue";
  _unit addmagazine "SmokeShellPurple";
  _unit addmagazine "SmokeShellPurple";
- _unit addmagazine "SmokeShellPurple";
  _unit addmagazine "SmokeShell";
  _unit addmagazine "SmokeShell";
- _unit addmagazine "SmokeShell";
- _unit addmagazine "SmokeShell";
- _unit addmagazine "SmokeShell";
+ _unit additem "AGM_EarBuds";
  
  _unit adduniform "U_mas_mar_B_CombatUniform_veg";

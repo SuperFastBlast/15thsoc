@@ -1,4 +1,4 @@
-// REVISION 25JUN14
+// REVISION 02JUL14
 
 // class CfgVehicles
 // {
@@ -85,6 +85,10 @@
 				count = 10;
 				name = "NVGoggles_OPFOR";
 			};
+			class _xx_AGM_EarBuds {
+				count = 50;
+				name = "AGM_EarBuds";
+			};
 
 // HELMETS
 			class _xx_H_mas_mar_HelmetBind_v {
@@ -153,7 +157,7 @@
 
 //Smoke 203
 			class _xx_REV1_flash {
-				count = 100;
+				count = 200;
 				magazine = "REV1_flash";
 			};
 			class _xx_Chemlight_green {
@@ -196,14 +200,9 @@
 				count = 5;
 				weapon = "rh_m9";
 			};
-			class _xx_arifle_mas_m4 {
+			class _xx_arifle_mas_m16_gl {
 				count = 5;
-				weapon = "arifle_mas_m4";
-			};
-
-			class _xx_arifle_mas_m16 {
-				count = 5;
-				weapon = "arifle_mas_m16";
+				weapon = "arifle_mas_m16_gl";
 			};
 		};
 	};

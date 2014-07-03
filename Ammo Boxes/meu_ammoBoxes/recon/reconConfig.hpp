@@ -1,4 +1,4 @@
-// REVISION 25JUN14
+// REVISION 02JUL14
 
 // class CfgVehicles
 // {
@@ -377,6 +377,10 @@
 			class _xx_ItemSMGR {
 				count = 25;
 				name = "ItemSMGR";
+			};
+			class _xx_AGM_EarBuds {
+				count = 50;
+				name = "AGM_EarBuds";
 			};
 			
 // UNIFORMS

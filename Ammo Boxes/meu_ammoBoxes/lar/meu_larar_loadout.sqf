@@ -51,5 +51,6 @@
  _unit addmagazine "SmokeShell";
  _unit addmagazine "SmokeShellGreen";
  _unit addmagazine "REV1_flash";
+ _unit additem "AGM_EarBuds";
 
  _unit adduniform "U_mas_mar_B_IndUniform1_v";

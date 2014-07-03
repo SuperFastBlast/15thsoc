@@ -1,4 +1,4 @@
-// REVISION 25JUN14
+// REVISION 02JUL14
 
 // class CfgVehicles
 // {
@@ -61,6 +61,14 @@
 			class _xx_optic_tws {
 				count = 15;
 				name = "optic_tws";
+			};
+			class _xx_mas_acog_eo {
+				count = 10;
+				name = "mas_acog_eo";
+			};
+			class _xx_FHQ_optic_AC11704 {
+				count = 10;
+				name = "FHQ_optic_AC11704";
 			};
 			class _xx_FHQ_optic_tws3050 {
 				count = 15;
@@ -187,6 +195,22 @@
 			class _xx_ItemSMGR {
 				count = 20;
 				name = "ItemSMGR";
+			};
+			class _xx_UGL_FlareGreen_F {
+				count = 25;
+				name = "UGL_FlareGreen_F";
+			};
+			class _xx_UGL_FlareRed_F {
+				count = 25;
+				name = "UGL_FlareRed_F";
+			};
+			class _xx_UGL_FlareWhite_F {
+				count = 25;
+				name = "UGL_FlareWhite_F";
+			};
+			class _xx_AGM_EarBuds {
+				count = 50;
+				name = "AGM_EarBuds";
 			};
 		};
 	

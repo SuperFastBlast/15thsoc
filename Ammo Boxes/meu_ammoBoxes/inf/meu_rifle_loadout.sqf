@@ -49,6 +49,7 @@
  _unit addmagazine "SmokeShellGreen";
  _unit addmagazine "REV1_flash";
  _unit addmagazine "REV1_flash";
+ _unit additem "AGM_EarBuds";
 
  _unit addweapon "CAF_M72A6";
 

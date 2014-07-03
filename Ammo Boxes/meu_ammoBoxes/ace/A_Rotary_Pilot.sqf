@@ -53,6 +53,7 @@
  _unit unassignItem "nvgoggles";
  _unit additem "NVGoggles_OPFOR";
  _unit assignitem "NVGoggles_OPFOR";
+ _unit additem "AGM_EarBuds";
  
  //Grenades
  _unit addmagazine "Chemlight_green";

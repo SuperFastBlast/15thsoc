@@ -1,4 +1,4 @@
-// REVISION 25JUN14
+// REVISION 02JUL14
 
 // class CfgVehicles
 // {
@@ -108,6 +108,11 @@
 				count = 4;
 				name = "ItemCtabHCam";
 			};
+			class _xx_AGM_EarBuds {
+				count = 50;
+				name = "AGM_EarBuds";
+			};
+
 // UNIFORMS			
 			class _xx_U_B_PilotCoveralls {
 				count = 5;
@@ -142,6 +147,8 @@
 	
 	
 		class TransportMagazines {
+
+// AMMO
 			class _xx_rh_15rnd_9x19_m9 {
 				count = 100;
 				magazine = "rh_15rnd_9x19_m9";
@@ -151,8 +158,7 @@
 				magazine = "30Rnd_556x45_Stanag";
 			};
 
-			//Smoke 203
-			
+//Smoke 203
             class _xx_SmokeShell {
 				count = 20;
 				magazine = "SmokeShell";
@@ -169,7 +175,6 @@
 				count = 20;
 				magazine = "SmokeShellRed";
 			};
-
 			class _xx_SmokeshellBlue {
 				count = 15;
 				magazine = "SmokeshellBlue";
@@ -178,7 +183,6 @@
 				count = 50;
 				magazine = "Chemlight_green";
 			};
-
 		};
 		
 		class TransportWeapons {
