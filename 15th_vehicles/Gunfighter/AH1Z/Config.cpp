@@ -4,9 +4,9 @@
 
 class CfgPatches
 {
-	class HAFM_ArmA2_Helis
+	class meu_AH1Z
 	{
-		units[] ={"AH1Z"};
+		units[] ={"meu_AH1Z"};
 		weapons[] = {};
 		requiredVersion = 0.01;
 		requiredAddons[] = {"A3_Air_F","A3_Weapons_F"};
@@ -55,7 +55,7 @@ class CfgVehicles
 	class PlaneWreck;
 	class HelicopterWreck;
 
-	class AH1Z: Helicopter
+	class meu_AH1Z: Helicopter
 	{
 		selectionHRotorStill = "mainRotorStatic";
 		selectionHRotorMove = "mainRotorBlurred";
@@ -67,7 +67,7 @@ class CfgVehicles
 		cyclicforwardforcecoef = 2.5;//fowards backwards.
 		frontRotorForceCoef = 3;//front rotor(strenth of lift)
 		backRotorForceCoef = 2;//tailrotor(strength of horzontal movement=)
-		simulation = "HelicopterX";
+		simulation = "Helicopter";
 		liftForceCoef = 1.1;
 		maxfordingdepth = 1;
 		sensitivity = 3;
@@ -76,7 +76,7 @@ class CfgVehicles
 		mainrotordive = 2;
 		backrotordive = 2;
 		extCameraPosition[] = {0,6,-18};
-		
+				
 		
 		//end PhysX stuff
 		// stick animation
@@ -285,39 +285,40 @@ class CfgVehicles
 		
 		class Turrets: Turrets
 		{
+			laserScanner = true;
 			class MainTurret: MainTurret
 			{
 				isCopilot = 1;
 				gunnerAction = "AH1Z_Gunner";
 				gunnerInAction = "AH1Z_Gunner";
-				gunnerCompartments = "Compartment2"; // cannmot switch to pilot
-				weapons[]={"M197","HellfireLauncher","SidewinderLaucher_AH1Z",};
-				magazines[]={"750Rnd_M197_AH1","8Rnd_Hellfire","2Rnd_Sidewinder_AH1Z",};
+				gunnerCompartments = "Compartment2"; // cannot switch to pilot
+				weapons[]={"M197","HellfireLauncher","SidewinderLaucher_AH1Z","Laserdesignator_mounted"};
+				magazines[]={"750Rnd_M197_AH1","8Rnd_Hellfire","2Rnd_Sidewinder_AH1Z","Laserbatteries"};
 				memoryPointsGetInGunner= "pos_gunner";
 				memoryPointsGetInGunnerDir= "pos_gunner_dir";
 				gunnerGetInAction = "GetInHigh";
 				gunnerGetOutAction = "GetOutHigh";
+				primaryGunner= true;
 				memoryPointGun = "machinegun";
-				laserscanner = 1;
 				minElev=-60; maxElev=+10; initElev=0;
 				minTurn=-70; maxTurn=+70; initTurn=0;
 				gunnerOpticsModel = "";
-				turretInfoType = "RscOptics_Heli_Attack_02_gunner";
+				turretInfoType = "RscOptics_MBT_02_commander";
 				discreteDistance[] = {100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
-				discreteDistanceInitIndex = 2;
+				discreteDistanceInitIndex = 14;
 				enableManualFire = 1;
 				class OpticsIn {
 				class Wide {
 					gunneropticsmodel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
 					initanglex = 0;
 					initangley = 0;
-					initfov = 0.466;
+					initfov = 0;
 					maxanglex = 30;
 					maxangley = 100;
 					maxfov = 0.466;
 					minanglex = -30;
 					minangley = -100;
-					minfov = 0.466;
+					minfov = 0;
 					opticsdisplayname = "W";
 					thermalmode[] = {0, 1};
 					visionmode[] = {"Normal", "NVG", "Ti"};

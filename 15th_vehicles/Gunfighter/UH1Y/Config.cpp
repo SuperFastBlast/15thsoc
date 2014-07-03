@@ -4,9 +4,9 @@
 
 class CfgPatches
 {
-	class HAFM_ArmA2_Helis
+	class meu_UH1Y
 	{
-		units[] ={"UH1Y"};
+		units[] ={"meu_UH1Y"};
 		weapons[] = {};
 		requiredVersion = 0.01;
 		requiredAddons[] = {"A3_Air_F","A3_Weapons_F"};
@@ -55,11 +55,11 @@ class CfgVehicles
 	};
 	class PlaneWreck;
 	class HelicopterWreck;
-	class UH1_Base: Helicopter
+	class meu_UH1Y: Helicopter
 	{
 		destrType="DestructWreck";
-		scope = 0;
-		side = 1;
+		scope = 2;
+		side=1;
 		model = "gunfighter\UH1Y\UH1Y.p3d";
 		picture = "gunfighter\UH1Y\UI\picture_UH1Y_CA.paa";
 		icon="gunfighter\UH1Y\UI\icon_UH1Y_CA.paa";
@@ -83,7 +83,7 @@ class CfgVehicles
 		cyclicforwardforcecoef = 2.5;//fowards backwards.
 		frontRotorForceCoef = 3;//front rotor(strenth of lift)
 		backRotorForceCoef = 1;//tailrotor(strength of horzontal movement=)
-		simulation = "HelicopterX";
+		simulation = "Helicopter";
 		liftForceCoef = 1.5;
 		maxfordingdepth = 1;
 		sensitivity = 3;
@@ -143,13 +143,13 @@ class CfgVehicles
 		driverCompartments = "Compartment1";
 		cargoCompartments[] = {"Compartment2"};
 
-		class ViewPilot: ViewPilot
+	/*	class ViewPilot: ViewPilot
 		{
 			initFov=1.4; minFov=0.6; maxFov=1.0;
       		initAngleX=0; minAngleX=-65; maxAngleX=+85; //Rg 45/80;
 			initAngleY=0; minAngleY=-150; maxAngleY=+150;
 		};
-
+*/
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret //Left Doorgun
@@ -173,7 +173,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor=1;
 				gunnerAction="UH1Y_Gunner";
 				gunnerInAction="UH1Y_Gunner";
-				commanding=-2;
+				commanding=0;
 				primaryGunner=1;
 				class ViewOptics
 				{
@@ -226,7 +226,7 @@ class CfgVehicles
 				gunBeg="gun_end"; //gunBeg=endpoint of the gun
 				gunEnd="gun_begin"; //gunEnd=chamber of the gun
 				memoryPointGun="gun_end";
-				commanding=-1;
+				commanding=1;
 				weapons[]={"Laserdesignator_mounted"};
 				magazines[]={"Laserbatteries"};
 				primaryGunner=0;
@@ -240,7 +240,7 @@ class CfgVehicles
 				{
 					initAngleX=0; minAngleX=-30; maxAngleX=+30;
 					initAngleY=0; minAngleY=-100; maxAngleY=+100;
-					initFov=1.4; minFov=0.3; maxFov=1.0;
+					initFov=0; minFov=0; maxFov=1.0;
 				};
 				class OpticsIn {
 				class Wide {
@@ -517,7 +517,6 @@ class CfgVehicles
 		};
 	};
 
-	class UH1Y:UH1_base {scope = 2;};
 		
 	};
 
