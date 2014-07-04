@@ -1,0 +1,12 @@
+This is to document all changes done locally when you push to the repo. Using the Date-Name of addon- List of changes
+--------------------------------------------------------------------------------------
+----------4 JULY 2014-----------------------------
+-------------AH1Z---------------------------------------------------------------------
+
+-Fixed FLIR bouncing issue
+-fixed copilot radio in UH1Y couldnt acess before
+-added A2 cannon sound for ah1z
+-Opened up the cannon range from left to right to be more realistic
+-Both the UH1Y & AH1Z are selectable & spawnable in Zues(which i beleive MCC has switched to fully)
+
+--------------------------------------------------------------------------------------
