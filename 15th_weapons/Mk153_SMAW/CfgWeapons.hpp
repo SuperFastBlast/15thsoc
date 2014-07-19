@@ -18,7 +18,17 @@ class CfgWeapons {
 		magazineReloadTime = 10;
 		magazines[] = { SMAW_HEAA, SMAW_HEDP };
         
-		sound[] = {"A3\sounds_f\weapons\Launcher\rpg32",1.9952624,1,800};
+       	sounds[] = {"StandardSound"};
+		class BaseSoundModeType
+		{
+			weaponSoundEffect = "DefaultRifle";
+		};
+		class StandardSound: BaseSoundModeType
+		{
+			begin1[] = {"A3\Sounds_F\weapons\Launcher\rpg32",1.9952624,1,900};
+			soundBegin[] = {"begin1",1};
+		};
+        
 		drySound[] = {"A3\sounds_f\weapons\other\dry6",0.031622775,1,10};
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\rockets\titan_reload_final",0.56234133,1,50};
 		soundFly[] = {"A3\sounds_f\weapons\rockets\rocket_fly_1",0.31622776,1.5,700};
