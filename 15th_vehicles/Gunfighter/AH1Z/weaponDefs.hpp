@@ -20,7 +20,7 @@ class CfgAmmo
 		caliber = 2.5;
 		airFriction = -0.00078;
 	};
-	
+
 	class B_20mm_AP: B_20mm
 	{
 		hit = 60;
@@ -39,7 +39,7 @@ class CfgAmmo
 		airFriction = -0.00077;
 		caliber = 2.33;
 	};
-	
+
 	class M_Sidewinder_AA: MissileBase
 	{
 		model = "gunfighter\ah1z\sidewinder_fly";
@@ -66,7 +66,7 @@ class CfgAmmo
 		effectsMissile = "missile3";
 		whistleDist = 20;
 	};
-	
+
 	class M_Hellfire_AT: MissileBase
 	{
 		model = "gunfighter\ah1z\AGM114Hellfire";
@@ -103,7 +103,7 @@ class CfgAmmo
 		hitwater = "ImpactEffectsSmall";
 	};
 	};
-	
+
 	class R_Hydra_HE: RocketBase
 	{
 		model = "gunfighter\ah1z\70mmRocket";
@@ -137,7 +137,7 @@ class CfgMagazines
 		reloadSound[] = {"A3\sounds_f\dummysound",0.000316228,1,20};
 		nameSound = "missiles";
 	};
-	
+
 	class 750Rnd_M197_AH1: VehicleMagazine
 	{
 		scope = 2;
@@ -149,7 +149,7 @@ class CfgMagazines
 		tracersEvery = 2;
 		nameSound = "cannon";
 	};
-	
+
 	class 100Rnd_762x51_M240: VehicleMagazine
 	{
 		scope = 1;
@@ -188,7 +188,7 @@ class CfgMagazines
 		reloadSound[] = {"A3\sounds_f\dummysound",0.00031622776,1};
 		nameSound = "missiles";
 	};
-	
+
 	class 14Rnd_FFAR: VehicleMagazine
 	{
 		scope = 2;
@@ -224,7 +224,7 @@ class CfgWeapons
 	class MissileLauncher;
 	class MGun;
 	class M134_minigun_2: M134_minigun {};
-	
+
 	class SidewinderLaucher_AH1Z: MissileLauncher
 	{
 		displayName = "SIDEWINDER";
@@ -234,8 +234,6 @@ class CfgWeapons
 		midRangeProbab = 0.09;
 		maxRange = 9000;
 		maxRangeProbab = 0.01;
-		sound[] = {"A3\Sounds_F\weapons\Rockets\missile_2",1.1220185,1.3,1000};
-		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2",1.0,1.5,700};
 		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.316228,1};
 		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.316228,2.5};
 		reloadTime = 0.1;
@@ -243,8 +241,17 @@ class CfgWeapons
 		magazines[] = {"2Rnd_Sidewinder_AH1Z"};
 		cursor = "missile";
 		cursorSize = 1;
+		sounds[] = {StandardSound};
+			class StandardSound
+			{
+			weaponSoundEffect  = "DefaultRifle";
+			begin1[]={"A3\Sounds_F\weapons\Rockets\missile_2",1.1220185,1.3,1000};
+			soundBegin[] = {Begin1,0.33};
+
+
+			};
 	};
-	
+
 	class M197: CannonCore
 	{
 		scope = 1;
@@ -260,8 +267,15 @@ class CfgWeapons
 		{
 			displayName = "$STR_DN_M197";
 			autoFire = 1;
-			sound[] = {"A3\Sounds_F\weapons\gatling\gatling4", 1.12202, 1, 1100};
 			//sound[]={"gunfighter\sounds\a10vulcanVII",db5,1,1100};
+			sounds[] = {StandardSound};
+			class StandardSound{
+			weaponSoundEffect  = "DefaultRifle";
+			begin1[]={"gunfighter\sounds\a10vulcanVII",db5,1,1100};
+			soundBegin[] = {Begin1,0.33};
+
+
+			};
 			reloadTime = 0.06;
 			dispersion = 0.00025;
 			showToPlayer = 1;
@@ -326,7 +340,7 @@ class CfgWeapons
 			maxRangeProbab = 0.01;
 		};
 	};
-	
+
 	class M240_veh: MGun
 	{
 		scope = 1;
@@ -394,7 +408,7 @@ class CfgWeapons
 		};
 	};
 	class M240_veh_2:M240_veh {};
-	
+
 class FFARLauncher: RocketPods
 	{
 		magazines[] = {"38Rnd_FFAR","28Rnd_FFAR"};
@@ -414,12 +428,17 @@ class FFARLauncher: RocketPods
 			maxRange = 2500;
 			maxRangeProbab = 0.11;
 			displayName = "HYDRA-SINGLE";
-			sound[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,1100};
-			soundFly[] = {"\gunfighter\Sounds\rocket_fly1",5.623413,1.2,700};
 			burst = 2;
 			reloadTime = 0.08;
 			autofire = false;
 			showToPlayer = 0;
+			sounds[] = {StandardSound};
+			class StandardSound{
+			weaponSoundEffect  = "DefaultRifle";
+			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,1100};
+			soundBegin[] = {Begin1,0.33};
+
+			};
 		};
 		class Burst: RocketPods
 		{
@@ -434,15 +453,21 @@ class FFARLauncher: RocketPods
 			reloadTime = 0.2;
 			soundContinuous = 1;
 			autofire = false;
-			sound[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,1100};
-			soundFly[] = {"\gunfighter\Sounds\rocket_fly1",5.623413,1.2,700};
+						sounds[] = {StandardSound};
+			class StandardSound{
+			weaponSoundEffect  = "DefaultRifle";
+			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,1100};
+			soundBegin[] = {Begin1,0.33};
+		};
 		};
 	};
-	class FFARLauncher_14: FFARLauncher
-	{
-		magazines[] = {"14Rnd_FFAR"};
-	};
-	
+
+class FFARLauncher_14:FFARLauncher
+{
+	magazines[] = {"14Rnd_FFAR"};
+};
+
+
 	class HellfireLauncher: MissileLauncher
 	{
 	displayName = "HELLFIRE";
@@ -464,13 +489,21 @@ class FFARLauncher: RocketPods
 	minrange = 300;
 	minrangeprobab = 0.25;
 	namesound = "MissileLauncher";
-	sound[] = {"A3\Sounds_F\weapons\Rockets\missile_1", 1.12202, 1.3, 1100};
-	soundfly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1", 1, 1.1, 700};
 	texturetype = "fullAuto";
 	weaponlockdelay = 3;
+
 	weaponsoundeffect = "DefaultRifle";
-	
-	
+
+	sounds[] = {StandardSound};
+			class StandardSound
+			{
+			weaponSoundEffect  = "DefaultRifle";
+			Begin1[] = {"A3\Sounds_F\weapons\Rockets\missile_1", 1.12202, 1.3, 1100};
+			soundfly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1", 1, 1.1, 700};
+			soundBegin[] = {Begin1,0.33};
+			};
+
+
 	};
 	class M230: CannonCore
 	{

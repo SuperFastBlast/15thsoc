@@ -83,7 +83,7 @@ class CfgVehicles
 		cyclicforwardforcecoef = 2.5;//fowards backwards.
 		frontRotorForceCoef = 3;//front rotor(strenth of lift)
 		backRotorForceCoef = 1;//tailrotor(strength of horzontal movement=)
-		simulation = "Helicopter";
+		simulation = "HelicopterX";
 		liftForceCoef = 1.5;
 		maxfordingdepth = 1;
 		sensitivity = 3;
@@ -161,7 +161,7 @@ class CfgVehicles
 				minTurn=-5; maxTurn=185; initTurn=0;
 				soundServo[]={,db-40,1.0};
 				animationSourceHatch="";
-				stabilizedInAxes = "StabilizedInAxesNone";
+				stabilizedInAxes = 3;
 
 				gunBeg="muzzle_1";
 				gunEnd="chamber_1";

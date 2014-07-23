@@ -9,7 +9,7 @@ class CfgPatches
 		units[] ={"meu_AH1Z"};
 		weapons[] = {};
 		requiredVersion = 0.01;
-		requiredAddons[] = {"A3_Air_F","A3_Weapons_F"};
+		requiredAddons[] = {"A3_Air_F","A3_Weapons_F","RWCO_Main"};
 	};
 };
 
@@ -67,7 +67,7 @@ class CfgVehicles
 		cyclicforwardforcecoef = 2.5;//fowards backwards.
 		frontRotorForceCoef = 3;//front rotor(strenth of lift)
 		backRotorForceCoef = 2;//tailrotor(strength of horzontal movement=)
-		simulation = "Helicopter";
+		simulation = "HelicopterX";
 		liftForceCoef = 1.1;
 		maxfordingdepth = 1;
 		sensitivity = 3;
@@ -98,7 +98,80 @@ class CfgVehicles
 		radarType = 4;
 		LockDetectionSystem = "1 + 8 + 4";
 		incomingMissileDetectionSystem = 16;
-
+		//RWCO missle addition
+		class eventhandlers
+		{
+			fired = "_this spawn RWCO_fnc_hellfire";
+		};
+		class UserActions {
+			class trajLOALHI {
+				displayName = "Lock-on After Launch, High (LOAL-HI)";
+				position = "pos_gunner";
+				radius = 15;
+				showwindow = 0;
+				condition = "(player==gunner this) && ((this getvariable ['Mode',0]) != 3)";
+				statement = "this setVariable ['Mode', 3, false];";
+				onlyforplayer = 1;
+			};
+			class trajLOALLO {
+				displayName = "Lock-on After Launch, Low (LOAL-LO)";
+				position = "pos_gunner";
+				radius = 15;
+				showwindow = 0;
+				condition = "(player==gunner this) && ((this getvariable ['Mode',0]) != 2)";
+				statement = "this setVariable ['Mode', 2, false];";
+				onlyforplayer = 1;
+			};
+			class trajLOALDIR {
+				displayName = "Lock-on After Launch, Direct (LOAL-DIR)";
+				position = "pos_gunner";
+				radius = 15;
+				showwindow = 0;
+				condition = "(player==gunner this) && ((this getvariable ['Mode',0]) != 1)";
+				statement = "this setVariable ['Mode', 1, false];";
+				onlyforplayer = 1;
+			};
+			class trajLOBL {
+				displayName = "Lock-on Before Launch (LOBL)";
+				position = "pos_gunner";
+				radius = 15;
+				showwindow = 0;
+				condition = "(player==gunner this) && ((this getvariable ['Mode',0]) != 0)";
+				statement = "this setVariable ['Mode', 0, false];";
+				onlyforplayer = 1;
+			};
+			class remote {
+				displayName = "Remote";
+				position = "pos_gunner";
+				radius = 15;
+				showwindow = 0;
+				condition = "(player==gunner this)";
+				statement = "this setVariable ['TargetMode', 1, false];";
+				onlyforplayer = 1;
+			};
+			class self {
+				displayName = "Self";
+				position = "pos_gunner";
+				radius = 15;
+				showwindow = 0;
+				condition = "(player==gunner this)";
+				statement = "this setVariable ['TargetMode', 0, false];";
+				onlyforplayer = 1;
+			};
+			class broadcast {
+				displayName = "Broadcast";
+				position = "pos_gunner";
+				radius = 15;
+				showwindow = 0;
+				condition = "(player==gunner this)";
+				statement = "this execVM '\RWCO_Main\scripts\userActions\broadcast_laser.sqf';";
+				onlyforplayer = 1;
+			};
+		};	
+		//end RWCO missle addition
+		
+		
+		
 		hiddenSelectionsTextures[] = {"gunfighter\ah1z\data\ah1z_body_co.paa","gunfighter\ah1z\data\ah1z_engines_co.paa"};
 		
 		//--
@@ -307,6 +380,7 @@ class CfgVehicles
 				discreteDistance[] = {100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
 				discreteDistanceInitIndex = 14;
 				enableManualFire = 1;
+				stabilizedInAxes = 3;
 				class OpticsIn {
 				class Wide {
 					gunneropticsmodel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
