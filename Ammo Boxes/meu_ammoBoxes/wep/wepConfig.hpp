@@ -204,13 +204,13 @@
 				count = 100;
 				magazine = "100Rnd_mas_762x51_T_Stanag";
 			};
-			class _xx_SMAW_HEDP {
+			class _xx_Trixie_SMAW_HEDP {
 				count = 50;
-				magazine = "SMAW_HEDP";
+				magazine = "Trixie_SMAW_HEDP";
 			};
-			class _xx_SMAW_HEAA {
+			class _xx_Trixie_SMAW_HEAA {
 				count = 50;
-				magazine = "SMAW_HEAA";
+				magazine = "Trixie_SMAW_HEAA";
 			};
 
 //Smoke 203
@@ -331,9 +331,9 @@
 				count = 20;
 				weapon = "LMG_mas_M240_F";
 			};
-			class _xx_SMAW_Launcher {
+			class _xx_Trixie_SMAW_Launcher {
 				count = 20;
-				weapon = "SMAW_Launcher";
+				weapon = "Trixie_SMAW_Launcher";
 			};
 			class _xx_Laserdesignator {
 				count = 1;
