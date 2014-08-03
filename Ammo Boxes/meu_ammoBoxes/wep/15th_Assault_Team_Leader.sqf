@@ -30,8 +30,8 @@
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
- (unitBackpack _unit) addmagazineCargo ["Trixie_SMAW_HEDP",1];
- (unitBackpack _unit) addmagazineCargo ["Trixie_SMAW_HEAA",1];
+ (unitBackpack _unit) addmagazineCargo ["SMAW_HEDP",1];
+ (unitBackpack _unit) addmagazineCargo ["SMAW_HEAA",1];
  (unitBackpack _unit) additemCargo ["SmokeshellBlue",1];
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
@@ -51,7 +51,7 @@
  _unit addweapon "arifle_mas_m4";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
- _unit addweapon "Trixie_SMAW_Launcher";
+ _unit addweapon "SMAW_Launcher";
 
 
  _unit addweapon "rangefinder";

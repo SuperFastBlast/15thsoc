@@ -34,7 +34,7 @@
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
- (unitBackpack _unit) addmagazineCargo ["Trixie_SMAW_HEDP",1];
+ (unitBackpack _unit) addmagazineCargo ["SMAW_HEDP",1];
  (unitBackpack _unit) addmagazineCargo ["DemoCharge_Remote_Mag",1];
  (unitBackpack _unit) addmagazineCargo ["SatchelCharge_Remote_Mag",1];
  (unitBackpack _unit) additemCargo ["ItemcTabHCam",1];
