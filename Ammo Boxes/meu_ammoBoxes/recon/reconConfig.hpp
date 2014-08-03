@@ -550,13 +550,13 @@
 				count = 50;
 				magazine = "RPG32_HE_F";
 			};
-			class _xx_SMAW_HEAA {
+			class _xx_Trixie_SMAW_HEAA {
 				count = 50;
-				magazine = "SMAW_HEAA";
+				magazine = "Trixie_SMAW_HEAA";
 			};
-			class _xx_SMAW_HEDP {
+			class _xx_Trixie_SMAW_HEDP {
 				count = 50;
-				magazine = "SMAW_HEDP";
+				magazine = "Trixie_SMAW_HEDP";
 			};
 			class _xx_SmokeShell {
 				count = 50;
@@ -762,9 +762,9 @@
 				count = 25;
 				weapon = "launch_RPG32_F";
 			};
-			class _xx_SMAW_Launcher {
+			class _xx_Trixie_SMAW_Launcher {
 				count = 5;
-				weapon = "SMAW_Launcher";
+				weapon = "Trixie_SMAW_Launcher";
 			};
 			class _xx_M32 {
 				count = 5;

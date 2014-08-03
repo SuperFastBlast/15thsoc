@@ -157,7 +157,7 @@
 
 //Smoke 203
 			class _xx_REV1_flash {
-				count = 200;
+				count = 20;
 				magazine = "REV1_flash";
 			};
 			class _xx_Chemlight_green {
@@ -192,6 +192,14 @@
 				count = 50;
 				magazine = "SmokeShellGreen";
 			};
+			class _xx_HandGrenade {
+				count = 20;
+				magazine = "HandGrenade";
+			};
+			class _xx_1Rnd_Smoke_Grenade_shell {
+				count = 200;
+				magazine = "1Rnd_Smoke_Grenade_shell";
+			};
 		};
 		
 		class TransportWeapons {
@@ -203,6 +211,10 @@
 			class _xx_arifle_mas_m16_gl {
 				count = 5;
 				weapon = "arifle_mas_m16_gl";
+			};
+			class _xx_arifle_mas_m4_M203 {
+				count = 5;
+				weapon = "arifle_mas_m4_M203";
 			};
 		};
 	};

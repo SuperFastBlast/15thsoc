@@ -108,6 +108,10 @@
 				count = 15;
 				name = "H_mas_mar_HelmetB_v";
 			};
+			class _xx_H_mas_mar_helmetv_us {
+				count = 50;
+				name = "H_mas_mar_helmetv_us";
+			};
 		
 // UNIFORMS
 			class _xx_U_mas_mar_B_IndUniform1_v {
