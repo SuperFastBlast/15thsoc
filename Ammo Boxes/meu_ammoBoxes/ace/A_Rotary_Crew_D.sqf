@@ -1,4 +1,4 @@
-// REVISION 16JUL14 
+// REVISION 05AUG14 
  
  _unit = _this select 1;
  
@@ -20,8 +20,6 @@
  _unit removeItem "nvgoggles";
  _unit addItem "AV_ESS_tan";
  _unit assignItem "AV_ESS_tan"; 
- 
- _unit addbackpack "B_Parachute";
  
   //M4 and Ammo
  _unit addmagazine "30Rnd_556x45_Stanag";

@@ -1,4 +1,4 @@
-// REVISION 02JUL14
+// REVISION 05AUG14
 
 // class CfgVehicles
 // {
@@ -216,6 +216,10 @@
 				count = 50;
 				name = "AGM_EarBuds";
 			};
+			class _xx_AGM_SpareBarrel {
+				count = 6;
+				name = "AGM_SpareBarrel";
+			};
 		};
 	
 // AMMO
@@ -287,6 +291,14 @@
 				count = 50;
 				magazine = "SmokeshellBlue";
 			};
+			class _xx_SmokeshellYellow {
+				count = 50;
+				magazine = "SmokeshellYellow";
+			};
+			class _xx_SmokeshellOrange {
+				count = 50;
+				magazine = "SmokeshellOrange";
+			};
 			class _xx_HandGrenade {
 				count = 100;
 				magazine = "HandGrenade";
@@ -302,6 +314,14 @@
 			class _xx_1Rnd_SmokeRed_Grenade_shell {
 				count = 25;
 				magazine = "1Rnd_SmokeRed_Grenade_shell";
+			};
+			class _xx_1Rnd_SmokeYellow_Grenade_shell {
+				count = 50;
+				magazine = "1Rnd_SmokeYellow_Grenade_shell";
+			};
+			class _xx_1Rnd_SmokeOrange_Grenade_shell {
+				count = 50;
+				magazine = "1Rnd_SmokeOrange_Grenade_shell";
 			};
 			class _xx_REV1_flash {
 				count = 100;

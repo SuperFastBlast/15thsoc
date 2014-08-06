@@ -1,4 +1,4 @@
-// REVISION 16JUL14
+// REVISION 05AUG14
 
 // class CfgVehicles
 // {
@@ -331,9 +331,9 @@
 				count = 20;
 				weapon = "LMG_mas_M240_F";
 			};
-			class _xx_Trixie_SMAW_Launcher {
+			class _xx_Trixie_SMAW {
 				count = 20;
-				weapon = "Trixie_SMAW_Launcher";
+				weapon = "Trixie_SMAW";
 			};
 			class _xx_Laserdesignator {
 				count = 1;

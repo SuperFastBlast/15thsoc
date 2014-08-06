@@ -51,7 +51,7 @@
  _unit addweapon "arifle_mas_m4";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
- _unit addweapon "Trixie_SMAW_Launcher";
+ _unit addweapon "Trixie_SMAW";
 
 
  _unit addweapon "rangefinder";

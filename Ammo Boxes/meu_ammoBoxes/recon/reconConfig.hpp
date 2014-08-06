@@ -1,4 +1,4 @@
-// REVISION 16JUL14
+// REVISION 05AUG14
 
 // class CfgVehicles
 // {
@@ -762,9 +762,9 @@
 				count = 25;
 				weapon = "launch_RPG32_F";
 			};
-			class _xx_Trixie_SMAW_Launcher {
+			class _xx_Trixie_SMAW {
 				count = 5;
-				weapon = "Trixie_SMAW_Launcher";
+				weapon = "Trixie_SMAW";
 			};
 			class _xx_M32 {
 				count = 5;
