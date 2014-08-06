@@ -1,4 +1,4 @@
-// REVISION 05AUG14
+// REVISION 06AUG14
 
 // class CfgVehicles
 // {
@@ -65,6 +65,10 @@
 			class _xx_mas_acog_eo {
 				count = 10;
 				name = "mas_acog_eo";
+			};
+			class _xx_optic_mas_acog_rd {
+				count = 20;
+				name = "optic_mas_acog_rd";
 			};
 			class _xx_FHQ_optic_AC11704 {
 				count = 10;
@@ -290,14 +294,6 @@
 			class _xx_SmokeshellBlue {
 				count = 50;
 				magazine = "SmokeshellBlue";
-			};
-			class _xx_SmokeshellYellow {
-				count = 50;
-				magazine = "SmokeshellYellow";
-			};
-			class _xx_SmokeshellOrange {
-				count = 50;
-				magazine = "SmokeshellOrange";
 			};
 			class _xx_HandGrenade {
 				count = 100;
