@@ -1,4 +1,4 @@
-// REVISION 06AUG14
+// REVISION 13AUG14
 
 // class CfgVehicles
 // {
@@ -78,6 +78,7 @@
 				count = 15;
 				name = "FHQ_optic_tws3050";
 			};
+// GOGGLES
 			class _xx_NVGoggles_OPFOR {
 				count = 100;
 				name = "NVGoggles_OPFOR";

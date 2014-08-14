@@ -1,4 +1,4 @@
-// REVISION 05AUG14
+// REVISION 13AUG14
 
 // class CfgVehicles
 // {
@@ -159,6 +159,10 @@
 			class _xx_RH_docter {
 				count = 25;
 				name = "RH_docter";
+			};
+			class _xx_FHQ_optic_LeupoldERT {
+				count = 5;
+				name = "FHQ_optic_LeupoldERT";
 			};
 
 // HELMETS
@@ -718,10 +722,6 @@
 				count = 25;
 				weapon = "arifle_mas_mp5";
 			};
-//			class _xx_arifle_mas_mp5_sd {
-//				count = 25;
-//				weapon = "arifle_mas_mp5_sd";
-//			};
 			class _xx_arifle_mas_mp5sd_ds {
 				count = 25;
 				weapon = "arifle_mas_mp5sd_ds";
@@ -749,6 +749,10 @@
 			class _xx_srifle_mas_sr25 {
 				count = 25;
 				weapon = "srifle_mas_sr25";
+			};
+			class _xx_srifle_mas_m110 {
+				count = 5;
+				weapon = "srifle_mas_m110";
 			};
 			class _xx_RH_fnp45 {
 				count = 25;

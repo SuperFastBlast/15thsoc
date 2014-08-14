@@ -1,4 +1,4 @@
-// REVISION 02JUL14
+// REVISION 13AUG14
 
 // class CfgVehicles
 // {
@@ -55,8 +55,8 @@
 				count = 20;
 				name = "FHQ_optic_microCCO";
 			};
-			
-// Medical
+
+// MEDICAL
 		    class _xx_AGM_Bandage  {
 			     count = 300; 
 				 name = "AGM_Bandage";
@@ -87,7 +87,6 @@
 				count = 20;
 				name = "ItemMap";
 			};
-
 			class _xx_Binocular {
 				count = 20;
 				name = "Binocular";
@@ -114,21 +113,33 @@
 			};
 
 // UNIFORMS			
-			class _xx_U_B_PilotCoveralls {
-				count = 5;
-				name = "U_B_PilotCoveralls";
+			class _xx_Nomex_olive {
+				count = 10;
+				name = "Nomex_olive";
 			};
-			class _xx_U_mas_mar_B_pilot {
-				count = 5;
-				name = "U_mas_mar_B_pilot";
-			};			
-//Vests
-
+			class _xx_overall_db {
+				count = 10;
+				name = "overall_db";
+			};
+// GOGGLES
+			class _xx_AV_ESS_tan {
+				count = 25;
+				name = "AV_ESS_tan";
+			};
+			class _xx_G_Aviator {
+				count = 25;
+				name = "G_Aviator";
+			};
+// VESTS
 			class _xx_V_TacVest_blk {
 				count = 5;
 				name = "V_TacVest_blk";
-			};	
-//Helmets
+			};
+			class _xx_V_mas_mar_PlateCarrier1_rgr_g {
+				count = 5;
+				name = "V_mas_mar_PlateCarrier1_rgr_g";
+			};
+// HELMETS
 			class _xx_H_PilotHelmetFighter_B {
 				count = 5;
 				name = "H_PilotHelmetFighter_B";
@@ -143,11 +154,7 @@
 			};		
 		};	
 
-						
-	
-	
 		class TransportMagazines {
-
 // AMMO
 			class _xx_rh_15rnd_9x19_m9 {
 				count = 100;
@@ -157,7 +164,6 @@
 				count = 200;
 				magazine = "30Rnd_556x45_Stanag";
 			};
-
 //Smoke 203
             class _xx_SmokeShell {
 				count = 20;
@@ -186,6 +192,7 @@
 		};
 		
 		class TransportWeapons {
+// WEAPONS
 			class _xx_rh_m9 {
 				count = 20;
 				weapon = "rh_m9";
@@ -194,16 +201,7 @@
 				count = 25;
 				weapon = "arifle_mas_m4";
 			};
-		};		
-
-		/*
-         class TransportBackpacks {	
-			class _xx_tf_rt1523g {
-		       count = 50;
-			   backpack = "rt_1523g";
-			 };  
-		}; 
-		*/
+		};
 	};
 
 	

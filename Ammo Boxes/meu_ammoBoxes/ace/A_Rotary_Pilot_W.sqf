@@ -1,4 +1,4 @@
-// REVISION 05AUG14 
+// REVISION 13AUG14 
  
  _unit = _this select 1;
  
@@ -9,7 +9,7 @@
  removeuniform _unit;
  removevest _unit;
  removeheadgear _unit;
- _unit addvest "V_TacVest_blk";
+ _unit addvest "V_mas_mar_PlateCarrier1_rgr_g";
  _unit addheadgear "H_PilotHelmetHeli_B"; 
  
  _unit unassignItem "itemRadio";
@@ -21,14 +21,9 @@
  _unit addItem "G_Aviator";
  _unit assignItem "G_Aviator";
  
-  //M4 and Ammo
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addweapon "arifle_mas_m4";
-
  //M9 and Ammo
+ _unit addmagazine "rh_15rnd_9x19_m9";
+ _unit addmagazine "rh_15rnd_9x19_m9";
  _unit addmagazine "rh_15rnd_9x19_m9";
  _unit addmagazine "rh_15rnd_9x19_m9";
  _unit addmagazine "rh_15rnd_9x19_m9";

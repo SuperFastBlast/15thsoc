@@ -1,4 +1,4 @@
-// REVISION 02JUL14
+// REVISION 13AUG14
 
 // class CfgVehicles
 // {
@@ -48,6 +48,10 @@
 				count = 50;
 				name = "ItemRadio";
 			};
+			class _xx_tf_anprc152 {
+				count = 50;
+				name = "tf_anprc152";
+			};
 			class _xx_ItemMap {
 				count = 20;
 				name = "ItemMap";
@@ -92,9 +96,9 @@
 				count = 15;
 				name = "U_mas_mar_B_IndUniform1_v";
 			};
-			class _xx_U_mas_mar_B_CombatUniform_veg {
-				count = 15;
-				name = "U_mas_mar_B_CombatUniform_veg";
+			class _xx_Nomex_olive {
+				count = 10;
+				name = "Nomex_olive";
 			};
 
 // VESTS
@@ -166,9 +170,9 @@
 				count = 12;
 				weapon = "arifle_mas_m4";
 			};
-			class _xx_CAF_M72A6 {
-			     count = 12;
-				 weapon = "CAF_M72A6";
+			class _xx_meu_AT4 {
+			     count = 10;
+				 weapon = "meu_AT4";
 			};
 		};
 	};

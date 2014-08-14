@@ -1,5 +1,5 @@
 //Bravo (AAV) Company crewman loadout
-//Updated 09FEB14
+//Updated 13AUG14
 
 
  _unit = _this select 1;
@@ -84,4 +84,4 @@ _unit assignitem "itemCompass";
  _unit additem "AGM_EarBuds";
 
 
- _unit adduniform "U_mas_mar_B_CombatUniform_veg";
+ _unit adduniform "Nomex_olive";

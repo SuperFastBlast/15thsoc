@@ -1,4 +1,7 @@
 //Bravo (AAV) Company, Crew Chief Loadout
+//Updated 13AUG14
+
+
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -81,4 +84,4 @@ _unit assignitem "itemCompass";
  _unit additem "AGM_EarBuds";
 
 
- _unit adduniform "U_mas_mar_B_CombatUniform_veg";
+ _unit adduniform "Nomex_olive";
