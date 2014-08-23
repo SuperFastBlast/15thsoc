@@ -108,7 +108,6 @@ class CfgWeapons
 		handAnim[] = {"OFP2_ManSkeleton", "\AT4\Data\Anim\m136.rtm"};
 		magazines[] = {"AT4_HEAT"};
 		visionMode[] = {"Normal"};
-		weaponSoundEffect = "DefaultRifle";
 		recoil = "recoil_single_law";
 		picture = "\AT4\Data\icon\w_m136_launcher_ca.paa";
 		disposableweapon = 1;
@@ -131,6 +130,51 @@ class CfgWeapons
 		inko_disposable = 1;
 		inko_disposable_used = "AT4_Used";
 		inko_disposable_tube = "AT4_Used_Tube";
+		
+				sounds[]=
+		{
+			"StandardSound"
+		};
+		class BaseSoundModeType
+		{
+			weaponSoundEffect="DefaultRifle";
+		};
+		class StandardSound: BaseSoundModeType
+		{
+			begin1[]=
+			{
+				"AT4\sound\rocket1.wss",
+				1.9952624,
+				1,
+				1000
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+		};
+		drySound[]=
+		{
+			"",
+			9.9999997e-005,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"\a3\sounds_f\weapons\Launcher\nlaw_final_2",
+			0.00031622776,
+			1,
+			20
+		};
+		soundFly[]=
+		{
+			"\a3\sounds_f\weapons\Rockets\rocket_fly_2",
+			10,
+			1.8,
+			300
+		};
 		
 		
 		class OpticsModes 
