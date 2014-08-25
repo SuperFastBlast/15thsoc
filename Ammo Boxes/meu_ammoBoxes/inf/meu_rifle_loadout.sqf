@@ -51,6 +51,6 @@
  _unit addmagazine "REV1_flash";
  _unit additem "AGM_EarBuds";
 
- _unit addweapon "CAF_M72A6";
+ _unit addweapon "meu_AT4";
 
  _unit adduniform "U_mas_mar_B_IndUniform1_v";
