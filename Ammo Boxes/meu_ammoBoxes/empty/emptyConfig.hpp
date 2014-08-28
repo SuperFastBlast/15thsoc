@@ -4,7 +4,7 @@
 // {
 
 	class B_supplyCrate_F;
-	class Box_meu_inf : B_supplyCrate_F {
+	class Box_meu_empty : B_supplyCrate_F {
 		displayname = "[15th] Box Empty";
 		transportmaxmagazines = 9999;
 		transportmaxweapons = 9999;
