@@ -34,6 +34,7 @@ class CfgPatches
 				"Box_meu_wep",
 				"Box_meu_vehicle",
 				"Box_meu_lar"
+				"Box_meu_empty"
 			};
 			weapons[] = {};
 			requiredVersion = REQUIRED_VERSION;
@@ -59,6 +60,7 @@ class CfgVehicles {
 	#include <\meu_ammoBoxes\resuply\resuplyConfig.hpp>
 	#include <\meu_ammoBoxes\vehicle\vehicleConfig.hpp>
 	#include <\meu_ammoBoxes\lar\larConfig.hpp>
+	#include <\meu_ammoBoxes\empty\emptyConfig.hpp>
 };
 
 class CfgNotifications {
