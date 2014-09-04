@@ -1,4 +1,4 @@
-// REVISION 05AUG14
+// REVISION 03SEP14
 
 // class CfgVehicles
 // {
@@ -134,6 +134,30 @@
 			class _xx_AGM_SpareBarrel {
 				count = 6;
 				name = "AGM_SpareBarrel";
+			};
+			class _xx_AGM_CableTie {
+				count = 20;
+				name = "AGM_CableTie";
+			};
+			class _xx_AGM_UAVBattery {
+				count = 5;
+				name = "AGM_UAVBattery";
+			};
+			class _xx_AGM_MapTools {
+				count = 20;
+				name = "AGM_MapTools";
+			};
+			class _xx_AGM_DefusalKit {
+				count = 15;
+				name = "AGM_DefusalKit";
+			};
+			class _xx_AGM_Vector {
+				count = 20;
+				name = "AGM_Vector";
+			};
+			class _xx_AGM_Clacker {
+				count = 20;
+				name = "AGM_Clacker";
 			};
 			
 // HELMETS
@@ -296,7 +320,11 @@
 			class _xx_SatchelCharge_Remote_Mag {
 				count = 20;
 				magazine = "SatchelCharge_Remote_Mag";
-			};	
+			};
+			class _xx_SLAMDirectionalMine_Wire_Mag {
+				count = 20;
+				magazine = "SLAMDirectionalMine_Wire_Mag";
+			};
 
 // Laser designator
 			class _xx_Laserbatteries {

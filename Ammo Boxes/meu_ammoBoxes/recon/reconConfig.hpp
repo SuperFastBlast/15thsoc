@@ -1,4 +1,4 @@
-// REVISION 13AUG14
+// REVISION 03SEP14
 
 // class CfgVehicles
 // {
@@ -367,7 +367,7 @@
 				name = "ItemMap";
 			};
 			class _xx_MineDetector {
-				count = 25;
+				count = 5;
 				name = "MineDetector";
 			};
 			class _xx_Binocular {
@@ -387,7 +387,7 @@
 				name = "Laserbatteries";
 			};
 			class _xx_B_UavTerminal {
-				count = 25;
+				count = 5;
 				name = "B_UavTerminal";
 			};
 			class _xx_itemctab {
@@ -411,8 +411,40 @@
 				name = "ItemSMGR";
 			};
 			class _xx_AGM_EarBuds {
-				count = 50;
+				count = 25;
 				name = "AGM_EarBuds";
+			};
+			class _xx_AGM_Vector {
+				count = 25;
+				name = "AGM_Vector";
+			};
+			class _xx_AGM_ItemKestrel {
+				count = 25;
+				name = "AGM_ItemKestrel";
+			};
+			class _xx_AGM_CableTie {
+				count = 50;
+				name = "AGM_CableTie";
+			};
+			class _xx_AGM_UAVBattery {
+				count = 5;
+				name = "AGM_UAVBattery";
+			};
+			class _xx_AGM_MapTools {
+				count = 25;
+				name = "AGM_MapTools";
+			};
+			class _xx_AGM_DefusalKit {
+				count = 15;
+				name = "AGM_DefusalKit";
+			};
+			class _xx_AGM_SpareBarrel {
+				count = 5;
+				name = "AGM_SpareBarrel";
+			};
+			class _xx_AGM_Clacker {
+				count = 10;
+				name = "AGM_Clacker";
 			};
 			
 // UNIFORMS
@@ -437,7 +469,7 @@
 				name = "U_mas_mar_B_Wetsuit";
 			};
 			class _xx_U_mas_mar_B_GhillieSuit_d {
-				count = 25;
+				count = 10;
 				name = "U_mas_mar_B_GhillieSuit_d";
 			};
 			class _xx_U_mas_mar_B_CombatUniform_des_vest {
@@ -453,12 +485,16 @@
 				name = "U_mas_mar_B_CombatUniform_sage_vest";
 			};
 			class _xx_U_mas_mar_B_GhillieSuit_v {
-				count = 25;
+				count = 10;
 				name = "U_mas_mar_B_GhillieSuit_v";
 			};
 			class _xx_U_mas_mar_B_CombatUniform_veg_vest {
 				count = 25;
 				name = "U_mas_mar_B_CombatUniform_veg_vest";
+			};
+			class _xx_U_B_survival_uniform {
+				count = 25;
+				name = "U_B_survival_uniform";
 			};
 			
 // MEDICAL
@@ -650,6 +686,24 @@
 				count = 30;
 				magazine = "6Rnd_HE_M32";
 			};
+			class _xx_AGM_HandFlare_White {
+				count = 50;
+				magazine = "AGM_HandFlare_White";
+			};
+			class _xx_AGM_HandFlare_Red {
+				count = 50;
+				magazine = "AGM_HandFlare_Red";
+			};
+			class _xx_AGM_HandFlare_Green {
+				count = 50;
+				magazine = "AGM_HandFlare_Green";
+			};
+			class _xx_AGM_HandFlare_Yellow {
+				count = 50;
+				magazine = "AGM_HandFlare_Yellow";
+			};
+			
+//EXPLOSIVES
 			class _xx_ATMine_Range_Mag {
 				count = 50;
 				magazine = "ATMine_Range_Mag";

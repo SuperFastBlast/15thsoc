@@ -1,4 +1,4 @@
-// REVISION 02JUL14
+// REVISION 03SEP14
 
 // class CfgVehicles
 // {
@@ -60,6 +60,26 @@
 			class _xx_optic_tws {
 				count = 2;
 				name = "optic_tws";
+			};
+			class _xx_optic_mas_Arco_blk {
+				count = 20;
+				name = "optic_mas_Arco_blk";
+			};
+			class _xx_FHQ_optic_VCOG {
+				count = 20;
+				name = "FHQ_optic_VCOG";
+			};
+			class _xx_FHQ_acc_ANPEQ15_black {
+				count = 20;
+				name = "FHQ_acc_ANPEQ15_black";
+			};
+			class _xx_acc_pointer_IR {
+				count = 20;
+				name = "acc_pointer_IR";
+			};
+			class _xx_optic_mas_DMS {
+				count = 20;
+				name = "optic_mas_DMS";
 			};
 
 // HELMETS
@@ -158,6 +178,14 @@
 			class _xx_AGM_EarBuds {
 				count = 50;
 				name = "AGM_EarBuds";
+			};
+			class _xx_AGM_SpareBarrel {
+				count = 6;
+				name = "AGM_SpareBarrel";
+			};
+			class _xx_AGM_Clacker {
+				count = 6;
+				name = "AGM_Clacker";
 			};
 
 // UNIFORMS
@@ -342,6 +370,10 @@
 			class _xx_meu_AT4 {
 				count = 20;
 				weapon = "meu_AT4";
+			};
+			class _xx_srifle_mas_m110 {
+				count = 20;
+				weapon = "srifle_mas_m110";
 			};
 		};
 	};

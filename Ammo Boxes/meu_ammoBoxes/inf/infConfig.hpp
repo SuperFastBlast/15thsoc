@@ -1,4 +1,4 @@
-// REVISION 13AUG14
+// REVISION 03SEP14
 
 // class CfgVehicles
 // {
@@ -77,6 +77,14 @@
 			class _xx_FHQ_optic_tws3050 {
 				count = 15;
 				name = "FHQ_optic_tws3050";
+			};
+			class _xx_optic_mas_Arco_blk {
+				count = 20;
+				name = "optic_mas_Arco_blk";
+			};
+			class _xx_optic_mas_DMS {
+				count = 2;
+				name = "optic_mas_DMS";
 			};
 // GOGGLES
 			class _xx_NVGoggles_OPFOR {
@@ -225,6 +233,30 @@
 				count = 6;
 				name = "AGM_SpareBarrel";
 			};
+			class _xx_AGM_Clacker {
+				count = 10;
+				name = "AGM_Clacker";
+			};
+			class _xx_AGM_DefusalKit {
+				count = 10;
+				name = "AGM_DefusalKit";
+			};
+			class _xx_AGM_Vector {
+				count = 5;
+				name = "AGM_Vector";
+			};
+			class _xx_AGM_ItemKestrel {
+				count = 2;
+				name = "AGM_ItemKestrel";
+			};
+			class _xx_AGM_MapTools {
+				count = 10;
+				name = "AGM_MapTools";
+			};
+			class _xx_AGM_CableTie {
+				count = 100;
+				name = "AGM_CableTie";
+			};
 		};
 	
 // AMMO
@@ -264,6 +296,10 @@
 			class _xx_20Rnd_mas_762x51_T_Stanag {
 				count = 50;
 				magazine = "20Rnd_mas_762x51_T_Stanag";
+			};
+			class _xx_7Rnd_mas_12Gauge_Slug {
+				count = 100;
+				magazine = "7Rnd_mas_12Gauge_Slug";
 			};
 			
 
@@ -348,8 +384,24 @@
 				count = 30;
 				magazine = "6Rnd_Smoke_M32";
 			};
+			class _xx_AGM_HandFlare_White {
+				count = 50;
+				magazine = "AGM_HandFlare_White";
+			};
+			class _xx_AGM_HandFlare_Red {
+				count = 50;
+				magazine = "AGM_HandFlare_Red";
+			};
+			class _xx_AGM_HandFlare_Green {
+				count = 50;
+				magazine = "AGM_HandFlare_Green";
+			};
+			class _xx_AGM_HandFlare_Yellow {
+				count = 50;
+				magazine = "AGM_HandFlare_Yellow";
+			};
 
-// Explosives
+// EXPLOSIVES
 			class _xx_DemoCharge_Remote_Mag {
 				count = 50;
 				magazine = "DemoCharge_Remote_Mag";
@@ -360,7 +412,7 @@
 			};
 		};
 		
-// AMMO
+// WEAPONS
 		class TransportWeapons {
 			class _xx_rh_m9 {
 				count = 20;
@@ -405,6 +457,14 @@
 			class _xx_M32 {
 				count = 6;
 				weapon = "M32";
+			};
+			class _xx_srifle_mas_m110 {
+				count = 2;
+				weapon = "srifle_mas_m110";
+			};
+			class _xx_arifle_mas_m1014 {
+				count = 3;
+				weapon = "arifle_mas_m1014";
 			};
 		};
 	};

@@ -3,7 +3,7 @@
 // class CfgVehicles
 // {
 
-	class B_supplyCrate_F;
+//	class B_supplyCrate_F;
 	class Box_meu_empty : B_supplyCrate_F {
 		displayname = "[15th] Box Empty";
 		transportmaxmagazines = 9999;

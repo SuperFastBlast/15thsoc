@@ -1,4 +1,4 @@
-// REVISION 02JUL14
+// REVISION 03SEP14
 
 // class CfgVehicles
 // {
@@ -74,6 +74,10 @@
 			class _xx_AGM_EarBuds {
 				count = 50;
 				name = "AGM_EarBuds";
+			};
+			class _xx_itemctab {
+				count = 10;
+				name = "itemctab";
 			};
 
 // HELMETS
