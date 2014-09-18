@@ -1,4 +1,4 @@
-// REVISION 03SEP14
+// REVISION 17SEP14
 
 // class CfgVehicles
 // {
@@ -187,6 +187,26 @@
 				count = 6;
 				name = "AGM_Clacker";
 			};
+			class _xx_AGM_Vector {
+				count = 5;
+				name = "AGM_Vector";
+			};
+			class _xx_AGM_ItemKestrel {
+				count = 2;
+				name = "AGM_ItemKestrel";
+			};
+			class _xx_AGM_CableTie {
+				count = 100;
+				name = "AGM_CableTie";
+			};
+			class _xx_AGM_MapTools {
+				count = 10;
+				name = "AGM_MapTools";
+			};
+			class _xx_AGM_DefusalKit {
+				count = 10;
+				name = "AGM_DefusalKit";
+			};
 
 // UNIFORMS
 			class _xx_V_mas_mar_PlateCarrier1_rgr_d {
@@ -250,6 +270,10 @@
 			class _xx_200Rnd_mas_556x45_T_Stanag {
 				count = 100;
 				magazine = "200Rnd_mas_556x45_T_Stanag";
+			};
+			class _xx_7Rnd_mas_12Gauge_Slug {
+				count = 100;
+				magazine = "7Rnd_mas_12Gauge_Slug";
 			};
 			
 // THROWN + LAUNCHED
@@ -317,6 +341,22 @@
 				count = 50;
 				magazine = "Chemlight_blue";
 			};
+			class _xx_AGM_HandFlare_White {
+				count = 50;
+				magazine = "AGM_HandFlare_White";
+			};
+			class _xx_AGM_HandFlare_Red {
+				count = 50;
+				magazine = "AGM_HandFlare_Red";
+			};
+			class _xx_AGM_HandFlare_Green {
+				count = 50;
+				magazine = "AGM_HandFlare_Green";
+			};
+			class _xx_AGM_HandFlare_Yellow {
+				count = 50;
+				magazine = "AGM_HandFlare_Yellow";
+			};
 			
 // EXPLOSIVES
 			class _xx_DemoCharge_Remote_Mag {
@@ -374,6 +414,10 @@
 			class _xx_srifle_mas_m110 {
 				count = 20;
 				weapon = "srifle_mas_m110";
+			};
+			class _xx_arifle_mas_m1014 {
+				count = 3;
+				weapon = "arifle_mas_m1014";
 			};
 		};
 	};
