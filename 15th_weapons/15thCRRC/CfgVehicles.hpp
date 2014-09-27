@@ -124,6 +124,8 @@ class CfgVehicles
 		overSpeedBrakeCoef = 0.8;
 		enginePower = 50;
 		engineShiftY = 0;
+		slowSpeedForwardCoef = 0.2;
+		normalSpeedForwardCoef = 0.5;
 		waterLeakiness = 0.5;
 		waterResistanceCoef = 0.01;
 		thrustDelay = 3;
