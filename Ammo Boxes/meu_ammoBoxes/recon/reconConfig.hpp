@@ -1,4 +1,4 @@
-// REVISION 17SEP14
+// REVISION 01OCT14
 
 // class CfgVehicles
 // {
@@ -33,6 +33,10 @@
 			class _xx_optic_mas_handle {
 				count = 25;
 				name = "optic_mas_handle";
+			};
+			class _xx_SFLMG_ej {
+				count = 5;
+				name = "SFLMG_ej";
 			};
 
 // OPTICS
@@ -143,6 +147,10 @@
 			class _xx_FHQ_acc_ANPEQ15 {
 				count = 25;
 				name = "FHQ_acc_ANPEQ15";
+			};
+			class _xx_M145 {
+				count = 5;
+				name = "M145";
 			};
 
 // HELMETS
@@ -311,6 +319,10 @@
 				count = 10;
 				name = "AGM_Clacker";
 			};
+			class _xx_AGM_IR_Strobe_Item {
+				count = 25;
+				name = "AGM_IR_Strobe_Item";
+			};
 			
 // RIGS AND CARRIERS
 			class _xx_V_mas_mar_PlateCarrier2_rgr {
@@ -395,13 +407,13 @@
 				count = 50;
 				magazine = "7Rnd_mas_12Gauge_Slug";
 			};
-			class _xx_30Rnd_mas_556x45_Stanag {
+			class _xx_M855A1_M4_30Rnd {
 				count = 750;
-				magazine = "30Rnd_mas_556x45_Stanag";
+				magazine = "M855A1_M4_30Rnd";
 			};
-			class _xx_30Rnd_mas_556x45_T_Stanag {
+			class _xx_M855A1_tracer_M4_30Rnd {
 				count = 750;
-				magazine = "30Rnd_mas_556x45_T_Stanag";
+				magazine = "M855A1_tracer_M4_30Rnd";
 			};
 			class _xx_20Rnd_mas_762x51_Stanag {
 				count = 750;
@@ -415,29 +427,29 @@
 				count = 750;
 				magazine = "20Rnd_762x51_Mag";
 			};
-			class _xx_200Rnd_mas_556x45_Stanag {
+			class _xx_M249_200Rnd_556x45_Stanag {
 				count = 750;
-				magazine = "200Rnd_mas_556x45_Stanag";
+				magazine = "M249_200Rnd_556x45_Stanag";
 			};
-			class _xx_200Rnd_mas_556x45_T_Stanag {
+			class _xx_M249_200Rnd_556x45_Stanag_tracer {
 				count = 750;
-				magazine = "200Rnd_mas_556x45_T_Stanag";
+				magazine = "M249_200Rnd_556x45_Stanag_tracer";
 			};
-			class _xx_100Rnd_mas_762x51_Stanag {
-				count = 750;
-				magazine = "100Rnd_mas_762x51_Stanag";
+			class _xx_M855A1_M27IAR {
+				count = 100;
+				magazine = "M855A1_M27IAR";
 			};
-			class _xx_100Rnd_mas_762x51_T_Stanag {
-				count = 750;
-				magazine = "100Rnd_mas_762x51_T_Stanag";
+			class _xx_M855A1_tracer_M27IAR {
+				count = 100;
+				magazine = "M855A1_tracer_M27IAR";
 			};
-			class _xx_150Rnd_762x51_Box {
+			class _xx_M80_Ball_100Rnd_762x51 {
 				count = 750;
-				magazine = "150Rnd_762x51_Box";
+				magazine = "M80_Ball_100Rnd_762x51";
 			};
-			class _xx_150Rnd_762x51_Box_Tracer {
+			class _xx_M80_Ball_Tracer_100Rnd_762x51 {
 				count = 750;
-				magazine = "150Rnd_762x51_Box_Tracer";
+				magazine = "M80_Ball_Tracer_100Rnd_762x51";
 			};
 			class _xx_5Rnd_mas_127x99_Stanag {
 				count = 750;
@@ -618,8 +630,12 @@
 				weapon = "arifle_mas_m4_m203c";
 			};
 			class _xx_LMG_mas_M249_F {
-				count = 10;
+				count = 5;
 				weapon = "LMG_mas_M249_F";
+			};
+			class _xx_ej_IAR30 {
+				count = 5;
+				weapon = "ej_IAR30";
 			};
 			class _xx_LMG_mas_M240_F {
 				count = 5;

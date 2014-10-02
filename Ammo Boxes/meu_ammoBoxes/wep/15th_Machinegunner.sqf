@@ -30,9 +30,9 @@
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
 
- _unit addmagazine "100Rnd_mas_762x51_T_Stanag";
- _unit addmagazine "100Rnd_mas_762x51_T_Stanag";
- _unit addmagazine "100Rnd_mas_762x51_T_Stanag";
+ _unit addmagazine "M80_Ball_Tracer_100Rnd_762x51";
+ _unit addmagazine "M80_Ball_Tracer_100Rnd_762x51";
+ _unit addmagazine "M80_Ball_Tracer_100Rnd_762x51";
 
 
  _unit addweapon "LMG_mas_M240_F";

@@ -1,4 +1,4 @@
-// REVISION 03SEP14
+// REVISION 01OCT14
 
 // class CfgVehicles
 // {
@@ -166,8 +166,12 @@
 				name = "ItemCompass";
 			};
 			class _xx_ItemGPS {
-				count = 2;
+				count = 25;
 				name = "ItemGPS";
+			};
+			class _xx_ItemSMGR {
+				count = 20;
+				name = "ItemSMGR";
 			};
 			class _xx_ItemRadio {
 				count = 50;
@@ -176,6 +180,10 @@
 			class _xx_ItemMap {
 				count = 20;
 				name = "ItemMap";
+			};
+			class _xx_AGM_MapTools {
+				count = 10;
+				name = "AGM_MapTools";
 			};
 			class _xx_Binocular {
 				count = 20;
@@ -193,6 +201,14 @@
 				count = 5;
 				name = "Laserbatteries";
 			};
+			class _xx_AGM_Vector {
+				count = 5;
+				name = "AGM_Vector";
+			};
+			class _xx_AGM_ItemKestrel {
+				count = 2;
+				name = "AGM_ItemKestrel";
+			};
 			class _xx_B_UavTerminal {
 				count = 2;
 				name = "B_UavTerminal";
@@ -208,10 +224,6 @@
 			class _xx_ItemcTabHCam {
 				count = 2;
 				name = "ItemcTabHCam";
-			};
-			class _xx_ItemSMGR {
-				count = 20;
-				name = "ItemSMGR";
 			};
 			class _xx_UGL_FlareGreen_F {
 				count = 25;
@@ -241,21 +253,13 @@
 				count = 10;
 				name = "AGM_DefusalKit";
 			};
-			class _xx_AGM_Vector {
-				count = 5;
-				name = "AGM_Vector";
-			};
-			class _xx_AGM_ItemKestrel {
-				count = 2;
-				name = "AGM_ItemKestrel";
-			};
-			class _xx_AGM_MapTools {
-				count = 10;
-				name = "AGM_MapTools";
-			};
 			class _xx_AGM_CableTie {
 				count = 100;
 				name = "AGM_CableTie";
+			};
+			class _xx_AGM_IR_Strobe_Item {
+				count = 50;
+				name = "AGM_IR_Strobe_Item";
 			};
 		};
 	
@@ -265,29 +269,37 @@
 				count = 100;
 				magazine = "rh_15rnd_9x19_m9";
 			};
-			class _xx_30Rnd_556x45_Stanag {
+			class _xx_M855A1_M16_30Rnd {
 				count = 200;
-				magazine = "30Rnd_556x45_Stanag";
+				magazine = "M855A1_M16_30Rnd";
 			};
-			class _xx_30Rnd_mas_556x45_T_Stanag {
+			class _xx_M855A1_tracer_M16_30Rnd {
 				count = 100;
-				magazine = "30Rnd_mas_556x45_T_Stanag";
+				magazine = "M855A1_tracer_M16_30Rnd";
 			};
-			class _xx_100Rnd_mas_762x51_Stanag {
-				count = 100;
-				magazine = "100Rnd_mas_762x51_Stanag";
+			class _xx_M855A1_M4_30Rnd {
+				count = 200;
+				magazine = "M855A1_M4_30Rnd";
 			};
-			class _xx_100Rnd_mas_762x51_T_Stanag {
+			class _xx_M855A1_tracer_M4_30Rnd {
 				count = 100;
-				magazine = "100Rnd_mas_762x51_T_Stanag";
+				magazine = "M855A1_tracer_M4_30Rnd";
 			};
-			class _xx_200Rnd_mas_556x45_Stanag {
+			class _xx_M80_Ball_100Rnd_762x51 {
 				count = 100;
-				magazine = "200Rnd_mas_556x45_Stanag";
+				magazine = "M80_Ball_100Rnd_762x51";
 			};
-			class _xx_200Rnd_mas_556x45_T_Stanag {
+			class _xx_M80_Ball_Tracer_100Rnd_762x51 {
 				count = 100;
-				magazine = "200Rnd_mas_556x45_T_Stanag";
+				magazine = "M80_Ball_Tracer_100Rnd_762x51";
+			};
+			class _xx_M249_200Rnd_556x45_Stanag {
+				count = 100;
+				magazine = "M249_200Rnd_556x45_Stanag";
+			};
+			class _xx_M249_200Rnd_556x45_Stanag_tracer {
+				count = 100;
+				magazine = "M249_200Rnd_556x45_Stanag_tracer";
 			};
 			class _xx_20Rnd_mas_762x51_Stanag {
 				count = 50;
@@ -300,6 +312,14 @@
 			class _xx_7Rnd_mas_12Gauge_Slug {
 				count = 100;
 				magazine = "7Rnd_mas_12Gauge_Slug";
+			};
+			class _xx_M855A1_M27IAR {
+				count = 100;
+				magazine = "M855A1_M27IAR";
+			};
+			class _xx_M855A1_tracer_M27IAR {
+				count = 100;
+				magazine = "M855A1_tracer_M27IAR";
 			};
 			
 
@@ -418,13 +438,13 @@
 				count = 20;
 				weapon = "rh_m9";
 			};
-			class _xx_arifle_mas_m4 {
+			class _xx_M4Car {
 				count = 20;
-				weapon = "arifle_mas_m4";
+				weapon = "M4Car";
 			};
-			class _xx_arifle_mas_m4_m203 {
+			class _xx_M4Car203 {
 				count = 20;
-				weapon = "arifle_mas_m4_m203";
+				weapon = "M4Car203";
 			};
 			class _xx_arifle_mas_m16 {
 				count = 20;
@@ -445,6 +465,10 @@
 			class _xx_LMG_mas_M249_F {
 				count = 20;
 				weapon = "LMG_mas_M249_F";
+			};
+			class _xx_ej_IAR30 {
+				count = 20;
+				weapon = "ej_IAR30";
 			};
 			class _xx_meu_AT4 {
 				count = 20;

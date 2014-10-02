@@ -27,9 +27,9 @@
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
  (unitBackpack _unit) additemCargo ["itemRadio",2];
  
- _unit addmagazine "200Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "200Rnd_mas_556x45_Stanag";
- _unit addmagazine "200Rnd_mas_556x45_Stanag";
+ _unit addmagazine "M249_200Rnd_556x45_Stanag_tracer";
+ _unit addmagazine "M249_200Rnd_556x45_Stanag";
+ _unit addmagazine "M249_200Rnd_556x45_Stanag";
 
  _unit addweapon "LMG_mas_M249_F";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";

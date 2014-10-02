@@ -1,8 +1,8 @@
-// REVISION 05AUG14
+// REVISION 01OCT14
 // Infantry 
 [
 	["rh_15rnd_9x19_m9", 4],
-	["30Rnd_556x45_Stanag", 10],
+	["M855A1_M16_30Rnd", 10],
 	["Trixie_SMAW_HEDP", 3],
 	["Trixie_SMAW_HEAA", 2],
 	["DemoCharge_Remote_Mag",4],

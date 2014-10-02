@@ -23,19 +23,19 @@
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
- (unitBackpack _unit) addmagazineCargo ["200Rnd_mas_556x45_T_Stanag",2];
+ (unitBackpack _unit) addmagazineCargo ["M249_200Rnd_556x45_Stanag_tracer",2];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
 
  _unit addweapon "arifle_mas_m16";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";

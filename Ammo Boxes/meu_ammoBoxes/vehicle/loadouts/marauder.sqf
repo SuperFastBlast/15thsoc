@@ -1,13 +1,14 @@
 //15th Marauder Vehicle
 //By: 2ndLt Callaghan
+// REVISION 01OCT14
 
 [
-	["arifle_mas_m4", 1],
+	["M4Car", 1],
 	["meu_AT4", 2],
 	["rh_15rnd_9x19_m9", 4],
-	["30Rnd_556x45_Stanag", 10],
-	["30Rnd_mas_556x45_T_Stanag", 3],
-	["200Rnd_mas_556x45_Stanag", 4],
+	["M855A1_M16_30Rnd", 10],
+	["M855A1_tracer_M16_30Rnd", 3],
+	["M249_200Rnd_556x45_Stanag", 4],
 	["DemoCharge_Remote_Mag",2],
 	["tf_anprc152", 2],
 	["AGM_Bandage", 6],

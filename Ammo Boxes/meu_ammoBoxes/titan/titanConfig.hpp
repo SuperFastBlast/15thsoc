@@ -1,4 +1,4 @@
-// REVISION 02JUL14
+// REVISION 01OCT14
 
 // class CfgVehicles
 // {
@@ -137,9 +137,9 @@
 				count = 12;
 				magazine = "rh_15rnd_9x19_m9";
 			};
-			class _xx_30Rnd_556x45_Stanag {
-				count = 60;
-				magazine = "30Rnd_556x45_Stanag";
+			class _xx_M855A1_M4_30Rnd {
+				count = 750;
+				magazine = "M855A1_M4_30Rnd";
 			};
 			
 // THROWN
@@ -175,9 +175,9 @@
 				count = 20;
 				weapon = "rh_m9";
 			};
-			class _xx_arifle_mas_m4 {
+			class _xx_M4Car {
 				count = 12;
-				weapon = "arifle_mas_m4";
+				weapon = "M4Car";
 			};
 		};
 	};

@@ -1,4 +1,4 @@
-// REVISION 03SEP14
+// REVISION 01OCT14
 
 // class CfgVehicles
 // {
@@ -127,17 +127,25 @@
 				count = 12;
 				magazine = "rh_15rnd_9x19_m9";
 			};
-			class _xx_30Rnd_556x45_Stanag {
+			class _xx_M855A1_M16_30Rnd {
 				count = 60;
-				magazine = "30Rnd_556x45_Stanag";
+				magazine = "M855A1_M16_30Rnd";
 			};
-			class _xx_30Rnd_mas_556x45_T_Stanag {
+			class _xx_M855A1_tracer_M16_30Rnd {
 				count = 60;
-				magazine = "30Rnd_mas_556x45_T_Stanag";
+				magazine = "M855A1_tracer_M16_30Rnd";
 			};
-			class _xx_200Rnd_mas_556x45_T_Stanag {
+			class _xx_M855A1_M4_30Rnd {
+				count = 60;
+				magazine = "M855A1_M4_30Rnd";
+			};
+			class _xx_M855A1_tracer_M4_30Rnd {
+				count = 60;
+				magazine = "M855A1_tracer_M4_30Rnd";
+			};
+			class _xx_M249_200Rnd_556x45_Stanag_tracer {
 				count = 100;
-				magazine = "200Rnd_mas_556x45_T_Stanag";
+				magazine = "M249_200Rnd_556x45_Stanag_tracer";
 			};
 
 // THROWN
@@ -165,9 +173,9 @@
 				count = 20;
 				weapon = "rh_m9";
 			};
-			class _xx_arifle_mas_m4 {
+			class _xx_M4Car {
 				count = 12;
-				weapon = "arifle_mas_m4";
+				weapon = "M4Car";
 			};
 			class _xx_arifle_mas_m16 {
 				count = 12;
@@ -176,6 +184,10 @@
 			class _xx_LMG_mas_M249a_F {
 				count = 10;
 				weapon = "LMG_mas_M249a_F";
+			};
+			class _xx_ej_IAR30 {
+				count = 10;
+				weapon = "ej_IAR30";
 			};
 			class _xx_meu_AT4 {
 				count = 20;

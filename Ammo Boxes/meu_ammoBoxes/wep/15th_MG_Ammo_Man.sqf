@@ -1,6 +1,8 @@
 //15th Weapons MG Ammo Man
 //15thMEU Realism Unit, Weapons Platoon
 //By: SSgt Callaghan
+// REVISION 01OCT14
+
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -30,19 +32,19 @@
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
 
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "M855A1_tracer_M4_30Rnd";
 
 
- _unit addweapon "arifle_mas_m4";
+ _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
 

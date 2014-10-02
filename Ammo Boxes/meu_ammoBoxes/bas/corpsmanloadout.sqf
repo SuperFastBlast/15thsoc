@@ -1,6 +1,6 @@
 //15th Corpsman Loadout
 //By: SSgt Callaghan/C. Johnston
-//updated 02JUL14
+// REVISION 01OCT14
 
 
  _unit = _this select 1;
@@ -36,15 +36,15 @@
  (unitBackpack _unit) additemCargo ["AGM_Morphine" ,20];
  (unitBackpack _unit) additemCargo ["AGM_Bloodbag" ,2];
 
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
  
- _unit addweapon "arifle_mas_m4_m203";
+ _unit addweapon "M4Car203";
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
 
  _unit addmagazine "rh_15rnd_9x19_m9";

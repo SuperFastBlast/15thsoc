@@ -1,8 +1,8 @@
 /// Infantry - MG
 [
 	["rh_15rnd_9x19_m9", 4],
-	["30Rnd_556x45_Stanag", 10],
-	["100Rnd_mas_762x51_Stanag", 10],
+	["M855A1_M16_30Rnd", 10],
+	["M80_Ball_100Rnd_762x51", 10],
 	["ClaymoreDirectionalMine_Remote_Mag",2],
 	["itemRadio", 2],
 	["AGM_Bandage", 6],
