@@ -1218,6 +1218,46 @@ class CfgWeapons
 		{
 			libtextdesc = "The M110 Semi Automatic Sniper System M110 SASS is an American semi automatic sniper rifle that is chambered for the 7.62×51mm NATO round, developed by US firearm manufacturer Knight Armament Company. The M110 Semi Automatic Sniper System is intended to replace the M24 Sniper Weapon System used by snipers, spotters, designated marksman, or squad advanced marksmen in the United States Army.";
 		};
+	        muzzles[]=
+                {
+                        "this",
+                        "securite"
+                };
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		modes[] = {"Single","single_close_optics1","single_medium_optics1","single_far_optics1"};
 		class Single: Mode_SemiAuto
 		{

@@ -26,16 +26,6 @@ class CfgPatches
 	author[]={"EricJ"};
 	};
 };
-class cfgRecoils
-{
-	scar_HRecoil[] = 	 {0,0.014,0.015,  0.02,0.014,0.015,  0.07,0.005,0.018,  0.13,0,0};
-	scar_HRecoilProne[] = {0,0.01,0.006,    0.013,0.01,0.006,  0.1,0.008,0.001,  0.12,0,0};
-
-	IAR_Recoil[]={0,0.0049999999,0.0049999999,0.0049999999,0.0099999998,0.011,0.090000004,0.0049999999,-0.00039999999,0.13,0,0};
-	IAR_RecoilProne[]={0,0.0049999999,0.0049999999,0.0049999999,0.0099999998,0.0089999996,0.075000003,0.0049999999,-0.00030000001,0.13,0,0};
-	IAR_Recoil_Auto[]={0,0.0070000002,0.015,0.0070000002,0.0099999998,0.022,0.090000004,0.02,0.0099999998,0.13,0,0};
-	IAR_RecoilProneAuto[]={0,0.0049999999,0.0049999999,0.0049999999,0.0099999998,0.0089999996,0.075000003,0.0049999999,-0.00030000001,0.13,0,0};
-};
 class Mode_SemiAuto;
 class Mode_FullAuto;
 class SlotInfo;
@@ -78,7 +68,7 @@ class CfgWeapons
 		midrangeprobab=0.69999999;
 		minrange=2;
 		minrangeprobab=0.30000001;
-		magazines[] = {"IAR30mk318_mag","M855A1_M27IAR","M855A1_Tracer_M27IAR"M855A1_M4_30Rnd","M855A1_tracer_M4_30Rnd","M855A1_M16_30Rnd","M855A1_tracer_M16_30Rnd","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
+		magazines[] = {"IAR30mk318_mag","M855A1_M27IAR","M855A1_Tracer_M27IAR","M855A1_M4_30Rnd","M855A1_tracer_M4_30Rnd","M855A1_M16_30Rnd","M855A1_tracer_M16_30Rnd","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 		model="\IARal\ej_IAR30.p3d";
 		modes[]=
 		{
@@ -139,8 +129,6 @@ class CfgWeapons
 		opticszoommax=1.1;
 		opticszoommin=0.375;
 		picture="\IARal\data\UI\iar30inv_x_ca.paa";
-		recoil="assaultRifleBase";
-		recoilprone="assaultRifleBase";
 		reloadAction="GestureReloadSMG_02";
 		reloadMagazineSound[]=
 		{
@@ -238,8 +226,8 @@ class CfgWeapons
 			};
 
 			reloadTime=0.096000001;
-			recoil="IAR_Recoil";
-			recoilProne="IAR_RecoilProne";
+			recoil = "recoil_auto_primary_5outof10";
+            		recoilprone = "recoil_auto_primary_prone_4outof10";
 			dispersion=0.00086999999;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -280,8 +268,8 @@ class CfgWeapons
 
 			reloadTime=0.096000001;
 			dispersion=0.00086999999;
-			recoil="IAR_Recoil_Auto";
-			recoilProne="IAR_RecoilProneAuto";
+			recoil = "recoil_auto_primary_5outof10";
+           		recoilprone = "recoil_auto_primary_prone_4outof10";
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -364,33 +352,29 @@ class CfgWeapons
 class CfgMagazines
 {
 	class 30Rnd_556x45_Stanag;
-	class IAR30mk318_mag: 30Rnd_556x45_Stanag
+	class M855A1_tracer_M27IAR: 30Rnd_556x45_Stanag
 	{
-		ammo="ej_B_mk318";
+		ammo="M855A1_tracer_M27IAR";
 		count=30;
 		descriptionshort="";
-		displayname="5.56mm 30-round Mk318 Magazine";
+		displayname="M27 IAR 5.56mm 30-round Stanag Tracer";
 		initspeed=950;
-		lastroundstracer=5;
+		tracersevery=1;
 		picture = "\A3\weapons_F\data\UI\m_30stanag_CA.paa";
 		model="";
 		scope=2;
-		tracersevery=0;
-		mass=8;
 	};
-	class IAR_coffinmag: 30Rnd_556x45_Stanag
+	class M855A1_M27IAR: 30Rnd_556x45_Stanag
 	{
-		ammo="TB_556x45_Ball";
-		count=60;
+		ammo="M855A1_M27IAR";
+		count=30;
 		descriptionshort="";
-		displayname="5.56mm 60-round Coffin Mag";
-		initspeed=930;
-		lastroundstracer=0;
+		displayname="M27 IAR 5.56mm 30-round Stanag";
+		initspeed=950;
 		picture="\A3\weapons_F\data\UI\m_30stanag_CA.paa";
 		model="";
 		scope=2;
-		tracersevery=0;
-		mass=16;
+		lastroundstracer=5;
 	};
 	class CA_Magazine;
 	class R3F_securite_mag: CA_Magazine
@@ -413,6 +397,7 @@ class CfgMagazines
 };
 class CfgAmmo
 {
+	class B_556x45_Ball_Tracer_Red;
   	class M855A1_tracer_M27IAR: B_556x45_Ball_Tracer_Red 
 	{
 		hit=8.85;
@@ -441,22 +426,6 @@ class CfgAmmo
 		visibleFireTime=10;
 		audibleFire=15;
 		audibleFireTime=10;
-	};
-	class B_556x45_Ball;
-	class ej_B_mk318: B_556x45_Ball
-	{
-		hit = 10;
-		typicalSpeed = 925.1468;
-		airFriction = -0.001243324;
-		caliber = 0.755;
-		deflecting = 18;
-		visibleFire = 3;
-		audibleFire = 5.5;
-		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
-		nvgonly=0;
-		tracerendtime=1;
-		tracerscale=1;
-		tracerstarttime=0.050000001;
 	};
 	class BulletBase;
 	class R3F_securite_Ball: BulletBase

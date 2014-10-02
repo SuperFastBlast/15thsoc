@@ -2108,6 +2108,7 @@ class CfgWeapons
 };
 class CfgAmmo
 {
+	class BulletBase;
 	class B_556x45_Ball;
 	class B_556x45_Ball_Tracer_Red;
 	class M_Titan_AA;
@@ -2156,6 +2157,20 @@ class CfgAmmo
 		visibleFireTime=10; //how long can see
 		audibleFire=20; // how much can AI hear 
 		audibleFireTime=10; //how long can hear
+	};
+		class R3F_securite_Ball: BulletBase
+	{
+		hit = 0;
+		cartridge = "FxCartridge_Small";
+		cost = 0;
+		typicalSpeed = 0;
+		airFriction = 0;
+		caliber = 0;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
+		tracerScale = 0;
+		tracerStartTime = 0;
+		tracerEndTime = 0;
+		nvgOnly = 0;
 	};
 	class M80_Ball_Tracer: B_762x51_Tracer_Red 
 	{
@@ -2382,6 +2397,7 @@ class CfgAmmo
 };
 class CfgMagazines
 {
+	class CA_Magazine;
 	class 30Rnd_556x45_Stanag;
 	class 30Rnd_556x45_Stanag_Tracer_Red;
 	class 20Rnd_762x51_Mag;
@@ -2484,6 +2500,23 @@ class CfgMagazines
 		descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 30<br />Used in: M4,HK416,M16,SCAR-L";
 		displayname = "30rnd 5.56mm STANAG(Tracer)";
 		picture = "\mas_us_rifle\ui\m_30stanag_red_CA.paa";
+	};
+	class R3F_securite_mag: CA_Magazine
+	{
+		scope = 2;
+		displayName = "";
+		count = 0;
+		initSpeed = 0;
+		tracersEvery = 0;
+		ammo = "R3F_securite_Ball";
+		picture = "\mas_us_rifle_c\blank_ca.paa"; //this is a transparent texture...
+		model = "";
+		descriptionShort = "";
+		mass = 0;
+		class Library
+		{
+			libTextDesc = "";
+		};
 	};
 	class M855A1_M4_30Rnd: 30Rnd_556x45_Stanag
 	{

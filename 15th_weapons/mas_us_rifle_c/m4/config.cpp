@@ -78,6 +78,42 @@ class CfgWeapons
 		{
 			libtextdesc = "The Heckler & Koch HK416 is an assault rifle designed and manufactured by Heckler & Koch. It uses the AR-15 platform, originally conceived as an improvement to the Colt M4 carbine family issued to the U.S. military, with the notable inclusion of an HK-proprietary short-stroke gas piston system derived from the Heckler & Koch G36. USSOCOM and other country's Special Forces are equipped with the HK416, it fires the .223 caliber, or 5.56mm NATO round.";
 		};
+	        muzzles[] ={"this","securite"};
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M4Reload",1,1,30};
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
@@ -327,6 +363,42 @@ class CfgWeapons
 		{
 			libtextdesc = "The Heckler & Koch HK416 is an assault rifle designed and manufactured by Heckler & Koch. It uses the AR-15 platform, originally conceived as an improvement to the Colt M4 carbine family issued to the U.S. military, with the notable inclusion of an HK-proprietary short-stroke gas piston system derived from the Heckler & Koch G36. USSOCOM and other country's Special Forces are equipped with the HK416, it fires the .223 caliber, or 5.56mm NATO round. This version is equipped with the AG36 wich is a single-shot 40 mm grenade launcher.";
 		};
+		muzzles[] ={"this","AG36","securite"};
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M4Reload",1,1,30};
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
@@ -437,7 +509,6 @@ class CfgWeapons
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
 		};
-		muzzles[] = {"this","AG36"};
 		class AG36: UGL_F
 		{
 			displayName = "AG36";
@@ -597,7 +668,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The Heckler & Koch HK416 is an assault rifle designed and manufactured by Heckler & Koch. It uses the AR-15 platform, originally conceived as an improvement to the Colt M4 carbine family issued to the U.S. military, with the notable inclusion of an HK-proprietary short-stroke gas piston system derived from the Heckler & Koch G36. USSOCOM and other country's Special Forces are equipped with the HK416, it fires the .223 caliber, or 5.56mm NATO round. This version is equipped with the M203 wich is a single-shot 40 mm grenade launcher.";
 		};
-		muzzles[] = {"this","M203a"};
+		muzzles[] ={"this","M203a","securite"};
 		class M203a: UGL_F
 		{
 			displayName = "M203";
@@ -2373,6 +2444,7 @@ class CfgWeapons
 			libtextdesc = "The M4A1 is a gas-operated, magazine-fed, selective fire, shoulder-fired weapon with a telescoping stock. A shortened variant of the M16A2 rifle, the M4A1 has a 14.5 in (370 mm) barrel, allowing its user to better operate in close quarters combat. Like the rest of the M16 family, it fires the .223 caliber, or 5.56mm NATO round. US Army, USSF and many other country's Special Forces are equipped with the M4A1.";
 		};
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
+		mass = 55;
 		class Single: Mode_SemiAuto
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
@@ -2840,6 +2912,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The M4A1 is a gas-operated, magazine-fed, selective fire, shoulder-fired weapon with a telescoping stock. A shortened variant of the M16A2 rifle, the M4A1 has a 14.5 in (370 mm) barrel, allowing its user to better operate in close quarters combat. Like the rest of the M16 family, it fires the .223 caliber, or 5.56mm NATO round. US Army, USSF and many other country's Special Forces are equipped with the M4A1. This version is equipped with the M203 wich is a single-shot 40 mm grenade launcher.";
 		};
+		muzzles[] ={"this","M203b","securite"};
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -2949,7 +3022,6 @@ class CfgWeapons
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
 		};
-		muzzles[] = {"this","M203b"};
 		class M203b: UGL_F
 		{
 			displayName = "M203";
@@ -5507,6 +5579,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The M16 is a gas operated, selective fire weapon, chambered for the 5.56 x 45mm round. M16A1 improved version of the original M16. It has been adopted by the US Army as a standard rifle in 1967, M16A2 a variant of the previous M16A1, adapted for the new SS109 5.56 x 45 mm standard NATO round. This assault rifle had heavier barrel and different rear sight. A full-auto firing mode was replaced with three round burst mode. It's ejection port also has a spent case deflector. The M16A2 has been adopted by the US Army in 1982 and by the US Marine Corps in 1983. Soon it became the general issue rifle, M16A3 improved version, fitted with Picatinny-type rail instead of the carrying handle, which accepts a variety of scopes. A detachable carrying handle can still be installed. Weapon's trigger mechanism has a semi- and full-auto modes only, M16A4 similar to the M16A3, however has a three-round burst mode instead of the full-auto mode. This version is equipped with the M203 wich is a single-shot 40 mm grenade launcher.";
 		};
+		muzzles[] ={"this","M203c","securite"};
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -5532,8 +5605,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_auto_primary_5outof10";
-			recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -5568,8 +5641,8 @@ class CfgWeapons
 			reloadtime = 0.0799999;
 			soundBurst = 0;
 			burst = 3;
-			recoil = "recoil_auto_primary_5outof10";
-			recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			dispersion = 0.005;
 			minRange = 1;
 			minRangeProbab = 0.1;
@@ -5604,7 +5677,6 @@ class CfgWeapons
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
 		};
-		muzzles[] = {"this","M203c"};
 		class M203c: UGL_F
 		{
 			displayName = "M203";
@@ -5663,8 +5735,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_auto_primary_5outof10";
-			recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -5699,8 +5771,8 @@ class CfgWeapons
 			reloadtime = 0.0799999;
 			soundBurst = 0;
 			burst = 3;
-			recoil = "recoil_auto_primary_5outof10";
-			recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			dispersion = 0.005;
 			minRange = 1;
 			minRangeProbab = 0.1;
@@ -5746,7 +5818,8 @@ class CfgWeapons
 		class Library
 		{
 			libtextdesc = "The M4 Carbine is a gas-operated, magazine-fed, selective fire, shoulder-fired weapon with a telescoping stock. A shortened variant of the M16A2 rifle, the M4 Carbine has a 14.5 in (370 mm) barrel, allowing its user to better operate in close quarters combat. Like the rest of the M16 family, it fires the .223 caliber, or 5.56mm NATO round. US Army, USSF and many other country's Special Forces are equipped with the M4. This version is equipped with the M203 wich is a single-shot 40 mm grenade launcher.";
-		}
+		};
+		muzzles[] ={"this","M203c","securite"};
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -5772,8 +5845,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_auto_primary_5outof10";
-			recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -5808,8 +5881,8 @@ class CfgWeapons
 			reloadtime = 0.0799999;
 			soundBurst = 0;
 			burst = 3;
-			recoil = "recoil_auto_primary_5outof10";
-			recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			dispersion = 0.005;
 			minRange = 1;
 			minRangeProbab = 0.1;
@@ -5844,7 +5917,6 @@ class CfgWeapons
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
 		};
-		muzzles[] = {"this","M203c"};
 		class M203c: UGL_F
 		{
 			displayName = "M203";
@@ -6468,6 +6540,46 @@ class CfgWeapons
 	{
 		displayname = "M14 EBR";
 		magazines[] = {"20Rnd_mas_762x51_Stanag","20Rnd_mas_762x51_T_Stanag","20Rnd_762x51_Mag"};
+			        muzzles[]=
+                {
+                        "this",
+                        "securite"
+                };
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		maxZeroing = 1400;
 		class WeaponSlotsInfo
 		{
@@ -6584,6 +6696,46 @@ class CfgWeapons
 		class Library
 		{
 			libtextdesc = "The M24 Sniper Weapon System is the military and police version of the Remington 700 rifle, M24 being the model name assigned by the United States Army after adoption as their standard sniper rifle in 1988. The M24 is referred to as a weapons system because it consists of not only a rifle, but also a detachable telescopic sight and other accessories. The M24 SWS had the long action bolt version of the Remington 700 receiver. It turned out there was an insufficient amount of rounds in a single lot of manufacture, so the operational requirement changed to use the dimensionally smaller 7,62×51mm NATO M118 Match Grade cartridge.";
+		};
+			        muzzles[]=
+                {
+                        "this",
+                        "securite"
+                };
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
 		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M24Reload",1,1,30};
 		modes[] = {"Single","far_optic1","medium_optic2","far_optic2"};
@@ -6769,6 +6921,42 @@ class CfgWeapons
 		class Library
 		{
 			libtextdesc = "The Heckler & Koch MP5 is a 9mm submachine gun of German design, developed in the 1960s by a team of engineers from the German small arms manufacturer Heckler & Koch GmbH of Oberndorf am Neckar. There are over 100 variants of the MP5, including a semi-automatic version. The MP5 is one of the most widely used submachine guns in the world, having been adopted by 40 nations and numerous military, law enforcement, intelligence, and security organizations.";
+		};
+		muzzles[] ={"this","securite"};
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
 		};
 		drySound[] = {"\mas_us_rifle\sounds\mp5_dry",1,1,20};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\MP5Reload",1,1,30};
@@ -7332,6 +7520,46 @@ class CfgWeapons
 		{
 			libtextdesc = "The M107 is a recoil-operated, semi-automatic anti-materiel rifle developed by the American Barrett Firearms Manufacturing company. A heavy SASR (Special Application Scoped Rifle), it is used by many units and armies around the world. It is also called the Light Fifty for its .50 BMG (12.7×99mm NATO) chambering. The weapon is found in two variants, the original M82A1 (and A3) and the bullpup M82A2. It has been adopted for service by a number of armed forces and special forces.";
 		};
+			        muzzles[]=
+                {
+                        "this",
+                        "securite"
+                };
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M107Reload",1,1,30};
 		modes[] = {"Single","far_optic1","medium_optic2","far_optic2"};
 		class Single: Mode_SemiAuto
@@ -7583,6 +7811,46 @@ class CfgWeapons
 		{
 			libtextdesc = "The Stoner LMG is a light machine gun system developed by Eugene Stoner and manufactured by Knight's Armament Company (KAC). It is also known as the KAC Stoner 96 LMG to differentiate it from the earlier ArmaLite Stoner 63 LMG and Ares Stoner 86 LMG it is derived from. The Stoner LMG is billed by KAC as the lightest 5.56mm machine gun. It weighs 10 pounds with magazine and has a length of 35.25 inches. The Stoner LMG is belt-fed, gas operated, air-cooled, and fully automatic, firing at a rate of 550 rounds per minute. Stoner designed the weapon as a replacement for the Stoner 63. Neither weapons system gained much popularity as the FN Minimi would become the LMG adopted by the United States military, which dubbed the FN weapon the M249.";
 		};
+			        muzzles[]=
+                {
+                        "this",
+                        "securite"
+                };
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
 		{
@@ -7799,6 +8067,42 @@ class CfgWeapons
 		class Library
 		{
 			libtextdesc = "The M249 light machine gun (LMG), previously designated the M249 Squad Automatic Weapon (SAW), and formally written as Light Machine Gun, 5.56 mm, M249, is an American version of the Belgian FN Minimi, a light machine gun manufactured by the Belgian company FN Herstal (FN). The M249 is manufactured in the United States and is widely used by the U.S. Armed Forces. The weapon was introduced in 1984 after being judged the most effective of a number of candidate weapons to address the lack of automatic firepower in small units. The M249 provides infantry squads with the heavy volume of fire of a machine gun combined with accuracy and portability approaching that of a rifle.";
+		};
+		muzzles[] ={"this","securite"};
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
 		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M249R",1,1,30};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
@@ -8234,6 +8538,42 @@ class CfgWeapons
 		{
 			libtextdesc = "The Mk48 is a lightweight belt fed machine gun, firing 7.62×51mm NATO cartridges from a disintegrating belt of ammunition. It is manufactured by Fabrique Nationale Manufacturing, Inc, a division of FN Herstal based in the United States. The Mk48 has been developed in conjunction with the U.S. Special Operations Command (USSOCOM), which has adopted the weapon and started its fielding process, beginning with special operations units.";
 		};
+		muzzles[] ={"this","securite"};		
+			class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M249R",1,1,30};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
@@ -8553,6 +8893,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The M240, officially Machine Gun, 7.62mm, M240, is the US military designation for the FN MAG, a family of belt fed, gas operated medium machine guns firing the 7.62×51mm NATO cartridge. The M240 has been used by the United States Armed Forces since the late 1970s. It is used extensively by infantry, most often rifle companies, as well as ground vehicles, watercraft, and aircraft.";
 		};
+		muzzles[] ={"this","securite"};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M240reload",1,1,30};
 	};
 	class LMG_mas_m240_F_h: LMG_mas_m240_F
@@ -11159,63 +11500,6 @@ class CfgVehicles
 			{
 				name = "NVGoggles_mas_mask3";
 				count = 10;
-			};
-		};
-	};
-};
-	class NATO_Box_Base;
-	class BoxNewAmmo: NATO_Box_Base
-	{
-		scope = 2;
-		vehicleClass = "Ammo";
-		model = "\A3\weapons_F\AmmoBoxes\WpnsBox_F";
-		icon = "iconCrateWpns";
-		displayName = "15thNewAmmo";
-		maximumLoad = 999999;
-		transportMaxWeapons = 50000;
-		transportMaxMagazines = 200000;
-		transportMaxBackpacks = 2000;
-		class TransportMagazines
-		{
-			class _xx_M80_Ball_100Rnd_762x51
-			{
-				magazine = "M80_Ball_100Rnd_762x51";
-				count = 50;
-			};
-			class _xx_M80_Ball_Tracer_100Rnd_762x51
-			{
-				magazine = "M80_Ball_Tracer_100Rnd_762x51";
-				count = 50;
-			};
-			class _xx_M855A1_M4_30Rnd
-			{
-				magazine = "M855A1_M4_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_tracer_M4_30Rnd
-			{
-				magazine = "M855A1_tracer_M4_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_M16_30Rnd
-			{
-				magazine = "M855A1_M16_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_tracer_M16_30Rnd
-			{
-				magazine = "M855A1_tracer_M16_30Rnd";
-				count = 50;
-			};
-			class _xx_M249_200Rnd_556x45_Stanag
-			{
-				magazine = "M249_200Rnd_556x45_Stanag";
-				count = 50;
-			};
-			class _xx_M249_200Rnd_556x45_Stanag_tracer
-			{
-				magazine = "M249_200Rnd_556x45_Stanag_tracer";
-				count = 50;
 			};
 		};
 	};
