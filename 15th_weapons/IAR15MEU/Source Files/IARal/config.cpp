@@ -15,7 +15,13 @@ class CfgPatches
 			"IARmk318_mag",
 			"IAR30mk318_mag",
 			"IARmk262_mag",
-			"IARrt_mag"
+			"IARrt_mag",
+			"M855A1_M27IAR",
+			"M855A1_Tracer_M27IAR",
+			"M855A1_M16_30Rnd",
+			"M855A1_tracer_M16_30Rnd",
+			"M855A1_M4_30Rnd",
+			"M855A1_tracer_M4_30Rnd"
 		};
 	author[]={"EricJ"};
 	};
@@ -72,7 +78,7 @@ class CfgWeapons
 		midrangeprobab=0.69999999;
 		minrange=2;
 		minrangeprobab=0.30000001;
-		magazines[] = {"IAR30mk318_mag","M855A1_M4_30Rnd","M855A1_tracer_M4_30Rnd","M855A1_M16_30Rnd","M855A1_tracer_M16_30Rnd","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
+		magazines[] = {"IAR30mk318_mag","M855A1_M27IAR","M855A1_Tracer_M27IAR"M855A1_M4_30Rnd","M855A1_tracer_M4_30Rnd","M855A1_M16_30Rnd","M855A1_tracer_M16_30Rnd","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 		model="\IARal\ej_IAR30.p3d";
 		modes[]=
 		{
@@ -407,6 +413,35 @@ class CfgMagazines
 };
 class CfgAmmo
 {
+  	class M855A1_tracer_M27IAR: B_556x45_Ball_Tracer_Red 
+	{
+		hit=8.85;
+		typicalSpeed=950;
+		caliber=1;
+		deflecting=20;
+		deflectingChance = 100;
+		deflectingRandomness = 0.5;
+		visibleFire=15;
+		visibleFireTime=10;
+		audibleFire=15;
+		audibleFireTime=10;
+		tracerendtime = 1.4;
+		tracerscale = 1;
+		tracerstarttime = 0.06;
+	};
+	class M855A1_M27IAR: B_556x45_Ball_Tracer_Red 
+	{
+		hit=8.85;
+		typicalSpeed=950;
+		caliber=1;
+		deflecting=20;
+		deflectingChance = 100;
+		deflectingRandomness = 0.5;
+		visibleFire=15;
+		visibleFireTime=10;
+		audibleFire=15;
+		audibleFireTime=10;
+	};
 	class B_556x45_Ball;
 	class ej_B_mk318: B_556x45_Ball
 	{
