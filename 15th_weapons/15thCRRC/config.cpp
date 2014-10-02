@@ -16,5 +16,7 @@ enum
 	destructbuilding=1
 };
 
+class EventHandlers;
 #include "CfgPatches.hpp"
 #include "CfgVehicles.hpp"
+

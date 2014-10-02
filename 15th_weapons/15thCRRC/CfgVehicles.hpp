@@ -1,7 +1,34 @@
 class CfgVehicles
 {
+	class Weapon_Bag_Base;
+	class B_UAV_01_backpack_F: Weapon_Bag_Base
+	{	
+		class EventHandlers;
+		class assembleinfo;
+	};
+	class B_CRRC_backpack: B_UAV_01_backpack_F
+	{
+		_generalmacro = "B_CRRC_backpack";
+		displayname = "Zodiac CRRC Bag";
+		faction = "BLU_F";
+		hiddenselectionstextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
+		mapsize = 0.6;
+		mass = 300;
+		maximumload = 0;
+		model = "\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\UAV_backpack_F.p3d";
+		picture = "\A3\Drones_F\Weapons_F_Gamma\ammoboxes\bags\data\ui\icon_B_C_UAV_rgr_ca";
+		scope = 2;
+		side = 1;
+		class assembleInfo: assembleinfo
+		{
+			assembleto = "15thCRRCboat";
+			base = "";
+			displayname = "Zodiac CRRC";
+		};
+	};
 	class Boat_F;
-	class 15thCRRCboat: Boat_F
+	class Rubber_duck_base_F;
+	class 15thCRRCboat: Rubber_duck_base_F
 	{
 		mapSize = 4.754;
 		_generalMacro = "15thCRRCboat";
@@ -124,6 +151,8 @@ class CfgVehicles
 		overSpeedBrakeCoef = 0.8;
 		enginePower = 50;
 		engineShiftY = 0;
+		slowSpeedForwardCoef = 0.2;
+		normalSpeedForwardCoef = 0.5;
 		waterLeakiness = 0.5;
 		waterResistanceCoef = 0.01;
 		thrustDelay = 3;
@@ -156,6 +185,18 @@ class CfgVehicles
 		{
 			tex[] = {};
 			mat[] = {"A3\boat_f\Boat_Transport_01\data\Boat_Transport_01.rvmat","A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_damage.rvmat","A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_damage.rvmat"};
+		};
+		class EventHandlers: EventHandlers
+		{
+			init = "(_this select 0) execVM ""\15thcrrc\scripts\rotate.sqf""";
+		};
+		class assembleInfo
+		{
+			assembleto = "";
+			base = "";
+			displayname = "";
+			dissasembleto[] = {"B_CRRC_backpack"};
+			primary = 1;
 		};
 	};
 	class 15thCRRC: 15thCRRCboat

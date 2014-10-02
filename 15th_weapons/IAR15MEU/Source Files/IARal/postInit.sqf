@@ -1,0 +1,1 @@
+"postInit" call BIS_fnc_log;
