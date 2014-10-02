@@ -147,6 +147,10 @@
 				count = 100;
 				magazine = "M249_200Rnd_556x45_Stanag_tracer";
 			};
+			class _xx_M855A1_tracer_M27IAR {
+				count = 100;
+				magazine = "M855A1_tracer_M27IAR";
+			};
 
 // THROWN
 			class _xx_SmokeShell {

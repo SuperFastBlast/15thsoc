@@ -407,14 +407,6 @@
 				count = 20;
 				weapon = "arifle_mas_m16_gl";
 			};
-			class _xx_M4Carc {
-				count = 20;
-				weapon = "M4Carc";
-			};
-			class _xx_M4Car203c {
-				count = 20;
-				weapon = "M4Car203c";
-			};
 			class _xx_srifle_mas_sr25_h {
 				count = 2;
 				weapon = "srifle_mas_sr25_h";
