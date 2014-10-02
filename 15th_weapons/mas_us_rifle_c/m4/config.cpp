@@ -9577,6 +9577,42 @@ class CfgWeapons
 		{
 			libtextdesc = "The Benelli M4 Super 90 is an Italian semi automatic shotgun manufactured by Benelli Armi SpA.";
 		};
+	        muzzles[] ={"this","securite"};
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M4Reload",1,1,30};
 		modes[] = {"Single","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto

@@ -1169,6 +1169,42 @@ class CfgWeapons
 		magazines[] = {"12Rnd_mas_45acp_Mag","10Rnd_mas_45acp_Mag","8Rnd_mas_45acp_Mag"};
 		descriptionshort = "Pistol<br />Caliber: .45 ACP";
 		sounds[] = {"StandardSound","SilencedSound"};
+	        muzzles[] ={"this","securite"};
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		class BaseSoundModeType
 		{
 			weaponSoundEffect = "DefaultRifle";
@@ -1233,6 +1269,42 @@ class CfgWeapons
 			libtextdesc = "The Beretta M9, formally Pistol, Semiautomatic, 9mm, M9, is a 9×19mm Parabellum pistol of the United States military adopted in 1985. It is essentially a military specification Beretta 92F, later the 92FS. The M9 won a competition in the 1980s to replace the M1911A1 as the primary sidearm of the U.S. military, beating many other contenders. It officially entered service in 1990.";
 		};
 		sounds[] = {"StandardSound","SilencedSound"};
+		muzzles[] ={"this","securite"};
+		class securite: Rifle_Base_F
+		{
+			displayName="$STR_R3F_SAFE";
+			magazines[]=
+			{
+				"R3F_securite_mag"
+			};
+			begin1[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			reloadMagazineSound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+			drySound[]=
+			{
+				"",
+				1,
+				1,
+				1
+			};
+
+		};
 		class BaseSoundModeType
 		{
 			weaponSoundEffect = "DefaultRifle";
@@ -2285,11 +2357,37 @@ class CfgAmmo
 	};
 	class B_mas_9x21p_Ball: B_9x21_Ball
 	{
-		hit = 6;
+	hit = 7;
+        cartridge = "FxCartridge_65_caseless";
+        cost = 100;
+        typicalSpeed = 390;
+        airFriction = -0.0014;
+        caliber = 1.7;
+        deflecting = 45;
+        model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
+        tracerScale = 0.5;
+        tracerStartTime = 0.05;
+        tracerEndTime = 1;
+        nvgOnly = 1;
+        visibleFire = 3;
+        audibleFire = 5;
 	};
 	class B_mas_9x21_Ball: B_9x21_Ball
 	{
-		hit = 8;
+	hit = 7;
+        cartridge = "FxCartridge_65_caseless";
+        cost = 100;
+        typicalSpeed = 390;
+        airFriction = -0.0014;
+        caliber = 1.7;
+        deflecting = 45;
+        model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
+        tracerScale = 0.5;
+        tracerStartTime = 0.05;
+        tracerEndTime = 1;
+        nvgOnly = 1;
+        visibleFire = 3;
+        audibleFire = 5;
 	};
 	class B_mas_9x21d_Ball: B_56x15_dual
 	{
@@ -2341,7 +2439,17 @@ class CfgAmmo
 	};
 	class B_mas_45acp_Ball: B_9x21_Ball
 	{
-		hit = 10;
+	hit = 10;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        cartridge = "FxCartridge_65_caseless";
+        caliber = 2.6;
+        deflecting = 45;
+        visibleFire = 5;
+        audibleFire = 9;
+        cost = 100;
+        typicalSpeed = 280;
+        airFriction = -0.0018;
 	};
 	class B_mas_12Gauge_Slug: B_12Gauge_Slug
 	{
@@ -2839,19 +2947,23 @@ class CfgMagazines
 	};
 	class 8Rnd_mas_45acp_Mag: 16Rnd_9x21_Mag
 	{
+		scope = 2;
 		ammo = "B_mas_45acp_Ball";
 		count = 8;
 		displayName = "8rnd .45ACP Mag";
 		picture = "\A3\weapons_f\data\ui\M_16Rnd_9x21_CA.paa";
 		descriptionshort = "Caliber: .45ACP<br />Rounds: 8<br />Used in: M1911 ACP";
+		initSpeed = 280;
 	};
 	class 15Rnd_mas_9x21_Mag: 16Rnd_9x21_Mag
 	{
+		scope = 2;
 		ammo = "B_9x21_Ball";
 		count = 15;
 		displayName = "15rnd 9mm Mag";
 		picture = "\A3\weapons_f\data\ui\M_16Rnd_9x21_CA.paa";
 		descriptionshort = "Caliber: 9x21 mm STANAG<br />Rounds: 15<br />Used in: Beretta M9";
+		initSpeed = 390;
 	};
 	class 17Rnd_mas_9x21_Mag: 16Rnd_9x21_Mag
 	{
