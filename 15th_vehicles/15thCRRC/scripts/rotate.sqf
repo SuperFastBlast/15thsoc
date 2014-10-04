@@ -1,5 +1,5 @@
 
-_newDir = getdir _this + 90;
+_newDir = getdir _this + 00;
 
 _this setdir _newdir;
 
