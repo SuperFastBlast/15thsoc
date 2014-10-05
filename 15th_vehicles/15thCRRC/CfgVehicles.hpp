@@ -68,7 +68,7 @@ class CfgVehicles
 			};
 		};
 		attenuationEffectType = "OpenCarAttenuation";
-		insideSoundCoef = 0.5;
+		insideSoundCoef = 1.0;
 		soundEngineOnInt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_start",1.0,1.0};
 		soundEngineOnExt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_start",1.0,1.0,150};
 		soundEngineOffInt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_stop",1.0,1.0};
@@ -147,14 +147,19 @@ class CfgVehicles
 		ejectDeadDriver = 0;
 		ejectDeadCargo = 0;
 		maxSpeed = 70;
+		acceleration = 3;
 		simulation = "shipX";
 		overSpeedBrakeCoef = 0.8;
+		brakeDistance = 50;
 		enginePower = 50;
 		engineShiftY = 0;
+		fuelCapacity = 50;
+		engineFuelEfficiency = 1.0;
 		slowSpeedForwardCoef = 0.2;
 		normalSpeedForwardCoef = 0.5;
 		waterLeakiness = 0.5;
 		waterResistanceCoef = 0.01;
+		turnCoef = 3.5;
 		thrustDelay = 3;
 		waterLinearDampingCoefY = 5;
 		waterLinearDampingCoefX = 2.0;
