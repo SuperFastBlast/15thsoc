@@ -1,3 +1,4 @@
+// REVISION 01OCT14
 //15th RTO Loadout
  _unit = _this select 1;
  
@@ -25,16 +26,16 @@ _unit additem "itemGPS";
 
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
 
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "30Rnd_mas_556x45_T_Stanag";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "M855A1_tracer_M16_30Rnd";
 
  _unit addweapon "arifle_mas_m16";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";

@@ -1,4 +1,4 @@
-// REVISION 13AUG14
+// REVISION 01OCT14
 
 // class CfgVehicles
 // {
@@ -77,6 +77,14 @@
 			class _xx_FHQ_optic_tws3050 {
 				count = 15;
 				name = "FHQ_optic_tws3050";
+			};
+			class _xx_optic_mas_Arco_blk {
+				count = 20;
+				name = "optic_mas_Arco_blk";
+			};
+			class _xx_optic_mas_DMS {
+				count = 2;
+				name = "optic_mas_DMS";
 			};
 // GOGGLES
 			class _xx_NVGoggles_OPFOR {
@@ -158,8 +166,12 @@
 				name = "ItemCompass";
 			};
 			class _xx_ItemGPS {
-				count = 2;
+				count = 25;
 				name = "ItemGPS";
+			};
+			class _xx_ItemSMGR {
+				count = 20;
+				name = "ItemSMGR";
 			};
 			class _xx_ItemRadio {
 				count = 50;
@@ -168,6 +180,10 @@
 			class _xx_ItemMap {
 				count = 20;
 				name = "ItemMap";
+			};
+			class _xx_AGM_MapTools {
+				count = 10;
+				name = "AGM_MapTools";
 			};
 			class _xx_Binocular {
 				count = 20;
@@ -185,6 +201,14 @@
 				count = 5;
 				name = "Laserbatteries";
 			};
+			class _xx_AGM_Vector {
+				count = 5;
+				name = "AGM_Vector";
+			};
+			class _xx_AGM_ItemKestrel {
+				count = 2;
+				name = "AGM_ItemKestrel";
+			};
 			class _xx_B_UavTerminal {
 				count = 2;
 				name = "B_UavTerminal";
@@ -200,10 +224,6 @@
 			class _xx_ItemcTabHCam {
 				count = 2;
 				name = "ItemcTabHCam";
-			};
-			class _xx_ItemSMGR {
-				count = 20;
-				name = "ItemSMGR";
 			};
 			class _xx_UGL_FlareGreen_F {
 				count = 25;
@@ -225,6 +245,22 @@
 				count = 6;
 				name = "AGM_SpareBarrel";
 			};
+			class _xx_AGM_Clacker {
+				count = 10;
+				name = "AGM_Clacker";
+			};
+			class _xx_AGM_DefusalKit {
+				count = 10;
+				name = "AGM_DefusalKit";
+			};
+			class _xx_AGM_CableTie {
+				count = 100;
+				name = "AGM_CableTie";
+			};
+			class _xx_AGM_IR_Strobe_Item {
+				count = 50;
+				name = "AGM_IR_Strobe_Item";
+			};
 		};
 	
 // AMMO
@@ -233,29 +269,37 @@
 				count = 100;
 				magazine = "rh_15rnd_9x19_m9";
 			};
-			class _xx_30Rnd_556x45_Stanag {
+			class _xx_M855A1_M16_30Rnd {
 				count = 200;
-				magazine = "30Rnd_556x45_Stanag";
+				magazine = "M855A1_M16_30Rnd";
 			};
-			class _xx_30Rnd_mas_556x45_T_Stanag {
+			class _xx_M855A1_tracer_M16_30Rnd {
 				count = 100;
-				magazine = "30Rnd_mas_556x45_T_Stanag";
+				magazine = "M855A1_tracer_M16_30Rnd";
 			};
-			class _xx_100Rnd_mas_762x51_Stanag {
-				count = 100;
-				magazine = "100Rnd_mas_762x51_Stanag";
+			class _xx_M855A1_M4_30Rnd {
+				count = 200;
+				magazine = "M855A1_M4_30Rnd";
 			};
-			class _xx_100Rnd_mas_762x51_T_Stanag {
+			class _xx_M855A1_tracer_M4_30Rnd {
 				count = 100;
-				magazine = "100Rnd_mas_762x51_T_Stanag";
+				magazine = "M855A1_tracer_M4_30Rnd";
 			};
-			class _xx_200Rnd_mas_556x45_Stanag {
+			class _xx_M80_Ball_100Rnd_762x51 {
 				count = 100;
-				magazine = "200Rnd_mas_556x45_Stanag";
+				magazine = "M80_Ball_100Rnd_762x51";
 			};
-			class _xx_200Rnd_mas_556x45_T_Stanag {
+			class _xx_M80_Ball_Tracer_100Rnd_762x51 {
 				count = 100;
-				magazine = "200Rnd_mas_556x45_T_Stanag";
+				magazine = "M80_Ball_Tracer_100Rnd_762x51";
+			};
+			class _xx_M249_200Rnd_556x45_Stanag {
+				count = 100;
+				magazine = "M249_200Rnd_556x45_Stanag";
+			};
+			class _xx_M249_200Rnd_556x45_Stanag_tracer {
+				count = 100;
+				magazine = "M249_200Rnd_556x45_Stanag_tracer";
 			};
 			class _xx_20Rnd_mas_762x51_Stanag {
 				count = 50;
@@ -264,6 +308,18 @@
 			class _xx_20Rnd_mas_762x51_T_Stanag {
 				count = 50;
 				magazine = "20Rnd_mas_762x51_T_Stanag";
+			};
+			class _xx_7Rnd_mas_12Gauge_Slug {
+				count = 100;
+				magazine = "7Rnd_mas_12Gauge_Slug";
+			};
+			class _xx_M855A1_M27IAR {
+				count = 100;
+				magazine = "M855A1_M27IAR";
+			};
+			class _xx_M855A1_tracer_M27IAR {
+				count = 100;
+				magazine = "M855A1_tracer_M27IAR";
 			};
 			
 
@@ -348,8 +404,24 @@
 				count = 30;
 				magazine = "6Rnd_Smoke_M32";
 			};
+			class _xx_AGM_HandFlare_White {
+				count = 50;
+				magazine = "AGM_HandFlare_White";
+			};
+			class _xx_AGM_HandFlare_Red {
+				count = 50;
+				magazine = "AGM_HandFlare_Red";
+			};
+			class _xx_AGM_HandFlare_Green {
+				count = 50;
+				magazine = "AGM_HandFlare_Green";
+			};
+			class _xx_AGM_HandFlare_Yellow {
+				count = 50;
+				magazine = "AGM_HandFlare_Yellow";
+			};
 
-// Explosives
+// EXPLOSIVES
 			class _xx_DemoCharge_Remote_Mag {
 				count = 50;
 				magazine = "DemoCharge_Remote_Mag";
@@ -360,19 +432,19 @@
 			};
 		};
 		
-// AMMO
+// WEAPONS
 		class TransportWeapons {
 			class _xx_rh_m9 {
 				count = 20;
 				weapon = "rh_m9";
 			};
-			class _xx_arifle_mas_m4 {
+			class _xx_M4Car {
 				count = 20;
-				weapon = "arifle_mas_m4";
+				weapon = "M4Car";
 			};
-			class _xx_arifle_mas_m4_m203 {
+			class _xx_M4Car203 {
 				count = 20;
-				weapon = "arifle_mas_m4_m203";
+				weapon = "M4Car203";
 			};
 			class _xx_arifle_mas_m16 {
 				count = 20;
@@ -394,6 +466,10 @@
 				count = 20;
 				weapon = "LMG_mas_M249_F";
 			};
+			class _xx_ej_IAR30 {
+				count = 20;
+				weapon = "ej_IAR30";
+			};
 			class _xx_meu_AT4 {
 				count = 20;
 				weapon = "meu_AT4";
@@ -405,6 +481,14 @@
 			class _xx_M32 {
 				count = 6;
 				weapon = "M32";
+			};
+			class _xx_srifle_mas_m110 {
+				count = 2;
+				weapon = "srifle_mas_m110";
+			};
+			class _xx_arifle_mas_m1014 {
+				count = 3;
+				weapon = "arifle_mas_m1014";
 			};
 		};
 	};

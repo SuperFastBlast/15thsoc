@@ -29,13 +29,13 @@
 		
 // AMMO
 
-			class _xx_30Rnd_556x45_Stanag {
+			class _xx_M855A1_M16_30Rnd {
 				count = 50;
-				magazine = "30Rnd_556x45_Stanag";
+				magazine = "M855A1_M16_30Rnd";
 			};
-			class _xx_200Rnd_mas_556x45_Stanag {
+			class _xx_M249_200Rnd_556x45_Stanag {
 				count = 6;
-				magazine = "200Rnd_mas_556x45_Stanag";
+				magazine = "M249_200Rnd_556x45_Stanag";
 			};
 			
 // GRENADE, SMOKE, M203

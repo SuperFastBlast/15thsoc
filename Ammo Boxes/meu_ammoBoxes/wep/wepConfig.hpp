@@ -1,4 +1,4 @@
-// REVISION 05AUG14
+// REVISION 01OCT14
 
 // class CfgVehicles
 // {
@@ -63,6 +63,10 @@
 			class _xx_optic_tws_mg {
 				count = 5;
 				name = "optic_tws_mg";
+			};
+			class _xx_M145 {
+				count = 15;
+				name = "M145";
 			};
 
 
@@ -135,6 +139,30 @@
 				count = 6;
 				name = "AGM_SpareBarrel";
 			};
+			class _xx_AGM_CableTie {
+				count = 20;
+				name = "AGM_CableTie";
+			};
+			class _xx_AGM_UAVBattery {
+				count = 5;
+				name = "AGM_UAVBattery";
+			};
+			class _xx_AGM_MapTools {
+				count = 20;
+				name = "AGM_MapTools";
+			};
+			class _xx_AGM_DefusalKit {
+				count = 15;
+				name = "AGM_DefusalKit";
+			};
+			class _xx_AGM_Vector {
+				count = 20;
+				name = "AGM_Vector";
+			};
+			class _xx_AGM_Clacker {
+				count = 20;
+				name = "AGM_Clacker";
+			};
 			
 // HELMETS
 			class _xx_H_mas_mar_HelmetBind_v {
@@ -188,21 +216,29 @@
 				count = 100;
 				magazine = "rh_15rnd_9x19_m9";
 			};
-			class _xx_30Rnd_556x45_Stanag {
+			class _xx_M855A1_M16_30Rnd {
 				count = 200;
-				magazine = "30Rnd_556x45_Stanag";
+				magazine = "M855A1_M16_30Rnd";
 			};
-			class _xx_30Rnd_mas_556x45_T_Stanag {
+			class _xx_M855A1_tracer_M16_30Rnd {
 				count = 100;
-				magazine = "30Rnd_mas_556x45_T_Stanag";
+				magazine = "M855A1_tracer_M16_30Rnd";
 			};
-			class _xx_100Rnd_mas_762x51_Stanag {
-				count = 100;
-				magazine = "100Rnd_mas_762x51_Stanag";
+			class _xx_M855A1_M4_30Rnd {
+				count = 200;
+				magazine = "M855A1_M4_30Rnd";
 			};
-			class _xx_100Rnd_mas_762x51_T_Stanag {
+			class _xx_M855A1_tracer_M4_30Rnd {
 				count = 100;
-				magazine = "100Rnd_mas_762x51_T_Stanag";
+				magazine = "M855A1_tracer_M4_30Rnd";
+			};
+			class _xx_M80_Ball_100Rnd_762x51 {
+				count = 100;
+				magazine = "M80_Ball_100Rnd_762x51";
+			};
+			class _xx_M80_Ball_Tracer_100Rnd_762x51 {
+				count = 100;
+				magazine = "M80_Ball_Tracer_100Rnd_762x51";
 			};
 			class _xx_Trixie_SMAW_HEDP {
 				count = 50;
@@ -296,7 +332,11 @@
 			class _xx_SatchelCharge_Remote_Mag {
 				count = 20;
 				magazine = "SatchelCharge_Remote_Mag";
-			};	
+			};
+			class _xx_SLAMDirectionalMine_Wire_Mag {
+				count = 20;
+				magazine = "SLAMDirectionalMine_Wire_Mag";
+			};
 
 // Laser designator
 			class _xx_Laserbatteries {
@@ -311,13 +351,13 @@
 				count = 20;
 				weapon = "rh_m9";
 			};
-			class _xx_arifle_mas_m4 {
+			class _xx_M4Car {
 				count = 20;
-				weapon = "arifle_mas_m4";
+				weapon = "M4Car";
 			};
-			class _xx_arifle_mas_m4_m203 {
+			class _xx_M4Car203 {
 				count = 20;
-				weapon = "arifle_mas_m4_m203";
+				weapon = "M4Car203";
 			};
 			class _xx_arifle_mas_m16 {
 				count = 20;

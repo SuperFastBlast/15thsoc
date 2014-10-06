@@ -7,7 +7,7 @@
 	["AGM_BloodBag",10],
 	["ItemRadio",5],
 	["AGM_Earbuds",10],
-	["30Rnd_556x45_Stanag",20],
+	["M855A1_tracer_M4_30Rnd",20],
 	["rh_15rnd_9x19_m9",10],
 	["REV1_flash",40],
 	["SmokeShell",5],

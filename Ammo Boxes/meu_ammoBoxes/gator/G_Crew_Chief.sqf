@@ -1,5 +1,5 @@
 //Bravo (AAV) Company, Crew Chief Loadout
-//Updated 13AUG14
+// REVISION 01OCT14
 
 
  _unit = _this select 1;
@@ -42,18 +42,18 @@ _unit assignitem "itemCompass";
  _unit addbackpack "tf_rt1523g";
 
 
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
- _unit addmagazine "30Rnd_556x45_Stanag";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "M855A1_M4_30Rnd";
  
- _unit addweapon "arifle_mas_m4";
+ _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "optic_Hamr";
  _unit addPrimaryWeaponItem "acc_pointer_IR";
 

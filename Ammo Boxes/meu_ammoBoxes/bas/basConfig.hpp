@@ -1,4 +1,4 @@
-// REVISION 02JUL14
+// REVISION 01OCT14
 
 // class CfgVehicles
 // {
@@ -145,13 +145,21 @@
 				count = 100;
 				magazine = "rh_15rnd_9x19_m9";
 			};
-			class _xx_30Rnd_556x45_Stanag {
+			class _xx_M855A1_M16_30Rnd {
 				count = 300;
-				magazine = "30Rnd_556x45_Stanag";
+				magazine = "M855A1_M16_30Rnd";
 			};
-			class _xx_30Rnd_mas_556x45_T_Stanag {
+			class _xx_M855A1_tracer_M16_30Rnd {
 				count = 100;
-				magazine = "30Rnd_mas_556x45_T_Stanag";
+				magazine = "M855A1_tracer_M16_30Rnd";
+			};
+			class _xx_M855A1_M4_30Rnd {
+				count = 300;
+				magazine = "M855A1_M4_30Rnd";
+			};
+			class _xx_M855A1_tracer_M4_30Rnd {
+				count = 100;
+				magazine = "M855A1_tracer_M4_30Rnd";
 			};
 
 
@@ -212,9 +220,9 @@
 				count = 5;
 				weapon = "arifle_mas_m16_gl";
 			};
-			class _xx_arifle_mas_m4_M203 {
+			class _xx_M4Car203 {
 				count = 5;
-				weapon = "arifle_mas_m4_M203";
+				weapon = "M4Car203";
 			};
 		};
 	};

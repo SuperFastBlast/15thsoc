@@ -2,7 +2,7 @@
 [
 	["rh_15rnd_9x19_m9", 4],
 	["30Rnd_556x45_Stanag", 10],
-	["200Rnd_mas_556x45_Stanag", 4],
+	["M249_200Rnd_556x45_Stanag", 4],
 	["ClaymoreDirectionalMine_Remote_Mag",2],
 	["itemRadio", 2],
 	["AGM_Bandage", 6],

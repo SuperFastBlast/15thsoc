@@ -33,8 +33,8 @@ class CfgPatches
 				"Box_meu_titan",
 				"Box_meu_wep",
 				"Box_meu_vehicle",
-				"Box_meu_lar"
-				"Box_meu_empty"
+				"Box_meu_lar",
+				"Box_meu_empty",
 			};
 			weapons[] = {};
 			requiredVersion = REQUIRED_VERSION;
