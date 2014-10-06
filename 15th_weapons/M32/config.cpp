@@ -97,24 +97,6 @@ class CfgMagazines
 		ammo = "G_40mm_SmokeOrange";
 	};
 
-	class CA_Magazine;
-	class R3F_securite_mag: CA_Magazine
-	{
-		scope = 2;
-		displayName = "";
-		count = 0;
-		initSpeed = 0;
-		tracersEvery = 0;
-		ammo = "R3F_securite_Ball";
-		picture = "\M32\Data\blank.paa";
-		model = "";
-		descriptionShort = "";
-		mass = 0;
-		class Library
-		{
-			libTextDesc = "";
-		};
-	};
 };
 	
 
@@ -146,42 +128,9 @@ class CfgWeapons
 		reloadaction = "ReloadMagazine";
        	muzzles[]=
 		{
-			"this",
-			"securite"
+			"this"
 		};
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
+
 
 		};
 		changeFiremodeSound[]=
@@ -200,7 +149,7 @@ class CfgWeapons
 			weaponSoundEffect="DefaultRifle";
 			begin1[]=
 			{
-				"A3\sounds_f\Weapons\grenades\ugl_shot_4",
+				""m32\sounds\m32_s1",
 				1.1220185,
 				1,
 				200
@@ -213,7 +162,7 @@ class CfgWeapons
 		};
 		reloadMagazineSound[]=
 		{
-			"A3\sounds_f\Weapons\grenades\ugl_reload2",
+			"m32\sounds\m32_r",
 			1,
 			1,
 			10
@@ -227,25 +176,7 @@ class CfgWeapons
 			};
 	};
 };
-class CfgAmmo
-{
 
-	class BulletBase;
-	class R3F_securite_Ball: BulletBase
-	{
-		hit = 0;
-		cartridge = "FxCartridge_Small";
-		cost = 0;
-		typicalSpeed = 0;
-		airFriction = 0;
-		caliber = 0;
-		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
-		tracerScale = 0;
-		tracerStartTime = 0;
-		tracerEndTime = 0;
-		nvgOnly = 0;
-	};
-};
 class CfgVehicles 
 {
 	class NATO_Box_Base;
