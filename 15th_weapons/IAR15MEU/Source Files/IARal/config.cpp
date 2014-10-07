@@ -77,48 +77,7 @@ class CfgWeapons
 		};
 		muzzles[]=
 		{
-			"this",
-			"securite"
-		};
-		class securite: Rifle
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			optics="true";
-			modelOptics="-";
-			opticsZoomMin=0.375;
-			opticsZoomMax=1.1;
-			opticsZoomInit=0.75;
-			memoryPointCamera="eye";
+			"this"
 		};
 		optics=0;
 		opticsdisableperipherialvision=0.67000002;
@@ -376,28 +335,9 @@ class CfgMagazines
 		scope=2;
 		lastroundstracer=5;
 	};
-	class CA_Magazine;
-	class R3F_securite_mag: CA_Magazine
-	{
-		scope=2;
-		displayName="";
-		count=0;
-		initSpeed=0;
-		tracersEvery=0;
-		ammo="R3F_securite_Ball";
-		picture="\iar\Data\blank.paa";
-		model="";
-		descriptionShort="";
-		mass=0;
-		class Library
-		{
-			libTextDesc="";
-		};
-	};
 };
 class CfgAmmo
 {
-	class B_556x45_Ball_Tracer_Red;
   	class M855A1_tracer_M27IAR: B_556x45_Ball_Tracer_Red 
 	{
 		hit=8.85;
@@ -414,7 +354,7 @@ class CfgAmmo
 		tracerscale = 1;
 		tracerstarttime = 0.06;
 	};
-	class M855A1_M27IAR: B_556x45_Ball_Tracer_Red 
+	class M855A1_M27IAR: B_556x45_Ball
 	{
 		hit=8.85;
 		typicalSpeed=950;
@@ -426,20 +366,5 @@ class CfgAmmo
 		visibleFireTime=10;
 		audibleFire=15;
 		audibleFireTime=10;
-	};
-	class BulletBase;
-	class R3F_securite_Ball: BulletBase
-	{
-		hit=0;
-		cartridge="FxCartridge_Small";
-		cost=0;
-		typicalSpeed=0;
-		airFriction=0;
-		caliber=0;
-		model="\A3\Weapons_f\Data\bullettracer\tracer_white";
-		tracerScale=0;
-		tracerStartTime=0;
-		tracerEndTime=0;
-		nvgOnly=0;
 	};
 };
