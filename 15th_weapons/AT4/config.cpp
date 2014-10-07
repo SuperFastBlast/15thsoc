@@ -50,7 +50,8 @@ class CfgAmmo
 			frequency = 20;
 		};
 	};
-};
+
+
 
 class CfgMagazines
 {
@@ -81,8 +82,41 @@ class CfgMagazines
 		allowedSlots[] = {701,801,901};
 				
 	};
+	class AT4_CS: RPG32_F
+	{
+		descriptionshort = "Range: 300 m<br/>Type: HEAT (High Explosive Anti-Tank)<br/>Used in: AT-4";
+		displayname = "AT-4 CS";
+		displaynameshort = "CS";
+		modelSpecial = "\AT4\m136_launcher_loaded.p3d";
+		picture = "\AT4\Data\m_smaw_ca.paa"; 
+		scope = 2;
+		ammo = "R_AT_CS";
+		reloadtime = 0.5;
+		hit = 350;
+		indirecthit = 30;
+		indirecthitrange = 10;
+		airfriction = 0.175;
+		sideairfriction = 0.175;
+		thrust = 0;// changed
+		thrusttime = 0;
+		timetolive = 10;
+		maxspeed = 290;
+		initspeed = 290; 
+		selectionFireanim = "";
+		mass = 1;
+		allowedSlots[] = {701,801,901};
+				
+	};
 	
 	class AT4_HEAT_Used : AT4_HEAT
+	{
+		scope = 1;
+		count = 0;
+		type = 0;
+		inko_disposable = 0;
+		displayName = "AT4(Used)";
+	};
+		class AT4_CS_Used : AT4_CS
 	{
 		scope = 1;
 		count = 0;
@@ -125,6 +159,10 @@ class CfgWeapons
 		weaponLockDelay = 3.0;
 		lockAcquire = 0;
 		magazineReloadTime = 0;
+		AGM_Backblast_Angle = 60; // angle of the backblast area
+        AGM_Backblast_Range = 10; // maximum range of the backblast
+        AGM_Backblast_Damage = 2; // maximum damage of the backblast
+		
 		
 		// Used for inko disposable
 		inko_disposable = 1;
