@@ -49,6 +49,12 @@ class CfgWeapons
 			0.5,
 			1
 		};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		descriptionshort="M27 IAR<br />Caliber: 5.56";
 		discretedistance[]={300,400,500,600};
 		discretedistanceinitindex=1;
@@ -149,7 +155,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 			allowedslots[]={901};
-			mass=60;
+			mass=83.9;
 			class asdg_MuzzleSlot_IAR: asdg_MuzzleSlot_556{};
 			class asdg_OpticRail1913_IAR: asdg_OpticRail1913{};
 			class asdg_FrontSideRail_IAR: asdg_FrontSideRail{};
@@ -286,7 +292,7 @@ class CfgWeapons
 		scope=2;
 		displayname="M27 IAR w/ 30-round magazine";
 		reloadAction="GestureReloadSMG_02";
-		dexterity=1.6;
+		dexterity=1.8;
 		handanim[]=
 		{
 			"OFP2_ManSkeleton",
@@ -300,71 +306,11 @@ class CfgWeapons
 		picture="\IARal\data\UI\iar30desinv_x_ca.paa";
 		displayname="M27 IAR Desert w/30-round magazine";
 		reloadAction="GestureReloadSMG_02";
-		dexterity=1.35;
+		dexterity=1.8;
 		handanim[]=
 		{
 			"OFP2_ManSkeleton",
 			"\IARal\data\Anim\SCAR.rtm"
 		};
-	};
-};
-class CfgMagazines
-{
-	class 30Rnd_556x45_Stanag;
-	class M855A1_tracer_M27IAR: 30Rnd_556x45_Stanag
-	{
-		ammo="M855A1_tracer_M27IAR";
-		count=30;
-		descriptionshort="";
-		displayname="M27 IAR 5.56mm 30-round Stanag Tracer";
-		initspeed=950;
-		tracersevery=1;
-		picture = "\A3\weapons_F\data\UI\m_30stanag_CA.paa";
-		model="";
-		scope=2;
-	};
-	class M855A1_M27IAR: 30Rnd_556x45_Stanag
-	{
-		ammo="M855A1_M27IAR";
-		count=30;
-		descriptionshort="";
-		displayname="M27 IAR 5.56mm 30-round Stanag";
-		initspeed=950;
-		picture="\A3\weapons_F\data\UI\m_30stanag_CA.paa";
-		model="";
-		scope=2;
-		lastroundstracer=5;
-	};
-};
-class CfgAmmo
-{
-  	class M855A1_tracer_M27IAR: B_556x45_Ball_Tracer_Red 
-	{
-		hit=8.85;
-		typicalSpeed=950;
-		caliber=1;
-		deflecting=20;
-		deflectingChance = 100;
-		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=10;
-		audibleFire=15;
-		audibleFireTime=10;
-		tracerendtime = 1.4;
-		tracerscale = 1;
-		tracerstarttime = 0.06;
-	};
-	class M855A1_M27IAR: B_556x45_Ball
-	{
-		hit=8.85;
-		typicalSpeed=950;
-		caliber=1;
-		deflecting=20;
-		deflectingChance = 100;
-		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=10;
-		audibleFire=15;
-		audibleFireTime=10;
 	};
 };
