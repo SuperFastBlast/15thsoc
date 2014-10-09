@@ -109,7 +109,7 @@ class CfgWeapons
 			1,
 			30
 		};
-		reloadtime=0.1;
+		reloadtime = 0.0799999;
 		scope=0;
 		selectionfireanim="muzzleflash";
 		weaponinfotype="RscWeaponZeroing";
@@ -193,7 +193,7 @@ class CfgWeapons
 			reloadTime=0.096000001;
 			recoil = "recoil_auto_primary_5outof10";
             		recoilprone = "recoil_auto_primary_prone_4outof10";
-			dispersion=0.00086999999;
+			dispersion=0.00087;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=200;
@@ -232,7 +232,7 @@ class CfgWeapons
 			};
 
 			reloadTime=0.096000001;
-			dispersion=0.00086999999;
+			dispersion=0.00087;
 			recoil = "recoil_auto_primary_5outof10";
            		recoilprone = "recoil_auto_primary_prone_4outof10";
 			minRange=0;
