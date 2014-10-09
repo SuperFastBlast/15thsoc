@@ -2390,12 +2390,12 @@ class CfgAmmo
 	};
 	class B_mas_127x99_Ball: B_127x99_Ball
 	{
-		hit = 120;
+		hit = 40;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 	};
 	class B_mas_127x99_Ball_T: B_127x99_Ball_Tracer_Red
 	{
-		hit = 120;
+		hit = 40;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 	};
 	class B_mas_127x99_dem_Ball: B_127x99_Ball
@@ -2428,7 +2428,7 @@ class CfgAmmo
    	};
 	class B_mas_12Gauge_Slug: B_12Gauge_Slug
 	{
-		hit = 32;
+		hit = 42;
 		cartridge = "FxCartridge_slug";
 		class CamShakeFire
 		{

@@ -5483,7 +5483,7 @@ class CfgWeapons
 			burst = 3;
 			recoil = "recoil_single_primary_5outof10";
 			recoilprone = "recoil_single_primary_prone_4outof10";
-			dispersion = 0.005;
+			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
 			midRange = 80;
@@ -5701,7 +5701,7 @@ class CfgWeapons
 			burst = 3;
 			recoil = "recoil_auto_primary_4outof10";
 			recoilprone = "recoil_auto_primary_prone_3outof10";
-			dispersion = 0.005;
+			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
 			midRange = 80;
@@ -5862,7 +5862,7 @@ class CfgWeapons
 			burst = 3;
 			recoil = "recoil_auto_primary_4outof10";
 			recoilprone = "recoil_auto_primary_prone_3outof10";
-			dispersion = 0.005;
+			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
 			midRange = 80;
@@ -6003,7 +6003,7 @@ class CfgWeapons
 			burst = 3;
 			recoil = "recoil_auto_primary_4outof10";
 			recoilprone = "recoil_auto_primary_prone_3outof10";
-			dispersion = 0.005;
+			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
 			midRange = 80;
@@ -8023,9 +8023,9 @@ class CfgWeapons
 		{
 			libtextdesc = "The M249 light machine gun (LMG), previously designated the M249 Squad Automatic Weapon (SAW), and formally written as Light Machine Gun, 5.56 mm, M249, is an American version of the Belgian FN Minimi, a light machine gun manufactured by the Belgian company FN Herstal (FN). The M249 is manufactured in the United States and is widely used by the U.S. Armed Forces. The weapon was introduced in 1984 after being judged the most effective of a number of candidate weapons to address the lack of automatic firepower in small units. The M249 provides infantry squads with the heavy volume of fire of a machine gun combined with accuracy and portability approaching that of a rifle.";
 		};
-    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
-    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
-    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Jamming_Reliability = 0.001;    // malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.010;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
     AGM_Overheating_allowSwapBarrel = 1;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
@@ -8033,7 +8033,7 @@ class CfgWeapons
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
 		{
-	    	dispersion = 0.0020;
+	    	dispersion = 0.0035;
 	    	recoil = "recoil_auto_machinegun_7outof10";
 	    	recoilprone = "recoil_auto_machinegun_prone_4outof10";
 	    	reloadtime = 0.0799999;
@@ -8464,7 +8464,7 @@ class CfgWeapons
 			libtextdesc = "The Mk48 is a lightweight belt fed machine gun, firing 7.62×51mm NATO cartridges from a disintegrating belt of ammunition. It is manufactured by Fabrique Nationale Manufacturing, Inc, a division of FN Herstal based in the United States. The Mk48 has been developed in conjunction with the U.S. Special Operations Command (USSOCOM), which has adopted the weapon and started its fielding process, beginning with special operations units.";
 		};
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
-    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Increment = 0.010;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
@@ -9497,10 +9497,10 @@ class CfgWeapons
 				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",0.794328,1,100};
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
-			reloadTime = 0.096;
+			reloadTime = 0.1;
 			recoil = "recoil_single_ebr";
 			recoilProne = "recoil_single_prone_ebr";
-			dispersion = 0.00087;
+			dispersion = 0.005;
 			minRange = 2;
 			minRangeProbab = 0.5;
 			midRange = 200;
