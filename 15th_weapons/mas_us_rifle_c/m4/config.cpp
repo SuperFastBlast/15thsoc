@@ -8474,7 +8474,7 @@ class CfgWeapons
 		class manual: Mode_FullAuto
 		{
 			reloadtime = 0.0866666;
-			dispersion = 0.0031;
+			dispersion = 0.003;
 			recoil = "recoil_auto_machinegun_10outof10";
 			recoilprone = "recoil_auto_machinegun_prone_7outof10";
 			sounds[] = {"StandardSound","SilencedSound"};

@@ -2111,6 +2111,7 @@ class CfgWeapons
 class CfgAmmo
 {
 	class BulletBase;
+	class G_40mm_HE;
 	class B_556x45_Ball;
 	class B_556x45_Ball_Tracer_Red;
 	class M_Titan_AA;
@@ -2390,12 +2391,12 @@ class CfgAmmo
 	};
 	class B_mas_127x99_Ball: B_127x99_Ball
 	{
-		hit = 40;
+		hit = 120;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 	};
 	class B_mas_127x99_Ball_T: B_127x99_Ball_Tracer_Red
 	{
-		hit = 40;
+		hit = 120;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 	};
 	class B_mas_127x99_dem_Ball: B_127x99_Ball
@@ -2428,7 +2429,7 @@ class CfgAmmo
    	};
 	class B_mas_12Gauge_Slug: B_12Gauge_Slug
 	{
-		hit = 42;
+		hit = 30;
 		cartridge = "FxCartridge_slug";
 		class CamShakeFire
 		{
@@ -2454,7 +2455,7 @@ class CfgAmmo
 	{
 		hit = 10;
 		cartridge = "FxCartridge_slug";
-		caliber = 3;
+		caliber = 0.8;
 		indirectHit = 0;
         	indirectHitRange = 0;
 		class CamShakeFire
@@ -2477,10 +2478,25 @@ class CfgAmmo
 			frequency = 20;
 		};
 	};
+class M433_40mm_HEDP: G_40mm_HE
+  {
+        hit = 170;
+        indirectHit = 25;
+        indirectHitRange = 5;
+        caliber = 3;
+        class CamShakeHit
+        {
+            power = 30;
+            duration = "((round (30^0.25))*0.2 max 0.2)";
+            frequency = 20;
+            distance = 1;
+        };
+    };
 };
 class CfgMagazines
 {
 	class CA_Magazine;
+	class 1Rnd_HE_Grenade_shell;
 	class 30Rnd_556x45_Stanag;
 	class 30Rnd_556x45_Stanag_Tracer_Red;
 	class 20Rnd_762x51_Mag;
@@ -2493,6 +2509,14 @@ class CfgMagazines
 	class Titan_AA;
 	class 150Rnd_762x51_Box;
 	class 150Rnd_762x51_Box_Tracer;
+	class M433_40mm_HEDP: 1Rnd_HE_Grenade_shell
+	{
+		scope = 2
+		Displayname = "M433 40mm HEDP
+		ammo = "M433_40mm_DEDP"
+		mass = 5 
+		descriptionshort = "Caliber: 40 mm<br />Rounds: 1<br />Used in: M203";
+	};
 	class mas_PG7V: RPG32_F
 	{
 		displayName = "PG7 AT";
@@ -3051,7 +3075,7 @@ class CfgMagazines
 	{
 		ammo = "B_mas_12Gauge_Slug";
 		count = 7;
-		mass = 6;
+		mass = 4;
 		displayName = "12cal Slug M1014";
 		picture = "\mas_us_rifle\ui\m_12gauge_slugs_ca.paa";
 		descriptionshort = "Caliber: 12 cal<br />Rounds: 7<br />Used in: M1014";
@@ -3060,7 +3084,7 @@ class CfgMagazines
 	{
 		ammo = "B_mas_12Gauge_Pellets";
 		count = 7;
-		mass = 6;
+		mass = 4;
 		displayName = "12cal Pellets M1014";
 		picture = "\mas_us_rifle\ui\m_12gauge_ca.paa";
 		descriptionshort = "Caliber: 12 cal<br />Rounds: 7<br />Used in: M1014";
