@@ -1232,9 +1232,9 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m24_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m24_s2",1.0,1,1200};
-				begin3[] = {"\mas_us_rifle\sounds\m24_s3",1.0,1,1200};
+				begin1[] = {"\mas_us_rifle\sounds\m110_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m110_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m110_s3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
 			};
 			class SilencedSound: BaseSoundModeType

@@ -6819,9 +6819,9 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m24_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m24_s2",1.0,1,1200};
-				begin3[] = {"\mas_us_rifle\sounds\m24_s3",1.0,1,1200};
+				begin1[] = {"\mas_us_rifle\sounds\Realm24_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\Realm24_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\Realm24_s3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
 			};
 			class SilencedSound: BaseSoundModeType
@@ -9472,7 +9472,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The Benelli M4 Super 90 is an Italian semi automatic shotgun manufactured by Benelli Armi SpA.";
 		};
-		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M4Reload",1,1,30};
+		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\m1014reload",1,1,30};
 		modes[] = {"Single","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -9486,8 +9486,8 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m24_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m24_s2",1.0,1,1200};
+				begin1[] = {"\mas_us_rifle\sounds\M1014_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\M1014_s2",1.0,1,1200};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
