@@ -2393,7 +2393,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2427,7 +2429,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2658,7 +2662,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2692,7 +2698,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2924,7 +2932,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2958,7 +2968,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5433,9 +5445,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m16_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m16_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5467,9 +5481,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m16_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m16_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5651,9 +5667,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m16_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m16_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5685,9 +5703,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m16_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m16_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5814,7 +5834,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5848,7 +5870,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5955,7 +5979,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5989,7 +6015,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -8490,7 +8518,8 @@ class CfgWeapons
 				begin1[] = {"\mas_us_rifle\sounds\mk48_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\mk48_s2",1.0,1,1200};
 				begin3[] = {"\mas_us_rifle\sounds\mk48_s3",1.0,1,1200};
-				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
+				begin4[] = {"\mas_us_rifle\sounds\mk48_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33,"begin4",0.33};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
