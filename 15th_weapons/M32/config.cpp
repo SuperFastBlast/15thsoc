@@ -28,12 +28,12 @@ class CfgPatches
 
 class CfgMagazines
 {
-	class 1Rnd_HE_Grenade_shell;
-	class 6Rnd_HE_M32: 1Rnd_HE_Grenade_shell
+	class M433_40mm_HEDP;
+	class 6Rnd_HE_M32: M433_40mm_HEDP
 	{
 		picture="\M32\Data\Icon\m_6x40mmhp_ca.paa";
 		displayName= "6 Rnd. 40MM HE";
-		ammo = "G_40mm_HE";
+		ammo = "M433_40mm_HEDP";
 		count = 6;
 	};
 	class 6Rnd_FlareWhite_M32: 6Rnd_HE_M32
