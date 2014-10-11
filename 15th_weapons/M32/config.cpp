@@ -32,7 +32,7 @@ class CfgMagazines
 	class 6Rnd_HE_M32: M433_40mm_HEDP
 	{
 		picture="\M32\Data\Icon\m_6x40mmhp_ca.paa";
-		displayName= "6 Rnd. 40MM HE";
+		displayName= "6 Rnd. M433";
 		ammo = "M433_40mm_HEDP";
 		count = 6;
 	};
@@ -129,20 +129,6 @@ class CfgWeapons
        	muzzles[]=
 		{
 			"this"
-		};
-
-
-		};
-		changeFiremodeSound[]=
-		{
-			"A3\sounds_f\weapons\closure\firemode_changer_2",
-			0.25118864,
-			1,
-			10
-		};
-			sounds[]=
-		{
-			"StandardSound"
 		};
 		class StandardSound
 		{
