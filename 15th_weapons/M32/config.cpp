@@ -35,6 +35,7 @@ class CfgMagazines
 		displayName= "6 Rnd. M433";
 		ammo = "M433_40mm_HEDP";
 		count = 6;
+		mass = 24;
 	};
 	class 6Rnd_FlareWhite_M32: 6Rnd_HE_M32
 	{
@@ -42,26 +43,31 @@ class CfgMagazines
 		displayName= "6 Rnd. 40MM Flare (White)";
 		ammo = "F_40mm_White";
 		count = 6;
+		mass = 24;
 	};
 	class 6Rnd_FlareGreen_M32: 6Rnd_FlareWhite_M32
 	{
 		ammo = "F_40mm_Green";
 		displayName= "6 Rnd. 40MM Flare (Green)";
+		mass = 24;
 	};
 	class 6Rnd_FlareRed_M32: 6Rnd_FlareWhite_M32
 	{
 		ammo = "F_40mm_Red";
 		displayName= "6 Rnd. 40MM Flare (Red)";
+		mass = 24;
 	};
 	class 6Rnd_FlareYellow_M32: 6Rnd_FlareWhite_M32
 	{
 		ammo = "F_40mm_Yellow";
 		displayName= "6 Rnd. 40MM Flare (Yellow)";
+		mass = 24;
 	};
 	class 6Rnd_FlareCIR_M32: 6Rnd_FlareWhite_M32
 	{
 		ammo = "F_40mm_Cir";
 		displayName= "6 Rnd. 40MM Flare (IR)";
+		mass = 24;
 	};
 
 	class 6Rnd_Smoke_M32: 6Rnd_HE_M32
@@ -70,31 +76,37 @@ class CfgMagazines
 		displayName= "6Rnd 40MM Smoke (White)";
 		ammo = "G_40mm_Smoke";
 		count = 6;
+		mass = 24;
 	};
 	class 6Rnd_SmokeRed_M32: 6Rnd_Smoke_M32
 	{
 		displayName= "6Rnd 40MM Smoke (Red)";
 		ammo = "G_40mm_SmokeRed";
+		mass = 24;
 	};
 	class 6Rnd_SmokeGreen_M32: 6Rnd_Smoke_M32
 	{
 		displayName= "6Rnd 40MM Smoke (Green)";
 		ammo = "G_40mm_SmokeGreen";
+		mass = 24;
 	};
 	class 6Rnd_SmokeYellow_M32: 6Rnd_Smoke_M32
 	{
 		displayName= "6Rnd 40MM Smoke (Yellow)";
 		ammo = "G_40mm_SmokeYellow";
+		mass = 24;
 	};
 	class 6Rnd_SmokePurple_M32: 6Rnd_Smoke_M32
 	{
 		displayName= "6Rnd 40MM Smoke (Purple)";
 		ammo = "G_40mm_SmokePurple";
+		mass = 24;
 	};
 	class 6Rnd_SmokeOrange_M32: 6Rnd_Smoke_M32
 	{
 		displayName= "6Rnd 40MM Smoke (Orange)";
 		ammo = "G_40mm_SmokeOrange";
+		mass = 24;
 	};
 
 };
@@ -126,40 +138,22 @@ class CfgWeapons
 		muzzleend = "konec granatometu";
 		muzzlepos = "usti granatometu";
 		reloadaction = "ReloadMagazine";
+		mass = 83;
        	muzzles[]=
 		{
 			"this"
 		};
+		changeFiremodeSound[] = {"A3\sounds_f\weapons\closure\firemode_changer_2",0.25118864,1,10};
+		sounds[] = {"StandardSound"};
 		class StandardSound
 		{
 			weaponSoundEffect="DefaultRifle";
-			begin1[]=
-			{
-				"m32\sounds\m32_s1",
-				1.1220185,
-				1,
-				200
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-		reloadMagazineSound[]=
-		{
-			"m32\sounds\m32_r",
-			1,
-			1,
-			10
+			begin1[]={"m32\sounds\m32_s1.wss",1.1220185,1,200};
+			soundBegin[]={"begin1",1};
+		reloadMagazineSound[]={"m32\sounds\m32_r.wss",1,1,10
 		};
-		drySound[]=
-		{
-			"A3\sounds_f\Weapons\other\sfx5",
-			0.56234133,
-			1,
-			10
+		drySound[]={"A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10};
 			};
-	};
 
 class CfgVehicles 
 {
