@@ -197,5 +197,5 @@ class CfgVehicles
 			magentry(6Rnd_SmokeOrange_M32, 5);						
 		};
 	};		
-
-};
+	};
+	};
