@@ -145,7 +145,6 @@ class CfgWeapons
 				"begin1",
 				1
 			};
-		};
 		reloadMagazineSound[]=
 		{
 			"m32\sounds\m32_r",
@@ -197,5 +196,6 @@ class CfgVehicles
 			magentry(6Rnd_SmokeOrange_M32, 5);						
 		};
 	};		
+	};
 	};
 	};
