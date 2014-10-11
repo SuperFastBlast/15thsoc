@@ -377,3 +377,4 @@ class CfgMagazines {
 		mass = 100;
 	};
 };
+};
