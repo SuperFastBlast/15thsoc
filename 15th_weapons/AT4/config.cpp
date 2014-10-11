@@ -87,8 +87,7 @@ class CfgAmmo
 			frequency = 20;
 		};
 	};
-
-
+};
 
 class CfgMagazines
 {
@@ -324,7 +323,7 @@ class CfgWeapons
 		// Used for inko disposable
 		inko_disposable = 1;
 		inko_disposable_used = "AT4_CS_Used";
-		inko_disposable_tube = "AT4__CS_Used_Tube";
+		inko_disposable_tube = "AT4_CS_Used_Tube";
 		
 				sounds[]=
 		{
@@ -466,5 +465,22 @@ class cfgVehicles
 		airFriction0[] = {50,25,15};
 		airrotation = 1;
 	};
-};
+		class AT4_CS_Used_Tube : Thing
+	{
+		scope = 1;
+		side = -1;
+		model = "\AT4\m136_launcher.p3d";
+		icon = "";
+		displayName = "";
+		nameSound = "";
+		destrType = "DestructNo";
+		mapSize = 0;
+		accuracy = 0;
+		armor = 5;
+		weight = 420;
+		airFriction2[] = {50,25,15};
+		airFriction1[] = {50,25,15};
+		airFriction0[] = {50,25,15};
+		airrotation = 1;
+	};
 };
