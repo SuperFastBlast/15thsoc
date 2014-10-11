@@ -1,4 +1,5 @@
-class CfgPatches {
+class CfgPatches
+ {
 	class AT4 {
 		units[] = {};
 		weapons[] = {};
@@ -289,12 +290,8 @@ class CfgWeapons
 		picture = "\AT4\Data\icon\w_m136_launcher_ca.paa";
 		inko_disposable = 0;
 		magazines[] = {"AT4_HEAT_Used"};
-		model = "\AT4\m136_launcher.p3d";
-	
+		model = "\AT4\m136_launcher.p3d";	
 	};
-	class Launcher;
-	class Launcher_Base_F: Launcher{};
-	class Hamr2Collimator;
 	class meu_AT4_CS: Launcher_Base_F
 	{
 		modelOptics = "-";

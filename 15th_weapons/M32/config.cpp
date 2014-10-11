@@ -149,7 +149,7 @@ class CfgWeapons
 			weaponSoundEffect="DefaultRifle";
 			begin1[]=
 			{
-				""m32\sounds\m32_s1",
+				"m32\sounds\m32_s1",
 				1.1220185,
 				1,
 				200
