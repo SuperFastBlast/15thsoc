@@ -112,9 +112,27 @@ class CfgWeapons
 			begin1[] = {"CAF_M72A6\data\sound\m72a6Fire.ogg",1.9952624,1,1000};
 			soundBegin[] = {"begin1",1};
 		};
-		drySound[] = {"",0.0001,1,10};
-		reloadMagazineSound[] = {"CAF_M72A6\data\sound\m72a6_load.ogg",0.00031622776,1,20};
-		soundFly[] = {"\a3\sounds_f\weapons\Rockets\rocket_fly_2",10,1.8,300};
+		drySound[]=
+		{
+		"",
+		0.0001,
+		1,
+		10
+		};
+		reloadMagazineSound[] =
+		{
+		"CAF_M72A6\data\sound\m72a6_load.ogg",
+		0.00031622776,
+		1,
+		20
+		};
+		soundFly[] = 
+		{
+		"\a3\sounds_f\weapons\Rockets\rocket_fly_2",
+		10,
+		1.8,
+		300
+		};
 		picture = "\caf_m72a6\data\inv\m72a6.paa";
 		UiPicture = "\A3\Weapons_F\Data\UI\icon_at_CA.paa";
 		recoil = "launcherBase";
