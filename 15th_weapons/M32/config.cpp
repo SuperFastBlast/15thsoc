@@ -175,7 +175,6 @@ class CfgWeapons
 			10
 			};
 	};
-};
 
 class CfgVehicles 
 {

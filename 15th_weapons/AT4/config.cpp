@@ -467,3 +467,4 @@ class cfgVehicles
 		airrotation = 1;
 	};
 };
+};
