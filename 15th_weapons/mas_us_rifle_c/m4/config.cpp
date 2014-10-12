@@ -78,42 +78,6 @@ class CfgWeapons
 		{
 			libtextdesc = "The Heckler & Koch HK416 is an assault rifle designed and manufactured by Heckler & Koch. It uses the AR-15 platform, originally conceived as an improvement to the Colt M4 carbine family issued to the U.S. military, with the notable inclusion of an HK-proprietary short-stroke gas piston system derived from the Heckler & Koch G36. USSOCOM and other country's Special Forces are equipped with the HK416, it fires the .223 caliber, or 5.56mm NATO round.";
 		};
-	        muzzles[] ={"this","securite"};
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M4Reload",1,1,30};
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
@@ -226,7 +190,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo
 		{
-			mass = 60;
+			mass = 77;
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -363,42 +327,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The Heckler & Koch HK416 is an assault rifle designed and manufactured by Heckler & Koch. It uses the AR-15 platform, originally conceived as an improvement to the Colt M4 carbine family issued to the U.S. military, with the notable inclusion of an HK-proprietary short-stroke gas piston system derived from the Heckler & Koch G36. USSOCOM and other country's Special Forces are equipped with the HK416, it fires the .223 caliber, or 5.56mm NATO round. This version is equipped with the AG36 wich is a single-shot 40 mm grenade launcher.";
 		};
-		muzzles[] ={"this","AG36","securite"};
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
+		muzzles[] ={"this","AG36"};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M4Reload",1,1,30};
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
@@ -522,7 +451,7 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
@@ -532,7 +461,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo
 		{
-			mass = 80;
+			mass = 82;
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -668,7 +597,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The Heckler & Koch HK416 is an assault rifle designed and manufactured by Heckler & Koch. It uses the AR-15 platform, originally conceived as an improvement to the Colt M4 carbine family issued to the U.S. military, with the notable inclusion of an HK-proprietary short-stroke gas piston system derived from the Heckler & Koch G36. USSOCOM and other country's Special Forces are equipped with the HK416, it fires the .223 caliber, or 5.56mm NATO round. This version is equipped with the M203 wich is a single-shot 40 mm grenade launcher.";
 		};
-		muzzles[] ={"this","M203a","securite"};
+		muzzles[] ={"this","M203a"};
 		class M203a: UGL_F
 		{
 			displayName = "M203";
@@ -682,7 +611,7 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
@@ -2443,8 +2372,13 @@ class CfgWeapons
 		{
 			libtextdesc = "The M4A1 is a gas-operated, magazine-fed, selective fire, shoulder-fired weapon with a telescoping stock. A shortened variant of the M16A2 rifle, the M4A1 has a 14.5 in (370 mm) barrel, allowing its user to better operate in close quarters combat. Like the rest of the M16 family, it fires the .223 caliber, or 5.56mm NATO round. US Army, USSF and many other country's Special Forces are equipped with the M4A1.";
 		};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
-		mass = 55;
 		class Single: Mode_SemiAuto
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
@@ -2459,7 +2393,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2493,7 +2429,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2552,6 +2490,31 @@ class CfgWeapons
 			maxRangeProbab = 0.05;
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 63;
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+			};
+			class CowsSlot
+			{
+				access = 1;
+				compatibleitems[] = {"optic_Arco","optic_aco","optic_ACO_grn","optic_hamr","optic_Holosight","optic_mas_zeiss","optic_mas_zeiss_eo","optic_mas_acog","optic_mas_acog_eo","optic_mas_acog_rd","optic_mas_aim","optic_mas_acog_c","optic_mas_acog_eo_c","optic_mas_acog_rd_c","optic_mas_aim_c","optic_mas_zeiss_c","optic_mas_zeiss_eo_c","optic_SOS","optic_MRCO","optic_mas_term","optic_NVS","optic_Nightstalker","optic_tws","optic_mas_Holosight_blk","optic_mas_Arco_blk","optic_DMS","optic_LRPS","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_camo","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot
+			{
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR","acc_mas_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
 		};
 	};
 	class arifle_mas_m4_t: arifle_mas_m4
@@ -2678,6 +2641,12 @@ class CfgWeapons
 		{
 			libtextdesc = "The M4A1 is a gas-operated, magazine-fed, selective fire, shoulder-fired weapon with a telescoping stock. A shortened variant of the M16A2 rifle, the M4A1 has a 14.5 in (370 mm) barrel, allowing its user to better operate in close quarters combat. Like the rest of the M16 family, it fires the .223 caliber, or 5.56mm NATO round. US Army, USSF and many other country's Special Forces are equipped with the M4A1. This version is equipped with the AG36 wich is a single-shot 40 mm grenade launcher.";
 		};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -2693,7 +2662,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2727,7 +2698,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2786,6 +2759,31 @@ class CfgWeapons
 			maxRangeProbab = 0.05;
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 93.9;
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+			};
+			class CowsSlot
+			{
+				access = 1;
+				compatibleitems[] = {"optic_Arco","optic_aco","optic_ACO_grn","optic_hamr","optic_Holosight","optic_mas_zeiss","optic_mas_zeiss_eo","optic_mas_acog","optic_mas_acog_eo","optic_mas_acog_rd","optic_mas_aim","optic_mas_acog_c","optic_mas_acog_eo_c","optic_mas_acog_rd_c","optic_mas_aim_c","optic_mas_zeiss_c","optic_mas_zeiss_eo_c","optic_SOS","optic_MRCO","optic_mas_term","optic_NVS","optic_Nightstalker","optic_tws","optic_mas_Holosight_blk","optic_mas_Arco_blk","optic_DMS","optic_LRPS","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_camo","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot
+			{
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR","acc_mas_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
 		};
 	};
 	class arifle_mas_m4_gl_t: arifle_mas_m4_gl
@@ -2912,7 +2910,13 @@ class CfgWeapons
 		{
 			libtextdesc = "The M4A1 is a gas-operated, magazine-fed, selective fire, shoulder-fired weapon with a telescoping stock. A shortened variant of the M16A2 rifle, the M4A1 has a 14.5 in (370 mm) barrel, allowing its user to better operate in close quarters combat. Like the rest of the M16 family, it fires the .223 caliber, or 5.56mm NATO round. US Army, USSF and many other country's Special Forces are equipped with the M4A1. This version is equipped with the M203 wich is a single-shot 40 mm grenade launcher.";
 		};
-		muzzles[] ={"this","M203b","securite"};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		muzzles[] ={"this","M203b"};
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -2928,7 +2932,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -2962,7 +2968,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -3035,13 +3043,38 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
 			discreteDistance[] = {100,200,300};
 			discreteDistanceCameraPoint[] = {"OP_eye","OP_eye2","OP_eye3"};
 			discreteDistanceInitIndex = 1;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 93.9;
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_M","muzzle_mas_snds_Mc"};
+			};
+			class CowsSlot
+			{
+				access = 1;
+				compatibleitems[] = {"optic_Arco","optic_aco","optic_ACO_grn","optic_hamr","optic_Holosight","optic_mas_acog","optic_mas_acog_eo","optic_mas_acog_rd","optic_mas_aim","optic_mas_handle","optic_mas_zeiss","optic_mas_zeiss_eo","optic_mas_acog_c","optic_mas_acog_eo_c","optic_mas_acog_rd_c","optic_mas_aim_c","optic_mas_zeiss_c","optic_mas_zeiss_eo_c","optic_SOS","optic_MRCO","optic_Aco_smg","optic_Holosight_smg","optic_mas_term","optic_NVS","optic_Nightstalker","optic_tws","optic_mas_Holosight_blk","optic_mas_Arco_blk","optic_DMS","optic_LRPS","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_camo","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot
+			{
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR","acc_mas_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
 		};
 	};
 	class arifle_mas_m4_m203_t: arifle_mas_m4_m203
@@ -5393,6 +5426,12 @@ class CfgWeapons
 		{
 			libtextdesc = "The M16 is a gas operated, selective fire weapon, chambered for the 5.56 x 45mm round. M16A1 improved version of the original M16. It has been adopted by the US Army as a standard rifle in 1967, M16A2 a variant of the previous M16A1, adapted for the new SS109 5.56 x 45 mm standard NATO round. This assault rifle had heavier barrel and different rear sight. A full-auto firing mode was replaced with three round burst mode. It's ejection port also has a spent case deflector. The M16A2 has been adopted by the US Army in 1982 and by the US Marine Corps in 1983. Soon it became the general issue rifle, M16A3 improved version, fitted with Picatinny-type rail instead of the carrying handle, which accepts a variety of scopes. A detachable carrying handle can still be installed. Weapon's trigger mechanism has a semi- and full-auto modes only, M16A4 similar to the M16A3, however has a three-round burst mode instead of the full-auto mode.";
 		};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.;
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -5406,9 +5445,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m16_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m16_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5440,9 +5481,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m16_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m16_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5456,7 +5499,7 @@ class CfgWeapons
 			burst = 3;
 			recoil = "recoil_single_primary_5outof10";
 			recoilprone = "recoil_single_primary_prone_4outof10";
-			dispersion = 0.005;
+			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
 			midRange = 80;
@@ -5489,6 +5532,31 @@ class CfgWeapons
 			maxRangeProbab = 0.05;
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 71.4;
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+			};
+			class CowsSlot
+			{
+				access = 1;
+				compatibleitems[] = {"optic_Arco","optic_aco","optic_ACO_grn","optic_hamr","optic_Holosight","optic_mas_zeiss","optic_mas_zeiss_eo","optic_mas_acog","optic_mas_acog_eo","optic_mas_acog_rd","optic_mas_aim","optic_mas_acog_c","optic_mas_acog_eo_c","optic_mas_acog_rd_c","optic_mas_aim_c","optic_mas_zeiss_c","optic_mas_zeiss_eo_c","optic_SOS","optic_MRCO","optic_mas_term","optic_NVS","optic_Nightstalker","optic_tws","optic_mas_Holosight_blk","optic_mas_Arco_blk","optic_DMS","optic_LRPS","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_camo","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot
+			{
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR","acc_mas_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
 		};
 	};
 	class arifle_mas_m16_t: arifle_mas_m16
@@ -5579,7 +5647,13 @@ class CfgWeapons
 		{
 			libtextdesc = "The M16 is a gas operated, selective fire weapon, chambered for the 5.56 x 45mm round. M16A1 improved version of the original M16. It has been adopted by the US Army as a standard rifle in 1967, M16A2 a variant of the previous M16A1, adapted for the new SS109 5.56 x 45 mm standard NATO round. This assault rifle had heavier barrel and different rear sight. A full-auto firing mode was replaced with three round burst mode. It's ejection port also has a spent case deflector. The M16A2 has been adopted by the US Army in 1982 and by the US Marine Corps in 1983. Soon it became the general issue rifle, M16A3 improved version, fitted with Picatinny-type rail instead of the carrying handle, which accepts a variety of scopes. A detachable carrying handle can still be installed. Weapon's trigger mechanism has a semi- and full-auto modes only, M16A4 similar to the M16A3, however has a three-round burst mode instead of the full-auto mode. This version is equipped with the M203 wich is a single-shot 40 mm grenade launcher.";
 		};
-		muzzles[] ={"this","M203c","securite"};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		muzzles[] ={"this","M203c"};
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -5593,9 +5667,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m16_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m16_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5627,9 +5703,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m16_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m16_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5643,7 +5721,7 @@ class CfgWeapons
 			burst = 3;
 			recoil = "recoil_auto_primary_4outof10";
 			recoilprone = "recoil_auto_primary_prone_3outof10";
-			dispersion = 0.005;
+			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
 			midRange = 80;
@@ -5690,13 +5768,38 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
 			discreteDistance[] = {100,200,300};
 			discreteDistanceCameraPoint[] = {"OP_eye","OP_eye2","OP_eye3"};
 			discreteDistanceInitIndex = 1;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 100.5;
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+			};
+			class CowsSlot
+			{
+				access = 1;
+				compatibleitems[] = {"optic_Arco","optic_aco","optic_ACO_grn","optic_hamr","optic_Holosight","optic_mas_zeiss","optic_mas_zeiss_eo","optic_mas_acog","optic_mas_acog_eo","optic_mas_acog_rd","optic_mas_aim","optic_mas_acog_c","optic_mas_acog_eo_c","optic_mas_acog_rd_c","optic_mas_aim_c","optic_mas_zeiss_c","optic_mas_zeiss_eo_c","optic_SOS","optic_MRCO","optic_mas_term","optic_NVS","optic_Nightstalker","optic_tws","optic_mas_Holosight_blk","optic_mas_Arco_blk","optic_DMS","optic_LRPS","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_camo","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot
+			{
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR","acc_mas_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
 		};
 	};
 	class M4Car: arifle_mas_hk416
@@ -5710,6 +5813,12 @@ class CfgWeapons
 		{
 			libtextdesc = "The M4 Carbine is a gas-operated, magazine-fed, selective fire, shoulder-fired weapon with a telescoping stock. A shortened variant of the M16A2 rifle, the M4 Carbine has a 14.5 in (370 mm) barrel, allowing its user to better operate in close quarters combat. Like the rest of the M16 family, it fires the .223 caliber, or 5.56mm NATO round. US Army, USSF and many other country's Special Forces are equipped with the M4.";
 		};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -5725,7 +5834,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5759,7 +5870,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5773,7 +5886,7 @@ class CfgWeapons
 			burst = 3;
 			recoil = "recoil_auto_primary_4outof10";
 			recoilprone = "recoil_auto_primary_prone_3outof10";
-			dispersion = 0.005;
+			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
 			midRange = 80;
@@ -5807,6 +5920,31 @@ class CfgWeapons
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
 		};
+		class WeaponSlotsInfo
+		{
+			mass = 63;
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+			};
+			class CowsSlot
+			{
+				access = 1;
+				compatibleitems[] = {"optic_Arco","optic_aco","optic_ACO_grn","optic_hamr","optic_Holosight","optic_mas_zeiss","optic_mas_zeiss_eo","optic_mas_acog","optic_mas_acog_eo","optic_mas_acog_rd","optic_mas_aim","optic_mas_acog_c","optic_mas_acog_eo_c","optic_mas_acog_rd_c","optic_mas_aim_c","optic_mas_zeiss_c","optic_mas_zeiss_eo_c","optic_SOS","optic_MRCO","optic_mas_term","optic_NVS","optic_Nightstalker","optic_tws","optic_mas_Holosight_blk","optic_mas_Arco_blk","optic_DMS","optic_LRPS","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_camo","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot
+			{
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR","acc_mas_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
+		};
 	};
 	class M4Car203: arifle_mas_hk416_gl
 	{	
@@ -5819,7 +5957,13 @@ class CfgWeapons
 		{
 			libtextdesc = "The M4 Carbine is a gas-operated, magazine-fed, selective fire, shoulder-fired weapon with a telescoping stock. A shortened variant of the M16A2 rifle, the M4 Carbine has a 14.5 in (370 mm) barrel, allowing its user to better operate in close quarters combat. Like the rest of the M16 family, it fires the .223 caliber, or 5.56mm NATO round. US Army, USSF and many other country's Special Forces are equipped with the M4. This version is equipped with the M203 wich is a single-shot 40 mm grenade launcher.";
 		};
-		muzzles[] ={"this","M203c","securite"};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		muzzles[] ={"this","M203c"};
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -5835,7 +5979,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5869,7 +6015,9 @@ class CfgWeapons
 			{
 				begin1[] = {"\mas_us_rifle\sounds\m4_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\m4_s2",1.0,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+				begin3[] = {"\mas_us_rifle\sounds\m4_s3",1.0,1,1200};
+				begin4[] = {"\mas_us_rifle\sounds\m4_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -5883,7 +6031,7 @@ class CfgWeapons
 			burst = 3;
 			recoil = "recoil_auto_primary_4outof10";
 			recoilprone = "recoil_auto_primary_prone_3outof10";
-			dispersion = 0.005;
+			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
 			midRange = 80;
@@ -5930,13 +6078,38 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
 			discreteDistance[] = {100,200,300};
 			discreteDistanceCameraPoint[] = {"OP_eye","OP_eye2","OP_eye3"};
 			discreteDistanceInitIndex = 1;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 93.9;
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+			};
+			class CowsSlot
+			{
+				access = 1;
+				compatibleitems[] = {"optic_Arco","optic_aco","optic_ACO_grn","optic_hamr","optic_Holosight","optic_mas_zeiss","optic_mas_zeiss_eo","optic_mas_acog","optic_mas_acog_eo","optic_mas_acog_rd","optic_mas_aim","optic_mas_acog_c","optic_mas_acog_eo_c","optic_mas_acog_rd_c","optic_mas_aim_c","optic_mas_zeiss_c","optic_mas_zeiss_eo_c","optic_SOS","optic_MRCO","optic_mas_term","optic_NVS","optic_Nightstalker","optic_tws","optic_mas_Holosight_blk","optic_mas_Arco_blk","optic_DMS","optic_LRPS","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_camo","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot
+			{
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR","acc_mas_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
 		};
 	};
 	class arifle_mas_m16_gl_t: arifle_mas_m16_gl
@@ -6540,46 +6713,6 @@ class CfgWeapons
 	{
 		displayname = "M14 EBR";
 		magazines[] = {"20Rnd_mas_762x51_Stanag","20Rnd_mas_762x51_T_Stanag","20Rnd_762x51_Mag"};
-			        muzzles[]=
-                {
-                        "this",
-                        "securite"
-                };
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
 		maxZeroing = 1400;
 		class WeaponSlotsInfo
 		{
@@ -6697,46 +6830,6 @@ class CfgWeapons
 		{
 			libtextdesc = "The M24 Sniper Weapon System is the military and police version of the Remington 700 rifle, M24 being the model name assigned by the United States Army after adoption as their standard sniper rifle in 1988. The M24 is referred to as a weapons system because it consists of not only a rifle, but also a detachable telescopic sight and other accessories. The M24 SWS had the long action bolt version of the Remington 700 receiver. It turned out there was an insufficient amount of rounds in a single lot of manufacture, so the operational requirement changed to use the dimensionally smaller 7,62×51mm NATO M118 Match Grade cartridge.";
 		};
-			        muzzles[]=
-                {
-                        "this",
-                        "securite"
-                };
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M24Reload",1,1,30};
 		modes[] = {"Single","far_optic1","medium_optic2","far_optic2"};
 		class Single: Mode_SemiAuto
@@ -6754,9 +6847,9 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m24_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m24_s2",1.0,1,1200};
-				begin3[] = {"\mas_us_rifle\sounds\m24_s3",1.0,1,1200};
+				begin1[] = {"\mas_us_rifle\sounds\Realm24_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\Realm24_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\Realm24_s3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
 			};
 			class SilencedSound: BaseSoundModeType
@@ -6921,42 +7014,6 @@ class CfgWeapons
 		class Library
 		{
 			libtextdesc = "The Heckler & Koch MP5 is a 9mm submachine gun of German design, developed in the 1960s by a team of engineers from the German small arms manufacturer Heckler & Koch GmbH of Oberndorf am Neckar. There are over 100 variants of the MP5, including a semi-automatic version. The MP5 is one of the most widely used submachine guns in the world, having been adopted by 40 nations and numerous military, law enforcement, intelligence, and security organizations.";
-		};
-		muzzles[] ={"this","securite"};
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
 		};
 		drySound[] = {"\mas_us_rifle\sounds\mp5_dry",1,1,20};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\MP5Reload",1,1,30};
@@ -7520,46 +7577,12 @@ class CfgWeapons
 		{
 			libtextdesc = "The M107 is a recoil-operated, semi-automatic anti-materiel rifle developed by the American Barrett Firearms Manufacturing company. A heavy SASR (Special Application Scoped Rifle), it is used by many units and armies around the world. It is also called the Light Fifty for its .50 BMG (12.7×99mm NATO) chambering. The weapon is found in two variants, the original M82A1 (and A3) and the bullpup M82A2. It has been adopted for service by a number of armed forces and special forces.";
 		};
-			        muzzles[]=
-                {
-                        "this",
-                        "securite"
-                };
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M107Reload",1,1,30};
 		modes[] = {"Single","far_optic1","medium_optic2","far_optic2"};
 		class Single: Mode_SemiAuto
@@ -7639,7 +7662,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo
 		{
-			mass = 100;
+			mass = 330;
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -7810,46 +7833,6 @@ class CfgWeapons
 		class Library
 		{
 			libtextdesc = "The Stoner LMG is a light machine gun system developed by Eugene Stoner and manufactured by Knight's Armament Company (KAC). It is also known as the KAC Stoner 96 LMG to differentiate it from the earlier ArmaLite Stoner 63 LMG and Ares Stoner 86 LMG it is derived from. The Stoner LMG is billed by KAC as the lightest 5.56mm machine gun. It weighs 10 pounds with magazine and has a length of 35.25 inches. The Stoner LMG is belt-fed, gas operated, air-cooled, and fully automatic, firing at a rate of 550 rounds per minute. Stoner designed the weapon as a replacement for the Stoner 63. Neither weapons system gained much popularity as the FN Minimi would become the LMG adopted by the United States military, which dubbed the FN weapon the M249.";
-		};
-			        muzzles[]=
-                {
-                        "this",
-                        "securite"
-                };
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
 		};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
@@ -8068,47 +8051,17 @@ class CfgWeapons
 		{
 			libtextdesc = "The M249 light machine gun (LMG), previously designated the M249 Squad Automatic Weapon (SAW), and formally written as Light Machine Gun, 5.56 mm, M249, is an American version of the Belgian FN Minimi, a light machine gun manufactured by the Belgian company FN Herstal (FN). The M249 is manufactured in the United States and is widely used by the U.S. Armed Forces. The weapon was introduced in 1984 after being judged the most effective of a number of candidate weapons to address the lack of automatic firepower in small units. The M249 provides infantry squads with the heavy volume of fire of a machine gun combined with accuracy and portability approaching that of a rifle.";
 		};
-		muzzles[] ={"this","securite"};
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
+    AGM_Jamming_Reliability = 0.001;    // malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.010;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 1;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M249R",1,1,30};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
 		{
-	    	dispersion = 0.0020;
+	    	dispersion = 0.0035;
 	    	recoil = "recoil_auto_machinegun_7outof10";
 	    	recoilprone = "recoil_auto_machinegun_prone_4outof10";
 	    	reloadtime = 0.0799999;
@@ -8209,7 +8162,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo
 		{
-			mass = 60;
+			mass = 165.8;
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -8538,50 +8491,20 @@ class CfgWeapons
 		{
 			libtextdesc = "The Mk48 is a lightweight belt fed machine gun, firing 7.62×51mm NATO cartridges from a disintegrating belt of ammunition. It is manufactured by Fabrique Nationale Manufacturing, Inc, a division of FN Herstal based in the United States. The Mk48 has been developed in conjunction with the U.S. Special Operations Command (USSOCOM), which has adopted the weapon and started its fielding process, beginning with special operations units.";
 		};
-		muzzles[] ={"this","securite"};		
-			class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
+    AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
+    AGM_Overheating_Increment = 0.010;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
+    AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
+    AGM_Overheating_allowSwapBarrel = 1;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M249R",1,1,30};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
 		{
 			reloadtime = 0.0866666;
-			dispersion = 0.0032;
+			dispersion = 0.003;
 			recoil = "recoil_auto_machinegun_10outof10";
-			recoilprone = "recoil_auto_machinegun_prone_6outof10";
+			recoilprone = "recoil_auto_machinegun_prone_7outof10";
 			sounds[] = {"StandardSound","SilencedSound"};
 			class BaseSoundModeType
 			{
@@ -8595,7 +8518,8 @@ class CfgWeapons
 				begin1[] = {"\mas_us_rifle\sounds\mk48_s1",1.0,1,1200};
 				begin2[] = {"\mas_us_rifle\sounds\mk48_s2",1.0,1,1200};
 				begin3[] = {"\mas_us_rifle\sounds\mk48_s3",1.0,1,1200};
-				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
+				begin4[] = {"\mas_us_rifle\sounds\mk48_s4",1.0,1,1200};
+				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33,"begin4",0.33};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -8679,7 +8603,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo
 		{
-			mass = 80;
+			mass = 242;
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -8893,7 +8817,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The M240, officially Machine Gun, 7.62mm, M240, is the US military designation for the FN MAG, a family of belt fed, gas operated medium machine guns firing the 7.62×51mm NATO cartridge. The M240 has been used by the United States Armed Forces since the late 1970s. It is used extensively by infantry, most often rifle companies, as well as ground vehicles, watercraft, and aircraft.";
 		};
-		muzzles[] ={"this","securite"};
+		muzzles[] ={"this"};
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M240reload",1,1,30};
 	};
 	class LMG_mas_m240_F_h: LMG_mas_m240_F
@@ -9577,43 +9501,7 @@ class CfgWeapons
 		{
 			libtextdesc = "The Benelli M4 Super 90 is an Italian semi automatic shotgun manufactured by Benelli Armi SpA.";
 		};
-	        muzzles[] ={"this","securite"};
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
-		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M4Reload",1,1,30};
+		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\m1014reload",1,1,30};
 		modes[] = {"Single","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -9627,8 +9515,8 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m24_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m24_s2",1.0,1,1200};
+				begin1[] = {"\mas_us_rifle\sounds\M1014_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\M1014_s2",1.0,1,1200};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
@@ -9638,10 +9526,10 @@ class CfgWeapons
 				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",0.794328,1,100};
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
-			reloadTime = 0.096;
+			reloadTime = 0.1;
 			recoil = "recoil_single_ebr";
 			recoilProne = "recoil_single_prone_ebr";
-			dispersion = 0.00087;
+			dispersion = 0.005;
 			minRange = 2;
 			minRangeProbab = 0.5;
 			midRange = 200;
@@ -9677,7 +9565,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo
 		{
-			mass = 60;
+			mass = 83.9;
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";

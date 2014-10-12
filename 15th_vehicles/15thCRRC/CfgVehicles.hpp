@@ -68,7 +68,7 @@ class CfgVehicles
 			};
 		};
 		attenuationEffectType = "OpenCarAttenuation";
-		insideSoundCoef = 1.0;
+		insideSoundCoef = 1;
 		soundEngineOnInt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_start",1.0,1.0};
 		soundEngineOnExt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_start",1.0,1.0,150};
 		soundEngineOffInt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_stop",1.0,1.0};
@@ -153,19 +153,19 @@ class CfgVehicles
 		brakeDistance = 50;
 		enginePower = 50;
 		engineShiftY = 0;
-		fuelCapacity = 50;
+		fuelCapacity = 80;
+		fuelConsumptionRate = 35;
 		engineFuelEfficiency = 1.0;
-		slowSpeedForwardCoef = 0.2;
+		slowSpeedForwardCoef = 0.09;
 		normalSpeedForwardCoef = 0.5;
 		waterLeakiness = 0.5;
 		waterResistanceCoef = 0.01;
-		turnCoef = 3.5;
-		thrustDelay = 3;
+		thrustDelay = 1;
 		waterLinearDampingCoefY = 5;
 		waterLinearDampingCoefX = 2.0;
 		waterAngularDampingCoef = 1.2;
-		rudderForceCoef = 0.08;
-		rudderForceCoefAtMaxSpeed = 0.001;
+		rudderForceCoef = 0.1;
+		rudderForceCoefAtMaxSpeed = 0.009;
 		enableGPS = 1;
 		transportSoldier = 4;
 		supplyRadius = 3;
@@ -213,4 +213,39 @@ class CfgVehicles
 		side = 1;
 		typicalCargo[] = {"B_Soldier_F","B_Soldier_F"};
 	};
+};
+ class LandVehicle;
+class Car: LandVehicle {
+class AGM_Actions {
+class AGM_Unload {
+displayName = "$STR_AGM_Medical_Unload";
+distance = 4;
+condition = "return = false; {if (_x getVariable 'AGM_Unconscious') exitWith {return = true;};} foreach (crew AGM_Interaction_Target); return and vehicle player == player and !(AGM_Interaction_Target isKindOf 'Man')";
+statement = "[AGM_Interaction_Target] call AGM_Medical_fnc_unloadPatients;";
+};
+class AGM_Load {
+displayName = "$STR_AGM_Medical_Load";
+distance = 4;
+condition = "!(AGM_Interaction_Target isKindOf 'Man') and vehicle player == player and ((player getVariable 'AGM_Dragging') isKindOf 'Man' or (player getVariable 'AGM_Carrying') isKindOf 'Man') and AGM_Interaction_Target emptyPositions 'cargo' > 0";
+statement = "[AGM_Interaction_Target] call AGM_Medical_fnc_loadIntoVehicle;";
+exceptions[] = {"AGM_Medical_canTreat"};
+};
+};
+};
+class 15thCRRC: LandVehicle {
+class AGM_Actions {
+class AGM_Unload {
+displayName = "$STR_AGM_Medical_Unload";
+distance = 4;
+condition = "return = false; {if (_x getVariable 'AGM_Unconscious') exitWith {return = true;};} foreach (crew AGM_Interaction_Target); return and vehicle player == player and !(AGM_Interaction_Target isKindOf 'Man')";
+statement = "[AGM_Interaction_Target] call AGM_Medical_fnc_unloadPatients;";
+};
+class AGM_Load {
+displayName = "$STR_AGM_Medical_Load";
+distance = 4;
+condition = "!(AGM_Interaction_Target isKindOf 'Man') and vehicle player == player and ((player getVariable 'AGM_Dragging') isKindOf 'Man' or (player getVariable 'AGM_Carrying') isKindOf 'Man') and AGM_Interaction_Target emptyPositions 'cargo' > 0";
+statement = "[AGM_Interaction_Target] call AGM_Medical_fnc_loadIntoVehicle;";
+exceptions[] = {"AGM_Medical_canTreat"};
+};
+};
 };

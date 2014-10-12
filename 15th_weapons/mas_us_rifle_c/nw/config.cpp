@@ -1211,52 +1211,13 @@ class CfgWeapons
 	{
 		displayname = "M110";
 		model = "\mas_nw_rifle\mas_m110";
+		magazines[] = {"20Rnd_mas_762x51_Stanag","20Rnd_mas_762x51_T_Stanag","20Rnd_762x51_Mag","M118LR_Ball","M118LR_Tracer"};
 		picture = "\mas_nw_rifle\ui\gear_m110_x_ca.paa";
 		descriptionshort = "Marksman Rifle<br />Caliber: 7.62x51 mm";
 		maxZeroing = 1600;
 		class Library
 		{
 			libtextdesc = "The M110 Semi Automatic Sniper System M110 SASS is an American semi automatic sniper rifle that is chambered for the 7.62×51mm NATO round, developed by US firearm manufacturer Knight Armament Company. The M110 Semi Automatic Sniper System is intended to replace the M24 Sniper Weapon System used by snipers, spotters, designated marksman, or squad advanced marksmen in the United States Army.";
-		};
-	        muzzles[]=
-                {
-                        "this",
-                        "securite"
-                };
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
 		};
 		modes[] = {"Single","single_close_optics1","single_medium_optics1","single_far_optics1"};
 		class Single: Mode_SemiAuto
@@ -1271,9 +1232,9 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\mas_us_rifle\sounds\m24_s1",1.0,1,1200};
-				begin2[] = {"\mas_us_rifle\sounds\m24_s2",1.0,1,1200};
-				begin3[] = {"\mas_us_rifle\sounds\m24_s3",1.0,1,1200};
+				begin1[] = {"\mas_us_rifle\sounds\m110_s1",1.0,1,1200};
+				begin2[] = {"\mas_us_rifle\sounds\m110_s2",1.0,1,1200};
+				begin3[] = {"\mas_us_rifle\sounds\m110_s3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
 			};
 			class SilencedSound: BaseSoundModeType
@@ -1328,6 +1289,31 @@ class CfgWeapons
 			maxRangeProbab = 0.05;
 			aiRateOfFire = 4;
 			aiRateOfFireDistance = 600;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 155;
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+			};
+			class CowsSlot
+			{
+				access = 1;
+				compatibleitems[] = {"optic_Arco","optic_aco","optic_ACO_grn","optic_hamr","optic_Holosight","optic_mas_zeiss","optic_mas_zeiss_eo","optic_mas_acog","optic_mas_acog_eo","optic_mas_acog_rd","optic_mas_aim","optic_mas_acog_c","optic_mas_acog_eo_c","optic_mas_acog_rd_c","optic_mas_aim_c","optic_mas_zeiss_c","optic_mas_zeiss_eo_c","optic_SOS","optic_MRCO","optic_mas_term","optic_NVS","optic_Nightstalker","optic_tws","optic_mas_Holosight_blk","optic_mas_Arco_blk","optic_DMS","optic_LRPS","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_camo","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot
+			{
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR","acc_mas_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
 		};
 	};
 	class srifle_mas_m110_h: srifle_mas_m110
