@@ -93,6 +93,9 @@ class CfgWeapons {
 		distanceZoomMin = 100;
 		distanceZoomMax = 100;
 		reloadaction = "ReloadRPG";
+		AGM_Backblast_Angle = 60; // angle of the backblast area
+        AGM_Backblast_Range = 10; // maximum range of the backblast
+        AGM_Backblast_Damage = 3; // maximum damage of the backblast
 		sounds[]=
 		{
 			"StandardSound"
