@@ -28,9 +28,14 @@ class Item_Base_F;
 
 				class TransportWeapons
 				{
-					class meu_MX2A_base
+					class meu_MX2A_tan
 					{
-						weapon = "meu_MX2A_base";
+						weapon = "meu_MX2A_tan";
+						count = 50;
+					};
+					class meu_MX2A_olive
+					{
+						weapon = "meu_MX2A_olive";
 						count = 50;
 					};
 				};
@@ -69,14 +74,14 @@ class CfgWeapons
 	class Binocular;
 
 	// definitions of the functions of the monocular
-	class meu_MX2A_base: Binocular
+	class meu_MX2A_tan: Binocular
 	{
 		author = "15th MEU ModTeam";
 		_generalMacro = "Laserdesignator";
-		model = "MX2A\meu_MX2A.p3d";
+		model = "MX2A\meu_MX2A_tan.p3d";
 		modelOptics = "\A3\Weapons_F_beta\Binocular\lasermarker_optics";
 		opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
-		displayName = "MX2A";
+		displayName = "MX-2A tan";
 		descriptionUse = "$STR_A3_cfgWeapons_Default_Laserdesignator1";
 		picture = "\A3\Weapons_F\Data\UI\gear_lasermarker_CA.paa";
 		cursor = "laserDesignator";
@@ -99,6 +104,11 @@ class CfgWeapons
 		opticsZoomInit = 0.42;
 		distanceZoomMin = 100;
 		distanceZoomMax = 2300;
+	};
+	class meu_MX2A_olive : meu_MX2a_tan
+	{
+	model = "MX2A\meu_MX2A_olive.p3d";	
+	displayName = "MX-2A Olive";
 	};
 };//end cfgweapons
 
