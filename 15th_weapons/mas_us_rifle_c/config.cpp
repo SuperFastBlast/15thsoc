@@ -2311,10 +2311,10 @@ class CfgAmmo
         deflecting=20;
         deflectingChance = 100;
         deflectingRandomness = 0.5;
-        visibleFire=20;
-        visibleFireTime=15;
-        audibleFire=20;
-        audibleFireTime=10;
+        visibleFire=3;
+        visibleFireTime=3;
+        audibleFire=7;
+        audibleFireTime=7;
         tracerendtime = 1.4;
         tracerscale = 1;
         tracerstarttime = 0.06;
@@ -2327,10 +2327,10 @@ class CfgAmmo
         deflecting=20;
         deflectingChance = 100;
         deflectingRandomness = 0.5;
-        visibleFire=20;
-        visibleFireTime=15;
-        audibleFire=20;
-        audibleFireTime=10;
+        visibleFire=3;
+        visibleFireTime=3;
+        audibleFire=7;
+        audibleFireTime=7;
     	};
 	class B_mas_556x45_Ball: B_556x45_Ball
 	{
