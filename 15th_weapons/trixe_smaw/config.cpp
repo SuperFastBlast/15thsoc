@@ -93,6 +93,9 @@ class CfgWeapons {
 		distanceZoomMin = 100;
 		distanceZoomMax = 100;
 		reloadaction = "ReloadRPG";
+		AGM_Backblast_Angle = 60; // angle of the backblast area
+        AGM_Backblast_Range = 10; // maximum range of the backblast
+        AGM_Backblast_Damage = 3; // maximum damage of the backblast
 		sounds[]=
 		{
 			"StandardSound"
@@ -189,7 +192,7 @@ class CfgWeapons {
 		descriptionshort = "Anti-tank missile launcher <br/>Guided";
 		
 		class WeaponSlotsInfo : WeaponSlotsInfo {
-			mass = 160;
+			mass = 167;
 		};
 		inertia = 1.2;
 		
@@ -245,7 +248,6 @@ class CfgAmmo {
         // AI can use this against infantry as DP is an effective round
 		allowAgainstInfantry = true;
         
-        mass = 67;
         
         class CamShakeExplode {
 			power = (110*0.2);
@@ -290,7 +292,6 @@ class CfgAmmo {
         // AI shouldn't use AA rockets against infantry, it's not designed for it
 		allowAgainstInfantry = false;
         
-        mass = 67; // Weight of a single rocket in KG
 		
 		class CamShakeExplode {
 			power = (55*0.2);
@@ -348,7 +349,7 @@ class CfgMagazines {
 		modelspecial = "trixie_launchers\SMAW_loaded.p3d";
 		picture = "\trixie_launchers\ui\smaw_ammo.paa";
 		initspeed = 220;
-		mass = 60;
+		mass = 120;
 	};
 	
 	class Trixie_SMAW_HEDP : RPG32_F {
@@ -362,7 +363,7 @@ class CfgMagazines {
 		modelspecial = "trixie_launchers\SMAW_loaded.p3d";
 		picture = "\trixie_launchers\ui\smaw_ammo.paa";
 		initspeed = 220;
-		mass = 60;
+		mass = 120;
 	};
 	
 	class Trixie_Javelin_Missile : Titan_AA {
