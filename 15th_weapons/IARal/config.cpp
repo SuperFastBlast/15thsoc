@@ -16,12 +16,7 @@ class CfgPatches
 			"IAR30mk318_mag",
 			"IARmk262_mag",
 			"IARrt_mag",
-			"M855A1_M27IAR",
-			"M855A1_Tracer_M27IAR",
-			"M855A1_M16_30Rnd",
-			"M855A1_tracer_M16_30Rnd",
-			"M855A1_M4_30Rnd",
-			"M855A1_tracer_M4_30Rnd"
+"30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag""30Rnd_M27_556x45_T_Stanag","30Rnd_M27_556x45_Stanag"
 		};
 	author[]={"EricJ"};
 	};
@@ -109,7 +104,7 @@ class CfgWeapons
 			1,
 			30
 		};
-		reloadtime = 0.0799999;
+		reloadTime=0.096000001;
 		scope=0;
 		selectionfireanim="muzzleflash";
 		weaponinfotype="RscWeaponZeroing";
@@ -191,8 +186,8 @@ class CfgWeapons
 			};
 
 			reloadTime=0.096000001;
-			recoil = "recoil_auto_primary_5outof10";
-            		recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_single_primary_4outof10";
+            		recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion=0.00087;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -233,8 +228,8 @@ class CfgWeapons
 
 			reloadTime=0.096000001;
 			dispersion=0.00087;
-			recoil = "recoil_auto_primary_5outof10";
-           		recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+           		recoilprone = "recoil_auto_primary_prone_3outof10";
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
