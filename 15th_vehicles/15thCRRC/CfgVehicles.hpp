@@ -26,13 +26,17 @@ class CfgVehicles
 			displayname = "Zodiac CRRC";
 		};
 	};
-	class Boat_F;
-	class Rubber_duck_base_F;
-	class 15thCRRCboat: Rubber_duck_base_F
+	class B_Boat_Transport_01_F;
+	class 15thCRRCboat: B_Boat_Transport_01_F
 	{
 		mapSize = 4.754;
 		_generalMacro = "15thCRRCboat";
+		scope = 2;
 		displayName = "Zodiac CRRC";
+		crew = "B_Soldier_F";
+		faction = "BLU_F";
+		side = 1;
+		typicalCargo[] = {"B_Soldier_F","B_Soldier_F"};
 		accuracy = 0.5;
 		model = "\A3\boat_f\Boat_Transport_01\Boat_Transport_01_F.p3d";
 		picture = "\A3\boat_F\Boat_Transport_01\data\UI\Boat_Transport_01_CA.paa";
@@ -147,7 +151,7 @@ class CfgVehicles
 		ejectDeadDriver = 0;
 		ejectDeadCargo = 0;
 		maxSpeed = 70;
-		acceleration = 3;
+		acceleration = 1;
 		simulation = "shipX";
 		overSpeedBrakeCoef = 0.8;
 		brakeDistance = 50;
@@ -164,8 +168,8 @@ class CfgVehicles
 		waterLinearDampingCoefY = 5;
 		waterLinearDampingCoefX = 2.0;
 		waterAngularDampingCoef = 1.2;
-		rudderForceCoef = 0.1;
-		rudderForceCoefAtMaxSpeed = 0.009;
+		rudderForceCoef = 0.1999999999999;
+		rudderForceCoefAtMaxSpeed = 0.00000009;
 		enableGPS = 1;
 		transportSoldier = 4;
 		supplyRadius = 3;
@@ -204,48 +208,4 @@ class CfgVehicles
 			primary = 1;
 		};
 	};
-	class 15thCRRC: 15thCRRCboat
-	{
-		_generalMacro = "15thCRRC";
-		scope = 2;
-		crew = "B_Soldier_F";
-		faction = "BLU_F";
-		side = 1;
-		typicalCargo[] = {"B_Soldier_F","B_Soldier_F"};
-	};
-};
- class LandVehicle;
-class Car: LandVehicle {
-class AGM_Actions {
-class AGM_Unload {
-displayName = "$STR_AGM_Medical_Unload";
-distance = 4;
-condition = "return = false; {if (_x getVariable 'AGM_Unconscious') exitWith {return = true;};} foreach (crew AGM_Interaction_Target); return and vehicle player == player and !(AGM_Interaction_Target isKindOf 'Man')";
-statement = "[AGM_Interaction_Target] call AGM_Medical_fnc_unloadPatients;";
-};
-class AGM_Load {
-displayName = "$STR_AGM_Medical_Load";
-distance = 4;
-condition = "!(AGM_Interaction_Target isKindOf 'Man') and vehicle player == player and ((player getVariable 'AGM_Dragging') isKindOf 'Man' or (player getVariable 'AGM_Carrying') isKindOf 'Man') and AGM_Interaction_Target emptyPositions 'cargo' > 0";
-statement = "[AGM_Interaction_Target] call AGM_Medical_fnc_loadIntoVehicle;";
-exceptions[] = {"AGM_Medical_canTreat"};
-};
-};
-};
-class 15thCRRC: LandVehicle {
-class AGM_Actions {
-class AGM_Unload {
-displayName = "$STR_AGM_Medical_Unload";
-distance = 4;
-condition = "return = false; {if (_x getVariable 'AGM_Unconscious') exitWith {return = true;};} foreach (crew AGM_Interaction_Target); return and vehicle player == player and !(AGM_Interaction_Target isKindOf 'Man')";
-statement = "[AGM_Interaction_Target] call AGM_Medical_fnc_unloadPatients;";
-};
-class AGM_Load {
-displayName = "$STR_AGM_Medical_Load";
-distance = 4;
-condition = "!(AGM_Interaction_Target isKindOf 'Man') and vehicle player == player and ((player getVariable 'AGM_Dragging') isKindOf 'Man' or (player getVariable 'AGM_Carrying') isKindOf 'Man') and AGM_Interaction_Target emptyPositions 'cargo' > 0";
-statement = "[AGM_Interaction_Target] call AGM_Medical_fnc_loadIntoVehicle;";
-exceptions[] = {"AGM_Medical_canTreat"};
-};
-};
 };
