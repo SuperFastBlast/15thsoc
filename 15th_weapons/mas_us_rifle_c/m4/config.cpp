@@ -71,7 +71,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_TEST1_556x45_Stanag","30Rnd_TEST2_556x45_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
@@ -320,7 +320,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_TEST1_556x45_Stanag","30Rnd_TEST2_556x45_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416g_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
@@ -590,7 +590,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_TEST1_556x45_Stanag","30Rnd_TEST2_556x45_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416m_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
