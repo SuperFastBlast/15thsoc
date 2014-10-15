@@ -93,6 +93,9 @@ class CfgWeapons {
 		distanceZoomMin = 100;
 		distanceZoomMax = 100;
 		reloadaction = "ReloadRPG";
+		AGM_Backblast_Angle = 60; // angle of the backblast area
+        AGM_Backblast_Range = 10; // maximum range of the backblast
+        AGM_Backblast_Damage = 3; // maximum damage of the backblast
 		sounds[]=
 		{
 			"StandardSound"
@@ -189,7 +192,7 @@ class CfgWeapons {
 		descriptionshort = "Anti-tank missile launcher <br/>Guided";
 		
 		class WeaponSlotsInfo : WeaponSlotsInfo {
-			mass = 160;
+			mass = 167;
 		};
 		inertia = 1.2;
 		
@@ -229,14 +232,94 @@ class CfgAmmo {
 	class R_TBG32V_F;	// External class reference
 	class M_Titan_AT;	// External class reference
 	
-	class Trixie_SMAW_HEAA_R : R_PG32V_F {
-		model = "trixie_Launchers\SMAW_rocket_inflight.p3d";
+	class Trixie_SMAW_HEDP_R: R_TBG32V_F { // HE, 25mm RHA, 20cm concrete
+    	scope = public;
+    	// Combat effects, DP does more indirect damage than AA but less direct damage
+		hit = 250;
+		indirectHit = 75;
+		indirectHitRange = 10;
+        
+		cost = 200;
+        
+        // Apply larger explosive effects
+		CraterEffects = "ArtyShellCrater";
+		explosionEffects = "MortarExplosion";
+        
+        // AI can use this against infantry as DP is an effective round
+		allowAgainstInfantry = true;
+        
+        
+        class CamShakeExplode {
+			power = (110*0.2);
+			duration = "((round (110^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = ((5 + 110^0.5)*8);
+		};
+		
+		class CamShakeHit {
+			power = 110;
+			duration = "((round (110^0.25))*0.2 max 0.2)";
+			frequency = 20;
+			distance = 1;
+		};
+		
+		class CamShakeFire {
+			power = (20^0.25);
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = ((20^0.5)*8);
+		};
+		
+		class CamShakePlayerFire {
+			power = 1;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
 	};
-	
-	class Trixie_SMAW_HEDP_R : R_TBG32V_F {
-		model = "trixie_Launchers\SMAW_rocket_inflight.p3d";
-	};
-	
+	class Trixie_SMAW_HEAA_R: R_PG32V_F {
+        scope = public;
+        
+        // Combat effects
+		hit = 750; // Increased damage to direct hits
+		indirectHit = 25; // Reduced damage to indirect hits, there's less explosive
+		indirectHitRange = 3; // Reduced shrapnel distance, there's less explosive
+        
+        // Use AT effects
+		CraterEffects = "ATMissileCrater";
+		explosionEffects = "ATMissileExplosion";
+        
+        // AI shouldn't use AA rockets against infantry, it's not designed for it
+		allowAgainstInfantry = false;
+        
+		
+		class CamShakeExplode {
+			power = (55*0.2);
+			duration = "((round (55^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = ((5 + 55^0.5)*8);
+		};
+		
+		class CamShakeHit {
+			power = 110;
+			duration = "((round (110^0.25))*0.2 max 0.2)";
+			frequency = 20;
+			distance = 1;
+		};
+		
+		class CamShakeFire {
+			power = (20^0.25);
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = ((20^0.5)*8);
+		};
+		
+		class CamShakePlayerFire {
+			power = 1;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
 	class Trixie_Javelin_R : M_Titan_AT {
 		model = "trixie_launchers\trixie_javelin_rocket.p3d";
 		hit = 1500;
@@ -266,7 +349,7 @@ class CfgMagazines {
 		modelspecial = "trixie_launchers\SMAW_loaded.p3d";
 		picture = "\trixie_launchers\ui\smaw_ammo.paa";
 		initspeed = 220;
-		mass = 60;
+		mass = 120;
 	};
 	
 	class Trixie_SMAW_HEDP : RPG32_F {
@@ -280,7 +363,7 @@ class CfgMagazines {
 		modelspecial = "trixie_launchers\SMAW_loaded.p3d";
 		picture = "\trixie_launchers\ui\smaw_ammo.paa";
 		initspeed = 220;
-		mass = 60;
+		mass = 120;
 	};
 	
 	class Trixie_Javelin_Missile : Titan_AA {
@@ -294,4 +377,5 @@ class CfgMagazines {
 		picture = "\A3\Weapons_F_beta\Launchers\titan\Data\UI\gear_titan_missile_at_CA.paa";
 		mass = 100;
 	};
+};
 };

@@ -7,7 +7,7 @@ class CfgPatches
 		requiredversion = 1.0;
 		units[] = {"Box_mas_all_rifle_Wps_F"};
 		weapons[] = {"acc_mas_pointer_IR","muzzle_mas_snds_L","muzzle_mas_snds_LM","muzzle_mas_snds_C","muzzle_mas_snds_M","muzzle_mas_snds_Mc","muzzle_mas_snds_AK","muzzle_mas_snds_SM","muzzle_mas_snds_SMc","muzzle_mas_snds_SH","muzzle_mas_snds_SHc","muzzle_mas_snds_SV","muzzle_mas_snds_SVc","muzzle_mas_snds_SVD","muzzle_mas_snds_KSVK","optic_mas_DMS","optic_mas_DMS_c","optic_mas_Holosight_blk","optic_mas_Holosight_camo","optic_mas_Arco_blk","optic_mas_Arco_camo","optic_mas_Hamr_camo","optic_mas_Aco_camo","optic_mas_ACO_grn_camo","optic_mas_MRCO_camo","optic_mas_zeiss","optic_mas_zeiss_c","optic_mas_zeiss_eo","optic_mas_zeiss_eo_c","optic_mas_acog","optic_mas_acog_c","optic_mas_acog_eo","optic_mas_acog_eo_c","optic_mas_acog_rd","optic_mas_acog_rd_c","optic_mas_handle","optic_mas_aim","optic_mas_aim_c","optic_mas_pso","optic_mas_pso_c","optic_mas_pso_eo","optic_mas_pso_eo_c","optic_mas_pso_nv","optic_mas_pso_nv_c","optic_mas_pso_nv_eo","optic_mas_pso_nv_eo_c","optic_mas_term","hgun_mas_usp_F","hgun_mas_usp_l_F","hgun_mas_m23_F","hgun_mas_m23_l_F","hgun_mas_acp_F","hgun_mas_acp_F_sd","hgun_mas_m9_F","hgun_mas_bhp_F","hgun_mas_glock_F","hgun_mas_glocksf_F","hgun_mas_grach_F","hgun_mas_grach_F_sd","hgun_mas_mak_F","hgun_mas_usp_F_sd","hgun_mas_m23_F_sd","hgun_mas_m23_l_F_sd","hgun_mas_usp_l_F_sd","hgun_mas_m9_F_sd","hgun_mas_bhp_F_sd","hgun_mas_glock_F_sd","hgun_mas_glocksf_F_sd","hgun_mas_mak_F_sd","hgun_mas_sa61_F","hgun_mas_sa61_F_sd","hgun_mas_uzi_F","hgun_mas_uzi_F_sd","NVGoggles_mas","NVGoggles_o_mas","NVGoggles_mas_mask","NVGoggles_mas_mask2","NVGoggles_mas_mask_b","NVGoggles_mas_mask2_b","NVGoggles_mas_mask_t","NVGoggles_mas_mask2_t","NVGoggles_mas_mask3","mas_launch_RPG7_F","mas_launch_RPG18_F","mas_launch_M136_F","mas_launch_stinger_F","mas_launch_strela_F","mas_launch_MAAWS_F","launch_mas_sting_F","launch_mas_RPG32AA_F"};
-		magazines[] = {"mas_PG7V","mas_OG7","mas_PG18","mas_M136","mas_MAAWS","mas_Stinger","mas_Strela","Sting_mas_AA_F","RPG32_mas_AA_F","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","100Rnd_mas_762x51_Stanag","100Rnd_mas_762x51_T_Stanag","100Rnd_mas_762x54_mag","100Rnd_mas_762x54_T_mag","100Rnd_mas_762x39_mag","100Rnd_mas_762x39_T_mag","30Rnd_mas_545x39_mag","30Rnd_mas_545x39_T_mag","100Rnd_mas_545x39_mag","100Rnd_mas_545x39_T_mag","20Rnd_mas_762x51_Stanag","20Rnd_mas_762x51_T_Stanag","5Rnd_mas_762x51_Stanag","5Rnd_mas_762x51_T_Stanag","30Rnd_mas_762x39_mag","30Rnd_mas_762x39_T_mag","10Rnd_mas_762x54_mag","10Rnd_mas_762x54_T_mag","5Rnd_mas_127x99_Stanag","5Rnd_mas_127x99_dem_Stanag","5Rnd_mas_127x99_T_Stanag","5Rnd_mas_127x108_mag","5Rnd_mas_127x108_dem_mag","5Rnd_mas_127x108_T_mag","30Rnd_mas_9x21_Stanag","30Rnd_mas_9x21d_Stanag","12Rnd_mas_45acp_Mag","10Rnd_mas_45acp_Mag","8Rnd_mas_45acp_Mag","15Rnd_mas_9x21_Mag","17Rnd_mas_9x21_Mag","13Rnd_mas_9x21_Mag","8Rnd_mas_9x18_mag","7Rnd_mas_12Gauge_Slug","7Rnd_mas_12Gauge_Pellets","10Rnd_mas_12Gauge_Slug","10Rnd_mas_12Gauge_Pellets","64Rnd_mas_9x18_mag","20Rnd_mas_765x17_Mag","25Rnd_mas_9x19_Mag","M80_Ball_100Rnd_762x51","M80_Ball_Tracer_100Rnd_762x51","M855A1_M4_30Rnd","M855A1_tracer_M4_30Rnd","M855A1_M16_30Rnd","M855A1_tracer_M16_30Rnd","M249_200Rnd_556x45_Stanag","M249_200Rnd_556x45_Stanag_tracer"};
+		magazines[] = {"M433_40mm_HEDP_Shell","mas_PG7V","mas_OG7","mas_PG18","mas_M136","mas_MAAWS","mas_Stinger","mas_Strela","Sting_mas_AA_F","RPG32_mas_AA_F","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","100Rnd_mas_762x51_Stanag","100Rnd_mas_762x51_T_Stanag","100Rnd_mas_762x54_mag","100Rnd_mas_762x54_T_mag","100Rnd_mas_762x39_mag","100Rnd_mas_762x39_T_mag","30Rnd_mas_545x39_mag","30Rnd_mas_545x39_T_mag","100Rnd_mas_545x39_mag","100Rnd_mas_545x39_T_mag","20Rnd_mas_762x51_Stanag","20Rnd_mas_762x51_T_Stanag","5Rnd_mas_762x51_Stanag","5Rnd_mas_762x51_T_Stanag","30Rnd_mas_762x39_mag","30Rnd_mas_762x39_T_mag","10Rnd_mas_762x54_mag","10Rnd_mas_762x54_T_mag","5Rnd_mas_127x99_Stanag","5Rnd_mas_127x99_dem_Stanag","5Rnd_mas_127x99_T_Stanag","5Rnd_mas_127x108_mag","5Rnd_mas_127x108_dem_mag","5Rnd_mas_127x108_T_mag","30Rnd_mas_9x21_Stanag","30Rnd_mas_9x21d_Stanag","12Rnd_mas_45acp_Mag","10Rnd_mas_45acp_Mag","8Rnd_mas_45acp_Mag","15Rnd_mas_9x21_Mag","17Rnd_mas_9x21_Mag","13Rnd_mas_9x21_Mag","8Rnd_mas_9x18_mag","7Rnd_mas_12Gauge_Slug","7Rnd_mas_12Gauge_Pellets","10Rnd_mas_12Gauge_Slug","10Rnd_mas_12Gauge_Pellets","64Rnd_mas_9x18_mag","20Rnd_mas_765x17_Mag","25Rnd_mas_9x19_Mag","100Rnd_M240_762x51_Stanag","100Rnd_M240_762x51_T_Stanag","30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag","200Rnd_M249_556x45_Stanag","200Rnd_M249_556x45_T_Stanag","30Rnd_M27_556x45_T_Stanag","30Rnd_M27_556x45_Stanag","M882_9mm","T2AAF_45ACP","M118LR_Ball","M118LR_Tracer"};
 	};
 };
 class Mode_SemiAuto;
@@ -1163,48 +1163,13 @@ class CfgWeapons
 	};
 	class hgun_mas_acp_F: hgun_ACPC2_F
 	{
+		scope = 2;
 		displayname = "1911 ACP";
 		model = "\mas_us_rifle\mas_acp";
 		picture = "\mas_us_rifle\UI\gear_acpc2_x_ca.paa";
-		magazines[] = {"12Rnd_mas_45acp_Mag","10Rnd_mas_45acp_Mag","8Rnd_mas_45acp_Mag"};
+		magazines[] = {"12Rnd_mas_45acp_Mag","10Rnd_mas_45acp_Mag","8Rnd_mas_45acp_Mag","T2AAF_45ACP"};
 		descriptionshort = "Pistol<br />Caliber: .45 ACP";
 		sounds[] = {"StandardSound","SilencedSound"};
-	        muzzles[] ={"this","securite"};
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
 		class BaseSoundModeType
 		{
 			weaponSoundEffect = "DefaultRifle";
@@ -1229,7 +1194,7 @@ class CfgWeapons
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds\usp_reload",1,1,30};
 		class WeaponSlotsInfo
 		{
-			mass = 20;
+			mass = 30.5;
 			class CowsSlot
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
@@ -1259,52 +1224,17 @@ class CfgWeapons
 	};
 	class hgun_mas_m9_F: hgun_P07_F
 	{
+		scope = 2;
 		displayname = "M9";
 		model = "\mas_us_rifle\mas_m9";
 		picture = "\mas_us_rifle\UI\gear_m9_x_ca.paa";
-		magazines[] = {"15Rnd_mas_9x21_Mag","16Rnd_9x21_Mag","17Rnd_mas_9x21_Mag","13Rnd_mas_9x21_Mag"};
+		magazines[] = {"15Rnd_mas_9x21_Mag","16Rnd_9x21_Mag","17Rnd_mas_9x21_Mag","13Rnd_mas_9x21_Mag","M882_9mm"};
 		descriptionshort = "Pistol<br />Caliber: 9x21 mm";
 		class Library
 		{
 			libtextdesc = "The Beretta M9, formally Pistol, Semiautomatic, 9mm, M9, is a 9×19mm Parabellum pistol of the United States military adopted in 1985. It is essentially a military specification Beretta 92F, later the 92FS. The M9 won a competition in the 1980s to replace the M1911A1 as the primary sidearm of the U.S. military, beating many other contenders. It officially entered service in 1990.";
 		};
 		sounds[] = {"StandardSound","SilencedSound"};
-		muzzles[] ={"this","securite"};
-		class securite: Rifle_Base_F
-		{
-			displayName="$STR_R3F_SAFE";
-			magazines[]=
-			{
-				"R3F_securite_mag"
-			};
-			begin1[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
-			reloadMagazineSound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-			drySound[]=
-			{
-				"",
-				1,
-				1,
-				1
-			};
-
-		};
 		class BaseSoundModeType
 		{
 			weaponSoundEffect = "DefaultRifle";
@@ -1329,7 +1259,7 @@ class CfgWeapons
 		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M9R.wss",1,1,30};
 		class WeaponSlotsInfo
 		{
-			mass = 20;
+			mass = 25;
 			class CowsSlot
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
@@ -2181,6 +2111,7 @@ class CfgWeapons
 class CfgAmmo
 {
 	class BulletBase;
+	class G_40mm_HE;
 	class B_556x45_Ball;
 	class B_556x45_Ball_Tracer_Red;
 	class M_Titan_AA;
@@ -2217,136 +2148,195 @@ class CfgAmmo
 	};
 	class M_mas_sting_AA_F: M_Titan_AA{};
 	class M_mas_RPG32_AA_F: M_Titan_AA{};
-		class M80_Ball: B_762x51_Tracer_Red
+	class B_M80_762x54_Ball: B_762x51_Ball
 	{
-		hit=15; // millimeters of armor penned
+		hit=12; // millimeters of armor penned
 		typicalSpeed=853; // muzzle velocity
 		caliber=1.05; // penetration value 1 is 7.62
+		airFriction = -0.00125;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20; // deflection angle
 		deflectingChance = 100; // % chance of deflect
 		deflectingRandomness = 0.5; // How shot reacts to surface bump
-		visibleFire=20; // how well AI can see rounds
-		visibleFireTime=10; //how long can see
-		audibleFire=20; // how much can AI hear 
+		visibleFire=5; // how well AI can see rounds
+		visibleFireTime=5; //how long can see
+		audibleFire=10; // how much can AI hear 
 		audibleFireTime=10; //how long can hear
 	};
-		class R3F_securite_Ball: BulletBase
+	class B_M80_762x54_Ball_T: B_762x51_Tracer_Red 
 	{
-		hit = 0;
-		cartridge = "FxCartridge_Small";
-		cost = 0;
-		typicalSpeed = 0;
-		airFriction = 0;
-		caliber = 0;
-		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
-		tracerScale = 0;
-		tracerStartTime = 0;
-		tracerEndTime = 0;
-		nvgOnly = 0;
-	};
-	class M80_Ball_Tracer: B_762x51_Tracer_Red 
-	{
-		hit=15;
+		hit=12;
 		typicalSpeed=853;
 		caliber=1.05;
+		airFriction = -0.00125;
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=20;
-		visibleFireTime=15;
-		audibleFire=20;
+		visibleFire=5;
+		visibleFireTime=5;
+		audibleFire=10;
 		audibleFireTime=10;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
 	};
-	class M855A1_M4: B_556x45_Ball 
+	class B_M4_556x45_Ball: B_556x45_Ball
 	{
-		hit=8.85;
-		typicalSpeed=880;
-		caliber=1;
+		hit=8.11;
+		typicalSpeed=900;
+		airFriction = -0.0011543788;
+		caliber = 0.855;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=10;
-		audibleFire=15;
-		audibleFireTime=10;
+		visibleFire=3;
+		visibleFireTime=3;
+		audibleFire=7;
+		audibleFireTime=7;
 	};
-	class M855A1_tracer_M4: B_556x45_Ball_Tracer_Red 
+	class B_M4_556x45_Ball_T: B_556x45_Ball_Tracer_Red
 	{
-		hit=8.85;
-		typicalSpeed=880;
-		caliber=1;
+		hit=8.11;
+		typicalSpeed=900;
+		airFriction = -0.0011543788;
+		caliber = 0.855;
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=10;
-		audibleFire=15;
-		audibleFireTime=10;
+		visibleFire=3;
+		visibleFireTime=3;
+		audibleFire=7;
+		audibleFireTime=7;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
 	};
-	class M855A1_M16: B_556x45_Ball 
+	class B_M16_556x45_Ball: B_556x45_Ball 
 	{
-		hit=8.85;
-		typicalSpeed=950;
-		caliber=1;
+		hit=8.60;
+		typicalSpeed=960;
+		caliber = 0.855;
+		airFriction = -0.0011336614;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=10;
-		audibleFire=15;
-		audibleFireTime=10;
+		visibleFire=3;
+		visibleFireTime=3;
+		audibleFire=7;
+		audibleFireTime=7;
 	};
-	class M855A1_tracer_M16: B_556x45_Ball_Tracer_Red 
+	class B_M16_556x45_Ball_T: B_556x45_Ball_Tracer_Red 
 	{
-		hit=8.85;
-		typicalSpeed=950;
-		caliber=1;
+		hit=8.60;
+		typicalSpeed=960;
+		caliber = 0.855;
+		airFriction = -0.0011336614;
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=10;
-		audibleFire=15;
-		audibleFireTime=10;
+		visibleFire=3;
+		visibleFireTime=3;
+		audibleFire=7;
+		audibleFireTime=7;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
 	};
-	class M855A1_M249: B_556x45_Ball_Tracer_Red 
+	class B_M249_556x45_Ball: B_556x45_Ball 
 	{
-		hit=8.85;
-		typicalSpeed=950;
-		caliber=1;
+		hit=8.60;
+		typicalSpeed=960;
+		caliber = 0.855;
+		airFriction = -0.0011336614;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=10;
-		audibleFire=15;
-		audibleFireTime=10;
+		visibleFire=3;
+		visibleFireTime=3;
+		audibleFire=7;
+		audibleFireTime=7;
 	};
-	class M855A1_tracer_M249: B_556x45_Ball_Tracer_Red 
+	class B_M249_556x45_Ball_T: B_556x45_Ball_Tracer_Red 
 	{
-		hit=8.85;
-		typicalSpeed=950;
-		caliber=1;
+		hit=8.60;
+		typicalSpeed=960;
+		caliber = 0.855;
+		airFriction = -0.0011336614;
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=10;
-		audibleFire=15;
-		audibleFireTime=10;
+		visibleFire=3;
+		visibleFireTime=3;
+		audibleFire=7;
+		audibleFireTime=7;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
 	};
+	class B_M27_556x45_Ball_T: B_556x45_Ball_Tracer_Red 
+	{
+		hit=8.60;
+		typicalSpeed=960;
+		caliber = 0.855;
+		airFriction = -0.0011336614;
+		deflecting=20;
+		deflectingChance = 100;
+		deflectingRandomness = 0.5;
+		visibleFire=3;
+		visibleFireTime=3;
+		audibleFire=7;
+		audibleFireTime=7;
+		tracerendtime = 1.4;
+		tracerscale = 1;
+		tracerstarttime = 0.06;
+	};
+	class B_M27_556x45_Ball: B_556x45_Ball
+	{
+		hit=8.60;
+		typicalSpeed=960;
+		caliber = 0.855;
+		airFriction = -0.0011336614;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+		deflecting=20;
+		deflectingChance = 100;
+		deflectingRandomness = 0.5;
+		visibleFire=3;
+		visibleFireTime=3;
+		audibleFire=7;
+		audibleFireTime=7;
+	};
+	class M118LR_Tracer: B_762x51_Tracer_Red 
+    	{
+        hit=20;
+        typicalSpeed=783;
+        caliber=1.05;
+        deflecting=20;
+        deflectingChance = 100;
+        deflectingRandomness = 0.5;
+        visibleFire=3;
+        visibleFireTime=3;
+        audibleFire=7;
+        audibleFireTime=7;
+        tracerendtime = 1.4;
+        tracerscale = 1;
+        tracerstarttime = 0.06;
+   	 };
+	class M118LR_Ball: B_762x51_Ball
+   	{
+        hit=20;
+        typicalSpeed=783;
+        caliber=1.05;
+        deflecting=20;
+        deflectingChance = 100;
+        deflectingRandomness = 0.5;
+        visibleFire=3;
+        visibleFireTime=3;
+        audibleFire=7;
+        audibleFireTime=7;
+    	};
 	class B_mas_556x45_Ball: B_556x45_Ball
 	{
 		hit = 10;
@@ -2358,6 +2348,10 @@ class CfgAmmo
 	class B_mas_9x21p_Ball: B_9x21_Ball
 	{
 	hit = 7;
+	};
+	class M882_9mm: B_9x21_Ball
+   	 {
+   	hit = 9;
         cartridge = "FxCartridge_65_caseless";
         cost = 100;
         typicalSpeed = 390;
@@ -2371,24 +2365,7 @@ class CfgAmmo
         nvgOnly = 1;
         visibleFire = 3;
         audibleFire = 5;
-	};
-	class B_mas_9x21_Ball: B_9x21_Ball
-	{
-	hit = 7;
-        cartridge = "FxCartridge_65_caseless";
-        cost = 100;
-        typicalSpeed = 390;
-        airFriction = -0.0014;
-        caliber = 1.7;
-        deflecting = 45;
-        model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
-        tracerScale = 0.5;
-        tracerStartTime = 0.05;
-        tracerEndTime = 1;
-        nvgOnly = 1;
-        visibleFire = 3;
-        audibleFire = 5;
-	};
+    };
 	class B_mas_9x21d_Ball: B_56x15_dual
 	{
 		hit = 8;
@@ -2419,12 +2396,12 @@ class CfgAmmo
 	};
 	class B_mas_127x99_Ball: B_127x99_Ball
 	{
-		hit = 40;
+		hit = 120;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 	};
 	class B_mas_127x99_Ball_T: B_127x99_Ball_Tracer_Red
 	{
-		hit = 40;
+		hit = 120;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 	};
 	class B_mas_127x99_dem_Ball: B_127x99_Ball
@@ -2440,6 +2417,10 @@ class CfgAmmo
 	class B_mas_45acp_Ball: B_9x21_Ball
 	{
 	hit = 10;
+	};
+	class T2AAF_45ACP: B_9x21_Ball
+    	{
+    	hit = 12;
         indirectHit = 0;
         indirectHitRange = 0;
         cartridge = "FxCartridge_65_caseless";
@@ -2450,10 +2431,10 @@ class CfgAmmo
         cost = 100;
         typicalSpeed = 280;
         airFriction = -0.0018;
-	};
+   	};
 	class B_mas_12Gauge_Slug: B_12Gauge_Slug
 	{
-		hit = 42;
+		hit = 30;
 		cartridge = "FxCartridge_slug";
 		class CamShakeFire
 		{
@@ -2478,10 +2459,10 @@ class CfgAmmo
 	class B_mas_12Gauge_Pellets: B_12Gauge_Pellets
 	{
 		hit = 10;
-		indirectHit = 4;
-		indirectHitRange = 0.4;
 		cartridge = "FxCartridge_slug";
-		caliber = 3;
+		caliber = 0.8;
+		indirectHit = 0;
+        	indirectHitRange = 0;
 		class CamShakeFire
 		{
 			power = 3;
@@ -2502,10 +2483,25 @@ class CfgAmmo
 			frequency = 20;
 		};
 	};
+	class M433_40mm_HEDP: G_40mm_HE
+  {
+        hit = 170;
+        indirectHit = 25;
+        indirectHitRange = 5;
+        caliber = 3;
+        class CamShakeHit
+        {
+            power = 30;
+            duration = "((round (30^0.25))*0.2 max 0.2)";
+            frequency = 20;
+            distance = 1;
+        };
+    };
 };
 class CfgMagazines
 {
 	class CA_Magazine;
+	class 1Rnd_HE_Grenade_shell;
 	class 30Rnd_556x45_Stanag;
 	class 30Rnd_556x45_Stanag_Tracer_Red;
 	class 20Rnd_762x51_Mag;
@@ -2518,6 +2514,14 @@ class CfgMagazines
 	class Titan_AA;
 	class 150Rnd_762x51_Box;
 	class 150Rnd_762x51_Box_Tracer;
+	class M433_40mm_HEDP_Shell: 1Rnd_HE_Grenade_shell
+	{
+		scope = 2;
+		Displayname = "M433 40mm HEDP";
+		ammo = "M433_40mm_HEDP";
+		mass = 5;
+		descriptionshort = "Caliber: 40 mm<br />Rounds: 1<br />Used in: M203";
+	};
 	class mas_PG7V: RPG32_F
 	{
 		displayName = "PG7 AT";
@@ -2609,64 +2613,147 @@ class CfgMagazines
 		displayname = "30rnd 5.56mm STANAG(Tracer)";
 		picture = "\mas_us_rifle\ui\m_30stanag_red_CA.paa";
 	};
-	class R3F_securite_mag: CA_Magazine
+	class 30Rnd_M4_556x45_Stanag: 30Rnd_556x45_Stanag
 	{
 		scope = 2;
-		displayName = "";
-		count = 0;
-		initSpeed = 0;
-		tracersEvery = 0;
-		ammo = "R3F_securite_Ball";
-		picture = "\mas_us_rifle_c\blank_ca.paa"; //this is a transparent texture...
-		model = "";
-		descriptionShort = "";
-		mass = 0;
-		class Library
-		{
-			libTextDesc = "";
-		};
-	};
-	class M855A1_M4_30Rnd: 30Rnd_556x45_Stanag
-	{
-		ammo = "M855A1_M4";
-		initspeed = 880;
+		ammo = "B_M4_556x45_Ball";
+		initspeed = 900;
 		count = 30;
+		mass = 11.8;
 		lastroundstracer = 3;
         	descriptionshort = "M855A1 for M4<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
         	displayname = "M4 M855A1 5.56mm 30rnd";
 		picture = "\mas_us_rifle\ui\m_30stanag_CA.paa";
 	};
-	class M855A1_tracer_M4_30Rnd: 30Rnd_556x45_Stanag
+	class 30Rnd_M4_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
 	{
-		ammo = "M855A1_tracer_M4";
-		initspeed = 880;
+		scope = 2;
+		ammo = "B_M4_556x45_Ball_T";
+		mass = 11.8;
+		initspeed = 900;
 		count = 30;
 		tracersevery = 1;
         	descriptionshort = "M855A1 tracer for M4<br />Caliber: 5.56x45 mm STANAG Tracer<br />Rounds: 30";
         	displayname = "M4 M855A1 5.56mm 30rnd Tracer";
 		picture = "\mas_us_rifle\ui\m_30stanag_red_CA.paa";
 	};
-	class M855A1_M16_30Rnd: 30Rnd_556x45_Stanag
+	class 30Rnd_M16_556x45_Stanag: 30Rnd_556x45_Stanag
 	{
-		ammo = "M855A1_M16";
-		initspeed = 960.12;
+		scope = 2;
+		ammo = "B_M16_556x45_Ball";
+		mass = 11.8;
+		initspeed = 960;
 		count = 30;
 		lastroundstracer = 3;
        		descriptionshort = "M855A1 for M16<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
        		displayname = "M16 M855A1 5.56mm 30rnd";
 		picture = "\mas_us_rifle\ui\m_30stanag_CA.paa";
 	};
-	class M855A1_tracer_M16_30Rnd: 30Rnd_556x45_Stanag
+	class 30Rnd_M16_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
 	{
-		ammo = "M855A1_tracer_M16";
-		initspeed = 960.12;
+		scope = 2;
+		ammo = "B_M16_556x45_Ball_T";
+		mass = 11.8;
+		initspeed = 960;
 		count = 30;
 		tracersevery = 1;
        		descriptionshort = "M855A1 for M16<br />Caliber: 5.56x45 mm STANAG Tracer<br />Rounds: 30";
         	displayname = "M16 M855A1 5.56mm 30rnd Tracer";
 		picture = "\mas_us_rifle\ui\m_30stanag_red_CA.paa";
 	};
-	class 200Rnd_mas_556x45_Stanag: 200Rnd_65x39_cased_Box
+	class 200Rnd_M249_556x45_Stanag: 30Rnd_556x45_Stanag
+	{
+		scope = 2;
+		mass = 56;
+		ammo = "B_M249_556x45_Ball";
+		count = 200;
+        	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200<br />Used in: M249";
+        	displayname = "M249 M855A1 5.56mm 200rnd";
+		picture = "\mas_us_rifle\ui\m_200LMG_ca.paa";
+        	initspeed = 960;
+        	lastroundstracer = 5;
+		tracersevery = 5;
+	};
+	class 200Rnd_M249_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
+	{
+		scope = 2;
+		mass = 56;
+       		ammo = "B_M249_556x45_Ball_T";
+		count = 200;
+        	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200 Tracer<br />Used in: M249";
+       	 	displayname = "M249 M855A1 5.56mm 200rnd Tracer";
+		picture = "\mas_us_rifle\ui\m_200LMG_red_ca.paa";
+       	 	initspeed = 960;
+       	 	lastroundstracer = 4;
+		tracersevery = 1;
+	};
+	class 30Rnd_M27_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
+	{
+		ammo="B_M27_556x45_Ball_T";
+		mass = 11.8;
+		count=30;
+		descriptionshort="";
+		displayname="M27 IAR Tracer 5.56mm 30-round Stanag";
+		initspeed=960;
+		tracersevery=1;
+		picture = "\mas_us_rifle\ui\m_30stanag_red_CA.paa";
+		scope=2;
+	};
+	class 30Rnd_M27_556x45_Stanag: 30Rnd_556x45_Stanag
+	{
+		ammo="B_M27_556x45_Ball";
+		mass = 11.8;
+		count=30;
+		descriptionshort="";
+		displayname="M27 IAR 5.56mm 30-round Stanag";
+		initspeed=960;
+		picture="\mas_us_rifle\ui\m_30stanag_CA.paa";
+		scope=2;
+		lastroundstracer=3;
+	};
+	class 100Rnd_M240_762x51_Stanag: 150Rnd_762x51_Box
+	{
+		scope = 2;
+		mass = 33.8;
+		ammo = "B_M80_762x54_Ball";
+		count = 100;
+		descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 100<br />Used in: Mk48,M240";
+		displayname = "M240 100Rnd. M80 Ball";
+        	initspeed = 853;
+        	lastroundstracer = 3;
+		tracersevery = 5;
+	};
+	class 100Rnd_M240_762x51_T_Stanag: 150Rnd_762x51_Box_Tracer
+	{
+		scope = 2;
+		mass = 33.8;
+		ammo = "B_M80_762x54_Ball_T";
+		count = 100;
+		descriptionshort = "Caliber: 7.62x51 mm STANAG Tracer<br />Rounds: 100<br />Used in: Mk48,M240";
+		displayname = "M240 100Rnd. M62 Tracer";
+		tracersevery = 1;
+	};
+	class M118LR_Ball: 30Rnd_556x45_Stanag
+    	{
+        ammo = "M118LR_Ball";
+	scope = 2;
+        count = 20;
+        descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 20<br />Used in: M110";
+        displayname = "M118LR 7.62";
+        picture = "\mas_us_rifle\ui\m_20hk417_ca.paa";
+	mass = 12;
+    	};
+	class M118LR_Tracer: 30Rnd_556x45_Stanag_Tracer_Red
+    	{
+        ammo = "M118LR_Tracer";
+	scope = 2;
+        count = 20;
+        descriptionshort = "Caliber: 7.62x51 mm Tracer STANAG<br />Rounds: 20<br />Used in: M110";
+        displayname = "M118LR 7.62 Tracer";
+        picture = "\mas_us_rifle\ui\m_20hk417_red_ca.paa";
+	mass = 12;
+    	};
+	class 200Rnd_mas_556x45_Stanag: 30Rnd_556x45_Stanag
 	{
 		ammo = "B_mas_556x45_Ball";
 		count = 200;
@@ -2675,7 +2762,7 @@ class CfgMagazines
 		picture = "\mas_us_rifle\ui\m_200LMG_ca.paa";
 		mass = 25;
 	};
-	class 200Rnd_mas_556x45_T_Stanag: 200Rnd_65x39_cased_Box_Tracer
+	class 200Rnd_mas_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
 	{
 		ammo = "B_mas_556x45_Ball_T";
 		count = 200;
@@ -2683,44 +2770,6 @@ class CfgMagazines
 		displayname = "200rnd 5.56mm Box(Tracer)";
 		picture = "\mas_us_rifle\ui\m_200LMG_red_ca.paa";
 		mass = 25;
-	};
-	class M249_200Rnd_556x45_Stanag: 200Rnd_mas_556x45_Stanag
-	{
-		ammo = "M855A1_M249";
-        	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200<br />Used in: M249";
-        	displayname = "M249 M855A1 5.56mm 200rnd";
-        	initspeed = 960.12;
-        	lastroundstracer = 5;
-		tracersevery = 5;
-	};
-	class M249_200Rnd_556x45_Stanag_tracer: 200Rnd_mas_556x45_T_Stanag
-	{
-       		ammo = "M855A1_tracer_M249";
-        	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200 Tracer<br />Used in: M249";
-       	 	displayname = "M249 M855A1 5.56mm 200rnd Tracer";
-       	 	initspeed = 960.12;
-       	 	lastroundstracer = 4;
-		tracersevery = 1;
-	};
-	class M80_Ball_100Rnd_762x51: 150Rnd_762x51_Box
-	{
-		ammo = "M80_Ball";
-		count = 100;
-		descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 100<br />Used in: Mk48,M240";
-		displayname = "M240 100Rnd. M80 Ball";
-        	initspeed = 853;
-		mass = 30;
-        	lastroundstracer = 3;
-		tracersevery = 5;
-	};
-	class M80_Ball_Tracer_100Rnd_762x51: M80_Ball_100Rnd_762x51
-	{
-		ammo = "M80_Ball_Tracer";
-		count = 100;
-		descriptionshort = "Caliber: 7.62x51 mm STANAG Tracer<br />Rounds: 100<br />Used in: Mk48,M240";
-		displayname = "M240 100Rnd. M62 Tracer";
-		mass = 30;
-		tracersevery = 1;
 	};
 	class 100Rnd_mas_762x51_Stanag: 150Rnd_762x51_Box
 	{
@@ -2965,6 +3014,28 @@ class CfgMagazines
 		descriptionshort = "Caliber: 9x21 mm STANAG<br />Rounds: 15<br />Used in: Beretta M9";
 		initSpeed = 390;
 	};
+	class M882_9mm: 16Rnd_9x21_Mag
+    	{
+	mass = 1;
+        scope = 2;
+        ammo = "M882_9mm";
+        count = 15;
+        displayName = "M882 9mm Mag";
+        picture = "\A3\weapons_f\data\ui\M_16Rnd_9x21_CA.paa";
+        descriptionshort = "Caliber: 9x19 mm STANAG<br />Rounds: 15<br />Used in: Beretta M9";
+        initSpeed = 390;
+    	};
+	class T2AAF_45ACP: 16Rnd_9x21_Mag
+    	{
+        scope = 2;
+	mass = 2;
+        ammo = "T2AAF_45ACP";
+        count = 7;
+        displayName = "T2AAF .45ACP";
+        picture = "\A3\weapons_f\data\ui\M_16Rnd_9x21_CA.paa";
+        descriptionshort = "Caliber: .45ACP<br />Rounds: 8<br />Used in: M1911 ACP";
+        initSpeed = 280;
+    	};
 	class 17Rnd_mas_9x21_Mag: 16Rnd_9x21_Mag
 	{
 		ammo = "B_9x21_Ball";
@@ -3009,6 +3080,7 @@ class CfgMagazines
 	{
 		ammo = "B_mas_12Gauge_Slug";
 		count = 7;
+		mass = 4;
 		displayName = "12cal Slug M1014";
 		picture = "\mas_us_rifle\ui\m_12gauge_slugs_ca.paa";
 		descriptionshort = "Caliber: 12 cal<br />Rounds: 7<br />Used in: M1014";
@@ -3017,6 +3089,7 @@ class CfgMagazines
 	{
 		ammo = "B_mas_12Gauge_Pellets";
 		count = 7;
+		mass = 4;
 		displayName = "12cal Pellets M1014";
 		picture = "\mas_us_rifle\ui\m_12gauge_ca.paa";
 		descriptionshort = "Caliber: 12 cal<br />Rounds: 7<br />Used in: M1014";
