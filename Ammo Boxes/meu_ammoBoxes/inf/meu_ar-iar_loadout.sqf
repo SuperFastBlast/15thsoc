@@ -1,5 +1,5 @@
 //15th Automatic Rifleman Loadout
-// REVISION 14OCT14
+// REVISION 15OCT14
 
  _unit = _this select 1;
  
@@ -28,12 +28,26 @@
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
  (unitBackpack _unit) additemCargo ["itemRadio",2];
+ (unitBackpack _unit) addmagazineCargo ["M855A1_M27IAR",6];
  
- _unit addmagazine "200Rnd_M249_556x45_Stanag_tracer";
- _unit addmagazine "200Rnd_M249_556x45_Stanag";
- _unit addmagazine "200Rnd_M249_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
 
- _unit addweapon "LMG_mas_M249_F";
+ _unit addweapon "ej_IAR30";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
 

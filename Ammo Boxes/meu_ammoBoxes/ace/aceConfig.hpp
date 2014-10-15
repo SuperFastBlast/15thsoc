@@ -1,4 +1,4 @@
-// REVISION 01OCT14
+// REVISION 14OCT14
 
 // class CfgVehicles
 // {
@@ -156,13 +156,13 @@
 
 		class TransportMagazines {
 // AMMO
-			class _xx_rh_15rnd_9x19_m9 {
+			class _xx_M882_9mm {
 				count = 100;
-				magazine = "rh_15rnd_9x19_m9";
+				magazine = "M882_9mm";
 			};
-			class _xx_M855A1_M4_30Rnd {
+			class _xx_30Rnd_M4_556x45_Stanag {
 				count = 200;
-				magazine = "M855A1_M4_30Rnd";
+				magazine = "30Rnd_M4_556x45_Stanag";
 			};
 //Smoke 203
             class _xx_SmokeShell {
@@ -193,9 +193,9 @@
 		
 		class TransportWeapons {
 // WEAPONS
-			class _xx_rh_m9 {
+			class _xx_hgun_mas_m9_F {
 				count = 20;
-				weapon = "rh_m9";
+				weapon = "hgun_mas_m9_F";
 			};
 			class _xx_M4Car {
 				count = 25;

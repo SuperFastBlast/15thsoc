@@ -1,7 +1,7 @@
 //15th Weapons MG Team Leader
 //15thMEU Realism Unit, Weapons Platoon
 //By: SSgt Callaghan
-// REVISION 01OCT14
+// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -37,26 +37,26 @@
 (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
 
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
 
 
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
 
 
  _unit addweapon "M4Car203";

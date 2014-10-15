@@ -1,6 +1,6 @@
 //15th Marauder RTO Loadout
 //By: 2ndLt Callaghan
-// REVISION 01OCT14
+// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -31,14 +31,14 @@
 
  _unit addbackpack "tf_rt1523g";
 
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
 
  _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "Optic_Hamr";

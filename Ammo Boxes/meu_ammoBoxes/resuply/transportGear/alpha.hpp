@@ -1,3 +1,5 @@
+// REVISION 14OCT14
+
 		class TransportItems {
 		
 // MEDICAL
@@ -29,13 +31,13 @@
 		
 // AMMO
 
-			class _xx_M855A1_M16_30Rnd {
+			class _xx_30Rnd_M16_556x45_Stanag {
 				count = 50;
-				magazine = "M855A1_M16_30Rnd";
+				magazine = "30Rnd_M16_556x45_Stanag";
 			};
-			class _xx_M249_200Rnd_556x45_Stanag {
+			class _xx_200Rnd_M249_556x45_Stanag {
 				count = 6;
-				magazine = "M249_200Rnd_556x45_Stanag";
+				magazine = "200Rnd_M249_556x45_Stanag";
 			};
 			
 // GRENADE, SMOKE, M203
@@ -67,9 +69,9 @@
 				count = 12;
 				magazine = "SmokeShellGreen";
 			};
-			class _xx_1Rnd_HE_Grenade_shell {
+			class _xx_M433_40mm_HEDP_Shell {
 				count = 12;
-				magazine = "1Rnd_HE_Grenade_shell";
+				magazine = "M433_40mm_HEDP_Shell";
 			};
 		};
 		

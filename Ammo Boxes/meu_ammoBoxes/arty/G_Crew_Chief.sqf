@@ -1,5 +1,6 @@
-// REVISION 01OCT14
 //Delta Company, Commander Loadout
+// REVISION 14OCT14
+
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -24,8 +25,8 @@
  _unit additem "itemMap";
  _unit assignitem "itemMap";
  
-_unit additem "itemCompass";
-_unit assignitem "itemCompass";
+ _unit additem "itemCompass";
+ _unit assignitem "itemCompass";
  
  _unit additem "itemRadio";
  _unit additem "itemRadio";
@@ -33,25 +34,25 @@ _unit assignitem "itemCompass";
 
  _unit addbackpack "tf_rt1523g";
 
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
  
  _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "FHQ_optic_AIM";
  _unit addPrimaryWeaponItem "acc_pointer_IR";
 
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
 
- _unit addweapon "RH_M9";
+ _unit addweapon "hgun_mas_m9_F";
 
  _unit addweapon "Rangefinder";
  _unit assignitem "Rangefinder";

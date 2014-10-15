@@ -1,8 +1,8 @@
-// REVISION 01OCT14
-// Infantry 
+// Infantry
+// REVISION 14OCT14
 [
-	["rh_15rnd_9x19_m9", 4],
-	["M855A1_M16_30Rnd", 10],
+	["M882_9mm", 4],
+	["30Rnd_M16_556x45_Stanag", 10],
 	["Trixie_SMAW_HEDP", 3],
 	["Trixie_SMAW_HEAA", 2],
 	["DemoCharge_Remote_Mag",4],
@@ -17,7 +17,7 @@
 	["SmokeShellBlue", 2],
 	["HandGrenade", 2],
 	["REV1_flash", 2],
-	["1Rnd_HE_Grenade_shell", 4],
+	["M433_40mm_HEDP_Shell", 4],
 	["1Rnd_Smoke_Grenade_shell", 4],
 	["1Rnd_SmokeRed_Grenade_shell", 2],
 	["Chemlight_green",5] // no comma

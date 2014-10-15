@@ -1,4 +1,4 @@
-// REVISION 01OCT14
+// REVISION 15OCT14
 
 // class CfgVehicles
 // {
@@ -247,53 +247,53 @@
 	
 // AMMO
 		class TransportMagazines {
-			class _xx_rh_15rnd_9x19_m9 {
+			class _xx_M882_9mm {
 				count = 100;
-				magazine = "rh_15rnd_9x19_m9";
+				magazine = "M882_9mm";
 			};
-			class _xx_20Rnd_mas_762x51_Stanag {
+			class _xx_M118LR_Ball {
 				count = 50;
-				magazine = "20Rnd_mas_762x51_Stanag";
+				magazine = "M118LR_Ball";
 			};
-			class _xx_20Rnd_mas_762x51_T_Stanag {
+			class _xx_M118LR_Tracer {
 				count = 50;
-				magazine = "20Rnd_mas_762x51_T_Stanag";
+				magazine = "M118LR_Tracer";
 			};
-			class _xx_M855A1_M16_30Rnd {
+			class _xx_30Rnd_M16_556x45_Stanag {
 				count = 200;
-				magazine = "M855A1_M16_30Rnd";
+				magazine = "30Rnd_M16_556x45_Stanag";
 			};
-			class _xx_M855A1_tracer_M16_30Rnd {
+			class _xx_30Rnd_M16_556x45_T_Stanag {
 				count = 100;
-				magazine = "M855A1_tracer_M16_30Rnd";
+				magazine = "30Rnd_M16_556x45_T_Stanag";
 			};
-			class _xx_M855A1_M4_30Rnd {
+			class _xx_30Rnd_M4_556x45_Stanag {
 				count = 200;
-				magazine = "M855A1_M4_30Rnd";
+				magazine = "30Rnd_M4_556x45_Stanag";
 			};
-			class _xx_M855A1_tracer_M4_30Rnd {
+			class _xx_30Rnd_M4_556x45_T_Stanag {
 				count = 100;
-				magazine = "M855A1_tracer_M4_30Rnd";
+				magazine = "30Rnd_M4_556x45_T_Stanag";
 			};
-			class _xx_M249_200Rnd_556x45_Stanag {
+			class _xx_200Rnd_M249_556x45_Stanag {
 				count = 100;
-				magazine = "M249_200Rnd_556x45_Stanag";
+				magazine = "200Rnd_M249_556x45_Stanag";
 			};
-			class _xx_M249_200Rnd_556x45_Stanag_tracer {
+			class _xx_200Rnd_M249_556x45_Stanag_tracer {
 				count = 100;
-				magazine = "M249_200Rnd_556x45_Stanag_tracer";
+				magazine = "200Rnd_M249_556x45_Stanag_tracer";
 			};
 			class _xx_7Rnd_mas_12Gauge_Slug {
 				count = 100;
 				magazine = "7Rnd_mas_12Gauge_Slug";
 			};
-			class _xx_M855A1_M27IAR {
+			class _xx_30Rnd_M27_556x45_Stanag {
 				count = 100;
-				magazine = "M855A1_M27IAR";
+				magazine = "30Rnd_M27_556x45_Stanag";
 			};
-			class _xx_M855A1_tracer_M27IAR {
+			class _xx_30Rnd_M27_556x45_T_Stanag {
 				count = 100;
-				magazine = "M855A1_tracer_M27IAR";
+				magazine = "30Rnd_M27_556x45_T_Stanag";
 			};
 			
 // THROWN + LAUNCHED
@@ -329,9 +329,9 @@
 				count = 100;
 				magazine = "HandGrenade";
 			};
-			class _xx_1Rnd_HE_Grenade_shell {
+			class _xx_M433_40mm_HEDP_Shell {
 				count = 100;
-				magazine = "1Rnd_HE_Grenade_shell";
+				magazine = "M433_40mm_HEDP_Shell";
 			};
 			class _xx_1Rnd_Smoke_Grenade_shell {
 				count = 25;
@@ -340,6 +340,14 @@
 			class _xx_1Rnd_SmokeRed_Grenade_shell {
 				count = 25;
 				magazine = "1Rnd_SmokeRed_Grenade_shell";
+			};
+			class _xx_6Rnd_Smoke_M32 {
+				count = 48;
+				magazine = "6Rnd_Smoke_M32";
+			};
+			class _xx_6Rnd_HE_M32 {
+				count = 24;
+				magazine = "6Rnd_HE_M32";
 			};
 			class _xx_REV1_flash {
 				count = 100;
@@ -387,9 +395,9 @@
 		
 // WEAPONS
 		class TransportWeapons {
-			class _xx_rh_m9 {
+			class _xx_hgun_mas_m9_F {
 				count = 20;
-				weapon = "rh_m9";
+				weapon = "hgun_mas_m9_F";
 			};
 			class _xx_M4Car {
 				count = 20;
@@ -434,6 +442,10 @@
 			class _xx_arifle_mas_m1014 {
 				count = 3;
 				weapon = "arifle_mas_m1014";
+			};
+			class _xx_M32 {
+				count = 6;
+				weapon = "M32";
 			};
 		};
 	};

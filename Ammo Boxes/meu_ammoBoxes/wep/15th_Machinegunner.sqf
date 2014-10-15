@@ -1,6 +1,7 @@
 //15th Weapons MG Gunner
 //15thMEU Realism Unit, Weapons Platoon
 //By: SSgt Callaghan
+// REVISION 14OCT14
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -30,21 +31,21 @@
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
 
- _unit addmagazine "M80_Ball_Tracer_100Rnd_762x51";
- _unit addmagazine "M80_Ball_Tracer_100Rnd_762x51";
- _unit addmagazine "M80_Ball_Tracer_100Rnd_762x51";
+ _unit addmagazine "100Rnd_M240_762x51_T_Stanag";
+ _unit addmagazine "100Rnd_M240_762x51_T_Stanag";
+ _unit addmagazine "100Rnd_M240_762x51_T_Stanag";
 
 
  _unit addweapon "LMG_mas_M240_F";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";
 
 
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
 
 
- _unit addweapon "RH_M9";
+ _unit addweapon "hgun_mas_m9_F";
 
 
  _unit addmagazine "HandGrenade";
