@@ -283,6 +283,7 @@ class CfgAmmo {
 			frequency = 20;
 			distance = 1;
 		};
+	};
 	class Trixie_Javelin_R : M_Titan_AT {
 		model = "trixie_launchers\trixie_javelin_rocket.p3d";
 		hit = 1500;
@@ -340,4 +341,3 @@ class CfgMagazines {
 		mass = 100;
 		};
 	};
-};
