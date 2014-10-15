@@ -1,0 +1,20 @@
+MDH_topDownAttack Addon License:
+
+This Content was made by Moerderhoschi which will be mentioned as author in this license. All Material made by the author and released with this addon will be mentioned as content in this license.
+
+
+Allowed:
+- You are allowed to distribute this content in its original released state by the author.
+- You are allowed to use this content in the Game ArmA 3 in its original released state by the author.
+- You are allowed to modify this content for your own personal use.
+- You are allowed to implement this addon in a addonpackage, but you have to credit the author in a way that it is clear that he is the creator for this content.
+
+
+Not Allowed:
+- You are not allowed to use this content for commercial use.
+- You are not allowed to use this for military use.
+- You are not allowed to upload the content into the Steam Workshop.
+- You are not allowed to modify and redistribute this content when the original author isn't mentioned.
+
+
+for any further querstions you can contact the author, Moerderhoschi, in the original Bohemia Interactive Forum: http//forums.bistudio.com
