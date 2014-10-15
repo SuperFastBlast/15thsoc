@@ -2154,6 +2154,7 @@ class CfgAmmo
 		typicalSpeed=853; // muzzle velocity
 		caliber=1.05; // penetration value 1 is 7.62
 		airFriction = -0.00125;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20; // deflection angle
 		deflectingChance = 100; // % chance of deflect
 		deflectingRandomness = 0.5; // How shot reacts to surface bump
@@ -2185,6 +2186,7 @@ class CfgAmmo
 		typicalSpeed=900;
 		airFriction = -0.0011543788;
 		caliber = 0.855;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
@@ -2216,6 +2218,7 @@ class CfgAmmo
 		typicalSpeed=960;
 		caliber = 0.855;
 		airFriction = -0.0011336614;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
@@ -2247,6 +2250,7 @@ class CfgAmmo
 		typicalSpeed=960;
 		caliber = 0.855;
 		airFriction = -0.0011336614;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
@@ -2295,6 +2299,7 @@ class CfgAmmo
 		typicalSpeed=960;
 		caliber = 0.855;
 		airFriction = -0.0011336614;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
