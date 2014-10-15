@@ -9604,46 +9604,6 @@ class CfgVehicles
 		transportMaxBackpacks = 2000;
 		class TransportMagazines
 		{
-			class _xx_M80_Ball_100Rnd_762x51
-			{
-				magazine = "M80_Ball_100Rnd_762x51";
-				count = 50;
-			};
-			class _xx_M80_Ball_Tracer_100Rnd_762x51
-			{
-				magazine = "M80_Ball_Tracer_100Rnd_762x51";
-				count = 50;
-			};
-			class _xx_M855A1_M4_30Rnd
-			{
-				magazine = "M855A1_M4_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_tracer_M4_30Rnd
-			{
-				magazine = "M855A1_tracer_M4_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_M16_30Rnd
-			{
-				magazine = "M855A1_M16_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_tracer_M16_30Rnd
-			{
-				magazine = "M855A1_tracer_M16_30Rnd";
-				count = 50;
-			};
-			class _xx_M249_200Rnd_556x45_Stanag
-			{
-				magazine = "M249_200Rnd_556x45_Stanag";
-				count = 50;
-			};
-			class _xx_M249_200Rnd_556x45_Stanag_tracer
-			{
-				magazine = "M249_200Rnd_556x45_Stanag_tracer";
-				count = 50;
-			};
 			class _xx_30Rnd_mas_556x45_Stanag
 			{
 				magazine = "30Rnd_mas_556x45_Stanag";
