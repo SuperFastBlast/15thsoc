@@ -1,4 +1,4 @@
-// REVISION 14OCT14
+// REVISION 15OCT14
 
 // class CfgVehicles
 // {
@@ -312,6 +312,10 @@
 			class _xx_7Rnd_mas_12Gauge_Slug {
 				count = 100;
 				magazine = "7Rnd_mas_12Gauge_Slug";
+			};
+			class _xx_B_mas_12Gauge_Pellets {
+				count = 100;
+				magazine = "B_mas_12Gauge_Pellets";
 			};
 			class _xx_30Rnd_M27_556x45_Stanag {
 				count = 100;

@@ -143,9 +143,9 @@
 				count = 60;
 				magazine = "30Rnd_M4_556x45_T_Stanag";
 			};
-			class _xx_200Rnd_M249_556x45_Stanag_tracer {
+			class _xx_200Rnd_M249_556x45_T_Stanag {
 				count = 100;
-				magazine = "200Rnd_M249_556x45_Stanag_tracer";
+				magazine = "200Rnd_M249_556x45_T_Stanag";
 			};
 			class _xx_30Rnd_M27_556x45_T_Stanag {
 				count = 100;
