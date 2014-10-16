@@ -148,12 +148,25 @@ class CfgWeapons
 		class StandardSound
 		{
 			weaponSoundEffect="DefaultRifle";
-			begin1[]={"m32\sounds\m32_s1.wss",1.1220185,1,200};
-			soundBegin[]={"begin1",1};
-		reloadMagazineSound[]={"m32\sounds\m32_r.wss",1,1,10
-		};
-		drySound[]={"A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10};
+			begin1[]=
+			{
+			 "m32\sounds\m32_s1.wss",1.1220185,1,200
 			};
+			soundBegin[]=
+			{
+			 "begin1",1
+			};
+		   reloadMagazineSound[]=
+		   {
+		    "m32\sounds\m32_r.wss",1,1,10
+		   };
+		   drySound[]=
+		  {
+		   "A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10
+		  };
+		};
+	};
+};
 
 class CfgVehicles 
 {
@@ -190,6 +203,4 @@ class CfgVehicles
 			magentry(6Rnd_SmokeOrange_M32, 5);						
 		};
 	};		
-	};
-	};
-	};
+};
