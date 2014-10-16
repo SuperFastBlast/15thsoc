@@ -26,12 +26,30 @@ class CfgPatches
 
 #define itementry(item, num) class _xx_##item { name=#item; count = num; }
 
+class CfgAmmo
+{
+	class G_40mm_HE;
+	class M433_40mm_HEDP: G_40mm_HE
+  {
+        hit = 170;
+        indirectHit = 25;
+        indirectHitRange = 5;
+        caliber = 3;
+        class CamShakeHit
+        {
+            power = 30;
+            duration = "((round (30^0.25))*0.2 max 0.2)";
+            frequency = 20;
+            distance = 1;
+        };
+    };
 class CfgMagazines
 {
-	class M433_40mm_HEDP;
-	class 6Rnd_HE_M32: M433_40mm_HEDP
+	class CA_Magazine;
+	class 3Rnd_HE_Grenade_shell;
+	class 6Rnd_HE_M32: 3Rnd_HE_Grenade_shell
 	{
-		picture="\M32\Data\Icon\m_6x40mmhp_ca.paa";
+		picture = "\m32\Data\Icon\m_6x40mmhp_ca.paa";
 		displayName= "6 Rnd. M433";
 		ammo = "M433_40mm_HEDP";
 		count = 6;
