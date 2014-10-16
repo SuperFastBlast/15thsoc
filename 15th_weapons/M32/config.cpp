@@ -41,8 +41,9 @@ class CfgAmmo
             duration = "((round (30^0.25))*0.2 max 0.2)";
             frequency = 20;
             distance = 1;
-        };
+	};
     };
+};
 class CfgMagazines
 {
 	class CA_Magazine;
@@ -129,7 +130,6 @@ class CfgMagazines
 
 };
 	
-
 class CfgWeapons
 {
 	class Rifle_Base_F;
@@ -180,8 +180,7 @@ class CfgWeapons
 		   };
 		   drySound[]=
 		  {
-		   "A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10
-		  };
+		   "A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10};
 		};
 	};
 };
@@ -220,5 +219,5 @@ class CfgVehicles
 			magentry(6Rnd_SmokePurple_M32, 5);
 			magentry(6Rnd_SmokeOrange_M32, 5);						
 		};
-	};		
-};
+	};
+};		
