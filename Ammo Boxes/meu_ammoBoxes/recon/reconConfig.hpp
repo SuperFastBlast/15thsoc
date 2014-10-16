@@ -212,7 +212,7 @@
 			class _xx_AV_ESS_grn_clr {
 				count = 25;
 				name = "AV_ESS_grn_clr";
-			};		
+			};
 
 // ACCESSORIES
 			class _xx_ItemWatch {
@@ -323,7 +323,7 @@
 				count = 25;
 				name = "AGM_IR_Strobe_Item";
 			};
-			
+
 // RIGS AND CARRIERS
 			class _xx_V_mas_mar_PlateCarrier2_rgr {
 				count = 25;
@@ -337,7 +337,7 @@
 				count = 25;
 				name = "V_mas_mar_ChestrigB_rgr";
 			};
-			
+
 // SPECIALTY UNIFORMS AND GEAR
 			class _xx_V_RebreatherB {
 				count = 25;
@@ -373,26 +373,26 @@
 				count = 25;
 				name = "U_mas_mar_B_CombatUniform_des";
 			};
-			
+
 // MEDICAL
 		    class _xx_AGM_Bandage  {
-			     count = 300; 
+			     count = 300;
 				 name = "AGM_Bandage";
 			};
 		    class _xx_AGM_Epipen  {
-			     count = 100; 
+			     count = 100;
 				 name = "AGM_Epipen";
 			};
 		    class _xx_AGM_Morphine  {
-			     count = 100; 
+			     count = 100;
 				 name = "AGM_Morphine";
 			};
 		    class _xx_AGM_Bloodbag  {
-			     count = 100; 
+			     count = 100;
 				 name = "AGM_Bloodbag";
 			};
 		};
-	
+
 // AMMO
 		class TransportMagazines {
 			class _xx_T2AAF_45ACP {
@@ -435,7 +435,7 @@
 				count = 750;
 				magazine = "200Rnd_M249_556x45_Stanag";
 			};
-			class _xx_200Rnd_M249_556x45_Stanag_tracer {
+			class _xx_200Rnd_M249_556x45_T_Stanag {
 				count = 750;
 				magazine = "200Rnd_M249_556x45_Stanag_tracer";
 			};
@@ -571,7 +571,7 @@
 				count = 50;
 				magazine = "AGM_HandFlare_Yellow";
 			};
-			
+
 //EXPLOSIVES
 			class _xx_ATMine_Range_Mag {
 				count = 50;
@@ -606,13 +606,13 @@
 				magazine = "SatchelCharge_Remote_Mag";
 			};
 		};
-		
+
 // WEAPONS
 		class TransportWeapons {
 			class _xx_hgun_mas_acp_F {
 				count = 25;
 				weapon = "hgun_mas_acp_F";
-			};			
+			};
 			class _xx_hgun_mas_m9_F {
 				count = 25;
 				weapon = "hgun_mas_m9_F";
@@ -671,6 +671,6 @@
 			};
 		};
 	};
-	
-	
+
+
 // Dont need this};

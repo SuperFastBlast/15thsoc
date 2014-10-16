@@ -233,18 +233,18 @@
 				count = 10;
 				name = "U_mas_mar_B_IndUniform1_v";
 			};
-			
+
 // MEDICAL
 		    class _xx_AGM_Bandage  {
-			     count = 300; 
+			     count = 300;
 				 name = "AGM_Bandage";
 			};
 		    class _xx_AGM_Epipen  {
-			     count = 100; 
+			     count = 100;
 				 name = "AGM_Epipen";
 			};
 		};
-	
+
 // AMMO
 		class TransportMagazines {
 			class _xx_M882_9mm {
@@ -279,7 +279,7 @@
 				count = 100;
 				magazine = "200Rnd_M249_556x45_Stanag";
 			};
-			class _xx_200Rnd_M249_556x45_Stanag_tracer {
+			class _xx_200Rnd_M249_556x45_T_Stanag {
 				count = 100;
 				magazine = "200Rnd_M249_556x45_Stanag_tracer";
 			};
@@ -299,7 +299,7 @@
 				count = 100;
 				magazine = "30Rnd_M27_556x45_T_Stanag";
 			};
-			
+
 // THROWN + LAUNCHED
 			class _xx_SmokeShell {
 				count = 100;
@@ -389,14 +389,14 @@
 				count = 50;
 				magazine = "AGM_HandFlare_Yellow";
 			};
-			
+
 // EXPLOSIVES
 			class _xx_DemoCharge_Remote_Mag {
 				count = 50;
 				magazine = "DemoCharge_Remote_Mag";
 			};
 		};
-		
+
 // WEAPONS
 		class TransportWeapons {
 			class _xx_hgun_mas_m9_F {
@@ -453,6 +453,6 @@
 			};
 		};
 	};
-	
-	
+
+
 // Dont need this};
