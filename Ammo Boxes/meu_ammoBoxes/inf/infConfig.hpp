@@ -37,15 +37,15 @@
 			class _xx_optic_Hamr {
 				count = 15;
 				name = "optic_Hamr";
-			};
+			};			
 			class _xx_FHQ_optic_AIM {
 				count = 15;
 				name = "FHQ_optic_AIM";
-			};
+			};		
 			class _xx_FHQ_acc_ANPEQ15 {
 				count = 15;
 				name = "FHQ_acc_ANPEQ15";
-			};
+			};			
 			class _xx_FHQ_optic_HWS {
 				count = 15;
 				name = "FHQ_optic_HWS";
@@ -110,7 +110,7 @@
 			class _xx_AV_ESS_grn_clr {
 				count = 100;
 				name = "AV_ESS_grn_clr";
-			};
+			};				
 
 // HELMETS
 			class _xx_H_mas_mar_HelmetBind_v {
@@ -125,7 +125,7 @@
 				count = 50;
 				name = "H_mas_mar_helmetv_us";
 			};
-
+		
 // UNIFORMS
 			class _xx_U_mas_mar_B_IndUniform1_v {
 				count = 15;
@@ -148,11 +148,11 @@
 
 // MEDICAL
 		    class _xx_AGM_Bandage  {
-			     count = 300;
+			     count = 300; 
 				 name = "AGM_Bandage";
 			};
 		    class _xx_AGM_Epipen  {
-			     count = 100;
+			     count = 100; 
 				 name = "AGM_Epipen";
 			};
 
@@ -262,7 +262,7 @@
 				name = "AGM_IR_Strobe_Item";
 			};
 		};
-
+	
 // AMMO
 		class TransportMagazines {
 			class _xx_M882_9mm {
@@ -297,7 +297,7 @@
 				count = 100;
 				magazine = "200Rnd_M249_556x45_Stanag";
 			};
-			class _xx_200Rnd_M249_556x45_T_Stanag {
+			class _xx_200Rnd_M249_556x45_Stanag_tracer {
 				count = 100;
 				magazine = "200Rnd_M249_556x45_Stanag_tracer";
 			};
@@ -325,7 +325,7 @@
 				count = 100;
 				magazine = "30Rnd_M27_556x45_T_Stanag";
 			};
-
+			
 
 // THROWN
 			class _xx_SmokeShell {
@@ -363,7 +363,7 @@
 			class _xx_M433_40mm_HEDP_Shell {
 				count = 100;
 				magazine = "M433_40mm_HEDP_Shell";
-			};
+			};			
 			class _xx_1Rnd_Smoke_Grenade_shell {
 				count = 25;
 				magazine = "1Rnd_Smoke_Grenade_shell";
@@ -435,7 +435,7 @@
 				magazine = "ClaymoreDirectionalMine_Remote_Mag";
 			};
 		};
-
+		
 // WEAPONS
 		class TransportWeapons {
 			class _xx_hgun_mas_m9_F {
@@ -504,6 +504,6 @@
 			};
 		};
 	};
-
-
+	
+	
 // Dont need this};
