@@ -37,6 +37,9 @@ class CfgAmmo
 		timetolive = 100;
 		visiblefire = 28;
 		whistledist = 2;
+		AGM_Backblast_Angle = 60; // angle of the backblast area
+        AGM_Backblast_Range = 25; // maximum range of the backblast
+        AGM_Backblast_Damage = 1; // maximum damage of the backblast
 		class CamShakeFire
 		{
 			power = 10;
@@ -73,6 +76,9 @@ class CfgAmmo
 		timetolive = 100;
 		visiblefire = 28;
 		whistledist = 2;
+		AGM_Backblast_Angle = 60;   // angle of the backblast area
+        AGM_Backblast_Range = 0;   // maximum range of the backblast
+        AGM_Backblast_Damage = 0; // maximum damage of the backblast
 		class CamShakeFire
 		{
 			power = 10;
