@@ -132,6 +132,7 @@ class CfgMagazines
 	
 class CfgWeapons
 {
+	class weaponslotsinfo;
 	class Rifle_Base_F;
 	class EGLM;
 	class M32: Rifle_Base_F
@@ -156,7 +157,10 @@ class CfgWeapons
 		muzzleend = "konec granatometu";
 		muzzlepos = "usti granatometu";
 		reloadaction = "ReloadMagazine";
-		mass = 83;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 117;
+		};
        	muzzles[]=
 		{
 			"this"
