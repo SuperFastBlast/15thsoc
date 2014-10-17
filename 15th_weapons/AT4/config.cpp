@@ -169,10 +169,10 @@ class CfgMagazines
 };
 class CfgWeapons 
 {
-
 	class Launcher;
 	class Launcher_Base_F: Launcher{};
 	class Hamr2Collimator;
+	class weaponslotsinfo;
 	class meu_AT4: Launcher_Base_F
 	{
 		modelOptics = "-";
@@ -198,6 +198,10 @@ class CfgWeapons
 		maxRange = 500;
 		maxRangeProbab = 0.1;
 		canLock = LockNo;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+        	{
+            	mass = 148;
+        	};
 		weaponLockDelay = 3.0;
 		lockAcquire = 0;
 		magazineReloadTime = 0;
@@ -322,6 +326,10 @@ class CfgWeapons
 		maxRange = 500;
 		maxRangeProbab = 0.1;
 		canLock = LockNo;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+        	{
+            	mass = 173;
+        	};
 		weaponLockDelay = 3.0;
 		lockAcquire = 0;
 		magazineReloadTime = 0;
