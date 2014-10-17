@@ -1,5 +1,0 @@
-///////<HEADER>///////
-prefix=caf_m72a6
-Pbo Type is: Arma Addon
-Sha: '3160064484B02070AF85241692C01DAB5501D241'
-//////</HEADER>//////
