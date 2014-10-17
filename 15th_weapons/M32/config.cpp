@@ -162,7 +162,7 @@ class CfgWeapons
 			"this"
 		};
 		changeFiremodeSound[] = {"A3\sounds_f\weapons\closure\firemode_changer_2",0.25118864,1,10};
-		sounds[] = {"StandardSound", "reloadMagazineSound", "drySound"};
+		sounds[] = {"StandardSound"};
 		class StandardSound
 		{
 			weaponSoundEffect="DefaultRifle";
