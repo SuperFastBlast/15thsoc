@@ -1,0 +1,48 @@
+Muzzlevelocity v1.01
+*******************
+
+What it does:
+-------------
+Brings you realistic muzzle velocities to all rifles. Barrel length does matter now.
+
+Installation:
+-------------
+A:
+- Unpack the archive to your Arma2-folder
+- Add "-mod=@FNC_muzzlevelocity" to your arma2-shortcut
+
+or 
+
+B:
+If you are familiar with mod installation just put the files into folders of your choice.
+
+Usage:
+------
+Fire a weapon, observe the result :)
+In the included testmission you get written feedback on the weapon, firemode and muzzle velocity everytime you fire a weapon.
+
+By default the mod handles only bullets fired by the player. If you want it to also handle all local AI, ie. player and AI in his group,
+edit the file "Arma2\userconfig\fnc_muzzlevelocity\fnc_muzzlevelocity_config.hpp". Specific instructions are in the file itself.
+
+Requirements:
+-------------
+Community Base Addons, CBA
+
+Multiplayer:
+-----------
+This addon is client-side only and fully MP-compatible in this respect.
+It should work on a server too, but this is untested.
+
+Mod conflicts:
+--------------
+Users of 31ST MEU Scopes&Ballistics should take a look at "Arma2\userconfig\fnc_muzzlevelocity\fnc_muzzlevelocity_config.hpp"
+and uncomment one line there according the instructions in that file.
+
+Bugs:
+-----
+No known bugs
+
+How do I get my non-stock weapons to work with this?
+--------------------------------------------------------
+Add their values to "Arma2\userconfig\fnc_muzzlevelocity\fnc_muzzlevelocity_weapons.hpp" following the example in the mod's config.cpp.
+PBO source is included.
