@@ -16,7 +16,7 @@ class CfgPatches
 			"IAR30mk318_mag",
 			"IARmk262_mag",
 			"IARrt_mag",
-"30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag""30Rnd_M27_556x45_T_Stanag","30Rnd_M27_556x45_Stanag"
+"30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"
 		};
 	author[]={"EricJ"};
 	};
@@ -69,7 +69,7 @@ class CfgWeapons
 		midrangeprobab=0.69999999;
 		minrange=2;
 		minrangeprobab=0.30000001;
-		magazines[] = {"30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag","30Rnd_M27_556x45_T_Stanag","30Rnd_M27_556x45_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
+		magazines[] = {"30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 		model="\IARal\ej_IAR30.p3d";
 		modes[]=
 		{

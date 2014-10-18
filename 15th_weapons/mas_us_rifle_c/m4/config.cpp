@@ -71,7 +71,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
@@ -320,7 +320,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416g_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
@@ -590,7 +590,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416m_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
@@ -8044,7 +8044,7 @@ class CfgWeapons
 		displayName = "M249 Para";
 		scope = 2;
 		model = "\mas_us_rifle\mas_m249";
-		magazines[] = {"200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag","200Rnd_M249_556x45_Stanag","200Rnd_M249_556x45_T_Stanag"};
+		magazines[] = {"200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag","200Rnd_M249_556x45_Stanag","200Rnd_M249_556x45_T_Stanag"};
 		descriptionshort = "Light Machinegun<br />Caliber: 5.56x45 mm";
 		picture = "\mas_us_rifle\ui\gear_m249_x_ca.paa";
 		class Library
@@ -8439,7 +8439,7 @@ class CfgWeapons
 		scope = 2;
 		model = "\mas_us_rifle\mas_m249a";
 		handanim[] = {"OFP2_ManSkeleton","\mas_us_rifle\Anim\Handanim_m249a.rtm"};
-		magazines[] = {"200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M4_556x45_Stanag","30Rnd_M4_556x45_T_Stanag","30Rnd_M16_556x45_Stanag","30Rnd_M16_556x45_T_Stanag","200Rnd_M249_556x45_Stanag","200Rnd_M249_556x45_T_Stanag"};
+		magazines[] = {"200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag","200Rnd_M249_556x45_Stanag","200Rnd_M249_556x45_T_Stanag"};
 		descriptionshort = "Light Machinegun<br />Caliber: 5.56x45 mm";
 		picture = "\mas_us_rifle\ui\gear_m249a_x_ca.paa";
 	};
