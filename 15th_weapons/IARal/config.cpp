@@ -8,15 +8,12 @@ class CfgPatches
 		weapons[]=
 		{
 			"ej_IAR30",
-			"ej_IAR30des"
 		};
 		magazines[]=
 		{
 			"IARmk318_mag",
-			"IAR30mk318_mag",
-			"IARmk262_mag",
-			"IARrt_mag",
-"30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"
+            "30Rnd_M855A1_556x45_Stanag",
+            "30Rnd_M855A1_556x45_T_Stanag"
 		};
 	author[]={"EricJ"};
 	};
@@ -35,7 +32,6 @@ class CfgWeapons
     {
         class WeaponSlotsInfo;
     };
-	class UGL_F; 
 	class ej_IARal_base: Rifle_Base_F
 	{
 		changeFiremodeSound[]=
@@ -238,44 +234,6 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 			aiRateOfFire=1e-006;
 		};
-		class EGLM_Launcher: UGL_F /// Some grenade launcher to have some more fun
-        {
-          displayName = "EGLM";
-          descriptionShort = "EGLM";
-          useModelOptics = false;
-          useExternalOptic = false; /// Doesn't use optics from the attachment, has it's own
-          magazines[] = {
-          "1Rnd_HE_Grenade_shell",
-          "UGL_FlareWhite_F",
-          "UGL_FlareGreen_F",
-          "UGL_FlareRed_F",
-          "UGL_FlareYellow_F",
-          "UGL_FlareCIR_F",
-          "1Rnd_Smoke_Grenade_shell",
-          "1Rnd_SmokeRed_Grenade_shell",
-          "1Rnd_SmokeGreen_Grenade_shell",
-          "1Rnd_SmokeYellow_Grenade_shell",
-          "1Rnd_SmokePurple_Grenade_shell",
-          "1Rnd_SmokeBlue_Grenade_shell",
-          "1Rnd_SmokeOrange_Grenade_shell",
-          "3Rnd_HE_Grenade_shell",
-          "3Rnd_UGL_FlareWhite_F",
-          "3Rnd_UGL_FlareGreen_F",
-          "3Rnd_UGL_FlareRed_F",
-          "3Rnd_UGL_FlareYellow_F",
-          "3Rnd_UGL_FlareCIR_F",
-          "3Rnd_Smoke_Grenade_shell",
-          "3Rnd_SmokeRed_Grenade_shell",
-          "3Rnd_SmokeGreen_Grenade_shell",
-          "3Rnd_SmokeYellow_Grenade_shell",
-          "3Rnd_SmokePurple_Grenade_shell",
-          "3Rnd_SmokeBlue_Grenade_shell",
-          "3Rnd_SmokeOrange_Grenade_shell"};
-          cameraDir = "OP_look";
-          discreteDistance[] = {100, 200, 300, 400};
-          discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4"}; /// the angle of gun changes with zeroing
-          discreteDistanceInitIndex = 1; /// 200 is the default zero
-        };
 		aiDispersionCoefY=6.0; /// AI should have some degree of greater dispersion for initial shoots
 		aiDispersionCoefX=4.0; /// AI should have some degree of greater dispersion for initial shoots
 		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10}; /// custom made sounds
@@ -284,20 +242,6 @@ class CfgWeapons
 	{
 		scope=2;
 		displayname="M27 IAR";
-		reloadAction="GestureReloadSMG_02";
-		dexterity=1.8;
-		handanim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\IARal\data\Anim\SCAR.rtm"
-		};
-	};
-	class ej_IAR30des: ej_IARal_base
-	{
-		scope=2;
-		model="\IARal\ej_IAR30des.p3d";
-		picture="\IARal\data\UI\iar30desinv_x_ca.paa";
-		displayname="M27 IAR Desert";
 		reloadAction="GestureReloadSMG_02";
 		dexterity=1.8;
 		handanim[]=
