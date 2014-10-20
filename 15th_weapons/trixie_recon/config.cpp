@@ -18,8 +18,6 @@ class asdg_SlotInfo;
 class asdg_FrontSideRail;
 class asdg_OpticRail;
 class asdg_OpticRail1913: asdg_OpticRail {
-	class compatibleItems {
-	};
 };
 
 class CfgVehicles
@@ -217,7 +215,7 @@ class CfgWeapons
 	{
 		scope = 2;
 		author = "Trixie";
-		displayname = "Mk12 SPR";
+		displayname = "Mk12 Mod 0 SPR";
 		descriptionshort = "Mk12 SPR <br/>Caliber: 5.56x45mm";
         class Library 
         {
@@ -239,7 +237,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 			allowedslots[] = {901};
-			mass = 153;
+			mass = 100;
 			class MuzzleSlot
 			{
 				access = 1;
@@ -346,7 +344,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 			allowedslots[] = {901};
-			mass = 165;
+			mass = 175;
 			class MuzzleSlot
 			{
 				access = 1;
@@ -450,7 +448,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 			allowedslots[] = {901};
-			mass = 310;
+			mass = 325;
 			class MuzzleSlot
 			{
 				access = 1;
@@ -551,11 +549,19 @@ class CfgAmmo
         audibleFire = 5;
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };    
-	class Trixie_762_Ball: B_408_Ball
-	{
-		hit = 18;
-		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
-	};
+	class M118LR_Ball: B_762x51_Ball
+   	{
+        hit=20;
+        typicalSpeed=783;
+        caliber=1.05;
+        deflecting=20;
+        deflectingChance = 100;
+        deflectingRandomness = 0.5;
+        visibleFire=3;
+        visibleFireTime=3;
+        audibleFire=7;
+        audibleFireTime=7;
+    	};
 	class Trixie_127_Ball: B_127x108_Ball
 	{
 		hit = 50;
@@ -595,45 +601,34 @@ class CfgMagazines {
 	class 20Rnd_762x51_Mag;
 	class 30Rnd_556x45_Stanag;
     
-    class Trixie_30x556_Mk262_Mag: 30Rnd_556x45_Stanag {
+    class Trixie_30x556_Mk262_Mag: 30Rnd_556x45_Stanag
+	{
 		scope = 2;
-		author = "Trixie";
-		count = 30;
-		descriptionshort = "Caliber: 5.56x45mm<br />Rounds: 30<br />Used in: Mk12 SPR";
-		displayname = "Mk 262 SPR Ammo";
 		ammo = "Trixie_556_Mk262_Ball";
-		lastroundstracer = 0;
-		tracersevery = 0;
+		count = 30;
+		mass = 11.8;
+		lastroundstracer = 3;
+        	descriptionshort = "Mk 262 77gr<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
+        	displayname = "Mk 262 77gr";
+		picture = "\Trixie_Recon\UI\m_30stanag_CA.paa";
 	};
-	class Trixie_20x762_Mag: 7Rnd_408_Mag {
-		scope = 2;
-		author = "Trixie";
-		count = 20;
-		descriptionshort = "Caliber: 7.62x51mm<br />Rounds: 20<br />Used in: M110 SASS";
-		displayname = "M118LR Ball";
-		ammo = "Trixie_762_Ball";
-		picture = "\Trixie_recon\UI\20x762_mag.paa";
-		lastroundstracer = 0;
-		tracersevery = 0;
-	};
-	class Trixie_10x762_Mag: 7Rnd_408_Mag {
-		scope = 2;
-		author = "Trixie";
-		count = 10;
-		descriptionshort = "Caliber: 7.62x51mm<br />Rounds: 10<br />Used in: CZ750";
-		displayname = "10Rnd 7.62x51mm";
-		ammo = "Trixie_762_Ball";
-		picture = "\Trixie_recon\UI\5x762_mag.paa";
-		lastroundstracer = 0;
-		tracersevery = 0;
-	};
+	class Trixie_20x762_Mag: 30Rnd_556x45_Stanag
+    	{
+        ammo = "M118LR_Ball";
+	    scope = 2;
+        count = 20;
+        descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 20<br />Used in: M110";
+        displayname = "M118LR";
+        picture = "\Trixie_recon\UI\m_20hk417_ca.paa";
+	    mass = 12;
+    	};
 	class Trixie_5x762_Mag: 7Rnd_408_Mag {
 		scope = 2;
 		author = "Trixie";
 		count = 5;
 		descriptionshort = "Caliber: 7.62x51mm<br />Rounds: 5<br />Used in: M40A3";
 		displayname = "5Rnd 7.62x51mm";
-		ammo = "Trixie_762_Ball";
+		ammo = "M118LR_Ball";
 		picture = "\Trixie_recon\UI\5x762_mag.paa";
 		lastroundstracer = 0;
 		tracersevery = 0;
