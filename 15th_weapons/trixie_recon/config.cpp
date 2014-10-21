@@ -222,7 +222,7 @@ class CfgWeapons
         {
 		    libtextdesc = "This weapon, used by Special Forces snipers of both the US Army and US Navy, is a heavily modified precision version of the M4 Carbine. SPR initially stood for Special Purpose Receiver (an M4 SOPMOD accessory), but since the weapon became a complete system, this has been changed to Special Purpose Rifle.<br/>This type was classified by the Navy as the Mk 12 and the Army now also uses this designation.";
 	    };
-        magazines[] = {"Trixie_30x556_Mk262_Mag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red"};
+        magazines[] = {"Trixie_30x556_Mk262_Mag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
         picture = "\Trixie_Recon\UI\MK12.paa";
         model = "Trixie_Recon\trixie_MK12.p3d"; 
         handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_02\data\Anim\SMG_02.rtm"};
@@ -544,10 +544,10 @@ class CfgAmmo
 
     class Trixie_556_Mk262_Ball: B_556x45_Ball
     {
-	    hit = 12.5702505;
+	    hit = 15.0454;
         typicalSpeed = 868.68;
         airFriction = -0.0010867938;
-        caliber = 0.615;
+        caliber = 0.855;
         deflecting = 16;
         visibleFire = 2.5;
         audibleFire = 5;
@@ -615,8 +615,6 @@ class CfgMagazines {
         	descriptionshort = "Mk 262 77gr<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
         	displayname = "Mk 262 77gr";
 		picture = "\Trixie_Recon\UI\m_30stanag_CA.paa";
-		lastroundstracer = 5;
-		tracersevery = 5;
 	};
 	class Trixie_20x762_Mag: 30Rnd_556x45_Stanag
     	{

@@ -7,7 +7,7 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"ej_IAR30",
+			"ej_IAR30"
 		};
 		magazines[]=
 		{
