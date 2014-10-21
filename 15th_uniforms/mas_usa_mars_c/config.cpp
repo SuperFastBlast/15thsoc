@@ -145,7 +145,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_F";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_wood_tshirt: U_B_CombatUniform_mcam_tshirt
@@ -158,7 +158,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_02_f";
 			containerClass = "Supply60";
-			mass = 20;
+			mass = 35;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_wood_vest: U_B_CombatUniform_mcam_vest
@@ -171,7 +171,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_03_f";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_wood_vest1: U_B_CombatUniform_mcam_vest
@@ -184,7 +184,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_04_f";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_wood_vest2: U_B_CombatUniform_mcam_vest
@@ -197,7 +197,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_05_f";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_wood_vest3: U_B_CombatUniform_mcam_vest
@@ -210,7 +210,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_06_f";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_wood_vest4: U_B_CombatUniform_mcam_vest
@@ -223,7 +223,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_07_f";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_veg: U_B_CombatUniform_mcam
@@ -236,7 +236,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_F_v";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_veg_tshirt: U_B_CombatUniform_mcam_tshirt
@@ -249,7 +249,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_02_f_v";
 			containerClass = "Supply60";
-			mass = 20;
+			mass = 35;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_veg_vest: U_B_CombatUniform_mcam_vest
@@ -262,7 +262,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_03_f_v";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_des: U_B_CombatUniform_mcam
@@ -275,7 +275,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_F_d";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_des_tshirt: U_B_CombatUniform_mcam_tshirt
@@ -288,7 +288,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_02_f_d";
 			containerClass = "Supply60";
-			mass = 20;
+			mass = 35;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_des_vest: U_B_CombatUniform_mcam_vest
@@ -301,7 +301,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_03_f_d";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_sage: U_B_CombatUniform_mcam
@@ -314,7 +314,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_F_g";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_sage_tshirt: U_B_CombatUniform_mcam_tshirt
@@ -327,7 +327,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_02_f_g";
 			containerClass = "Supply60";
-			mass = 20;
+			mass = 35;
 		};
 	};
 	class U_mas_mar_B_CombatUniform_sage_vest: U_B_CombatUniform_mcam_vest
@@ -340,7 +340,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_03_f_g";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_IndUniform1_o: U_B_CombatUniform_mcam
@@ -353,7 +353,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_ind1_f";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_IndUniform2_o: U_mas_mar_B_IndUniform1_o
@@ -366,7 +366,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_ind2_f";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_IndUniform1_v: U_mas_mar_B_IndUniform1_o
@@ -379,7 +379,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_ind1_f_v";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_IndUniform2_v: U_mas_mar_B_IndUniform1_v
@@ -392,7 +392,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_ind2_f_v";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_IndUniform1_d: U_mas_mar_B_IndUniform1_o
@@ -405,7 +405,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_ind1_f_d";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_IndUniform2_d: U_mas_mar_B_IndUniform1_d
@@ -418,7 +418,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_ind2_f_d";
 			containerClass = "Supply60";
-			mass = 40;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_MAR: U_B_HeliPilotCoveralls
@@ -431,7 +431,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_02_f_cov";
 			containerClass = "Supply60";
-			mass = 60;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_pilot: U_B_HeliPilotCoveralls
@@ -444,7 +444,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Helipilot_F";
 			containerClass = "Supply60";
-			mass = 60;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_wint: U_B_HeliPilotCoveralls
@@ -457,7 +457,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_Soldier_F_w";
 			containerClass = "Supply60";
-			mass = 60;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_Wetsuit: U_B_Wetsuit
@@ -471,7 +471,7 @@ class cfgWeapons
 			uniformClass = "B_mas_mar_diver_F";
 			containerClass = "Supply160";
 			uniformType = "Neopren";
-			mass = 60;
+			mass = 75.5;
 		};
 	};
 	class U_mas_mar_B_GhillieSuit: U_B_GhillieSuit
@@ -484,7 +484,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_soldier_Mkg_F";
 			containerClass = "Supply80";
-			mass = 80;
+			mass = 100;
 		};
 	};
 	class U_mas_mar_B_GhillieSuit_v: U_B_GhillieSuit
@@ -497,7 +497,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_soldier_Mkg_F_v";
 			containerClass = "Supply80";
-			mass = 80;
+			mass = 100;
 		};
 	};
 	class U_mas_mar_B_GhillieSuit_d: U_B_GhillieSuit
@@ -510,7 +510,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_soldier_Mkg_F_d";
 			containerClass = "Supply80";
-			mass = 80;
+			mass = 100;
 		};
 	};
 	class U_mas_mar_B_GhillieSuit_w: U_B_GhillieSuit
@@ -523,7 +523,7 @@ class cfgWeapons
 			uniformModel = "-";
 			uniformClass = "B_mas_mar_soldier_Mkg_F_w";
 			containerClass = "Supply80";
-			mass = 80;
+			mass = 100;
 		};
 	};
 	class V_mas_mar_Rangemaster_belt: V_Rangemaster_belt
@@ -553,7 +553,7 @@ class cfgWeapons
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier.p3d";
 			containerClass = "Supply140";
-			mass = 20;
+			mass = 30;
 			armor = 0;
 			passThrough = 1;
 			hiddenSelections[] = {"camo"};
@@ -570,7 +570,7 @@ class cfgWeapons
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
 			containerClass = "Supply200";
-			mass = 40;
+			mass = 270;
 			armor = 50;
 			passThrough = 0.1;
 			hiddenSelections[] = {"camo"};
@@ -587,7 +587,7 @@ class cfgWeapons
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01.p3d";
 			containerClass = "Supply200";
-			mass = 60;
+			mass = 300;
 			armor = 50;
 			passThrough = 0.1;
 			hiddenSelections[] = {"camo"};
@@ -604,7 +604,7 @@ class cfgWeapons
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01.p3d";
 			containerClass = "Supply200";
-			mass = 60;
+			mass = 300;
 			armor = 60;
 			passThrough = 0.1;
 			hiddenSelections[] = {"camo"};
@@ -620,7 +620,7 @@ class cfgWeapons
 		{
 			uniformModel = "\A3\Characters_F\Common\equip_chestrig.p3d";
 			containerClass = "Supply200";
-			mass = 20;
+			mass = 100;
 			armor = 10;
 			passThrough = 1;
 			hiddenSelections[] = {"Camo1","Camo2"};
