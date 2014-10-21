@@ -131,7 +131,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 			allowedslots[] = {901};
-			mass = 153;
+			mass = 154;
 			class MuzzleSlot
 			{
 				access = 1;
@@ -344,7 +344,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 			allowedslots[] = {901};
-			mass = 175;
+			mass = 170;
 			class MuzzleSlot
 			{
 				access = 1;
@@ -611,6 +611,8 @@ class CfgMagazines {
         	descriptionshort = "Mk 262 77gr<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
         	displayname = "Mk 262 77gr";
 		picture = "\Trixie_Recon\UI\m_30stanag_CA.paa";
+		lastroundstracer = 5;
+		tracersevery = 5;
 	};
 	class Trixie_20x762_Mag: 30Rnd_556x45_Stanag
     	{
