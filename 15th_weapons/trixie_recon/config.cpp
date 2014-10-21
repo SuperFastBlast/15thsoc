@@ -142,6 +142,7 @@ class CfgWeapons
 			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
 
 		class Single: Mode_SemiAuto
@@ -248,6 +249,7 @@ class CfgWeapons
 			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
 
 		class Single: Mode_SemiAuto
@@ -355,6 +357,7 @@ class CfgWeapons
 			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
 
 		class Single: Mode_SemiAuto
@@ -459,6 +462,7 @@ class CfgWeapons
 			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
 
 		class Single: Mode_SemiAuto
