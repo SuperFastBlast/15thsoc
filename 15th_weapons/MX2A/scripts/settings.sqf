@@ -17,14 +17,14 @@ _ctrlDigitE2 = _dlgVector displayCtrl 22;
 _ctrlDigitE3 = _dlgVector displayCtrl 23;
 _ctrlDigitE4 = _dlgVector displayCtrl 24;
 
-_ctrlDigit6 ctrlSetText "\AGM_Vector\rsc\dU.paa";
-_ctrlDigit7 ctrlSetText "\AGM_Vector\rsc\dn.paa";
-_ctrlDigit8 ctrlSetText "\AGM_Vector\rsc\di.paa";
-_ctrlDigit9 ctrlSetText "\AGM_Vector\rsc\dt.paa";
-_ctrlDigit0 ctrlSetText "\AGM_Vector\rsc\d5.paa";
-_ctrlDigit1 ctrlSetText "\AGM_Vector\rsc\dE.paa";
-_ctrlDigit2 ctrlSetText "\AGM_Vector\rsc\dt.paa";
-_ctrlDigit3 ctrlSetText "\AGM_Vector\rsc\dt.paa";
+_ctrlDigit6 ctrlSetText "\MX2A\rsc\dU.paa";
+_ctrlDigit7 ctrlSetText "\MX2A\rsc\dn.paa";
+_ctrlDigit8 ctrlSetText "\MX2A\rsc\di.paa";
+_ctrlDigit9 ctrlSetText "\MX2A\rsc\dt.paa";
+_ctrlDigit0 ctrlSetText "\MX2A\rsc\d5.paa";
+_ctrlDigit1 ctrlSetText "\MX2A\rsc\dE.paa";
+_ctrlDigit2 ctrlSetText "\MX2A\rsc\dt.paa";
+_ctrlDigit3 ctrlSetText "\MX2A\rsc\dt.paa";
 
 sleep 2;
 
@@ -43,26 +43,26 @@ _isMil = AGM_vectorSettings select 2;
 _isFeet = AGM_vectorSettings select 3;
 
 if (_isMil) then {
-	_ctrlDigit6 ctrlSetText "\AGM_Vector\rsc\d6.paa";
-	_ctrlDigit7 ctrlSetText "\AGM_Vector\rsc\d4.paa";
-	_ctrlDigit8 ctrlSetText "\AGM_Vector\rsc\d0.paa";
-	_ctrlDigit9 ctrlSetText "\AGM_Vector\rsc\d0.paa";
+	_ctrlDigit6 ctrlSetText "\MX2A\rsc\d6.paa";
+	_ctrlDigit7 ctrlSetText "\MX2A\rsc\d4.paa";
+	_ctrlDigit8 ctrlSetText "\MX2A\rsc\d0.paa";
+	_ctrlDigit9 ctrlSetText "\MX2A\rsc\d0.paa";
 } else {
-	_ctrlDigit6 ctrlSetText "\AGM_Vector\rsc\d3.paa";
-	_ctrlDigit7 ctrlSetText "\AGM_Vector\rsc\d6.paa";
-	_ctrlDigit8 ctrlSetText "\AGM_Vector\rsc\d0.paa";
-	_ctrlDigit9 ctrlSetText "\AGM_Vector\rsc\do.paa";
+	_ctrlDigit6 ctrlSetText "\MX2A\rsc\d3.paa";
+	_ctrlDigit7 ctrlSetText "\MX2A\rsc\d6.paa";
+	_ctrlDigit8 ctrlSetText "\MX2A\rsc\d0.paa";
+	_ctrlDigit9 ctrlSetText "\MX2A\rsc\do.paa";
 };
 if (_isFeet) then {
-	_ctrlDigit0 ctrlSetText "\AGM_Vector\rsc\dF.paa";
-	_ctrlDigit1 ctrlSetText "\AGM_Vector\rsc\dE.paa";
-	_ctrlDigit2 ctrlSetText "\AGM_Vector\rsc\dE.paa";
-	_ctrlDigit3 ctrlSetText "\AGM_Vector\rsc\dt.paa";
+	_ctrlDigit0 ctrlSetText "\MX2A\rsc\dF.paa";
+	_ctrlDigit1 ctrlSetText "\MX2A\rsc\dE.paa";
+	_ctrlDigit2 ctrlSetText "\MX2A\rsc\dE.paa";
+	_ctrlDigit3 ctrlSetText "\MX2A\rsc\dt.paa";
 } else {
-	_ctrlDigit0 ctrlSetText "\AGM_Vector\rsc\d5.paa";
-	_ctrlDigit1 ctrlSetText "\AGM_Vector\rsc\d1.paa";
-	_ctrlDigit2 ctrlSetText "\AGM_Vector\rsc\d-.paa";
-	_ctrlDigit3 ctrlSetText "\AGM_Vector\rsc\dU.paa";
+	_ctrlDigit0 ctrlSetText "\MX2A\rsc\d5.paa";
+	_ctrlDigit1 ctrlSetText "\MX2A\rsc\d1.paa";
+	_ctrlDigit2 ctrlSetText "\MX2A\rsc\d-.paa";
+	_ctrlDigit3 ctrlSetText "\MX2A\rsc\dU.paa";
 };
 
 waitUntil {
@@ -90,26 +90,26 @@ waitUntil {
 			};
 		};
 		if (_isMil) then {
-			_ctrlDigit6 ctrlSetText "\AGM_Vector\rsc\d6.paa";
-			_ctrlDigit7 ctrlSetText "\AGM_Vector\rsc\d4.paa";
-			_ctrlDigit8 ctrlSetText "\AGM_Vector\rsc\d0.paa";
-			_ctrlDigit9 ctrlSetText "\AGM_Vector\rsc\d0.paa";
+			_ctrlDigit6 ctrlSetText "\MX2A\rsc\d6.paa";
+			_ctrlDigit7 ctrlSetText "\MX2A\rsc\d4.paa";
+			_ctrlDigit8 ctrlSetText "\MX2A\rsc\d0.paa";
+			_ctrlDigit9 ctrlSetText "\MX2A\rsc\d0.paa";
 		} else {
-			_ctrlDigit6 ctrlSetText "\AGM_Vector\rsc\d3.paa";
-			_ctrlDigit7 ctrlSetText "\AGM_Vector\rsc\d6.paa";
-			_ctrlDigit8 ctrlSetText "\AGM_Vector\rsc\d0.paa";
-			_ctrlDigit9 ctrlSetText "\AGM_Vector\rsc\do.paa";
+			_ctrlDigit6 ctrlSetText "\MX2A\rsc\d3.paa";
+			_ctrlDigit7 ctrlSetText "\MX2A\rsc\d6.paa";
+			_ctrlDigit8 ctrlSetText "\MX2A\rsc\d0.paa";
+			_ctrlDigit9 ctrlSetText "\MX2A\rsc\do.paa";
 		};
 		if (_isFeet) then {
-			_ctrlDigit0 ctrlSetText "\AGM_Vector\rsc\dF.paa";
-			_ctrlDigit1 ctrlSetText "\AGM_Vector\rsc\dE.paa";
-			_ctrlDigit2 ctrlSetText "\AGM_Vector\rsc\dE.paa";
-			_ctrlDigit3 ctrlSetText "\AGM_Vector\rsc\dt.paa";
+			_ctrlDigit0 ctrlSetText "\MX2A\rsc\dF.paa";
+			_ctrlDigit1 ctrlSetText "\MX2A\rsc\dE.paa";
+			_ctrlDigit2 ctrlSetText "\MX2A\rsc\dE.paa";
+			_ctrlDigit3 ctrlSetText "\MX2A\rsc\dt.paa";
 		} else {
-			_ctrlDigit0 ctrlSetText "\AGM_Vector\rsc\d5.paa";
-			_ctrlDigit1 ctrlSetText "\AGM_Vector\rsc\d1.paa";
-			_ctrlDigit2 ctrlSetText "\AGM_Vector\rsc\d-.paa";
-			_ctrlDigit3 ctrlSetText "\AGM_Vector\rsc\dU.paa";
+			_ctrlDigit0 ctrlSetText "\MX2A\rsc\d5.paa";
+			_ctrlDigit1 ctrlSetText "\MX2A\rsc\d1.paa";
+			_ctrlDigit2 ctrlSetText "\MX2A\rsc\d-.paa";
+			_ctrlDigit3 ctrlSetText "\MX2A\rsc\dU.paa";
 		};
 	};
 	AGM_vectorKey select 0
@@ -133,10 +133,10 @@ waitUntil {
 };
 
 if (_count >= 5) then {
-	_ctrlDigitE1 ctrlSetText "\AGM_Vector\rsc\d5.paa";
-	_ctrlDigitE2 ctrlSetText "\AGM_Vector\rsc\dt.paa";
-	_ctrlDigitE3 ctrlSetText "\AGM_Vector\rsc\dq.paa";
-	_ctrlDigitE4 ctrlSetText "\AGM_Vector\rsc\dr.paa";
+	_ctrlDigitE1 ctrlSetText "\MX2A\rsc\d5.paa";
+	_ctrlDigitE2 ctrlSetText "\MX2A\rsc\dt.paa";
+	_ctrlDigitE3 ctrlSetText "\MX2A\rsc\dq.paa";
+	_ctrlDigitE4 ctrlSetText "\MX2A\rsc\dr.paa";
 
 	AGM_vectorSettings set [2, _isMil];
 	AGM_vectorSettings set [3, _isFeet];
@@ -159,13 +159,13 @@ if (_count >= 5) then {
 	];
 } else {
 	_ctrlDigit6 ctrlSetText "";
-	_ctrlDigit7 ctrlSetText "\AGM_Vector\rsc\d0.paa";
-	_ctrlDigit8 ctrlSetText "\AGM_Vector\rsc\d1.paa";
-	_ctrlDigit9 ctrlSetText "\AGM_Vector\rsc\dd.paa";
-	_ctrlDigit0 ctrlSetText "\AGM_Vector\rsc\dU.paa";
-	_ctrlDigit1 ctrlSetText "\AGM_Vector\rsc\dn.paa";
-	_ctrlDigit2 ctrlSetText "\AGM_Vector\rsc\di.paa";
-	_ctrlDigit3 ctrlSetText "\AGM_Vector\rsc\dt.paa";
+	_ctrlDigit7 ctrlSetText "\MX2A\rsc\d0.paa";
+	_ctrlDigit8 ctrlSetText "\MX2A\rsc\d1.paa";
+	_ctrlDigit9 ctrlSetText "\MX2A\rsc\dd.paa";
+	_ctrlDigit0 ctrlSetText "\MX2A\rsc\dU.paa";
+	_ctrlDigit1 ctrlSetText "\MX2A\rsc\dn.paa";
+	_ctrlDigit2 ctrlSetText "\MX2A\rsc\di.paa";
+	_ctrlDigit3 ctrlSetText "\MX2A\rsc\dt.paa";
 
 	sleep 2;
 

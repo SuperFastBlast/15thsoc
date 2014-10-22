@@ -15,10 +15,10 @@ _number = abs _number;
 if (_number >= 10000) exitWith {
 	[
 		"",
-		"\AGM_Vector\rsc\d-.paa",
-		"\AGM_Vector\rsc\d-.paa",
-		"\AGM_Vector\rsc\d-.paa",
-		"\AGM_Vector\rsc\d-.paa"
+		"\MX2A\rsc\d-.paa",
+		"\MX2A\rsc\d-.paa",
+		"\MX2A\rsc\d-.paa",
+		"\MX2A\rsc\d-.paa"
 	]
 };
 
@@ -34,61 +34,61 @@ switch (_coordinate) do {
 			if (_digit1 == 0) then {
 				if (_digit2 == 0) then {
 					if (_digit3 == 0) then {
-						_digit0 = "\AGM_Vector\rsc\dd.paa";
+						_digit0 = "\MX2A\rsc\dd.paa";
 						_digit1 = "";
-						_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit2 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit3 = "";
 						_digit4 = "";
 					} else {
-						_digit0 = "\AGM_Vector\rsc\dd.paa";
+						_digit0 = "\MX2A\rsc\dd.paa";
 						_digit1 = "";
-						_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-						_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit2 = format["\MX2A\rsc\d%1.paa", _digit3];
+						_digit3 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit4 = "";
 					};
 				} else {
-					_digit0 = "\AGM_Vector\rsc\dd.paa";
+					_digit0 = "\MX2A\rsc\dd.paa";
 					_digit1 = "";
-					_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit2];
-					_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-					_digit4 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+					_digit2 = format["\MX2A\rsc\d%1.paa", _digit2];
+					_digit3 = format["\MX2A\rsc\d%1.paa", _digit3];
+					_digit4 = format["\MX2A\rsc\d%1.paa", _digit4];
 				};
 			} else {
 				_digit0 = "";
-				_digit1 = "\AGM_Vector\rsc\d-.paa";
-				_digit2 = "\AGM_Vector\rsc\d-.paa";
-				_digit3 = "\AGM_Vector\rsc\d-.paa";
-				_digit4 = "\AGM_Vector\rsc\d-.paa";
+				_digit1 = "\MX2A\rsc\d-.paa";
+				_digit2 = "\MX2A\rsc\d-.paa";
+				_digit3 = "\MX2A\rsc\d-.paa";
+				_digit4 = "\MX2A\rsc\d-.paa";
 			};
 		} else {
 			if (_digit1 == 0) then {
 				if (_digit2 == 0) then {
 					if (_digit3 == 0) then {
-						_digit0 = "\AGM_Vector\rsc\dA.paa";
+						_digit0 = "\MX2A\rsc\dA.paa";
 						_digit1 = "";
-						_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit2 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit3 = "";
 						_digit4 = "";
 					} else {
-						_digit0 = "\AGM_Vector\rsc\dA.paa";
+						_digit0 = "\MX2A\rsc\dA.paa";
 						_digit1 = "";
-						_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-						_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit2 = format["\MX2A\rsc\d%1.paa", _digit3];
+						_digit3 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit4 = "";
 					};
 				} else {
-					_digit0 = "\AGM_Vector\rsc\dA.paa";
+					_digit0 = "\MX2A\rsc\dA.paa";
 					_digit1 = "";
-					_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit2];
-					_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-					_digit4 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+					_digit2 = format["\MX2A\rsc\d%1.paa", _digit2];
+					_digit3 = format["\MX2A\rsc\d%1.paa", _digit3];
+					_digit4 = format["\MX2A\rsc\d%1.paa", _digit4];
 				};
 			} else {
 				_digit0 = "";
-				_digit1 = "\AGM_Vector\rsc\d-.paa";
-				_digit2 = "\AGM_Vector\rsc\d-.paa";
-				_digit3 = "\AGM_Vector\rsc\d-.paa";
-				_digit4 = "\AGM_Vector\rsc\d-.paa";
+				_digit1 = "\MX2A\rsc\d-.paa";
+				_digit2 = "\MX2A\rsc\d-.paa";
+				_digit3 = "\MX2A\rsc\d-.paa";
+				_digit4 = "\MX2A\rsc\d-.paa";
 			};
 		};
 	};
@@ -97,61 +97,61 @@ switch (_coordinate) do {
 			if (_digit1 == 0) then {
 				if (_digit2 == 0) then {
 					if (_digit3 == 0) then {
-						_digit0 = "\AGM_Vector\rsc\dL.paa";
+						_digit0 = "\MX2A\rsc\dL.paa";
 						_digit1 = "";
-						_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit2 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit3 = "";
 						_digit4 = "";
 					} else {
-						_digit0 = "\AGM_Vector\rsc\dL.paa";
+						_digit0 = "\MX2A\rsc\dL.paa";
 						_digit1 = "";
-						_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-						_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit2 = format["\MX2A\rsc\d%1.paa", _digit3];
+						_digit3 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit4 = "";
 					};
 				} else {
-					_digit0 = "\AGM_Vector\rsc\dL.paa";
+					_digit0 = "\MX2A\rsc\dL.paa";
 					_digit1 = "";
-					_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit2];
-					_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-					_digit4 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+					_digit2 = format["\MX2A\rsc\d%1.paa", _digit2];
+					_digit3 = format["\MX2A\rsc\d%1.paa", _digit3];
+					_digit4 = format["\MX2A\rsc\d%1.paa", _digit4];
 				};
 			} else {
 				_digit0 = "";
-				_digit1 = "\AGM_Vector\rsc\d-.paa";
-				_digit2 = "\AGM_Vector\rsc\d-.paa";
-				_digit3 = "\AGM_Vector\rsc\d-.paa";
-				_digit4 = "\AGM_Vector\rsc\d-.paa";
+				_digit1 = "\MX2A\rsc\d-.paa";
+				_digit2 = "\MX2A\rsc\d-.paa";
+				_digit3 = "\MX2A\rsc\d-.paa";
+				_digit4 = "\MX2A\rsc\d-.paa";
 			};
 		} else {
 			if (_digit1 == 0) then {
 				if (_digit2 == 0) then {
 					if (_digit3 == 0) then {
-						_digit0 = "\AGM_Vector\rsc\dr.paa";
+						_digit0 = "\MX2A\rsc\dr.paa";
 						_digit1 = "";
-						_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit2 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit3 = "";
 						_digit4 = "";
 					} else {
-						_digit0 = "\AGM_Vector\rsc\dr.paa";
+						_digit0 = "\MX2A\rsc\dr.paa";
 						_digit1 = "";
-						_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-						_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit2 = format["\MX2A\rsc\d%1.paa", _digit3];
+						_digit3 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit4 = "";
 					};
 				} else {
-					_digit0 = "\AGM_Vector\rsc\dr.paa";
+					_digit0 = "\MX2A\rsc\dr.paa";
 					_digit1 = "";
-					_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit2];
-					_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-					_digit4 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+					_digit2 = format["\MX2A\rsc\d%1.paa", _digit2];
+					_digit3 = format["\MX2A\rsc\d%1.paa", _digit3];
+					_digit4 = format["\MX2A\rsc\d%1.paa", _digit4];
 				};
 			} else {
 				_digit0 = "";
-				_digit1 = "\AGM_Vector\rsc\d-.paa";
-				_digit2 = "\AGM_Vector\rsc\d-.paa";
-				_digit3 = "\AGM_Vector\rsc\d-.paa";
-				_digit4 = "\AGM_Vector\rsc\d-.paa";
+				_digit1 = "\MX2A\rsc\d-.paa";
+				_digit2 = "\MX2A\rsc\d-.paa";
+				_digit3 = "\MX2A\rsc\d-.paa";
+				_digit4 = "\MX2A\rsc\d-.paa";
 			};
 		};
 	};
@@ -160,61 +160,61 @@ switch (_coordinate) do {
 			if (_digit1 == 0) then {
 				if (_digit2 == 0) then {
 					if (_digit3 == 0) then {
-						_digit0 = "\AGM_Vector\rsc\dU.paa";
-						_digit1 = "\AGM_Vector\rsc\dP.paa";
+						_digit0 = "\MX2A\rsc\dU.paa";
+						_digit1 = "\MX2A\rsc\dP.paa";
 						_digit2 = "";
-						_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit3 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit4 = "";
 					} else {
-						_digit0 = "\AGM_Vector\rsc\dU.paa";
-						_digit1 = "\AGM_Vector\rsc\dP.paa";
+						_digit0 = "\MX2A\rsc\dU.paa";
+						_digit1 = "\MX2A\rsc\dP.paa";
 						_digit2 = "";
-						_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-						_digit4 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit3 = format["\MX2A\rsc\d%1.paa", _digit3];
+						_digit4 = format["\MX2A\rsc\d%1.paa", _digit4];
 					};
 				} else {
-					_digit0 = "\AGM_Vector\rsc\dU.paa";
-					_digit1 = "\AGM_Vector\rsc\dP.paa";
-					_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit2];
-					_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-					_digit4 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+					_digit0 = "\MX2A\rsc\dU.paa";
+					_digit1 = "\MX2A\rsc\dP.paa";
+					_digit2 = format["\MX2A\rsc\d%1.paa", _digit2];
+					_digit3 = format["\MX2A\rsc\d%1.paa", _digit3];
+					_digit4 = format["\MX2A\rsc\d%1.paa", _digit4];
 				};
 			} else {
 				_digit0 = "";
-				_digit1 = "\AGM_Vector\rsc\d-.paa";
-				_digit2 = "\AGM_Vector\rsc\d-.paa";
-				_digit3 = "\AGM_Vector\rsc\d-.paa";
-				_digit4 = "\AGM_Vector\rsc\d-.paa";
+				_digit1 = "\MX2A\rsc\d-.paa";
+				_digit2 = "\MX2A\rsc\d-.paa";
+				_digit3 = "\MX2A\rsc\d-.paa";
+				_digit4 = "\MX2A\rsc\d-.paa";
 			};
 		} else {
 			if (_digit1 == 0) then {
 				if (_digit2 == 0) then {
 					if (_digit3 == 0) then {
-						_digit0 = "\AGM_Vector\rsc\dd.paa";
-						_digit1 = "\AGM_Vector\rsc\dn.paa";
+						_digit0 = "\MX2A\rsc\dd.paa";
+						_digit1 = "\MX2A\rsc\dn.paa";
 						_digit2 = "";
-						_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit3 = format["\MX2A\rsc\d%1.paa", _digit4];
 						_digit4 = "";
 					} else {
-						_digit0 = "\AGM_Vector\rsc\dd.paa";
-						_digit1 = "\AGM_Vector\rsc\dn.paa";
+						_digit0 = "\MX2A\rsc\dd.paa";
+						_digit1 = "\MX2A\rsc\dn.paa";
 						_digit2 = "";
-						_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-						_digit4 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+						_digit3 = format["\MX2A\rsc\d%1.paa", _digit3];
+						_digit4 = format["\MX2A\rsc\d%1.paa", _digit4];
 					};
 				} else {
-					_digit0 = "\AGM_Vector\rsc\dd.paa";
-					_digit1 = "\AGM_Vector\rsc\dn.paa";
-					_digit2 = format["\AGM_Vector\rsc\d%1.paa", _digit2];
-					_digit3 = format["\AGM_Vector\rsc\d%1.paa", _digit3];
-					_digit4 = format["\AGM_Vector\rsc\d%1.paa", _digit4];
+					_digit0 = "\MX2A\rsc\dd.paa";
+					_digit1 = "\MX2A\rsc\dn.paa";
+					_digit2 = format["\MX2A\rsc\d%1.paa", _digit2];
+					_digit3 = format["\MX2A\rsc\d%1.paa", _digit3];
+					_digit4 = format["\MX2A\rsc\d%1.paa", _digit4];
 				};
 			} else {
 				_digit0 = "";
-				_digit1 = "\AGM_Vector\rsc\d-.paa";
-				_digit2 = "\AGM_Vector\rsc\d-.paa";
-				_digit3 = "\AGM_Vector\rsc\d-.paa";
-				_digit4 = "\AGM_Vector\rsc\d-.paa";
+				_digit1 = "\MX2A\rsc\d-.paa";
+				_digit2 = "\MX2A\rsc\d-.paa";
+				_digit3 = "\MX2A\rsc\d-.paa";
+				_digit4 = "\MX2A\rsc\d-.paa";
 			};
 		};
 	};

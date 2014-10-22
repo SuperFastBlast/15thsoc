@@ -46,7 +46,7 @@ _allControls = [
 
 if (AGM_vectorSettings select 0) then {
 	_ctrlVectorCrosshair ctrlShow true;
-	_ctrlVectorCrosshair ctrlSetText "\AGM_Vector\rsc\Vector_Crosshair.paa";
+	_ctrlVectorCrosshair ctrlSetText "\MX2A\rsc\Vector_Crosshair.paa";
 };
 
 if (AGM_vectorSettings select 1) then {

@@ -15,16 +15,16 @@ _ctrlDigitE1 = _dlgVector displayCtrl 21;
 _ctrlDigitE2 = _dlgVector displayCtrl 22;
 _ctrlDigitE3 = _dlgVector displayCtrl 23;
 
-_ctrlVectorCenter ctrlSetText "\AGM_Vector\rsc\Vector_Center.paa";
+_ctrlVectorCenter ctrlSetText "\MX2A\rsc\Vector_Center.paa";
 
 _distanceP1 = call AGM_Vector_getDistance;
 _directionP1 = call AGM_Vector_getDirection;
 _azimuthP1 = _directionP1 select 0;
 _inclinationP1 = _directionP1 select 1;
 
-_ctrlDigitE1 ctrlSetText "\AGM_Vector\rsc\d1.paa";
-_ctrlDigitE2 ctrlSetText "\AGM_Vector\rsc\d-.paa";
-_ctrlDigitE3 ctrlSetText "\AGM_Vector\rsc\dP.paa";
+_ctrlDigitE1 ctrlSetText "\MX2A\rsc\d1.paa";
+_ctrlDigitE2 ctrlSetText "\MX2A\rsc\d-.paa";
+_ctrlDigitE3 ctrlSetText "\MX2A\rsc\dP.paa";
 
 waitUntil {!(AGM_vectorKey select 0)};
 

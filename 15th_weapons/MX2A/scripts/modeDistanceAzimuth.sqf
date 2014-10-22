@@ -12,7 +12,7 @@ _ctrlDigit6 = _dlgVector displayCtrl 16;
 _ctrlDigit7 = _dlgVector displayCtrl 17;
 _ctrlDigit8 = _dlgVector displayCtrl 18;
 
-_ctrlVectorCenter ctrlSetText "\AGM_Vector\rsc\Vector_Center.paa";
+_ctrlVectorCenter ctrlSetText "\MX2A\rsc\Vector_Center.paa";
 
 _time = -1;
 waitUntil {

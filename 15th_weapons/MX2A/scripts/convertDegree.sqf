@@ -12,7 +12,7 @@ if (AGM_vectorSettings select 2) then {
 	_number = round (6400 / 360 * _number);
 	if (_number == 6400) then {_number = 0};
 
-	_return = _number call AGM_Vector_convertDistance;
+	_return = _number call \MX2A;
 } else {
 	_number = round _number;
 	_isNegative = if (_number < 0) then {true} else {false};

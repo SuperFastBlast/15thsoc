@@ -1,8 +1,8 @@
 // by commy2
 
-waitUntil {currentWeapon player != "AGM_Vector" || {cameraView != "Gunner"}};
+waitUntil {currentWeapon player != "\MX2A" || {cameraView != "Gunner"}};
 
-terminate AGM_Vector_scriptHandle;
+terminate \MX2A_scriptHandle;
 
 disableSerialization;
 _dlgVector = uiNamespace getVariable "AGM_dlgVector";
