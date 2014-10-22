@@ -131,7 +131,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 			allowedslots[] = {901};
-			mass = 153;
+			mass = 154;
 			class MuzzleSlot
 			{
 				access = 1;
@@ -142,6 +142,7 @@ class CfgWeapons
 			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
 
 		class Single: Mode_SemiAuto
@@ -221,7 +222,7 @@ class CfgWeapons
         {
 		    libtextdesc = "This weapon, used by Special Forces snipers of both the US Army and US Navy, is a heavily modified precision version of the M4 Carbine. SPR initially stood for Special Purpose Receiver (an M4 SOPMOD accessory), but since the weapon became a complete system, this has been changed to Special Purpose Rifle.<br/>This type was classified by the Navy as the Mk 12 and the Army now also uses this designation.";
 	    };
-        magazines[] = {"Trixie_30x556_Mk262_Mag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red"};
+        magazines[] = {"Trixie_30x556_Mk262_Mag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
         picture = "\Trixie_Recon\UI\MK12.paa";
         model = "Trixie_Recon\trixie_MK12.p3d"; 
         handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_02\data\Anim\SMG_02.rtm"};
@@ -248,6 +249,7 @@ class CfgWeapons
 			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
 
 		class Single: Mode_SemiAuto
@@ -344,7 +346,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 			allowedslots[] = {901};
-			mass = 175;
+			mass = 170;
 			class MuzzleSlot
 			{
 				access = 1;
@@ -355,6 +357,7 @@ class CfgWeapons
 			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
 
 		class Single: Mode_SemiAuto
@@ -459,6 +462,7 @@ class CfgWeapons
 			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
 
 		class Single: Mode_SemiAuto
@@ -540,10 +544,10 @@ class CfgAmmo
 
     class Trixie_556_Mk262_Ball: B_556x45_Ball
     {
-	    hit = 12.5702505;
+	    hit = 15.0454;
         typicalSpeed = 868.68;
         airFriction = -0.0010867938;
-        caliber = 0.615;
+        caliber = 0.855;
         deflecting = 16;
         visibleFire = 2.5;
         audibleFire = 5;

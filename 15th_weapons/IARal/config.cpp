@@ -7,7 +7,7 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"ej_IAR30",
+			"ej_IAR30"
 		};
 		magazines[]=
 		{
@@ -46,6 +46,7 @@ class CfgWeapons
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+	AGM_Bipod = 1;
 		descriptionshort="M27 IAR<br />Caliber: 5.56";
 		discretedistance[]={300,400,500,600};
 		discretedistanceinitindex=1;
