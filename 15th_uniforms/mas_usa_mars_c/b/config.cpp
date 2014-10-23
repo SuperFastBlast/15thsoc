@@ -1782,11 +1782,11 @@ class CfgVehicles
 		faction = "mas_usa_mars";
 		vehicleClass = "mas_usa_mars_l";
 		model = "\A3\Characters_F\Common\coveralls.p3d";
-		uniformClass = "U_mas_mar_B_CombatUniform_veg";
+		uniformClass = "U_mas_mar_B_pilot";
 		hiddenSelections[] = {"Camo","insignia"};
 		hiddenSelectionsTextures[] = {"\mas_usa_mars\md\Common\Data\coveralls_sage_co.paa"};
-		linkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
-		respawnLinkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
+		linkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_PilotHelmetHeli_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
+		respawnLinkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_PilotHelmetHeli_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
 		weapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
 		respawnWeapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
