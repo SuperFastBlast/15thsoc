@@ -1,0 +1,3 @@
+<13:22:52> "2ndLt Karr": 2 aim 9, 2 gbu 32, 2 agm 65, 8 120s
+<13:26:59> "2ndLt Karr": aim9, gbu 38, gbu 38, gbu 32,
+<13:28:40> "2ndLt Karr": aim9, agm 65, agm 65, agm 65, agm 65, standard bay, agm 65, agm 65, agm 65, agm 65, aim 9
