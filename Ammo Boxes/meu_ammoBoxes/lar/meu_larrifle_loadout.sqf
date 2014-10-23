@@ -1,5 +1,6 @@
 //15th Marauder Rifleman Loadout
 //By: 2ndLt Callaghan
+// REVISION 14OCT14
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -27,16 +28,16 @@
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
 
- _unit addweapon "arifle_mas_m16";
+ _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "Optic_Hamr";
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
 

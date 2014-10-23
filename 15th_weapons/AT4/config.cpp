@@ -37,6 +37,9 @@ class CfgAmmo
 		timetolive = 100;
 		visiblefire = 28;
 		whistledist = 2;
+		AGM_Backblast_Angle = 60; // angle of the backblast area
+        AGM_Backblast_Range = 25; // maximum range of the backblast
+        AGM_Backblast_Damage = 1; // maximum damage of the backblast
 		class CamShakeFire
 		{
 			power = 10;
@@ -73,6 +76,9 @@ class CfgAmmo
 		timetolive = 100;
 		visiblefire = 28;
 		whistledist = 2;
+		AGM_Backblast_Angle = 60;   // angle of the backblast area
+        AGM_Backblast_Range = 0;   // maximum range of the backblast
+        AGM_Backblast_Damage = 0; // maximum damage of the backblast
 		class CamShakeFire
 		{
 			power = 10;
@@ -163,10 +169,10 @@ class CfgMagazines
 };
 class CfgWeapons 
 {
-
 	class Launcher;
 	class Launcher_Base_F: Launcher{};
 	class Hamr2Collimator;
+	class weaponslotsinfo;
 	class meu_AT4: Launcher_Base_F
 	{
 		modelOptics = "-";
@@ -192,6 +198,10 @@ class CfgWeapons
 		maxRange = 500;
 		maxRangeProbab = 0.1;
 		canLock = LockNo;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+        	{
+            	mass = 148;
+        	};
 		weaponLockDelay = 3.0;
 		lockAcquire = 0;
 		magazineReloadTime = 0;
@@ -316,6 +326,10 @@ class CfgWeapons
 		maxRange = 500;
 		maxRangeProbab = 0.1;
 		canLock = LockNo;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+        	{
+            	mass = 173;
+        	};
 		weaponLockDelay = 3.0;
 		lockAcquire = 0;
 		magazineReloadTime = 0;

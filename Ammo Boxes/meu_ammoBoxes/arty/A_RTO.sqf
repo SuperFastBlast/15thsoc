@@ -1,5 +1,6 @@
-// REVISION 01OCT14
 //15th RTO Loadout
+// REVISION 14OCT14
+
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -15,7 +16,7 @@
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
 
-_unit additem "itemGPS";
+ _unit additem "itemGPS";
  _unit assignitem "itemGPS";
 
  _unit additem "itemRadio";
@@ -26,16 +27,16 @@ _unit additem "itemGPS";
 
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
 
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
 
  _unit addweapon "arifle_mas_m16";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";

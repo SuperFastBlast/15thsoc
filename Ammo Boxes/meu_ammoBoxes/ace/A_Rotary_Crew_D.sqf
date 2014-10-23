@@ -1,4 +1,4 @@
-// REVISION 13AUG14 
+// REVISION 14OCT14
  
  _unit = _this select 1;
  
@@ -22,12 +22,12 @@
  _unit assignItem "AV_ESS_tan"; 
 
  //M9 and Ammo
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addweapon "RH_M9";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
+ _unit addweapon "hgun_mas_m9_F";
 
  //EQUIPMENT ADD
  _unit addweapon "Binocular";

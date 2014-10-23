@@ -26,12 +26,31 @@ class CfgPatches
 
 #define itementry(item, num) class _xx_##item { name=#item; count = num; }
 
+class CfgAmmo
+{
+	class G_40mm_HE;
+	class M433_40mm_HEDP: G_40mm_HE
+  {
+        hit = 170;
+        indirectHit = 25;
+        indirectHitRange = 5;
+        caliber = 3;
+        class CamShakeHit
+        {
+            power = 30;
+            duration = "((round (30^0.25))*0.2 max 0.2)";
+            frequency = 20;
+            distance = 1;
+	};
+    };
+};
 class CfgMagazines
 {
-	class M433_40mm_HEDP;
-	class 6Rnd_HE_M32: M433_40mm_HEDP
+	class CA_Magazine;
+	class 3Rnd_HE_Grenade_shell;
+	class 6Rnd_HE_M32: 3Rnd_HE_Grenade_shell
 	{
-		picture="\M32\Data\Icon\m_6x40mmhp_ca.paa";
+		picture = "\m32\Data\Icon\m_6x40mmhp_ca.paa";
 		displayName= "6 Rnd. M433";
 		ammo = "M433_40mm_HEDP";
 		count = 6;
@@ -111,9 +130,9 @@ class CfgMagazines
 
 };
 	
-
 class CfgWeapons
 {
+	class weaponslotsinfo;
 	class Rifle_Base_F;
 	class EGLM;
 	class M32: Rifle_Base_F
@@ -138,22 +157,37 @@ class CfgWeapons
 		muzzleend = "konec granatometu";
 		muzzlepos = "usti granatometu";
 		reloadaction = "ReloadMagazine";
-		mass = 83;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 117;
+		};
        	muzzles[]=
 		{
 			"this"
 		};
 		changeFiremodeSound[] = {"A3\sounds_f\weapons\closure\firemode_changer_2",0.25118864,1,10};
-		sounds[] = {"StandardSound", "reloadMagazineSound", "drySound"};
+		sounds[] = {"StandardSound"};
 		class StandardSound
 		{
 			weaponSoundEffect="DefaultRifle";
-			begin1[]={"m32\sounds\m32_s1.wss",1.1220185,1,200};
-			soundBegin[]={"begin1",1};
-		reloadMagazineSound[]={"m32\sounds\m32_r.wss",1,1,10
-		};
-		drySound[]={"A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10};
+			begin1[]=
+			{
+			 "m32\sounds\m32_s1.wss",1.1220185,1,200
 			};
+			soundBegin[]=
+			{
+			 "begin1",1
+			};
+		   reloadMagazineSound[]=
+		   {
+		    "m32\sounds\m32_r.wss",1,1,10
+		   };
+		   drySound[]=
+		  {
+		   "A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10};
+		};
+	};
+};
 
 class CfgVehicles 
 {
@@ -189,7 +223,5 @@ class CfgVehicles
 			magentry(6Rnd_SmokePurple_M32, 5);
 			magentry(6Rnd_SmokeOrange_M32, 5);						
 		};
-	};		
 	};
-	};
-	};
+};		

@@ -1,4 +1,6 @@
 //15th Fire Team Leader Loadout
+// REVISION 14OCT14
+
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -24,24 +26,24 @@
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
- (unitBackpack _unit) addmagazineCargo ["1Rnd_HE_Grenade_shell",11];
+ (unitBackpack _unit) addmagazineCargo ["M433_40mm_HEDP_Shell",11];
  (unitBackpack _unit) addmagazineCargo ["1Rnd_Smoke_Grenade_shell",2];
  (unitBackpack _unit) addmagazineCargo ["1Rnd_SmokeRed_Grenade_shell",2];
  (unitBackpack _unit) addmagazineCargo ["1Rnd_Smoke_Grenade_shell",2];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
- _unit addmagazine "M855A1_tracer_M16_30Rnd";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M16_556x45_T_Stanag";
 
- _unit addmagazine "1Rnd_HE_Grenade_shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
 
  _unit addweapon "arifle_mas_m16_gl";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";

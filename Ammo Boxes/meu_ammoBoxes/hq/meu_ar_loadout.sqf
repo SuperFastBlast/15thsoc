@@ -1,4 +1,6 @@
 //15th Automatic Rifleman Loadout
+// REVISION 14OCT14
+
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};
@@ -30,11 +32,11 @@
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
 
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
 
- _unit addweapon "RH_M9";
+ _unit addweapon "hgun_mas_m9_F";
 
  _unit addmagazine "HandGrenade";
  _unit addmagazine "HandGrenade";

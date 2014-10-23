@@ -1,6 +1,5 @@
 //Bravo (AAV) Company, Crew Chief Loadout
-// REVISION 01OCT14
-
+// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -28,8 +27,8 @@
  _unit additem "itemMap";
  _unit assignitem "itemMap";
  
-_unit additem "itemCompass";
-_unit assignitem "itemCompass";
+ _unit additem "itemCompass";
+ _unit assignitem "itemCompass";
  
  _unit additem "itemRadio";
  _unit additem "itemRadio";
@@ -42,27 +41,27 @@ _unit assignitem "itemCompass";
  _unit addbackpack "tf_rt1523g";
 
 
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
  
  _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "optic_Hamr";
  _unit addPrimaryWeaponItem "acc_pointer_IR";
 
 
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
 
 
- _unit addweapon "RH_M9";
+ _unit addweapon "hgun_mas_m9_F";
 
 
  _unit addweapon "Rangefinder";

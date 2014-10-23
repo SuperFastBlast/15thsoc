@@ -19,7 +19,7 @@ class CfgAmmo
 	class RocketBase;
 	class 60MM_ROCKET: RocketBase
 	{
-		hit = 250;
+		hit = 300;
 		indirectHit = 50;
 		indirectHitRange = 5;
 		cost = 300;
@@ -141,6 +141,9 @@ class CfgWeapons
 		maxRange = 300;
 		aiRateOfFire = 10.0;
 		aiRateOfFireDistance = 250;
+		AGM_Backblast_Angle = 60; // angle of the backblast area
+        AGM_Backblast_Range = 10; // maximum range of the backblast
+        AGM_Backblast_Damage = 2; // maximum damage of the backblast
 		class Library
 		{
 			libTextDesc = "M72A6 Short Range Anti Tank Weapon";
@@ -148,8 +151,7 @@ class CfgWeapons
 		descriptionShort = "M72A6";
 		class WeaponSlotsInfo
 		{
-			mass = 100;
-			allowedSlots[] = {901};
+			mass = 65;
 		};
 		class ItemInfo
 		{

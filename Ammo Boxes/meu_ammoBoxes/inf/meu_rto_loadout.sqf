@@ -1,5 +1,5 @@
 //15th RTO Loadout
-// REVISION 01OCT14
+// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -27,16 +27,16 @@
 
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
 
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
 
  _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";

@@ -71,7 +71,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "M855A1_M4_30Rnd", "M855A1_tracer_M4_30Rnd", "M855A1_M16_30Rnd", "M855A1_tracer_M16_30Rnd"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
@@ -320,7 +320,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "M855A1_M4_30Rnd", "M855A1_tracer_M4_30Rnd", "M855A1_M16_30Rnd", "M855A1_tracer_M16_30Rnd"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416g_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
@@ -451,7 +451,7 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
@@ -590,7 +590,7 @@ class CfgWeapons
 		hiddenselectionstextures[] = {};
 		hiddenunderwaterselections[] = {};
 		hiddenunderwaterselectionstextures[] = {};
-		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","M855A1_M4_30Rnd", "M855A1_tracer_M4_30Rnd", "M855A1_M16_30Rnd", "M855A1_tracer_M16_30Rnd"};
+		magazines[] = {"30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		picture = "\mas_us_rifle\ui\gear_hk416m_x_ca.paa";
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		class Library
@@ -611,7 +611,7 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
@@ -2405,8 +2405,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_single_primary_5outof10";
-			recoilprone = "recoil_single_primary_prone_4outof10";
+			recoil = "recoil_single_primary_4outof10";
+			recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -2442,8 +2442,8 @@ class CfgWeapons
 			};
 			reloadtime = 0.0799999;
 			dispersion = 0.00087;
-			recoil = "recoil_single_primary_5outof10";
-			recoilprone = "recoil_single_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			minRange = 0;
 			minRangeProbab = 0.9;
 			midRange = 15;
@@ -2674,8 +2674,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_single_primary_5outof10";
-			recoilprone = "recoil_single_primary_prone_4outof10";
+			recoil = "recoil_single_primary_4outof10";
+			recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -2711,8 +2711,8 @@ class CfgWeapons
 			};
 			reloadtime = 0.0799999;
 			dispersion = 0.00087;
-			recoil = "recoil_single_primary_5outof10";
-			recoilprone = "recoil_single_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			minRange = 0;
 			minRangeProbab = 0.9;
 			midRange = 15;
@@ -2944,8 +2944,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_single_primary_5outof10";
-			recoilprone = "recoil_single_primary_prone_4outof10";
+			recoil = "recoil_single_primary_4outof10";
+			recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -2981,8 +2981,8 @@ class CfgWeapons
 			};
 			reloadtime = 0.0799999;
 			dispersion = 0.00087;
-			recoil = "recoil_single_primary_5outof10";
-			recoilprone = "recoil_single_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			minRange = 0;
 			minRangeProbab = 0.9;
 			midRange = 15;
@@ -3043,7 +3043,7 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
@@ -5459,8 +5459,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_single_primary_5outof10";
-			recoilprone = "recoil_single_primary_prone_4outof10";
+			recoil = "recoil_single_primary_4outof10";
+			recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -5497,8 +5497,8 @@ class CfgWeapons
 			reloadtime = 0.0799999;
 			soundBurst = 0;
 			burst = 3;
-			recoil = "recoil_single_primary_5outof10";
-			recoilprone = "recoil_single_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+			recoilprone = "recoil_auto_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 1;
 			minRangeProbab = 0.1;
@@ -5681,8 +5681,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_auto_primary_4outof10";
-			recoilprone = "recoil_auto_primary_prone_3outof10";
+			recoil = "recoil_single_primary_4outof10";
+			recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -5768,7 +5768,7 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
@@ -5846,8 +5846,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_auto_primary_4outof10";
-			recoilprone = "recoil_auto_primary_prone_3outof10";
+			recoil = "recoil_single_primary_4outof10";
+			recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -5991,8 +5991,8 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			reloadtime = 0.0799999;
-			recoil = "recoil_auto_primary_4outof10";
-			recoilprone = "recoil_auto_primary_prone_3outof10";
+			recoil = "recoil_single_primary_4outof10";
+			recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion = 0.00087;
 			minRange = 2;
 			minRangeProbab = 0.5;
@@ -6078,7 +6078,7 @@ class CfgWeapons
 		};
 			useModelOptics = 0;
 			useExternalOptic = 0;
-			magazines[] = {"M433_40mm_HEDP","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
 			cameraDir = "OP_look";
 			memoryPointCamera = "OP_eye";
 			weaponInfoType = "RscWeaponZeroing";
@@ -8044,7 +8044,7 @@ class CfgWeapons
 		displayName = "M249 Para";
 		scope = 2;
 		model = "\mas_us_rifle\mas_m249";
-		magazines[] = {"200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "M855A1_M4_30Rnd", "M855A1_tracer_M4_30Rnd", "M855A1_M16_30Rnd", "M855A1_tracer_M16_30Rnd", "M249_200Rnd_556x45_Stanag_tracer", "M249_200Rnd_556x45_Stanag"};
+		magazines[] = {"200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag","200Rnd_M249_556x45_Stanag","200Rnd_M249_556x45_T_Stanag"};
 		descriptionshort = "Light Machinegun<br />Caliber: 5.56x45 mm";
 		picture = "\mas_us_rifle\ui\gear_m249_x_ca.paa";
 		class Library
@@ -8439,7 +8439,7 @@ class CfgWeapons
 		scope = 2;
 		model = "\mas_us_rifle\mas_m249a";
 		handanim[] = {"OFP2_ManSkeleton","\mas_us_rifle\Anim\Handanim_m249a.rtm"};
-		magazines[] = {"200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag", "M855A1_M4_30Rnd", "M855A1_tracer_M4_30Rnd", "M855A1_M16_30Rnd", "M855A1_tracer_M16_30Rnd", "M249_200Rnd_556x45_Stanag", "M249_200Rnd_556x45_Stanag_tracer"};
+		magazines[] = {"200Rnd_mas_556x45_Stanag","200Rnd_mas_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","20Rnd_556x45_UW_mag","30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag","200Rnd_M249_556x45_Stanag","200Rnd_M249_556x45_T_Stanag"};
 		descriptionshort = "Light Machinegun<br />Caliber: 5.56x45 mm";
 		picture = "\mas_us_rifle\ui\gear_m249a_x_ca.paa";
 	};
@@ -8810,7 +8810,7 @@ class CfgWeapons
 		displayName = "M240";
 		scope = 2;
 		model = "\mas_us_rifle\mas_m240";
-		magazines[] = {"100Rnd_mas_762x51_Stanag","100Rnd_mas_762x51_T_Stanag","150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","M80_Ball_100Rnd_762x51", "M80_Ball_Tracer_100Rnd_762x51"};
+		magazines[] = {"100Rnd_mas_762x51_Stanag","100Rnd_mas_762x51_T_Stanag","150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","100Rnd_M240_762x51_Stanag","100Rnd_M240_762x51_T_Stanag"};
 		descriptionshort = "Machinegun<br />Caliber: 7.62x51 mm";
 		picture = "\mas_us_rifle\ui\gear_m240_x_ca.paa";
 		class Library
@@ -9604,46 +9604,6 @@ class CfgVehicles
 		transportMaxBackpacks = 2000;
 		class TransportMagazines
 		{
-			class _xx_M80_Ball_100Rnd_762x51
-			{
-				magazine = "M80_Ball_100Rnd_762x51";
-				count = 50;
-			};
-			class _xx_M80_Ball_Tracer_100Rnd_762x51
-			{
-				magazine = "M80_Ball_Tracer_100Rnd_762x51";
-				count = 50;
-			};
-			class _xx_M855A1_M4_30Rnd
-			{
-				magazine = "M855A1_M4_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_tracer_M4_30Rnd
-			{
-				magazine = "M855A1_tracer_M4_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_M16_30Rnd
-			{
-				magazine = "M855A1_M16_30Rnd";
-				count = 50;
-			};
-			class _xx_M855A1_tracer_M16_30Rnd
-			{
-				magazine = "M855A1_tracer_M16_30Rnd";
-				count = 50;
-			};
-			class _xx_M249_200Rnd_556x45_Stanag
-			{
-				magazine = "M249_200Rnd_556x45_Stanag";
-				count = 50;
-			};
-			class _xx_M249_200Rnd_556x45_Stanag_tracer
-			{
-				magazine = "M249_200Rnd_556x45_Stanag_tracer";
-				count = 50;
-			};
 			class _xx_30Rnd_mas_556x45_Stanag
 			{
 				magazine = "30Rnd_mas_556x45_Stanag";

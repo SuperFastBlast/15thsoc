@@ -35,6 +35,7 @@ class CfgPatches
 				"Box_meu_vehicle",
 				"Box_meu_lar",
 				"Box_meu_empty",
+				"Box_meu_boats",
 			};
 			weapons[] = {};
 			requiredVersion = REQUIRED_VERSION;
@@ -61,6 +62,7 @@ class CfgVehicles {
 	#include <\meu_ammoBoxes\vehicle\vehicleConfig.hpp>
 	#include <\meu_ammoBoxes\lar\larConfig.hpp>
 	#include <\meu_ammoBoxes\empty\emptyConfig.hpp>
+	#include <\meu_ammoBoxes\Boats\boatsConfig.hpp>
 };
 
 class CfgNotifications {
@@ -79,6 +81,7 @@ class Extended_Init_EventHandlers {
 	#include <\meu_ammoBoxes\hq\hqEH.hpp>
 	#include <\meu_ammoBoxes\resuply\resuplyEH.hpp>
 	#include <\meu_ammoBoxes\lar\larEH.hpp>
+	#include <\meu_ammoBoxes\Boats\boatsEH.hpp>
 }; 
 
 class CfgFunctions {

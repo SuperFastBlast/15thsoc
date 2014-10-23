@@ -1,4 +1,4 @@
-// REVISION 01OCT14
+// REVISION 15OCT14
 
 // class CfgVehicles
 // {
@@ -395,61 +395,65 @@
 	
 // AMMO
 		class TransportMagazines {
-			class _xx_RH_7Rnd_45cal_m1911 {
+			class _xx_T2AAF_45ACP {
 				count = 250;
-				magazine = "RH_7Rnd_45cal_m1911";
+				magazine = "T2AAF_45ACP";
 			};
-			class _xx_RH_15Rnd_9x19_M9 {
+			class _xx_M882_9mm {
 				count = 250;
-				magazine = "RH_15Rnd_9x19_M9";
+				magazine = "M882_9mm";
 			};
 			class _xx_7Rnd_mas_12Gauge_Slug {
 				count = 50;
 				magazine = "7Rnd_mas_12Gauge_Slug";
 			};
-			class _xx_M855A1_M4_30Rnd {
-				count = 750;
-				magazine = "M855A1_M4_30Rnd";
+			class _xx_B_mas_12Gauge_Pellets {
+				count = 50;
+				magazine = "B_mas_12Gauge_Pellets";
 			};
-			class _xx_M855A1_tracer_M4_30Rnd {
+			class _xx_30Rnd_M4_556x45_Stanag {
 				count = 750;
-				magazine = "M855A1_tracer_M4_30Rnd";
+				magazine = "30Rnd_M4_556x45_Stanag";
 			};
-			class _xx_20Rnd_mas_762x51_Stanag {
+			class _xx_30Rnd_M4_556x45_T_Stanag {
 				count = 750;
-				magazine = "20Rnd_mas_762x51_Stanag";
+				magazine = "30Rnd_M4_556x45_T_Stanag";
 			};
-			class _xx_20Rnd_mas_762x51_T_Stanag {
+			class _xx_M118LR_Ball {
 				count = 750;
-				magazine = "20Rnd_mas_762x51_T_Stanag";
+				magazine = "M118LR_Ball";
+			};
+			class _xx_M118LR_Tracer {
+				count = 750;
+				magazine = "M118LR_Tracer";
 			};
 			class _xx_20Rnd_762x51_Mag {
 				count = 750;
 				magazine = "20Rnd_762x51_Mag";
 			};
-			class _xx_M249_200Rnd_556x45_Stanag {
+			class _xx_200Rnd_M249_556x45_Stanag {
 				count = 750;
-				magazine = "M249_200Rnd_556x45_Stanag";
+				magazine = "200Rnd_M249_556x45_Stanag";
 			};
-			class _xx_M249_200Rnd_556x45_Stanag_tracer {
+			class _xx_200Rnd_M249_556x45_Stanag_tracer {
 				count = 750;
-				magazine = "M249_200Rnd_556x45_Stanag_tracer";
+				magazine = "200Rnd_M249_556x45_Stanag_tracer";
 			};
-			class _xx_M855A1_M27IAR {
+			class _xx_30Rnd_M27_556x45_Stanag {
 				count = 100;
-				magazine = "M855A1_M27IAR";
+				magazine = "30Rnd_M27_556x45_Stanag";
 			};
-			class _xx_M855A1_tracer_M27IAR {
+			class _xx_30Rnd_M27_556x45_T_Stanag {
 				count = 100;
-				magazine = "M855A1_tracer_M27IAR";
+				magazine = "30Rnd_M27_556x45_T_Stanag";
 			};
-			class _xx_M80_Ball_100Rnd_762x51 {
+			class _xx_100Rnd_M240_762x51_Stanag {
 				count = 750;
-				magazine = "M80_Ball_100Rnd_762x51";
+				magazine = "100Rnd_M240_762x51_Stanag";
 			};
-			class _xx_M80_Ball_Tracer_100Rnd_762x51 {
+			class _xx_100Rnd_M240_762x51_T_Stanag {
 				count = 750;
-				magazine = "M80_Ball_Tracer_100Rnd_762x51";
+				magazine = "100Rnd_M240_762x51_T_Stanag";
 			};
 			class _xx_5Rnd_mas_127x99_Stanag {
 				count = 750;
@@ -519,9 +523,9 @@
 				count = 50;
 				magazine = "Chemlight_yellow";
 			};
-			class _xx_1Rnd_HE_Grenade_shell {
+			class _xx_M433_40mm_HEDP_Shell {
 				count = 50;
-				magazine = "1Rnd_HE_Grenade_shell";
+				magazine = "M433_40mm_HEDP_Shell";
 			};
 			class _xx_1Rnd_Smoke_Grenade_shell {
 				count = 50;
@@ -605,13 +609,13 @@
 		
 // WEAPONS
 		class TransportWeapons {
-			class _xx_RH_kimber {
+			class _xx_hgun_mas_acp_F {
 				count = 25;
-				weapon = "RH_kimber";
+				weapon = "hgun_mas_acp_F";
 			};			
-			class _xx_RH_m9 {
+			class _xx_hgun_mas_m9_F {
 				count = 25;
-				weapon = "RH_m9";
+				weapon = "hgun_mas_m9_F";
 			};
 			class _xx_arifle_mas_m4 {
 				count = 25;

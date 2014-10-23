@@ -7,21 +7,13 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"ej_IAR30",
-			"ej_IAR30des"
+			"ej_IAR30"
 		};
 		magazines[]=
 		{
 			"IARmk318_mag",
-			"IAR30mk318_mag",
-			"IARmk262_mag",
-			"IARrt_mag",
-			"M855A1_M27IAR",
-			"M855A1_Tracer_M27IAR",
-			"M855A1_M16_30Rnd",
-			"M855A1_tracer_M16_30Rnd",
-			"M855A1_M4_30Rnd",
-			"M855A1_tracer_M4_30Rnd"
+            "30Rnd_M855A1_556x45_Stanag",
+            "30Rnd_M855A1_556x45_T_Stanag"
 		};
 	author[]={"EricJ"};
 	};
@@ -40,7 +32,6 @@ class CfgWeapons
     {
         class WeaponSlotsInfo;
     };
-	class UGL_F; 
 	class ej_IARal_base: Rifle_Base_F
 	{
 		changeFiremodeSound[]=
@@ -55,6 +46,7 @@ class CfgWeapons
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+	AGM_Bipod = 1;
 		descriptionshort="M27 IAR<br />Caliber: 5.56";
 		discretedistance[]={300,400,500,600};
 		discretedistanceinitindex=1;
@@ -74,7 +66,7 @@ class CfgWeapons
 		midrangeprobab=0.69999999;
 		minrange=2;
 		minrangeprobab=0.30000001;
-		magazines[] = {"M855A1_M27IAR","M855A1_Tracer_M27IAR","M855A1_M4_30Rnd","M855A1_tracer_M4_30Rnd","M855A1_M16_30Rnd","M855A1_tracer_M16_30Rnd","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
+		magazines[] = {"30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 		model="\IARal\ej_IAR30.p3d";
 		modes[]=
 		{
@@ -109,7 +101,7 @@ class CfgWeapons
 			1,
 			30
 		};
-		reloadtime = 0.0799999;
+		reloadTime=0.096000001;
 		scope=0;
 		selectionfireanim="muzzleflash";
 		weaponinfotype="RscWeaponZeroing";
@@ -191,8 +183,8 @@ class CfgWeapons
 			};
 
 			reloadTime=0.096000001;
-			recoil = "recoil_auto_primary_5outof10";
-            		recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_single_primary_4outof10";
+            		recoilprone = "recoil_single_primary_prone_3outof10";
 			dispersion=0.00087;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -233,8 +225,8 @@ class CfgWeapons
 
 			reloadTime=0.096000001;
 			dispersion=0.00087;
-			recoil = "recoil_auto_primary_5outof10";
-           		recoilprone = "recoil_auto_primary_prone_4outof10";
+			recoil = "recoil_auto_primary_4outof10";
+           		recoilprone = "recoil_auto_primary_prone_3outof10";
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -251,20 +243,6 @@ class CfgWeapons
 	{
 		scope=2;
 		displayname="M27 IAR";
-		reloadAction="GestureReloadSMG_02";
-		dexterity=1.8;
-		handanim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\IARal\data\Anim\SCAR.rtm"
-		};
-	};
-	class ej_IAR30des: ej_IARal_base
-	{
-		scope=2;
-		model="\IARal\ej_IAR30des.p3d";
-		picture="\IARal\data\UI\iar30desinv_x_ca.paa";
-		displayname="M27 IAR Desert";
 		reloadAction="GestureReloadSMG_02";
 		dexterity=1.8;
 		handanim[]=

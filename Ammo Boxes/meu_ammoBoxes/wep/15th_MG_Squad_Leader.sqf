@@ -1,7 +1,7 @@
 //15th Weapons MG Squad Leader
 //15thMEU Realism Unit, Weapons Platoon
 //By: SSgt Callaghan
-// REVISION 01OCT14
+// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -33,32 +33,31 @@
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
  (unitBackpack _unit) addmagazineCargo ["100Rnd_mas_762x51_T_Stanag",1];
- (unitBackpack _unit) additemCargo ["ItemcTabHCam",1];
  (unitBackpack _unit) additemCargo ["itemandroid",1];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
 
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
 
 
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
- _unit addmagazine "1Rnd_HE_Grenade_shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
+ _unit addmagazine "M433_40mm_HEDP_Shell";
 
 
  _unit addweapon "M4Car203";
@@ -66,12 +65,12 @@
  _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
 
 
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
- _unit addmagazine "rh_15rnd_9x19_m9";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
+ _unit addmagazine "M882_9mm";
 
 
- _unit addweapon "RH_M9";
+ _unit addweapon "hgun_mas_m9_F";
 
 
  _unit addweapon "rangefinder";
@@ -88,6 +87,7 @@
  _unit addmagazine "SmokeShell";
  _unit addmagazine "SmokeShellGreen";
  _unit additem "AGM_EarBuds";
+ _unit additem "ItemcTabHCam";
 
 
  _unit adduniform "U_mas_mar_B_CombatUniform_veg";

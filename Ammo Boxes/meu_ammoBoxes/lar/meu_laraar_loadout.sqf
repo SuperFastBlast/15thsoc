@@ -1,6 +1,6 @@
 //15th Marauder Assistant Automatic Rifleman Loadout
 //By: 2ndLt Callaghan
-// REVISION 01OCT14
+// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -27,17 +27,18 @@
 
  (unitBackpack _unit) additemCargo ["AGM_Bandage",2];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
- (unitBackpack _unit) addmagazineCargo ["M249_200Rnd_556x45_Stanag_tracer",2];
+ (unitBackpack _unit) addmagazineCargo ["30Rnd_M27_556x45_Stanag",4]; 
+ (unitBackpack _unit) addmagazineCargo ["30Rnd_M27_556x45_T_Stanag",4];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
- _unit addmagazine "M855A1_tracer_M4_30Rnd";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
 
  _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "Optic_Hamr";
