@@ -43,16 +43,6 @@ class CfgVehicles
 				magazine = "Trixie_5x762_Mag";
 				count = 50;
 			};
-			class Trixie_10x127_Mag
-			{
-				magazine = "Trixie_10x127_Mag";
-				count = 50;
-			};
-			class Trixie_10x127_HE_Mag
-			{
-				magazine = "Trixie_10x127_HE_Mag";
-				count = 50;
-			};
 			class Trixie_10x127_HEIAP_Mag
 			{
 				magazine = "Trixie_10x127_HEIAP_Mag";
@@ -327,8 +317,8 @@ class CfgWeapons
 	{
 		scope = 2;
 		author = "Trixie";
-		displayname = "M40A3";
-		descriptionshort = "USMC M40A3 <br/>Caliber: 7.62x51mm";
+		displayname = "M40A5";
+		descriptionshort = "USMC M40A5 <br/>Caliber: 7.62x51mm";
         class Library 
         {
 		    libtextdesc = "The M40 rifle is a bolt-action sniper rifle used by the United States Marine Corps. Each M40 is built from a Remington 700 bolt-action rifle, and is modified by USMC armorers at Marine Corps Base Quantico, using components from a number of suppliers.";
@@ -437,7 +427,7 @@ class CfgWeapons
         {
 		    libtextdesc = "The M107 is a long-range, semi-automatic sniper rifle, manufactured by Barrett Firearms Manufacturing. It is highly prized for its manageable recoil.<br/>The M107 uses 12.7x99mm cartridges and its effective range is around 1.800 m.";
 	    };
-        magazines[] = {"Trixie_10x127_mag","Trixie_10x127_HE_Mag","Trixie_10x127_HEIAP_Mag"};
+        magazines[] = {"Trixie_10x127_HEIAP_Mag"};
         picture = "\Trixie_Recon\UI\m107.paa";
         model = "Trixie_Recon\trixie_m107_black.p3d"; 
         handAnim[] = {"OFP2_ManSkeleton","\trixie_recon\anim\M107b.rtm"};
@@ -555,7 +545,7 @@ class CfgAmmo
     };    
 	class M118LR_Ball: B_762x51_Ball
    	{
-        hit=20;
+        hit=15;
         typicalSpeed=783;
         caliber=1.05;
         deflecting=20;
@@ -565,28 +555,20 @@ class CfgAmmo
         visibleFireTime=3;
         audibleFire=7;
         audibleFireTime=7;
-    	};
-	class Trixie_127_Ball: B_127x108_Ball
-	{
-		hit = 50;
-		indirecthit = 10;
-	    indirecthitrange = 0;
-		caliber = 5;
-		muzzleEffect = "BIS_Effects_HeavySniper";
-	};
-	class Trixie_127_HE_Ball: B_127x108_Ball
-	{
-		hit = 100;
-		indirecthit = 25;
-	    indirecthitrange = 2;
-		caliber = 5;
-		cratereffects = "ExploAmmoCrater";
-	    deflecting = 5;
-	    explosioneffects = "ExploAmmoExplosion";
-	    explosionsoundeffect = "DefaultExplosion";
-	    explosive = 0.6;
-	    muzzleEffect = "BIS_Effects_HeavySniper";
-	};
+    };
+	class M118LR_Ball_m40: B_762x51_Ball
+   	{
+        hit=17;
+        typicalSpeed=820;
+        caliber=1.1;
+        deflecting=20;
+        deflectingChance = 100;
+        deflectingRandomness = 0.5;
+        visibleFire=3;
+        visibleFireTime=3;
+        audibleFire=7;
+        audibleFireTime=7;
+    };
 	class Trixie_127_HEIAP_Ball: B_127x108_Ball
 	{
 		hit = 150;
@@ -631,42 +613,23 @@ class CfgMagazines {
 		author = "Trixie";
 		count = 5;
 		descriptionshort = "Caliber: 7.62x51mm<br />Rounds: 5<br />Used in: M40A3";
-		displayname = "5Rnd 7.62x51mm";
-		ammo = "M118LR_Ball";
+		displayname = "M118LR";
+		ammo = "M118LR_Ball_m40";
 		picture = "\Trixie_recon\UI\5x762_mag.paa";
 		lastroundstracer = 0;
 		tracersevery = 0;
-	};
-	class Trixie_10x127_Mag: 5Rnd_127x108_Mag {
-		scope = 2;
-		author = "Trixie";
-		count = 10;
-		descriptionshort = "Caliber: 12.7x99mm<br />Rounds: 10<br />Used in: Barret M107";
-		displayname = "10Rnd 12.7x99mm";
-		picture = "\Trixie_recon\UI\50BMGx10_mag.paa";
-		lastroundstracer = 0;
-		tracersevery = 0;
-	};
-	class Trixie_10x127_HE_Mag: 5Rnd_127x108_APDS_Mag {
-		scope = 2;
-		author = "Trixie";
-		count = 10;
-		descriptionshort = "Caliber: 12.7x99mm HE<br />Rounds: 10<br />Used in: Barret M107";
-		displayname = "10Rnd 12.7x99mm HE";
-		ammo = "Trixie_127_HE_Ball";
-		picture = "\Trixie_recon\UI\50BMGx10_he_mag.paa";
-		lastroundstracer = 0;
-		tracersevery = 0;
+		mass = 3;
 	};
 	class Trixie_10x127_HEIAP_Mag: 5Rnd_127x108_APDS_Mag {
 		scope = 2;
 		author = "Trixie";
 		count = 10;
 		descriptionshort = "Caliber: 12.7x99mm HEIAP<br />Rounds: 10<br />Used in: Barret M107";
-		displayname = "10Rnd Raufoss Mk 211 HEIAP";
+		displayname = "Raufoss Mk 211";
 		ammo = "B_127x108_APDS";
 		picture = "\Trixie_recon\UI\50BMGx10_heiap_mag.paa";
 		lastroundstracer = 0;
 		tracersevery = 0;
+		mass = 18;
 	};
 };
