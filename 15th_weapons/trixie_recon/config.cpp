@@ -83,6 +83,7 @@ class CfgVehicles
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
+class asdg_MuzzleSlot_556;
 class ItemCore;
 class ItemInfo;
 class InventoryOpticsItem_Base_F;
@@ -229,15 +230,8 @@ class CfgWeapons
 		{
 			allowedslots[] = {901};
 			mass = 100;
-			class MuzzleSlot
-			{
-				access = 1;
-				compatibleitems[] = {"muzzle_snds_m"};
-				displayname = "Muzzle Slot";
-				linkproxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				scope = 0;
-			};
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
+			class asdg_MuzzleSlot_rifles: asdg_MuzzleSlot_556{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
 			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
 		};
@@ -559,8 +553,8 @@ class CfgAmmo
 	class M118LR_Ball_m40: B_762x51_Ball
    	{
         hit=17;
-        typicalSpeed=820;
-        caliber=1.1;
+        typicalSpeed=868;
+        caliber=1.5;
         deflecting=20;
         deflectingChance = 100;
         deflectingRandomness = 0.5;
