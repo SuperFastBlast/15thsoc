@@ -38,12 +38,12 @@ _allControls = [
 	_ctrlDigitE4
 ];
 
-_ctrlDigit7 ctrlSetText "\MX2A\rsc\dC.paa";
-_ctrlDigit8 ctrlSetText "\MX2A\rsc\dq.paa";
-_ctrlDigit9 ctrlSetText "\MX2A\rsc\dn.paa";
-_ctrlDigit0 ctrlSetText "\MX2A\rsc\dF.paa";
-_ctrlDigit1 ctrlSetText "\MX2A\rsc\di.paa";
-_ctrlDigit2 ctrlSetText "\MX2A\rsc\dG.paa";
+_ctrlDigit7 ctrlSetText "\\MX2A\rsc\dC.paa";
+_ctrlDigit8 ctrlSetText "\\MX2A\rsc\dq.paa";
+_ctrlDigit9 ctrlSetText "\\MX2A\rsc\dn.paa";
+_ctrlDigit0 ctrlSetText "\\MX2A\rsc\dF.paa";
+_ctrlDigit1 ctrlSetText "\\MX2A\rsc\di.paa";
+_ctrlDigit2 ctrlSetText "\\MX2A\rsc\dG.paa";
 
 sleep 2;
 
@@ -56,42 +56,42 @@ sleep 2;
 	_ctrlDigit2
 ];
 
-_isReticle = AGM_vectorSettings select 0;
-_isNVG = AGM_vectorSettings select 1;
+_isReticle = \MX2ASettings select 0;
+_isNVG = \MX2ASettings select 1;
 
 if (_isReticle) then {
 	if (_isNVG) then {
-		_ctrlDigit6 ctrlSetText "\MX2A\rsc\dn.paa";
-		_ctrlDigit7 ctrlSetText "\MX2A\rsc\di.paa";
-		_ctrlDigit8 ctrlSetText "\MX2A\rsc\dG.paa";
-		_ctrlDigit9 ctrlSetText "\MX2A\rsc\dt.paa";
+		_ctrlDigit6 ctrlSetText "\\MX2A\rsc\dn.paa";
+		_ctrlDigit7 ctrlSetText "\\MX2A\rsc\di.paa";
+		_ctrlDigit8 ctrlSetText "\\MX2A\rsc\dG.paa";
+		_ctrlDigit9 ctrlSetText "\\MX2A\rsc\dt.paa";
 	} else {
-		_ctrlDigit6 ctrlSetText "\MX2A\rsc\dE.paa";
-		_ctrlDigit7 ctrlSetText "\MX2A\rsc\dr.paa";
-		_ctrlDigit8 ctrlSetText "\MX2A\rsc\dE.paa";
-		_ctrlDigit9 ctrlSetText "\MX2A\rsc\dt.paa";
+		_ctrlDigit6 ctrlSetText "\\MX2A\rsc\dE.paa";
+		_ctrlDigit7 ctrlSetText "\\MX2A\rsc\dr.paa";
+		_ctrlDigit8 ctrlSetText "\\MX2A\rsc\dE.paa";
+		_ctrlDigit9 ctrlSetText "\\MX2A\rsc\dt.paa";
 	};
-	_ctrlDigit0 ctrlSetText "\MX2A\rsc\dq.paa";
-	_ctrlDigit1 ctrlSetText "\MX2A\rsc\dn.paa";
+	_ctrlDigit0 ctrlSetText "\\MX2A\rsc\dq.paa";
+	_ctrlDigit1 ctrlSetText "\\MX2A\rsc\dn.paa";
 	_ctrlDigit2 ctrlSetText "";
 	_ctrlDigit3 ctrlSetText "";
 } else {
-	_ctrlDigit6 ctrlSetText "\MX2A\rsc\dE.paa";
-	_ctrlDigit7 ctrlSetText "\MX2A\rsc\dr.paa";
-	_ctrlDigit8 ctrlSetText "\MX2A\rsc\dE.paa";
-	_ctrlDigit9 ctrlSetText "\MX2A\rsc\dt.paa";
-	_ctrlDigit0 ctrlSetText "\MX2A\rsc\dq.paa";
-	_ctrlDigit1 ctrlSetText "\MX2A\rsc\dF.paa";
-	_ctrlDigit2 ctrlSetText "\MX2A\rsc\dF.paa";
+	_ctrlDigit6 ctrlSetText "\\MX2A\rsc\dE.paa";
+	_ctrlDigit7 ctrlSetText "\\MX2A\rsc\dr.paa";
+	_ctrlDigit8 ctrlSetText "\\MX2A\rsc\dE.paa";
+	_ctrlDigit9 ctrlSetText "\\MX2A\rsc\dt.paa";
+	_ctrlDigit0 ctrlSetText "\\MX2A\rsc\dq.paa";
+	_ctrlDigit1 ctrlSetText "\\MX2A\rsc\dF.paa";
+	_ctrlDigit2 ctrlSetText "\\MX2A\rsc\dF.paa";
 	_ctrlDigit3 ctrlSetText "";
 };
 
 waitUntil {
-	if (AGM_vectorKey select 0) then {
+	if (\MX2AKey select 0) then {
 		waitUntil {
-			!(AGM_vectorKey select 0) || {AGM_vectorKey select 1}
+			!(\MX2AKey select 0) || {\MX2AKey select 1}
 		};
-		if !(AGM_vectorKey select 1) then {
+		if !(\MX2AKey select 1) then {
 			if (_isNVG) then {
 				_isReticle = false;
 				_isNVG = false;
@@ -107,63 +107,63 @@ waitUntil {
 		};
 		if (_isReticle) then {
 			if (_isNVG) then {
-				_ctrlDigit6 ctrlSetText "\MX2A\rsc\dn.paa";
-				_ctrlDigit7 ctrlSetText "\MX2A\rsc\di.paa";
-				_ctrlDigit8 ctrlSetText "\MX2A\rsc\dG.paa";
-				_ctrlDigit9 ctrlSetText "\MX2A\rsc\dt.paa";
+				_ctrlDigit6 ctrlSetText "\\MX2A\rsc\dn.paa";
+				_ctrlDigit7 ctrlSetText "\\MX2A\rsc\di.paa";
+				_ctrlDigit8 ctrlSetText "\\MX2A\rsc\dG.paa";
+				_ctrlDigit9 ctrlSetText "\\MX2A\rsc\dt.paa";
 			} else {
-				_ctrlDigit6 ctrlSetText "\MX2A\rsc\dE.paa";
-				_ctrlDigit7 ctrlSetText "\MX2A\rsc\dr.paa";
-				_ctrlDigit8 ctrlSetText "\MX2A\rsc\dE.paa";
-				_ctrlDigit9 ctrlSetText "\MX2A\rsc\dt.paa";
+				_ctrlDigit6 ctrlSetText "\\MX2A\rsc\dE.paa";
+				_ctrlDigit7 ctrlSetText "\\MX2A\rsc\dr.paa";
+				_ctrlDigit8 ctrlSetText "\\MX2A\rsc\dE.paa";
+				_ctrlDigit9 ctrlSetText "\\MX2A\rsc\dt.paa";
 			};
-			_ctrlDigit0 ctrlSetText "\MX2A\rsc\dq.paa";
-			_ctrlDigit1 ctrlSetText "\MX2A\rsc\dn.paa";
+			_ctrlDigit0 ctrlSetText "\\MX2A\rsc\dq.paa";
+			_ctrlDigit1 ctrlSetText "\\MX2A\rsc\dn.paa";
 			_ctrlDigit2 ctrlSetText "";
 			_ctrlDigit3 ctrlSetText "";
 		} else {
-			_ctrlDigit6 ctrlSetText "\MX2A\rsc\dE.paa";
-			_ctrlDigit7 ctrlSetText "\MX2A\rsc\dr.paa";
-			_ctrlDigit8 ctrlSetText "\MX2A\rsc\dE.paa";
-			_ctrlDigit9 ctrlSetText "\MX2A\rsc\dt.paa";
-			_ctrlDigit0 ctrlSetText "\MX2A\rsc\dq.paa";
-			_ctrlDigit1 ctrlSetText "\MX2A\rsc\dF.paa";
-			_ctrlDigit2 ctrlSetText "\MX2A\rsc\dF.paa";
+			_ctrlDigit6 ctrlSetText "\\MX2A\rsc\dE.paa";
+			_ctrlDigit7 ctrlSetText "\\MX2A\rsc\dr.paa";
+			_ctrlDigit8 ctrlSetText "\\MX2A\rsc\dE.paa";
+			_ctrlDigit9 ctrlSetText "\\MX2A\rsc\dt.paa";
+			_ctrlDigit0 ctrlSetText "\\MX2A\rsc\dq.paa";
+			_ctrlDigit1 ctrlSetText "\\MX2A\rsc\dF.paa";
+			_ctrlDigit2 ctrlSetText "\\MX2A\rsc\dF.paa";
 			_ctrlDigit3 ctrlSetText "";
 		};
 	};
-	AGM_vectorKey select 1
+	\MX2AKey select 1
 };
 
 _time = time;
 waitUntil {
-	if (AGM_vectorKey select 0) then {_time = -1};
-	!(AGM_vectorKey select 1) || {time > _time + 1}
+	if (\MX2AKey select 0) then {_time = -1};
+	!(\MX2AKey select 1) || {time > _time + 1}
 };
 
 _count = 1;
 waitUntil {
-	if (AGM_vectorKey select 1) then {
+	if (\MX2AKey select 1) then {
 		_count = _count + 1;
 		_time = time;
-		waitUntil {!(AGM_vectorKey select 1) || {time > _time + 1}};
+		waitUntil {!(\MX2AKey select 1) || {time > _time + 1}};
 	};
-	if (AGM_vectorKey select 0) then {_time = -1};
+	if (\MX2AKey select 0) then {_time = -1};
 	time > _time + 1 || {_count >= 5}
 };
 
 if (_count >= 5) then {
-	_ctrlDigitE1 ctrlSetText "\MX2A\rsc\d5.paa";
-	_ctrlDigitE2 ctrlSetText "\MX2A\rsc\dt.paa";
-	_ctrlDigitE3 ctrlSetText "\MX2A\rsc\dq.paa";
-	_ctrlDigitE4 ctrlSetText "\MX2A\rsc\dr.paa";
+	_ctrlDigitE1 ctrlSetText "\\MX2A\rsc\d5.paa";
+	_ctrlDigitE2 ctrlSetText "\\MX2A\rsc\dt.paa";
+	_ctrlDigitE3 ctrlSetText "\\MX2A\rsc\dq.paa";
+	_ctrlDigitE4 ctrlSetText "\\MX2A\rsc\dr.paa";
 
-	AGM_vectorSettings set [0, _isReticle];
-	AGM_vectorSettings set [1, _isNVG];
+	\MX2ASettings set [0, _isReticle];
+	\MX2ASettings set [1, _isNVG];
 
-	_ctrlVectorCrosshair ctrlShow (AGM_vectorSettings select 0);
+	_ctrlVectorCrosshair ctrlShow (\MX2ASettings select 0);
 
-	if (AGM_vectorSettings select 1) then {
+	if (\MX2ASettings select 1) then {
 		{_x ctrlSetTextColor [1, 0, 0, 1]} forEach _allControls;
 	} else {
 		{_x ctrlSetTextColor [1, 0, 0, 0.5]} forEach _allControls;
@@ -187,13 +187,13 @@ if (_count >= 5) then {
 	];
 } else {
 	_ctrlDigit6 ctrlSetText "";
-	_ctrlDigit7 ctrlSetText "\MX2A\rsc\d0.paa";
-	_ctrlDigit8 ctrlSetText "\MX2A\rsc\d1.paa";
-	_ctrlDigit9 ctrlSetText "\MX2A\rsc\dd.paa";
-	_ctrlDigit0 ctrlSetText "\MX2A\rsc\dC.paa";
-	_ctrlDigit1 ctrlSetText "\MX2A\rsc\dq.paa";
-	_ctrlDigit2 ctrlSetText "\MX2A\rsc\dn.paa";
-	_ctrlDigit3 ctrlSetText "\MX2A\rsc\dF.paa";
+	_ctrlDigit7 ctrlSetText "\\MX2A\rsc\d0.paa";
+	_ctrlDigit8 ctrlSetText "\\MX2A\rsc\d1.paa";
+	_ctrlDigit9 ctrlSetText "\\MX2A\rsc\dd.paa";
+	_ctrlDigit0 ctrlSetText "\\MX2A\rsc\dC.paa";
+	_ctrlDigit1 ctrlSetText "\\MX2A\rsc\dq.paa";
+	_ctrlDigit2 ctrlSetText "\\MX2A\rsc\dn.paa";
+	_ctrlDigit3 ctrlSetText "\\MX2A\rsc\dF.paa";
 
 	sleep 2;
 

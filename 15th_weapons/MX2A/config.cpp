@@ -173,8 +173,8 @@ class RscInGameUI {
 };
 
 class RscTitles {
-  class meu_MX2A_tan : AGM_Rsc_Display_Base {
-    name = "MX2A";
+  class AGM_Vector : AGM_Rsc_Display_Base {
+    name = "AGM_Vector";
     onLoad = "uiNamespace setVariable ['AGM_dlgVector', _this select 0];";
     controls[] = {"Vector_Center", "Vector_Crosshair", "Digit0", "Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6", "Digit7", "Digit8", "Digit9", "DigitE1", "DigitE2", "DigitE3", "DigitE4"};
 
