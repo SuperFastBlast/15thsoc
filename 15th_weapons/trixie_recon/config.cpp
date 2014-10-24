@@ -614,7 +614,7 @@ class CfgMagazines {
 		mass = 11.8;
 		lastroundstracer = 3;
         	descriptionshort = "Mk 262 77gr<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
-        	displayname = "Mk 262 77gr";
+        	displayname = "Mk 262";
 		picture = "\Trixie_Recon\UI\m_30stanag_CA.paa";
 	};
 	class Trixie_20x762_Mag: 30Rnd_556x45_Stanag

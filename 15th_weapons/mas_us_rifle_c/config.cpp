@@ -2565,7 +2565,7 @@ class CfgMagazines
 		mass = 11.8;
 		count = 30;
 		tracersevery = 1;
-        	descriptionshort = "M855A1 tracer<br />Caliber: 5.56x45 mm STANAG Tracer<br />Rounds: 30";
+        	descriptionshort = "M856<br />Caliber: 5.56x45 mm STANAG Tracer<br />Rounds: 30";
         	displayname = "M855A1 5.56mm 30rnd Tracer";
 		picture = "\mas_us_rifle\ui\m_30stanag_red_CA.paa";
 	};
@@ -2576,7 +2576,7 @@ class CfgMagazines
 		ammo = "B_M249_556x45_Ball";
 		count = 200;
         	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200<br />Used in: M249";
-        	displayname = "M249 M855A1 5.56mm 200rnd";
+        	displayname = "M855A1 Linked";
 		picture = "\mas_us_rifle\ui\m_200LMG_ca.paa";
         	initspeed = 960;
         	lastroundstracer = 5;
@@ -2589,7 +2589,7 @@ class CfgMagazines
        		ammo = "B_M249_556x45_Ball_T";
 		count = 200;
         	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200 Tracer<br />Used in: M249";
-       	 	displayname = "M249 M855A1 5.56mm 200rnd Tracer";
+       	 	displayname = "M856 Linked";
 		picture = "\mas_us_rifle\ui\m_200LMG_red_ca.paa";
        	 	initspeed = 960;
        	 	lastroundstracer = 4;
@@ -2602,7 +2602,7 @@ class CfgMagazines
 		ammo = "B_M80_762x54_Ball";
 		count = 100;
 		descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 100<br />Used in: Mk48,M240";
-		displayname = "M240 100Rnd. M80 Ball";
+		displayname = "M80";
         	initspeed = 853;
         	lastroundstracer = 3;
 		tracersevery = 5;
@@ -2614,7 +2614,7 @@ class CfgMagazines
 		ammo = "B_M80_762x54_Ball_T";
 		count = 100;
 		descriptionshort = "Caliber: 7.62x51 mm STANAG Tracer<br />Rounds: 100<br />Used in: Mk48,M240";
-		displayname = "M240 100Rnd. M62 Tracer";
+		displayname = "M62";
 		tracersevery = 1;
 	};
 	class M118LR_Ball: 30Rnd_556x45_Stanag
@@ -2623,7 +2623,7 @@ class CfgMagazines
 	scope = 2;
         count = 20;
         descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 20<br />Used in: M110";
-        displayname = "M118LR 7.62";
+        displayname = "M118LR Massi";
         picture = "\mas_us_rifle\ui\m_20hk417_ca.paa";
 	mass = 12;
     	};
@@ -2633,7 +2633,7 @@ class CfgMagazines
 	scope = 2;
         count = 20;
         descriptionshort = "Caliber: 7.62x51 mm Tracer STANAG<br />Rounds: 20<br />Used in: M110";
-        displayname = "M118LR 7.62 Tracer";
+        displayname = "M118LR Massi";
         picture = "\mas_us_rifle\ui\m_20hk417_red_ca.paa";
 	mass = 12;
     	};
