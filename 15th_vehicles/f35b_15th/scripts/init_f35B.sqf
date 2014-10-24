@@ -6,7 +6,6 @@ _F35 animate ["ejection_seat_hide",0];
 _F35 animate ["init_done_switch",0];
 _F35 animate ["gps_targeting_switch",0];
 
-null = [] execVM "f35b_15th\scripts\tgpalpha7.sqf";
 [this] execVM "f35b_15th\scripts\FX\F35_FX_Gforce.sqf";
 while {true} do 
 {
