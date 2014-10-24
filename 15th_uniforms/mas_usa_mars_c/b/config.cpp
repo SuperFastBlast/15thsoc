@@ -687,14 +687,9 @@ class CfgVehicles
 		uniformClass = "U_mas_mar_B_CombatUniform_veg";
 		hiddenSelections[] = {"Camo","insignia"};
 		hiddenSelectionsTextures[] = {"mas_usa_mars\md\Common\Data\coveralls_sage_cw.paa"};
-		Items[] = {"FirstAidKit","FirstAidKit","NVGoggles","acc_pointer_IR"};
-		RespawnItems[] = {"FirstAidKit","FirstAidKit","NVGoggles","acc_pointer_IR"};
-        linkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
-		respawnLinkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
-		weapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
-		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
-		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
+		linkedItems[] = {"V_mas_mar_PlateCarrier1_rgr_w","H_mas_mar_helmetwgog_us","NVGoggles","ItemMap","ItemGPS","ItemCompass","ItemWatch","ItemRadio"};
+		respawnLinkedItems[] = {"V_mas_mar_PlateCarrier1_rgr_w","H_mas_mar_helmetwgog_us","NVGoggles","ItemMap","ItemGPS","ItemCompass","ItemWatch","ItemRadio"};
+		backpack = "B_mas_Kitbag_wint";
 	};
 	class B_mas_mar_Soldier_lite_F: B_Soldier_lite_F
 	{
@@ -772,14 +767,9 @@ class CfgVehicles
 		uniformClass = "U_mas_mar_B_CombatUniform_veg";
 		hiddenSelections[] = {"Camo","insignia"};
 		hiddenSelectionsTextures[] = {"mas_usa_mars\md\Common\Data\coveralls_sage_cw.paa"};
-		Items[] = {"FirstAidKit","FirstAidKit","NVGoggles","acc_pointer_IR"};
-		RespawnItems[] = {"FirstAidKit","FirstAidKit","NVGoggles","acc_pointer_IR"};
-        linkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
-		respawnLinkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
-		weapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
-		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
-		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
+		linkedItems[] = {"V_mas_mar_ChestrigB_rgr_w","H_mas_mar_Woolhat","ItemMap","ItemGPS","ItemCompass","ItemWatch","ItemRadio","NVGoggles_mas"};
+		respawnLinkedItems[] = {"V_mas_mar_ChestrigB_rgr_w","H_mas_mar_Woolhat","ItemMap","ItemGPS","ItemCompass","ItemWatch","ItemRadio","NVGoggles_mas"};
+		backpack = "B_mas_Kitbag_wint";
 	};
 	class B_mas_mar_Soldier_off_F: B_mas_mar_Soldier_lite_F
 	{
@@ -1748,6 +1738,7 @@ class CfgVehicles
 		_generalMacro = "B_mas_mar_diver_exp_F";
 		faction = "mas_usa_mars";
 		vehicleClass = "mas_usa_mars_k";
+		backpack = "B_mas_mar_FieldPack_blk_DiverExp";
 		uniformClass = "U_mas_mar_B_CombatUniform_veg";
 		Items[] = {"FirstAidKit","FirstAidKit","NVGoggles","acc_pointer_IR"};
 		RespawnItems[] = {"FirstAidKit","FirstAidKit","NVGoggles","acc_pointer_IR"};
@@ -1757,6 +1748,7 @@ class CfgVehicles
 		respawnWeapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
+
   };
 	class B_mas_mar_diver_medic_F: B_diver_F
 	{
@@ -1782,11 +1774,11 @@ class CfgVehicles
 		faction = "mas_usa_mars";
 		vehicleClass = "mas_usa_mars_l";
 		model = "\A3\Characters_F\Common\coveralls.p3d";
-		uniformClass = "U_mas_mar_B_pilot";
+		uniformClass = "U_mas_mar_B_CombatUniform_veg";
 		hiddenSelections[] = {"Camo","insignia"};
 		hiddenSelectionsTextures[] = {"\mas_usa_mars\md\Common\Data\coveralls_sage_co.paa"};
-		linkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_PilotHelmetHeli_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
-		respawnLinkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_PilotHelmetHeli_B","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
+		linkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
+		respawnLinkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
 		weapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
 		respawnWeapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
 		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
@@ -2955,29 +2947,25 @@ class CfgVehicles
 		displayName = "Wood Assistant AR";
 		faction = "mas_usa_mars";
 		vehicleClass = "mas_usa_mars_l";
-		Items[] = {"FirstAidKit","FirstAidKit","NVGoggles","acc_pointer_IR"};
-		RespawnItems[] = {"FirstAidKit","FirstAidKit","NVGoggles","acc_pointer_IR"};
-        linkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
-		respawnLinkedItems[] = {"V_mas_mar_PlateCarrierGL_rgr_d","H_mas_mar_helmetv_us","ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","NVGoggles_mas"};
-		weapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"arifle_mas_m16","Throw","Put","Rangefinder"};
-		magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
-		respawnMagazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShell","HandGrenade","HandGrenade"};
+		backpack = "B_mas_AssaultPack_mul_ammo_MG";
 	};
 	class B_mas_mar_Soldier_AAT_F: B_mas_mar_Soldier_AAR_F
 	{
 		_generalMacro = "B_mas_mar_Soldier_AAT_F";
 		displayName = "Wood Assistant AT";
+		backpack = "B_Carryall_mcamo_AAT";
 	};
 	class B_mas_mar_Soldier_AAA_F: B_mas_mar_Soldier_AAR_F
 	{
 		_generalMacro = "B_mas_mar_Soldier_AAA_F";
 		displayName = "Wood Assistant AA";
+		backpack = "B_Carryall_mcamo_AAA";
 	};
 	class B_mas_mar_Soldier_AMM_F: B_mas_mar_Soldier_AAR_F
 	{
 		_generalMacro = "B_mas_mar_Soldier_AMM_F";
 		displayName = "Wood Assistant Ammo";
+		backpack = "B_mas_AssaultPack_mul_ammo";
 	};
 	class B_mas_mar_support_MG_F: B_mas_mar_Soldier_GL_F_v
 	{
@@ -2985,26 +2973,31 @@ class CfgVehicles
 		displayName = "Wood Gunner MG";
 		faction = "mas_usa_mars";
 		vehicleClass = "mas_usa_mars_l";
+		backpack = "B_HMG_01_support_F";
 	};
 	class B_mas_mar_support_GMG_F: B_mas_mar_Soldier_AAR_F
 	{
 		_generalMacro = "B_mas_mar_support_GMG_F";
 		displayName = "Wood Gunner GMG";
+		backpack = "B_GMG_01_weapon_F";
 	};
 	class B_mas_mar_support_Mort_F: B_mas_mar_Soldier_AAR_F
 	{
 		_generalMacro = "B_mas_mar_support_Mort_F";
 		displayName = "Wood Gunner Mortar";
+		backpack = "B_Mortar_01_weapon_F";
 	};
 	class B_mas_mar_support_AMG_F: B_mas_mar_Soldier_AAR_F
 	{
 		_generalMacro = "B_mas_mar_support_AMG_F";
 		displayName = "Wood Support MG\GMG";
+		backpack = "B_HMG_01_support_F";
 	};
 	class B_mas_mar_support_AMort_F: B_mas_mar_Soldier_AAR_F
 	{
 		_generalMacro = "B_mas_mar_support_AMort_F";
 		displayName = "Wood Support Mortar";
+		backpack = "B_Mortar_01_support_F";
 	};
 	class B_mas_mar_Soldier_AAR_F_d: B_mas_mar_Soldier_GL_F_d
 	{
@@ -3012,21 +3005,25 @@ class CfgVehicles
 		displayName = "Des Assistant AR";
 		faction = "mas_usa_mars";
 		vehicleClass = "mas_usa_mars_l";
+		backpack = "B_mas_AssaultPack_mul_ammo_MG";
 	};
 	class B_mas_mar_Soldier_AAT_F_d: B_mas_mar_Soldier_AAR_F_d
 	{
 		_generalMacro = "B_mas_mar_Soldier_AAT_F_d";
 		displayName = "Des Assistant AT";
+		backpack = "B_Carryall_mcamo_AAT";
 	};
 	class B_mas_mar_Soldier_AAA_F_d: B_mas_mar_Soldier_AAR_F_d
 	{
 		_generalMacro = "B_mas_mar_Soldier_AAA_F_d";
 		displayName = "Des Assistant AA";
+		backpack = "B_Carryall_mcamo_AAA";
 	};
 	class B_mas_mar_Soldier_AMM_F_d: B_mas_mar_Soldier_AAR_F_d
 	{
 		_generalMacro = "B_mas_mar_Soldier_AMM_F_d";
 		displayName = "Des Assistant Ammo";
+		backpack = "B_mas_AssaultPack_mul_ammo";
 	};
 	class B_mas_mar_support_MG_F_d: B_mas_mar_Soldier_GL_F_d
 	{
@@ -3034,25 +3031,30 @@ class CfgVehicles
 		displayName = "Des Gunner MG";
 		faction = "mas_usa_mars";
 		vehicleClass = "mas_usa_mars_l";
+		backpack = "B_HMG_01_support_F";
 	};
 	class B_mas_mar_support_GMG_F_d: B_mas_mar_Soldier_AAR_F_d
 	{
 		_generalMacro = "B_mas_mar_support_GMG_F_d";
 		displayName = "Des Gunner GMG";
+		backpack = "B_GMG_01_weapon_F";
 	};
 	class B_mas_mar_support_Mort_F_d: B_mas_mar_Soldier_AAR_F_d
 	{
 		_generalMacro = "B_mas_mar_support_Mort_F_d";
 		displayName = "Des Gunner Mortar";
+		backpack = "B_Mortar_01_weapon_F";
 	};
 	class B_mas_mar_support_AMG_F_d: B_mas_mar_Soldier_AAR_F_d
 	{
 		_generalMacro = "B_mas_mar_support_AMG_F_d";
 		displayName = "Des Support MG\GMG";
+		backpack = "B_HMG_01_support_F";
 	};
 	class B_mas_mar_support_AMort_F_d: B_mas_mar_Soldier_AAR_F_d
 	{
 		_generalMacro = "B_mas_mar_support_AMort_F_d";
 		displayName = "Des Support Mortar";
+		backpack = "B_Mortar_01_support_F";
 	};
 };

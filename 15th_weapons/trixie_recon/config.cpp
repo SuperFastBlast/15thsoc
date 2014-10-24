@@ -77,6 +77,13 @@ class CfgVehicles
 				count = 10;
 			};
 		};	
+		class TransportItems
+		{ 			class _xx_Trixie_Cyclone
+			{
+				name = "Trixie_Cyclone";
+				count = 10;
+			};
+		};
 	};
 };
 
@@ -126,7 +133,7 @@ class CfgWeapons
 			class MuzzleSlot
 			{
 				access = 1;
-				compatibleitems[] = {"muzzle_snds_B"};
+				compatibleitems[] = {"muzzle_snds_B","Trixie_Cyclone"};
 				displayname = "Muzzle Slot";
 				linkproxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
 				scope = 0;
@@ -149,15 +156,17 @@ class CfgWeapons
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"trixie_recon\sound\M110_S1.wav", 1.58489, 1, 1200};
-			    soundbegin[] = {"begin1", 1};
+			    begin1[] = {"trixie_recon\sound\M110_S1",1.0,1,1200};
+				begin2[] = {"trixie_recon\sound\M110_S2",1.0,1,1200};
+				begin3[] = {"trixie_recon\sound\M110_S3",1.0,1,1200};
+				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
-			class SilencedSound: BaseSoundModeType
- 			{
-			    begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
+            class SilencedSound: BaseSoundModeType
+            {
+               begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
+               begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
+               soundBegin[] = {"begin1",0.5,"begin2",0.5};
+            };
 			reloadTime = 0.2;
 		    dispersion = 0.0005;
 		    minRange = 2;
@@ -182,15 +191,17 @@ class CfgWeapons
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"trixie_recon\sound\M110_S1.wav", 1.58489, 1, 1200};
-			    soundbegin[] = {"begin1", 1};
+			    begin1[] = {"trixie_recon\sound\M110_S1",1.0,1,1200};
+				begin2[] = {"trixie_recon\sound\M110_S2",1.0,1,1200};
+				begin3[] = {"trixie_recon\sound\M110_S3",1.0,1,1200};
+				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
-			class SilencedSound: BaseSoundModeType
- 			{
-			    begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
+            class SilencedSound: BaseSoundModeType
+            {
+               begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
+               begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
+               soundBegin[] = {"begin1",0.5,"begin2",0.5};
+            };
 			reloadTime = 0.2;
 		    dispersion = 0.0005;
 		    minRange = 2;
@@ -222,7 +233,7 @@ class CfgWeapons
 		discretedistanceinitindex = 0;
 		reloadaction = "GestureReloadEBR";
 		drySound[] = {"A3\sounds_f\weapons\Other\dry3",0.31622776,1,10};
-		reloadMagazineSound[] = {"A3\sounds_f\weapons\mk20\mk20_reload_final_2",1.0,1,10};
+		reloadMagazineSound[] = {"trixie_recon\sound\M4Reload",1.0,1,10};
 		tmr_autorest_deployable = 1;
 		hasbipod = 1;
 
@@ -249,15 +260,15 @@ class CfgWeapons
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-1",1.0,1,1200};
-				begin2[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-2",1.0,1,1200};
-				begin3[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-3",1.0,1,1200};
+			    begin1[] = {"trixie_recon\sound\sound1",1.0,1,1200};
+				begin2[] = {"trixie_recon\sound\sound2",1.0,1,1200};
+				begin3[] = {"trixie_recon\sound\sound3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			class SilencedSound: BaseSoundModeType
  			{
-			    begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
+			    begin1[] = {"trixie_recon\sound\SF1",1.0,1,200};
+				begin2[] = {"trixie_recon\sound\SF2",1.0,1,200};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
 			reloadTime = 0.1;
@@ -284,15 +295,15 @@ class CfgWeapons
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-1",1.0,1,1200};
-				begin2[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-2",1.0,1,1200};
-				begin3[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-3",1.0,1,1200};
+			    begin1[] = {"trixie_recon\sound\sound1",1.0,1,1200};
+				begin2[] = {"trixie_recon\sound\sound2",1.0,1,1200};
+				begin3[] = {"trixie_recon\sound\sound3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
 			};
 			class SilencedSound: BaseSoundModeType
  			{
-			    begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
+			    begin1[] = {"trixie_recon\sound\SF1",1.0,1,200};
+				begin2[] = {"trixie_recon\sound\SF2",1.0,1,200};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
 			reloadTime = 0.1;
@@ -325,6 +336,7 @@ class CfgWeapons
 		discretedistance[] = {100};
 		discretedistanceinitindex = 0;
 		reloadaction = "GestureReloadEBR";
+		reloadmagazinesound[] = {"trixie_recon\sound\M24Reload", 0.501187, 1, 10};
 		drySound[] = {"A3\sounds_f\weapons\Other\dry3",0.31622776,1,10};
 
 		class WeaponSlotsInfo
@@ -334,7 +346,7 @@ class CfgWeapons
 			class MuzzleSlot
 			{
 				access = 1;
-				compatibleitems[] = {"muzzle_snds_B"};
+				compatibleitems[] = {"muzzle_snds_B","Trixie_Cyclone"};
 				displayname = "Muzzle Slot";
 				linkproxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
 				scope = 0;
@@ -357,15 +369,15 @@ class CfgWeapons
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"trixie_recon\sound\M40A3.wav", 1.58489, 1, 1200};
+			    begin1[] = {"trixie_recon\sound\M24_s1", 1.58489, 1, 1200};
 			    soundbegin[] = {"begin1", 1};
 			};
-			class SilencedSound: BaseSoundModeType
- 			{
-			    begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
+	        class SilencedSound: BaseSoundModeType
+            {
+               begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
+               begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
+               soundBegin[] = {"begin1",0.5,"begin2",0.5};
+            };
 			reloadTime = 1.5;
 		    dispersion = 0.0005;
 		    minRange = 2;
@@ -390,15 +402,15 @@ class CfgWeapons
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"trixie_recon\sound\M40A3.wav", 1.58489, 1, 1200};
+			    begin1[] = {"trixie_recon\sound\M24_s1", 1.58489, 1, 1200};
 			    soundbegin[] = {"begin1", 1};
 			};
-			class SilencedSound: BaseSoundModeType
- 			{
-			    begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
-			};
+	        class SilencedSound: BaseSoundModeType
+            {
+               begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
+               begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
+               soundBegin[] = {"begin1",0.5,"begin2",0.5};
+            };
 			reloadTime = 1.5;
 		    dispersion = 0.0005;
 		    minRange = 2;
@@ -429,7 +441,7 @@ class CfgWeapons
 		discretedistance[] = {100,200,300};
 		discretedistanceinitindex = 0;
 		reloadaction = "GestureReloadLRR";
-		reloadmagazinesound[] = {"A3\Sounds_F\weapons\M320\M320_reload", 0.501187, 1, 10};
+		reloadmagazinesound[] = {"trixie_recon\sound\M107Reload", 0.501187, 1, 10};
 		drySound[] = {"A3\Sounds_F\weapons\GM6Lynx\GM6_lynx_dry",0.56234133,1,15};
 
 		class WeaponSlotsInfo
@@ -516,6 +528,19 @@ class CfgWeapons
 		  	maxRangeProbab = 0.05;
 			recoil = "recoil_single_gm6";
 			recoilProne = "recoil_single_prone_gm6";
+		};
+	};
+	class Trixie_Cyclone: muzzle_snds_B
+	{
+		scope = 2;
+		mass = 6;
+		author = "Trixie";
+		displayName = "AAC Cyclone";
+		picture = "\trixie_recon\UI\cyclone.paa";
+		model = "\trixie_recon\silencer_01.p3d";
+		class Library
+		{
+			libtextdesc = "Extraordinary sound and recoil reduction are two of the instant benefits of the CYCLONE silencer. Durability is maximized by fully CNC automated fusion welding of every high-temperature aerospace alloy component used in its construction- making 100% suppressed fire possible. The back-pressure lowering design of the silencer aids in shooter comfort, reduces weapon fouling, and minimizes cyclic rate increase.";
 		};
 	};
 };

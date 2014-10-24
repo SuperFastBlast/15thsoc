@@ -363,3 +363,15 @@ class Land_LHD_elev_R: StaticShip
 		destrType=0;//DestructNo;
 	};
 };
+	class CfgFunctions
+	{
+	class FA18
+	class plane
+		{
+			file = "\lhd\fn_fa18";
+			class foldwing{};
+			class loadout{};
+			// class foldwing { file = "\js_jc_fa18\scripts\MISC\FA18_foldwings.sqf"; };
+			// class loadout { file = "\js_jc_fa18\scripts\LOADOUTS\FA18_instant_loadouts.sqf"; };
+		};
+	};

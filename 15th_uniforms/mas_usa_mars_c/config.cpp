@@ -2300,13 +2300,6 @@ class CfgGroups
 						rank = "LIEUTENANT";
 						position[] = {0,0,0};
 					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Offroad_01_F";
-						rank = "SERGEANT";
-						position[] = {0,-10,0};
-					};
 					class Unit2
 					{
 						side = 1;
@@ -2336,33 +2329,6 @@ class CfgGroups
 						position[] = {-10,-10,0};
 					};
 				};
-				class BUS_mas_mar_Motrec2_Team_alive
-				{
-					name = "Offroad SF MG Team";
-					side = 1;
-					faction = "mas_usa_mars";
-					class Unit0
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Offroad_01_armed_F";
-						rank = "LIEUTENANT";
-						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Offroad_01_armed_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
-					};
-					class Unit2
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Offroad_01_armed_F";
-						rank = "CORPORAL";
-						position[] = {5,0,0};
-					};
-				};
 				class BUS_mas_mar_MotInf_Team_alive
 				{
 					name = "Motorized Assault Team";
@@ -2374,13 +2340,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_soldier_TL_F_v";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_hmg_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{
@@ -2401,13 +2360,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_Medic_F_v";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_med_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{
@@ -2436,13 +2388,6 @@ class CfgGroups
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
 					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
-					};
 					class Unit2
 					{
 						side = 1;
@@ -2469,13 +2414,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_soldier_LAA_F_v";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_hmg_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{
@@ -2542,13 +2480,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_soldier_MG_F_v";
 						rank = "CORPORAL";
 						position[] = {14,0,0};
-					};
-					class Unit7
-					{
-						side = 1;
-						vehicle = "B_mas_mar_APC_Wheeled_01_cannon_F";
-						rank = "SERGEANT";
-						position[] = {18,0,0};
 					};
 					class Unit8
 					{
@@ -4230,13 +4161,6 @@ class CfgGroups
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
 					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Boat_Transport_01_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
-					};
 					class Unit2
 					{
 						side = 1;
@@ -4270,13 +4194,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_diver_TL_F";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_SDV_01_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{
@@ -4514,26 +4431,12 @@ class CfgGroups
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
 					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Quadbike_01_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
-					};
 					class Unit2
 					{
 						side = 1;
 						vehicle = "B_mas_mar_medic_F_recn";
 						rank = "CORPORAL";
 						position[] = {5,0,0};
-					};
-					class Unit3
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Quadbike_01_F";
-						rank = "CORPORAL";
-						position[] = {7,0,0};
 					};
 				};
 				class BUS_mas_mar_Motrec1_Team
@@ -4547,13 +4450,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_Soldier_F_rec";
 						rank = "LIEUTENANT";
 						position[] = {0,0,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Offroad_01_F";
-						rank = "SERGEANT";
-						position[] = {0,-10,0};
 					};
 					class Unit2
 					{
@@ -4584,33 +4480,6 @@ class CfgGroups
 						position[] = {-10,-10,0};
 					};
 				};
-				class BUS_mas_mar_Motrec2_Team
-				{
-					name = "Offroad MG MARSOC Team";
-					side = 1;
-					faction = "mas_usa_mars";
-					class Unit0
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Offroad_01_armed_F";
-						rank = "LIEUTENANT";
-						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Offroad_01_armed_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
-					};
-					class Unit2
-					{
-						side = 1;
-						vehicle = "B_mas_mar_Offroad_01_armed_F";
-						rank = "CORPORAL";
-						position[] = {5,0,0};
-					};
-				};
 				class BUS_mas_mar_MotInf_Team_v
 				{
 					name = "Motorized Fire Team Wood";
@@ -4622,13 +4491,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_soldier_TL_F_v";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_hmg_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{
@@ -4650,13 +4512,6 @@ class CfgGroups
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
 					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_hmg_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
-					};
 					class Unit2
 					{
 						side = 1;
@@ -4676,13 +4531,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_soldier_LAT_F_v";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{
@@ -4710,13 +4558,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_soldier_LAA_F_v";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_hmg_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{
@@ -4807,13 +4648,6 @@ class CfgGroups
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
 					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_hmg_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
-					};
 					class Unit2
 					{
 						side = 1;
@@ -4834,13 +4668,6 @@ class CfgGroups
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
 					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_hmg_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
-					};
 					class Unit2
 					{
 						side = 1;
@@ -4860,13 +4687,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_soldier_LAT_F_d";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{
@@ -4894,13 +4714,6 @@ class CfgGroups
 						vehicle = "B_mas_mar_soldier_LAA_F_d";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
-					};
-					class Unit1
-					{
-						side = 1;
-						vehicle = "B_mas_mar_MRAP_01_hmg_F";
-						rank = "SERGEANT";
-						position[] = {0,0,0};
 					};
 					class Unit2
 					{

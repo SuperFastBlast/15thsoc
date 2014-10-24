@@ -157,6 +157,8 @@ class CfgWeapons
 		muzzleend = "konec granatometu";
 		muzzlepos = "usti granatometu";
 		reloadaction = "ReloadMagazine";
+		reloadMagazineSound[]={"m32\sounds\m32_r.wss",1,1,10};
+	    drySound[]={"A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 117;
@@ -178,13 +180,6 @@ class CfgWeapons
 			{
 			 "begin1",1
 			};
-		   reloadMagazineSound[]=
-		   {
-		    "m32\sounds\m32_r.wss",1,1,10
-		   };
-		   drySound[]=
-		  {
-		   "A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10};
 		};
 	};
 };

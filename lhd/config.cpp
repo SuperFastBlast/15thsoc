@@ -8,6 +8,20 @@ class CfgPatches
 		requiredAddons[]={};
 	};
 };
+class CfgFunctions
+	{
+		class FA18
+	{
+		class plane
+		{
+			file = "\lhd\fn_fa18";
+			class foldwing{};
+			class loadout{};
+			// class foldwing { file = "\js_jc_fa18\scripts\MISC\FA18_foldwings.sqf"; };
+			// class loadout { file = "\js_jc_fa18\scripts\LOADOUTS\FA18_instant_loadouts.sqf"; };
+		};
+	};
+	};
 class CfgVehicles
 {
 
@@ -342,4 +356,4 @@ class Land_LHD_elev_R: StaticShip
 		displayName=$STR_DN_LHD;
 		destrType=0;//DestructNo;
 	};
-};
+	};

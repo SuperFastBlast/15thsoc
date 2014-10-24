@@ -102,6 +102,8 @@ class CfgWeapons
 		modelOptics = "-";
 		magazines[] = {"1Rnd_M72a6"};
 		magazineReloadTime = 3;
+		reloadMagazineSound[] = {"CAF_M72A6\data\sound\m72a6_load.ogg",0.00031622776,1,20};
+		drySound[] = {"A3\sounds_f\weapons\other\dry6.wav",0.0001,1,10};
 		sounds[] = {"StandardSound"};
 		class BaseSoundModeType
 		{
@@ -112,21 +114,7 @@ class CfgWeapons
 			begin1[] = {"CAF_M72A6\data\sound\m72a6Fire.ogg",1.9952624,1,1000};
 			soundBegin[] = {"begin1",1};
 		};
-		drySound[]=
-		{
-		"",
-		0.0001,
-		1,
-		10
-		};
-		reloadMagazineSound[] =
-		{
-		"CAF_M72A6\data\sound\m72a6_load.ogg",
-		0.00031622776,
-		1,
-		20
-		};
-		soundFly[] = 
+        soundFly[] = 
 		{
 		"\a3\sounds_f\weapons\Rockets\rocket_fly_2",
 		10,
