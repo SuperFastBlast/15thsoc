@@ -307,6 +307,16 @@
 				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or (this distance (nearestObject [this, ""LHD_snapper""]) < 500) and (damage (nearestObject [this, ""LHD_snapper""]) < 1) and player == driver this  and speed this < 1)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_gbu_loadout.sqf""";
 			};
+			class refuel_option {
+				displayName = "Refuel";
+				position = "pilotcontrol";
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+				radius = 5;
+				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or (this distance (nearestObject [this, ""LHD_snapper""]) < 500) and (damage (nearestObject [this, ""LHD_snapper""]) < 1) and player == driver this  and speed this < 1)";
+				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_refuel.sqf""";
+			};
 				class GPS_targeting_system {
 				displayName = "GPS Targeting System";
 				position = "pilotcontrol";
