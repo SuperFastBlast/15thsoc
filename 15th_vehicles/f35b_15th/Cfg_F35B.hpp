@@ -1,8 +1,7 @@
-
-	class F35B: Plane
+class F35B: Plane 
 	{
-
-		scope = 2;
+		
+		scope = 2;		
 		vehicleClass = "Air";
 		side = TWest;
 		faction = BLU_F;
@@ -18,7 +17,7 @@
 
 		model = "\f35b_15th\JS_JC_F35.p3d";
 		animated = 1;
-		simulation = "airplaneX";
+		simulation = "airplane";
 		_generalMacro = "Plane";
 
 		hiddenSelections[] = {"camo1"};
@@ -31,7 +30,7 @@
 
 		destrType = "DestructWreck";
 		damageEffect = "AirDestructionEffects";
-
+		
 		extCameraPosition[] = {0.0, 3.0, -20.0};
 
 		availableForSupportTypes[] = {"CAS_Bombing"};
@@ -50,7 +49,7 @@
 		laserScanner = true;
 		irScanRangeMin = 3500;
 		accuracy = 1.5;	// accuracy needed to recognize type of this target
-
+		
 
 		weapons[] = {"js_w_f35_master_arms_safe",
 		"Cannon_30mm_Plane_CAS_02_F",
@@ -85,7 +84,7 @@
 		landingAoa = "rad 7";
 		gunAimDown = 0.07;
 		type = VAir;
-
+		
 		// threat (VSoft, VArmor, VAir), how threatening vehicle is to unit types
 		threat[] = {1, 1, 0.7};
 
@@ -109,62 +108,62 @@
 		memoryPointRRocket = "r_rocket_point";
 		memoryPointCM[] = {"flare_launcher1", "flare_launcher2"};
 		memoryPointCMDir[] = {"flare_launcher1_dir", "flare_launcher2_dir"};
-
+		
 		class turrets {};
 
-		class Exhausts
+		class Exhausts 
 		{
-			class Exhaust_main
+			class Exhaust_main 
 			{
 				position = "Exhausts_start_main";
 				direction = "Exhausts_end_main";
 				effect = "ExhaustsEffectPlane";
 			};
-
+			
 		};
 
 
-		class WingVortices
+		class WingVortices 
 		{
-			class WingTipLeft
+			class WingTipLeft 
 			{
 				effectName = "WingVortices";
 				position = "cerveny pozicni";
 			};
-
-			class WingTipRight
+			
+			class WingTipRight 
 			{
 				effectName = "WingVortices";
 				position = "zeleny pozicni";
 			};
-
-			class BodyLeft_inner
+			
+			class BodyLeft_inner 
 			{
 				effectName = "BodyVortices";
 				position = "body_vapour_L_S";
 			};
-
-			class BodyRight_inner
+			
+			class BodyRight_inner 
 			{
 				effectName = "BodyVortices";
 				position = "body_vapour_R_S";
 			};
-			class BodyLeft_outer
+			class BodyLeft_outer 
 			{
 				effectName = "BodyVortices";
 				position = "body_vapour_L_E";
 			};
-
-			class BodyRight_outer
+			
+			class BodyRight_outer 
 			{
 				effectName = "BodyVortices";
 				position = "body_vapour_R_E";
 			};
 		};
 
-		class Reflectors
+		class Reflectors 
 		{
-			class Main
+			class Main 
 			{
 				color[] = {7000, 7500, 10000, 1};
 				ambient[] = {100, 100, 100, 0};
@@ -180,8 +179,8 @@
 				useFlare = 1;
 				dayLight = 0;
 				FlareSize = 4;
-
-				class Attenuation
+				
+				class Attenuation 
 				{
 					start = 1;
 					constant = 0;
@@ -189,14 +188,14 @@
 					quadratic = 4;
 				};
 			};
-
-
+			
+			
 		};
-
-		class MarkerLights
+				
+		class MarkerLights 
 		{
 
-			class Cockpit_light_1
+			class Cockpit_light_1 
  			{
 
 				name = "cockpit_light_pos";
@@ -214,7 +213,7 @@
  				};
  			};
 
-			class Red_Still_R
+			class Red_Still_R 
 			{
 				name = "cerveny pozicni";
 				color[] = {1000, 0, 0, 1};
@@ -222,8 +221,8 @@
 				brightness = 0.05;
 				blinking = false;
 			};
-
-			class Green_Still_L
+			
+			class Green_Still_L 
 			{
 				name = "zeleny pozicni";
 				color[] = {0.03, 0.3, 0.03, 1};
@@ -232,7 +231,7 @@
 				blinking = false;
 			};
 
-			class White_Still_C
+			class White_Still_C 
 			{
 				name = "marker_light_white_C";
 				color[] = {0.0388, 0.0388, 0.0388, 1};
@@ -241,16 +240,16 @@
 				blinking = false;
 			};
 
-
+			
 		};
+		
 
-
-		class UserActions
+		class UserActions 
 		{
 
-
-
-			class afterburner
+			
+			
+			class afterburner 
 			{
 
 				displayName = "Afterburner On";
@@ -263,7 +262,7 @@
 				showWindow = 0;
 		                hideOnUse = 1;
 			};
-
+			
 			class afterburneroff
 			{
 				displayName = "Afterburner Off";
@@ -284,7 +283,7 @@
 				showWindow = 0;
 				hideOnUse = 1;
 				radius = 5;
-				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or (this distance (nearestObject [this, ""LHD_snapper""]) < 500) and (damage (nearestObject [this, ""LHD_snapper""]) < 1) and player == driver this  and speed this < 1)";
+				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_cap_loadout.sqf""";
 			};
 			class cas_loadout {
@@ -294,7 +293,7 @@
 				showWindow = 0;
 				hideOnUse = 1;
 				radius = 5;
-				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or (this distance (nearestObject [this, ""LHD_snapper""]) < 500) and (damage (nearestObject [this, ""LHD_snapper""]) < 1) and player == driver this  and speed this < 1)";
+				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_cas_loadout.sqf""";
 			};
 			class gbu_loadout {
@@ -304,7 +303,7 @@
 				showWindow = 0;
 				hideOnUse = 1;
 				radius = 5;
-				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or (this distance (nearestObject [this, ""LHD_snapper""]) < 500) and (damage (nearestObject [this, ""LHD_snapper""]) < 1) and player == driver this  and speed this < 1)";
+				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_gbu_loadout.sqf""";
 			};
 			class refuel_option {
@@ -314,7 +313,7 @@
 				showWindow = 0;
 				hideOnUse = 1;
 				radius = 5;
-				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or (this distance (nearestObject [this, ""LHD_snapper""]) < 500) and (damage (nearestObject [this, ""LHD_snapper""]) < 1) and player == driver this  and speed this < 1)";
+				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_refuel.sqf""";
 			};
 				class GPS_targeting_system {
@@ -331,16 +330,16 @@
 
 
 
-
+			
 		};
 
-		class Damage
+		class Damage 
 		{
 			tex[] = {};
 			mat[] = {"f35b_15th\data\f35.rvmat", "f35b_15th\data\f35_damage.rvmat", "f35b_15th\data\f35_destruct.rvmat"};
 		};
-
-		class Library
+		
+		class Library 
 		{
 			libTextDesc = "The Lockheed Martin F-35 Lightning II is a family of single-seat, single-engine, fifth-generation multirole fighters under development to perform ground attack, reconnaissance, and air defense missions with stealth capability.[8][9] The F-35 has three main models; the F-35A is a conventional takeoff and landing variant, the F-35B is a short take-off and vertical-landing variant, and the F-35C is a carrier-based variant.";
 		};
@@ -352,7 +351,7 @@
 		};
 	};
 
-	class F35Wreck : PlaneWreck
+	class F35Wreck : PlaneWreck 
 	{
 		model = "\f35b_15th\JS_JC_F35Wreck.p3d";
 		typicalCargo[] = {};
