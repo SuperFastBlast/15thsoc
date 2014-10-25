@@ -49,7 +49,7 @@ waitUntil {!isNull player};
 // config [["kindOf classnames"], [ ["position in modelspace"] ]]
 if (isNil "TGP_config") then { TGP_config = [] };
 TGP_config = TGP_config + [
-	[["CHO_F35B_base"], [
+	[["F35B"], [
 		 [ [0,7,0] ]
 	]],
 	[["Plane_Fighter_03_base_F"], [
@@ -477,7 +477,7 @@ if (TGP_Veh_Only == 0) then {
 									};
 									TGP_Uavs = TGP_Uavs - [ (_veh getVariable "TGP") ];
 									deleteVehicle (_veh getVariable "TGP");
-									_tgp = 'B_UAV_02_F' createVehicle [0,0,0];
+									_tgp = 'B_UAV_01_F' createVehicle [0,0,0];
 									_tgp setVehicleVarName _uavname;
 									_tgp setName _uavname;
 									_veh setVariable ["TGP",_tgp,true];
@@ -604,7 +604,7 @@ if (TGP_Veh_Only == 0) then {
 						{
 							if (TGP_RPT_Debug == 1) then {diag_log format ["%1 - %2 TGP creating TGP for %3",_veh,getText (configFile >> 'cfgVehicles' >> typeOf _veh >> 'displayName'),name _unit];};
 							if ((side _unit == west) && (TGP_Veh_Only == 1)) then {
-									_tgp = 'B_UAV_02_F' createVehicleLocal [0,0,0];
+									_tgp = 'B_UAV_01_F' createVehicleLocal [0,0,0];
 									_veh setVariable ["TGP",_tgp,true];
 									if (TGP_Visible == 0) then { _tgp hideObject true };
 									_tgp attachto [_veh,(_x select 0)];
@@ -671,7 +671,7 @@ _sideveh = getText (configFile >> "CfgVehicles" >> typeOf _veh >> "faction");
 
 	{
 		if (_sideveh isEqualTo "BLU_F") then {
-			_tgp = 'B_UAV_02_F' createVehicle [0,0,0];
+			_tgp = 'B_UAV_01_F' createVehicle [0,0,0];
 			_veh setVariable ["TGP",_tgp,true];
 		};
 		if (_sideveh isEqualTo "OPF_F") then {
