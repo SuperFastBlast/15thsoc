@@ -1,5 +1,4 @@
 PBO'S TO REMOVE
-"caf_m72a6.pbo"
 "caf_m72a6_sound.pbo"
 "rh_de.pbo"
 "RH_de_cfg.pbo"
@@ -13,7 +12,7 @@ New ASDG_JointRAILS_Mass_weapons pbo due to new weapons losing joint rails.
 
 REMOVED All the Weapon's Safety's. Dash's Weapon Safety mod should be encouraged instead.
 
-Added back in WEAPON OVERHEATING AND JAMMING custom config's to all weapons. - Credit Sgt's Schultz and Johnston
+Added back in WEAPON OVERHEATING AND JAMMING custom config's to all weapons. (This will be fine tuned based on user feedback) - Credit Sgt's Schultz and Johnston
 
 Added custom ammo for the M9, 1911, and M110 found in Massi's Pack - Credit Sgt's Schultz and Johnston
 
@@ -32,7 +31,9 @@ Fixed Suppressor on M4 and M27 not working. (Note the Bright "Flashs" when the w
 
 Creation of AT-4 CS -Credit Sgt C. Johnston
 
-Added new M203 ammo. Packs abit more of a punch for it to better kill in a 5meter radius. - Credit Sgt C. Johnston
+Edited M72 LAW for minor changes - Credit Sgt Johnston
+
+Added new M203 and 40MM ammo. Packs abit more of a punch for it to better kill in a 5meter radius. - Credit Sgt C. Johnston
 
 M27 IAR / M4's /M16  - Credit Sgt D. Schultz
 Recoil changes Wrong Value. "Auto" instead of "Single" in wrong spot's. Also wrong number's. 5 instead of 4, etc.
@@ -43,13 +44,14 @@ Adjusted Dispersion.
 Lowered the M240 to 0.3 from 0.32. (Also increased Recoil slightly. Based on user feedback)
 Increased M249 to 0.35 from 0.2. This was a mistake, now corrected.
 
-ALL WEAPONS AND AMMO'S have had their Weight's ADJUSTED to that of their real world counterparts based on the weight revealed by AGM. On average, the weight of most billets has increased by 20 to 25% - Credit Sgt D. Schultz
+Changes made to the SMAW so that HEDP and HEAA have different damage vaules and both are effective now at what they are designed to do.
 
+ALL WEAPONS, AMMO'S, AND ALL CLOTHING, VESTS AND BACKPACKS have had their Weight's ADJUSTED to that of their real world counterparts based on the weight revealed by AGM. On average, the weight of most billets has increased by 20 to 25% - Credit Sgt D. Schultz
 Note this does not include items from AGM.
-Note this does not include clothing, helments, backpacks, etc that we use from Massie. These are slated to be adjusted for the Oct 30th update.
 
 
-Sgt Schultz and Sgt Johnston are looking into being able to get rid of the custom ammo's of the M4/M16/M27. This could be possible via a client side script we will be working on for hopeful release Oct 30th.
+New Muzzlevelocity fix - No more need for custom ammo. - Credit Sgt Schultz and Johnston.
+
 
 
 
