@@ -1,6 +1,7 @@
+// REVISION 27OCT14
+
 //15th Marauder Automatic Rifleman Loadout
 //By: 2ndLt Callaghan
-// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -29,22 +30,22 @@
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
 
  _unit addweapon "ej_IAR30";
  _unit addPrimaryWeaponItem "Optic_Hamr";

@@ -1,4 +1,4 @@
-// REVISION 15OCT14
+// REVISION 27OCT14
 
 // class CfgVehicles
 // {
@@ -189,6 +189,10 @@
 				count = 20;
 				name = "Binocular";
 			};
+			class _xx_meu_MX2A_tan {
+				count = 20;
+				name = "meu_MX2A_tan";
+			};
 			class _xx_Rangefinder {
 				count = 20;
 				name = "Rangefinder";
@@ -269,21 +273,13 @@
 				count = 100;
 				magazine = "M882_9mm";
 			};
-			class _xx_30Rnd_M16_556x45_Stanag {
+			class _xx_30Rnd_M855A1_556x45_Stanag {
 				count = 200;
-				magazine = "30Rnd_M16_556x45_Stanag";
+				magazine = "30Rnd_M855A1_556x45_Stanag";
 			};
-			class _xx_30Rnd_M16_556x45_T_Stanag {
+			class _xx_30Rnd_M855A1_556x45_T_Stanag {
 				count = 100;
-				magazine = "30Rnd_M16_556x45_T_Stanag";
-			};
-			class _xx_30Rnd_M4_556x45_Stanag {
-				count = 200;
-				magazine = "30Rnd_M4_556x45_Stanag";
-			};
-			class _xx_30Rnd_M4_556x45_T_Stanag {
-				count = 100;
-				magazine = "30Rnd_M4_556x45_T_Stanag";
+				magazine = "30Rnd_M855A1_556x45_T_Stanag";
 			};
 			class _xx_100Rnd_M240_762x51_Stanag {
 				count = 100;
@@ -297,33 +293,25 @@
 				count = 100;
 				magazine = "200Rnd_M249_556x45_Stanag";
 			};
-			class _xx_200Rnd_M249_556x45_Stanag_tracer {
+			class _xx_200Rnd_M249_556x45_T_Stanag {
 				count = 100;
-				magazine = "200Rnd_M249_556x45_Stanag_tracer";
-			};
-			class _xx_M118LR_Ball {
-				count = 50;
-				magazine = "M118LR_Ball";
-			};
-			class _xx_M118LR_Tracer {
-				count = 50;
-				magazine = "M118LR_Tracer";
+				magazine = "200Rnd_M249_556x45_T_Stanag";
 			};
 			class _xx_7Rnd_mas_12Gauge_Slug {
 				count = 100;
 				magazine = "7Rnd_mas_12Gauge_Slug";
 			};
-			class _xx_B_mas_12Gauge_Pellets {
+			class _xx_7Rnd_mas_12Gauge_Pellets {
 				count = 100;
-				magazine = "B_mas_12Gauge_Pellets";
+				magazine = "7Rnd_mas_12Gauge_Pellets";
 			};
-			class _xx_30Rnd_M27_556x45_Stanag {
+			class _xx_Trixie_20x762_Mag {
 				count = 100;
-				magazine = "30Rnd_M27_556x45_Stanag";
+				magazine = "Trixie_20x762_Mag";
 			};
-			class _xx_30Rnd_M27_556x45_T_Stanag {
+			class _xx_Trixie_30x556_Mk262_Mag {
 				count = 100;
-				magazine = "30Rnd_M27_556x45_T_Stanag";
+				magazine = "Trixie_30x556_Mk262_Mag";
 			};
 			
 
@@ -466,10 +454,6 @@
 				count = 20;
 				weapon = "arifle_mas_m16_gl";
 			};
-			class _xx_srifle_mas_sr25_h {
-				count = 5;
-				weapon = "srifle_mas_sr25_h";
-			};
 			class _xx_LMG_mas_M249a_F {
 				count = 20;
 				weapon = "LMG_mas_M249a_F";
@@ -486,6 +470,10 @@
 				count = 20;
 				weapon = "meu_AT4";
 			};
+			class _xx_meu_AT4_CS {
+				count = 20;
+				weapon = "meu_AT4_CS";
+			};
 			class _xx_CAF_M72A6 {
 				count = 5;
 				weapon = "CAF_M72A6";
@@ -494,9 +482,13 @@
 				count = 6;
 				weapon = "M32";
 			};
-			class _xx_srifle_mas_m110 {
+			class _xx_Trixie_M110 {
 				count = 2;
-				weapon = "srifle_mas_m110";
+				weapon = "Trixie_M110";
+			};
+			class _xx_Trixie_MK12 {
+				count = 2;
+				weapon = "Trixie_MK12";
 			};
 			class _xx_arifle_mas_m1014 {
 				count = 3;

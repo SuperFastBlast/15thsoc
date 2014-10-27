@@ -1,5 +1,6 @@
+// REVISION 27OCT14
+
 //Bravo (AAV) Company crewman loadout
-// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -42,16 +43,16 @@
 // _unit assignitem "itemRadio"; //Commented out due to TFAR funkyness upon spawn in causing a dissapearing radio
 
 
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
  
  _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "optic_Hamr";

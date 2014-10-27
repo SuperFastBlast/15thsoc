@@ -1,4 +1,4 @@
-// REVISION 14OCT14
+// REVISION 27OCT14
 
 // class CfgVehicles
 // {
@@ -127,29 +127,17 @@
 				count = 12;
 				magazine = "M882_9mm";
 			};
-			class _xx_30Rnd_M16_556x45_Stanag {
-				count = 60;
-				magazine = "30Rnd_M16_556x45_Stanag";
+			class _xx_30Rnd_M855A1_556x45_Stanag {
+				count = 100;
+				magazine = "30Rnd_M855A1_556x45_Stanag";
 			};
-			class _xx_30Rnd_M16_556x45_T_Stanag {
-				count = 60;
-				magazine = "30Rnd_M16_556x45_T_Stanag";
-			};
-			class _xx_30Rnd_M4_556x45_Stanag {
-				count = 60;
-				magazine = "30Rnd_M4_556x45_Stanag";
-			};
-			class _xx_30Rnd_M4_556x45_T_Stanag {
-				count = 60;
-				magazine = "30Rnd_M4_556x45_T_Stanag";
+			class _xx_30Rnd_M855A1_556x45_T_Stanag {
+				count = 100;
+				magazine = "30Rnd_M855A1_556x45_T_Stanag";
 			};
 			class _xx_200Rnd_M249_556x45_T_Stanag {
 				count = 100;
 				magazine = "200Rnd_M249_556x45_T_Stanag";
-			};
-			class _xx_30Rnd_M27_556x45_T_Stanag {
-				count = 100;
-				magazine = "30Rnd_M27_556x45_T_Stanag";
 			};
 
 // THROWN

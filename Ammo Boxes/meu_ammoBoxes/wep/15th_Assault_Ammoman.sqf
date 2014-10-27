@@ -1,7 +1,8 @@
+// REVISION 27OCT14
+
 //15th Weapons Assault Assistant Gunner
 //15thMEU Realism Unit, Weapons Platoon
 //By: SSgt Callaghan
-// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -33,16 +34,16 @@
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
 
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
 
 
  _unit addweapon "M4Car";

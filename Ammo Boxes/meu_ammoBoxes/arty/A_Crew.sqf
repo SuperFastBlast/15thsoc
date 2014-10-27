@@ -1,4 +1,4 @@
-// REVISION 14OCT14
+// REVISION 27OCT14
 
  _unit = _this select 1;
  
@@ -26,16 +26,16 @@
 
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
 
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
 
  _unit addweapon "M4Car";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";

@@ -1,5 +1,6 @@
+// REVISION 27OCT14
+
 //15th Automatic Rifleman Loadout
-// REVISION 15OCT14
 
  _unit = _this select 1;
  
@@ -30,22 +31,22 @@
  (unitBackpack _unit) additemCargo ["itemRadio",2];
  (unitBackpack _unit) addmagazineCargo ["M855A1_M27IAR",6];
  
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M27_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
 
  _unit addweapon "ej_IAR30";
  _unit addPrimaryWeaponItem "FHQ_optic_ACOG";

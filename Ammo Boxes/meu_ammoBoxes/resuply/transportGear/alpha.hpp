@@ -1,4 +1,4 @@
-// REVISION 14OCT14
+// REVISION 27OCT14
 
 		class TransportItems {
 		
@@ -31,9 +31,9 @@
 		
 // AMMO
 
-			class _xx_30Rnd_M16_556x45_Stanag {
+			class _xx_30Rnd_M855A1_556x45_Stanag {
 				count = 50;
-				magazine = "30Rnd_M16_556x45_Stanag";
+				magazine = "30Rnd_M855A1_556x45_Stanag";
 			};
 			class _xx_200Rnd_M249_556x45_Stanag {
 				count = 6;

@@ -1,4 +1,4 @@
-// REVISION 14OCT14
+// REVISION 27OCT14
 
 // class CfgVehicles
 // {
@@ -176,21 +176,13 @@
 				count = 100;
 				magazine = "M882_9mm";
 			};
-			class _xx_30Rnd_M16_556x45_Stanag {
+			class _xx_30Rnd_M855A1_556x45_Stanag {
 				count = 200;
-				magazine = "30Rnd_M16_556x45_Stanag";
+				magazine = "30Rnd_M855A1_556x45_Stanag";
 			};
-			class _xx_30Rnd_M16_556x45_T_Stanag {
+			class _xx_30Rnd_M855A1_556x45_T_Stanag {
 				count = 100;
-				magazine = "30Rnd_M16_556x45_T_Stanag";
-			};
-			class _xx_30Rnd_M4_556x45_Stanag {
-				count = 200;
-				magazine = "30Rnd_M4_556x45_Stanag";
-			};
-			class _xx_30Rnd_M4_556x45_T_Stanag {
-				count = 100;
-				magazine = "30Rnd_M4_556x45_T_Stanag";
+				magazine = "30Rnd_M855A1_556x45_T_Stanag";
 			};
 			class _xx_100Rnd_M240_762x51_Stanag {
 				count = 100;
@@ -204,25 +196,9 @@
 				count = 100;
 				magazine = "200Rnd_M249_556x45_Stanag";
 			};
-			class _xx_200Rnd_M249_556x45_Stanag_tracer {
+			class _xx_200Rnd_M249_556x45_T_Stanag {
 				count = 100;
-				magazine = "200Rnd_M249_556x45_Stanag_tracer";
-			};
-			class _xx_M118LR_Ball {
-				count = 50;
-				magazine = "M118LR_Ball";
-			};
-			class _xx_M118LR_Tracer {
-				count = 50;
-				magazine = "M118LR_Tracer";
-			};
-			class _xx_30Rnd_M27_556x45_Stanag {
-				count = 100;
-				magazine = "30Rnd_M27_556x45_Stanag";
-			};
-			class _xx_30Rnd_M27_556x45_T_Stanag {
-				count = 100;
-				magazine = "30Rnd_M27_556x45_T_Stanag";
+				magazine = "200Rnd_M249_556x45_T_Stanag";
 			};
 			
 // SMOKE + 203
@@ -331,10 +307,6 @@
 			class _xx_arifle_mas_m16_gl {
 				count = 5;
 				weapon = "arifle_mas_m16_gl";
-			};
-			class _xx_srifle_mas_sr25_h {
-				count = 5;
-				weapon = "srifle_mas_sr25_h";
 			};
 			class _xx_LMG_mas_M249a_F {
 				count = 5;

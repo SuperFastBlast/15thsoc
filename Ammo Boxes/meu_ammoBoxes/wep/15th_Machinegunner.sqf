@@ -1,7 +1,9 @@
+// REVISION 27OCT14
+
 //15th Weapons MG Gunner
 //15thMEU Realism Unit, Weapons Platoon
 //By: SSgt Callaghan
-// REVISION 14OCT14
+
  _unit = _this select 1;
  
  if (!local _unit) exitWith {};

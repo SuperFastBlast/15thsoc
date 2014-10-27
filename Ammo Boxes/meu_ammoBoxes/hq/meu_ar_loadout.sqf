@@ -1,5 +1,6 @@
+// REVISION 27OCT14
+
 //15th Automatic Rifleman Loadout
-// REVISION 14OCT14
 
  _unit = _this select 1;
  

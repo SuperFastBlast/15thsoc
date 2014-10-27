@@ -1,4 +1,4 @@
-// REVISION 15OCT14
+// REVISION 27OCT14
 
 // class CfgVehicles
 // {
@@ -34,9 +34,13 @@
 				count = 25;
 				name = "optic_mas_handle";
 			};
-			class _xx_SFLMG_ej {
+			class _xx_SFLMG_ej {					//IAR SUPRESSOR
 				count = 5;
 				name = "SFLMG_ej";
+			};
+			class _xx_Trixie_Cyclone {				//M110 AND M40 SUPRESSOR
+				count = 5;
+				name = "Trixie_Cyclone";
 			};
 
 // OPTICS
@@ -247,6 +251,10 @@
 				count = 25;
 				name = "Binocular";
 			};
+			class _xx_meu_MX2A_tan {
+				count = 25;
+				name = "meu_MX2A_tan";
+			};
 			class _xx_Rangefinder {
 				count = 25;
 				name = "Rangefinder";
@@ -329,6 +337,10 @@
 				count = 25;
 				name = "V_mas_mar_PlateCarrier2_rgr";
 			};
+			class _xx_V_mas_mar_PlateCarrierGL_rgr_d {
+				count = 25;
+				name = "V_mas_mar_PlateCarrierGL_rgr_d";
+			};
 			class _xx_V_PlateCarrier1_blk {
 				count = 25;
 				name = "V_PlateCarrier1_blk";
@@ -361,17 +373,17 @@
 			};
 
 // UNIFORMS
-			class _xx_U_mas_mar_B_CombatUniform_wood_vest3 {
+			class _xx_U_mas_mar_B_CombatUniform_wood_vest3 {		//BLACK SHIRT, OLD WOOD CAMO PANTS
 				count = 25;
 				name = "U_mas_mar_B_CombatUniform_wood_vest3";
 			};
-			class _xx_U_mas_mar_B_CombatUniform_veg {
+			class _xx_U_mas_mar_B_CombatUniform_veg_vest {			//WOOD MARPAT SLEEVES UP
 				count = 25;
-				name = "U_mas_mar_B_CombatUniform_veg";
+				name = "U_mas_mar_B_CombatUniform_veg_vest";
 			};
-			class _xx_U_mas_mar_B_CombatUniform_des {
+			class _xx_U_mas_mar_B_CombatUniform_des_vest {			//DESERT MARPAT SLEEVES UP
 				count = 25;
-				name = "U_mas_mar_B_CombatUniform_des";
+				name = "U_mas_mar_B_CombatUniform_des_vest";
 			};
 			
 // MEDICAL
@@ -403,66 +415,56 @@
 				count = 250;
 				magazine = "M882_9mm";
 			};
+			class _xx_30Rnd_M855A1_556x45_Stanag {
+				count = 500;
+				magazine = "30Rnd_M855A1_556x45_Stanag";
+			};
+			class _xx_30Rnd_M855A1_556x45_T_Stanag {
+				count = 100;
+				magazine = "30Rnd_M855A1_556x45_T_Stanag";
+			};
+			class _xx_200Rnd_M249_556x45_Stanag {
+				count = 100;
+				magazine = "200Rnd_M249_556x45_Stanag";
+			};
+			class _xx_200Rnd_M249_556x45_T_Stanag {
+				count = 50;
+				magazine = "200Rnd_M249_556x45_T_Stanag";
+			};
+			class _xx_100Rnd_M240_762x51_Stanag {
+				count = 100;
+				magazine = "100Rnd_M240_762x51_Stanag";
+			};
+			class _xx_100Rnd_M240_762x51_T_Stanag {
+				count = 50;
+				magazine = "100Rnd_M240_762x51_T_Stanag";
+			};
+			class _xx_Trixie_10x127_HEIAP_Mag {
+				count = 50;
+				magazine = "Trixie_10x127_HEIAP_Mag";
+			};
+			class _xx_Trixie_20x762_Mag {
+				count = 100;
+				magazine = "Trixie_20x762_Mag";
+			};
+			class _xx_Trixie_30x556_Mk262_Mag {
+				count = 100;
+				magazine = "Trixie_30x556_Mk262_Mag";
+			};
+			class _xx_Trixie_5x762_Mag {
+				count = 100;
+				magazine = "Trixie_5x762_Mag";
+			};
 			class _xx_7Rnd_mas_12Gauge_Slug {
 				count = 50;
 				magazine = "7Rnd_mas_12Gauge_Slug";
 			};
-			class _xx_B_mas_12Gauge_Pellets {
+			class _xx_7Rnd_mas_12Gauge_Pellets {
 				count = 50;
-				magazine = "B_mas_12Gauge_Pellets";
+				magazine = "7Rnd_mas_12Gauge_Pellets";
 			};
-			class _xx_30Rnd_M4_556x45_Stanag {
-				count = 750;
-				magazine = "30Rnd_M4_556x45_Stanag";
-			};
-			class _xx_30Rnd_M4_556x45_T_Stanag {
-				count = 750;
-				magazine = "30Rnd_M4_556x45_T_Stanag";
-			};
-			class _xx_M118LR_Ball {
-				count = 750;
-				magazine = "M118LR_Ball";
-			};
-			class _xx_M118LR_Tracer {
-				count = 750;
-				magazine = "M118LR_Tracer";
-			};
-			class _xx_20Rnd_762x51_Mag {
-				count = 750;
-				magazine = "20Rnd_762x51_Mag";
-			};
-			class _xx_200Rnd_M249_556x45_Stanag {
-				count = 750;
-				magazine = "200Rnd_M249_556x45_Stanag";
-			};
-			class _xx_200Rnd_M249_556x45_Stanag_tracer {
-				count = 750;
-				magazine = "200Rnd_M249_556x45_Stanag_tracer";
-			};
-			class _xx_30Rnd_M27_556x45_Stanag {
-				count = 100;
-				magazine = "30Rnd_M27_556x45_Stanag";
-			};
-			class _xx_30Rnd_M27_556x45_T_Stanag {
-				count = 100;
-				magazine = "30Rnd_M27_556x45_T_Stanag";
-			};
-			class _xx_100Rnd_M240_762x51_Stanag {
-				count = 750;
-				magazine = "100Rnd_M240_762x51_Stanag";
-			};
-			class _xx_100Rnd_M240_762x51_T_Stanag {
-				count = 750;
-				magazine = "100Rnd_M240_762x51_T_Stanag";
-			};
-			class _xx_5Rnd_mas_127x99_Stanag {
-				count = 750;
-				magazine = "5Rnd_mas_127x99_Stanag";
-			};
-			class _xx_5Rnd_mas_127x99_T_Stanag {
-				count = 750;
-				magazine = "5Rnd_mas_127x99_T_Stanag";
-			};
+			
+// LAUNCHED
 			class _xx_Trixie_SMAW_HEAA {
 				count = 50;
 				magazine = "Trixie_SMAW_HEAA";
@@ -470,58 +472,6 @@
 			class _xx_Trixie_SMAW_HEDP {
 				count = 50;
 				magazine = "Trixie_SMAW_HEDP";
-			};
-			class _xx_SmokeShell {
-				count = 50;
-				magazine = "SmokeShell";
-			};
-			class _xx_SmokeShellGreen {
-				count = 50;
-				magazine = "SmokeShellGreen";
-			};
-			class _xx_SmokeShellRed {
-				count = 50;
-				magazine = "SmokeShellRed";
-			};
-			class _xx_SmokeShellYellow {
-				count = 50;
-				magazine = "SmokeShellYellow";
-			};
-			class _xx_SmokeShellBlue {
-				count = 50;
-				magazine = "SmokeShellBlue";
-			};
-			class _xx_SmokeShellPurple {
-				count = 50;
-				magazine = "SmokeShellPurple";
-			};
-			class _xx_HandGrenade {
-				count = 100;
-				magazine = "HandGrenade";
-			};
-			class _xx_MiniGrenade {
-				count = 100;
-				magazine = "MiniGrenade";
-			};
-			class _xx_REV1_flash {
-				count = 100;
-				magazine = "REV1_flash";
-			};
-			class _xx_Chemlight_blue {
-				count = 50;
-				magazine = "Chemlight_blue";
-			};
-			class _xx_Chemlight_red {
-				count = 50;
-				magazine = "Chemlight_red";
-			};
-			class _xx_Chemlight_green {
-				count = 50;
-				magazine = "Chemlight_green";
-			};
-			class _xx_Chemlight_yellow {
-				count = 50;
-				magazine = "Chemlight_yellow";
 			};
 			class _xx_M433_40mm_HEDP_Shell {
 				count = 50;
@@ -555,6 +505,36 @@
 				count = 30;
 				magazine = "6Rnd_HE_M32";
 			};
+			
+// THROWN
+			class _xx_HandGrenade {
+				count = 100;
+				magazine = "HandGrenade";
+			};
+			class _xx_MiniGrenade {
+				count = 100;
+				magazine = "MiniGrenade";
+			};
+			class _xx_REV1_flash {
+				count = 100;
+				magazine = "REV1_flash";
+			};
+			class _xx_Chemlight_blue {
+				count = 50;
+				magazine = "Chemlight_blue";
+			};
+			class _xx_Chemlight_red {
+				count = 50;
+				magazine = "Chemlight_red";
+			};
+			class _xx_Chemlight_green {
+				count = 50;
+				magazine = "Chemlight_green";
+			};
+			class _xx_Chemlight_yellow {
+				count = 50;
+				magazine = "Chemlight_yellow";
+			};
 			class _xx_AGM_HandFlare_White {
 				count = 50;
 				magazine = "AGM_HandFlare_White";
@@ -570,6 +550,30 @@
 			class _xx_AGM_HandFlare_Yellow {
 				count = 50;
 				magazine = "AGM_HandFlare_Yellow";
+			};
+			class _xx_SmokeShell {
+				count = 50;
+				magazine = "SmokeShell";
+			};
+			class _xx_SmokeShellGreen {
+				count = 50;
+				magazine = "SmokeShellGreen";
+			};
+			class _xx_SmokeShellRed {
+				count = 50;
+				magazine = "SmokeShellRed";
+			};
+			class _xx_SmokeShellYellow {
+				count = 50;
+				magazine = "SmokeShellYellow";
+			};
+			class _xx_SmokeShellBlue {
+				count = 50;
+				magazine = "SmokeShellBlue";
+			};
+			class _xx_SmokeShellPurple {
+				count = 50;
+				magazine = "SmokeShellPurple";
 			};
 			
 //EXPLOSIVES
@@ -645,17 +649,29 @@
 				count = 5;
 				weapon = "LMG_mas_M240_F";
 			};
-			class _xx_srifle_mas_m107 {
+			class _xx_Trixie_M107 {
 				count = 5;
-				weapon = "srifle_mas_m107";
+				weapon = "Trixie_M107";
 			};
-			class _xx_srifle_mas_m110 {
+			class _xx_Trixie_M110 {
 				count = 5;
-				weapon = "srifle_mas_m110";
+				weapon = "Trixie_M110";
+			};
+			class _xx_Trixie_MK12 {
+				count = 5;
+				weapon = "Trixie_MK12";
+			};
+			class _xx_Trixie_M40A3 {
+				count = 5;
+				weapon = "Trixie_M40A3";
 			};
 			class _xx_meu_AT4 {
-				count = 25;
+				count = 20;
 				weapon = "meu_AT4";
+			};
+			class _xx_meu_AT4_CS {
+				count = 20;
+				weapon = "meu_AT4_CS";
 			};
 			class _xx_Trixie_SMAW {
 				count = 3;

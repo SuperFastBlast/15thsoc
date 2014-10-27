@@ -1,6 +1,7 @@
+// REVISION 27OCT14
+
 //15th Marauder Scout Team Leader Loadout
 //By: 2ndLt Callaghan
-// REVISION 14OCT14
 
  _unit = _this select 1;
  
@@ -37,14 +38,14 @@
  (unitBackpack _unit) addmagazineCargo ["1Rnd_Smoke_Grenade_shell",2];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M4_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
 
  _unit addmagazine "M433_40mm_HEDP_Shell";
 
