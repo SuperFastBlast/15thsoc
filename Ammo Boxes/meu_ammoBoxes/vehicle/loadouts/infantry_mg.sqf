@@ -1,8 +1,8 @@
 /// Infantry - MG
-// REVISION 14OCT14
+// REVISION 28OCT14
 [
 	["M882_9mm", 4],
-	["30Rnd_M16_556x45_Stanag", 10],
+	["30Rnd_M855A1_556x45_Stanag", 10],
 	["100Rnd_M240_762x51_Stanag", 10],
 	["ClaymoreDirectionalMine_Remote_Mag",2],
 	["itemRadio", 2],

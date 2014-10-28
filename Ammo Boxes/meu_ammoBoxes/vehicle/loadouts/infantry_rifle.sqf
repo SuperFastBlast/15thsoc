@@ -1,8 +1,8 @@
 /// Infantry - Rifle
-// REVISION 14OCT14
+// REVISION 28OCT14
 [
 	["M882_9mm", 4],
-	["30Rnd_M16_556x45_Stanag", 10],
+	["30Rnd_M855A1_556x45_Stanag", 10],
 	["200Rnd_M249_556x45_Stanag", 4],
 	["ClaymoreDirectionalMine_Remote_Mag",2],
 	["itemRadio", 2],
