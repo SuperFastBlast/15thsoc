@@ -72,11 +72,11 @@ class CfgVehicles
 			};
 		};
 		attenuationEffectType = "OpenCarAttenuation";
-		insideSoundCoef = 1;
-		soundEngineOnInt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_start",1.0,1.0};
-		soundEngineOnExt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_start",1.0,1.0,150};
-		soundEngineOffInt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_stop",1.0,1.0};
-		soundEngineOffExt[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_stop",1.0,1.0,150};
+		insideSoundCoef = 0.9;
+        	soundEngineOnInt[]={"15thCRRC\sound\ext-boat-start-01",1.0,1.0};
+        	soundEngineOnExt[]={"15thCRRC\sound\ext-boat-start-01",1.0,1.0,150};
+      		soundEngineOffInt[]={"15thCRRC\sound\ext-boat-stop-01",1.0,1.0};
+        	soundEngineOffExt[]={"15thCRRC\sound\ext-boat-stop-01",1.0,1.0,150};
 		buildCrash0[] = {"A3\sounds_f\Vehicles\soft\noises\crash_building_01",1.7782794,1,200};
 		buildCrash1[] = {"A3\sounds_f\Vehicles\soft\noises\crash_building_02",1.7782794,1,200};
 		buildCrash2[] = {"A3\sounds_f\Vehicles\soft\noises\crash_building_03",1.7782794,1,200};
@@ -94,29 +94,30 @@ class CfgVehicles
 		ArmorCrash2[] = {"A3\sounds_f\Vehicles\soft\noises\crash_vehicle_03",1.7782794,1,200};
 		ArmorCrash3[] = {"A3\sounds_f\Vehicles\soft\noises\crash_vehicle_04",1.7782794,1,200};
 		soundArmorCrash[] = {"ArmorCrash0",0.25,"ArmorCrash1",0.25,"ArmorCrash2",0.25,"ArmorCrash3",0.25};
-		class Sounds
-		{
-			class IdleOut
-			{
-				sound[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_idle_1",0.70794576,1.0,150};
+        class Sounds
+        {
+            		class IdleOut
+            		{
+                		sound[]={"15thCRRC\sound\ext-boat-engine-idle-01",0.70794576,1.0,150};
 				frequency = "0.95	+	((rpm/	1200) factor[(100/	1200),(200/	1200)])*0.15";
 				volume = "engineOn*(((rpm/	1200) factor[(0/	1200),(30/	1200)])	*	((rpm/	1200) factor[(500/	1200),(300/	1200)]))";
-			};
-			class Engine
-			{
-				sound[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_low2",1.0,1.2,300};
+            		};
+            		class Engine
+            		{
+                		sound[]={"15thCRRC\sound\ext-boat-engine-low-01",1.0,1.2,300};
 				frequency = "0.95	+	((rpm/	1200) factor[(300/	1200),(600/	1200)])*0.2";
 				volume = "engineOn*(((rpm/	1200) factor[(200/	1200),(300/	1200)])	*	((rpm/	1200) factor[(600/	1200),(400/	1200)]))";
-			};
+			
+            		};
 			class EngineMidOut
 			{
-				sound[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_mid2",1.4125376,0.6,400};
+                		sound[]={"15thCRRC\sound\ext-boat-engine-low-01",1.4125376,1.0,400};
 				frequency = "0.95	+	((rpm/	1200) factor[(600/	1200),(900/	1200)])*0.2";
 				volume = "engineOn*(((rpm/	1200) factor[(350/	1200),(500/	1200)])	*	((rpm/	1200) factor[(1200/	1200),(900/	1200)]))";
 			};
-			class EngineMaxOut
-			{
-				sound[] = {"A3\Sounds_F\vehicles\boat\Boat_Transport_01\Boat_Transport_01_high2",1.9952624,1.0,500};
+            		class EngineHighOut
+            		{
+                		sound[]={"15thCRRC\sound\ext-boat-engine-high-01",1.9952624,1.0,500};
 				frequency = "0.95	+	((rpm/	1200) factor[(700/	1200),(1000/	1200)])*0.3";
 				volume = "engineOn*((rpm/	1200) factor[(600/	1200),(1200/	1200)])";
 			};
@@ -132,12 +133,6 @@ class CfgVehicles
 				frequency = "1";
 				volume = "((speed factor[2, 6]) min (speed factor[6, 4]))";
 			};
-			class WaternoiseOutW2
-			{
-				sound[] = {"A3\Sounds_F\vehicles\boat\SFX\voda-o-bok-lodi-50-speed",1.0,1.0,300};
-				frequency = "1";
-				volume = "(speed factor[3, 9])";
-			};
 		};
 		driverLeftHandAnimName = "DrivingWheel";
 		driverAction = "Zodiac_Driver";
@@ -150,26 +145,36 @@ class CfgVehicles
 		castCargoShadow = 1;
 		ejectDeadDriver = 0;
 		ejectDeadCargo = 0;
-		maxSpeed = 70;
+		transportMaxBackpacks = 6;
+		maxSpeed = 51;
 		acceleration = 1;
+		idleRpm = 40;
+		redRpm = 1200;
+		class complexGearbox
+		{
+			GearboxRatios[] = {"R1",-0.333,"N",0,"D1",2.0,"D2",1.85,"D3",1.75};
+			TransmissionRatios[] = {"High",1.0};
+			gearBoxMode = "auto";
+			moveOffGear = 1;
+			driveString = "D";
+			neutralString = "N";
+			reverseString = "R";
+		};
 		simulation = "shipX";
-		overSpeedBrakeCoef = 0.8;
-		brakeDistance = 50;
-		enginePower = 50;
-		engineShiftY = 0;
-		fuelCapacity = 80;
-		fuelConsumptionRate = 35;
-		engineFuelEfficiency = 1.0;
-		slowSpeedForwardCoef = 0.09;
-		normalSpeedForwardCoef = 0.5;
-		waterLeakiness = 0.5;
-		waterResistanceCoef = 0.01;
+		enginePower = 90;
+		engineShiftY = -0.3;
+		brakeIdleSpeed = 1.78;
+		brakeDistance = 30;
+		slowSpeedForwardCoef = 0.18;
+		normalSpeedForwardCoef = 0.6;
+		waterLeakiness = 35.0;
+		waterResistanceCoef = 0.015;
 		thrustDelay = 1;
 		waterLinearDampingCoefY = 5;
 		waterLinearDampingCoefX = 2.0;
 		waterAngularDampingCoef = 1.2;
-		rudderForceCoef = 0.1999999999999;
-		rudderForceCoefAtMaxSpeed = 0.00000009;
+		rudderForceCoef = 0.3;
+		rudderForceCoefAtMaxSpeed = 0.02;
 		enableGPS = 1;
 		transportSoldier = 4;
 		supplyRadius = 3;
@@ -182,7 +187,7 @@ class CfgVehicles
 				effect = "ExhaustsEffect";
 			};
 		};
-		armor = 15;
+		armor = 20;
 		fuelExplosionPower = 0;
 		class Turrets{};
 		class Library

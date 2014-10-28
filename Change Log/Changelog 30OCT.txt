@@ -1,3 +1,6 @@
+Recommend to Update to to AGM 0.94.1 - http://www.armaholic.com/page.php?id=25779
+Recommend to Update to Ctab 2.0.1 - http://www.armaholic.com/page.php?id=22992
+
 PBO'S TO REMOVE
 "caf_m72a6_sound.pbo"
 "rh_de.pbo"
@@ -11,17 +14,22 @@ CHANGES MADE -
 New ASDG_JointRAILS_Mass_weapons pbo due to new weapons losing joint rails. 
 
 REMOVED All the Weapon's Safety's. Dash's Weapon Safety mod should be encouraged instead.
+http://www.armaholic.com/page.php?id=23192
 
 Added back in WEAPON OVERHEATING AND JAMMING custom config's to all weapons. (This will be fine tuned based on user feedback) - Credit Sgt's Schultz and Johnston
 
 Added custom ammo for the M9, 1911, and M110 found in Massi's Pack - Credit Sgt's Schultz and Johnston
+This allows use to remove the Robert Hammer pistols, since they were only being used primaryly for damage.
 
-Fixed the M1014 Shotgun Pellets to not be buggy and more reliable - Credit Sgt's Schultz and Johnston
+Fixed the M1014 Shotgun Pellets to not be buggy and be more reliable - Credit Sgt's Schultz and Johnston
+Also adjusted the Dispersion on the M1014
 
 MX-2A Tan/ Olive added to pack. - Credit WO Aaron
 
 15thCRRC adjusted turning and fixed the 90* angle bug. Mission Team rejoice! - Credit Sgt D. Schultz
+Also spent over 20 hours fine-tuning the engine, you will find it to be much more SMOOTHER to control.
 and added to IGI Load - Credit Sgt C. Johnston
+Added in new sounds as well - Credit Sgt J. Wright pulling from ARMA 2 stock CRRC sounds.
 
 New Sounds - Switched out or changed a few sounds based on user feedback. Likely shouldn't need to update this again hopefully. = Credit Sgt J. Wright
 
@@ -58,26 +66,17 @@ New Muzzlevelocity fix - No more need for custom ammo. - Credit Sgt Schultz and 
 
 NEW CLASSNAMES:
 
+"30Rnd_M855A1_556x45_Stanag" //M16,M4,M27 Ammo
+
+"30Rnd_M855A1_556x45_T_Stanag" //M16,M4,M27 Ammo Tracer
 
 "100Rnd_M240_762x51_Stanag"  //M240 Ammo
 
 "100Rnd_M240_762x51_T_Stanag" //M240 Ammo Tracer
 
-"30Rnd_M4_556x45_Stanag"  //M4 Ammo
-
-"30Rnd_M4_556x45_T_Stanag" //M4 Ammo Tracer
-
-"30Rnd_M16_556x45_Stanag" //M16 Ammo
-
-"30Rnd_M16_556x45_T_Stanag" //M16 Ammo Tracer
-
 "200Rnd_M249_556x45_Stanag" //M249 Ammo
 
 "200Rnd_M249_556x45_T_Stanag" //M249 Ammo Tracer
-
-"30Rnd_M27_556x45_T_Stanag" //M27 Ammo
-
-"30Rnd_M27_556x45_Stanag" //M27 Ammo Tracer
 
 "M118LR_Tracer" // M110 Tracer Ammo
 
@@ -96,7 +95,6 @@ NEW CLASSNAMES:
 "7Rnd_mas_12Gauge_Pellets" // Shotgun Pellets
 
 "M433_40mm_HEDP_Shell" // 40mm Ammo for M203. M32 class name remans the same.
-
 
 "meu_MX2A_olive" //MX-2A olive
 
