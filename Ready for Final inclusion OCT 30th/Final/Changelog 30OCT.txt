@@ -1,16 +1,19 @@
 Recommend to Update to to AGM 0.94.1 - http://www.armaholic.com/page.php?id=25779
 Recommend to Update to Ctab 2.0.1 - http://www.armaholic.com/page.php?id=22992
+Recommend to Update to Imrali 1.1 - http://www.armaholic.com/page.php?id=26853
 
 PBO'S TO REMOVE
 "caf_m72a6_sound.pbo"
 "rh_de.pbo"
 "RH_de_cfg.pbo"
-
+"f35b"
 
 
 
 
 CHANGES MADE -
+F-35B Added- Genisi
+
 New ASDG_JointRAILS_Mass_weapons pbo due to new weapons losing joint rails. 
 
 REMOVED All the Weapon's Safety's. Dash's Weapon Safety mod should be encouraged instead.
@@ -78,10 +81,6 @@ NEW CLASSNAMES:
 
 "200Rnd_M249_556x45_T_Stanag" //M249 Ammo Tracer
 
-"M118LR_Tracer" // M110 Tracer Ammo
-
-"M118LR_Ball" // M110 Ball Ammo
-
 "hgun_mas_m9_F" // Massi's M9
 
 "M882_9mm" // M9 ammo
@@ -99,5 +98,38 @@ NEW CLASSNAMES:
 "meu_MX2A_olive" //MX-2A olive
 
 "meu_MX2A_tan" //MX-2A Tan
+
+
+Mk 12 Mod 0 SPR
+Trixie_MK12
+
+Ammo for Mk 12
+Trixie_30x556_Mk262_Mag
+
+
+M110 SASS
+Trixie_M110
+
+Ammo for M110
+Trixie_20x762_Mag
+
+
+M40A5:
+Trixie_M40A3
+
+Ammo:
+Trixie_5x762_Mag
+M107
+Trixie_M107
+
+Ammo: Raufoss Mk 211
+Trixie_10x127_HEIAP_Mag
+
+Silencer for M110/ M40
+Trixie_Cyclone
+
+
+
+
 
  
