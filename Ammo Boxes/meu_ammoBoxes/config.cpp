@@ -14,7 +14,7 @@
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
 #define REQUIRED_VERSION 1.0
-#include "\x\cba\addons\main\script_macros_common.hpp"
+#include "\meu_ammoBoxes\script_macros_common.hpp"
 
 
 class CfgPatches

@@ -10,7 +10,7 @@ weapons[] = {};
 		
 requiredVersion = 0.1;
 		
-requiredAddons[] = {};
+requiredAddons[] = {"A3_Boat_F"};
 	
 };
 

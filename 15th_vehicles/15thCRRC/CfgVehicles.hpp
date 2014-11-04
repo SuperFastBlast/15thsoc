@@ -42,6 +42,8 @@ class CfgVehicles
 		picture = "\A3\boat_F\Boat_Transport_01\data\UI\Boat_Transport_01_CA.paa";
 		Icon = "\A3\boat_F\Boat_Transport_01\data\UI\map_Boat_Transport_01_CA.paa";
 		cost = 50000;
+		threat[] = {0.6,0.2,0.3};
+		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		leftEngineEffect = "LEngEffectsSmall";
 		rightEngineEffect = "REngEffectsSmall";
 		class TransportItems
@@ -146,7 +148,7 @@ class CfgVehicles
 		ejectDeadDriver = 0;
 		ejectDeadCargo = 0;
 		transportMaxBackpacks = 6;
-		maxSpeed = 51;
+		maxSpeed = 50;
 		acceleration = 1;
 		idleRpm = 40;
 		redRpm = 1200;
@@ -176,7 +178,71 @@ class CfgVehicles
 		rudderForceCoef = 0.3;
 		rudderForceCoefAtMaxSpeed = 0.02;
 		enableGPS = 1;
-		transportSoldier = 4;
+		transportSoldier = 0;
+		class CargoTurret;
+		class Turrets
+		{
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction = "passenger_boat_1";
+				gunnerCompartments = "Compartment2";
+				gunnerName = "$STR_A3_TURRETS_CARGOTURRET_R";
+				memoryPointsGetInGunner = "pos cargo RR";
+				memoryPointsGetInGunnerDir = "pos cargo RR dir";
+				proxyIndex = 1;
+				maxElev = 60;
+				minElev = -15;
+				maxTurn = 90;
+				minTurn = -90;
+				isPersonTurret = 1;
+				class dynamicViewLimits
+				{
+					CargoTurret_03[] = {-90,90};
+				};
+			};
+			class CargoTurret_02: CargoTurret_01
+			{
+				gunnerAction = "passenger_boat_2";
+				gunnerName = "$STR_A3_TURRETS_CARGOTURRET_L";
+				memoryPointsGetInGunner = "pos cargo LR";
+				memoryPointsGetInGunnerDir = "pos cargo LR dir";
+				proxyIndex = 2;
+				maxTurn = 90;
+				minTurn = -90;
+				minElev = -15;
+				class dynamicViewLimits
+				{
+					CargoTurret_03[] = {-90,90};
+					CargoTurret_04[] = {-90,90};
+				};
+			};
+			class CargoTurret_03: CargoTurret_01
+			{
+				gunnerAction = "passenger_boat_3";
+				gunnerName = "$STR_A3_TURRETS_CARGOTURRET_F";
+				memoryPointsGetInGunner = "pos cargo RF";
+				memoryPointsGetInGunnerDir = "pos cargo RF dir";
+				proxyIndex = 3;
+				minElev = -15;
+				maxTurn = 90;
+				minTurn = -90;
+				class dynamicViewLimits{};
+			};
+			class CargoTurret_04: CargoTurret_01
+			{
+				gunnerAction = "passenger_boat_4";
+				gunnerName = "$STR_A3_TURRETS_CARGOTURRET_M";
+				memoryPointsGetInGunner = "pos cargo LF";
+				memoryPointsGetInGunnerDir = "pos cargo LF dir";
+				proxyIndex = 4;
+				maxTurn = 90;
+				minTurn = -90;
+				class dynamicViewLimits
+				{
+					CargoTurret_03[] = {-90,90};
+				};
+			};
+		};
 		supplyRadius = 3;
 		class Exhausts
 		{
@@ -189,7 +255,6 @@ class CfgVehicles
 		};
 		armor = 20;
 		fuelExplosionPower = 0;
-		class Turrets{};
 		class Library
 		{
 			libTextDesc = "";
