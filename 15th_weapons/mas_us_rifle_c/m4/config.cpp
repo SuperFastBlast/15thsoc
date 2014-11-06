@@ -194,7 +194,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_M","muzzle_mas_snds_Mc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_SM","muzzle_mas_snds_Mc"};
 			};
 			class CowsSlot
 			{
@@ -465,7 +465,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_M","muzzle_mas_snds_Mc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_SM","muzzle_mas_snds_Mc"};
 			};
 			class CowsSlot
 			{
@@ -2497,7 +2497,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_SMc"};
 			};
 			class CowsSlot
 			{
@@ -2766,7 +2766,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_SMc"};
 			};
 			class CowsSlot
 			{
@@ -3057,7 +3057,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_M","muzzle_mas_snds_Mc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_Mc"};
 			};
 			class CowsSlot
 			{
@@ -5539,7 +5539,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_SMc"};
 			};
 			class CowsSlot
 			{
@@ -5782,7 +5782,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_SMc"};
 			};
 			class CowsSlot
 			{
@@ -5926,7 +5926,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_SMc"};
 			};
 			class CowsSlot
 			{
@@ -6092,7 +6092,7 @@ class CfgWeapons
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"muzzle_mas_snds_SM","muzzle_mas_snds_SMc"};
+				compatibleItems[] = {"muzzle_mas_snds_M","muzzle_mas_snds_SMc"};
 			};
 			class CowsSlot
 			{

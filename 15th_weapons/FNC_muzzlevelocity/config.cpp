@@ -47,15 +47,32 @@ class cfgWeapons
 {
 	class Rifle;
 	class arifle_MX_F;
+	class arifle_MX_GL_F;
 	class arifle_mas_hk416: arifle_MX_F
 	{
-		muzzleVelocityFactor = 0.990;
+		muzzleVelocityFactor = 0.936;
+	};
+	class arifle_mas_hk416_gl: arifle_MX_GL_F
+	{
+		muzzleVelocityFactor = 0.946;
 	};
 class arifle_mas_m4: arifle_mas_hk416  //Needs to be 880 M/S
 {
 	muzzleVelocityFactor = 0.936; 	// (muzzlevelocity of my weapon)/(muzzle velocity of "baseweapon" for the calibre) = muzzleVelocityFactor
 };
-class arifle_mas_m4_gl: arifle_mas_m4 // Needs to be 880 M/S
+class arifle_mas_m4c: arifle_mas_m4 // Needs to be 880 M/S
+{
+	muzzleVelocityFactor = 0.936;
+};
+class arifle_mas_m4_gl: arifle_mas_hk416_gl // Needs to be 880 M/S
+{
+	muzzleVelocityFactor = 0.936;
+};
+class arifle_mas_m4_203: arifle_mas_hk416_gl // Needs to be 880 M/S
+{
+	muzzleVelocityFactor = 0.936;
+};
+class arifle_mas_m4_203c: arifle_mas_hk416_gl // Needs to be 880 M/S
 {
 	muzzleVelocityFactor = 0.936;
 };
@@ -63,7 +80,7 @@ class M4Car: arifle_mas_m4 // Needs to be 880 M/S
 {
 	muzzleVelocityFactor = 0.936;
 };
-class M4203: arifle_mas_m4_gl // Needs to be 880 M/S
+class M4Car203: arifle_mas_m4 // Needs to be 880 M/S
 {
 	muzzleVelocityFactor = 0.936;
 };
@@ -71,7 +88,7 @@ class arifle_mas_m16: arifle_mas_hk416 // Needs to be 948 m/s
 {
 	muzzleVelocityFactor = 1.025;
 };
-class arifle_mas_m16_gl: arifle_mas_m16 // Needs to be 948 m/s
+class arifle_mas_m16_gl: arifle_mas_hk416_gl // Needs to be 948 m/s
 {
 	muzzleVelocityFactor = 1.025;
 };	
