@@ -286,6 +286,16 @@ class F35B: Plane
 				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Box_meu_ace""]) < 999) and (damage (nearestObject [this, ""Box_meu_ace""]) < 1) and player == driver this  and speed this < 10)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_cap_loadout.sqf""";
 			};
+				class cap_loadout_LHD {
+				displayName = "CAP Loadout LHD";
+				position = "pilotcontrol";
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+				radius = 500;
+				condition = "((this distance (nearestObject [this, ""Land_Rope_01_F""]) < 9000) and (damage (nearestObject [this, ""Land_Rope_01_F""]) < 1) and player == driver this  and speed this < 10)";
+				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_cap_loadout.sqf""";
+			};
 			class cas_loadout {
 				displayName = "CAS Loadout";
 				position = "pilotcontrol";
@@ -303,7 +313,7 @@ class F35B: Plane
 				showWindow = 0;
 				hideOnUse = 1;
 				radius = 500;
-				condition = "((this distance (nearestObject [this, ""Box_meu_ace""]) < 9000) and (damage (nearestObject [this, ""Box_meu_ace""]) < 1) and player == driver this  and speed this < 10)";
+				condition = "((this distance (nearestObject [this, ""Land_Rope_01_F""]) < 9000) and (damage (nearestObject [this, ""Land_Rope_01_F""]) < 1) and player == driver this  and speed this < 10)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_cas_loadout.sqf""";
 			};
 			class gbu_loadout {
@@ -316,6 +326,16 @@ class F35B: Plane
 				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Box_meu_ace""]) < 3000) and (damage (nearestObject [this, ""Box_meu_ace""]) < 1) and player == driver this  and speed this < 10)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_gbu_loadout.sqf""";
 			};
+			class gbu_loadout_LHD {
+				displayName = "GBU Loadout LHD";
+				position = "pilotcontrol";
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+				radius = 500;
+				condition = "((this distance (nearestObject [this, ""Land_Rope_01_F""]) < 9000) and (damage (nearestObject [this, ""Land_Rope_01_F""]) < 1) and player == driver this  and speed this < 10)";
+				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_gbu_loadout.sqf""";
+			};
 			class refuel_option {
 				displayName = "Refuel";
 				position = "pilotcontrol";
@@ -324,6 +344,16 @@ class F35B: Plane
 				hideOnUse = 1;
 				radius = 5;
 				condition = "((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 55) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 55) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""JDG_carrier_Spawner""]) < 500) and (damage (nearestObject [this, ""JDG_carrier_Spawner""]) < 1) and player == driver this  and speed this < 1) or ((this distance (nearestObject [this, ""Box_meu_ace""]) < 1000) and (damage (nearestObject [this, ""Box_meu_ace""]) < 1) and player == driver this  and speed this < 10)";
+				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_refuel.sqf""";
+			};
+			class refuel_option_LHD {
+				displayName = "Refuel LHD";
+				position = "pilotcontrol";
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+				radius = 500;
+				condition = "((this distance (nearestObject [this, ""Land_Rope_01_F""]) < 9000) and (damage (nearestObject [this, ""Land_Rope_01_F""]) < 1) and player == driver this  and speed this < 10)";
 				statement = "[this] execVM""f35b_15th\scripts\Loadouts\f35_refuel.sqf""";
 			};
 				class GPS_targeting_system {
