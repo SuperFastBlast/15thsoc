@@ -2555,7 +2555,7 @@ class CfgMagazines
 		mass = 11.8;
 		lastroundstracer = 3;
         	descriptionshort = "M855A1<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
-        	displayname = "M855A1 5.56mm 30rnd";
+        	displayname = "M855A1";
 		picture = "\mas_us_rifle\ui\m_30stanag_CA.paa";
 	};
 	class 30Rnd_M855A1_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
@@ -2566,7 +2566,7 @@ class CfgMagazines
 		count = 30;
 		tracersevery = 1;
         	descriptionshort = "M856<br />Caliber: 5.56x45 mm STANAG Tracer<br />Rounds: 30";
-        	displayname = "M855A1 5.56mm 30rnd Tracer";
+        	displayname = "M856";
 		picture = "\mas_us_rifle\ui\m_30stanag_red_CA.paa";
 	};
 	class 200Rnd_M249_556x45_Stanag: 30Rnd_556x45_Stanag
@@ -2602,7 +2602,7 @@ class CfgMagazines
 		ammo = "B_M80_762x54_Ball";
 		count = 100;
 		descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 100<br />Used in: Mk48,M240";
-		displayname = "M80";
+		displayname = "M80 Linked";
         	initspeed = 853;
         	lastroundstracer = 3;
 		tracersevery = 5;
@@ -2614,7 +2614,7 @@ class CfgMagazines
 		ammo = "B_M80_762x54_Ball_T";
 		count = 100;
 		descriptionshort = "Caliber: 7.62x51 mm STANAG Tracer<br />Rounds: 100<br />Used in: Mk48,M240";
-		displayname = "M62";
+		displayname = "M62 Linked";
 		tracersevery = 1;
 	};
 	class M118LR_Ball: 30Rnd_556x45_Stanag
