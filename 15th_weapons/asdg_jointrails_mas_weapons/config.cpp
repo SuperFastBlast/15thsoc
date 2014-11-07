@@ -238,20 +238,20 @@ class CfgWeapons
 			class asdg_OpticRail_M16GL: asdg_OpticRail1913{};
 		};
 	};
-	class arifle_mas_m4_gl: arifle_mas_hk416_gl
+	class arifle_mas_m4_m203: arifle_mas_hk416_gl
 	{
 		class WeaponSlotsInfo
 		{
-			class asdg_FrontSideRail_M4GL: asdg_FrontSideRail{};
-			class asdg_OpticRail_M4GL: asdg_OpticRail1913{};
+			class asdg_FrontSideRail_M4m203: asdg_FrontSideRail{};
+			class asdg_OpticRail_M4m203: asdg_OpticRail1913{};
 		};
 	};
 	class M4Car203: arifle_mas_hk416_gl
 	{
 		class WeaponSlotsInfo
 		{
-			class asdg_FrontSideRail_HK416GL: asdg_FrontSideRail{};
-			class asdg_OpticRail_HK416GL: asdg_OpticRail1913{};
+			class asdg_FrontSideRail_M4CarGL: asdg_FrontSideRail{};
+			class asdg_OpticRail_M4carGL: asdg_OpticRail1913{};
 		};
 	};
 	class srifle_mas_hk417: srifle_EBR_F
