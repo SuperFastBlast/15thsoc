@@ -199,6 +199,7 @@ class CfgAmmo {
     	scope = public;
     	// Combat effects, DP does more indirect damage than AA but less direct damage
 		hit = 250;
+		model = "trixie_Launchers\SMAW_rocket_inflight.p3d";
 		indirectHit = 75;
 		indirectHitRange = 10;
         
@@ -247,6 +248,7 @@ class CfgAmmo {
 		hit = 750; // Increased damage to direct hits
 		indirectHit = 25; // Reduced damage to indirect hits, there's less explosive
 		indirectHitRange = 3; // Reduced shrapnel distance, there's less explosive
+		model = "trixie_Launchers\SMAW_rocket_inflight.p3d";
         
         // Use AT effects
 		CraterEffects = "ATMissileCrater";
