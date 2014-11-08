@@ -38,13 +38,13 @@
 					};
 					
 					class VerticalSpeed {
-						//type = "linear";
-						//source = "vspeed";
-					//	sourceScale = 1;
-					//	min = -100;
-						//max = 100;
-					//	minPos[] = {0, 0.15};
-					//	maxPos[] = {0, -0.15};
+						type = "linear";
+						source = "vspeed";
+						sourceScale = 1;
+						min = -100;
+						max = 100;
+						minPos[] = {0, 0.15};
+						maxPos[] = {0, -0.15};
 					};
 					
 					class center {
@@ -73,13 +73,13 @@
 					};
 					
 					class VspeedBone {
-					//	type = "linear";
-					//	source = "vspeed";
-					//	sourceScale = 1;
-					//	min = -50;
-					//	max = 50;
-					//	minPos[] = {0.94, 0.4};
-					//	maxPos[] = {0.94, 0.6};
+						type = "linear";
+						source = "vspeed";
+						sourceScale = 1;
+						min = -50;
+						max = 50;
+						minPos[] = {0.94, 0.4};
+						maxPos[] = {0.94, 0.6};
 					};
 				};
 				
