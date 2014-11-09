@@ -1,0 +1,11 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.49
+//Sun Nov 09 06:51:14 2014 : Source 'file' date Sun Nov 09 06:51:14 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class P:/GMVS/data/penetration/glassplate.rvmat{
+surfaceInfo = "gmvs\data\penetration\glassPlate.bisurf";
+//};
