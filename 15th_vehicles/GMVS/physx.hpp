@@ -5,7 +5,7 @@
 		brakeIdleSpeed         	= 1.78; 	/// under what speed (in m/s) does the brake apply for a vehicle without thrust
 		maxSpeed               	= 150; 		/// vehicle can go a bit over, but dramatically decreases thrust
 		fuelCapacity           	= 45;
-		wheelCircumference     	= 1.5; 	/// diameter of 725
+		wheelCircumference     	= 54.61; 	/// diameter of 725
 
 		antiRollbarForceCoef	= 0.5; 	/// how strong is the anti-roll bar of vehicle preventing it to lose grip in turns (not any magical stuff, real ARB)
 		antiRollbarForceLimit	= 0.5; 	/// highest possible force of ARB
@@ -161,7 +161,7 @@
 				// <Description>: Name of the bone, used for wheel and suspension animations.
 				// <Type>: string
 				// <Default>: ""
-				boneName = "wheel_1_1_damper_phys";
+				boneName = "wheel_1_1_damper";
 
 				// <Description>: If true, wheel is steerable, false - wheel is fixed.
 				// <Type>: bool
@@ -249,7 +249,7 @@
 				// <Description>: These values describe the maximum compression and elongation in metres that the spring can support.
 				// <Type>: float
 				// <Default>: 0.15
-				maxCompression = 0.1;
+				maxCompression = 2.0;
 				mMaxDroop = 0.15;
 
 				// <Description>: This is the mass in kg that is supported by the suspension spring.
@@ -261,7 +261,7 @@
 				//   springStrength = naturalFrequency * naturalFrequency * sprungMass
 				// <Type>: float
 				// <Default>: sprungMass*5,0*5,0
-				springStrength = 14306;
+				springStrength = 35412;
 
 				// <Description>: This describes the rate at which the spring dissipates the energy stored in the spring.
 				// Basic equiation for this is
@@ -269,7 +269,7 @@
 				// where dampingRatio = 1 mean critical damping (critically damped pendulum should get back to start point in every swing)
 				// <Type>: float
 				// <Default>: 0,4*2*sqrt(springStrength*sprungMass)
-				springDamperRate = 2288;
+				springDamperRate = 3601;
 
 				/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				// Tire parameters
@@ -302,7 +302,7 @@
 			};
 			class LR : LF
 			{
-				boneName = "wheel_1_2_damper_phys";
+				boneName = "wheel_1_2_damper";
 				steering = false;
 				center   = "wheel_1_2_axis";
 				boundary = "wheel_1_2_bound";
@@ -312,23 +312,24 @@
 				latStiffY = 180;
 				sprungMass = 572.25;
 				springStrength = 14306;
-				springDamperRate = 2288;
+				springDamperRate = 3601;
 			};
 			class RF : LF
 			{
-				boneName = "wheel_2_1_damper_phys";
+				boneName = "wheel_2_1_damper";
 				center   = "wheel_2_1_axis";
 				boundary = "wheel_2_1_bound";
 				suspForceAppPointOffset = "wheel_2_1_axis";
 				tireForceAppPointOffset = "wheel_2_1_axis";
 				steering = true;
 				side = "right";
+				sprungMass = 572.25;
 				springStrength = 14306;
-				springDamperRate = 2288;
+				springDamperRate = 3601;
 			};
 			class RR : RF
 			{
-				boneName = "wheel_2_2_damper_phys";
+				boneName = "wheel_2_2_damper";
 				steering = false;
 				center   = "wheel_2_2_axis";
 				boundary = "wheel_2_2_bound";
@@ -338,6 +339,6 @@
 				latStiffY = 180;
 				sprungMass = 572.25;
 				springStrength = 14306;
-				springDamperRate = 2288;
+				springDamperRate = 3601;
 			};
 		};

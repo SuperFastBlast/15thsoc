@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="GMVS\\data\HMMWV_details_NOHQ.tga";
+	texture="GMVS\data\HMMWV_details_NOHQ.tga";
 	uvSource="tex";
 	class uvTransform
 	{
