@@ -1,4 +1,4 @@
-// REVISION 27OCT14
+// REVISION 11NOV14
 
 // class CfgVehicles
 // {
@@ -337,9 +337,9 @@
 				count = 24;
 				magazine = "6Rnd_HE_M32";
 			};
-			class _xx_REV1_flash {
+			class _xx_AGM_M84 {
 				count = 100;
-				magazine = "REV1_flash";
+				magazine = "AGM_M84";
 			};
 			class _xx_Chemlight_green {
 				count = 50;

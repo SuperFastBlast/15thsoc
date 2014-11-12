@@ -1,4 +1,4 @@
-// REVISION 27OCT14
+// REVISION 11NOV14
 
 // class CfgVehicles
 // {
@@ -223,6 +223,10 @@
 				count = 25;
 				name = "ItemWatch";
 			};
+			class _xx_AGM_Altimeter {
+				count = 25;
+				name = "AGM_Altimeter";
+			};
 			class _xx_ItemCompass {
 				count = 25;
 				name = "ItemCompass";
@@ -326,6 +330,10 @@
 			class _xx_AGM_Clacker {
 				count = 10;
 				name = "AGM_Clacker";
+			};
+			class _xx_AGM_M26_Clacker {
+				count = 10;
+				name = "AGM_M26_Clacker";
 			};
 			class _xx_AGM_IR_Strobe_Item {
 				count = 25;
@@ -515,9 +523,9 @@
 				count = 100;
 				magazine = "MiniGrenade";
 			};
-			class _xx_REV1_flash {
+			class _xx_AGM_M84 {
 				count = 100;
-				magazine = "REV1_flash";
+				magazine = "AGM_M84";
 			};
 			class _xx_Chemlight_blue {
 				count = 50;
@@ -672,6 +680,10 @@
 			class _xx_meu_AT4_CS {
 				count = 20;
 				weapon = "meu_AT4_CS";
+			};
+			class _xx_caf_m72a6 {
+				count = 10;
+				weapon = "caf_m72a6";
 			};
 			class _xx_Trixie_SMAW {
 				count = 3;

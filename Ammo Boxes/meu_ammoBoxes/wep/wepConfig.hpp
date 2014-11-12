@@ -1,4 +1,4 @@
-// REVISION 27OCT14
+// REVISION 11NOV14
 
 // class CfgVehicles
 // {
@@ -23,10 +23,14 @@
 			class _xx_acc_pointer_IR {
 				count = 5;
 				name = "acc_pointer_IR";
-			};	
+			};
 			class _xx_FHQ_optic_ACOG {
 				count = 5;
 				name = "FHQ_optic_ACOG";
+			};
+			class _xx_optic_mas_Arco_blk {
+				count = 20;
+				name = "optic_mas_Arco_blk";
 			};
 			class _xx_FHQ_optic_AIM {
 				count = 5;
@@ -98,6 +102,10 @@
 			class _xx_Rangefinder {
 				count = 20;
 				name = "Rangefinder";
+			};
+			class _xx_meu_MX2A_olive {
+				count = 5;
+				name = "meu_MX2A_olive";
 			};
 			class _xx_B_UavTerminal {
 				count = 4;
@@ -286,9 +294,9 @@
 				count = 25;
 				magazine = "1Rnd_SmokeRed_Grenade_shell";
 			};
-			class _xx_REV1_flash {
+			class _xx_AGM_M84 {
 				count = 100;
-				magazine = "REV1_flash";
+				magazine = "AGM_M84";
 			};
 			class _xx_Chemlight_green {
 				count = 50;

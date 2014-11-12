@@ -1,4 +1,4 @@
-// REVISION 27OCT14
+// REVISION 11NOV14
 
 //15th Weapons MG Ammo Man
 //15thMEU Realism Unit, Weapons Platoon
@@ -28,7 +28,7 @@
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
- (unitBackpack _unit) addmagazineCargo ["100Rnd_mas_762x51_T_Stanag",5];
+ (unitBackpack _unit) addmagazineCargo ["100Rnd_M240_762x51_T_Stanag",5];
  (unitBackpack _unit) additemCargo ["SmokeshellBlue",1];
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
