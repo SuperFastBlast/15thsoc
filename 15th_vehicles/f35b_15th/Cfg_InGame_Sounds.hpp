@@ -49,10 +49,11 @@
 				volume = "(1-camPos)*(engineOn*(rpm factor[0.55, 1.0]))";
 			};
 			
-			class ForsageIn {
-				sound[] = {"f35b_15th\sounds\int-av8b-forsage-1", db-1.5, 1.1};
+			class ForsageIn
+			{
+				sound[] =  {"A3\Sounds_F\air\Plane_Fighter_03\Plane_Fighter_03-fors_int", db0, 1.0};
 				frequency = "1";
-				volume = "(1-camPos)*(engineOn*(thrust factor[0.8, 1.0]))";
+				volume = "(1-camPos)*(engineOn*(thrust factor[0.6, 1.0]))";
 			};
 			
 			class WindNoiseIn {
