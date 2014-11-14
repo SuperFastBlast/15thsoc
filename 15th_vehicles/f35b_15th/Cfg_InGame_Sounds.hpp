@@ -1,13 +1,13 @@
 		attenuationEffectType = "HeliAttenuation";
 
 		
-		soundGetIn[] = {"f35b_15th\sounds\ext-jetair-cabine-close1", db-25, 1};
-		soundGetOut[] = {"f35b_15th\sounds\ext-jetair-cabine-open1", db-25, 1, 40};
+		soundGetIn[] = {"f35b_15th\sounds\int-jetair-wind1", db-25, 1};
+		soundGetOut[] = {"f35b_15th\sounds\ext-jetair-wind1", db-25, 1, 40};
 		soundDammage[] = {"", 0.562341, 1};
 		soundEngineOnInt[] = {"f35b_15th\sounds\int-av8b-start-1", 0.562341, 1.0};
 		soundEngineOnExt[] = {"f35b_15th\sounds\ext-jetair-start1", 0.794328, 1.0, 800};
 		soundEngineOffInt[] = {"f35b_15th\sounds\int-av8b-stop-1", 0.562341, 1.0};
-		soundEngineOffExt[] = {"f35b_15th\sounds\ext-jetair-stop1", 0.794328, 1.0, 800};
+		//soundEngineOffExt[] = {"f35b_15th\sounds\ext-jetair-stop1", 0.794328, 1.0, 800};
 		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1", 0.1, 1};
 		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\locked_3", 0.1, 1.5};
 
@@ -50,7 +50,7 @@
 			};
 			
 			class ForsageIn {
-				sound[] = {"f35b_15th\sounds\int-av8b-forsage-1", db-2, 1.1};
+				sound[] = {"f35b_15th\sounds\int-av8b-forsage-1", db-1.5, 1.1};
 				frequency = "1";
 				volume = "(1-camPos)*(engineOn*(thrust factor[0.8, 1.0]))";
 			};
