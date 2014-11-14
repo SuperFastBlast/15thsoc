@@ -5,10 +5,10 @@
 		brakeIdleSpeed         	= 1.78; 	/// under what speed (in m/s) does the brake apply for a vehicle without thrust
 		maxSpeed               	= 150; 		/// vehicle can go a bit over, but dramatically decreases thrust
 		fuelCapacity           	= 45;
-		wheelCircumference     	= 54.61; 	/// diameter of 725
+		wheelCircumference     	= 2.0;	//2.9464 	/// diameter of 725
 
-		antiRollbarForceCoef	= 0.5; 	/// how strong is the anti-roll bar of vehicle preventing it to lose grip in turns (not any magical stuff, real ARB)
-		antiRollbarForceLimit	= 0.5; 	/// highest possible force of ARB
+		antiRollbarForceCoef	= 10; 	/// how strong is the anti-roll bar of vehicle preventing it to lose grip in turns (not any magical stuff, real ARB)
+		antiRollbarForceLimit	= 10; 	/// highest possible force of ARB
 		antiRollbarSpeedMin 	= 20; 	/// the roll bar force gets from zero to full in range of min and max speed
 		antiRollbarSpeedMax		= 80;  	/// this simulates losing grip at high speed turns
 
@@ -190,7 +190,7 @@
 				// <Description>: This is the weight in kg of wheel including both rim and tyre.
 				// <Type>: float
 				// <Default>: 10.0
-				mass = 25;
+				mass = 64.533;
 
 				// <Description>: This is the wheel's moment of inertia about the rolling axis. Smaller values result in more slips in aggresive driving
 				// while larger hamper the gain of speed. Good base to start with is this formula:
@@ -249,19 +249,19 @@
 				// <Description>: These values describe the maximum compression and elongation in metres that the spring can support.
 				// <Type>: float
 				// <Default>: 0.15
-				maxCompression = 2.0;
+				maxCompression = 1.0;//2.0 orgi weigt 2289.000
 				mMaxDroop = 0.15;
 
 				// <Description>: This is the mass in kg that is supported by the suspension spring.
 				// <Type>: float
 				// <Default>: vehicleMass/numberOfWheels
-				sprungMass = 572.25;
+				sprungMass = 750;
 
 				// <Description>: This is the strength of the suspension spring in Newtons per metre.
 				//   springStrength = naturalFrequency * naturalFrequency * sprungMass
 				// <Type>: float
 				// <Default>: sprungMass*5,0*5,0
-				springStrength = 35412;
+				springStrength = 18750;
 
 				// <Description>: This describes the rate at which the spring dissipates the energy stored in the spring.
 				// Basic equiation for this is
@@ -269,7 +269,7 @@
 				// where dampingRatio = 1 mean critical damping (critically damped pendulum should get back to start point in every swing)
 				// <Type>: float
 				// <Default>: 0,4*2*sqrt(springStrength*sprungMass)
-				springDamperRate = 3601;
+				springDamperRate = 3000;
 
 				/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				// Tire parameters
@@ -309,10 +309,9 @@
 				suspForceAppPointOffset = "wheel_1_2_axis";
 				tireForceAppPointOffset = "wheel_1_2_axis";
 				maxHandBrakeTorque = 3000;
-				latStiffY = 180;
-				sprungMass = 572.25;
-				springStrength = 14306;
-				springDamperRate = 3601;
+				sprungMass = 750;
+				springStrength = 18750;
+				springDamperRate = 300;
 			};
 			class RF : LF
 			{
@@ -323,9 +322,9 @@
 				tireForceAppPointOffset = "wheel_2_1_axis";
 				steering = true;
 				side = "right";
-				sprungMass = 572.25;
-				springStrength = 14306;
-				springDamperRate = 3601;
+				sprungMass = 750;
+				springStrength = 18750;
+				springDamperRate = 300;
 			};
 			class RR : RF
 			{
@@ -336,9 +335,8 @@
 				suspForceAppPointOffset = "wheel_2_2_axis";
 				tireForceAppPointOffset = "wheel_2_2_axis";
 				maxHandBrakeTorque = 3000;
-				latStiffY = 180;
-				sprungMass = 572.25;
-				springStrength = 14306;
-				springDamperRate = 3601;
+				sprungMass = 750;
+				springStrength = 18750;
+				springDamperRate = 300;
 			};
 		};

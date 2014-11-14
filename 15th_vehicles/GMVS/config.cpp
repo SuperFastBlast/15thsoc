@@ -180,8 +180,8 @@ class CfgVehicles {
 		{
 			class MainTurret: MainTurret
 			{
-				weapons[] = {"MK19"};
-				magazines[] = {"48Rnd_40mm_MK19","48Rnd_40mm_MK19","48Rnd_40mm_MK19","48Rnd_40mm_MK19"}; // prob need to check weapon defs on this
+				weapons[] = {"GMG_40mm"};
+				magazines[] = {"200Rnd_40mm_G_belt", "96Rnd_40mm_G_belt", "64Rnd_40mm_G_belt", "32Rnd_40mm_G_belt"};//magazines[] = {"48Rnd_40mm_MK19","48Rnd_40mm_MK19","48Rnd_40mm_MK19","48Rnd_40mm_MK19"}; // prob need to check weapon defs on this
 				soundServo[] = {"",0.01,1.0,10};//\Ca\sounds\Vehicles\Servos\turret-1 orgi. 
 				gunnerAction = ""; //HMMWV_Gunner03_EP1 orig.
 				selectionfireanim = "zasleh";
@@ -191,6 +191,11 @@ class CfgVehicles {
 				};
 				commanding = 0;
 				primaryGunner = 0;
+				body = "MainTurret";
+				gun = "MainGun";
+				memoryPointGunnerOptics = "gunnerview";
+				animationSourceBody = "MainTurret";
+				animationSourceGun = "MainGun";
 				outgunnermayfire = 1;
 				primaryObserver = 0;
 				LODTurnedOut = 1000;
@@ -198,7 +203,7 @@ class CfgVehicles {
 			};
 			class SideTurret: MainTurret
 			{
-				gunnerName = "$STR_POSITION_FRONTGUNNER";
+				gunnerName = "Front Gun";
 				weapons[] = {"M240_veh"};// check definitions for this
 				magazines[] = {"100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240"}; // check definitions for this
 				soundServo[] = {"",0.0001,1.1}; // \ca\wheeled\Data\Sound\servo3 orgi.
@@ -244,7 +249,7 @@ class CfgVehicles {
 		class Damage
 		{
 			tex[] = {};
-			mat[] = {"GMVS\data\hmmwv_body_1.rvmat","GMVS\data\hmmwv_body_1_damage.rvmat","GMVS\HMMWV\data\hmmwv_body_1_destruct.rvmat","GMVS\HMMWV\data\hmmwv_glass.rvmat", "GMVS\data\hmmwv_glass_damage.rvmat","GMVS\data\hmmwv_glass_destruct.rvmat","GMVS\data\hmmwv_hood.rvmat","GMVS\data\hmmwv_hood_damage.rvmat","GMVS\data\hmmwv_hood_destruct.rvmat","GMVS\data\hmmwv_parts_1.rvmat","GMVS\data\hmmwv_parts_1_damage.rvmat","GMVS\data\hmmwv_parts_1_destruct.rvmat","GMVS\data\hmmwv_regular_1.rvmat","GMVS\data\hmmwv_regular_1_damage.rvmat","GMVS\data\hmmwv_regular_1_destruct.rvmat","GMVS\data\default.rvmat","GMVS\data\default.rvmat","GMVS\data\default_destruct.rvmat"};
+			mat[] = {"GMVS\data\hmmwv_body_1.rvmat","GMVS\data\hmmwv_body_1_damage.rvmat","GMVS\data\hmmwv_body_1_destruct.rvmat","GMVS\data\hmmwv_glass.rvmat", "GMVS\data\hmmwv_glass_damage.rvmat","GMVS\data\hmmwv_glass_destruct.rvmat","GMVS\data\hmmwv_hood.rvmat","GMVS\data\hmmwv_hood_damage.rvmat","GMVS\data\hmmwv_hood_destruct.rvmat","GMVS\data\hmmwv_parts_1.rvmat","GMVS\data\hmmwv_parts_1_damage.rvmat","GMVS\data\hmmwv_parts_1_destruct.rvmat","GMVS\data\hmmwv_regular_1.rvmat","GMVS\data\hmmwv_regular_1_damage.rvmat","GMVS\data\hmmwv_regular_1_destruct.rvmat","GMVS\data\default.rvmat","GMVS\data\default.rvmat","GMVS\data\default_destruct.rvmat"};
 		};
 		HiddenSelections[] = {"camo","camo1","camo2"};
 		HiddenSelectionsTextures[] = {"GMVS\data\hmmwv_body_canvas_co.paa","GMVS\data\hmmwv_hood_canvas_co.paa","GMVS\data\hmmwv_regular_1_co.paa"};
