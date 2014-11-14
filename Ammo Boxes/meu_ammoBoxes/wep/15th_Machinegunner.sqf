@@ -1,4 +1,4 @@
-// REVISION 27OCT14
+// REVISION 11NOV14
 
 //15th Weapons MG Gunner
 //15thMEU Realism Unit, Weapons Platoon
@@ -39,7 +39,7 @@
 
 
  _unit addweapon "LMG_mas_M240_F";
- _unit addPrimaryWeaponItem "FHQ_optic_ACOG";
+ _unit addPrimaryWeaponItem "M145";
 
 
  _unit addmagazine "M882_9mm";

@@ -1,0 +1,13 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.49
+//Sun Nov 09 06:50:59 2014 : Source 'file' date Sun Nov 09 06:50:59 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class P:/GMVS/data/penetration/rubber.rvmat{
+surfaceInfo = "gmvs\data\penetration\rubber.bisurf";
+diffuse[] = {0.5,0.5,1.0,1.0};
+ambient[] = {0.5,0.5,1.0,1.0};
+//};
