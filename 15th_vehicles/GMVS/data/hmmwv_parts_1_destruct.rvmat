@@ -1,0 +1,106 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.76
+//Thu Nov 13 21:32:20 2014 : Source 'file' date Thu Nov 13 21:32:20 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class P:/GMVS/data/hmmwv_parts_1_destruct.rvmat{
+ambient[] = {0.8,0.8,0.8,1};
+diffuse[] = {0.8,0.8,0.8,1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,1};
+specular[] = {1,1,1,1};
+specularPower = 60;
+PixelShaderID = "Super";
+VertexShaderID = "Super";
+class Stage1
+{
+	texture = "GMVS\data\hmmwv_parts_1_nohq.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+class Stage2
+{
+	texture = "GMVS\data\destruct_plech2_full_dt.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {10,0,0};
+		up[] = {0,10,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+class Stage3
+{
+	texture = "GMVS\data\vehicle_destr1024_512_mc.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {4,0,0};
+		up[] = {0,4,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+class Stage4
+{
+	texture = "GMVS\data\hmmwv_parts_1_as.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+class Stage5
+{
+	texture = "GMVS\data\vehicle_destr1024_512_smdi.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+class Stage6
+{
+	texture = "#(ai,32,128,1)fresnel(7.53,5.44)";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+class Stage7
+{
+	texture = "GMVS\data\env_land_co.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+class StageTI
+{
+	texture = "GMVS\data\destruct_ti_ca.paa";
+};
+//};
