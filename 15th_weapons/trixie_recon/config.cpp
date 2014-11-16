@@ -1,10 +1,6 @@
-#define private  0
-#define protected  1
-#define public  2
-
 class CfgPatches
 {
-	class Trixie_Recon
+	class Trixie_recon
 	{
 		requiredaddons[] = {"asdg_jointrails"};
 		requiredversion = 1.24;
