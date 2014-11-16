@@ -30,18 +30,18 @@ class CfgMagazines
 		mass = 5;
 		descriptionshort = "Caliber: 40 mm<br />Rounds: 1<br />Used in: M203";
 	};
-		class 30Rnd_M855A1_556x45_Stanag: 30Rnd_556x45_Stanag
+	class 30Rnd_M855A1_556x45_Stanag: 30Rnd_556x45_Stanag
 	{
 		scope = 2;
 		ammo = "B_MEU_M855a1";
 		count = 30;
 		mass = 11.8;
 		lastroundstracer = 3;
-        descriptionshort = "M855A1<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
-        displayname = "M855A1";
+        	descriptionshort = "M855A1<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
+        	displayname = "M855A1";
 		picture = "\15th_MEU_MAGS\ui\m_30stanag_CA.paa";
 	};
-		class 30Rnd_M855A1_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
+	class 30Rnd_M855A1_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
 	{
 		scope = 2;
 		ammo = "B_MEU_M8556";
@@ -52,7 +52,7 @@ class CfgMagazines
         	displayname = "M856";
 		picture = "\15th_MEU_MAGS\ui\m_30stanag_red_CA.paa";
 	};
-		class 200Rnd_M249_556x45_Stanag: 30Rnd_556x45_Stanag
+	class 200Rnd_M249_556x45_Stanag: 30Rnd_556x45_Stanag
 	{
 		scope = 2;
 		mass = 56;
@@ -65,20 +65,20 @@ class CfgMagazines
         	lastroundstracer = 5;
 		tracersevery = 5;
 	};
-		class 200Rnd_M249_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
+	class 200Rnd_M249_556x45_T_Stanag: 30Rnd_556x45_Stanag_Tracer_Red
 	{
 		scope = 2;
 		mass = 56;
-       	ammo = "B_MEU_M8556_M249";
+       		ammo = "B_MEU_M8556_M249";
 		count = 200;
-        descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200 Tracer<br />Used in: M249";
-       	 displayname = "M856 Linked";
+        	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200 Tracer<br />Used in: M249";
+       	 	displayname = "M856 Linked";
 		picture = "\15th_MEU_MAGS\ui\m_200LMG_red_ca.paa";
-       	 initspeed = 960;
-       	 lastroundstracer = 4;
+       		 initspeed = 960;
+       	 	lastroundstracer = 4;
 		tracersevery = 1;
 	};
-		class 100Rnd_M240_762x51_Stanag: 150Rnd_762x51_Box
+	class 100Rnd_M240_762x51_Stanag: 150Rnd_762x51_Box
 	{
 		scope = 2;
 		mass = 33.8;
@@ -86,11 +86,11 @@ class CfgMagazines
 		count = 100;
 		descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 100<br />Used in:M240";
 		displayname = "M80 Linked";
-        initspeed = 853;
-        lastroundstracer = 3;
+        	initspeed = 853;
+        	lastroundstracer = 3;
 		tracersevery = 5;
 	};
-		class 100Rnd_M240_762x51_T_Stanag: 150Rnd_762x51_Box_Tracer
+	class 100Rnd_M240_762x51_T_Stanag: 150Rnd_762x51_Box_Tracer
 	{
 		scope = 2;
 		mass = 33.8;
@@ -124,20 +124,26 @@ class CfgMagazines
     };
 	class 7Rnd_mas_12Gauge_Slug: 16Rnd_9x21_Mag
 	{
+		scope = 2;
 		ammo = "B_mas_12Gauge_Slug";
 		count = 7;
 		mass = 4;
+		initspeed=415;
 		displayName = "12cal Slug M1014";
-		picture = "\15th_MEU_MAGS\ui\m_12gauge_slugs_ca.paa";
+		picture = "\A3\Weapons_F\Data\ui\m_12gauge_slugs_ca.paa";
+		reloadaction="GestureReloadM4SSAS";
 		descriptionshort = "Caliber: 12 cal<br />Rounds: 7<br />Used in: M1014";
 	};
 	class 7Rnd_mas_12Gauge_Pellets: 16Rnd_9x21_Mag
 	{
+		scope = 2;
 		ammo = "B_mas_12Gauge_Pellets";
 		count = 7;
 		mass = 4;
+		initspeed=395;
 		displayName = "12cal Pellets M1014";
-		picture = "\15th_MEU_MAGS\ui\m_12gauge_ca.paa";
+		picture = "\A3\Weapons_F\Data\ui\m_12gauge_ca.paa";
+		reloadaction="GestureReloadM4SSAS";
 		descriptionshort = "Caliber: 12 cal<br />Rounds: 7<br />Used in: M1014";
 	};
 	class Trixie_10x127_HEIAP_Mag: 5Rnd_127x108_APDS_Mag {
@@ -171,19 +177,19 @@ class CfgMagazines
 		count = 30;
 		mass = 11.8;
 		lastroundstracer = 3;
-        descriptionshort = "Mk 262 77gr<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
-        displayname = "Mk 262";
+        	descriptionshort = "Mk 262 77gr<br />Caliber: 5.56x45 mm STANAG<br />Rounds: 30";
+        	displayname = "Mk 262";
 		picture = "\15th_MEU_MAGS\ui\m_30stanag_CA.paa";
 	};
 	class Trixie_20x762_Mag: 30Rnd_556x45_Stanag
     	{
-        ammo = "B_MEU_M118LR_Ball";
-	    scope = 2;
-        count = 20;
-        descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 20<br />Used in: M110";
-        displayname = "M118LR";
-        picture = "\15th_MEU_MAGS\ui\m_20hk417_ca.paa";
-	    mass = 12;
+       		ammo = "B_MEU_M118LR_Ball";
+	        scope = 2;
+        	count = 20;
+        	descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 20<br />Used in: M110";
+        	displayname = "M118LR";
+        	picture = "\15th_MEU_MAGS\ui\m_20hk417_ca.paa";
+	        mass = 12;
     	};
 	};
 	

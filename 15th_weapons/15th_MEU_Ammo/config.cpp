@@ -146,10 +146,19 @@ class CfgAmmo
         cost = 100;
         typicalSpeed = 280;
         airFriction = -0.0018;
-   	};
-		class B_MEU_12Gauge_Slug: B_12Gauge_Slug
+   };
+	class B_MEU_12Gauge_Slug: B_12Gauge_Slug
 	{
 		hit = 30;
+		visibleFire = 1;	// how much is visible when this weapon is fired
+		audibleFire = 1;
+		visibleFireTime = 2;
+		cartridge = "FxCartridge_slug";
+		cost = 1;
+		tracerColor[] = {1, 0.05, 0.05, 1};
+		tracerColorR[] = {1, 0.05, 0.05, 1};
+		caliber = 0.5;
+		airFriction = -0.0014;
 		cartridge = "FxCartridge_slug";
 		class CamShakeFire
 		{
@@ -171,13 +180,20 @@ class CfgAmmo
 			frequency = 20;
 		};
 	};
-		class B_MEU_12Gauge_Pellets: B_12Gauge_Pellets
+	class B_MEU_12Gauge_Pellets: B_12Gauge_Pellets
 	{
 		hit = 10;
+		airFriction = -0.0014;
 		cartridge = "FxCartridge_slug";
-		caliber = 0.8;
+		caliber = 0.5;
 		indirectHit = 0;
-        indirectHitRange = 0;
+        	indirectHitRange = 0;
+		visibleFire = 1;	// how much is visible when this weapon is fired
+		audibleFire = 1;
+		visibleFireTime = 2;
+		cost = 1;
+		tracerColor[] = {1, 0.05, 0.05, 1};
+		tracerColorR[] = {1, 0.05, 0.05, 1};
 		class CamShakeFire
 		{
 			power = 3;
@@ -198,9 +214,9 @@ class CfgAmmo
 			frequency = 20;
 		};
 	};
-	    class B_MEU_Mk262: B_556x45_Ball
+	class B_MEU_Mk262: B_556x45_Ball
     {
-	    hit = 15.0454;
+	hit = 15.0454;
         typicalSpeed = 868.68;
         airFriction = -0.0010867938;
         caliber = 0.855;
@@ -209,7 +225,7 @@ class CfgAmmo
         audibleFire = 5;
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };
-		class B_MEU_M118LR_Ball: B_762x51_Ball
+	class B_MEU_M118LR_Ball: B_762x51_Ball
    	{
         hit=15;
         typicalSpeed=783;
@@ -222,7 +238,7 @@ class CfgAmmo
         audibleFire=7;
         audibleFireTime=7;
     };
-		class B_MEU_M118LR_Ball_m40: B_762x51_Ball
+	class B_MEU_M118LR_Ball_m40: B_762x51_Ball
    	{
         hit=17;
         typicalSpeed=868;
@@ -235,7 +251,7 @@ class CfgAmmo
         audibleFire=7;
         audibleFireTime=7;
     };
-		class B_MEU_Mk211: B_127x108_Ball
+	class B_MEU_Mk211: B_127x108_Ball
 	{
 		hit = 150;
 		indirecthit = 20;
@@ -243,7 +259,7 @@ class CfgAmmo
 		caliber = 50;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 	};
-		class G_MEU_M433_HEDP: G_40mm_HE
+	class G_MEU_M433_HEDP: G_40mm_HE
     {
         hit = 170;
         indirectHit = 25;
