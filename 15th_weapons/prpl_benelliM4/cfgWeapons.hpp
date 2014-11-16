@@ -31,17 +31,11 @@ class CfgWeapons
 		descriptionShort = "$STR_prpl_benelli_desc_short";	
 		picture = "\prpl_benelliM4\data\inv\gear_benelli18_x_ca.paa";
 		magazines[] = {"15th_8Rnd_12Gauge_Pellets","15th_8Rnd_12Gauge_Slug"};
-		modelOptics = "-";
 		modes[] = {"Single"};
 		dexterity = 1.5;
-		muzzlePos="usti hlavne";
-        muzzleEnd="konec hlavne";
 		reloadAction = "GestureReloadM4SSAS";
-		maxRecoilSway = 0.0120;
-		swayDecaySpeed = 1.20;
 		drySound[] = {"A3\Sounds_F\weapons\Other\dry6.wav",0.1,1};
-		reloadMagazineSound[] = {"\prpl_benelliM4\data\sounds\reload.ogg",1.3,1,30};
-		fireSpreadAngle=0.85; 
+		reloadMagazineSound[] = {"\prpl_benelliM4\data\sounds\reload.ogg",1.3,1,30}; 
 		discreteDistance[] = {50};
 		class GunParticles: GunParticles
 		{
