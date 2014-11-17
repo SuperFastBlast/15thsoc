@@ -5,20 +5,19 @@ class CfgPatches
 		requiredaddons[] = {"A3_Weapons_F"};
 		requiredversion = 1.0;
 		units[] = {};
-		weapons[] = {"M882_9mm"};
+		weapons[] = {"M882_9mm","M9Beretta"};
 };
-class Mode_SemiAuto;
-class Mode_Burst;
-class Mode_FullAuto;
 class CfgWeapons
 {
+	class WeaponSlotsInfo;
+	class SlotInfo;
 	class hgun_P07_F;
 	class M9Beretta: hgun_P07_F
 	{
 		scope = 2;
 		displayname = "M9 Beretta";
 		model = "\M9Beretta\M9_Beretta.p3d";
-		picture = ;
+		picture = "\M9Beretta\m9_x_ca.paa";
 		magazines[] = {"M882_9mm"};
 		descriptionshort = "M9 Beretta<br />Caliber: 9x21 mm";
 		class Library
@@ -44,8 +43,8 @@ class CfgWeapons
 			begin2[] = {"A3\sounds_f\weapons\silenced\silent-08",0.562341,1,200};
 			soundBegin[] = {"begin1",0.5,"begin2",0.5};
 		};
-		drySound[] = {"\mas_us_rifle\sounds\usp_dry",1,1,20};
-		reloadMagazineSound[] = {"\mas_us_rifle\sounds2\M9R.wss",1,1,30};
+		drySound[] = {"\M9Beretta\sounds\M9_dry",1,1,20};
+		reloadMagazineSound[] = {"\M9Beretta\sounds\M9R",1,1,30};
 		class WeaponSlotsInfo
 		{
 			mass = 25;
@@ -98,3 +97,6 @@ class 16Rnd_9x21_Mag;
         descriptionshort = "Caliber: 9x19 mm STANAG<br />Rounds: 15<br />Used in: Beretta M9";
         initSpeed = 390;
     	};
+};
+};
+};
