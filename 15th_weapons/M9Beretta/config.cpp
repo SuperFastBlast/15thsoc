@@ -5,7 +5,8 @@ class CfgPatches
 		requiredaddons[] = {"A3_Weapons_F"};
 		requiredversion = 1.0;
 		units[] = {};
-		weapons[] = {"M882_9mm","M9Beretta"};
+		weapons[] = {"M9Beretta"};
+magazines[] = {"M882_9mm"};
 };
 class CfgWeapons
 {
