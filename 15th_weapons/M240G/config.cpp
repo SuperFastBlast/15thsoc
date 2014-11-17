@@ -29,7 +29,7 @@ class M240G: LMG_Mk200_F
 		model = "\M240G\EJ_m240";
 		magazines[] = {"100Rnd_M240_762x51_Stanag","100Rnd_M240_762x51_T_Stanag"};
 		descriptionshort = "M240 Medium Machinegun<br />Caliber: 7.62x51 mm";
-		picture = "\M240G\data\m240_co.paa";
+		picture = "";
 		class Library
 		{
 			libtextdesc = "The M240, officially Machine Gun, 7.62mm, M240, is the US military designation for the FN MAG, a family of belt fed, gas operated medium machine guns firing the 7.62×51mm NATO cartridge. The M240 has been used by the United States Armed Forces since the late 1970s. It is used extensively by infantry, most often rifle companies, as well as ground vehicles, watercraft, and aircraft.";
