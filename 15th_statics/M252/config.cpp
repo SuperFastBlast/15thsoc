@@ -70,11 +70,7 @@ class CfgVehicles
 				discreteDistanceInitIndex = 5;
 				turretInfoType = "RscWeaponRangeArtillery";
 				gunnerForceOptics = 1;
-				body = "MainTurret";
-                gun = "MainGun";
-                memoryPointGunnerOptics = "gunnerview";
-                animationSourceBody = "MainTurret";
-                animationSourceGun = "MainGun";
+                memoryPointGunnerOptics = "eye";
 				gunnerOpticsModel = "\A3\Weapons_F\acc\reticle_Mortar_01_F.p3d";
 				class ViewOptics: ViewOptics
 				{
