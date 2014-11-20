@@ -6,7 +6,8 @@ class CfgPatches
 		requiredversion = 1.0;
 		units[] = {};
 		weapons[] = {"M9Beretta"};
-magazines[] = {"M882_9mm"};
+		magazines[] = {};
+	};
 };
 class CfgWeapons
 {
@@ -63,41 +64,4 @@ class CfgWeapons
 			};
 		};
 	};
-class CfgAmmo
-{
-class B_9x21_Ball;
-	class M882_9mm: B_9x21_Ball
-   	 {
-   	hit = 9;
-        cartridge = "FxCartridge_65_caseless";
-        cost = 100;
-        typicalSpeed = 390;
-        airFriction = -0.0014;
-        caliber = 1.7;
-        deflecting = 45;
-        model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
-        tracerScale = 0.5;
-        tracerStartTime = 0.05;
-        tracerEndTime = 1;
-        nvgOnly = 1;
-        visibleFire = 3;
-        audibleFire = 5;
-    };
-};
-class CfgMagazines
-{
-class 16Rnd_9x21_Mag;
-	class M882_9mm: 16Rnd_9x21_Mag
-    	{
-	mass = 1;
-        scope = 2;
-        ammo = "M882_9mm";
-        count = 15;
-        displayName = "M882 9mm Mag";
-        picture = "\A3\weapons_f\data\ui\M_16Rnd_9x21_CA.paa";
-        descriptionshort = "Caliber: 9x19 mm STANAG<br />Rounds: 15<br />Used in: Beretta M9";
-        initSpeed = 390;
-    	};
-};
-};
 };

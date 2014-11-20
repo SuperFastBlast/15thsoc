@@ -10,11 +10,7 @@ class CfgPatches
 			"ej_IAR30"
 		};
 		magazines[]=
-		{
-			"IARmk318_mag",
-            "30Rnd_M855A1_556x45_Stanag",
-            "30Rnd_M855A1_556x45_T_Stanag"
-		};
+		{};
 	author[]={"EricJ"};
 	};
 };
@@ -66,7 +62,7 @@ class CfgWeapons
 		midrangeprobab=0.69999999;
 		minrange=2;
 		minrangeprobab=0.30000001;
-		magazines[] = {"30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag","30Rnd_mas_556x45_Stanag","30Rnd_mas_556x45_T_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
+		magazines[] = {"30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		model="\IARal\ej_IAR30.p3d";
 		modes[]=
 		{
@@ -87,20 +83,6 @@ class CfgWeapons
 		opticszoommin=0.375;
 		picture="\IARal\data\UI\iar30inv_x_ca.paa";
 		reloadAction="GestureReloadSMG_02";
-		reloadMagazineSound[]=
-		{
-			"A3\sounds_f\weapons\reloads\new_trg",
-			0.39810699,
-			1,
-			30
-		};
-		reloadsound[]=
-		{
-			"A3\sounds_f\weapons\reloads\new_trg.wav",
-			0.1,
-			1,
-			30
-		};
 		reloadTime=0.096000001;
 		scope=0;
 		selectionfireanim="muzzleflash";
