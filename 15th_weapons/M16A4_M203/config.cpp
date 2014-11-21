@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class M16A4
+	class M16A4_M203
 	{
 		requiredaddons[] = {"A3_Weapons_F"};
 		requiredversion = 1.0;
@@ -25,10 +25,10 @@ class CfgWeapons
 		class GunParticles;
 	};
 	class UGL_F;
-	class arifle_MX_F;
-	class M16A4: arifle_MX_F
+	class arifle_MX_GL_F;
+	class M16A4_M203: arifle_MX_GL_F
 	{
-		displayname = "M16A4";
+		displayname = "M16A4 M203";
 		model = "\M16A4\M16A4.p3d";
 		reloadAction = "GestureReloadSMG_02";
 		handanim[] = {"OFP2_ManSkeleton","\M16A4\Anim\SCAR.rtm"};
@@ -48,6 +48,7 @@ class CfgWeapons
 		reloadMagazineSound[] = {"\15th_MEU_Sounds\M4R",1,1,30};
 		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10};
 		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.5,1};	
+		muzzles[] ={"this","M203"};
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -146,6 +147,27 @@ class CfgWeapons
 			maxRangeProbab = 0.05;
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
+		};
+		class M203: UGL_F
+		{
+			displayName = "M203";
+			descriptionShort = "$STR_A3_cfgweapons_3gl1";
+					sounds[] = {"StandardSound"};
+		class StandardSound
+		{
+			weaponSoundEffect = "DefaultRifle";
+			begin1[] = {"\15th_MEU_Sounds\M203_s1",0.100000,1,400};
+			soundBegin[] = {"begin1",1};
+		};
+			useModelOptics = 0;
+			useExternalOptic = 0;
+			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
+			cameraDir = "OP_look";
+			memoryPointCamera = "OP_eye";
+			weaponInfoType = "RscWeaponZeroing";
+			discreteDistance[] = {100,200,300};
+			discreteDistanceCameraPoint[] = {"OP_eye","OP_eye2","OP_eye3"};
+			discreteDistanceInitIndex = 1;
 		};
 		class WeaponSlotsInfo
 		{
