@@ -33,8 +33,8 @@ class CfgWeapons
 		};
 		class StandardSound: BaseSoundModeType
 		{
-			begin1[] = {"\M1911\sounds\M1911_s1",0.562341,1,1000};
-			begin2[] = {"\M1911\sounds\M1911_s2",0.562341,1,1000};
+			begin1[] = {"\15th_MEU_Sounds\M1911_s1",0.562341,1,1000};
+			begin2[] = {"\15th_MEU_Sounds\M1911_s2",0.562341,1,1000};
 			soundBegin[] = {"begin1",0.4,"begin2",0.3};
 		};
 		class SilencedSound: BaseSoundModeType
@@ -43,8 +43,8 @@ class CfgWeapons
 			begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",0.562341,1,600};
 			soundBegin[] = {"begin1",0.5,"begin2",0.5};
 		};
-		drySound[] = {"\M1911\sounds\M1911_dry",1,1,20};
-		reloadMagazineSound[] = {"\M1911\sounds\M1911_reload",1,1,30};
+		drySound[] = {"\15th_MEU_Sounds\M1911_dry",1,1,20};
+		reloadMagazineSound[] = {"\15th_MEU_Sounds\M1911_reload",1,1,30};
 		class WeaponSlotsInfo
 		{
 			mass = 30.5;

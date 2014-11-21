@@ -40,7 +40,8 @@ class CfgWeapons
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
     AGM_Overheating_allowSwapBarrel = 1;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
-		reloadMagazineSound[] = {"\M249\sounds\M249R",1,1,30};
+		reloadMagazineSound[] = {"\15th_MEU_Sounds\M249R",1,1,30};
+		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
 		{
@@ -58,9 +59,9 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\M249\sounds\m249_s1",1.0,1,1200};
-				begin2[] = {"\M249\sounds\m249_s2",1.0,1,1200};
-				begin3[] = {"\M249\sounds\m249_s3",1.0,1,1200};
+				begin1[] = {"\15th_MEU_Sounds\m249_s1",1.0,1,1200};
+				begin2[] = {"\15th_MEU_Sounds\m249_s2",1.0,1,1200};
+				begin3[] = {"\15th_MEU_Sounds\m249_s3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
 			};
 			class SilencedSound: BaseSoundModeType

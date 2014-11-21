@@ -42,7 +42,8 @@ class M240G: LMG_Zafir_F
     AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
     AGM_Overheating_allowSwapBarrel = 1;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		muzzles[] ={"this"};
-		reloadMagazineSound[] = {"\M240G\sounds\M240reload",1,1,30};
+		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10};
+		reloadMagazineSound[] = {"\15th_MEU_Sounds\M240reload",1,1,30};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
 		{
@@ -60,10 +61,10 @@ class M240G: LMG_Zafir_F
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\M240G\sounds\m240_s1",1.0,1,1200};
-				begin2[] = {"\M240G\sounds\m240_s2",1.0,1,1200};
-				begin3[] = {"\M240G\sounds\m240_s3",1.0,1,1200};
-				begin4[] = {"\M240G\sounds\m240_s4",1.0,1,1200};
+				begin1[] = {"\15th_MEU_Sounds\m240_s1",1.0,1,1200};
+				begin2[] = {"\15th_MEU_Sounds\m240_s2",1.0,1,1200};
+				begin3[] = {"\15th_MEU_Sounds\m240_s3",1.0,1,1200};
+				begin4[] = {"\M15th_MEU_Sounds\m240_s4",1.0,1,1200};
 				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33,"begin4",0.33};
 			};
 			soundContinuous = 0;
