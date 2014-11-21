@@ -6,7 +6,7 @@ class CfgPatches
 		requiredversion = 1.0;
 		units[] = {};
 		weapons[] = {"M240G"};
-		magazines[] = {};
+		magazines[] = {"100Rnd_M240_762x51_Stanag","100Rnd_M240_762x51_T_Stanag"};
 	};
 };
 class Mode_FullAuto;
@@ -18,17 +18,19 @@ class single_far_optics2;
 class SlotInfo;
 class CowsSlot;
 class PointerSlot;
+
 class CfgWeapons
 {
-class LMG_Mk200_F;
-class M240G: LMG_Mk200_F
+class LMG_Zafir_F;
+class M240G: LMG_Zafir_F
 	{
 		displayName = "M240G";
 		scope = 2;
 		model = "\M240G\EJ_m240";
 		magazines[] = {"100Rnd_M240_762x51_Stanag","100Rnd_M240_762x51_T_Stanag"};
+		reloadaction = "HLC_GestureReloadM60";
 		descriptionshort = "M240 Medium Machinegun<br />Caliber: 7.62x51 mm";
-		picture = "\M240G\gear_m240_x_ca.paa";
+		picture = "\M240G\data\ui\m240b_x_ca";
 		class Library
 		{
 			libtextdesc = "The M240, officially Machine Gun, 7.62mm, M240, is the US military designation for the FN MAG, a family of belt fed, gas operated medium machine guns firing the 7.62×51mm NATO cartridge. The M240 has been used by the United States Armed Forces since the late 1970s. It is used extensively by infantry, most often rifle companies, as well as ground vehicles, watercraft, and aircraft.";
@@ -155,5 +157,5 @@ class M240G: LMG_Mk200_F
 				scope = 0;
 			};
 		};
-	};
+    };	
 };
