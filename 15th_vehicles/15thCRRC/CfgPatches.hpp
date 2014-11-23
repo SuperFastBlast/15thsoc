@@ -4,7 +4,7 @@ class cfgpatches
 	
 class 15thCRRC	{
 		
-units[] = {"15thCRRCboat","15thCRRC"};
+units[] = {"15thCRRCboat"};
 		
 weapons[] = {};
 		
