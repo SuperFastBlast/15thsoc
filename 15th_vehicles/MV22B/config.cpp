@@ -8,7 +8,7 @@ class CfgPatches
 		requiredAddons[]	 = {"A3_Air_F"};
 	};
 };
-
+#include "cewAnims.hpp"
 
 class CfgVehicles
 {
@@ -46,10 +46,66 @@ class CfgVehicles
 		accuracy=0.5;
 		LockDetectionSystem=9;
 		incomingMissileDetectionSystem=18;
-		irScanRangeMin = 500;
-		irScanRangeMax = 5000;
-		irScanToEyeFactor = 2;
 		attenuationEffectType="HeliAttenuation";
+		#include "cfgHUD.hpp"
+		//vtol adjustments
+		rudderInfluence=0.5;
+		irScanRangeMin=500;
+		irScanRangeMax=5000;
+		irScanToEyeFactor=2;
+		aileronSensitivity=0.20000001;
+		elevatorSensitivity=0.30000001;
+		flapsFrictionCoef=0.31999999;
+		//end VtolAdjust
+		//sling loading
+		features = "Randomization: No						<br />Camo selections: 3 - main body, tail various attachments, engine						<br />Script door sources: CargoRamp_Open, Door_Back_L, Door_Back_R						<br />Script animations: AddGunHolder						<br />Executed scripts: None						<br />Firing from vehicles: No						<br />Slingload: Slingloads up to 4000 kg						<br />Cargo proxy indexes: 1 to 16";
+		slingLoadMemoryPoint = "slingLoad";		
+		maximumLoad=9000;		
+		slingLoadMaxCargoMass=9000;
+		//end sling loading
+		//adding copilot here
+		class NewTurret;
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				commanding = -1;
+				isCopilot = 1;
+				gunnerName = "Copilot";
+				primaryGunner = 1;
+				CanEject = 0;
+				memoryPointsGetInGunner = "pos driver";
+				memoryPointsGetInGunnerDir = "pos driver dir";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
+				gunnerAction = "MV22_CoPilot";
+				gunnerInAction = "MV22_CoPilot";
+				maxHorizontalRotSpeed = 8.2;
+				maxVerticalRotSpeed = 8.2;
+				stabilizedInAxes = 3;
+				startEngine = 0;
+				minElev = -90;
+				maxElev = 38.2;
+				initElev = -45;
+				minTurn = -180;
+				maxTurn = 180;
+				initTurn = 0;
+				soundServo[] = {"",0.01,1};
+				outGunnerMayFire = 1;
+				inGunnerMayFire = 1;
+				selectionFireAnim = "";
+				turretInfoType = "RscOptics_UAV_gunner";
+				gunnerForceOptics = 0;
+				LODTurnedOut = 0;
+				LODTurnedIn = 1100;
+			};//EndCopiolot
+
+		};
+		//end copilot
+
+		//rotor lib test 
+
+		//end rotor lib test
 
 		class WingVortices
 		{
@@ -237,20 +293,15 @@ class CfgVehicles
 			1.5
 		};
 
-		flapsFrictionCoef=0.31999999;
 		landingSpeed=130;
 		acceleration=328;
 		rudderSensitivity=12;
 		envelope[]={0,0.15000001,1.1,3,5,5.8299999,6,5.8499999,5.5,4.8000002,3.5999999,1.8,0};
-		driverAction="Plane_Fighter_03_pilot";
+		driverAction="MV22_Pilot";
 		cargoIsCoDriver[]={0,0};
 		cargoAction[]=
 		{
-			"ChopperLight_C_R_static_H",
-			"ChopperLight_CB_static_H",
-			"ChopperLight_CB_static_H",
-			"ChopperLight_CB_static_H",
-			"ChopperLight_CB_static_H"
+			""
 		};
 		
 		driverCompartments="Compartment1";
@@ -269,7 +320,7 @@ class CfgVehicles
 			class Damage
 		{
 			tex[]={};
-			mat[]={
+			mat[]={ /*
 				"MV22B\data\mv22_sklo.rvmat",
 				"MV22B\data\mv22_sklo_damage.rvmat",
 				"MV22B\data\mv22_sklo_damage.rvmat",
@@ -284,7 +335,7 @@ class CfgVehicles
 
 				"MV22B\data\mv22_02.rvmat",
 				"MV22B\data\mv22_02_damage.rvmat",
-				"MV22B\data\mv22_02_destruct.rvmat"
+				"MV22B\data\mv22_02_destruct.rvmat"*/
 			};
 		};
 
