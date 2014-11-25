@@ -1,11 +1,11 @@
 class CfgPatches
 {
-	class M16A4_M203
+	class M16A4
 	{
 		requiredaddons[] = {"A3_Weapons_F"};
 		requiredversion = 1.0;
 		units[] = {};
-		weapons[] = {"M16A4"};
+		weapons[] = {"M4"};
 		magazines[] = {};
 	};
 };
@@ -25,19 +25,19 @@ class CfgWeapons
 		class GunParticles;
 	};
 	class UGL_F;
-	class arifle_MX_GL_F;
-	class M16A4_M203: arifle_MX_GL_F
+	class arifle_MX_F;
+	class M4: arifle_MX_F
 	{
-		displayname = "M16A4 M203";
-		model = "\M16A4\M16A4.p3d";
+		displayname = "M4";
+		model = "\M4\M16A4.p3d";
 		reloadAction = "GestureReloadSMG_02";
 		handanim[] = {"OFP2_ManSkeleton","\M16A4\Anim\SCAR.rtm"};
-		picture = "\M16A4\m16_x_ca.paa";
+		picture = ;
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		magazines[] = {"30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		class Library
 		{
-			libtextdesc = "The M16 is a gas operated, selective fire weapon, chambered for the 5.56 x 45mm round. M16A1 improved version of the original M16. It has been adopted by the US Army as a standard rifle in 1967, M16A2 a variant of the previous M16A1, adapted for the new SS109 5.56 x 45 mm standard NATO round. This assault rifle had heavier barrel and different rear sight. A full-auto firing mode was replaced with three round burst mode. It's ejection port also has a spent case deflector. The M16A2 has been adopted by the US Army in 1982 and by the US Marine Corps in 1983. Soon it became the general issue rifle, M16A3 improved version, fitted with Picatinny-type rail instead of the carrying handle, which accepts a variety of scopes. A detachable carrying handle can still be installed. Weapon's trigger mechanism has a semi- and full-auto modes only, M16A4 similar to the M16A3, however has a three-round burst mode instead of the full-auto mode.";
+			libtextdesc = "The M16 is a gas operated, selective fire weapon, chambered for the 5.56 x 45mm round.";
 		};
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
@@ -48,7 +48,6 @@ class CfgWeapons
 		reloadMagazineSound[] = {"\15th_MEU_Sounds\M4R",1,1,30};
 		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10};
 		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.5,1};	
-		muzzles[] ={"this","M203"};
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -148,30 +147,9 @@ class CfgWeapons
 			aiRateOfFire = 8;
 			aiRateOfFireDistance = 700;
 		};
-		class M203: UGL_F
-		{
-			displayName = "M203";
-			descriptionShort = "$STR_A3_cfgweapons_3gl1";
-					sounds[] = {"StandardSound"};
-		class StandardSound
-		{
-			weaponSoundEffect = "DefaultRifle";
-			begin1[] = {"\15th_MEU_Sounds\M203_s1",0.100000,1,400};
-			soundBegin[] = {"begin1",1};
-		};
-			useModelOptics = 0;
-			useExternalOptic = 0;
-			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","3Rnd_HE_Grenade_shell","3Rnd_UGL_FlareWhite_F","3Rnd_UGL_FlareGreen_F","3Rnd_UGL_FlareRed_F","3Rnd_UGL_FlareYellow_F","3Rnd_UGL_FlareCIR_F","3Rnd_Smoke_Grenade_shell","3Rnd_SmokeRed_Grenade_shell","3Rnd_SmokeGreen_Grenade_shell","3Rnd_SmokeYellow_Grenade_shell","3Rnd_SmokePurple_Grenade_shell","3Rnd_SmokeBlue_Grenade_shell","3Rnd_SmokeOrange_Grenade_shell"};
-			cameraDir = "OP_look";
-			memoryPointCamera = "OP_eye";
-			weaponInfoType = "RscWeaponZeroing";
-			discreteDistance[] = {100,200,300};
-			discreteDistanceCameraPoint[] = {"OP_eye","OP_eye2","OP_eye3"};
-			discreteDistanceInitIndex = 1;
-		};
 		class WeaponSlotsInfo
 		{
-			mass = 100.5;
+			mass = 63;
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
