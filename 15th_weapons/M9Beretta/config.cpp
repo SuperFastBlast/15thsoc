@@ -36,8 +36,9 @@ class CfgWeapons
 		};
 		class StandardSound: BaseSoundModeType
 		{
-			begin1[] = {"\M9Beretta\sounds\m9_s1",0.562341,1,700};
-			soundBegin[] = {"begin1",0.33};
+			begin1[] = {"\15th_MEU_Sounds\m9_s1",0.562341,1,700};
+			begin2[] = {"\15th_MEU_Sounds\m9_s1",0.562341,1,700};
+			soundBegin[] = {"begin1",0.33,"begin2",0.33};
 		};
 		class SilencedSound: BaseSoundModeType
 		{
@@ -45,8 +46,8 @@ class CfgWeapons
 			begin2[] = {"A3\sounds_f\weapons\silenced\silent-08",0.562341,1,200};
 			soundBegin[] = {"begin1",0.5,"begin2",0.5};
 		};
-		drySound[] = {"\M9Beretta\sounds\M9_dry",1,1,20};
-		reloadMagazineSound[] = {"\M9Beretta\sounds\M9R",1,1,30};
+		drySound[] = {"\15th_MEU_Sounds\M9_dry",1,1,20};
+		reloadMagazineSound[] = {"\15th_MEU_Sounds\M9R",1,1,30};
 		class WeaponSlotsInfo
 		{
 			mass = 25;

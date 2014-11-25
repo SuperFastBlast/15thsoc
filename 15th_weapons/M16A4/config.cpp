@@ -26,7 +26,7 @@ class CfgWeapons
 	};
 	class UGL_F;
 	class arifle_MX_F;
-	class arifle_mas_m16: arifle_MX_F
+	class M16A4: arifle_MX_F
 	{
 		displayname = "M16A4";
 		model = "\M16A4\M16A4.p3d";
@@ -45,7 +45,9 @@ class CfgWeapons
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.;
-		reloadMagazineSound[] = {"\M16A4\sounds\M4Reload",1,1,30};	
+		reloadMagazineSound[] = {"\15th_MEU_Sounds\M4R",1,1,30};
+		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10};
+		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.5,1};	
 		modes[] = {"Single","Burst","single_medium_optics1","single_far_optics2"};
 		class Single: Mode_SemiAuto
 		{
@@ -59,9 +61,9 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\M16A4\sounds\m4_s1",1.0,1,1200};
-				begin2[] = {"\M16A4\sounds\m4_s2",1.0,1,1200};
-				begin3[] = {"\M16A4\sounds\m4_s3",1.0,1,1200};
+				begin1[] = {"\15th_MEU_Sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\15th_MEU_Sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\15th_MEU_Sounds\m4_s3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
@@ -94,9 +96,9 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\M16A4\sounds\m4_s1",1.0,1,1200};
-				begin2[] = {"\M16A4\sounds\m4_s2",1.0,1,1200};
-				begin3[] = {"\M16A4\sounds\m4_s3",1.0,1,1200};
+				begin1[] = {"\15th_MEU_Sounds\m4_s1",1.0,1,1200};
+				begin2[] = {"\15th_MEU_Sounds\m4_s2",1.0,1,1200};
+				begin3[] = {"\15th_MEU_Sounds\m4_s3",1.0,1,1200};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5};
 			};
 			class SilencedSound: BaseSoundModeType

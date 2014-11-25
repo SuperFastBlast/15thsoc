@@ -6,7 +6,7 @@ class CfgPatches
 		requiredversion = 1.0;
 		units[] = {};
 		weapons[] = {"M240G"};
-		magazines[] = {};
+		magazines[] = {"100Rnd_M240_762x51_Stanag","100Rnd_M240_762x51_T_Stanag"};
 	};
 };
 class Mode_FullAuto;
@@ -18,17 +18,19 @@ class single_far_optics2;
 class SlotInfo;
 class CowsSlot;
 class PointerSlot;
+
 class CfgWeapons
 {
-class LMG_Mk200_F;
-class M240G: LMG_Mk200_F
+class LMG_Zafir_F;
+class M240G: LMG_Zafir_F
 	{
 		displayName = "M240G";
 		scope = 2;
 		model = "\M240G\EJ_m240";
 		magazines[] = {"100Rnd_M240_762x51_Stanag","100Rnd_M240_762x51_T_Stanag"};
+		reloadaction = "HLC_GestureReloadM60";
 		descriptionshort = "M240 Medium Machinegun<br />Caliber: 7.62x51 mm";
-		picture = "\M240G\gear_m240_x_ca.paa";
+		picture = "\M240G\data\ui\m240b_x_ca";
 		class Library
 		{
 			libtextdesc = "The M240, officially Machine Gun, 7.62mm, M240, is the US military designation for the FN MAG, a family of belt fed, gas operated medium machine guns firing the 7.62×51mm NATO cartridge. The M240 has been used by the United States Armed Forces since the late 1970s. It is used extensively by infantry, most often rifle companies, as well as ground vehicles, watercraft, and aircraft.";
@@ -40,7 +42,8 @@ class M240G: LMG_Mk200_F
     AGM_clearJamAction = "GestureReloadMX";   // Custom jam clearing action. Default uses reload animation. Use empty string to undefine.
     AGM_Overheating_allowSwapBarrel = 1;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		muzzles[] ={"this"};
-		reloadMagazineSound[] = {"\M240G\sounds\M240reload",1,1,30};
+		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10};
+		reloadMagazineSound[] = {"\15th_MEU_Sounds\M240reload",1,1,30};
 		modes[] = {"manual","close","short","medium","far_optic1","far_optic2"};
 		class manual: Mode_FullAuto
 		{
@@ -58,10 +61,10 @@ class M240G: LMG_Mk200_F
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"\M240G\sounds\m240_s1",1.0,1,1200};
-				begin2[] = {"\M240G\sounds\m240_s2",1.0,1,1200};
-				begin3[] = {"\M240G\sounds\m240_s3",1.0,1,1200};
-				begin4[] = {"\M240G\sounds\m240_s4",1.0,1,1200};
+				begin1[] = {"\15th_MEU_Sounds\m240_s1",1.0,1,1200};
+				begin2[] = {"\15th_MEU_Sounds\m240_s2",1.0,1,1200};
+				begin3[] = {"\15th_MEU_Sounds\m240_s3",1.0,1,1200};
+				begin4[] = {"\M15th_MEU_Sounds\m240_s4",1.0,1,1200};
 				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33,"begin4",0.33};
 			};
 			soundContinuous = 0;
@@ -155,5 +158,5 @@ class M240G: LMG_Mk200_F
 				scope = 0;
 			};
 		};
-	};
+    };	
 };

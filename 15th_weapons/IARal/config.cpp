@@ -151,19 +151,18 @@ class CfgWeapons
 
 			class StandardSound: BaseSoundModeType
 			{
-			begin1[] = {"iaral\sound\Sound1.wav", db4, 1,1200};
-			begin2[] = {"iaral\sound\Sound1.wav", db4, 1,1200};
-			begin3[] = {"iaral\sound\Sound1.wav", db4, 1,1200};
+			begin1[] = {"15th_MEU_Sounds\M27_S1.wav", db4, 1,1200};
+			begin2[] = {"15th_MEU_Sounds\M27_S1.wav", db4, 1,1200};
+			begin3[] = {"15th_MEU_Sounds\M27_S1.wav", db4, 1,1200};
 			soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5};
 			};
 
 			class SilencedSound: BaseSoundModeType /// Sounds inside this class are used when soun
 			{
-			begin1[]={"iaral\sound\sf.wav", 0.80000001, 1,300};
-			begin2[]={"iaral\sound\sf.wav", 0.80000001, 1,300};
+			begin1[]={"15th_MEU_Sounds\M27_sf.wav", 0.80000001, 1,300};
+			begin2[]={"15th_MEU_Sounds\M27_sf.wav", 0.80000001, 1,300};
 			soundBegin[]={begin1,0.333, begin2,0.333};
 			};
-
 			reloadTime=0.096000001;
 			recoil = "recoil_single_primary_4outof10";
             		recoilprone = "recoil_single_primary_prone_3outof10";
@@ -192,16 +191,16 @@ class CfgWeapons
 
 			class StandardSound: BaseSoundModeType
 			{
-			begin1[] = {"iaral\sound\Sound1.wav", db4, 1,1200};
-			begin2[] = {"iaral\sound\Sound1.wav", db4, 1,1200};
-			begin3[] = {"iaral\sound\Sound1.wav", db4, 1,1200};
+			begin1[] = {"15th_MEU_Sounds\M27_S1.wav", db4, 1,1200};
+			begin2[] = {"15th_MEU_Sounds\M27_S1.wav", db4, 1,1200};
+			begin3[] = {"15th_MEU_Sounds\M27_S1.wav", db4, 1,1200};
 			soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5};
 			};
 
 			class SilencedSound: BaseSoundModeType /// Sounds inside this class are used when soun
 			{
-			begin1[]={"iaral\sound\sf.wav", 0.80000001, 1,300};
-			begin2[]={"iaral\sound\sf.wav", 0.80000001, 1,300};
+			begin1[]={"15th_MEU_Sounds\M27_sf.wav", 0.80000001, 1,300};
+			begin2[]={"15th_MEU_Sounds\M27_SF.wav", 0.80000001, 1,300};
 			soundBegin[]={begin1,0.333, begin2,0.333};
 			};
 
@@ -220,6 +219,7 @@ class CfgWeapons
 		aiDispersionCoefY=6.0; /// AI should have some degree of greater dispersion for initial shoots
 		aiDispersionCoefX=4.0; /// AI should have some degree of greater dispersion for initial shoots
 		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10}; /// custom made sounds
+		reloadMagazineSound[] = {"\15th_MEU_Sounds\M4R",1,1,30};
 	};
 	class ej_IAR30: ej_IARal_base
 	{
