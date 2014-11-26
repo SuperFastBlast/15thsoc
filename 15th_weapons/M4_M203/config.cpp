@@ -5,7 +5,7 @@ class CfgPatches
 		requiredaddons[] = {"A3_Weapons_F"};
 		requiredversion = 1.0;
 		units[] = {};
-		weapons[] = {"M16A4"};
+		weapons[] = {"M4_M203"};
 		magazines[] = {};
 	};
 };
@@ -26,18 +26,18 @@ class CfgWeapons
 	};
 	class UGL_F;
 	class arifle_MX_GL_F;
-	class M16A4_M203: arifle_MX_GL_F
+	class M4_M203: arifle_MX_GL_F
 	{
-		displayname = "M16A4 M203";
-		model = "\M16A4\M16A4.p3d";
+		displayname = "M4 M203";
+		model = "\M4_m203\M16A4.p3d";
 		reloadAction = "GestureReloadSMG_02";
 		handanim[] = {"OFP2_ManSkeleton","\M16A4\Anim\SCAR.rtm"};
-		picture = "\M16A4\m16_x_ca.paa";
+		picture = ;
 		descriptionshort = "Assault Rifle<br />Caliber: 5.56x45 mm";
 		magazines[] = {"30Rnd_M855A1_556x45_Stanag","30Rnd_M855A1_556x45_T_Stanag"};
 		class Library
 		{
-			libtextdesc = "The M16 is a gas operated, selective fire weapon, chambered for the 5.56 x 45mm round. M16A1 improved version of the original M16. It has been adopted by the US Army as a standard rifle in 1967, M16A2 a variant of the previous M16A1, adapted for the new SS109 5.56 x 45 mm standard NATO round. This assault rifle had heavier barrel and different rear sight. A full-auto firing mode was replaced with three round burst mode. It's ejection port also has a spent case deflector. The M16A2 has been adopted by the US Army in 1982 and by the US Marine Corps in 1983. Soon it became the general issue rifle, M16A3 improved version, fitted with Picatinny-type rail instead of the carrying handle, which accepts a variety of scopes. A detachable carrying handle can still be installed. Weapon's trigger mechanism has a semi- and full-auto modes only, M16A4 similar to the M16A3, however has a three-round burst mode instead of the full-auto mode.";
+			libtextdesc = "The M4 is a gas operated, selective fire weapon, chambered for the 5.56 x 45mm round.;
 		};
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
@@ -171,7 +171,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo
 		{
-			mass = 100.5;
+			mass = 93.9;
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
