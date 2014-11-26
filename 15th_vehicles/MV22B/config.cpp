@@ -69,7 +69,7 @@ class CfgVehicles
 		{
 			class MainTurret: NewTurret
 			{
-				commanding = -1;
+				commanding = 1;
 				isCopilot = 1;
 				gunnerName = "Copilot";
 				primaryGunner = 1;
@@ -299,10 +299,7 @@ class CfgVehicles
 		envelope[]={0,0.15000001,1.1,3,5,5.8299999,6,5.8499999,5.5,4.8000002,3.5999999,1.8,0};
 		driverAction="MV22_Pilot";
 		cargoIsCoDriver[]={0,0};
-		cargoAction[]=
-		{
-			""
-		};
+		cargoaction[] = {"passenger_mantisrear"};
 		
 		driverCompartments="Compartment1";
 		cargoCompartments[]=
