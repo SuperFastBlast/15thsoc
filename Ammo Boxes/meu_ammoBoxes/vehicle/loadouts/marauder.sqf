@@ -1,23 +1,18 @@
 //15th Marauder Vehicle
 //By: 2ndLt Callaghan
-// REVISION 28OCT14
+// REVISION 03DEC14
 
 [
-	["meu_AT4", 8],
-	["30Rnd_M855A1_556x45_T_Stanag", 80],
-	["HandGrenade", 20],
-	["SmokeShell", 20],
-	["SmokeShellGreen", 10],
-	["DemoCharge_Remote_Mag", 4],
-	["AGM_Bandage", 50],
-	["AGM_Epipen", 20],
-	["AGM_Morphine", 20],
-	["AGM_Bloodbag", 20],
-	["AGM_Clacker", 2],
-	["AGM_UAVBattery", 4],
+	["meu_AT4", 2],
+	["30Rnd_M855A1_556x45_T_Stanag", 20],
+	["SmokeShell", 6],
+	["SmokeShellGreen", 6],
+	["DemoCharge_Remote_Mag", 2],
+	["AGM_Bandage", 20],
+	["AGM_Clacker", 1],
+	["AGM_UAVBattery", 1],
 	["B_UavTerminal", 1],
 	["Laserdesignator", 1],
 	["ToolKit", 1],
-	["AGM_UAVBattery", 4],
 	["B_UAV_01_backpack_F", 1] // no comma
 ];

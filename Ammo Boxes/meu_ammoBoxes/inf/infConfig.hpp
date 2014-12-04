@@ -145,6 +145,10 @@
 				count = 15;
 				name = "V_mas_mar_PlateCarrierGL_rgr_d";
 			};
+			class _xx_V_mas_mar_PlateCarrier1_rgr_d {
+				count = 10;
+				name = "V_mas_mar_PlateCarrier1_rgr_d";
+			};
 
 // MEDICAL
 		    class _xx_AGM_Bandage  {
