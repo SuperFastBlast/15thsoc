@@ -1,7 +1,6 @@
 
 #include "Crewanimations.hpp"
 #include "weaponDefs.hpp"
-
 class CfgPatches
 {
 	class meu_AH1Z
@@ -12,7 +11,6 @@ class CfgPatches
 		requiredAddons[] = {"A3_Air_F","A3_Weapons_F","RWCO_Main"};
 	};
 };
-
 
 
 class CfgVehicles
@@ -486,7 +484,7 @@ class CfgVehicles
 	class AH1ZWreck: HelicopterWreck
 	{
 		scope = 1;
-		class Armory {disabled = 1;}
+		class Armory {disabled = 1;};
 		model = "gunfighter\ah1z\AH1ZWreck.p3d";
 		typicalCargo[]={};
 		irTarget = false;

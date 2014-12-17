@@ -367,8 +367,8 @@ class CfgWeapons
 			minRange=1;minRangeProbab=0.01;
 			midRange=2;midRangeProbab=0.01;
 			maxRange=3;maxRangeProbab=0.01;
-		}
-		class close: manual
+		};
+		class close : manual
 		{
             showToPlayer = false;
             soundBurst = false;
@@ -480,7 +480,7 @@ class FFARLauncher_14:FFARLauncher
 	lockedtargetsound[] = {""};
 	lockingtargetsound[] = {""};
 	laserPos = "sensors"
-	magazines[] = {"8Rnd_Hellfire"};
+	magazines = "8Rnd_Hellfire";
 	maxrange = 9000;
 	maxrangeprobab = 0.01;
 	midrange = 2500;
@@ -551,7 +551,7 @@ class FFARLauncher_14:FFARLauncher
 			ffMagnitude = 0.5;
 			ffFrequency = 11;
 			ffCount = 6;
-		}
+		};
 		class close: manual
 		{
       showToPlayer = false;
