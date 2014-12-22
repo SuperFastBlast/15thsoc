@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="CUP">
+  <Package name="CUP_Weapons">
+  <Container name="M240">
+      <Key ID="STR_CUP_DN_M240">
+        <Original>M240</Original>
+        <English>M240</English>
+        <Czech>M240</Czech>
+        <German>M240</German>
+        <Russian>M240</Russian>
+        <Polish>M240</Polish>
+        <Hungarian>M240</Hungarian>
+        <Italian>M240</Italian>
+        <Spanish>M240</Spanish>
+        <French>M240</French>
+      </Key>
+    </Container>
+  </Package>
+</Project>
+
+

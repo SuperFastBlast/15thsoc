@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="CUP">
+  <Package name="CUP_Weapons">
+  <Container name="CUP_Ammunition">
+      <Key ID="STR_DN_CUP_AIM9X">
+        <Original>AIM-9X Sidewinder</Original>
+        <English>AIM-9X Sidewinder</English>
+        <Czech>AIM-9X Sidewinder</Czech>
+        <German>AIM-9X Sidewinder</German>
+        <Russian>AIM-9X Sidewinder</Russian>
+        <Polish>AIM-9X Sidewinder</Polish>
+        <Hungarian>AIM-9X Sidewinder</Hungarian>
+        <Italian>AIM-9X Sidewinder</Italian>
+        <Spanish>AIM-9X Sidewinder</Spanish>
+        <French>AIM-9X Sidewinder</French>
+      </Key>
+      <Key ID="STR_DN_CUP_AIM9L">
+        <Original>AIM-9L Sidewinder</Original>
+        <English>AIM-9L Sidewinder</English>
+        <Czech>AIM-9L Sidewinder</Czech>
+        <German>AIM-9L Sidewinder</German>
+        <Russian>AIM-9L Sidewinder</Russian>
+        <Polish>AIM-9L Sidewinder</Polish>
+        <Hungarian>AIM-9L Sidewinder</Hungarian>
+        <Italian>AIM-9L Sidewinder</Italian>
+        <Spanish>AIM-9L Sidewinder</Spanish>
+        <French>AIM-9L Sidewinder</French>
+      </Key>
+      <Key ID="STR_DN_CUP_AGM_114K_Hellfire_II">
+        <Original>AGM-114K Hellfire II</Original>
+        <English>AGM-114K Hellfire II</English>
+        <Czech>AGM-114K Hellfire II</Czech>
+        <German>AGM-114K Hellfire II</German>
+        <Russian>AGM-114K Hellfire II</Russian>
+        <Polish>AGM-114K Hellfire II</Polish>
+        <Hungarian>AGM-114K Hellfire II</Hungarian>
+        <Italian>AGM-114K Hellfire II</Italian>
+        <Spanish>AGM-114K Hellfire II</Spanish>
+        <French>AGM-114K Hellfire II</French>
+      </Key>
+      <Key ID="STR_DN_CUP_PG7VL">
+        <Original>PG7VL</Original>
+        <English>PG7VL</English>
+        <Czech>PG7VL</Czech>
+        <German>PG7VL</German>
+        <Russian>PG7VL</Russian>
+        <Polish>PG7VL</Polish>
+        <Hungarian>PG7VL</Hungarian>
+        <Italian>PG7VL</Italian>
+        <Spanish>PG7VL</Spanish>
+        <French>PG7VL</French>
+      </Key>
+      <Key ID="STR_DN_CUP_PG7">
+        <Original>PG7</Original>
+        <English>PG7</English>
+        <Czech>PG7</Czech>
+        <German>PG7</German>
+        <Russian>PG7</Russian>
+        <Polish>PG7</Polish>
+        <Hungarian>PG7</Hungarian>
+        <Italian>PG7</Italian>
+        <Spanish>PG7</Spanish>
+        <French>PG7</French>
+      </Key>
+      <Key ID="STR_DN_CUP_PG7VR">
+        <Original>PG7VR</Original>
+        <English>PG7VR</English>
+        <Czech>PG7VR</Czech>
+        <German>PG7VR</German>
+        <Russian>PG7VR</Russian>
+        <Polish>PG7VR</Polish>
+        <Hungarian>PG7VR</Hungarian>
+        <Italian>PG7VR</Italian>
+        <Spanish>PG7VR</Spanish>
+        <French>PG7VR</French>
+      </Key>
+      <Key ID="STR_DN_CUP_OG7V">
+        <Original>PG7</Original>
+        <English>PG7</English>
+        <Czech>PG7</Czech>
+        <German>PG7</German>
+        <Russian>PG7</Russian>
+        <Polish>PG7</Polish>
+        <Hungarian>PG7</Hungarian>
+        <Italian>PG7</Italian>
+        <Spanish>PG7</Spanish>
+        <French>PG7</French>
+      </Key>
+      <Key ID="STR_MN_CUP_RGD5">
+         <Original>RGD5 Frag Grenade</Original>
+         <French>Grenade frag. RGD5</French>
+         <Spanish>Granada de frag. RGD5</Spanish>
+         <Italian>Granata a frammentazione RGD5</Italian>
+         <Hungarian>RGD5 RepeszgrÃ¡nÃ¡t</Hungarian>
+         <Polish>RGD5 granat odÅ‚.</Polish>
+         <Russian>Ð Ð“Ð”-5</Russian>
+         <German>RGD5-Splittergranate</German>
+         <Czech>TÅ™Ã­Å¡tivÃ½ granÃ¡t RGD5</Czech>
+         <English>RGD5 Frag Grenade</English>
+         <Japanese>RGD5 Frag Grenade</Japanese>
+      </Key>
+      <Key ID="STR_MN_CUP_9K38_Igla">
+        <Original>Igla 9K38</Original>
+        <French>Igla 9K38</French>
+        <Spanish>Igla 9K38</Spanish>
+        <Italian>Igla 9K38</Italian>
+        <Hungarian>Igla 9K38</Hungarian>
+        <Polish>IgÅ‚a 9K38</Polish>
+        <Russian>Ð—Ð£Ð  9Ðœ39</Russian>
+        <German>Igla 9K38</German>
+        <Czech>Igla 9K38</Czech>
+        <English>Igla 9K38</English>
+        <Japanese>ã‚¤ã‚°ãƒ©9K38</Japanese>
+      </Key>
+
+      <Key ID="str_cup_dn_igla_twice">
+        <Original>Igla 9K38</Original>
+        <French>Igla 9K38</French>
+        <Spanish>Igla 9K38</Spanish>
+        <Italian>Igla 9K38</Italian>
+        <Hungarian>Igla 9K38</Hungarian>
+        <Polish>IgÅ‚a 9K38</Polish>
+        <Russian>ÐŸÐ—Ð Ðš 'Ð˜Ð³Ð»Ð°'</Russian>
+        <German>Igla 9K38</German>
+        <Czech>Igla 9K38</Czech>
+        <English>Igla 9K38</English>
+        <Japanese>Igla 9K38</Japanese>
+      </Key>
+
+        <Key
+          ID="str_cup_dss_1rnd_igla">
+          <Original>Range: 4800 m &lt;br/&gt;Type: ground-air &lt;br/&gt;Used in: Igla 9K38</Original>
+          <French>PortÃ©e : 4800 m &lt;br/&gt;Type : sol-air &lt;br/&gt;UtilisÃ© avec : Igla 9K38</French>
+          <Spanish>Alcance: 4800 m &lt;br/&gt;Tipo: tierra-aire &lt;br/&gt;Uso: Igla 9K38</Spanish>
+          <Italian>Portata: 4800 m &lt;br/&gt;Tipo: terra-aria &lt;br/&gt;Si usa in: Igla 9K38</Italian>
+          <Hungarian>HatÃ³tÃ¡v: 4800 m &lt;br/&gt; TÃ­pus: fÃ¶ld-levegÅ‘ &lt;br/&gt; HozzÃ¡ tatozÃ³ fegyver: 9K38</Hungarian>
+          <Polish>ZasiÄ™g: 4800 m &lt;br/&gt;Typ: ziemia-powietrze &lt;br/&gt;UÅ¼ywane w: IgÅ‚a 9K38</Polish>
+          <Russian>Ð”Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ: 4800 Ð¼ &lt;br/&gt;Ð¢Ð¸Ð¿: Ð·ÐµÐ¼Ð»Ñ - Ð²Ð¾Ð·Ð´ÑƒÑ… &lt;br/&gt;Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÑŽÑ‚ÑÑ Ð²: ÐŸÐ—Ð Ðš 'Ð˜Ð³Ð»Ð°'</Russian>
+          <German>Reichweite: 4800 m &lt;br/&gt;Typ: Boden-Luft &lt;br/&gt;Eingesetzt in: Igla 9K38</German>
+          <Czech>Dolet: 4800 m &lt;br/&gt;Typ: zemÄ›-vzduch &lt;br/&gt;Pro: Igla 9K38</Czech>
+          <English>Range: 4800 m &lt;br/&gt;Type: ground-air &lt;br/&gt;Used in: Igla 9K38</English>
+          <Japanese>Range: 4800 m &lt;br/&gt;Type: ground-air &lt;br/&gt;Used in: Igla 9K38</Japanese>
+        </Key>
+
+      <Key
+        ID="STR_DN_CUP_9K38_Igla">
+        <Original>Igla 9K38</Original>
+        <French>Igla 9K38</French>
+        <Spanish>Igla 9K38</Spanish>
+        <Italian>Igla 9K38</Italian>
+        <Hungarian>Igla 9K38</Hungarian>
+        <Polish>IgÅ‚a 9K38</Polish>
+        <Russian>ÐŸÐ—Ð Ðš 'Ð˜Ð³Ð»Ð°'</Russian>
+        <German>Igla 9K38</German>
+        <Czech>Igla 9K38</Czech>
+        <English>Igla 9K38</English>
+        <Japanese>Igla 9K38</Japanese>
+      </Key>
+
+      <Key ID="STR_DN_CUP_MAG_AK74_NO_TRACERS">
+        <Original>30 Rnd AK Magazine</Original>
+        <English>30 Rnd AK Magazine</English>
+        <Czech>30 Rnd AK Magazine</Czech>
+        <German>30 Rnd AK Magazine</German>
+        <Russian>30 Rnd AK Magazine</Russian>
+        <Polish>30 Rnd AK Magazine</Polish>
+        <Hungarian>30 Rnd AK Magazine</Hungarian>
+        <Italian>30 Rnd AK Magazine</Italian>
+        <Spanish>30 Rnd AK Magazine</Spanish>
+        <French>30 Rnd AK Magazine</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_AK74_GREEN_TRACERS">
+        <Original>30 Rnd AK Magazine (Green Tracers)</Original>
+        <English>30 Rnd AK Magazine (Green Tracers)</English>
+        <Czech>30 Rnd AK Magazine (Green Tracers)</Czech>
+        <German>30 Rnd AK Magazine (Green Tracers)</German>
+        <Russian>30 Rnd AK Magazine (Green Tracers)</Russian>
+        <Polish>30 Rnd AK Magazine (Green Tracers)</Polish>
+        <Hungarian>30 Rnd AK Magazine (Green Tracers)</Hungarian>
+        <Italian>30 Rnd AK Magazine (Green Tracers)</Italian>
+        <Spanish>30 Rnd AK Magazine (Green Tracers)</Spanish>
+        <French>30 Rnd AK Magazine (Green Tracers)</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_AK74_RED_TRACERS">
+        <Original>30 Rnd AK Magazine (Red Tracers)</Original>
+        <English>30 Rnd AK Magazine (Red Tracers)</English>
+        <Czech>30 Rnd AK Magazine (Red Tracers)</Czech>
+        <German>30 Rnd AK Magazine (Red Tracers)</German>
+        <Russian>30 Rnd AK Magazine (Red Tracers)</Russian>
+        <Polish>30 Rnd AK Magazine (Red Tracers)</Polish>
+        <Hungarian>30 Rnd AK Magazine (Red Tracers)</Hungarian>
+        <Italian>30 Rnd AK Magazine (Red Tracers)</Italian>
+        <Spanish>30 Rnd AK Magazine (Red Tracers)</Spanish>
+        <French>30 Rnd AK Magazine (Red Tracers)</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_AK74_YELLOW_TRACERS">
+        <Original>30 Rnd AK Magazine (Yellow Tracers)</Original>
+        <English>30 Rnd AK Magazine (Yellow Tracers)</English>
+        <Czech>30 Rnd AK Magazine (Yellow Tracers)</Czech>
+        <German>30 Rnd AK Magazine (Yellow Tracers)</German>
+        <Russian>30 Rnd AK Magazine (Yellow Tracers)</Russian>
+        <Polish>30 Rnd AK Magazine (Yellow Tracers)</Polish>
+        <Hungarian>30 Rnd AK Magazine (Yellow Tracers)</Hungarian>
+        <Italian>30 Rnd AK Magazine (Yellow Tracers)</Italian>
+        <Spanish>30 Rnd AK Magazine (Yellow Tracers)</Spanish>
+        <French>30 Rnd AK Magazine (Yellow Tracers)</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_AK74_WHITE_TRACERS">
+        <Original>30 Rnd AK Magazine (White Tracers)</Original>
+        <English>30 Rnd AK Magazine (White Tracers)</English>
+        <Czech>30 Rnd AK Magazine (White Tracers)</Czech>
+        <German>30 Rnd AK Magazine (White Tracers)</German>
+        <Russian>30 Rnd AK Magazine (White Tracers)</Russian>
+        <Polish>30 Rnd AK Magazine (White Tracers)</Polish>
+        <Hungarian>30 Rnd AK Magazine (White Tracers)</Hungarian>
+        <Italian>30 Rnd AK Magazine (White Tracers)</Italian>
+        <Spanish>30 Rnd AK Magazine (White Tracers)</Spanish>
+        <French>30 Rnd AK Magazine (White Tracers)</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_BIZON_NO_TRACERS">
+        <Original>64 Rnd Bizon Magazine</Original>
+        <English>64 Rnd Bizon Magazine</English>
+        <Czech>64 Rnd Bizon Magazine</Czech>
+        <German>64 Rnd Bizon Magazine</German>
+        <Russian>64 Rnd Bizon Magazine</Russian>
+        <Polish>64 Rnd Bizon Magazine</Polish>
+        <Hungarian>64 Rnd Bizon Magazine</Hungarian>
+        <Italian>64 Rnd Bizon Magazine</Italian>
+        <Spanish>64 Rnd Bizon Magazine</Spanish>
+        <French>64 Rnd Bizon Magazine</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_BIZON_RED_TRACERS">
+        <Original>64 Rnd Bizon Magazine (Red Tracers)</Original>
+        <English>64 Rnd Bizon Magazine (Red Tracers)</English>
+        <Czech>64 Rnd Bizon Magazine (Red Tracers)</Czech>
+        <German>64 Rnd Bizon Magazine (Red Tracers)</German>
+        <Russian>64 Rnd Bizon Magazine (Red Tracers)</Russian>
+        <Polish>64 Rnd Bizon Magazine (Red Tracers)</Polish>
+        <Hungarian>64 Rnd Bizon Magazine (Red Tracers)</Hungarian>
+        <Italian>64 Rnd Bizon Magazine (Red Tracers)</Italian>
+        <Spanish>64 Rnd Bizon Magazine (Red Tracers)</Spanish>
+        <French>64 Rnd Bizon Magazine (Red Tracers)</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_BIZON_GREEN_TRACERS">
+        <Original>64 Rnd Bizon Magazine (Green Tracers)</Original>
+        <English>64 Rnd Bizon Magazine (Green Tracers)</English>
+        <Czech>64 Rnd Bizon Magazine (Green Tracers)</Czech>
+        <German>64 Rnd Bizon Magazine (Green Tracers)</German>
+        <Russian>64 Rnd Bizon Magazine (Green Tracers)</Russian>
+        <Polish>64 Rnd Bizon Magazine (Green Tracers)</Polish>
+        <Hungarian>64 Rnd Bizon Magazine (Green Tracers)</Hungarian>
+        <Italian>64 Rnd Bizon Magazine (Green Tracers)</Italian>
+        <Spanish>64 Rnd Bizon Magazine (Green Tracers)</Spanish>
+        <French>64 Rnd Bizon Magazine (Green Tracers)</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_BIZON_WHITE_TRACERS">
+        <Original>64 Rnd Bizon Magazine (White Tracers)</Original>
+        <English>64 Rnd Bizon Magazine (White Tracers)</English>
+        <Czech>64 Rnd Bizon Magazine (White Tracers)</Czech>
+        <German>64 Rnd Bizon Magazine (White Tracers)</German>
+        <Russian>64 Rnd Bizon Magazine (White Tracers)</Russian>
+        <Polish>64 Rnd Bizon Magazine (White Tracers)</Polish>
+        <Hungarian>64 Rnd Bizon Magazine (White Tracers)</Hungarian>
+        <Italian>64 Rnd Bizon Magazine (White Tracers)</Italian>
+        <Spanish>64 Rnd Bizon Magazine (White Tracers)</Spanish>
+        <French>64 Rnd Bizon Magazine (White Tracers)</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_BIZON_YELLOW_TRACERS">
+        <Original>64 Rnd Bizon Magazine (Yellow Tracers)</Original>
+        <English>64 Rnd Bizon Magazine (Yellow Tracers)</English>
+        <Czech>64 Rnd Bizon Magazine (Yellow Tracers)</Czech>
+        <German>64 Rnd Bizon Magazine (Yellow Tracers)</German>
+        <Russian>64 Rnd Bizon Magazine (Yellow Tracers)</Russian>
+        <Polish>64 Rnd Bizon Magazine (Yellow Tracers)</Polish>
+        <Hungarian>64 Rnd Bizon Magazine (Yellow Tracers)</Hungarian>
+        <Italian>64 Rnd Bizon Magazine (Yellow Tracers)</Italian>
+        <Spanish>64 Rnd Bizon Magazine (Yellow Tracers)</Spanish>
+        <French>64 Rnd Bizon Magazine (Yellow Tracers)</French>
+      </Key>
+      <Key ID="STR_DN_CUP_MAG_10x_303_LEEENFIELD_NO_TRACERS">
+        <Original>Lee Enfield 10 Rnd Mag.</Original>
+        <Chinese>Lee Enfield 10 Rnd Mag.</Chinese>
+        <French>Lee Enfield 10 Rnd Mag.</French>
+        <Spanish>Lee Enfield 10 Rnd Mag.</Spanish>
+        <Italian>Lee Enfield 10 Rnd Mag.</Italian>
+        <Hungarian>Lee Enfield 10 Rnd Mag.</Hungarian>
+        <Polish>Lee Enfield 10 Rnd Mag.</Polish>
+        <Russian>Lee Enfield 10 Rnd Mag.</Russian>
+        <German>Lee Enfield 10 Rnd Mag.</German>
+        <Czech>Lee Enfield 10 Rnd Mag..</Czech>
+        <English>Lee Enfield 10 Rnd Mag.</English>
+        <Japanese>Lee Enfield 10 Rnd Mag.</Japanese>
+      </Key>
+    </Container>
+  </Package>
+</Project>
