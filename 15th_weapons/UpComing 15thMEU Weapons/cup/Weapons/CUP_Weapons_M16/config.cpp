@@ -347,12 +347,12 @@ class CfgWeapons
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M16A4GL_X_ca.paa";
 		handAnim[] = {"OFP2_ManSkeleton","CUP\Weapons\CUP_Weapons_M16\data\anim\M16GL.rtm"};
 		muzzles[] = {"this","M203"};
-		displayName = "M16A4 GL";
+		displayName = "M16A4 M203";
 		class Library
 		{
 			libTextDesc = "M16. THE rifle";
 		};
-		descriptionShort = "M16A$ GL";
+		descriptionShort = "M16A4 M203";
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class CowsSlot{};
@@ -490,7 +490,7 @@ class CfgWeapons
 		{
 			libTextDesc = "The Colt M4 is a shortened version of the M16";
 		};
-		descriptionShort = "M4A1";
+		descriptionShort = "M4";
 		inertia = 0.4;
 		dexterity = 1.6;
 	};
@@ -526,7 +526,7 @@ class CfgWeapons
 		{
 			libTextDesc = "M4A1";
 		};
-		descriptionShort = "M4A1 GL";
+		descriptionShort = "M4 M203";
 		inertia = 0.5;
 		dexterity = 1.5;
 		modes[] = {"Single","Burst"};
@@ -701,7 +701,7 @@ class CfgWeapons
 	{
 		scope = 2;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4_black_GL.p3d";
-		displayName = "M4A1 GL (black)";
+		displayName = "M4A1 M203";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M4GL_X_ca.paa";
 		handAnim[] = {"OFP2_ManSkeleton","CUP\Weapons\CUP_Weapons_M16\data\anim\M16GL.rtm"};
 		muzzles[] = {"this","M203"};
@@ -709,7 +709,7 @@ class CfgWeapons
 		{
 			libTextDesc = "M4A1";
 		};
-		descriptionShort = "M14A1 GL";
+		descriptionShort = "M14A1 M203";
 		inertia = 0.5;
 		dexterity = 1.5;
 		class WeaponSlotsInfo: WeaponSlotsInfo
@@ -720,7 +720,7 @@ class CfgWeapons
 	class CUP_arifle_M4A1_black: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
-		displayName = "M4A1 (black)";
+		displayName = "M4A1";
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4A1_BUIS_black.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_m4blk_X_ca.paa";
 		inertia = 0.4;

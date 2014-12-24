@@ -4,7 +4,7 @@ class CfgPatches
 	class CUP_Weapons_Colt1911
 	{
 		units[] = {};
-		weapons[] = {"CUP_hgun_Colt1911","CUP_hgun_Colt1911_snds"};
+		weapons[] = {"CUP_hgun_Colt1911"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"CUP_Weapons_WeaponsCore"};
 		magazines[] = {"MEU_T2AAF_45ACP"};
@@ -114,17 +114,6 @@ class CfgWeapons
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
 				compatibleItems[] = {"muzzle_snds_acp"};
-			};
-		};
-	};
-	class CUP_hgun_Colt1911_snds: CUP_hgun_Colt1911
-	{
-		class LinkedItems
-		{
-			class LinkedItemsMuzzle
-			{
-				slot = "MuzzleSlot";
-				item = "muzzle_snds_acp";
 			};
 		};
 	};
