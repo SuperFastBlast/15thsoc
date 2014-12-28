@@ -24,10 +24,10 @@ class CfgAmmo
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=3;
-		visibleFireTime=3;
-		audibleFire=7;
-		audibleFireTime=7;
+		visibleFire=15;
+		visibleFireTime=15;
+		audibleFire=5;
+		audibleFireTime=5;
 	};
 	class B_MEU_M8556_SAW: B_556x45_Ball_Tracer_Red 
 	{
@@ -38,10 +38,10 @@ class CfgAmmo
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=3;
-		visibleFireTime=3;
-		audibleFire=7;
-		audibleFireTime=7;
+		visibleFire=15;
+		visibleFireTime=15;
+		audibleFire=5;
+		audibleFireTime=5;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
@@ -121,7 +121,7 @@ class CfgWeapons
 		};
 	AGM_Bipod = 1;
     AGM_Jamming_Reliability = 0.001;    // malfunctions on 10,000 rounds fired.
-    AGM_Overheating_Increment = 0.010;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
+    AGM_Overheating_Increment = 0.013;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_Overheating_allowSwapBarrel = 1;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
@@ -154,11 +154,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s1",1.4,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s2",1.4,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s3",1.4,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s4",1.4,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{

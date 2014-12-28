@@ -7,7 +7,7 @@ class CfgPatches
 		weapons[] = {"CUP_muzzle_snds_M16","CUP_arifle_M16A4_Base","CUP_arifle_M16A4_GL","CUP_arifle_M4CAR_BUIS_GL","CUP_arifle_M4CAR_black","CUP_arifle_M4A1_BUIS_GL","CUP_arifle_M4A1_black","CUP_srifle_Mk12SPR"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"CUP_Weapons_WeaponsCore"};
-		magazines[] = {"M433_40mm_HEDP_Shell","MEU_30Rnd_M855A1_556x45_Stanag","MEU_30Rnd_M855A1_556x45_T_Stanag","MEU_30x556_Mk262_Mag"};
+		magazines[] = {"MEU_FlareYellow_M203","MEU_FlareWhite_M203","MEU_FlareGreen_M203","MEU_FlareRed_M203","M433_40mm_HEDP_Shell","MEU_30Rnd_M855A1_556x45_Stanag","MEU_30Rnd_M855A1_556x45_T_Stanag","MEU_30x556_Mk262_Mag"};
 	
 	};
 };
@@ -16,6 +16,65 @@ class CfgAmmo
 	 class G_40mm_HE;
 	 class B_556x45_Ball;
 	 class B_556x45_Ball_Tracer_Red;
+	class Flarecore;
+	class MEUFlare: Flarecore
+	{
+		timeToLive = 120;
+		muzzleEffect = "BIS_fnc_effectFiredRifle";
+		intensity = 20000;
+	};
+	class MEU_F_40mm_White: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.5,0.5,0.5,0.5};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
+	class MEU_F_40mm_Green: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.25,0.5,0.25,0};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
+	class MEU_F_40mm_Red: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.5,0.25,0.25,0};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
+	class MEU_F_40mm_Yellow: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.5,0.5,0.25,0};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
 	class B_MEU_M855a1: B_556x45_Ball
 	{
 		hit=8.4;
@@ -25,10 +84,10 @@ class CfgAmmo
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=3;
-		visibleFireTime=3;
-		audibleFire=7;
-		audibleFireTime=7;
+		visibleFire=12;
+		visibleFireTime=12;
+		audibleFire=5;
+		audibleFireTime=5;
 	};
 	class B_MEU_M8556: B_556x45_Ball_Tracer_Red
 	{
@@ -38,10 +97,10 @@ class CfgAmmo
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=3;
-		visibleFireTime=3;
-		audibleFire=7;
-		audibleFireTime=7;
+		visibleFire=12;
+		visibleFireTime=12;
+		audibleFire=5;
+		audibleFireTime=5;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
@@ -53,7 +112,7 @@ class CfgAmmo
         airFriction = -0.0010867938;
         caliber = 0.855;
         deflecting = 16;
-        visibleFire = 2.5;
+        visibleFire = 12;
         audibleFire = 5;
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };
@@ -77,6 +136,34 @@ class CfgMagazines
 	class 1Rnd_HE_Grenade_shell;
 	class 30Rnd_556x45_Stanag;
 	class 30Rnd_556x45_Stanag_Tracer_Red;
+	class UGL_FlareWhite_F;
+	class UGL_FlareGreen_F;
+	class UGL_FlareRed_F;
+	class UGL_FlareYellow_F;
+	class MEU_FlareWhite_M203: UGL_FlareWhite_F
+	{
+		scope = 2;
+		ammo = "MEU_F_40mm_White";
+		displayName = "M583 Flare White";
+	};
+	class MEU_FlareGreen_M203: UGL_FlareGreen_F
+	{
+		scope = 2;
+		ammo = "MEU_F_40mm_Green";
+		displayName = "M661 Flare Green";
+	};
+	class MEU_FlareRed_M203: UGL_FlareRed_f
+	{
+		scope = 2;
+		ammo = "MEU_F_40mm_Red";
+		displayName = "M662 Flare Red";
+	};
+	class MEU_FlareYellow_M203: UGL_FlareYellow_F
+	{
+		scope = 2;
+		ammo = "MEU_F_40mm_Yellow";
+		displayName = "M695 Flare Yellow";
+	};
 	class M433_40mm_HEDP_Shell: 1Rnd_HE_Grenade_shell
 	{
 		scope = 2;
@@ -203,7 +290,7 @@ class CfgWeapons
 		magazines[] = {"MEU_30Rnd_M855A1_556x45_Stanag","MEU_30Rnd_M855A1_556x45_T_Stanag"};
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
-    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		modes[] = {"Single","Burst"};
@@ -219,11 +306,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -255,11 +342,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -303,7 +390,7 @@ class CfgWeapons
 			begin1[] = {"\CUP\Weapons\CUP_Weapons_M16\M203_s1",0.100000,1,400};
 			soundBegin[] = {"begin1",1};
 		};
-			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"MEU_FlareYellow_M203","MEU_FlareWhite_M203","MEU_FlareGreen_M203","MEU_FlareRed_M203","M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 			useModelOptics = 0;
 			useExternalOptic = 0;
 			cameraDir = "OP_look";
@@ -378,7 +465,7 @@ class CfgWeapons
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Dry",1,1,35};
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
-    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		modes[] = {"Single","FullAuto"};
@@ -394,11 +481,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -430,11 +517,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -478,7 +565,7 @@ class CfgWeapons
 			begin1[] = {"\CUP\Weapons\CUP_Weapons_M16\M203_s1",0.100000,1,400};
 			soundBegin[] = {"begin1",1};
 		};
-			magazines[] = {"M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
+			magazines[] = {"MEU_FlareYellow_M203","MEU_FlareWhite_M203","MEU_FlareGreen_M203","MEU_FlareRed_M203","M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 			useModelOptics = 0;
 			useExternalOptic = 0;
 			cameraDir = "OP_look";
@@ -542,11 +629,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -578,11 +665,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -630,11 +717,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -666,11 +753,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -743,7 +830,7 @@ class CfgWeapons
 		dexterity = 1.3;
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
-    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		modes[] = {"Single"};

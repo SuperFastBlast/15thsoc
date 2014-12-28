@@ -21,10 +21,10 @@ class CfgAmmo
         deflecting=20;
         deflectingChance = 100;
         deflectingRandomness = 0.5;
-        visibleFire=3;
-        visibleFireTime=3;
-        audibleFire=7;
-        audibleFireTime=7;
+        visibleFire=12;
+        visibleFireTime=12;
+        audibleFire=5;
+        audibleFireTime=5;
     };
 };
 class CfgMagazines
@@ -141,7 +141,7 @@ class CfgWeapons
 	AGM_Bipod = 1;
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
-    AGM_Overheating_Cooldown = 0.011;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
+    AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\Reload",1,1,35};

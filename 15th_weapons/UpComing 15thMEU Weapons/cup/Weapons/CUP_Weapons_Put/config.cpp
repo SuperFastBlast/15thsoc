@@ -22,7 +22,7 @@ class CfgAmmo
 		indirectHitRange = 32;
 		model = "\CUP\Weapons\CUP_Weapons_Put\CUP_Satchel.p3d";
 		whistleDist = 40;
-		soundHit[] = {"A3\Sounds_F\weapons\Mines\mine_debris_7",3.1622777,1,1500};
+		soundHit[] = {"A3\Sounds_F\weapons\Mines\mine_debris_7",5.1622777,1,1500};
 		ExplosionEffects = "MineNondirectionalExplosion";
 		CraterEffects = "MineNondirectionalCrater";
 		mineInconspicuousness = 40;
@@ -38,7 +38,7 @@ class CfgAmmo
 		indirectHitRange = 32;
 		model = "\CUP\Weapons\CUP_Weapons_Put\CUP_Satchel.p3d";
 		whistleDist = 40;
-		soundHit[] = {"A3\Sounds_F\weapons\Mines\mine_debris_7",3.1622777,1,1500};
+		soundHit[] = {"A3\Sounds_F\weapons\Mines\mine_debris_7",5.1622777,1,1500};
 		ExplosionEffects = "MineNondirectionalExplosion";
 		CraterEffects = "MineNondirectionalCrater";
 		mineInconspicuousness = 40;

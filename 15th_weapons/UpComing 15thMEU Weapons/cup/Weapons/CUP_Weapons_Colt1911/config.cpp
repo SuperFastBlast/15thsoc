@@ -21,8 +21,8 @@ class CfgAmmo
         cartridge = "FxCartridge_65_caseless";
         caliber = 2.6;
         deflecting = 45;
-        visibleFire = 5;
-        audibleFire = 9;
+        visibleFire = 7;
+        audibleFire = 5;
         cost = 100;
         typicalSpeed = 280;
         airFriction = -0.0018;

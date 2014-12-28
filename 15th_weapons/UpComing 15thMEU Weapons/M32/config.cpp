@@ -3,10 +3,12 @@ class CfgPatches
 {
 	class M32
 	{
-		units[] = {};
-		weapons[] = {};
+		units[] = {"M32_equipbox"};
+		weapons[] = {"M32"};
 		requiredVersion = 1.02;
 		requiredAddons[] = {"A3_Weapons_F"};
+		magazines[] = {"M433_40mm_HEDP_Shell","6Rnd_HE_M32", "6Rnd_FlareWhite_M32", "6Rnd_FlareGreen_M32", "6Rnd_FlareRed_M32", "6Rnd_FlareYellow_M32", "6Rnd_FlareCIR_M32", "6Rnd_Smoke_M32", "6Rnd_SmokeRed_M32", "6Rnd_SmokeGreen_M32", "6Rnd_SmokeYellow_M32", "6Rnd_SmokePurple_M32", "6Rnd_SmokeOrange_M32", "1Rnd_HE_Grenade_shell", "UGL_FlareWhite_F", "UGL_FlareGreen_F", "UGL_FlareRed_F", "UGL_FlareYellow_F", "UGL_FlareCIR_F", "1Rnd_Smoke_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeYellow_Grenade_shell", "1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeBlue_Grenade_shell", "1Rnd_SmokeOrange_Grenade_shell"};
+	
 	};
 };
 
@@ -28,6 +30,78 @@ class CfgPatches
 
 class CfgAmmo
 {
+	class Flarecore;
+	class MEUFlare: Flarecore
+	{
+		timeToLive = 120;
+		muzzleEffect = "BIS_fnc_effectFiredRifle";
+		intensity = 20000;
+	};
+	class MEU_F_40mm_White: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.5,0.5,0.5,0.5};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
+	class MEU_F_40mm_Green: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.25,0.5,0.25,0};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
+	class MEU_F_40mm_Red: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.5,0.25,0.25,0};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
+	class MEU_F_40mm_Yellow: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.5,0.5,0.25,0};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
+	class MEU_F_40mm_Cir: MEUFlare
+	{
+		model = "\A3\Weapons_F\Ammo\UGL_Flare";
+		lightColor[] = {0.5,0.5,0.25,0};
+		useFlare = 1;
+		deflecting = 30;
+		smokeColor[] = {1,1,1,0.5};
+		effectFlare = "CounterMeasureFlare";
+		brightness = 30;
+		size = 1;
+		triggerTime = 3;
+		triggerSpeedCoef = 1;
+	};
 	class G_40mm_HE;
 	class M433_40mm_HEDP: G_40mm_HE
   {
@@ -50,6 +124,7 @@ class CfgMagazines
 	class 3Rnd_HE_Grenade_shell;
 	class 6Rnd_HE_M32: 3Rnd_HE_Grenade_shell
 	{
+		scope = 2;
 		picture = "\m32\Data\Icon\m_6x40mmhp_ca.paa";
 		displayName= "6 Rnd. M433";
 		ammo = "M433_40mm_HEDP";
@@ -58,74 +133,85 @@ class CfgMagazines
 	};
 	class 6Rnd_FlareWhite_M32: 6Rnd_HE_M32
 	{
+		scope = 2;
 		picture="\M32\Data\Icon\m_6x40mmflare_ca.paa";
 		displayName= "6 Rnd. 40MM Flare (White)";
-		ammo = "F_40mm_White";
+		ammo = "MEU_F_40mm_White";
 		count = 6;
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_FlareGreen_M32: 6Rnd_FlareWhite_M32
 	{
-		ammo = "F_40mm_Green";
+		scope = 2;
+		ammo = "MEU_F_40mm_Green";
 		displayName= "6 Rnd. 40MM Flare (Green)";
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_FlareRed_M32: 6Rnd_FlareWhite_M32
 	{
-		ammo = "F_40mm_Red";
+		scope = 2;
+		ammo = "MEU_F_40mm_Red";
 		displayName= "6 Rnd. 40MM Flare (Red)";
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_FlareYellow_M32: 6Rnd_FlareWhite_M32
 	{
-		ammo = "F_40mm_Yellow";
+		scope = 2;
+		ammo = "MEU_F_40mm_Yellow";
 		displayName= "6 Rnd. 40MM Flare (Yellow)";
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_FlareCIR_M32: 6Rnd_FlareWhite_M32
 	{
-		ammo = "F_40mm_Cir";
+		scope = 2;
+		ammo = "MEU_F_40mm_Cir";
 		displayName= "6 Rnd. 40MM Flare (IR)";
-		mass = 24;
+		mass = 20;
 	};
 
 	class 6Rnd_Smoke_M32: 6Rnd_HE_M32
 	{
+		scope = 2;
 		picture="\M32\Data\Icon\m_6x40mmsmoke_ca.paa";
 		displayName= "6Rnd 40MM Smoke (White)";
 		ammo = "G_40mm_Smoke";
 		count = 6;
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_SmokeRed_M32: 6Rnd_Smoke_M32
 	{
+		scope = 2;
 		displayName= "6Rnd 40MM Smoke (Red)";
 		ammo = "G_40mm_SmokeRed";
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_SmokeGreen_M32: 6Rnd_Smoke_M32
 	{
+		scope = 2;
 		displayName= "6Rnd 40MM Smoke (Green)";
 		ammo = "G_40mm_SmokeGreen";
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_SmokeYellow_M32: 6Rnd_Smoke_M32
 	{
+		scope = 2;
 		displayName= "6Rnd 40MM Smoke (Yellow)";
 		ammo = "G_40mm_SmokeYellow";
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_SmokePurple_M32: 6Rnd_Smoke_M32
 	{
+		scope = 2;
 		displayName= "6Rnd 40MM Smoke (Purple)";
 		ammo = "G_40mm_SmokePurple";
-		mass = 24;
+		mass = 20;
 	};
 	class 6Rnd_SmokeOrange_M32: 6Rnd_Smoke_M32
 	{
+		scope = 2;
 		displayName= "6Rnd 40MM Smoke (Orange)";
 		ammo = "G_40mm_SmokeOrange";
-		mass = 24;
+		mass = 20;
 	};
 
 };

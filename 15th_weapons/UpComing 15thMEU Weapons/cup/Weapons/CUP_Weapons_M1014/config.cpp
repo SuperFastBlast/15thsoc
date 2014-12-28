@@ -13,7 +13,7 @@ class CfgPatches
 class CfgAmmo
 {
 	class BulletBase;
-	class B_12Gauge_Pellets: BulletBase  
+	class B_MEU_12Gauge_Pellets: BulletBase  
 	{
 		simulation = "shotSpread";
 		hit = 10;
@@ -23,8 +23,8 @@ class CfgAmmo
         	indirectHitRange = 0;
 		cost = 2;
 		typicalSpeed = 410;
-		visibleFire = 4;	// how much is visible when this weapon is fired
-		audibleFire = 8;
+		visibleFire = 12;	// how much is visible when this weapon is fired
+		audibleFire = 5;
 		visibleFireTime = 2;
 		airFriction = -0.00715;
 		class CamShakeFire
@@ -41,15 +41,16 @@ class CfgAmmo
 			frequency = 20;
 		};
 	};
-	class B_12Gauge_Slug: BulletBase 
+	class B_MEU_12Gauge_Slug: BulletBase 
 	{
 		hit = 30;
-		visibleFire = 1;	// how much is visible when this weapon is fired
-		audibleFire = 1;
+		visibleFire = 12;	// how much is visible when this weapon is fired
+		audibleFire = 5;
 		visibleFireTime = 2;
 		cartridge = "FxCartridge_slug";
 		caliber = 0.5;
 		typicalSpeed = 600;
+		airFriction = -0.00715;
 		class CamShakeFire
 		{
 			power = 3;
@@ -72,7 +73,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		displayname="12cal Pellets M1014";
-		ammo="B_12Gauge_Pellets";
+		ammo="B_MEU_12Gauge_Pellets";
 		count=8;
 		initspeed=395;
 		picture="\A3\Weapons_F\Data\UI\M_12gauge_CA.paa";
@@ -84,7 +85,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		displayname="12cal Slug M1014";
-		ammo="B_12Gauge_Slug";
+		ammo="B_MEU_12Gauge_Slug";
 		count=8;
 		initspeed=415;
 		picture="\A3\Weapons_F\Data\UI\M_12gauge_CA.paa";
@@ -159,11 +160,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s4",1.77828,1,1000};
-				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s1",1.6,1,1200};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s2",1.6,1,1200};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s3",1.6,1,1200};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s4",1.6,1,1200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
 			};
 			dispersion = 0.005;
 			soundContinuous = 0;

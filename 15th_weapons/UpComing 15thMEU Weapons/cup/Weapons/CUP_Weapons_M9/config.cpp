@@ -27,7 +27,7 @@ class CfgAmmo
         tracerStartTime = 0.05;
         tracerEndTime = 1;
         nvgOnly = 1;
-        visibleFire = 3;
+        visibleFire = 7;
         audibleFire = 5;
     };
 };
