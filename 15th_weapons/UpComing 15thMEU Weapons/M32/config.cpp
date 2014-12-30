@@ -35,7 +35,7 @@ class CfgAmmo
 	{
 		timeToLive = 120;
 		muzzleEffect = "BIS_fnc_effectFiredRifle";
-		intensity = 20000;
+		intensity = 80000;
 	};
 	class MEU_F_40mm_White: MEUFlare
 	{
@@ -45,7 +45,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
+		brightness = 50;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -58,7 +58,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
+		brightness = 50;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -71,7 +71,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
+		brightness = 50;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -84,20 +84,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
-		size = 1;
-		triggerTime = 3;
-		triggerSpeedCoef = 1;
-	};
-	class MEU_F_40mm_Cir: MEUFlare
-	{
-		model = "\A3\Weapons_F\Ammo\UGL_Flare";
-		lightColor[] = {0.5,0.5,0.25,0};
-		useFlare = 1;
-		deflecting = 30;
-		smokeColor[] = {1,1,1,0.5};
-		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
+		brightness = 50;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -164,7 +151,7 @@ class CfgMagazines
 	class 6Rnd_FlareCIR_M32: 6Rnd_FlareWhite_M32
 	{
 		scope = 2;
-		ammo = "MEU_F_40mm_Cir";
+		ammo = "F_40mm_Cir";
 		displayName= "6 Rnd. 40MM Flare (IR)";
 		mass = 20;
 	};

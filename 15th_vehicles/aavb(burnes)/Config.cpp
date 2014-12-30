@@ -5,7 +5,7 @@ class CfgPatches
 {
 	class CATracked2_AAV
 	{
-		units[] = {"AAVB"};
+		units[] = {"AAVB","Burnes_aav_des"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 	};
@@ -722,7 +722,6 @@ class CfgVehicles {
 				startEngine = 0;
 				stabilizedInAxes = 0;
 			};
-			
 			class FFVTurret: NewTurret 
 					{
 					   
@@ -813,7 +812,7 @@ class CfgVehicles {
 				displayNameDefault 	 = "open left hatch";	
 				position			 = "doplnovani";						
 				priority 			 = 1.5;								
-				radius				 = 20.8;								
+				radius				 = 7;								
 				animPeriod			 = 1;								
 				onlyForPlayer		 = false;							
 				condition			 = "this animationPhase ""leftHatch"" == 0"; 
@@ -827,7 +826,7 @@ class CfgVehicles {
 				displayNameDefault 	 = "open right hatch";	
 				position			 = "doplnovani";						
 				priority 			 = 1.5;								
-				radius				 = 20.8;								
+				radius				 = 7;								
 				animPeriod			 = 1;								
 				onlyForPlayer		 = false;							
 				condition			 = "this animationPhase ""rightHatch"" == 0"; 
@@ -841,7 +840,7 @@ class CfgVehicles {
 				displayNameDefault 	 = "close left hatch";	
 				position			 = "doplnovani";						
 				priority 			 = 1.5;								
-				radius				 = 20.8;								
+				radius				 = 7;								
 				animPeriod			 = 1;								
 				onlyForPlayer		 = false;							
 				condition			 = "this animationPhase ""leftHatch"" > 0"; 
@@ -854,8 +853,8 @@ class CfgVehicles {
 				displayName 		 = "close right hatch";	
 				displayNameDefault 	 = "close right hatch";	
 				position			 = "doplnovani";						
-				priority 			 = 1.0;								
-				radius				 = 20.8;								
+				priority 			 = 1.5;								
+				radius				 = 7;								
 				animPeriod			 = 1;								
 				onlyForPlayer		 = false;							
 				condition			 = "this animationPhase ""RightHatch"" > 0"; 
@@ -869,7 +868,7 @@ class CfgVehicles {
 				displayNameDefault 	 = "open ramp";	
 				position			 = "doplnovani";						
 				priority 			 = 1.2;								
-				radius				 = 20.8;								
+				radius				 = 7;								
 				animPeriod			 = 3;								
 				onlyForPlayer		 = false;							
 				condition			 = "this animationPhase ""rearRamp"" == 0"; 
@@ -882,16 +881,80 @@ class CfgVehicles {
 				displayNameDefault 	 = "close ramp";	
 				position			 = "doplnovani";						
 				priority 			 = 1.5;								
-				radius				 = 20.8;								
+				radius				 = 7;								
 				animPeriod			 = 3;								
 				onlyForPlayer		 = false;							
 				condition			 = "this animationPhase ""rearRamp"" == 1"; 
 				statement			 = "this animate [""rearRamp"",0];"; 
 			};	
+			class Stop
+			{
+				displayName = "Stop";
+				displayNameDefault = "Stop";
+				priority = 0;
+				radius = 5;
+				position = "camo1";
+				showWindow = 0;
+				onlyforplayer = 1;
+				shortcut = "GetOver";
+				condition = "(player in [driver this]) && (alive this)";
+				statement = "[this] execVM ""\AAVB\scripts\Stop.sqf""";
+			};
+			class Forward
+			{
+				displayName = "Forward";
+				displayNameDefault = "Forward";
+				priority = -1;
+				radius = 5;
+				position = "camo1";
+				showWindow = 0;
+				onlyforplayer = 1;
+				shortcut = "SeagullForward";
+				condition = "(player in [driver this]) && (alive this)";
+				statement = "[this] execVM ""\AAVB\scripts\Forward.sqf""";
+			};
+			class Backward
+			{
+				displayName = "Backward";
+				displayNameDefault = "Backward";
+				priority = -2;
+				radius = 5;
+				position = "camo1";
+				showWindow = 0;
+				onlyforplayer = 1;
+				shortcut = "SeagullBack";
+				condition = "(player in [driver this]) && (alive this)";
+				statement = "[this] execVM ""\AAVB\scripts\Backward.sqf""";
+			};
+			class Left
+			{
+				displayName = "Left";
+				displayNameDefault = "Left";
+				priority = -3;
+				radius = 5;
+				position = "camo1";
+				showWindow = 0;
+				onlyforplayer = 1;
+				shortcut = "SeagullDown";
+				condition = "(player in [driver this]) && (alive this)";
+				statement = "[this] execVM ""\AAVB\scripts\Left.sqf""";
+			};
+			class Right
+			{
+				displayName = "Right";
+				displayNameDefault = "Right";
+				priority = -4;
+				radius = 5;
+				position = "camo1";
+				showWindow = 0;
+				onlyforplayer = 1;
+				shortcut = "SeagullUp";
+				condition = "(player in [driver this]) && (alive this)";
+				statement = "[this] execVM ""\AAVB\scripts\Right.sqf""";
+			};
 			
 	};
 	};
-	
 	class Burnes_aav_des: AAVB {
 		// Basic defines: public scope
 		scope = 2;

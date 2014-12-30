@@ -21,7 +21,7 @@ class CfgAmmo
 	{
 		timeToLive = 120;
 		muzzleEffect = "BIS_fnc_effectFiredRifle";
-		intensity = 20000;
+		intensity = 80000;
 	};
 	class MEU_F_40mm_White: MEUFlare
 	{
@@ -31,7 +31,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
+		brightness = 50;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -44,7 +44,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
+		brightness = 50;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -57,7 +57,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
+		brightness = 50;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -70,7 +70,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 30;
+		brightness = 50;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
