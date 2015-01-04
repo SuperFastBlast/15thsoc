@@ -5,84 +5,9 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {"CUP_optic_SB_3_12x50_PMII","CUP_optic_AN_PAS_13c2","CUP_optic_LeupoldMk4","CUP_optic_HoloBlack","CUP_optic_HoloWdl","CUP_optic_HoloDesert","CUP_optic_Eotech533","CUP_optic_Eotech533Grey","CUP_optic_CompM4","CUP_acc_ANPEQ_15","CUP_acc_ANPEQ_2","CUP_optic_SUSAT","CUP_optic_ACOG","CUP_optic_CWS","CUP_optic_Leupold_VX3","CUP_optic_AN_PVS_10","CUP_optic_CompM2_Black","CUP_optic_CompM2_Woodland","CUP_optic_CompM2_Woodland2","CUP_optic_CompM2_Desert","CUP_acc_Flashlight","CUP_acc_Flashlight_wdl","CUP_acc_Flashlight_desert","CUP_acc_XM8_light_module","CUP_optic_RCO","CUP_optic_RCO_desert","CUP_acc_ANPEQ_2_camo","CUP_acc_ANPEQ_2_desert","CUP_acc_ANPEQ_2_grey","CUP_optic_LeupoldM3LR","CUP_optic_LeupoldMk4_10x40_LRT_Desert","CUP_optic_LeupoldMk4_10x40_LRT_Woodland","CUP_optic_ElcanM145","CUP_optic_AN_PAS_13c1","CUP_optic_LeupoldMk4_CQ_T","CUP_optic_ELCAN_SpecterDR","CUP_optic_LeupoldMk4_MRT_tan","CUP_optic_SB_11_4x20_PM","CUP_optic_ZDDot","CUP_optic_MRad","CUP_acc_CZ_M3X","CUP_optic_TrijiconRx01_desert","CUP_optic_TrijiconRx01_black","CUP_optic_AN_PVS_4"};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"CUP_Weapons_WeaponsCore","asdg_jointrails"};
+		requiredAddons[] = {"CUP_Weapons_WeaponsCore","asdg_jointrails","CUP_Weapons_West_Attachments"};
 	};
 };
-class SlotInfo;
-class asdg_OpticRail;
-class asdg_OpticRail1913: asdg_OpticRail
-{
-	class compatibleItems
-	{
-		CUP_optic_SB_3_12x50_PMII = 1;
-		CUP_optic_AN_PAS_13c2 = 1;
-		CUP_optic_AN_PAS_13c1 = 1;
-		CUP_optic_LeupoldMk4 = 1;
-		CUP_optic_HoloBlack = 1;
-		CUP_optic_HoloWdl = 1;
-		CUP_optic_HoloDesert = 1;
-		CUP_optic_CompM4 = 1;
-		CUP_optic_SUSAT = 1;
-		CUP_optic_Eotech533 = 1;
-		CUP_optic_ACOG = 1;
-		CUP_optic_CWS = 1;
-		CUP_optic_Leupold_VX3 = 1;
-		CUP_optic_AN_PVS_10 = 1;
-		CUP_optic_CompM2_Black = 1;
-		CUP_optic_CompM2_Woodland = 1;
-		CUP_optic_CompM2_Woodland2 = 1;
-		CUP_optic_CompM2_Desert = 1;
-		CUP_optic_RCO = 1;
-		CUP_optic_RCO_desert = 1;
-		CUP_optic_LeupoldM3LR = 1;
-		CUP_optic_LeupoldMk4_10x40_LRT_Desert = 1;
-		CUP_optic_LeupoldMk4_10x40_LRT_Woodland = 1;
-		CUP_optic_ElcanM145 = 1;
-		CUP_optic_Eotech533Grey = 1;
-		CUP_optic_LeupoldMk4_CQ_T = 1;
-		CUP_optic_ELCAN_SpecterDR = 1;
-		CUP_optic_LeupoldMk4_MRT_tan = 1;
-		CUP_optic_SB_11_4x20_PM = 1;
-		CUP_optic_ZDDot = 1;
-		CUP_optic_MRad = 1;
-		CUP_optic_TrijiconRx01_desert = 1;
-		CUP_optic_TrijiconRx01_black = 1;
-		CUP_optic_AN_PVS_4 = 1;
-	};
-};
-class asdg_OpticRail1913_short: asdg_OpticRail1913
-{
-	class compatibleItems: compatibleItems
-	{
-		CUP_optic_SB_3_12x50_PMII = 0;
-		CUP_optic_Leupold_VX3 = 0;
-		CUP_optic_LeupoldMk4 = 0;
-		CUP_optic_LeupoldM3LR = 0;
-		CUP_optic_LeupoldMk4_10x40_LRT_Desert = 0;
-		CUP_optic_LeupoldMk4_10x40_LRT_Woodland = 0;
-		CUP_optic_LeupoldMk4_MRT_tan = 0;
-	};
-};
-class asdg_OpticRail1913_long: asdg_OpticRail1913{};
-class asdg_SlotInfo;
-class asdg_FrontSideRail: asdg_SlotInfo
-{
-	class compatibleItems
-	{
-		CUP_acc_ANPEQ_15 = 1;
-		CUP_acc_ANPEQ_2 = 1;
-		CUP_acc_Flashlight = 1;
-		CUP_acc_Flashlight_wdl = 1;
-		CUP_acc_Flashlight_desert = 1;
-		CUP_acc_ANPEQ_2_camo = 1;
-		CUP_acc_ANPEQ_2_desert = 1;
-		CUP_acc_ANPEQ_2_grey = 1;
-		CUP_acc_XM8_light_module = 1;
-	};
-};
-class CUP_PicatinnyTopMount: asdg_OpticRail1913_long{};
-class CUP_PicatinnyTopShortMount: asdg_OpticRail1913_short{};
-class CUP_PicatinnySideMount: asdg_FrontSideRail{};
 class CfgWeapons
 {
 	class ItemCore;
@@ -403,9 +328,9 @@ class CfgWeapons
 					opticsID = 1;
 					useModelOptics = 1;
 					opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
-					opticsZoomMin = 0.06;
-					opticsZoomMax = 0.06;
-					opticsZoomInit = 0.06;
+					opticsZoomMin = 0.05;
+					opticsZoomMax = 0.05;
+					opticsZoomInit = 0.05;
 					memoryPointCamera = "opticView";
 					visionMode[] = {"Normal"};
 					opticsFlare = 1;
@@ -822,11 +747,11 @@ class CfgWeapons
 					opticsID = 1;
 					useModelOptics = 1;
 					opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
-					opticsZoomMax = 0.059;
-					distanceZoomMax = 300;
-					opticsZoomMin = 0.059;
-					distanceZoomMin = 300;
-					opticsZoomInit = 0.059;
+					opticsZoomMax = 0.061;
+					distanceZoomMax = 380;
+					opticsZoomMin = 0.061;
+					distanceZoomMin = 380;
+					opticsZoomInit = 0.061;
 					memoryPointCamera = "opticView";
 					visionMode[] = {"Normal"};
 					opticsFlare = 1;
