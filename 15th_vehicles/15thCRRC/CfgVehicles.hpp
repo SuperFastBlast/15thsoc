@@ -74,7 +74,7 @@ class CfgVehicles
 			};
 		};
 		attenuationEffectType = "OpenCarAttenuation";
-		insideSoundCoef = 1.0;
+		insideSoundCoef = 0.9;
         	soundEngineOnInt[]={"15thCRRC\sound\ext-boat-start-01",1.0,1.0};
         	soundEngineOnExt[]={"15thCRRC\sound\ext-boat-start-01",1.0,1.0,150};
       		soundEngineOffInt[]={"15thCRRC\sound\ext-boat-stop-01",1.0,1.0};
@@ -113,13 +113,13 @@ class CfgVehicles
             		};
 			class EngineMidOut
 			{
-                		sound[]={"15thCRRC\sound\ext-boat-engine-low-01",1.4125376,1.0,400};
+                		sound[]={"15thCRRC\sound\ext-boat-engine-low-01",1.4,1.0,400};
 				frequency = "0.95	+	((rpm/	1200) factor[(600/	1200),(900/	1200)])*0.2";
 				volume = "engineOn*(((rpm/	1200) factor[(350/	1200),(500/	1200)])	*	((rpm/	1200) factor[(1200/	1200),(900/	1200)]))";
 			};
             		class EngineHighOut
             		{
-                		sound[]={"15thCRRC\sound\ext-boat-engine-high-01",1.9952624,1.0,500};
+                		sound[]={"15thCRRC\sound\ext-boat-engine-high-01",1.6,1.0,500};
 				frequency = "0.95	+	((rpm/	1200) factor[(700/	1200),(1000/	1200)])*0.3";
 				volume = "engineOn*((rpm/	1200) factor[(600/	1200),(1200/	1200)])";
 			};
