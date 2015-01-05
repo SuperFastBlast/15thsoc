@@ -47,7 +47,6 @@ class CfgVehicles
 		LockDetectionSystem=9;
 		incomingMissileDetectionSystem=18;
 		attenuationEffectType="HeliAttenuation";
-		#include "cfgHUD.hpp"
 		//vtol adjustments
 		rudderInfluence=0.5;
 		irScanRangeMin=500;
@@ -64,6 +63,7 @@ class CfgVehicles
 		slingLoadMaxCargoMass=9000;
 		//end sling loading
 		//adding copilot here
+		#include "cfgHUD.hpp"
 		class NewTurret;
 		class Turrets
 		{
