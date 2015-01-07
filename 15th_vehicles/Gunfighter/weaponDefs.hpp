@@ -29,6 +29,9 @@ class CfgAmmo
 		visibleFire = 28;
 		audibleFire = 28;
 		visibleFireTime = 3;
+		deflecting=0;
+		deflectingChance = 0;
+		deflectingRandomness = 0;
 		cost = 25;
 		airLock = 1;
 		explosive = 0.3;
@@ -91,7 +94,9 @@ class CfgAmmo
 	muzzleeffect = "BIS_fnc_effectFiredHeliRocket";
 	sideairfriction = 0.08;
 	simulationstep = 0.002;
-	soundhit[] = {"", 1, 1, 1900};
+	soundHit[] = {"A3\Sounds_F\weapons\Rockets\explosion_missile_01",3.1622777,1,2500};
+	soundFly[] = {"",1,1,400};
+	soundEngine[] = {"",1,1,50};
 	thrust = 366;
 	thrusttime = 2;
 	timetolive = 19;
@@ -212,7 +217,7 @@ class CfgMagazines
 };
 class Mode_SemiAuto;
 class Mode_Burst;
-
+class Mode_FullAuto;
 
 class CfgWeapons
 {
@@ -262,12 +267,12 @@ class CfgWeapons
 		nameSound = "cannon";
 		magazines[] = {"750Rnd_M197_AH1"};
 		canLock = 2;
+		ballisticsComputer = 1;
 		modes[] = {"manual","close","short","medium","far"};
 		class manual: CannonCore
 		{
-			displayName = "$STR_DN_M197";
+			displayName = "M197";
 			autoFire = 1;
-			//sound[]={"gunfighter\sounds\a10vulcanVII",db5,1,1100};
 			sounds[] = {StandardSound};
 			class StandardSound{
 			weaponSoundEffect  = "DefaultRifle";
@@ -413,7 +418,10 @@ class FFARLauncher: RocketPods
 	{
 		magazines[] = {"38Rnd_FFAR","28Rnd_FFAR"};
 		displayName = "HYDRA";
-		modes[] = {"Far_AI","Burst"};
+		modes[] = {"Far_AI",
+			"Burst1",
+			"Burst2",
+			"Burst4"};
 		showaimcursorinternal = 0;
 		weaponlockdelay = 2;
 		weaponlocksystem = 4;
@@ -428,7 +436,7 @@ class FFARLauncher: RocketPods
 			maxRange = 2500;
 			maxRangeProbab = 0.11;
 			displayName = "HYDRA-SINGLE";
-			burst = 2;
+			burst = 1;
 			reloadTime = 0.08;
 			autofire = false;
 			showToPlayer = 0;
@@ -437,31 +445,145 @@ class FFARLauncher: RocketPods
 			weaponSoundEffect  = "DefaultRifle";
 			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,1100};
 			soundBegin[] = {Begin1,0.33};
-
+			};
+			soundFly[]=
+			{
+				"\A3\Sounds_F\weapons\Rockets\rocket_fly_2",
+				1.1220185,
+				1.2,
+				700
 			};
 		};
-		class Burst: RocketPods
+		class Burst1: Mode_SemiAuto
 		{
-			minRange = 1;
-			minRangeProbab = 0.001;
-			midRange = 2;
-			midRangeProbab = 0.001;
-			maxRange = 3;
-			maxRangeProbab = 0.001;
-			displayName = "HYDRA-PAIR";
-			burst = 1;
-			reloadTime = 0.2;
-			soundContinuous = 1;
-			autofire = false;
-						sounds[] = {StandardSound};
-			class StandardSound{
-			weaponSoundEffect  = "DefaultRifle";
-			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,1100};
-			soundBegin[] = {Begin1,0.33};
+			minRange=1;
+			minRangeProbab=0.001;
+			midRange=2;
+			midRangeProbab=0.001;
+			maxRange=3;
+			maxRangeProbab=0.01;
+			displayName="HYDRA 70/Single";
+			burst=1;
+			canLock=1;
+			reloadTime=0.15;
+			autoFire=false;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\weapons\Rockets\new_rocket_8",
+					1.7782794,
+					1.2,
+					1600
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+				weaponSoundEffect="DefaultRifle";
+			};
+			soundFly[]=
+			{
+				"\A3\Sounds_F\weapons\Rockets\rocket_fly_2",
+				2.5,
+				1.2,
+				700
+			};
+			soundContinuous=0;
+			soundBurst=0;
 		};
+		class Burst2: Mode_Burst
+		{
+			minRange=1;
+			minRangeProbab=0.001;
+			midRange=2;
+			canLock=1;
+			midRangeProbab=0.001;
+			maxRange=3;
+			maxRangeProbab=0.001;
+			displayName="HYDRA 70/Ripple 2";
+			reloadTime=0.25;
+			autoFire=false;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\weapons\Rockets\new_rocket_8",
+					2.5,
+					1.2,
+					1600
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+				weaponSoundEffect="DefaultRifle";
+			};
+			soundFly[]=
+			{
+				"\A3\Sounds_F\weapons\Rockets\rocket_fly_2",
+				1.1220185,
+				1.2,
+				700
+			};
+			burst=2;
+			soundContinuous=0;
+			soundBurst=0;
+		};
+		class Burst4: Mode_FullAuto
+		{
+			minRange=1;
+			minRangeProbab=0.001;
+			midRange=2;
+			midRangeProbab=0.001;
+			canLock=1;
+			maxRange=3;
+			maxRangeProbab=0.01;
+			reloadTime=0.25;
+			autoFire=false;
+			displayName="HYDRA 70/Ripple 4";
+			burst=4;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\weapons\Rockets\new_rocket_8",
+					2.5,
+					1.2,
+					1600
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+				weaponSoundEffect="DefaultRifle";
+			};
+			soundFly[]=
+			{
+				"\A3\Sounds_F\weapons\Rockets\rocket_fly_2",
+				1.1220185,
+				1.2,
+				700
+			};
+			soundContinuous=0;
+			soundBurst=0;
 		};
 	};
-
 class FFARLauncher_14:FFARLauncher
 {
 	magazines[] = {"14Rnd_FFAR"};
@@ -477,10 +599,10 @@ class FFARLauncher_14:FFARLauncher
 	cursor = "EmptyCursor";
 	cursoraim = "EmptyCursor";
 	cursoraimon = "EmptyCursor";
-	lockedtargetsound[] = {""};
-	lockingtargetsound[] = {""};
-	laserPos = "sensors"
-	magazines = "8Rnd_Hellfire";
+	lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.316228,1};
+	lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.316228,2.5};
+	laserPos = "sensors";
+	magazines[] = {"8Rnd_Hellfire"};
 	maxrange = 9000;
 	maxrangeprobab = 0.01;
 	midrange = 2500;

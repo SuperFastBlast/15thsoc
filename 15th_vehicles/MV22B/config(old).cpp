@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class meu_MB22B
 	{
-		units[]				 = {"meu_MV22"};
+		units[]				 = {"MV-22B"};
 		weapons[]			 = {};
 		requiredVersion		 = 0.1;
 		requiredAddons[]	 = {"A3_Air_F"};
@@ -14,20 +14,17 @@ class CfgVehicles
 {
 	class Air;
 	class Plane: Air{};
-		AGM_FastRoping = 1;          //X    Z     Y
-        	AGM_FastRoping_Positions[] = {{0, -6.5, -0.6}};    //RAMP {0, 2.476, 6.576} X= 0.605 Y= 2.406 Z= 7.474
 	class meu_MV22 : Plane
 	{
 		destrType="DestructWreck";
 		scope=2;
-		displayName="MV-22 Osprey";
+		displayName="MV-22";
 		vehicleClass="Air";
 		model="\MV22B\mv22.p3d";
 		picture="\MV22B\picture_MV22_CA.paa";
 		icon="\MV22B\icon_MV22_CA.paa";
 		mapSize=28;
 		side=1;
-		getInRadius = 9;
 		faction="BLU_F";
 		canFloat=0;
 		waterAngularDampingCoef=10;
@@ -36,8 +33,8 @@ class CfgVehicles
 		crew="B_Helipilot_F";
 		maxFordingDepth=0.55000001;
 		driveOnComponent[] = {"wheel_1_1","wheel_2_2","wheel_2_1"};
-		mainRotorSpeed=1.0;
-		backRotorSpeed=1.0;
+		mainRotorSpeed=1;
+		backRotorSpeed=1;
 		mainBladeRadius=7.5;
 		bodyFrictionCoef=0.89999998;
 		fuelCapacity=6721;
@@ -46,6 +43,7 @@ class CfgVehicles
 		gearRetracting=1;
 		gearUpTime=4;
 		gearDownTime=4;
+		accuracy=0.5;
 		LockDetectionSystem=9;
 		incomingMissileDetectionSystem=18;
 		attenuationEffectType="HeliAttenuation";
@@ -56,6 +54,7 @@ class CfgVehicles
 		irScanToEyeFactor=2;
 		aileronSensitivity=0.20000001;
 		elevatorSensitivity=0.30000001;
+		flapsFrictionCoef=0.31999999;
 		//end VtolAdjust
 		//sling loading
 		features = "Randomization: No						<br />Camo selections: 3 - main body, tail various attachments, engine						<br />Script door sources: CargoRamp_Open, Door_Back_L, Door_Back_R						<br />Script animations: AddGunHolder						<br />Executed scripts: None						<br />Firing from vehicles: No						<br />Slingload: Slingloads up to 4000 kg						<br />Cargo proxy indexes: 1 to 16";
@@ -65,13 +64,6 @@ class CfgVehicles
 		//end sling loading
 		//adding copilot here
 		#include "cfgHUD.hpp"
-		driverCanSee=31;
-		gunnercansee = 31;
-		cargocansee = 1 + 2 + 4 + 8 + 16;
-		camouflage = 7;
-		accuracy=1000;
-		precision = 200;
-		canBeShot = true;
 		class NewTurret;
 		class Turrets
 		{
@@ -81,19 +73,17 @@ class CfgVehicles
 				isCopilot = 1;
 				gunnerName = "Copilot";
 				primaryGunner = 1;
-				CanEject = 1;
+				CanEject = 0;
 				memoryPointsGetInGunner = "pos driver";
 				memoryPointsGetInGunnerDir = "pos driver dir";
 				castGunnerShadow = 1;
 				viewGunnerShadow = 1;
 				gunnerAction = "MV22_CoPilot";
 				gunnerInAction = "MV22_CoPilot";
-				gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
 				maxHorizontalRotSpeed = 8.2;
 				maxVerticalRotSpeed = 8.2;
 				stabilizedInAxes = 3;
 				startEngine = 0;
-				laser = 1;
 				minElev = -90;
 				maxElev = 38.2;
 				initElev = -45;
@@ -101,77 +91,22 @@ class CfgVehicles
 				maxTurn = 180;
 				initTurn = 0;
 				soundServo[] = {"",0.01,1};
-				//outGunnerMayFire = 1;
-				//inGunnerMayFire = 1;
+				outGunnerMayFire = 1;
+				inGunnerMayFire = 1;
 				selectionFireAnim = "";
-				memoryPointGunnerOptics = "commanderview";
 				turretInfoType = "RscOptics_UAV_gunner";
-				weapons[]={"Laserdesignator_mounted"};
-				magazines[]={"Laserbatteries"};
 				gunnerForceOptics = 0;
-				gunnerCompartments = Compartment2;
-				class OpticsIn
-				{	
-					class wide
-					{
-						opticsDisplayName = "W";
-						initAngleX = 0;
-						minAngleX = -30;
-						maxAngleX = 30;
-						initAngleY = 0;
-						minAngleY = -100;
-						maxAngleY = 100;
-						initFov = 0.466;
-						minFov = 0.466;
-						maxFov = 0.466;
-						visionMode[] = {"Normal","Ti"};
-						thermalMode[] = {0,1};
-						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
-					
-					};
-					class Medium: Wide
-					{
-						opticsDisplayName = "M";
-						initFov = 0.093;
-						minFov = 0.093;
-						maxFov = 0.093;
-						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
-					
-					};
-					class Narrow: Wide
-					{
-						opticsDisplayName = "N";
-						initFov = 0.019;
-						minFov = 0.019;
-						maxFov = 0.019;
-						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
-					
-			};
-			};
-				class OpticsOut
-				{
-					class Monocular
-					{
-						initAngleX=0;
-						minAngleX=-30;
-						maxAngleX=30;
-						initAngleY=0;
-						minAngleY=-100;
-						maxAngleY=100;
-						initFov=1.1;
-						minFov=0.133;
-						maxFov=1.1;
-						visionMode[]=
-						{
-							"Normal",
-							"NVG"
-						};
-						gunnerOpticsModel="";
-						gunnerOpticsEffect[]={};
-					};
-				};
-			};
+				LODTurnedOut = 0;
+				LODTurnedIn = 1100;
+			};//EndCopiolot
+
 		};
+		//end copilot
+
+		//rotor lib test 
+
+		//end rotor lib test
+
 		class WingVortices
 		{
 			class WingTipLeft
@@ -243,6 +178,7 @@ class CfgVehicles
 			1,
 			500
 		};
+
 		class Sounds
 		{
 			class EngineLowOut
@@ -359,15 +295,13 @@ class CfgVehicles
 
 		landingSpeed=130;
 		acceleration=328;
-		flapsFrictionCoef = 0.32;
 		rudderSensitivity=12;
-		envelope[] = {0.0,0.15,1.1,3,5,5.83,6.0,5.85,5.5,4.8,3.6,1.8,0};
+		envelope[]={0,0.15000001,1.1,3,5,5.8299999,6,5.8499999,5.5,4.8000002,3.5999999,1.8,0};
 		driverAction="MV22_Pilot";
 		cargoIsCoDriver[]={0,0};
-		cargoAction[] = {"Plane_Fighter_03_pilot","ChopperLight_C_R_static_H","ChopperLight_CB_static_H","ChopperLight_CB_static_H","ChopperLight_CB_static_H","ChopperLight_CB_static_H"};
+		cargoaction[] = {"passenger_mantisrear"};
+		
 		driverCompartments="Compartment1";
-		cargoGetInAction[] = {"GetInHelicopterCargo"};
-		cargoGetOutAction[] = {"GetOutHelicopterCargo"};
 		cargoCompartments[]=
 		{
 			"Compartment2"
@@ -375,30 +309,6 @@ class CfgVehicles
 		
 		maxSpeed=509;
 		transportSoldier=24;
-		transportAmmo=0;
-		transportMaxMagazines=150;
-		transportMaxWeapons=30;
-		class TransportBackpacks
-		{
-			class _xx_B_Parachute
-			{
-				backpack = "B_Parachute";
-				count = 26;
-			};
-		};
-		class TransportItems
-		{
-			class _xx_FirstAidKit
-			{
-				name = "FirstAidKit";
-				count = 20;
-			};
-			class _xx_Medikit
-			{
-				name = "Medikit";
-				count = 3;
-			};
-		};
 		vtol=4;
 		supplyradius=2;
 		armor=60;
@@ -443,6 +353,46 @@ class CfgVehicles
 		
 		class UserActions
 		{
+			class Pack
+			{
+				displayName="Pack";
+				position="zamerny";
+				radius=9;
+				condition="this animationphase ""pack_engine_1"" !=1";
+				statement="[this,1] execvm ""\MV22B\scripts\pack.sqf""";
+				onlyforplayer=1;
+			};
+		
+			class unPack
+			{
+				displayName="unPack";
+				position="zamerny";
+				radius=9;
+				condition="this animationphase ""pack_engine_1"" !=0";
+				statement="[this,0] execvm ""\MV22B\scripts\pack2.sqf""";
+				onlyforplayer=1;
+			};
+
+			class Door1
+			{
+				displayName="Door Open";
+				position="zamerny";
+				radius=9;
+				condition="this animationphase ""door1_top"" !=1";
+				statement="[this,0] execvm ""\MV22B\scripts\Door.sqf""";
+				onlyforplayer=1;
+			};
+
+			class Door2
+			{
+				displayName="Door close";
+				position="zamerny";
+				radius=9;
+				condition="this animationphase ""door1_top"" !=0";
+				statement="[this,0] execvm ""\MV22B\scripts\Door.sqf""";
+				onlyforplayer=1;
+			};
+	
 			class rampup
 			{
 				displayName="Ramp Open";
@@ -573,6 +523,47 @@ class CfgVehicles
 		{
 			libTextDesc="$STR_LIB_MV22";
 		};
+
+		class RenderTargets
+		{
+			class driver_display_1
+			{
+				renderTarget="rendertarget0";
+				class CameraView1
+				{
+					pointPosition="PIP0_pos";
+					pointDirection="PIP0_dir";
+					renderVisionMode=1;
+					renderQuality=0;
+					fov=0.40000001;
+				};
+			};
+
+			class Gunner_1
+			{
+				renderTarget="rendertarget3";
+				class CameraView1
+				{
+					pointPosition="PIP3_pos";
+					pointDirection="PIP3_dir";
+					renderVisionMode=0;
+					renderQuality=0;
+					fov=0.5;
+				};
+			};
+
+			class Gunner_TV
+			{
+				renderTarget="rendertarget4";
+				class CameraView1
+				{
+					pointPosition="PIP3_pos";
+					pointDirection="PIP3_dir";
+					renderVisionMode=2;
+					renderQuality=0;
+					fov=0.69999999;
+				};
+			};
 		};
 	};
 };

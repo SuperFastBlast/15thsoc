@@ -1199,7 +1199,7 @@ class cfgWeapons
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01";
             containerClass = "Supply200";
             mass = 270;
-            armor = 50;
+            armor = 40;
             passThrough = 0.1;
             hiddenSelections[] = {"camo"};
         };
@@ -1235,7 +1235,7 @@ class cfgWeapons
 			uniformModel="\A3\Characters_F\BLUFOR\equip_b_vest01";
 			containerClass="Supply200";
 			mass = 270;
-			armor = 50;
+			armor = 40;
 			passThrough = 0.1;
 			hiddenSelections[] = {"camo"};
 		};
@@ -1271,7 +1271,7 @@ class cfgWeapons
 			uniformModel="\A3\Characters_F\BLUFOR\equip_b_vest01";
 			containerClass="Supply200";
 			mass = 270;
-			armor = 50;
+			armor = 40;
 			passThrough = 0.1;
 			hiddenSelections[] = {"camo"};
 		};
