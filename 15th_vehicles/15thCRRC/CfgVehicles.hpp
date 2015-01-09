@@ -36,8 +36,12 @@ class CfgVehicles
 		crew = "B_Soldier_F";
 		faction = "BLU_F";
 		side = 1;
+		commandercansee = 31;
+		drivercansee = 31;
 		typicalCargo[] = {"B_Soldier_F","B_Soldier_F"};
 		accuracy = 0.5;
+		unitInfoType = "RscUnitInfoShip";
+		radarType = 8;
 		model = "\A3\boat_f\Boat_Transport_01\Boat_Transport_01_F.p3d";
 		picture = "\A3\boat_F\Boat_Transport_01\data\UI\Boat_Transport_01_CA.paa";
 		Icon = "\A3\boat_F\Boat_Transport_01\data\UI\map_Boat_Transport_01_CA.paa";

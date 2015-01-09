@@ -5,7 +5,7 @@
 		requiredaddons[] = {"asdg_jointrails"};
 		requiredversion = 1.24;
 		units[] = {};
-		weapons[] = {"MEU_m40a5"};
+		weapons[] = {"Trixie_Cyclone","MEU_m40a5"};
 		magazines[] = {"MEU_5x762_Mag"};
 	};
 };

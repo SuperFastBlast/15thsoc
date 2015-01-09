@@ -702,8 +702,8 @@ class CfgVehicles
 		steerAheadPlan = 0.4;
 		enableGPS = 1;
 		commanderCanSee = 31;
+		gunnerCanSee = 31;
 		drivercansee = 31;
-		gunnerCanSee = 30;
 		forceHideDriver = 0;
 		gunnerHasFlares = 1;
 		weapons[] = {"TruckHorn3"};

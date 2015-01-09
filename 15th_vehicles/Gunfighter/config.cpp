@@ -45,6 +45,11 @@ class CfgVehicles
 		{
 			class MainTurret;
 		};
+		class Eventhandlers;
+		class ViewOptics;
+		class ViewPilot;
+		class AnimationSources;
+		class RotorLibHelicopterProperties;
 		};
 		class Helicopter_Base_F: Helicopter
 		{
@@ -75,7 +80,7 @@ class CfgVehicles
 		class AnimationSources;
 		class RotorLibHelicopterProperties;
 	};
-	class meu_AH1Z: Helicopter_Base_F
+	class meu_AH1Z: Helicopter
 	{
 
 		destrType="DestructWreck";
@@ -93,13 +98,13 @@ class CfgVehicles
 		getOutAction = "GetOutHigh";
 		typicalCargo[]={"B_Helipilot_F", "B_Helipilot_F"};
 		driverCompartments = "Compartment1";
+		enableManualFire = 1;
+
+		//Adding PhysX stuff here
 		selectionHRotorStill = "mainRotorStatic";
 		selectionHRotorMove = "mainRotorBlurred";
 		selectionVRotorStill = "tailRotorStatic";
 		selectionVRotorMove = "tailRotorBlurred";
-		enableManualFire = 1;
-		//Adding PhysX stuff here
-
 		altFullForce = 3000;
 		altNoForce = 5000;
 		bodyFrictionCoef = 0.6;
@@ -123,6 +128,7 @@ class CfgVehicles
 			horizontalWingsAngleCollMax = 0;
 			maxMainRotorStress = 185000;
 			maxTailRotorStress = 30000;
+			rtd_center = "rtd_center";
 		};
 		maxSpeed = 296;
 		fuelCapacity=1200;
@@ -145,7 +151,7 @@ class CfgVehicles
 		washDownDiameter = "40.0f";
 		gForceShakeAttenuation = 0.5;
 		neutralMainRotorDive = 0;
-		mainBladeRadius = 5;
+		mainBladeRadius = 7;
 		tailBladeRadius = 1.8;
 
 		maxMainRotorDive = 7;
@@ -153,10 +159,14 @@ class CfgVehicles
 		liftForceCoef = 1.5;
 		mainrotordive = 1.0;
 		backrotordive = 1.0;
+		mainRotorSpeed = -1.0;
+		backRotorSpeed = 1.0;
 		flapsFrictionCoef = 0.5;
 
 		driverCanEject=1;
 		extCameraPosition[] = {0,6,-18};
+		leftDustEffect = "vbs2_fx_lowTrackDustEffects";
+		rightDustEffect = "vbs2_fx_lowTrackDustEffects";
 		//end PhysX stuff
 
 		// stick animation
@@ -175,7 +185,7 @@ class CfgVehicles
 		getInRadius = 2.5;
 		memoryPointCM[]  = {"flare_launcher1","flare_launcher2"};
 		memoryPointCMDir[] = {"flare_launcher1_dir","flare_launcher2_dir"};
-		radarType = 4;
+		radarType = 8;
 		LockDetectionSystem = "1 + 8 + 4";
 		incomingMissileDetectionSystem = 16;
 		armor=60;
@@ -907,7 +917,7 @@ class CfgVehicles
 				isCopilot = 1;
 				gunnerAction = "AH1Z_Gunner";
 				gunnerInAction = "AH1Z_Gunner";
-				gunnerCompartments = "Compartment2"; // cannot switch to pilot
+				gunnerCompartments = "Compartment1";
 				weapons[]={"M197","HellfireLauncher","SidewinderLaucher_AH1Z","Laserdesignator_mounted"};
 				magazines[]={"750Rnd_M197_AH1","8Rnd_Hellfire","2Rnd_Sidewinder_AH1Z","Laserbatteries"};
 				laser = 1;
@@ -1058,7 +1068,7 @@ class CfgNonAIVehicles
 	};
 };
 };
-	class meu_UH1Y: Helicopter_Base_F
+	class meu_UH1Y: Helicopter
 	{
 		destrType="DestructWreck";
 		scope = 2;
@@ -1109,6 +1119,10 @@ class CfgNonAIVehicles
 		};
 		fuelCapacity = 800;
 		fuelConsumptionRate = 0.103;
+		selectionHRotorStill = "mala vrtule staticka";
+		selectionHRotorMove = "mala vrtule blur";
+		selectionVRotorStill = "velka vrtule staticka";
+		selectionVRotorMove = "velka vrtule Blur";
 
 		maxSpeed = 280; 
 		mainRotorSpeed = -0.5;
@@ -1128,15 +1142,19 @@ class CfgNonAIVehicles
 		backRotorForceCoef = 4;//tailrotor(strength of horzontal movement=)
 		liftForceCoef = 1.5;
 		maxfordingdepth = 0.55;
-		mainBladeRadius = 5;
-		tailBladeRadius = 1.8;
+		mainBladeRadius = 6.2;
+		tailBladeRadius = 1.3;
 		sensitivity = 3;
 		sensitivityear = 3;
 		accuracy=1000;
+		maxMainRotorDive = 7;
+		minMainRotorDive = -7;
 		mainrotordive = 1;
 		backrotordive = 2;
 		extCameraPosition[] = {0.5,2,-20};
 		flapsFrictionCoef = 0.5;
+		leftDustEffect = "vbs2_fx_lowTrackDustEffects";
+		rightDustEffect = "vbs2_fx_lowTrackDustEffects";
 
 		//end PhysX stuff
 
@@ -1155,12 +1173,12 @@ class CfgNonAIVehicles
 		precision = 200;
 		memoryPointCM[]  = {"flare_launcher1","flare_launcher2"};
 		memoryPointCMDir[] = {"flare_launcher1_dir","flare_launcher2_dir"};
-		radarType = 4;
+		radarType = 8;
 		LockDetectionSystem = "1 + 8 + 4";
 		incomingMissileDetectionSystem = 16;
 		precisegetinout = 1;
-		memoryPointsGetInCargo[] = {"pos cargo_r","pos cargo_l","pos cargo_r","pos cargo_r","pos cargo_r","pos cargo_l","pos cargo_l","pos cargo_r","pos cargo_r","pos cargo_l","pos cargo_l"};
-		memoryPointsGetInCargoDir[] = {"pos cargo_r dir","pos cargo_l dir","pos cargo_r dir","pos cargo_r dir","pos cargo_r dir","pos cargo_l dir","pos cargo_l dir","pos cargo_r dir","pos cargo_r dir","pos cargo_l dir","pos cargo_l dir"};
+		memoryPointsGetInCargo[] = {"pos cargo"};
+		memoryPointsGetInCargoDir[] = {"pos cargo dir"};
 		cargoGetInAction[] = {"GetInHelicopterCargo"};
 		cargoGetOutAction[] = {"GetOutHelicopterCargo"};
 		driverAction="UH1Y_Pilot";
@@ -1169,12 +1187,10 @@ class CfgNonAIVehicles
 
 		cargoAction[]={"UH1Y_Cargo02","UH1Y_Cargo03","UH1Y_Cargo03","UH1Y_Cargo02","UH1Y_Cargo01","UH1Y_Cargo01","UH1Y_Cargo01"};
 		cargoIsCoDriver[]={false,false};
-	
 
-		gunnerUsesPilotView=1;
-		gunnerOpticsModel="";
+		gunnerUsesPilotView=0;
 
-		transportSoldier=7;
+		transportSoldier=3;
 		crew="B_Helipilot_F";
 		transportAmmo=0;
 		transportMaxMagazines=150;
@@ -1201,12 +1217,14 @@ class CfgNonAIVehicles
 			};
 		};
 		initCargoAngleY=+10; // cargo viewing limitations
-		minCargoAngleY=-60;
-		maxCargoAngleY=+120;
+		minCargoAngleY=-100;
+		maxCargoAngleY=+100;
 		minFireTime=30;
 		threat[]={1, 0.05, 0.05};
 		driverCompartments = "Compartment1";
 		cargoCompartments[] = {"Compartment2"};
+		cargoProxyIndexes[] = {2,3,5};
+		class cargoturret;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret //Left Doorgun
@@ -1231,7 +1249,8 @@ class CfgNonAIVehicles
 				gunnerAction="UH1Y_Gunner";
 				gunnerInAction="UH1Y_Gunner";
 				commanding=0;
-				primaryGunner=0;
+				turretCanSee = "1 + 2 + 4 + 8 + 16";
+				primaryGunner=2;
 				class ViewOptics
 				{
 					initAngleX=0;
@@ -1251,25 +1270,21 @@ class CfgNonAIVehicles
 				isCopilot = 0;
 				body="Turret2";
 				gun="Gun_2";
+				proxyIndex=2;
 				animationSourceBody="Turret_2";
 				animationSourceGun="Gun_2";
-				stabilizedInAxes = StabilizedInAxesNone;
-
+				stabilizedInAxes = 3;
 				selectionFireAnim="zasleh_1";
-
-				proxyIndex=2;
 				gunnerName="DoorGunner";
 				commanding=-3;
-
 				minTurn=-180; maxTurn=0; initTurn=0;
 				weapons[]={"M134_minigun_2"};
-
 				gunBeg="muzzle_2"; //gunBeg=endpoint of the gun
 				gunEnd="chamber_2"; //gunEnd=chamber of the gun
-
-				primaryGunner=0;
 				memoryPointGun="machinegun_2";
 				memoryPointGunnerOptics="gunnerview_2";
+				turretCanSee = "1 + 2 + 4 + 8 + 16";
+				primaryGunner=3;
 			};
 			class CoPilotObs: MainTurret
 			{
@@ -1277,11 +1292,11 @@ class CfgNonAIVehicles
 				isCopilot = 1;
 				gunnerCanEject = 1;
 				stabilizedInAxes = 3;
-				proxyIndex=3;
 				gunnerName="Co-Pilot";
 				gunnerAction="UH1Y_Gunner02";
 				gunnerInAction="UH1Y_Gunner02";
 				body="ObsTurret";
+				proxyIndex=3;
 				gun="ObsGun";
 				turretInfoType = "RscOptics_UAV_gunner";
 				minElev = -80;
@@ -1344,10 +1359,10 @@ class CfgNonAIVehicles
 						maxFov = 0.019;
 						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
 					
-			};
-			};
-				class OpticsOut
-				{
+						};
+					};
+					class OpticsOut
+					{
 					class Monocular
 					{
 						initAngleX=0;
@@ -1369,7 +1384,98 @@ class CfgNonAIVehicles
 					};
 				};
 			};
-		};
+		class CargoTurret_01: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
+	gunnerName = "Passenger (Right)";	/// name of the position in the Action menu
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 1;	/// what cargo proxy is used according to index in the model
+	maxElev = 15; /// what is the highest possible elevation of the turret
+	minElev = -42; /// what is the lowest possible elevation of the turret
+	maxTurn = 20; /// what is the left-most possible turn of the turret
+	minTurn = -95; /// what is the right-most possible turn of the turret
+	isPersonTurret = 1; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+        gunnerInAction = "passenger_apc_narrow_generic02";///Your sitting animation inside cargo(can be a FFV animation)
+	startEngine = 0;
+        commanding = -1;
+	outGunnerMayFire = 1;
+        inGunnerMayFire = 0;
+	soundAttenuationTurret = "HeliAttenuation";
+	};
+		class CargoTurret_04: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
+	gunnerName = "Passenger (Left)";	/// name of the position in the Action menu
+	gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 4;	/// what cargo proxy is used according to index in the model
+	maxElev = 15; /// what is the highest possible elevation of the turret
+	minElev = -42; /// what is the lowest possible elevation of the turret
+	maxTurn = 20; /// what is the left-most possible turn of the turret
+	minTurn = -95; /// what is the right-most possible turn of the turret
+	isPersonTurret = 1; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+        gunnerInAction = "passenger_apc_narrow_generic02";///Your sitting animation inside cargo(can be a FFV animation)
+	startEngine = 0;
+        commanding = -1;
+	outGunnerMayFire = 1;
+        inGunnerMayFire = 0;
+	soundAttenuationTurret = "HeliAttenuation";
+	};
+		class CargoTurret_06: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
+	gunnerName = "Passenger (Right2)";	/// name of the position in the Action menu
+	gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 6;	/// what cargo proxy is used according to index in the model
+	maxElev = 15; /// what is the highest possible elevation of the turret
+	minElev = -42; /// what is the lowest possible elevation of the turret
+	maxTurn = 20; /// what is the left-most possible turn of the turret
+	minTurn = -95; /// what is the right-most possible turn of the turret
+	isPersonTurret = 1; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+        gunnerInAction = "passenger_apc_narrow_generic02";///Your sitting animation inside cargo(can be a FFV animation)
+	startEngine = 0;
+        commanding = -1;
+	outGunnerMayFire = 1;
+        inGunnerMayFire = 0;
+	soundAttenuationTurret = "HeliAttenuation";
+	};
+		class CargoTurret_07: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
+	gunnerName = "Passenger (Left2)";	/// name of the position in the Action menu
+	gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 7;	/// what cargo proxy is used according to index in the model
+	maxElev = 15; /// what is the highest possible elevation of the turret
+	minElev = -42; /// what is the lowest possible elevation of the turret
+	maxTurn = 20; /// what is the left-most possible turn of the turret
+	minTurn = -95; /// what is the right-most possible turn of the turret
+	isPersonTurret = 1; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+        gunnerInAction = "passenger_apc_narrow_generic02";///Your sitting animation inside cargo(can be a FFV animation)
+	startEngine = 0;
+        commanding = -1;
+	outGunnerMayFire = 1;
+        inGunnerMayFire = 0;
+	soundAttenuationTurret = "HeliAttenuation";
+	};
+			};
 		class HitPoints: HitPoints
 		{
 			class HitHull: HitHull
