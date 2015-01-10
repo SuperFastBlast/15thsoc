@@ -14,7 +14,7 @@
  removeuniform _unit;
  removevest _unit;
  removeheadgear _unit;
- _unit addvest "Vest_Tan_Infantry_L";
+ _unit addvest "MEF_Vest_Tan_Infantry_L";
  _unit addheadgear "MEF_Woodland_Helmet_MICH";
 
 

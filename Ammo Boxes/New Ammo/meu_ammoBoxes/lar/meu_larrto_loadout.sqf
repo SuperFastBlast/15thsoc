@@ -13,7 +13,7 @@
  removevest _unit;
  removeheadgear _unit;
  _unit addvest "MEF_Vest_Tan_Infantry";
- _unit addheadgear "MEF_Wood_Helmet_LWH"
+ _unit addheadgear "MEF_Wood_Helmet_LWH";
 
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
