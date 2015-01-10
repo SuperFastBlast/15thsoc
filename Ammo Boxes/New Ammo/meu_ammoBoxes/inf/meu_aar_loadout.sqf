@@ -25,7 +25,7 @@
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
- (unitBackpack _unit) addmagazineCargo [""MEU_200Rnd_M249_556x45_Stanag"",2];
+ (unitBackpack _unit) addmagazineCargo ["MEU_200Rnd_M249_556x45_Stanag",2];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 
  _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
