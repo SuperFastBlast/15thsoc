@@ -150,7 +150,7 @@ class CfgVehicles
 		damageResistance = 0.5;
 		crewExplosionProtection = 0.9999;
 		turnCoef = 2.0;
-		steerAheadPlan = 0.2;
+		steerAheadPlan = 0.6;
 		steerAheadSimul = 0.4;
 		predictTurnPlan = 0.9;
 		predictTurnSimul = 0.5;

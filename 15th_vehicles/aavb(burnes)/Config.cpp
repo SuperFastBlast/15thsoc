@@ -69,6 +69,7 @@ class CfgVehicles {
 		armor = 400;
 		damageResistance = 0.01168;
 		cost = 4000000;
+		radarType = 8;
 		maxSpeed = 72;
 		canFloat = 1;
 		supplyRadius = 5;
@@ -102,8 +103,9 @@ class CfgVehicles {
 		fuelCapacity = 1885;
 		brakeIdleSpeed = 2;
 		tankTurnForce = 700000;
-		waterAngularDampingCoef = 0.2;
-		waterResistanceCoef = 0.005;
+		waterPPInVehicle = 0;
+		waterAngularDampingCoef = 5.0;
+		waterResistanceCoef = 0.1;
 		rudderForceCoefAtMaxSpeed = 18;
 		waterEffectSpeed = 5;
 		engineEffectSpeed = 5;
@@ -961,7 +963,7 @@ class CfgVehicles {
 		// Editor displayname
 		accuracy = 1000;	// accuracy > 4 is not possible to be fully recognized during game
 		displayName = "AAV Desert";
-		model = "\AAVB\AAVdes";		// due to above will show only in editor
+		model = "\AAVB\AAVdes";		
 		//hiddenSelectionsTextures[] = {};
 
 	};
