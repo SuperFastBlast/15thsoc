@@ -49,7 +49,7 @@
  _unit addmagazine "MEU_M882_9mm";
  _unit addmagazine "MEU_M882_9mm";
 
- _unit addweapon "hgun_mas_m9_F";
+ _unit addweapon "CUP_hgun_M9";
    
  _unit addmagazine "SmokeShellGreen";
  _unit addmagazine "SmokeShellBlue";

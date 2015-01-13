@@ -24,9 +24,9 @@
  _unit addbackpack "B_Parachute";
  
  //WEAPONS
- _unit addmagazine "MEU-M882_9mm";
  _unit addmagazine "MEU_M882_9mm";
- _unit addmagazine "MEU-M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
  _unit addmagazine "MEU_M882_9mm";
  _unit additem "CUP_hgun_M9"; //Use this to hide pistol in clothes
 

@@ -17,10 +17,6 @@ class CfgPatches
 class Mode_SemiAuto;
 class Mode_FullAuto;
 class SlotInfo;
-class asdg_MuzzleSlot_556;
-class asdg_FrontSideRail;
-class asdg_OpticRail1913;
-
 class CfgWeapons
 {
     class Rifle;
@@ -125,13 +121,18 @@ class CfgWeapons
 				};
 			};
 		};
-		class WeaponSlotsInfo
+		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			allowedslots[]={901};
+			class CowsSlot{};
+			class PointerSlot{};
 			mass=83.9;
-			class asdg_MuzzleSlot_IAR: asdg_MuzzleSlot_556{};
-			class asdg_OpticRail1913_IAR: asdg_OpticRail1913{};
-			class asdg_FrontSideRail_IAR: asdg_FrontSideRail{};
+			class MuzzleSlot
+			{
+				displayName = "Muzzle SLot";
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"Trixie_Cyclone"};
+			};
 		};
 		class Single: Mode_SemiAuto
 		{

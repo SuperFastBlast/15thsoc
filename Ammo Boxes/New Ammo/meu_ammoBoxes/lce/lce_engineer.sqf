@@ -16,7 +16,7 @@
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
 
-  _unit adduniform "MEF_Wood_IN_MARPAT_LS";
+ _unit adduniform "MEF_Wood_IN_MARPAT_LS";
  _unit addvest "MEF_Vest_Tan_Infantry";
  _unit addheadgear "MEF_Wood_Goggles_Helmet_LWH";
  _unit addbackpack "MEF_Wood_Kitbag";
@@ -33,14 +33,25 @@
  
  
  _unit addItemToUniform "AGM_EarBuds";
- for "_i" from 1 to 8 do {_unit addItemToUniform "MEU_30Rnd_M855A1_556x45_Stanag";);
- for "_i" from 1 to 3 do {_unit addItemToUniform "16Rnd_9x21_Mag";);
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
  
  _unit addweapon "CUP_arifle_M4CAR_black";
  _unit addWeapon "Binocular";
 
  _unit addPrimaryWeaponItem "CUP_optic_ACOG";
  _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
+ _unit addweapon "CUP_hgun_M9";
 
  _unit addItemToVest "itemRadio";
  _unit addItemToVest "itemRadio";

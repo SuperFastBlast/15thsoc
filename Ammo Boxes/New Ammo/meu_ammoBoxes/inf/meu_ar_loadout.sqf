@@ -28,9 +28,9 @@
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) addmagazineCargo ["SmokeshellBlue",1];
 
- _unit addmagazine "MEU_200Rnd_mas_556x45_T_Stanag";
- _unit addmagazine "MEU_200Rnd_mas_556x45_Stanag";
- _unit addmagazine "MEU_200Rnd_mas_556x45_Stanag";
+ _unit addmagazine "MEU_200Rnd_M249_556x45_T_Stanag";
+ _unit addmagazine "MEU_200Rnd_M249_556x45_Stanag";
+ _unit addmagazine "MEU_200Rnd_M249_556x45_Stanag";
 
  _unit addweapon "CUP_lmg_M249";
  _unit addPrimaryWeaponItem "CUP_optic_ACOG";
