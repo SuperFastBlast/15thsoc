@@ -1,0 +1,1 @@
+this setVariable ["AGM_IsMedic", true];
