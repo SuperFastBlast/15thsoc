@@ -17,6 +17,9 @@ class CfgPatches
 class Mode_SemiAuto;
 class Mode_FullAuto;
 class SlotInfo;
+class CUP_PicatinnyTopMount;
+class CUP_PicatinnyTopShortMount;
+class CUP_PicatinnySideMount;
 class CfgWeapons
 {
     class Rifle;
@@ -126,6 +129,9 @@ class CfgWeapons
 			allowedslots[]={901};
 			class CowsSlot{};
 			class PointerSlot{};
+			class CUP_PicatinnyTopMountM16: CUP_PicatinnyTopMount{};
+			class CUP_PicatinnySideMountM16: CUP_PicatinnySideMount{};
+
 			mass=83.9;
 			class MuzzleSlot
 			{
