@@ -3,7 +3,7 @@
 [
 	["MEU_M882_9mm", 4],
 	["MEU_30Rnd_M855A1_556x45_Stanag", 10],
-	["MEU_100Rnd_M240_762x51_Stanag", 10],
+	["MEU_100Rnd_M240_762x51", 10],
 	["ClaymoreDirectionalMine_Remote_Mag",2],
 	["itemRadio", 2],
 	["AGM_Bandage", 6],
