@@ -72,9 +72,9 @@ class CfgAmmo
 
 	class M_Hellfire_AT: MissileBase
 	{
-		model = "gunfighter\ah1z\AGM114Hellfire";
-		proxyShape = "gunfighter\ah1z\AGM114Hellfire_proxy";
-		airfriction = 0.04;
+	model = "gunfighter\ah1z\AGM114Hellfire";
+	proxyShape = "gunfighter\ah1z\AGM114Hellfire_proxy";
+	airfriction = 0.04;
 	airlock = 0;
 	cmimmunity = 0.8;
 	cost = 1000;
@@ -104,8 +104,9 @@ class CfgAmmo
 	trackoversteer = 1;
 	weaponlocksystem = "2 + 16 + 4";
 	whistledist = 8;
-	class Hiteffects {
-		hitwater = "ImpactEffectsSmall";
+	class Hiteffects 
+	{
+	hitwater = "ImpactEffectsSmall";
 	};
 	};
 
@@ -229,6 +230,20 @@ class CfgWeapons
 	class MissileLauncher;
 	class MGun;
 	class M134_minigun_2: M134_minigun {};
+	class master_arms_safe: RocketPods
+	{
+		CanLock = 0;
+		displayName = "MASTER ARM - SAFE";
+		displayNameMagazine = "MASTER ARM - SAFE";
+		shortNameMagazine = "MASTER ARM - SAFE";
+		nameSound = "";
+		cursor = "EmptyCursor";
+		cursorAim = "EmptyCursor";
+		magazines[] = {};
+		burst = 0;
+		reloadTime = 0.01;
+		magazineReloadTime = 0.1;
+	};
 
 	class SidewinderLaucher_AH1Z: MissileLauncher
 	{

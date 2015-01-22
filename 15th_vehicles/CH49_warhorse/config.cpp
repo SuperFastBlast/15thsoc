@@ -24,7 +24,8 @@ class cfgVehicles
 		hiddenSelectionsTextures[] = {"CH49_warhorse\Data\CH49_warhorse.paa","CH49_warhorse\Data\CH49_warhorse2.paa","CH49_warhorse\Data\CH49_warhorse3.paa"};
 		typicalCargo[] = {"B_Helipilot_F"};
 		availableForSupportTypes[] = {"Drop","Transport"};
-		maximumLoad = 8000;
-		slingLoadMaxCargoMass = 7000;
+		maximumLoad = 10000;
+		slingLoadMaxCargoMass = 10000;
+		liftForceCoef = 1.5;
 	};
 };

@@ -7,13 +7,12 @@ class CfgPatches
 	class Gunfighter
 	{
 		units[] ={"meu_AH1Z" , "meu_UH1Y"};
-		weapons[] = {"FFARLauncher_14","M197","SidewinderLaucher_AH1Z","HellfireLauncher"};
+		weapons[] = {"master_arms_safe","FFARLauncher_14","M197","SidewinderLaucher_AH1Z","HellfireLauncher"};
 		requiredVersion = 0.01;
-		requiredAddons[] = {"A3_Air_F","A3_Weapons_F"};
+		requiredAddons[] = {"A3_Air_F","A3_Weapons_F","A3_Anims_F","A3_Anims_F_Config_Sdr"};
 		Magazines[] = {"2Rnd_Sidewinder_AH1Z", "750Rnd_M197_AH1", "8Rnd_Hellfire","14Rnd_FFAR","38Rnd_FFAR"};
 	};
 };
-
 class CfgVehicles
 {
 	class AllVehicles;
@@ -40,6 +39,10 @@ class CfgVehicles
 			class HitGlass5;
 			class HitGlass6;
 			class HitWinch;
+		};
+		class Reflectors
+		{
+			class Right;
 		};
 		class Turrets
 		{
@@ -99,23 +102,30 @@ class CfgVehicles
 		typicalCargo[]={"B_Helipilot_F", "B_Helipilot_F"};
 		driverCompartments = "Compartment1";
 		enableManualFire = 1;
+		irScanGround=True;
+		irScanRangeMin=2000;
+		irScanRangeMax=8000;
+		irScanToEyeFactor = 2;
+		irTarget = true;
 
 		//Adding PhysX stuff here
+		driveOnComponent[] = {"Skids"};
 		selectionHRotorStill = "mainRotorStatic";
 		selectionHRotorMove = "mainRotorBlurred";
 		selectionVRotorStill = "tailRotorStatic";
 		selectionVRotorMove = "tailRotorBlurred";
-		altFullForce = 3000;
-		altNoForce = 5000;
+		altFullForce = 5000;
+		altNoForce = 10000;
 		bodyFrictionCoef = 0.6;
-		cyclicasideforcecoef = 2;//banking
-		cyclicforwardforcecoef = 2.5;//fowards backwards.
-		frontRotorForceCoef = 3;//front rotor(strenth of lift)
-		backRotorForceCoef = 4;//tailrotor(strength of horzontal movement=)
+		cyclicasideforcecoef = 1;//banking
+		cyclicforwardforcecoef = 1.5;//fowards backwards.
+		frontRotorForceCoef = 1;//front rotor(strenth of lift)
+		backRotorForceCoef = 0.7;//tailrotor(strength of horzontal movement=)
+		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		simulation = "helicopterrtd";
 		class RotorLibHelicopterProperties
 		{
-			RTDconfig = "A3\Air_F_Beta\Heli_Attack_01\RTD_Heli_Attack_01.xml";
+			RTDconfig = "gunfighter\RTD_Heli_Light_03.xml";
 			defaultCollective = 0.675;
 			autoHoverCorrection[] = {3.5,5.2,0};
 			retreatBladeStallWarningSpeed = 92.778;
@@ -128,7 +138,6 @@ class CfgVehicles
 			horizontalWingsAngleCollMax = 0;
 			maxMainRotorStress = 185000;
 			maxTailRotorStress = 30000;
-			rtd_center = "rtd_center";
 		};
 		maxSpeed = 296;
 		fuelCapacity=1200;
@@ -151,16 +160,16 @@ class CfgVehicles
 		washDownDiameter = "40.0f";
 		gForceShakeAttenuation = 0.5;
 		neutralMainRotorDive = 0;
-		mainBladeRadius = 7;
-		tailBladeRadius = 1.8;
+		mainBladeRadius = 6.2;
+		tailBladeRadius = 1.3;
 
-		maxMainRotorDive = 7;
-		minMainRotorDive = -7;
-		liftForceCoef = 1.5;
-		mainrotordive = 1.0;
-		backrotordive = 1.0;
-		mainRotorSpeed = -1.0;
-		backRotorSpeed = 1.0;
+		maxMainRotorDive = 0;
+		minMainRotorDive = -0;
+		liftForceCoef = 1.3;
+		mainrotordive = 0;
+		backrotordive = 0;
+		mainRotorSpeed = 1.2;
+		backRotorSpeed = 6.1;
 		flapsFrictionCoef = 0.5;
 
 		driverCanEject=1;
@@ -196,12 +205,11 @@ class CfgVehicles
 		picture = "gunfighter\ui\ah1z_CA";
 		mapSize = 15.5;
 		Icon="gunfighter\ui\icomap_ah1z_CA";
-		weapons[]={"FFARLauncher","CMFlareLauncher"};
+		weapons[]={"master_arms_safe","FFARLauncher","CMFlareLauncher"};
 		magazines[]={"38Rnd_FFAR","240Rnd_CMFlare_Chaff_Magazine"};
 		hiddenSelectionsTextures[] = {"gunfighter\ah1z\data\ah1z_body_co.paa","gunfighter\ah1z\data\ah1z_engines_co.paa"};
 
 		attenuationEffectType = "HeliAttenuation";
-		emptySound[] = {"",0,1};
 		soundGeneralCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_1",1.0,1,100};
 		soundGeneralCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_2",1.0,1,100};
 		soundGeneralCollision3[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_3",1.0,1,100};
@@ -217,13 +225,14 @@ class CfgVehicles
 		soundWaterCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_1",1.0,1,100};
 		soundWaterCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_2",1.0,1,100};
 		soundWaterCrashes[] = {"soundWaterCollision1",0.5,"soundWaterCollision2",0.5};
-		soundDammage[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_crash_default_int_1",10.0,1};
-		soundGetIn[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\close",1.0,1};
-		soundGetOut[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\open",1.0,1,50};
-		soundEngineOnInt[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_int_start",0.8466836,1.0};
-		soundEngineOnExt[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_ext_start",2.5848932,1.0,800};
-		soundEngineOffInt[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_int_stop",0.4466836,1.0};
-		soundEngineOffExt[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_ext_stop",1.5848932,1.0,800};
+		soundDammage[] = {"Gunfighter\sounds\alarm_loop1",0.001,1};
+		soundGetIn[] = {"Gunfighter\Sounds\heli_door_01",0.31622776,1};
+		soundGetOut[] = {"Gunfighter\Sounds\heli_door_02",0.31622776,1,50};
+		soundEnviron[] = {"","db-30",1.0};
+		soundEngineOnInt[] = {"Gunfighter\sounds\AHint\AH_1Z_Start_in.wss", 0.0316228, 1.000000};
+		soundEngineOnExt[] = {"Gunfighter\sounds\AHext\AH_1Z_Start_out.wss", 1.77828, 1.000000, 700};
+		soundEngineOffInt[] = {"Gunfighter\sounds\AHint\AH_1Z_Stop_in.wss", 0.0316228, 1.0000000};
+		soundEngineOffExt[] = {"Gunfighter\sounds\AHext\AH_1Z_Stop_out.wss", 1.77828, 1.0000000, 700};
 		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_1",1.0,1};
 		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_2",1.0,1};
 		rotorDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_2",1.0,1.0};
@@ -238,37 +247,38 @@ class CfgVehicles
 		landingSoundOut0[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_ext1",1.7782794,1.0,100};
 		landingSoundOut1[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_ext2",1.7782794,1.0,100};
 		landingSoundOut[] = {"landingSoundOut0",0.5,"landingSoundOut1",0.5};
-		class Sounds
-		{
-			class EngineExt
-			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_ext_engine",3.2387211,1.0,800};
+		class Sounds {
+			class Engineext {
+				sound[] = {"Gunfighter\sounds\AHext\AH1_Engineout.wss", db10.000000, 1.000000, 800};
 				frequency = "rotorSpeed";
 				volume = "camPos*((rotorSpeed-0.72)*4)";
 			};
-			class RotorExt
-			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_ext_rotor_normal",1.4125376,1.0,1100};
-				frequency = "rotorSpeed * (1 - rotorThrust/5)";
-				volume = "camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
+			class RotorLowext {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorLow.wss", db14.500000, 1.000000, 1600};
+				frequency = "rotorSpeed";
+				volume = "camPos*(0 max (rotorSpeed-0.1))";
+				cone[] = {1.8, 3.14, 2.0, 0.9};
 			};
-			class RotorSwist
-			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\swist",1.0,1.0,300};
-				frequency = 1;
-				volume = "camPos * (rotorThrust factor [0.7, 0.9])";
+			class RotorHighext {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorHigh.wss", db14.000000, 1.000000, 1800};
+				frequency = "rotorSpeed";
+				volume = "camPos*10*(0 max (rotorThrust-0.95))";
+				cone[] = {1.8, 3.14, 2.0, 0.9};
 			};
-			class EngineInt
-			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_int_engine",1.0,1.0};
+			class EngineInt {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_EngineIn.wss", db6.200000, 1.000000};
 				frequency = "rotorSpeed";
 				volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
 			};
-			class RotorInt
-			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_int_rotor",1.1220185,1.0};
-				frequency = "rotorSpeed * (1 - rotorThrust/5)";
-				volume = "(1-camPos)*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
+			class RotorLowInt {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorLow.wss", db6.600000, 1.000000};
+				frequency = "rotorSpeed";
+				volume = "2*(1-camPos)*((rotorSpeed factor[0.3, 1.1]) min (rotorSpeed factor[1.1, 0.3]))";
+			};
+			class RotorHighInt {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorHigh.wss", db6.200000, 1.000000};
+				frequency = "rotorSpeed";
+				volume = "(1-camPos)*3*(rotorThrust-0.9)";
 			};
 			class TransmissionDamageExt_phase1
 			{
@@ -296,13 +306,13 @@ class CfgVehicles
 			};
 			class damageAlarmInt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",0.31622776,1.0};
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",0.31622776,1.0};
 				frequency = 1;
 				volume = "engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
 			};
 			class damageAlarmExt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",0.2238721,1.0,20};
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",0.2238721,1.0,20};
 				frequency = 1;
 				volume = "engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
 			};
@@ -320,31 +330,31 @@ class CfgVehicles
 			};
 			class scrubLandInt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\noises\wheelsInt",1.0,1.0,100};
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubLandInt_open",1.0,1.0,100};
 				frequency = 1;
-				volume = "2 * (1-camPos) * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+				volume = "2 * (1-camPos) * (scrubLand factor[0.02, 0.05])";
 			};
 			class scrubLandExt
 			{
-				sound[] = {"A3\Sounds_F\dummysound",1.0,1.0,100};
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubLandExt",1.0,1.0,100};
 				frequency = 1;
-				volume = "camPos * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+				volume = "camPos * (scrubLand factor[0.02, 0.05])";
 			};
 			class scrubBuildingInt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\noises\wheelsInt",1.0,1.0,100};
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubBuildingInt",1.0,1.0,100};
 				frequency = 1;
-				volume = "(1-camPos) * (scrubBuilding factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+				volume = "2 * (1 - camPos) * (scrubBuilding factor[0.02, 0.05])";
 			};
 			class scrubBuildingExt
 			{
-				sound[] = {"A3\Sounds_F\dummysound",1.0,1.0,100};
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubBuildingExt",1.0,1.0,100};
 				frequency = 1;
 				volume = "camPos * (scrubBuilding factor[0.02, 0.05])";
 			};
 			class scrubTreeInt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",1.0,1.0,100};
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",1.0,1.0,100};
 				frequency = 1;
 				volume = "(1 - camPos) * ((scrubTree) factor [0, 0.01])";
 			};
@@ -390,12 +400,12 @@ class CfgVehicles
 				frequency = 1;
 				volume = "(1-camPos)*(slingLoadActive factor [0,1])";
 			};
-			class WindInt
-			{
-				sound[] = {"A3\Sounds_F\vehicles\air\noises\wind_closed",0.39810717,1.0,50};
-				frequency = 1;
-				volume = "(1-camPos)*(speed factor[5, 50])*(speed factor[5, 50])";
-			};
+				class WindInt
+				{
+					sound[] = {"A3\Sounds_F\vehicles\air\noises\wind_open_int",0.56234133,1.0,50};
+					frequency = 1;
+					volume = "(1-camPos)*(speed factor[5, 50])*(speed factor[5, 50])";
+				};
 			class GStress
 			{
 				sound[] = {"A3\Sounds_F\vehicles\noises\vehicle_stress2b",0.35481337,1.0,50};
@@ -406,172 +416,173 @@ class CfgVehicles
 		class SoundsExt
 		{
 			class SoundEvents{};
-			class Sounds
+		class Sounds {
+			class Engineext {
+				sound[] = {"Gunfighter\sounds\AHext\AH1_Engineout.wss", db10.000000, 1.000000, 800};
+				frequency = "rotorSpeed";
+				volume = "camPos*((rotorSpeed-0.72)*4)";
+			};
+			class RotorLowext {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorLow.wss", db14.500000, 1.000000, 1600};
+				frequency = "rotorSpeed";
+				volume = "camPos*(0 max (rotorSpeed-0.1))";
+				cone[] = {1.8, 3.14, 2.0, 0.9};
+			};
+			class RotorHighext {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorHigh.wss", db14.000000, 1.000000, 1800};
+				frequency = "rotorSpeed";
+				volume = "camPos*10*(0 max (rotorThrust-0.95))";
+				cone[] = {1.8, 3.14, 2.0, 0.9};
+			};
+			class EngineInt {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_EngineIn.wss", db6.200000, 1.000000};
+				frequency = "rotorSpeed";
+				volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
+			};
+			class RotorLowInt {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorLow.wss", db6.600000, 1.000000};
+				frequency = "rotorSpeed";
+				volume = "2*(1-camPos)*((rotorSpeed factor[0.3, 1.1]) min (rotorSpeed factor[1.1, 0.3]))";
+			};
+			class RotorHighInt {
+				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorHigh.wss", db6.200000, 1.000000};
+				frequency = "rotorSpeed";
+				volume = "(1-camPos)*3*(rotorThrust-0.9)";
+			};
+			class TransmissionDamageExt_phase1
 			{
-				class EngineExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_ext_engine",3.2387211,1.0,800};
-					frequency = "rotorSpeed";
-					volume = "camPos*((rotorSpeed-0.72)*4)";
-				};
-				class RotorExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_ext_rotor_normal",1.4125376,1.0,1100};
-					frequency = "rotorSpeed * (1 - rotorThrust/5)";
-					volume = "camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
-				};
-				class RotorSwist
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\swist",1.0,1.0,300};
-					frequency = 1;
-					volume = "camPos * (rotorThrust factor [0.7, 0.9])";
-				};
-				class EngineInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_int_engine",1.0,1.0};
-					frequency = "rotorSpeed";
-					volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
-				};
-				class RotorInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Attack_01\Heli_Attack_01_int_rotor",1.1220185,1.0};
-					frequency = "rotorSpeed * (1 - rotorThrust/5)";
-					volume = "(1-camPos)*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
-				};
-				class TransmissionDamageExt_phase1
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",1.0,1.0,150};
-					frequency = "0.66 + rotorSpeed / 3";
-					volume = "camPos * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageExt_phase2
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",1.0,1.0,150};
-					frequency = "0.66 + rotorSpeed / 3";
-					volume = "camPos * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageInt_phase1
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",1.0,1.0,150};
-					frequency = "0.66 + rotorSpeed / 3";
-					volume = "(1 - camPos) * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageInt_phase2
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",1.0,1.0,150};
-					frequency = "0.66 + rotorSpeed / 3";
-					volume = "(1 - camPos) * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class damageAlarmInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",0.31622776,1.0};
-					frequency = 1;
-					volume = "engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
-				};
-				class damageAlarmExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",0.2238721,1.0,20};
-					frequency = 1;
-					volume = "engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
-				};
-				class rotorLowAlarmInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",0.31622776,1.0};
-					frequency = 1;
-					volume = "engineOn * (1 - camPos) * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
-				};
-				class rotorLowAlarmExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",0.2238721,1.0,20};
-					frequency = 1;
-					volume = "engineOn * camPos * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
-				};
-				class scrubLandInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\wheelsInt",1.0,1.0,100};
-					frequency = 1;
-					volume = "2 * (1-camPos) * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-				};
-				class scrubLandExt
-				{
-					sound[] = {"A3\Sounds_F\dummysound",1.0,1.0,100};
-					frequency = 1;
-					volume = "camPos * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-				};
-				class scrubBuildingInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\wheelsInt",1.0,1.0,100};
-					frequency = 1;
-					volume = "(1-camPos) * (scrubBuilding factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-				};
-				class scrubBuildingExt
-				{
-					sound[] = {"A3\Sounds_F\dummysound",1.0,1.0,100};
-					frequency = 1;
-					volume = "camPos * (scrubBuilding factor[0.02, 0.05])";
-				};
-				class scrubTreeInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",1.0,1.0,100};
-					frequency = 1;
-					volume = "(1 - camPos) * ((scrubTree) factor [0, 0.01])";
-				};
-				class scrubTreeExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",1.0,1.0,100};
-					frequency = 1;
-					volume = "camPos * ((scrubTree) factor [0, 0.01])";
-				};
-				class RainExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\noises\rain1_ext",1.0,1.0,100};
-					frequency = 1;
-					volume = "camPos * (rain - rotorSpeed/2) * 2";
-				};
-				class RainInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\noises\rain1_int",1.0,1.0,100};
-					frequency = 1;
-					volume = "(1-camPos)*(rain - rotorSpeed/2)*2";
-				};
-				class SlingLoadDownExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",1.0,1.0,500};
-					frequency = 1;
-					volume = "camPos*(slingLoadActive factor [0,-1])";
-				};
-				class SlingLoadUpExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",1.0,1.0,500};
-					frequency = 1;
-					volume = "camPos*(slingLoadActive factor [0,1])";
-				};
-				class SlingLoadDownInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",1.0,1.0,500};
-					frequency = 1;
-					volume = "(1-camPos)*(slingLoadActive factor [0,-1])";
-				};
-				class SlingLoadUpInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",1.0,1.0,500};
-					frequency = 1;
-					volume = "(1-camPos)*(slingLoadActive factor [0,1])";
-				};
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",1.0,1.0,150};
+				frequency = "0.66 + rotorSpeed / 3";
+				volume = "camPos * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
+			};
+			class TransmissionDamageExt_phase2
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",1.0,1.0,150};
+				frequency = "0.66 + rotorSpeed / 3";
+				volume = "camPos * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
+			};
+			class TransmissionDamageInt_phase1
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",1.0,1.0,150};
+				frequency = "0.66 + rotorSpeed / 3";
+				volume = "(1 - camPos) * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
+			};
+			class TransmissionDamageInt_phase2
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",1.0,1.0,150};
+				frequency = "0.66 + rotorSpeed / 3";
+				volume = "(1 - camPos) * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
+			};
+			class damageAlarmInt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",0.31622776,1.0};
+				frequency = 1;
+				volume = "engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
+			};
+			class damageAlarmExt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",0.2238721,1.0,20};
+				frequency = 1;
+				volume = "engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
+			};
+			class rotorLowAlarmInt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",0.31622776,1.0};
+				frequency = 1;
+				volume = "engineOn * (1 - camPos) * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			};
+			class rotorLowAlarmExt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",0.2238721,1.0,20};
+				frequency = 1;
+				volume = "engineOn * camPos * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			};
+			class scrubLandInt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubLandInt_open",1.0,1.0,100};
+				frequency = 1;
+				volume = "2 * (1-camPos) * (scrubLand factor[0.02, 0.05])";
+			};
+			class scrubLandExt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubLandExt",1.0,1.0,100};
+				frequency = 1;
+				volume = "camPos * (scrubLand factor[0.02, 0.05])";
+			};
+			class scrubBuildingInt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubBuildingInt",1.0,1.0,100};
+				frequency = 1;
+				volume = "2 * (1 - camPos) * (scrubBuilding factor[0.02, 0.05])";
+			};
+			class scrubBuildingExt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubBuildingExt",1.0,1.0,100};
+				frequency = 1;
+				volume = "camPos * (scrubBuilding factor[0.02, 0.05])";
+			};
+			class scrubTreeInt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",1.0,1.0,100};
+				frequency = 1;
+				volume = "(1 - camPos) * ((scrubTree) factor [0, 0.01])";
+			};
+			class scrubTreeExt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",1.0,1.0,100};
+				frequency = 1;
+				volume = "camPos * ((scrubTree) factor [0, 0.01])";
+			};
+			class RainExt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\noises\rain1_ext",1.0,1.0,100};
+				frequency = 1;
+				volume = "camPos * (rain - rotorSpeed/2) * 2";
+			};
+			class RainInt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\noises\rain1_int",1.0,1.0,100};
+				frequency = 1;
+				volume = "(1-camPos)*(rain - rotorSpeed/2)*2";
+			};
+			class SlingLoadDownExt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",1.0,1.0,500};
+				frequency = 1;
+				volume = "camPos*(slingLoadActive factor [0,-1])";
+			};
+			class SlingLoadUpExt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",1.0,1.0,500};
+				frequency = 1;
+				volume = "camPos*(slingLoadActive factor [0,1])";
+			};
+			class SlingLoadDownInt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",1.0,1.0,500};
+				frequency = 1;
+				volume = "(1-camPos)*(slingLoadActive factor [0,-1])";
+			};
+			class SlingLoadUpInt
+			{
+				sound[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",1.0,1.0,500};
+				frequency = 1;
+				volume = "(1-camPos)*(slingLoadActive factor [0,1])";
+			};
 				class WindInt
 				{
-					sound[] = {"A3\Sounds_F\vehicles\air\noises\wind_closed",0.39810717,1.0,50};
+					sound[] = {"A3\Sounds_F\vehicles\air\noises\wind_open_int",0.56234133,1.0,50};
 					frequency = 1;
 					volume = "(1-camPos)*(speed factor[5, 50])*(speed factor[5, 50])";
 				};
-				class GStress
-				{
-					sound[] = {"A3\Sounds_F\vehicles\noises\vehicle_stress2b",0.35481337,1.0,50};
-					frequency = 1;
-					volume = "engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
-				};
+			class GStress
+			{
+				sound[] = {"A3\Sounds_F\vehicles\noises\vehicle_stress2b",0.35481337,1.0,50};
+				frequency = 1;
+				volume = "engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
 			};
 		};
+	};
 		class Exhausts
 		{
 			class Exhaust1
@@ -909,6 +920,22 @@ class CfgVehicles
 				minimalHit=0.050000001;
 				explosionShielding=6;
 			};
+			class HitGlass2: HitGlass2
+			{
+				armor = 0.5;
+			};
+			class HitGlass3: HitGlass3
+			{
+				armor = 0.5;
+			};
+			class HitGlass4: HitGlass4
+			{
+				armor = 0.5;
+			};
+			class HitGlass5: HitGlass5
+			{
+				armor = 0.5;
+			};
 		};
 		class Turrets: Turrets
 		{
@@ -918,7 +945,7 @@ class CfgVehicles
 				gunnerAction = "AH1Z_Gunner";
 				gunnerInAction = "AH1Z_Gunner";
 				gunnerCompartments = "Compartment1";
-				weapons[]={"M197","HellfireLauncher","SidewinderLaucher_AH1Z","Laserdesignator_mounted"};
+				weapons[]={"master_arms_safe","M197","HellfireLauncher","SidewinderLaucher_AH1Z","Laserdesignator_mounted"};
 				magazines[]={"750Rnd_M197_AH1","8Rnd_Hellfire","2Rnd_Sidewinder_AH1Z","Laserbatteries"};
 				laser = 1;
 				allowTabLock= 1;
@@ -937,8 +964,8 @@ class CfgVehicles
 				gunnerOpticsModel = "";
 				gunnerForceOptics = 0;
 				turretInfoType = "RscOptics_Heli_Attack_01_gunner";
-				maxhorizontalrotspeed = 1.57;
-				maxverticalrotspeed = 1.57;
+				maxhorizontalrotspeed = 3;
+				maxverticalrotspeed = 3;
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200};
 				discreteDistanceInitIndex = 9;
 				stabilizedInAxes = 3;
@@ -972,6 +999,15 @@ class CfgVehicles
 					minfov = 0.020;
 					opticsdisplayname = "N";
 				};
+					class Far: Wide
+					{
+						opticsDisplayName = "F";
+						initFov = 0.010;
+						minFov = 0.010;
+						maxFov = 0.010;
+						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
+					
+						};
 			};
 				class OpticsOut
 				{
@@ -1053,20 +1089,6 @@ class CfgVehicles
 				"gunfighter\ah1z\data\ah1z_monitors_destruct.rvmat"
 			};
 	};
-class CfgNonAIVehicles
-{
-	class ProxyWeapon;
-	class ProxyAGM114Hellfire: ProxyWeapon
-	{
-		model = "gunfighter\ah1z\AGM114Hellfire.p3d";
-		simulation = "maverickweapon";
-	};
-	class ProxyAIM9XSidewinder: ProxyWeapon
-	{
-		model = "gunfighter\ah1z\AIM9XSidewinder.p3d"; 
-		simulation = "maverickweapon";
-	};
-};
 };
 	class meu_UH1Y: Helicopter
 	{
@@ -1074,7 +1096,7 @@ class CfgNonAIVehicles
 		scope = 2;
 		side=1;
 		audible = 5;
-		maximumLoad = 2000;
+		maximumLoad = 2500;
 		AGM_FastRoping = 1;
 		AGM_FastRoping_Positions[] = {{1.4, -0.15, 0.10}, {-1.4, -0.15, 0.10}};
 		slingLoadMemoryPoint = "slingLoad";		
@@ -1085,6 +1107,7 @@ class CfgNonAIVehicles
 		mapSize = 15;
 		cost=500000;
 		displayName = "UH1Y Venom";
+		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		faction = "BLU_F";
 		vehicleClass = "Air";
 		availableForSupportTypes[] = {"CAS_Heli","Drop","Transport"};
@@ -1096,10 +1119,11 @@ class CfgNonAIVehicles
 		cargocansee = 31;
 		camouflage = 7;
 		crewVulnerable = 1;
+		driveOnComponent[] = {"Skids"};
 		simulation = "helicopterrtd";
 		class RotorLibHelicopterProperties
 		{
-			RTDconfig = "A3\Air_F_EPB\Heli_Light_03\RTD_Heli_Light_03.xml";
+			RTDconfig = "gunfighter\RTD_Heli_Light_02.xml";
 			defaultCollective = 0.7;
 			autoHoverCorrection[] = {4,3.3,0};
 			maxTorque = 2700;
@@ -1112,6 +1136,7 @@ class CfgNonAIVehicles
 			horizontalWingsAngleCollMax = 0;
 			maxMainRotorStress = 110000;
 			maxTailRotorStress = 25000;
+			rtd_center = "rtd_center";
 		};
 		class Library
 		{
@@ -1125,10 +1150,10 @@ class CfgNonAIVehicles
 		selectionVRotorMove = "velka vrtule Blur";
 
 		maxSpeed = 280; 
-		mainRotorSpeed = -0.5;
-		backRotorSpeed = 3.0;
+		mainRotorSpeed = 1.2;
+		backRotorSpeed = 6.1;
 		driverRightHandAnimName = "stick";
-		bodyFrictionCoef = 1;
+		bodyFrictionCoef = 0.6;
 		canBeShot = true;
 		enableSweep = true;
 		minGForce = 0.2;
@@ -1137,22 +1162,24 @@ class CfgNonAIVehicles
 		washDownDiameter = "40.0f";
 		gForceShakeAttenuation = 0.5;
 		cyclicasideforcecoef = 1.0;//banking
-		cyclicforwardforcecoef = 1.0;//fowards backwards.
-		frontRotorForceCoef = 3;//front rotor(strenth of lift)
-		backRotorForceCoef = 4;//tailrotor(strength of horzontal movement=)
-		liftForceCoef = 1.5;
+		cyclicforwardforcecoef = 1.5;//fowards backwards.
+		frontRotorForceCoef = 1;//front rotor(strenth of lift)
+		backRotorForceCoef = 0.7;//tailrotor(strength of horzontal movement=)
+		liftForceCoef = 1.3;
 		maxfordingdepth = 0.55;
 		mainBladeRadius = 6.2;
 		tailBladeRadius = 1.3;
 		sensitivity = 3;
 		sensitivityear = 3;
 		accuracy=1000;
-		maxMainRotorDive = 7;
-		minMainRotorDive = -7;
-		mainrotordive = 1;
-		backrotordive = 2;
+		maxMainRotorDive = 0;
+		minMainRotorDive = -0;
+		mainrotordive = 0;
+		backrotordive = 0;
 		extCameraPosition[] = {0.5,2,-20};
 		flapsFrictionCoef = 0.5;
+		altFullForce = 5000;
+		altNoForce = 10000;
 		leftDustEffect = "vbs2_fx_lowTrackDustEffects";
 		rightDustEffect = "vbs2_fx_lowTrackDustEffects";
 
@@ -1161,36 +1188,41 @@ class CfgNonAIVehicles
 		armor = 30;
 		armorStructural = 1;
 		damageResistance = 0.004;
-		weapons[]={"FFARLauncher_14","CMFlareLauncher"};
+		weapons[]={"master_arms_safe","FFARLauncher_14","CMFlareLauncher"};
 		magazines[]={"14Rnd_FFAR","168Rnd_CMFlare_Chaff_Magazine"};
 		
 		memoryPointLRocket = "Rocket_1";
 		memoryPointRRocket = "Rocket_2";
-
-		irScanRangeMin=0;
-		irScanRangeMax=1000;
+		memoryPointGun[] = {"machinegun","machinegun_2"};
+		gunBeg[] = {"muzzle_1","muzzle_2"};
+		gunEnd[] = {"chamber_1","chamber_2"};
+		irScanGround=True;
+		irScanRangeMin=2000;
+		irScanRangeMax=8000;
+		irScanToEyeFactor = 2;
+		irTarget = true;
 		nightVision=1;
 		precision = 200;
 		memoryPointCM[]  = {"flare_launcher1","flare_launcher2"};
 		memoryPointCMDir[] = {"flare_launcher1_dir","flare_launcher2_dir"};
 		radarType = 8;
-		LockDetectionSystem = "1 + 8 + 4";
+		LockDetectionSystem = "2 + 8 + 4";
 		incomingMissileDetectionSystem = 16;
 		precisegetinout = 1;
-		memoryPointsGetInCargo[] = {"pos cargo"};
-		memoryPointsGetInCargoDir[] = {"pos cargo dir"};
+		memoryPointsGetInCargo[] = {"pos codriver","pos cargo"};
+		memoryPointsGetInCargoDir[] = {"pos codriver dir","pos cargo dir"};
 		cargoGetInAction[] = {"GetInHelicopterCargo"};
 		cargoGetOutAction[] = {"GetOutHelicopterCargo"};
 		driverAction="UH1Y_Pilot";
 		driverInAction="UH1Y_Pilot";
 
-
 		cargoAction[]={"UH1Y_Cargo02","UH1Y_Cargo03","UH1Y_Cargo03","UH1Y_Cargo02","UH1Y_Cargo01","UH1Y_Cargo01","UH1Y_Cargo01"};
-		cargoIsCoDriver[]={false,false};
+		cargoIsCoDriver[] = {0,0,0,0,0,0,0,0,0};
 
-		gunnerUsesPilotView=0;
+		gunnerUsesPilotView=1;
+		gunnerOpticsModel = "";
 
-		transportSoldier=3;
+		transportSoldier=1;
 		crew="B_Helipilot_F";
 		transportAmmo=0;
 		transportMaxMagazines=150;
@@ -1216,14 +1248,14 @@ class CfgNonAIVehicles
 				count = 3;
 			};
 		};
-		initCargoAngleY=+10; // cargo viewing limitations
-		minCargoAngleY=-100;
-		maxCargoAngleY=+100;
+		initCargoAngleY= 10; // cargo viewing limitations
+		minCargoAngleY= -60;
+		maxCargoAngleY= 120;
 		minFireTime=30;
 		threat[]={1, 0.05, 0.05};
 		driverCompartments = "Compartment1";
 		cargoCompartments[] = {"Compartment2"};
-		cargoProxyIndexes[] = {2,3,5};
+		cargoProxyIndexes[] = {5};
 		class cargoturret;
 		class Turrets: Turrets
 		{
@@ -1236,21 +1268,21 @@ class CfgNonAIVehicles
 				minTurn=-5; maxTurn=185; initTurn=0;
 				soundServo[]={,db-40,1.0};
 				animationSourceHatch="";
-				stabilizedInAxes = 3;
+				stabilizedInAxes = "StabilizedInAxesNone";
 				gunBeg="muzzle_1";
 				gunEnd="chamber_1";
 				gunnerCanEject = 1;
-				weapons[]={"M134_minigun"};
+				weapons[]={"master_arms_safe","M134_minigun"};
 				magazines[]={"5000Rnd_762x51_Belt"};
-				gunnerName="CrewChief";
+				gunnerName="Crew-Chief";
 				gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
 				gunnerOutOpticsShowCursor=1;
 				gunnerOpticsShowCursor=1;
 				gunnerAction="UH1Y_Gunner";
 				gunnerInAction="UH1Y_Gunner";
-				commanding=0;
+				commanding= -1;
 				turretCanSee = "1 + 2 + 4 + 8 + 16";
-				primaryGunner=2;
+				primaryGunner=1;
 				class ViewOptics
 				{
 					initAngleX=0;
@@ -1261,7 +1293,7 @@ class CfgNonAIVehicles
 					maxAngleY=100;
 					initFov=1;
 					minFov=0.25;
-					maxFov=0.80000001;
+					maxFov=0.8;
 				};
 				gunnerCompartments = Compartment2;
 			};
@@ -1276,15 +1308,15 @@ class CfgNonAIVehicles
 				stabilizedInAxes = 3;
 				selectionFireAnim="zasleh_1";
 				gunnerName="DoorGunner";
-				commanding=-3;
+				commanding=-2;
 				minTurn=-180; maxTurn=0; initTurn=0;
-				weapons[]={"M134_minigun_2"};
+				weapons[]={"master_arms_safe","M134_minigun_2"};
 				gunBeg="muzzle_2"; //gunBeg=endpoint of the gun
 				gunEnd="chamber_2"; //gunEnd=chamber of the gun
 				memoryPointGun="machinegun_2";
 				memoryPointGunnerOptics="gunnerview_2";
 				turretCanSee = "1 + 2 + 4 + 8 + 16";
-				primaryGunner=3;
+				primaryGunner=2;
 			};
 			class CoPilotObs: MainTurret
 			{
@@ -1295,6 +1327,11 @@ class CfgNonAIVehicles
 				gunnerName="Co-Pilot";
 				gunnerAction="UH1Y_Gunner02";
 				gunnerInAction="UH1Y_Gunner02";
+				memoryPointsGetInGunner = "pos codriver";
+				memoryPointsGetInGunnerDir = "pos codriver dir";
+				selectionFireAnim = "";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
 				body="ObsTurret";
 				proxyIndex=3;
 				gun="ObsGun";
@@ -1307,18 +1344,17 @@ class CfgNonAIVehicles
 				initTurn = 0;
 				animationSourceBody="ObsTurret";
 				animationSourceGun="ObsGun";
-				//outGunnerMayFire = 1; //Engine assumes helicopter gunner is turned out.
-				//inGunnerMayFire = 1;
+				outGunnerMayFire = 1; //Engine assumes helicopter gunner is turned out.
 				gunBeg="gun_end"; //gunBeg=endpoint of the gun
 				gunEnd="gun_begin"; //gunEnd=chamber of the gun
 				memoryPointGun="gun_end";
-				commanding=1;
+				commanding= 3;
 				laser = 1;
 				memoryPointGunnerOptics = "commanderview";
 				gunnerCompartments = "Compartment2";
 				weapons[]={"Laserdesignator_mounted"};
 				magazines[]={"Laserbatteries"};
-				primaryGunner=1;
+				primaryGunner=3;
 				startEngine = 0;
 				soundServo[]={,db-40,1.0};
 				gunnerForceOptics="false";
@@ -1359,6 +1395,15 @@ class CfgNonAIVehicles
 						maxFov = 0.019;
 						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
 					
+					};
+					class Far: Wide
+					{
+						opticsDisplayName = "F";
+						initFov = 0.010;
+						minFov = 0.010;
+						maxFov = 0.010;
+						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
+					
 						};
 					};
 					class OpticsOut
@@ -1389,22 +1434,50 @@ class CfgNonAIVehicles
 	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
         gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
 	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
-	gunnerName = "Passenger (Right)";	/// name of the position in the Action menu
+	gunnerName = "Passenger (BenchRight)";	/// name of the position in the Action menu
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
 	proxyIndex = 1;	/// what cargo proxy is used according to index in the model
-	maxElev = 15; /// what is the highest possible elevation of the turret
-	minElev = -42; /// what is the lowest possible elevation of the turret
-	maxTurn = 20; /// what is the left-most possible turn of the turret
-	minTurn = -95; /// what is the right-most possible turn of the turret
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = -60; /// what is the left-most possible turn of the turret
+	minTurn = -120; /// what is the right-most possible turn of the turret
 	isPersonTurret = 1; /// enables firing from vehicle functionality
 	ejectDeadGunner = 0; /// seatbelts included
-        gunnerInAction = "passenger_apc_narrow_generic02";///Your sitting animation inside cargo(can be a FFV animation)
-	startEngine = 0;
-        commanding = -1;
-	outGunnerMayFire = 1;
-        inGunnerMayFire = 0;
-	soundAttenuationTurret = "HeliAttenuation";
+	};
+		class CargoTurret_02: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "passenger_bench_1"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunner = "pos Cargo1";
+	memoryPointsGetInGunnerDir = "pos Cargo dir1";
+	gunnerName = "Passenger (???)";	/// name of the position in the Action menu
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 2;	/// what cargo proxy is used according to index in the model
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = 105; /// what is the left-most possible turn of the turret
+	minTurn = 50; /// what is the right-most possible turn of the turret
+	isPersonTurret = 1; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+	};
+		class CargoTurret_03: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "passenger_bench_1"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunner = "pos CargoL";
+	memoryPointsGetInGunnerDir = "pos Cargo dirL";
+	gunnerName = "Passenger (??)";	/// name of the position in the Action menu
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 3;	/// what cargo proxy is used according to index in the model
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = 105; /// what is the left-most possible turn of the turret
+	minTurn = 50; /// what is the right-most possible turn of the turret
+	isPersonTurret = 1; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
 	};
 		class CargoTurret_04: CargoTurret /// position for Firing from Vehicles
 		{
@@ -1412,119 +1485,266 @@ class CfgNonAIVehicles
         gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
 	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
 	gunnerName = "Passenger (Left)";	/// name of the position in the Action menu
-	gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
 	proxyIndex = 4;	/// what cargo proxy is used according to index in the model
-	maxElev = 15; /// what is the highest possible elevation of the turret
-	minElev = -42; /// what is the lowest possible elevation of the turret
-	maxTurn = 20; /// what is the left-most possible turn of the turret
-	minTurn = -95; /// what is the right-most possible turn of the turret
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = -20; /// what is the left-most possible turn of the turret
+	minTurn = -88; /// what is the right-most possible turn of the turret
 	isPersonTurret = 1; /// enables firing from vehicle functionality
 	ejectDeadGunner = 0; /// seatbelts included
-        gunnerInAction = "passenger_apc_narrow_generic02";///Your sitting animation inside cargo(can be a FFV animation)
-	startEngine = 0;
-        commanding = -1;
-	outGunnerMayFire = 1;
-        inGunnerMayFire = 0;
-	soundAttenuationTurret = "HeliAttenuation";
 	};
 		class CargoTurret_06: CargoTurret /// position for Firing from Vehicles
 		{
 	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
         gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
 	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
-	gunnerName = "Passenger (Right2)";	/// name of the position in the Action menu
-	gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+	gunnerName = "Passenger (RR)";	/// name of the position in the Action menu
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
 	proxyIndex = 6;	/// what cargo proxy is used according to index in the model
-	maxElev = 15; /// what is the highest possible elevation of the turret
-	minElev = -42; /// what is the lowest possible elevation of the turret
-	maxTurn = 20; /// what is the left-most possible turn of the turret
-	minTurn = -95; /// what is the right-most possible turn of the turret
-	isPersonTurret = 1; /// enables firing from vehicle functionality
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = 45; /// what is the left-most possible turn of the turret
+	minTurn = -30; /// what is the right-most possible turn of the turret
 	ejectDeadGunner = 0; /// seatbelts included
-        gunnerInAction = "passenger_apc_narrow_generic02";///Your sitting animation inside cargo(can be a FFV animation)
-	startEngine = 0;
-        commanding = -1;
-	outGunnerMayFire = 1;
-        inGunnerMayFire = 0;
-	soundAttenuationTurret = "HeliAttenuation";
 	};
 		class CargoTurret_07: CargoTurret /// position for Firing from Vehicles
 		{
 	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
         gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
 	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
-	gunnerName = "Passenger (Left2)";	/// name of the position in the Action menu
-	gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+	gunnerName = "Passenger (RL)";	/// name of the position in the Action menu
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
 	proxyIndex = 7;	/// what cargo proxy is used according to index in the model
-	maxElev = 15; /// what is the highest possible elevation of the turret
-	minElev = -42; /// what is the lowest possible elevation of the turret
-	maxTurn = 20; /// what is the left-most possible turn of the turret
-	minTurn = -95; /// what is the right-most possible turn of the turret
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = 38; /// what is the left-most possible turn of the turret
+	minTurn = -40; /// what is the right-most possible turn of the turret
 	isPersonTurret = 1; /// enables firing from vehicle functionality
 	ejectDeadGunner = 0; /// seatbelts included
-        gunnerInAction = "passenger_apc_narrow_generic02";///Your sitting animation inside cargo(can be a FFV animation)
-	startEngine = 0;
-        commanding = -1;
-	outGunnerMayFire = 1;
-        inGunnerMayFire = 0;
-	soundAttenuationTurret = "HeliAttenuation";
 	};
-			};
-		class HitPoints: HitPoints
+};
+				class HitPoints: HitPoints
 		{
-			class HitHull: HitHull
+			class HitHull
 			{
-				armor=2;
-				minimalHit=0.050000001;
+				armor = 1;
+				material = 51;
+				name = "NEtrup";
+				visual = "trup";
+				passThrough = 1;
 			};
-			class HitAvionics: HitAvionics
+			class HitEngine
 			{
-				armor=1.3;
-				radius=0.25;
-				minimalHit=0.050000001;
-				explosionShielding=1.5;
-				visual="podsvit pristroju";
-			};
-			class HitEngine: HitEngine
-			{
-				armor=2;
-				radius=0.25;
-				minimalHit=0.050000001;
-				explosionShielding=3;
+				armor = 0.25;
+				material = 51;
+				name = "motor";
+				visual = "motor";
+				passThrough = 0;
 			};
 			class HitEngine1: HitEngine
 			{
-				armor=1;
-				minimalHit=0.1;
-				name="engine_1_hit";
-				convexComponent="engine_1_hit";
+				name = "engine_1_hit";
+				convexComponent = "engine_1_hit";
 			};
 			class HitEngine2: HitEngine
 			{
-				armor=1;
-				minimalHit=0.1;
-				name="engine_2_hit";
-				convexComponent="engine_2_hit";
+				name = "engine_2_hit";
+				convexComponent = "engine_2_hit";
 			};
-			class HitHRotor: HitHRotor
+			class HitEngine3: HitEngine
 			{
-				armor=2.5999999;
-				radius=0.44999999;
-				minimalHit=0.090000004;
-				explosionShielding=2.5;
+				name = "engine_3_hit";
+				convexComponent = "engine_3_hit";
 			};
-			class HitVRotor: HitVRotor
+			class HitAvionics
 			{
-				armor=1.5;
-				radius=0.059999999;
-				minimalHit=0.050000001;
-				explosionShielding=6;
+				armor = 0.15;
+				material = 51;
+				name = "elektronika";
+				visual = "elektronika";
+				passThrough = 0;
+			};
+			class HitVRotor
+			{
+				armor = 0.3;
+				material = 51;
+				name = "mala vrtule";
+				visual = "mala vrtule staticka";
+				passThrough = 0.3;
+			};
+			class HitHRotor
+			{
+				armor = 0.2;
+				material = 51;
+				name = "velka vrtule";
+				visual = "velka vrtule staticka";
+				passThrough = 0.1;
+			};
+			class HitMissiles
+			{
+				armor = 0.1;
+				material = 51;
+				name = "munice";
+				visual = "munice";
+				passThrough = 0.5;
+			};
+			class HitRGlass
+			{
+				armor = 0.1;
+				material = 51;
+				name = "sklo predni P";
+				visual = "sklo predni P";
+				passThrough = 0;
+			};
+			class HitLGlass
+			{
+				armor = 0.1;
+				material = 51;
+				name = "sklo predni L";
+				visual = "sklo predni L";
+				passThrough = 0;
+			};
+			class HitGlass1: HitGlass1
+			{
+				armor = 1.3;
+				radius = 0.45;
+				explosionShielding = 6;
+			};
+			class HitGlass2: HitGlass2
+			{
+				armor = 1.3;
+				radius = 0.45;
+				explosionShielding = 6;
+			};
+			class HitGlass3: HitGlass3
+			{
+				armor = 1.3;
+				radius = 0.35;
+				explosionShielding = 6;
+			};
+			class HitGlass4: HitGlass4
+			{
+				armor = 1.3;
+				radius = 0.35;
+				explosionShielding = 6;
+			};
+			class HitGlass5: HitGlass5
+			{
+				armor = 1.3;
+				radius = 0.46;
+				explosionShielding = 6;
+			};
+			class HitWinch
+			{
+				armor = 0.1;
+				material = 51;
+				name = "slingLoad";
+				visual = "";
+				passThrough = 0;
+				radius = 0.1;
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					class Explo
+					{
+						simulation = "particles";
+						type = "WinchDestructionExplo";
+						position = "slingLoad";
+						intensity = 1;
+						interval = 1;
+						lifeTime = 0.06;
+					};
+					class Sparks
+					{
+						simulation = "particles";
+						type = "WinchDestructionSparks";
+						position = "slingLoad";
+						intensity = 1;
+						interval = 1;
+						lifeTime = 0.1;
+					};
+				};
+			};
+			class HitTransmission
+			{
+				armor = 0.8;
+				material = -1;
+				name = "transmission";
+				passThrough = 0.8;
+			};
+			class HitLight
+			{
+				armor = 0.1;
+				material = -1;
+				name = "light";
+				passThrough = 0;
+			};
+			class HitHydraulics
+			{
+				armor = 0.8;
+				material = -1;
+				name = "hydraulics";
+				passThrough = 0.8;
+			};
+			class HitGear
+			{
+				armor = 0.9;
+				material = -1;
+				name = "gear";
+				passThrough = 0;
+			};
+			class HitFuel
+			{
+				armor = 0.4;
+				material = -1;
+				name = "fuel tanks";
+				passThrough = 0.5;
+			};
+			class HitHStabilizerL1
+			{
+				armor = 0.8;
+				material = -1;
+				name = "HStabilizerL1";
+				passThrough = 1;
+			};
+			class HitHStabilizerR1
+			{
+				armor = 0.8;
+				material = -1;
+				name = "HStabilizerR1";
+				passThrough = 1;
+			};
+			class HitVStabilizer1
+			{
+				armor = 0.8;
+				material = -1;
+				name = "VStabilizer1";
+				passThrough = 1;
+			};
+			class HitTail
+			{
+				armor = 0.8;
+				material = -1;
+				name = "tail boom";
+				passThrough = 1;
+			};
+			class HitPitotTube
+			{
+				armor = 0.5;
+				material = -1;
+				name = "pitot tube";
+				passThrough = 0.2;
+			};
+			class HitStaticPort
+			{
+				armor = 0.1;
+				material = -1;
+				name = "static port";
+				passThrough = 1;
 			};
 		};
 		class AnimationSources: AnimationSources
@@ -1947,7 +2167,6 @@ class CfgNonAIVehicles
 		};
 
 		attenuationEffectType = "HeliAttenuation";
-		emptySound[] = {"",0,1};
 		soundGeneralCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_1",1.0,1,100};
 		soundGeneralCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_2",1.0,1,100};
 		soundGeneralCollision3[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_3",1.0,1,100};
@@ -1963,13 +2182,14 @@ class CfgNonAIVehicles
 		soundWaterCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_1",1.0,1,100};
 		soundWaterCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_2",1.0,1,100};
 		soundWaterCrashes[] = {"soundWaterCollision1",0.5,"soundWaterCollision2",0.5};
-		soundDammage[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_crash_default_int_1",10.0,1};
-		soundGetIn[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\open",1.0,1};
-		soundGetOut[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\close",1.0,1,50};
-		soundEngineOnInt[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_start_int",0.89810717,1.0};
-		soundEngineOnExt[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_start_ext",2.5118864,1.0,600};
-		soundEngineOffInt[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_stop_int",0.89810717,1.0};
-		soundEngineOffExt[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_stop_ext",2.5118864,1.0,600};
+		soundDammage[] = {"Gunfighter\sounds\alarm_loop1",0.31622776,1};
+		soundGetIn[] = {"Gunfighter\Sounds\heli_door_01",0.31622776,1};
+		soundGetOut[] = {"Gunfighter\Sounds\heli_door_02",0.31622776,1,40};
+		soundEnviron[] = {"","db-30",1.0};
+		soundEngineOnInt[] = {"Gunfighter\sounds\UHint\int-start-final",0.4466836,1.0};
+		soundEngineOnExt[] = {"Gunfighter\sounds\UHext\ext-motor-start",0.4466836,1.0,700};
+		soundEngineOffInt[] = {"Gunfighter\sounds\UHint\int-stop-final",0.4466836,1.0};
+		soundEngineOffExt[] = {"Gunfighter\sounds\UHext\ext-motor-stop",0.4466836,1.0,700};
 		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",1.0,1};
 		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",1.0,1.5};
 		rotorDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_open_1",1.0,1.0};
@@ -1978,12 +2198,6 @@ class CfgNonAIVehicles
 		tailDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_tail",1.0,1.0};
 		tailDamageOut[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_tail",1.0,1.0,300};
 		tailDamage[] = {"tailDamageInt","tailDamageOut"};
-		landingSoundInt0[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_small_int1",1.0,1.0,100};
-		landingSoundInt1[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_small_int2",1.0,1.0,100};
-		landingSoundInt[] = {"landingSoundInt0",0.5,"landingSoundInt1",0.5};
-		landingSoundOut0[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_ext1",1.7782794,1.0,100};
-		landingSoundOut1[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_ext2",1.7782794,1.0,100};
-		landingSoundOut[] = {"landingSoundOut0",0.5,"landingSoundOut1",0.5};
 		slingCargoAttach0[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineDownEndINT",1.0,1.0};
 		slingCargoAttach1[] = {"A3\Sounds_F\vehicles\air\noises\SL_1hookLock",1.0,1.0,80};
 		slingCargoAttach[] = {"slingCargoAttach0","slingCargoAttach1"};
@@ -2000,34 +2214,34 @@ class CfgNonAIVehicles
 		{
 			class EngineExt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_engine_ext",1.9782794,1.0,800};
+				sound[] = {"Gunfighter\sounds\UHext\uh1y",2.5118864,1.0,800};
 				frequency = "rotorSpeed";
 				volume = "camPos*((rotorSpeed-0.72)*4)";
 			};
 			class RotorExt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_rotor_ext",1.4125376,1.0,1100};
+				sound[] = {"Gunfighter\sounds\UHint\int-rotor-single5b",1.4118864,1.0,1400};
 				frequency = "rotorSpeed * (1-rotorThrust/5)";
 				volume = "camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
 			};
 			class RotorNoiseExt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\rotor_swist",1.0,1,300};
-				frequency = 1;
-				volume = "camPos * (rotorThrust factor [0.7, 0.9])";
-				cone[] = {0.7,1.3,1.0,0};
+				sound[] = {"Gunfighter\sounds\UHint\int-rotor-single5a",2.5118864,1.0,1600};
+				frequency = "rotorSpeed";
+				volume = "camPos*10*(0 max (rotorThrust-0.9))";
+				cone[] = {1.6,3.14,2.0,0.5};
 			};
 			class EngineInt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_engine_int",1.0,1.0};
+				sound[] = {"Gunfighter\sounds\UHext\uh1y",1.0,1.0};
 				frequency = "rotorSpeed";
 				volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
 			};
 			class RotorInt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_rotor_int",1.7782794,1.0};
-				frequency = "rotorSpeed * (1-rotorThrust/5)";
-				volume = "(1-camPos)*(0 max (rotorSpeed*rotorSpeed-0.1))*(1 + rotorThrust)";
+				sound[] = {"Gunfighter\sounds\UHint\int-rotor-single5b",1.0,1.0};
+				frequency = "rotorSpeed * (1 - rotorThrust/5)";
+				volume = "2*(1-camPos)*((rotorSpeed factor[0.3, 1.1]) min (rotorSpeed factor[1.1, 0.3]))";
 			};
 			class TransmissionDamageExt_phase1
 			{
@@ -2167,37 +2381,37 @@ class CfgNonAIVehicles
 			class SoundEvents{};
 			class Sounds
 			{
-				class EngineExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_engine_ext",1.9782794,1.0,800};
-					frequency = "rotorSpeed";
-					volume = "camPos*((rotorSpeed-0.72)*4)";
-				};
-				class RotorExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_rotor_ext",1.4125376,1.0,1100};
-					frequency = "rotorSpeed * (1-rotorThrust/5)";
-					volume = "camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
-				};
-				class RotorNoiseExt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\rotor_swist",1.0,1,300};
-					frequency = 1;
-					volume = "camPos * (rotorThrust factor [0.7, 0.9])";
-					cone[] = {0.7,1.3,1.0,0};
-				};
-				class EngineInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_engine_int",1.0,1.0};
-					frequency = "rotorSpeed";
-					volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
-				};
-				class RotorInt
-				{
-					sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_rotor_int",1.7782794,1.0};
-					frequency = "rotorSpeed * (1-rotorThrust/5)";
-					volume = "(1-camPos)*(0 max (rotorSpeed*rotorSpeed-0.1))*(1 + rotorThrust)";
-				};
+			class EngineExt
+			{
+				sound[] = {"Gunfighter\sounds\UHext\uh1y",2.5118864,1.0,800};
+				frequency = "rotorSpeed";
+				volume = "camPos*((rotorSpeed-0.72)*4)";
+			};
+			class RotorExt
+			{
+				sound[] = {"Gunfighter\sounds\UHint\int-rotor-single5b",1.4118864,1.0,1400};
+				frequency = "rotorSpeed * (1-rotorThrust/5)";
+				volume = "camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
+			};
+			class RotorNoiseExt
+			{
+				sound[] = {"Gunfighter\sounds\UHint\int-rotor-single5a",2.5118864,1.0,1600};
+				frequency = "rotorSpeed";
+				volume = "camPos*10*(0 max (rotorThrust-0.9))";
+				cone[] = {1.6,3.14,2.0,0.5};
+			};
+			class EngineInt
+			{
+				sound[] = {"Gunfighter\sounds\UHint\int-fly-mode7",1.0,1.0};
+				frequency = "rotorSpeed";
+				volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
+			};
+			class RotorInt
+			{
+				sound[] = {"Gunfighter\sounds\UHint\int-rotor-single5b",1.0,1.0};
+				frequency = "rotorSpeed * (1 - rotorThrust/5)";
+				volume = "2*(1-camPos)*((rotorSpeed factor[0.3, 1.1]) min (rotorSpeed factor[1.1, 0.3]))";
+			};
 				class TransmissionDamageExt_phase1
 				{
 					sound[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",1.0,1.0,150};
@@ -2331,6 +2545,22 @@ class CfgNonAIVehicles
 					volume = "engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
 				};
 			};
-	};
 };
+};
+};
+class CfgNonAIVehicles
+{
+	class ProxyDriver;
+	class ProxyWeapon;
+
+	class ProxyAGM114Hellfire: ProxyWeapon
+	{
+		model = "\gunfighter\ah1z\AGM114Hellfire";
+		simulation = "maverickweapon";
+	};
+	class ProxyAIM9XSidewinder: ProxyWeapon
+	{
+		model = "\gunfighter\ah1z\AIM9XSidewinder"; 
+		simulation = "maverickweapon";
+	};
 };
