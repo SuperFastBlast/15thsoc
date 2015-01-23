@@ -60,6 +60,7 @@ class CfgMagazines
 	class Cha_2Rnd_Missile_AGM_02_F: 6Rnd_Missile_AGM_02_F
 	{
 		count = 2;
+		proxyShape = "\x\acex\addons\m_veh_air_wep\agm65_rack";
 	};
 };
 class CfgWeapons
@@ -92,6 +93,20 @@ class CfgWeapons
 	class missiles_DAR: rocketpods
 	{
 		class burst;
+	};
+	class master_arms_safe: RocketPods
+	{
+		CanLock = 0;
+		displayName = "MASTER ARM - SAFE";
+		displayNameMagazine = "MASTER ARM - SAFE";
+		shortNameMagazine = "MASTER ARM - SAFE";
+		nameSound = "";
+		cursor = "EmptyCursor";
+		cursorAim = "EmptyCursor";
+		magazines[] = {};
+		burst = 0;
+		reloadTime = 0.01;
+		magazineReloadTime = 0.1;
 	};
 	class Cha_FFAR_Smallpod: missiles_DAR
 	{
@@ -1114,7 +1129,7 @@ class CfgVehicles
 		armor = 60;
 		damageResistance = 0.01246;
 		cost = 20000000;
-		weapons[] = {"Cha_gatling_25mm","Cha_GBU12BombLauncher","Cha_Sidewinder_Lnc","Cha_Maverick_F","Cha_FFAR_Smallpod","CMFlareLauncher"};
+		weapons[] = {"master_arms_safe","Cha_gatling_25mm","Cha_GBU12BombLauncher","Cha_Sidewinder_Lnc","Cha_Maverick_F","Cha_FFAR_Smallpod","CMFlareLauncher"};
 		magazines[] = {"Cha_300Rnd_25mm_shells_T","Cha_4Rnd_GBU12_LGB","2Rnd_Missile_AA_04_F","Cha_2Rnd_Missile_AGM_02_F","Cha_14Rnd_Rockets","120Rnd_CMFlare_Chaff_Magazine"};
 		insideSoundCoef = 0.2;
 		fov = 0.5;
@@ -1236,7 +1251,7 @@ class CfgVehicles
 		accuracy = 1000;
 		author = "Chairborne";
 		threat[] = {1,0.7,1};
-		weapons[] = {"Cha_gatling_25mm","Cha_AMRAAM","Cha_Sidewinder_Lnc","CMFlareLauncher"};
+		weapons[] = {"master_arms_safe","Cha_gatling_25mm","Cha_AMRAAM","Cha_Sidewinder_Lnc","CMFlareLauncher"};
 		magazines[] = {"Cha_300Rnd_25mm_shells_T","4Rnd_GAA_missiles","2Rnd_Missile_AA_04_F","120Rnd_CMFlare_Chaff_Magazine"};
 		class Library
 		{
@@ -1250,7 +1265,7 @@ class CfgVehicles
 		accuracy = 1000;
 		author = "Chairborne";
 		threat[] = {1,0.7,1};
-		weapons[] = {"Cha_gatling_25mm","Cha_Maverick_F","Cha_Sidewinder_Lnc","CMFlareLauncher"};
+		weapons[] = {"master_arms_safe","Cha_gatling_25mm","Cha_Maverick_F","Cha_Sidewinder_Lnc","CMFlareLauncher"};
 		magazines[] = {"Cha_300Rnd_25mm_shells_T","2Rnd_Missile_AA_04_F","Cha_2Rnd_Missile_AGM_02_F","120Rnd_CMFlare_Chaff_Magazine"};
 		class Library
 		{
@@ -1274,4 +1289,13 @@ class CfgVehicles
 		class Eventhandlers{};
 	};
 };
-//};
+class CfgNonAIVehicles
+{
+	class ProxyDriver;
+	class ProxyWeapon;
+	class ProxyMissile_AT_01_F: ProxyWeapon
+	{
+		model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_02_F.p3d";
+		simulation = "maverickweapon";
+	};
+};
