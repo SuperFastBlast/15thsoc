@@ -23,9 +23,10 @@ class CfgAmmo
         	indirectHitRange = 0;
 		cost = 2;
 		typicalSpeed = 410;
-		visibleFire = 12;	// how much is visible when this weapon is fired
-		audibleFire = 5;
-		visibleFireTime = 2;
+		visibleFire=18;
+		visibleFireTime=18;
+		audibleFire=16;
+		audibleFireTime=10;
 		airFriction = -0.00715;
 		class CamShakeFire
 		{
@@ -44,12 +45,13 @@ class CfgAmmo
 	class B_MEU_12Gauge_Slug: BulletBase 
 	{
 		hit = 30;
-		visibleFire = 12;	// how much is visible when this weapon is fired
-		audibleFire = 5;
-		visibleFireTime = 2;
 		cartridge = "FxCartridge_slug";
 		caliber = 0.5;
 		typicalSpeed = 600;
+		visibleFire=18;
+		visibleFireTime=18;
+		audibleFire=16;
+		audibleFireTime=10;
 		airFriction = -0.00715;
 		class CamShakeFire
 		{
@@ -160,11 +162,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s1",1.6,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s2",1.6,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s3",1.6,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s4",1.6,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s1",1.3,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s2",1.3,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s3",1.3,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s4",1.3,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			dispersion = 0.005;
 			soundContinuous = 0;

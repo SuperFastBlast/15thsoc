@@ -21,10 +21,13 @@ class CfgAmmo
         cartridge = "FxCartridge_65_caseless";
         caliber = 2.6;
         deflecting = 45;
-        visibleFire = 7;
-        audibleFire = 5;
+	visibleFire=14;
+	visibleFireTime=14;
+	audibleFire=12;
+	audibleFireTime=10;
         cost = 100;
-        typicalSpeed = 280;
+        typicalSpeed = 251;
+	initSpeed = 251;
         airFriction = -0.0018;
    };
 };
@@ -38,7 +41,7 @@ class CfgMagazines
 		mass = 2;
 		ammo = "B_MEU_T2AAF_45ACP";
 		count = 7;
-		initSpeed = 280;
+		initSpeed = 251;
 		picture = "\CUP\Weapons\CUP_Weapons_Colt1911\data\ui\m_colt1911_ca.paa";
 		type = 16;
 		descriptionShort = "45 ACP rounds for M1911";
@@ -56,6 +59,7 @@ class CfgWeapons
 	class CUP_hgun_Colt1911: Pistol_Base_F
 	{
 		scope = 2;
+		initSpeed = 251;
 		model = "\CUP\Weapons\CUP_Weapons_Colt1911\CUP_Colt1911.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_Colt1911\data\ui\gear_colt1911_X_ca.paa";
 		magazines[] = {"MEU_T2AAF_45ACP"};

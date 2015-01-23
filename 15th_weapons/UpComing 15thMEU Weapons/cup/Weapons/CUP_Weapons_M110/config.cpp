@@ -16,15 +16,16 @@ class CfgAmmo
 	class B_MEU_M118LR_Ball: B_762x51_Ball
    	{
         hit=15;
+	initSpeed = 783;
         typicalSpeed=783;
         caliber=1.05;
         deflecting=20;
         deflectingChance = 100;
         deflectingRandomness = 0.5;
-        visibleFire=12;
-        visibleFireTime=12;
-        audibleFire=5;
-        audibleFireTime=5;
+	visibleFire=18;
+	visibleFireTime=18;
+	audibleFire=16;
+	audibleFireTime=10;
     };
 };
 class CfgMagazines
@@ -34,6 +35,7 @@ class CfgMagazines
     	{
        		ammo = "B_MEU_M118LR_Ball";
 	        scope = 2;
+		initSpeed = 783;
         	count = 20;
         	descriptionshort = "Caliber: 7.62x51 mm STANAG<br />Rounds: 20<br />Used in: M110";
         	displayname = "M118LR";
@@ -112,6 +114,7 @@ class CfgWeapons
 		tBody = 100;
 		scope = 2;
 		displayName = "M110";
+		initSpeed = 783;
 		selectionFireAnim = "muzzleFlash";
 		model = "CUP\Weapons\CUP_Weapons_M110\CUP_M110";
 		magazines[] = {"MEU_20x762_Mag"};
@@ -158,10 +161,10 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s1",1.77828,1,1400};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s2",1.77828,1,1400};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s3",1.77828,1,1400};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s4",1.77828,1,1400};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s1",1.3,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s2",1.3,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s3",1.3,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s4",1.3,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType

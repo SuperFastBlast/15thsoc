@@ -84,10 +84,10 @@ class CfgAmmo
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=12;
-		visibleFireTime=12;
-		audibleFire=5;
-		audibleFireTime=5;
+		visibleFire=15;
+		visibleFireTime=15;
+		audibleFire=16;
+		audibleFireTime=10;
 	};
 	class B_MEU_M8556: B_556x45_Ball_Tracer_Red
 	{
@@ -97,10 +97,10 @@ class CfgAmmo
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=12;
-		visibleFireTime=12;
-		audibleFire=5;
-		audibleFireTime=5;
+		visibleFire=18;
+		visibleFireTime=18;
+		audibleFire=16;
+		audibleFireTime=10;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
@@ -111,9 +111,13 @@ class CfgAmmo
         typicalSpeed = 868.68;
         airFriction = -0.0010867938;
         caliber = 0.855;
-        deflecting = 16;
-        visibleFire = 12;
-        audibleFire = 5;
+        deflecting=20;
+	deflectingChance = 100;
+	deflectingRandomness = 0.5;
+ 	visibleFire=15;
+	visibleFireTime=15;
+	audibleFire=16;
+	audibleFireTime=10;
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };
 	class G_M433_40mm_HEDP: G_40mm_HE
@@ -197,6 +201,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		ammo = "B_MEU_Mk262";
+		initSpeed = 868.68;
 		count = 30;
 		mass = 11.8;
 		lastroundstracer = 3;
@@ -284,9 +289,10 @@ class CfgWeapons
 		value = 8;
 		inertia = 0.5;
 		dexterity = 1.5;
+		initSpeed = 948;
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Reload",1,1,35};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Dry",1,1,35};
-		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.5,1};
+		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.3,1};
 		magazines[] = {"MEU_30Rnd_M855A1_556x45_Stanag","MEU_30Rnd_M855A1_556x45_T_Stanag"};
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
@@ -306,11 +312,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -342,11 +348,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -402,6 +408,7 @@ class CfgWeapons
 	class CUP_arifle_M16A4_Base: CUP_arifle_M16_Base
 	{
 		scope = 2;
+		initSpeed = 948;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M16A4.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M16A4_X_ca.paa";
 		inertia = 0.5;
@@ -430,6 +437,7 @@ class CfgWeapons
 	class CUP_arifle_M16A4_GL: CUP_arifle_M16_Base
 	{
 		scope = 2;
+		initSpeed = 948;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M16A4GL.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M16A4GL_X_ca.paa";
 		handAnim[] = {"OFP2_ManSkeleton","CUP\Weapons\CUP_Weapons_M16\data\anim\M16GL.rtm"};
@@ -460,8 +468,9 @@ class CfgWeapons
 	class CUP_arifle_M4_Base: CUP_arifle_M16A4_Base
 	{
 		scope = 0;
+		initSpeed = 880;
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\Reload",1,1,35};
-		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.5,1};
+		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.3,1};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Dry",1,1,35};
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
@@ -481,11 +490,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -517,11 +526,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -584,6 +593,7 @@ class CfgWeapons
 	class CUP_arifle_M4A1_BUIS_Base: CUP_arifle_M4_Base
 	{
 		scope = 0;
+		initSpeed = 880;
 		class WeaponSlotsInfo
 		{
 			class CowsSlot{};
@@ -604,6 +614,7 @@ class CfgWeapons
 	class CUP_arifle_M4CAR_BUIS_GL: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
+		initSpeed = 880;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4_black_GL.p3d";
 		displayName = "M4 Carbine M203";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M4GL_X_ca.paa";
@@ -629,11 +640,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -665,11 +676,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -699,6 +710,7 @@ class CfgWeapons
 	class CUP_arifle_M4CAR_black: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
+		initSpeed = 880;
 		displayName = "M4 Carbine";
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4A1_BUIS_black.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_m4blk_X_ca.paa";
@@ -717,11 +729,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -753,11 +765,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.2,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.2,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.2,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.2,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -787,6 +799,7 @@ class CfgWeapons
 	class CUP_arifle_M4A1_BUIS_GL: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
+		initSpeed = 880;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4_black_GL.p3d";
 		displayName = "M4A1 M203";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M4GL_X_ca.paa";
@@ -807,6 +820,7 @@ class CfgWeapons
 	class CUP_arifle_M4A1_black: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
+		initSpeed = 880;
 		displayName = "M4A1";
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4A1_BUIS_black.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_m4blk_X_ca.paa";
@@ -820,6 +834,7 @@ class CfgWeapons
 	class CUP_srifle_Mk12SPR: CUP_arifle_M4_Base
 	{
 		scope = 2;
+		initSpeed = 868.68;
 		displayName = "Mk 12 SPR";
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_Mk12.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_MK12_X_ca.paa";
@@ -846,10 +861,10 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s1",1.77828,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s2",1.77828,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s3",1.77828,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s4",1.77828,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s1",1.4,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s2",1.4,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s3",1.4,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s4",1.4,1,1000};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType

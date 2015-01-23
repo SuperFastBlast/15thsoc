@@ -18,7 +18,8 @@ class CfgAmmo
    	    hit = 9;
         cartridge = "FxCartridge_65_caseless";
         cost = 100;
-        typicalSpeed = 390;
+	initSpeed = 381;
+        typicalSpeed = 381;
         airFriction = -0.0014;
         caliber = 1.7;
         deflecting = 45;
@@ -43,7 +44,7 @@ class CfgMagazines
         displayName = "M882 9mm Mag";
         picture = "\CUP\Weapons\CUP_Weapons_M9\data\ui\m_m9_beretta_ca.paa";
         descriptionshort = "Caliber: 9x19 mm STANAG<br />Rounds: 15<br />Used in: Beretta M9";
-        initSpeed = 390;
+        initSpeed = 381;
     };
 };
 class Mode_SemiAuto;
@@ -115,6 +116,7 @@ class CfgWeapons
 		distanceZoomMax = 50;
 		selectionFireAnim = "muzzleFlash";
 		scope = 2;
+		initSpeed = 381;
 		model = "\CUP\Weapons\CUP_Weapons_M9\CUP_M9.p3d";
 		modelOptics = "-";
 		picture = "\CUP\Weapons\CUP_Weapons_M9\data\ui\gear_m9_X_ca.paa";

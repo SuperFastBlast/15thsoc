@@ -31,6 +31,7 @@ class CfgWeapons
 	class MEU_M40A5: srifle_EBR_F
 	{
 		scope = 2;
+		initSpeed = 868;
 		author = "Trixie";
 		displayname = "M40A5";
 		descriptionshort = "USMC M40A5 <br/>Caliber: 7.62x51mm";
@@ -161,15 +162,16 @@ class CfgAmmo
 	class M118LR_Ball_m40: B_762x51_Ball
    	{
         hit=17;
+	initSpeed = 868;
         typicalSpeed=868;
         caliber=1.5;
         deflecting=20;
         deflectingChance = 100;
         deflectingRandomness = 0.5;
-        visibleFire=3;
-        visibleFireTime=3;
-        audibleFire=7;
-        audibleFireTime=7;
+        visibleFire=15;
+        visibleFireTime=15;
+        audibleFire=16;
+        audibleFireTime=10;
     };
 };
 class CfgMagazines {
@@ -178,6 +180,7 @@ class CfgMagazines {
 	class MEU_5x762_Mag: 7Rnd_408_Mag {
 		scope = 2;
 		count = 5;
+		initSpeed = 868;
 		descriptionshort = "Caliber: 7.62x51mm<br />Rounds: 5<br />Used in: M40A3";
 		displayname = "M118LR";
 		ammo = "M118LR_Ball_m40";

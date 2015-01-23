@@ -31,10 +31,7 @@ class CfgWeapons
 	{
 		changeFiremodeSound[]=
 		{
-			"A3\sounds_f\weapons\closure\firemode_changer_2",
-			0.5,
-			1
-		};
+			"A3\sounds_f\weapons\closure\firemode_changer_2",0.3,1};
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
@@ -46,6 +43,7 @@ class CfgWeapons
 		discretedistanceinitindex=1;
 		dispersion=9.9999997e-005;
 		dexterity=1.8;
+		initSpeed = 880;
 		displayname="M27 IAR";
 		distancezoommax=300;
 		distancezoommin=300;
@@ -230,6 +228,7 @@ class CfgWeapons
 	class ej_IAR30: ej_IARal_base
 	{
 		scope=2;
+		initSpeed = 880;
 		displayname="M27 IAR";
 		reloadAction="GestureReloadSMG_02";
 		dexterity=1.8;

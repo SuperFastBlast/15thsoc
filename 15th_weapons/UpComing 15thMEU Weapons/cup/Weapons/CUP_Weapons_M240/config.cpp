@@ -17,6 +17,7 @@ class CfgAmmo
 	 class B_MEU_M80: B_762x51_Ball
 	{
 		hit=12; // millimeters of armor penned
+		initSpeed = 853;
 		typicalSpeed=853; // muzzle velocity
 		caliber=1.05; // penetration value 1 is 7.62
 		airFriction = -0.00125;
@@ -26,12 +27,13 @@ class CfgAmmo
 		deflectingRandomness = 0.5; // How shot reacts to surface bump
 		visibleFire=20; // how well AI can see rounds
 		visibleFireTime=20; //how long can see
-		audibleFire=5; // how much can AI hear 
-		audibleFireTime=5; //how long can hear
+		audibleFire=16; // how much can AI hear 
+		audibleFireTime=15; //how long can hear
 	};
 	class B_MEU_M62: B_762x51_Tracer_Red 
 	{
 		hit=12;
+		initSpeed = 853;
 		typicalSpeed=853;
 		caliber=1.05;
 		airFriction = -0.00125;
@@ -40,8 +42,8 @@ class CfgAmmo
 		deflectingRandomness = 0.5;
 		visibleFire=20;
 		visibleFireTime=20;
-		audibleFire=5;
-		audibleFireTime=5;
+		audibleFire=16;
+		audibleFireTime=15;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
@@ -107,6 +109,7 @@ class CfgWeapons
 		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0.25118864,1,15};
 		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
 		scope = 2;
+		initSpeed = 853;
 		selectionFireAnim = "muzzleFlash";
 		model = "\CUP\Weapons\CUP_Weapons_M240\CUP_M240.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M240\data\ui\gear_M240_X_ca.paa";
@@ -152,11 +155,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s1",1.5,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s2",1.5,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s3",1.5,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s4",1.5,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s1",1.3,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s2",1.3,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s3",1.3,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s4",1.3,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{

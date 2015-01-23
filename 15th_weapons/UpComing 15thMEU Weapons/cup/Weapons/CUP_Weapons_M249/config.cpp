@@ -17,31 +17,33 @@ class CfgAmmo
 	class B_MEU_M855a1_SAW: B_556x45_Ball 
 	{
 		hit=8.4;
-		typicalSpeed=960;
+		initSpeed = 915;
+		typicalSpeed=915;
 		caliber = 0.855;
 		airFriction = -0.0011336614;
 		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=15;
-		audibleFire=5;
-		audibleFireTime=5;
+		visibleFire=18;
+		visibleFireTime=18;
+		audibleFire=16;
+		audibleFireTime=10;
 	};
 	class B_MEU_M8556_SAW: B_556x45_Ball_Tracer_Red 
 	{
 		hit=8.4;
-		typicalSpeed=960;
+		initSpeed = 915;
+		typicalSpeed=915;
 		caliber = 0.855;
 		airFriction = -0.0011336614;
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
-		visibleFire=15;
-		visibleFireTime=15;
-		audibleFire=5;
-		audibleFireTime=5;
+		visibleFire=18;
+		visibleFireTime=18;
+		audibleFire=16;
+		audibleFireTime=10;
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
@@ -60,7 +62,7 @@ class CfgMagazines
         	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200<br />Used in: M249";
         	displayname = "M855A1 Linked";
 		picture = "\CUP\Weapons\CUP_Weapons_M249\data\ui\m_200LMG_ca.paa";
-        	initspeed = 960;
+        	initSpeed = 915;
         	lastroundstracer = 5;
 		tracersevery = 5;
 	};
@@ -73,7 +75,7 @@ class CfgMagazines
         	descriptionshort = "Caliber: 5.56x45 mm STANAG<br />Rounds: 200 Tracer<br />Used in: M249";
        	 	displayname = "M856 Linked";
 		picture = "\CUP\Weapons\CUP_Weapons_M249\data\ui\m_200LMG_red_ca.paa";
-       		 initspeed = 960;
+       		initSpeed = 915;
        	 	lastroundstracer = 4;
 		tracersevery = 1;
 	};
@@ -128,6 +130,7 @@ class CfgWeapons
 		descriptionShort = "M249 Para";
 		cursor = "mg";
 		cursorAim = "EmptyCursor";
+		initSpeed = 915;
 		inertia = 0.7;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -154,11 +157,11 @@ class CfgWeapons
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s1",1.4,1,1200};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s2",1.4,1,1200};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s3",1.4,1,1200};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s4",1.4,1,1200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s1",1.2,1,1000};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s2",1.2,1,1000};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s3",1.2,1,1000};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s4",1.2,1,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -240,5 +243,6 @@ class CfgWeapons
 		model = "\CUP\Weapons\CUP_Weapons_M249\CUP_M249_iron.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M249\data\ui\gear_m249_X_ca.paa";
 		displayName = "M249";
+		initSpeed = 915;
 	};
 };

@@ -18,9 +18,13 @@ class CfgAmmo
 		hit = 150;
 		indirecthit = 20;
 	        indirecthitrange = 0.2;
+		initSpeed = 853;
+		typicalSpeed = 853;
 		caliber = 50;
-        	visibleFire = 15;
-        	audibleFire = 9;
+		visibleFire=20;
+		visibleFireTime=20;
+		audibleFire=20;
+		audibleFireTime=15;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 	};
 };
@@ -30,6 +34,7 @@ class CfgMagazines
 	class MEU_10x127_HEIAP_Mag: 5Rnd_127x108_APDS_Mag {
 		scope = 2;
 		count = 10;
+		initSpeed = 853;
 		descriptionshort = "Caliber: 12.7x99mm HEIAP<br />Rounds: 10<br />Used in: Barret M107";
 		displayname = "Raufoss Mk 211";
 		ammo = "B_MEU_Mk211";
@@ -65,6 +70,7 @@ class CfgWeapons
 		tBody = 100;
 		scope = 2;
 		maxZeroing = 2000;
+		initSpeed = 853;
 		cursor = "srifle";
 		model = "CUP\Weapons\CUP_Weapons_M107\CUP_M107.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M107\data\UI\gear_M107_x_ca.paa";
