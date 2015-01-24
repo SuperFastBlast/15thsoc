@@ -47,11 +47,11 @@ class CfgPatches
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Air_F","A3_Weapons_F"};
 		magazines[] = {};
-		ammo[] = {"MEU_B_25mm"};
 	};
 };
 class CfgAmmo
 {
+	class MissileBase;
 	class B_25mm;
 	class MEU_B_25mm: B_25mm
 	{
@@ -75,6 +75,33 @@ class CfgAmmo
 		audibleFire = 32;
 		visibleFireTime = 4;
 	};
+
+	class MEU_Sidewinder_AA: MissileBase
+	{
+		model = "MEUAV8B\sidewinder_fly";
+		proxyShape = "MEUAV8B\sidewinder_proxy";
+		hit = 300;
+		indirectHit = 85;
+		indirectHitRange = 10;
+		maneuvrability = 27;
+		simulationStep = 0.002;
+		airLock = 1;
+		irLock = 1;
+		cost = 15000;
+		maxSpeed = 828;
+		timeToLive = 35;
+		sideAirFriction = 0.2;
+		trackOversteer = 1.0;
+		trackLead = 1;
+		initTime = 0.0;
+		thrustTime = 5.0;
+		thrust = 2900;
+		fuseDistance = 500;
+		CraterEffects = "AAMissileCrater";
+		explosionEffects = "AAMissileExplosion";
+		effectsMissile = "missile3";
+		whistleDist = 20;
+	};
 };
 class CfgMagazines
 {
@@ -95,6 +122,19 @@ class CfgMagazines
 	class MEU_2Rnd_Missile_AGM_02_F: 6Rnd_Missile_AGM_02_F
 	{
 		count = 2;
+	};
+	class VehicleMagazine;
+	class 2Rnd_Sidewinder_AV8B: VehicleMagazine
+	{
+		scope = 2;
+		displayName = "SIDEWINDER";
+		ammo = "M_Sidewinder_AA";
+		count = 2;
+		initSpeed = 0;
+		maxLeadSpeed = 500;
+		sound[] = {"A3\Sounds_F\weapons\Rockets\missile_1",1.1220185,1.3,1100};
+		reloadSound[] = {"A3\sounds_f\dummysound",0.000316228,1,20};
+		nameSound = "missiles";
 	};
 };
 class CfgWeapons
@@ -152,9 +192,32 @@ class CfgWeapons
 		};
 	};
 	class Missile_AA_04_Plane_CAS_01_F;
-	class MEU_Sidewinder_Lnc: Missile_AA_04_Plane_CAS_01_F
+	class MissileLauncher;
+	class SidewinderLaucher_AV8B: MissileLauncher
 	{
-		displayname = "AIM-9 Sidewinder";
+		displayName = "AIM-9 SIDEWINDER";
+		minRange = 300;
+		minRangeProbab = 0.025;
+		midRange = 2500;
+		midRangeProbab = 0.09;
+		maxRange = 9000;
+		maxRangeProbab = 0.01;
+		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.316228,1};
+		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.316228,2.5};
+		reloadTime = 0.1;
+		magazineReloadTime = 30;
+		magazines[] = {"2Rnd_Sidewinder_AV8B"};
+		cursor = "missile";
+		cursorSize = 1;
+		sounds[] = {StandardSound};
+			class StandardSound
+			{
+			weaponSoundEffect  = "DefaultRifle";
+			begin1[]={"A3\Sounds_F\weapons\Rockets\missile_2",1.1220185,1.3,1000};
+			soundBegin[] = {Begin1,0.33};
+
+
+			};
 	};
 	class missiles_Zephyr;
 	class MEU_AMRAAM: missiles_Zephyr
@@ -1163,8 +1226,8 @@ class CfgVehicles
 		armor = 60;
 		damageResistance = 0.01246;
 		cost = 20000000;
-		weapons[] = {"master_arms_safe","MEU_gatling_25mm","MEU_GBU12BombLauncher","MEU_Sidewinder_Lnc","MEU_Maverick_F","MEU_FFAR_Smallpod","CMFlareLauncher"};
-		magazines[] = {"MEU_300Rnd_25mm_shells_T","2Rnd_GBU12_LGB;","2Rnd_Missile_AA_04_F","MEU_2Rnd_Missile_AGM_02_F","MEU_14Rnd_Rockets","120Rnd_CMFlare_Chaff_Magazine"};
+		weapons[] = {"master_arms_safe","MEU_gatling_25mm","MEU_GBU12BombLauncher","SidewinderLaucher_AV8B","MEU_Maverick_F","MEU_FFAR_Smallpod","CMFlareLauncher"};
+		magazines[] = {"MEU_300Rnd_25mm_shells_T","2Rnd_GBU12_LGB;","2Rnd_Sidewinder_AV8B","MEU_2Rnd_Missile_AGM_02_F","MEU_14Rnd_Rockets","240Rnd_CMFlare_Chaff_Magazine"};
 		insideSoundCoef = 0.2;
 		fov = 0.5;
 		gunAimDown = 0.07;
