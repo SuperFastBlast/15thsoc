@@ -145,11 +145,12 @@ class CfgVehicles
 		damperSize = 0.2;
 		damperForce = 1;
 		damperDamping = 1;
-		armor = 1200;
-		armorStructural = 4.5;
+		brakeDistance = 17;
+		armor = 1000;
+		armorStructural = 4.0;
 		damageResistance = 0.5;
 		crewExplosionProtection = 0.9999;
-		turnCoef = 2.0;
+		turnCoef = 2.3;
 		steerAheadPlan = 0.6;
 		steerAheadSimul = 0.4;
 		predictTurnPlan = 0.9;
