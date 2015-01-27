@@ -229,9 +229,9 @@ class CfgVehicles
 		soundGetIn[] = {"Gunfighter\Sounds\heli_door_01",0.31622776,1};
 		soundGetOut[] = {"Gunfighter\Sounds\heli_door_02",0.31622776,1,50};
 		soundEnviron[] = {"","db-30",1.0};
-		soundEngineOnInt[] = {"Gunfighter\sounds\AHint\AH_1Z_Start_in.wss", 0.0316228, 1.000000};
+		soundEngineOnInt[] = {"Gunfighter\sounds\AHint\AH_1Z_Start_in.wss", 0.8316228, 1.000000};
 		soundEngineOnExt[] = {"Gunfighter\sounds\AHext\AH_1Z_Start_out.wss", 1.77828, 1.000000, 700};
-		soundEngineOffInt[] = {"Gunfighter\sounds\AHint\AH_1Z_Stop_in.wss", 0.0316228, 1.0000000};
+		soundEngineOffInt[] = {"Gunfighter\sounds\AHint\AH_1Z_Stop_in.wss", 0.8316228, 1.0000000};
 		soundEngineOffExt[] = {"Gunfighter\sounds\AHext\AH_1Z_Stop_out.wss", 1.77828, 1.0000000, 700};
 		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_1",1.0,1};
 		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_2",1.0,1};
@@ -1189,7 +1189,7 @@ class CfgVehicles
 		armorStructural = 1;
 		damageResistance = 0.004;
 		weapons[]={"master_arms_safe","FFARLauncher_14","CMFlareLauncher"};
-		magazines[]={"14Rnd_FFAR","168Rnd_CMFlare_Chaff_Magazine"};
+		magazines[]={"14Rnd_FFAR","240Rnd_CMFlare_Chaff_Magazine"};
 		
 		memoryPointLRocket = "Rocket_1";
 		memoryPointRRocket = "Rocket_2";
@@ -1209,8 +1209,8 @@ class CfgVehicles
 		LockDetectionSystem = "2 + 8 + 4";
 		incomingMissileDetectionSystem = 16;
 		precisegetinout = 1;
-		memoryPointsGetInCargo[] = {"pos codriver","pos cargo"};
-		memoryPointsGetInCargoDir[] = {"pos codriver dir","pos cargo dir"};
+		memoryPointsGetInCargo[] = {"pos cargo"};
+		memoryPointsGetInCargoDir[] = {"pos cargo dir"};
 		cargoGetInAction[] = {"GetInHelicopterCargo"};
 		cargoGetOutAction[] = {"GetOutHelicopterCargo"};
 		driverAction="UH1Y_Pilot";
@@ -1348,7 +1348,7 @@ class CfgVehicles
 				gunBeg="gun_end"; //gunBeg=endpoint of the gun
 				gunEnd="gun_begin"; //gunEnd=chamber of the gun
 				memoryPointGun="gun_end";
-				commanding= 3;
+				commanding= -3;
 				laser = 1;
 				memoryPointGunnerOptics = "commanderview";
 				gunnerCompartments = "Compartment2";
@@ -1445,37 +1445,51 @@ class CfgVehicles
 	isPersonTurret = 1; /// enables firing from vehicle functionality
 	ejectDeadGunner = 0; /// seatbelts included
 	};
-		class CargoTurret_02: CargoTurret /// position for Firing from Vehicles
+		class CargoTurret_07: CargoTurret /// position for Firing from Vehicles
 		{
-	gunnerAction = "passenger_bench_1"; /// generic animation for sitting inside with rifle ready
+	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
         gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
-	memoryPointsGetInGunner = "pos Cargo1";
-	memoryPointsGetInGunnerDir = "pos Cargo dir1";
-	gunnerName = "Passenger (???)";	/// name of the position in the Action menu
+	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
+	gunnerName = "Passenger (BenchLeft)";	/// name of the position in the Action menu
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
-	proxyIndex = 2;	/// what cargo proxy is used according to index in the model
+	proxyIndex = 8;	/// what cargo proxy is used according to index in the model
 	maxElev = 10; /// what is the highest possible elevation of the turret
 	minElev = -65; /// what is the lowest possible elevation of the turret
-	maxTurn = 105; /// what is the left-most possible turn of the turret
-	minTurn = 50; /// what is the right-most possible turn of the turret
+	maxTurn = 120; /// what is the left-most possible turn of the turret
+	minTurn = 60; /// what is the right-most possible turn of the turret
+	isPersonTurret = 1; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+	};
+		class CargoTurret_02: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
+	gunnerName = "Passenger (RL)";	/// name of the position in the Action menu
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 7;	/// what cargo proxy is used according to index in the model
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = 38; /// what is the left-most possible turn of the turret
+	minTurn = -40; /// what is the right-most possible turn of the turret
 	isPersonTurret = 1; /// enables firing from vehicle functionality
 	ejectDeadGunner = 0; /// seatbelts included
 	};
 		class CargoTurret_03: CargoTurret /// position for Firing from Vehicles
 		{
-	gunnerAction = "passenger_bench_1"; /// generic animation for sitting inside with rifle ready
+	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
         gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
-	memoryPointsGetInGunner = "pos CargoL";
-	memoryPointsGetInGunnerDir = "pos Cargo dirL";
-	gunnerName = "Passenger (??)";	/// name of the position in the Action menu
+	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
+	gunnerName = "Passenger (RR)";	/// name of the position in the Action menu
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
-	proxyIndex = 3;	/// what cargo proxy is used according to index in the model
+	proxyIndex = 6;	/// what cargo proxy is used according to index in the model
 	maxElev = 10; /// what is the highest possible elevation of the turret
 	minElev = -65; /// what is the lowest possible elevation of the turret
-	maxTurn = 105; /// what is the left-most possible turn of the turret
-	minTurn = 50; /// what is the right-most possible turn of the turret
+	maxTurn = 45; /// what is the left-most possible turn of the turret
+	minTurn = -30; /// what is the right-most possible turn of the turret
 	isPersonTurret = 1; /// enables firing from vehicle functionality
 	ejectDeadGunner = 0; /// seatbelts included
 	};
@@ -1500,30 +1514,14 @@ class CfgVehicles
 	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
         gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
 	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
-	gunnerName = "Passenger (RR)";	/// name of the position in the Action menu
+	gunnerName = "Passenger (Right)";	/// name of the position in the Action menu
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
-	proxyIndex = 6;	/// what cargo proxy is used according to index in the model
+	proxyIndex = 9;	/// what cargo proxy is used according to index in the model
 	maxElev = 10; /// what is the highest possible elevation of the turret
 	minElev = -65; /// what is the lowest possible elevation of the turret
-	maxTurn = 45; /// what is the left-most possible turn of the turret
-	minTurn = -30; /// what is the right-most possible turn of the turret
-	ejectDeadGunner = 0; /// seatbelts included
-	};
-		class CargoTurret_07: CargoTurret /// position for Firing from Vehicles
-		{
-	gunnerAction = "passenger_inside_2"; /// generic animation for sitting inside with rifle ready
-        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
-	memoryPointsGetInGunnerDir = "pos cargo dir"; /// direction of get in action
-	gunnerName = "Passenger (RL)";	/// name of the position in the Action menu
-	memoryPointGunnerOptics = "Eye";
-	gunnerCanEject = 1;
-	proxyIndex = 7;	/// what cargo proxy is used according to index in the model
-	maxElev = 10; /// what is the highest possible elevation of the turret
-	minElev = -65; /// what is the lowest possible elevation of the turret
-	maxTurn = 38; /// what is the left-most possible turn of the turret
-	minTurn = -40; /// what is the right-most possible turn of the turret
-	isPersonTurret = 1; /// enables firing from vehicle functionality
+	maxTurn = 88; /// what is the left-most possible turn of the turret
+	minTurn = 20; /// what is the right-most possible turn of the turret
 	ejectDeadGunner = 0; /// seatbelts included
 	};
 };
@@ -2186,10 +2184,10 @@ class CfgVehicles
 		soundGetIn[] = {"Gunfighter\Sounds\heli_door_01",0.31622776,1};
 		soundGetOut[] = {"Gunfighter\Sounds\heli_door_02",0.31622776,1,40};
 		soundEnviron[] = {"","db-30",1.0};
-		soundEngineOnInt[] = {"Gunfighter\sounds\UHint\int-start-final",0.4466836,1.0};
-		soundEngineOnExt[] = {"Gunfighter\sounds\UHext\ext-motor-start",0.4466836,1.0,700};
-		soundEngineOffInt[] = {"Gunfighter\sounds\UHint\int-stop-final",0.4466836,1.0};
-		soundEngineOffExt[] = {"Gunfighter\sounds\UHext\ext-motor-stop",0.4466836,1.0,700};
+		soundEngineOnInt[] = {"Gunfighter\sounds\UHint\int-start-final",0.8466836,1.0};
+		soundEngineOnExt[] = {"Gunfighter\sounds\UHext\ext-motor-start",1.7466836,1.0,700};
+		soundEngineOffInt[] = {"Gunfighter\sounds\UHint\int-stop-final",0.8466836,1.0};
+		soundEngineOffExt[] = {"Gunfighter\sounds\UHext\ext-motor-stop",1.7466836,1.0,700};
 		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",1.0,1};
 		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",1.0,1.5};
 		rotorDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_open_1",1.0,1.0};
@@ -2402,7 +2400,7 @@ class CfgVehicles
 			};
 			class EngineInt
 			{
-				sound[] = {"Gunfighter\sounds\UHint\int-fly-mode7",1.0,1.0};
+				sound[] = {"Gunfighter\sounds\UHext\uh1y",1.0,1.0};
 				frequency = "rotorSpeed";
 				volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
 			};

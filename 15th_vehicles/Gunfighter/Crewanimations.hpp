@@ -4,14 +4,6 @@ class CfgMovesBasic
 	class DefaultDie;
 	class ManActions
 	{
-		AH64_gunner_EP1="AH64_gunner_EP1";
-		AH64_pilot_EP1="AH64_pilot_EP1";
-		UH1H_Cargo_EP1="UH1H_Cargo_EP1";
-		UH1H_Pilot_EP1="UH1H_Pilot_EP1";
-		UH60M_Gunner_EP1="UH60M_Gunner_EP1";
-		UH60M_Pilot_EP1="UH60M_Pilot_EP1";
-		UH60M_Cargo_EP1="UH60M_Cargo_EP1";
-		UH60_Cargo02 = "UH60_Cargo02";
 		AH1Z_Pilot = "AH1Z_Pilot";
 		AH1Z_Gunner = "AH1Z_Gunner";
 		UH1Y_Pilot = "UH1Y_Pilot";
@@ -71,7 +63,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			actions = DeadActions;
 			file="\gunfighter\UH1Y\Anims\KIA_UH1Y_Pilot.rtm";
 			speed = 0.5;
-			looped=false;
+			looped=0;
 			terminal = 1;
 			soundEnabled=0;
 			connectTo[] = {"Unconscious",0.1};
@@ -86,7 +78,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			actions = DeadActions;
 			file="\gunfighter\UH1Y\Anims\KIA_UH1Y_Gunner01.rtm";
 			speed = 0.5;
-			looped=false;
+			looped=0;
 			terminal = 1;
 			soundEnabled=0;
 			connectTo[] = {"Unconscious",0.1};
@@ -101,7 +93,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			actions = DeadActions;
 			file="\gunfighter\UH1Y\Anims\KIA_UH1Y_Pilot.rtm";
 			speed = 0.5;
-			looped=false;
+			looped=0;
 			terminal = 1;
 			soundEnabled=0;
 			connectTo[] = {"Unconscious",0.1};
@@ -116,7 +108,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			actions = DeadActions;
 			file="\gunfighter\UH1Y\Anims\KIA_cargo_01.rtm";
 			speed = 0.5;
-			looped=false;
+			looped=0;
 			terminal = 1;
 			soundEnabled=0;
 			connectTo[] = {"Unconscious",0.1};
