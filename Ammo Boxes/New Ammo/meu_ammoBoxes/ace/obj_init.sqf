@@ -6,7 +6,7 @@ if (isServer) then
 	_crate addBackpackCargoGlobal ["tf_rt1523g", 5];
 	_crate addBackpackCargoGlobal ["MEF_Wood_Assault", 5];   
 	_crate addBackpackCargoGlobal ["MEF_Wood_Kitbag", 5];    
-	_crate addBackpackCargoGlobal ["B_Parachute", 15];
+	_crate addBackpackCargoGlobal ["B_Parachute", 5];
 };
 _crate addAction ["<t color=""#01019E"">" + ("15th Loadout Manager") + "</t>","\15th_main\lomgr\gui_start.sqf"]; 
 _crate addAction ["<t color=""#DB3503"">" + ("ACE Fixed Pilot") + "</t>","\meu_ammoBoxes\ace\A_Fixed_Pilot.sqf"];

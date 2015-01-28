@@ -1,71 +1,4 @@
-class Extended_Init_EventHandlers
-{
-	class Box_meu_spectre
-	{
-		Box_meu_spectre_init = "[_this select 0] execVM '\meu_ammoBoxes\recon\obj_init.sqf';";
-	};
-	class Box_meu_inf
-	{
-		Box_meu_inf_init = "[_this select 0] execVM '\meu_ammoBoxes\inf\obj_init.sqf';";
-	};
-	class Box_meu_wep
-	{
-		Box_meu_wep_init = "[_this select 0] execVM '\meu_ammoBoxes\wep\obj_init.sqf';";
-	};
-	class Box_meu_bas
-	{
-		Box_meu_bas_init = "[_this select 0] execVM '\meu_ammoBoxes\bas\obj_init.sqf';";
-	};
-	class Box_meu_ace
-	{
-		Box_meu_ace_init = "[_this select 0] execVM '\meu_ammoBoxes\ace\obj_init.sqf';";
-	};
-	class Box_meu_titan
-	{
-		Box_meu_titan_init = "[_this select 0] execVM '\meu_ammoBoxes\titan\obj_init.sqf';";
-	};
-	class Box_meu_gator
-	{
-		Box_meu_gator_init = "[_this select 0] execVM '\meu_ammoBoxes\gator\obj_init.sqf';";
-	};
-	class Box_meu_arty
-	{
-		Box_meu_arty_init = "[_this select 0] execVM '\meu_ammoBoxes\arty\obj_init.sqf';";
-	};
-	class Box_meu_hq
-	{
-		Box_meu_hq_init = "[_this select 0] execVM '\meu_ammoBoxes\inf\obj_init.sqf';";
-	};
-	class Box_meu_suply
-	{
-		Box_meu_suply_init = "[_this select 0] execVM '\meu_ammoBoxes\resuply\obj_init.sqf';";
-	};
-	class Box_meu_lar
-	{
-		Box_meu_lar_init = "[_this select 0] execVM '\meu_ammoBoxes\lar\obj_init.sqf';";
-	};
-	class Box_meu_lce
-	{
-		Box_meu_lce_init = "[_this select 0] execVM '\meu_ammoBoxes\lce\obj_init.sqf';";
-	};
-	class Box_meu_boats
-	{
-		Box_meu_boats_init = "[_this select 0] execVM '\meu_ammoBoxes\Boats\obj_init.sqf';";
-	};
-};
-class CfgFunctions
-{
-	class meu
-	{
-		class vehicle
-		{
-			class vehicleLoadout
-			{
-				file = "\meu_ammoBoxes\vehicle\functions\fn_vehicleLoadout.sqf";
-			};
-		};
-};
-};
+
 class CfgPatches
 {
 	class meu_ammoBoxes
@@ -73,7 +6,7 @@ class CfgPatches
 		units[] = {"Box_meu_ace","Box_meu_arty","Box_meu_bas","Box_meu_lce","Box_meu_gator","Box_meu_hq","Box_meu_inf","Box_meu_spectre","Box_meu_suply","Box_meu_titan","Box_meu_wep","Box_meu_vehicle","Box_meu_lar","Box_meu_empty","Box_meu_boats"};
 		weapons[] = {};
 		requiredVersion = 1.0;
-		requiredAddons[] = {"CBA_MAIN","A3_Weapons_F"};
+		requiredAddons[] = {"CBA_MAIN_A3","A3_Weapons_F"};
 	};
 };
 class CfgVehicles
@@ -959,6 +892,10 @@ class CfgVehicles
 				count = 15;
 				name = "optic_Arco";
 			};
+			class _xx_optic_mrco {
+				count = 15;
+				name = "optic_mrco";
+			};
 			class _xx_CUP_optic_LeupoldMk4 {
 				count = 25;
 				name = "CUP_optic_LeupoldMk4";
@@ -993,27 +930,27 @@ class CfgVehicles
 			};
 // GOGGLES
 			class _xx_NVGoggles_OPFOR {
-				count = 100;
+				count = 50;
 				name = "NVGoggles_OPFOR";
 			};
 			class _xx_AV_ESS_blk_clr {
-				count = 100;
+				count = 50;
 				name = "AV_ESS_blk_clr";
 			};
 			class _xx_AV_ESS_tan {
-				count = 100;
+				count = 50;
 				name = "AV_ESS_tan";
 			};
 			class _xx_AV_ESS_tan_clr {
-				count = 100;
+				count = 50;
 				name = "AV_ESS_tan_clr";
 			};
 			class _xx_AV_ESS_grn {
-				count = 100;
+				count = 50;
 				name = "AV_ESS_grn";
 			};
 			class _xx_AV_ESS_grn_clr {
-				count = 100;
+				count = 50;
 				name = "AV_ESS_grn_clr";
 			};				
 
@@ -1485,10 +1422,6 @@ class CfgVehicles
 				count = 20;
 				name = "Rangefinder";
 			};
-			class _xx_meu_MX2A_olive {
-				count = 5;
-				name = "meu_MX2A_olive";
-			};
 			class _xx_B_UavTerminal {
 				count = 4;
 				name = "B_UavTerminal";
@@ -1544,6 +1477,10 @@ class CfgVehicles
 			class _xx_AGM_DefusalKit {
 				count = 15;
 				name = "AGM_DefusalKit";
+			};
+			class _xx_meu_MX2A_tan {
+				count = 20;
+				name = "meu_MX2A_tan";
 			};
 			class _xx_AGM_Vector {
 				count = 20;
@@ -1699,6 +1636,10 @@ class CfgVehicles
 			class _xx_Chemlight_blue {
 				count = 50;
 				magazine = "Chemlight_blue";
+			};
+			class _xx_AGM_HandFlare_Green {
+				count = 50;
+				magazine = "AGM_HandFlare_Green";
 			};
 
 
@@ -2851,88 +2792,176 @@ class CfgVehicles
 		transportMaxBackpacks = 9999;
 		transportMaxitems = 9999;
 		SLX_XEH_DISABLED = 0;
-		class TransportItems {
-		
+		        class TransportItems {
+         
 // MEDICAL
-		    class _xx_AGM_Bandage  {
-			     count = 25; 
-				 name = "AGM_Bandage";
-			};
-		    class _xx_AGM_Epipen  {
-			     count = 25; 
-				 name = "AGM_Epipen";
-			};
-		};
-	
-	
-		class TransportMagazines {
+            class _xx_AGM_Bandage  {
+                 count = 500;
+                 name = "AGM_Bandage";
+            };
+            class _xx_AGM_Epipen  {
+                 count = 75;
+                 name = "AGM_Epipen";
+            };
+            class _xx_AGM_Morphine  {
+                 count = 100;
+                 name = "AGM_Morphine";
+            };
+            class _xx_AGM_Bloodbag  {
+                 count = 50;
+                 name = "AGM_Bloodbag";
+            };
+            class _xx_AGM_CableTie  {
+                 count = 10;
+                 name = "AGM_CableTie";
+            };
+            class _xx_AGM_EarBuds  {
+                 count = 10;
+                 name = "AGM_EarBuds";
+            };
+            class _xx_tf_anprc152  {
+                 count = 10;
+                 name = "tf_anprc152";
+            };
+            class _xx_AGM_Vector  {
+                 count = 4;
+                 name = "AGM_Vector";
+            };
+        };
+     
+     
+        class TransportMagazines {
 // EQUIPMENT
-			class _xx_Chemlight_red {
-				count = 3;
-				magazine = "Chemlight_red";
-			};
-			class _xx_Chemlight_blue {
-				count = 3;
-				magazine = "Chemlight_blue";
-			};
-			class _xx_Chemlight_ {
-				count = 3;
-				magazine = "Chemlight_green";
-			};
-		
+            class _xx_Chemlight_red {
+                count = 20;
+                magazine = "Chemlight_red";
+            };
+            class _xx_Chemlight_blue {
+                count = 20;
+                magazine = "Chemlight_blue";
+            };
+            class _xx_Chemlight_ {
+                count = 20;
+                magazine = "Chemlight_green";
+            };
+         
 // AMMO
-
-			class _xx_MEU_30Rnd_M855A1_556x45_Stanag {
-				count = 50;
-				magazine = "MEU_30Rnd_M855A1_556x45_Stanag";
-			};
-			class _xx_MEU_200Rnd_M249_556x45_Stanag {
-				count = 6;
-				magazine = "MEU_200Rnd_M249_556x45_Stanag";
-			};
-			
+ 
+            class _xx_MEU_30Rnd_M855A1_556x45_Stanag {
+                count = 100;
+                magazine = "MEU_30Rnd_M855A1_556x45_Stanag";
+            };
+            class _xx_MEU_30Rnd_M855A1_556x45_T_Stanag {
+                count = 100;
+                magazine = "MEU_30Rnd_M855A1_556x45_T_Stanag";
+            };
+            class _xx_MEU_200Rnd_M249_556x45_Stanag {
+                count = 12;
+                magazine = "MEU_200Rnd_M249_556x45_Stanag";
+            };
+            class _xx_MEU_100Rnd_M240_762x51 {
+                count = 6;
+                magazine = "MEU_100Rnd_M240_762x51";
+            };
+            class _xx_MEU_100Rnd_M240_762x51_T {
+                count = 6;
+                magazine = "MEU_100Rnd_M240_762x51_T";
+            };
+            class _xx_MEU_M882_9mm {
+                count = 24;
+                magazine = "MEU_M882_9mm";
+            };
+            class _xx_DemoCharge_Remote_Mag {
+                count = 4;
+                magazine = "DemoCharge_Remote_Mag";
+            };
+            class _xx_Trixie_SMAW_HEAA {
+                count = 6;
+                magazine = "Trixie_SMAW_HEAA";
+            };
+            class _xx_Trixie_SMAW_HEDP {
+                count = 6;
+                magazine = "Trixie_SMAW_HEDP";
+            };
+             
 // GRENADE, SMOKE, M203
-			class _xx_HandGrenade {
-				count = 6;
-				magazine = "HandGrenade";
-			};
-			class _xx_AGM_M84 {
-				count = 6;
-				magazine = "AGM_M84";
-			};
-			class _xx_SmokeShell {
-				count = 18;
-				magazine = "SmokeShell";
-			};
-			class _xx_SmokeShellPurple {
-				count = 2;
-				magazine = "SmokeShellPurple";
-			};
-			class _xx_SmokeShellBlue {
-				count = 2;
-				magazine = "SmokeShellBlue";
-			};
-			class _xx_SmokeShellRed {
-				count = 6;
-				magazine = "SmokeShellRed";
-			};
-			class _xx_SmokeShellGreen {
-				count = 12;
-				magazine = "SmokeShellGreen";
-			};
-			class _xx_M433_40mm_HEDP_Shell {
-				count = 12;
-				magazine = "M433_40mm_HEDP_Shell";
-			};
-		};
-		
-		class TransportWeapons {
-	
-			class _xx_meu_AT4 {
-				count = 3;
-				weapon = "meu_AT4";
-			};
-		};
+            class _xx_HandGrenade {
+                count = 25;
+                magazine = "HandGrenade";
+            };
+            class _xx_AGM_M84 {
+                count = 12;
+                magazine = "AGM_M84";
+            };
+            class _xx_SmokeShell {
+                count = 120;
+                magazine = "SmokeShell";
+            };
+            class _xx_SmokeShellPurple {
+                count = 2;
+                magazine = "SmokeShellPurple";
+            };
+            class _xx_SmokeShellBlue {
+                count = 2;
+                magazine = "SmokeShellBlue";
+            };
+            class _xx_SmokeShellRed {
+                count = 12;
+                magazine = "SmokeShellRed";
+            };
+            class _xx_SmokeShellGreen {
+                count = 60;
+                magazine = "SmokeShellGreen";
+            };
+            class _xx_1Rnd_Smoke_Grenade_shell {
+                count = 24;
+                magazine = "1Rnd_Smoke_Grenade_shell";
+            };
+            class _xx_1Rnd_SmokeRed_Grenade_shell {
+                count = 24;
+                magazine = "1Rnd_SmokeRed_Grenade_shell";
+            };
+            class _xx_1Rnd_SmokeGreen_Grenade_shell {
+                count = 24;
+                magazine = "1Rnd_SmokeGreen_Grenade_shell";
+            };
+            class _xx_M433_40mm_HEDP_Shell {
+                count = 30;
+                magazine = "M433_40mm_HEDP_Shell";
+            };
+            class _xx_AGM_HandFlare_White {
+                count = 10;
+                magazine = "AGM_HandFlare_White";
+            };
+            class _xx_AGM_HandFlare_Green {
+                count = 10;
+                magazine = "AGM_HandFlare_Green";
+            };
+            class _xx_MEU_FlareWhite_M203 {
+                count = 10;
+                magazine = "MEU_FlareWhite_M203";
+            };
+            class _xx_MEU_FlareGreen_M203 {
+                count = 10;
+                magazine = "MEU_FlareGreen_M203";
+            };
+            class _xx_MEU_FlareRed_M203 {
+                count = 10;
+                magazine = "MEU_FlareRed_M203";
+            };
+        };
+         
+        class TransportWeapons {
+     
+            class _xx_meu_AT4 {
+                count = 10;
+                weapon = "meu_AT4";
+            };
+            class _xx_caf_m72a6 {
+                count = 4;
+                weapon = "caf_m72a6";
+            };
+        };
 	};
 	class Box_meu_suply_Bravo: B_supplyCrate_F
 	{
@@ -3149,11 +3178,39 @@ class CfgVehicles
 				count = 15;
 				name = "MEF_Wood_Helmet_LWH";
 			};
+			class _xx_H_HelmetCrew_I {
+				count = 15;
+				name = "H_HelmetCrew_I";
+			};
 
 // NVG AND GOGGLES
 			class _xx_NVGoggles_Opfor {
 				count = 20;
 				name = "NVGoggles_Opfor";
+			};
+			class _xx_AV_ESS_blk {
+				count = 20;
+				name = "AV_ESS_blk";
+			};
+			class _xx_AV_ESS_blk_clr {
+				count = 20;
+				name = "AV_ESS_blk_clr";
+			};
+			class _xx_AV_ESS_tan {
+				count = 20;
+				name = "AV_ESS_tan";
+			};
+			class _xx_AV_ESS_tan_clr {
+				count = 20;
+				name = "AV_ESS_tan_clr";
+			};
+			class _xx_AV_ESS_grn {
+				count = 20;
+				name = "AV_ESS_grn";
+			};
+			class _xx_AV_ESS_grn_clr {
+				count = 20;
+				name = "AV_ESS_grn_clr";
 			};
 
 // ACCESSORIES
@@ -3268,6 +3325,10 @@ class CfgVehicles
 			class _xx_AGM_IR_Strobe_Item {
 				count = 50;
 				name = "AGM_IR_Strobe_Item";
+			};
+			class _xx_AGM_UAVBattery {
+				count = 50;
+				name = "AGM_UAVBattery";
 			};
 
 // UNIFORMS
@@ -3930,6 +3991,74 @@ class CfgVehicles
 			class _xx_CUP_sgun_M1014 {
 				count = 3;
 				weapon = "CUP_sgun_M1014";
+			};
+		};
+};
+};
+class Extended_Init_EventHandlers
+{
+	class Box_meu_spectre
+	{
+		Box_meu_spectre_init = "[_this select 0] execVM '\meu_ammoBoxes\recon\obj_init.sqf';";
+	};
+	class Box_meu_inf
+	{
+		Box_meu_inf_init = "[_this select 0] execVM '\meu_ammoBoxes\inf\obj_init.sqf';";
+	};
+	class Box_meu_wep
+	{
+		Box_meu_wep_init = "[_this select 0] execVM '\meu_ammoBoxes\wep\obj_init.sqf';";
+	};
+	class Box_meu_bas
+	{
+		Box_meu_bas_init = "[_this select 0] execVM '\meu_ammoBoxes\bas\obj_init.sqf';";
+	};
+	class Box_meu_ace
+	{
+		Box_meu_ace_init = "[_this select 0] execVM '\meu_ammoBoxes\ace\obj_init.sqf';";
+	};
+	class Box_meu_titan
+	{
+		Box_meu_titan_init = "[_this select 0] execVM '\meu_ammoBoxes\titan\obj_init.sqf';";
+	};
+	class Box_meu_gator
+	{
+		Box_meu_gator_init = "[_this select 0] execVM '\meu_ammoBoxes\gator\obj_init.sqf';";
+	};
+	class Box_meu_arty
+	{
+		Box_meu_arty_init = "[_this select 0] execVM '\meu_ammoBoxes\arty\obj_init.sqf';";
+	};
+	class Box_meu_hq
+	{
+		Box_meu_hq_init = "[_this select 0] execVM '\meu_ammoBoxes\inf\obj_init.sqf';";
+	};
+	class Box_meu_suply
+	{
+		Box_meu_suply_init = "[_this select 0] execVM '\meu_ammoBoxes\resuply\obj_init.sqf';";
+	};
+	class Box_meu_lar
+	{
+		Box_meu_lar_init = "[_this select 0] execVM '\meu_ammoBoxes\lar\obj_init.sqf';";
+	};
+	class Box_meu_lce
+	{
+		Box_meu_lce_init = "[_this select 0] execVM '\meu_ammoBoxes\lce\obj_init.sqf';";
+	};
+	class Box_meu_boats
+	{
+		Box_meu_boats_init = "[_this select 0] execVM '\meu_ammoBoxes\Boats\obj_init.sqf';";
+	};
+};
+class CfgFunctions
+{
+	class meu
+	{
+		class vehicle
+		{
+			class vehicleLoadout
+			{
+				file = "\meu_ammoBoxes\vehicle\functions\fnc_vehicleLoadout.sqf";
 			};
 		};
 };
