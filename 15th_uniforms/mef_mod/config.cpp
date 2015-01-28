@@ -3,7 +3,8 @@ class CfgPatches
 {
     class mef_mod
     {
-        units[] = {"MEF_WMARPAT_TAN_LS_RM","MEF_WMARPAT_TAN_RS_RM","MEF_DMARPAT_LS_RM","MEF_DMARPAT_OD_LS_RM","MEF_DMARPAT_TAN_LS_RM","MEF_DMARPAT_RS_RM","MEF_DMARPAT_OD_RS_RM","MEF_DMARPAT_TAN_RS_RM","MEF_DMARPAT_LS_BA","MEF_DMARPAT_LS_BR","MEF_DMARPAT_LS_BT","MEF_DMARPAT_LS_BS","MEF_WMARPAT_LS_BA","MEF_WMARPAT_LS_BR","MEF_WMARPAT_LS_BT","MEF_WMARPAT_LS_BS","MEF_WMARPAT_LS","MEF_WMARPAT_LS_MG","MEF_WMARPAT_LS_MO","MEF_WMARPAT_LS_AS","MEF_WMARPAT_LS_AT","MEF_WMARPAT_LS_UL","MEF_WMARPAT_RS","MEF_WMARPAT_RS_MG","MEF_WMARPAT_RS_MO","MEF_WMARPAT_RS_AS","MEF_WMARPAT_RS_AT","MEF_WMARPAT_RS_UL","MEF_WMARPAT_TS","MEF_WMARPAT_TS_MG","MEF_WMARPAT_TS_MO","MEF_WMARPAT_TS_AS","MEF_WMARPAT_TS_AT","MEF_WMARPAT_TS_UL","MEF_WMARPAT_LS_HA","MEF_WMARPAT_LS_HM","MEF_DMARPAT_LS_TC","MEF_DMARPAT_LS_TO","MEF_DMARPAT_LS_MM","MEF_DMARPAT_LS_IA","MEF_DMARPAT_LS_ML","MEF_DMARPAT_LS_UL","MEF_DMARPAT_RS","MEF_DMARPAT_RS_TO","MEF_DMARPAT_RS_MM","MEF_DMARPAT_RS_IA","MEF_DMARPAT_RS_ML","MEF_DMARPAT_RS_UL","MEF_DMARPAT_TS","MEF_DMARPAT_TS_TO","MEF_DMARPAT_TS_MM","MEF_DMARPAT_TS_IA","MEF_DMARPAT_TS_ML","MEF_DMARPAT_TS_UL","MEF_WMARPAT_LS_RM","MEF_WMARPAT_OD_LS_RM","MEF_WMARPAT_LS_DV","MEF_WMARPAT_RS_RM","MEF_WMARPAT_OD_RS_RM","MEF_DMARPAT_LS_DV","MEF_IN_WMARPAT_LS","MEF_IN_WMARPAT_RS","MEF_IN_DMARPAT_LS","MEF_IN_DMARPAT_RS","MEF_WMARPAT_LS_RL_RH","MEF_WMARPAT_LS_BA_RH","MEF_WMARPAT_LS_BR_RH","MEF_WMARPAT_LS_BT_RH","MEF_WMARPAT_LS_BS_RH","MEF_DMARPAT_LS_RL_RH","MEF_DMARPAT_LS_BA_RH","MEF_DMARPAT_LS_BR_RH","MEF_DMARPAT_LS_BT_RH","MEF_DMARPAT_LS_BS_RH","MEF_USMC_Huron","MEF_USMC_Ghosthawk","MEF_USMC_Pawnee","MEF_USMC_Hummingbird","MEF_USMC_Blackfoot",};
+        units[] = {"MEF_WMARPAT_TAN_LS_RM","MEF_WMARPAT_TAN_RS_RM","MEF_DMARPAT_LS_RM","MEF_DMARPAT_OD_LS_RM","MEF_DMARPAT_TAN_LS_RM","MEF_DMARPAT_RS_RM","MEF_DMARPAT_OD_RS_RM","MEF_DMARPAT_TAN_RS_RM","MEF_DMARPAT_LS_BA","MEF_DMARPAT_LS_BR","MEF_DMARPAT_LS_BT","MEF_DMARPAT_LS_BS","MEF_WMARPAT_LS_BA","MEF_WMARPAT_LS_BR","MEF_WMARPAT_LS_BT","MEF_WMARPAT_LS_BS","MEF_WMARPAT_LS","MEF_WMARPAT_LS_MG","MEF_WMARPAT_LS_MO","MEF_WMARPAT_LS_AS","MEF_WMARPAT_LS_AT","MEF_WMARPAT_LS_UL","MEF_WMARPAT_RS","MEF_WMARPAT_RS_MG","MEF_WMARPAT_RS_MO","MEF_WMARPAT_RS_AS","MEF_WMARPAT_RS_AT","MEF_WMARPAT_RS_UL","MEF_WMARPAT_TS","MEF_WMARPAT_TS_MG","MEF_WMARPAT_TS_MO","MEF_WMARPAT_TS_AS","MEF_WMARPAT_TS_AT","MEF_WMARPAT_TS_UL","MEF_WMARPAT_LS_HA","MEF_WMARPAT_LS_HM","MEF_DMARPAT_LS_TC","MEF_DMARPAT_LS_TO","MEF_DMARPAT_LS_MM","MEF_DMARPAT_LS_IA","MEF_DMARPAT_LS_ML","MEF_DMARPAT_LS_UL","MEF_DMARPAT_RS","MEF_DMARPAT_RS_TO","MEF_DMARPAT_RS_MM","MEF_DMARPAT_RS_IA","MEF_DMARPAT_RS_ML","MEF_DMARPAT_RS_UL","MEF_DMARPAT_TS",
+"MEF_DMARPAT_TS_TO","MEF_DMARPAT_TS_MM","MEF_DMARPAT_TS_IA","MEF_DMARPAT_TS_ML","MEF_DMARPAT_TS_UL","MEF_WMARPAT_LS_RM","MEF_WMARPAT_OD_LS_RM","MEF_WMARPAT_LS_DV","MEF_WMARPAT_RS_RM","MEF_WMARPAT_OD_RS_RM","MEF_DMARPAT_LS_DV","MEF_IN_WMARPAT_LS","MEF_IN_WMARPAT_RS","MEF_IN_DMARPAT_LS","MEF_IN_DMARPAT_RS","MEF_WMARPAT_LS_RL_RH","MEF_WMARPAT_LS_BA_RH","MEF_WMARPAT_LS_BR_RH","MEF_WMARPAT_LS_BT_RH","MEF_WMARPAT_LS_BS_RH","MEF_DMARPAT_LS_RL_RH","MEF_DMARPAT_LS_BA_RH","MEF_DMARPAT_LS_BR_RH","MEF_DMARPAT_LS_BT_RH","MEF_DMARPAT_LS_BS_RH","MEF_USMC_Huron","MEF_USMC_Ghosthawk","MEF_USMC_Pawnee","MEF_USMC_Hummingbird","MEF_USMC_Blackfoot"};
         weapons[] = {"MEF_Wood_MARPAT_LS","MEF_Desert_MARPAT_LS","MEF_Vest_Tan_Infantry","MEF_Vest_Tan_Armor","MEF_Vest_Tan_Medical","MEF_Woodland_Helmet_MICH","MEF_Desert_Helmet_MICH"};
 	author[] = {"Mattastic"};
         requiredVersion = 0.1;
@@ -73,9 +74,11 @@ class CfgVehicleClasses
 class CfgVehicles
 {
 //////////3rd Battalion 9th Marines Woodland//////////
+	class B_soldier_exp_F;
 	class B_Soldier_base_F;
 	class B_Soldier_02_f;
 	class B_Soldier_03_f;
+	class B_medic_F;
 	class B_Soldier_A_F;
 	class B_Soldier_TL_F;
 	class B_soldier_AR_F;
@@ -144,7 +147,6 @@ class CfgVehicles
 					icon = "iconManExplosive";
 					picture = "pictureExplosive";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_1";
 					backpack = "MEF_Wood_Kitbag";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
@@ -960,10 +962,10 @@ class CfgVehicles
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_9";
 					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"ej_M249_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					respawnWeapons[] = {"ej_M249_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					magazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag"};
-					respawnmagazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag"};
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
 					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					uniformClass = "MEF_Wood_MARPAT_LS";
@@ -979,10 +981,10 @@ class CfgVehicles
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_9";
 					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"ej_M16_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					respawnWeapons[] = {"ej_M16_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					magazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
-					respawnmagazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
 					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					uniformClass = "MEF_Wood_MARPAT_LS";
@@ -998,10 +1000,10 @@ class CfgVehicles
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_9";
 					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"ej_M16_M203_RCO_pointer_F","hgun_ACPC2_F","Rangefinder","Throw","Put"};
-					respawnWeapons[] = {"ej_M16_M203_RCO_pointer_F","hgun_ACPC2_F","Rangefinder","Throw","Put"};
-					magazines[] = {"1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
-					respawnmagazines[] = {"1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
 					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					uniformClass = "MEF_Wood_MARPAT_LS";
@@ -1017,10 +1019,10 @@ class CfgVehicles
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_9";
 					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"ej_M16_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					respawnWeapons[] = {"ej_M16_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					magazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
-					respawnmagazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
 					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					uniformClass = "MEF_Wood_MARPAT_LS";
@@ -1037,10 +1039,10 @@ class CfgVehicles
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_10";
 					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"ej_M249_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					respawnWeapons[] = {"ej_M249_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					magazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag"};
-					respawnmagazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag","m249_Mag"};
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
 					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					uniformClass = "MEF_Desert_MARPAT_LS";
@@ -1056,11 +1058,10 @@ class CfgVehicles
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_10";
 					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"ej_M16_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					respawnWeapons[] = {"ej_M16_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					magazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
-					respawnmagazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					uniformClass = "MEF_Desert_MARPAT_LS";
 					hiddenSelections[] = {"Camo"};
@@ -1075,10 +1076,10 @@ class CfgVehicles
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_10";
 					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"ej_M16_M203_RCO_pointer_F","hgun_ACPC2_F","Rangefinder","Throw","Put"};
-					respawnWeapons[] = {"ej_M16_M203_RCO_pointer_F","hgun_ACPC2_F","Rangefinder","Throw","Put"};
-					magazines[] = {"1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
-					respawnmagazines[] = {"1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
 					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					uniformClass = "MEF_Desert_MARPAT_LS";
@@ -1094,10 +1095,10 @@ class CfgVehicles
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_10";
 					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"ej_M16_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					respawnWeapons[] = {"ej_M16_RCO_pointer_F","hgun_ACPC2_F","Throw","Put"};
-					magazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
-					respawnmagazines[] = {"SmokeShell","SmokeShell","SmokeShell","HandGrenade","HandGrenade","HandGrenade","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","9Rnd_45ACP_Mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag","M16855a1_mag"};
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
 					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
 					uniformClass = "MEF_Desert_MARPAT_LS";
