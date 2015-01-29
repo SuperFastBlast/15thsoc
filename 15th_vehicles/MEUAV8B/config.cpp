@@ -19,7 +19,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			looped=false;
 			terminal = 1;
 			soundEnabled=0;
-			connectTo[] = {DeadState,0.1};
+			connectTo[] = {"unconscious",0.1};
 		};
 		class Crew;
 		class AV8B_Pilot: Crew
@@ -45,8 +45,8 @@ class CfgPatches
 		units[] = {"MEUAV8B2","MEUAV8BWreck"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Air_F","A3_Weapons_F"};
-		magazines[] = {};
+		requiredAddons[] = {"A3_Air_F","A3_Weapons_F", A3_Air_F_EPC};
+		magazines[] = {"2Rnd_Sidewinder_AV8B","MEU_2Rnd_Missile_AGM_02_F","MEU_14Rnd_Rockets","MEU_300Rnd_25mm_shells_T"};
 	};
 };
 class CfgAmmo
@@ -112,7 +112,6 @@ class CfgMagazines
 		tracersevery = 1;
 		nvgOnly = 0;
 	};
-	class 2Rnd_GBU12_LGB;
 	class 24Rnd_Missiles;
 	class MEU_14Rnd_Rockets: 24Rnd_Missiles
 	{
@@ -191,7 +190,6 @@ class CfgWeapons
 			displayname = "LAU-68D/A Rocket Launcher";
 		};
 	};
-	class Missile_AA_04_Plane_CAS_01_F;
 	class MissileLauncher;
 	class SidewinderLaucher_AV8B: MissileLauncher
 	{
@@ -227,7 +225,11 @@ class CfgWeapons
 };
 class CfgVehicles
 {
-	class Plane;
+	class Air;
+	class Plane: Air
+	{
+		class HitPoints;
+	};
 	class PlaneWreck;
 	class MEUAV8B2: Plane
 	{
@@ -242,11 +244,16 @@ class CfgVehicles
 		faction = "BLU_F";
 		displayName = "AV-8B Harrier II (CAS)";
 		vehicleClass = "Air";
-		author = "Chairborne";
 		accuracy = 0.3;
 		typicalCargo[] = {"B_Pilot_F"};
 		simulation = "airplane";
-		driverAction = "Cha_AV8B_Pilot";
+		getInAction = "GetInHigh";
+		getOutAction = "GetOutHigh";
+		memoryPointsGetInDriver = "GetIn_driver_pos";
+		memoryPointsGetInDriverDir = "GetIn_driver_dir";
+		getInRadius = 2;
+		driverAction = "pilot_plane_cas_01";
+		precisegetinout = 1;
 		LockDetectionSystem = 8;
 		incomingMissileDetectionSystem = 16;
 		driverRightHandAnimName = "stick_pilot";
@@ -1227,7 +1234,7 @@ class CfgVehicles
 		damageResistance = 0.01246;
 		cost = 20000000;
 		weapons[] = {"master_arms_safe","MEU_gatling_25mm","MEU_GBU12BombLauncher","SidewinderLaucher_AV8B","MEU_Maverick_F","MEU_FFAR_Smallpod","CMFlareLauncher"};
-		magazines[] = {"MEU_300Rnd_25mm_shells_T","2Rnd_GBU12_LGB;","2Rnd_Sidewinder_AV8B","MEU_2Rnd_Missile_AGM_02_F","MEU_14Rnd_Rockets","240Rnd_CMFlare_Chaff_Magazine"};
+		magazines[] = {"MEU_300Rnd_25mm_shells_T","2Rnd_GBU12_LGB","2Rnd_Sidewinder_AV8B","MEU_2Rnd_Missile_AGM_02_F","MEU_14Rnd_Rockets","240Rnd_CMFlare_Chaff_Magazine"};
 		insideSoundCoef = 0.2;
 		fov = 0.5;
 		gunAimDown = 0.07;
@@ -1252,13 +1259,13 @@ class CfgVehicles
 			libTextDesc = "$STR_LIB_AV8B2";
 		};
 		attenuationEffectType = "HeliAttenuation";
-		soundGetIn[] = {"A3\Sounds_F\air\Plane_Fighter_03\getin",0.56234133,1};
-		soundGetOut[] = {"A3\Sounds_F\air\Plane_Fighter_03\getout",0.56234133,1,40};
-		soundDammage[] = {"",0.56234133,1};
-		soundEngineOnInt[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_start_int",1.0,1.0};
-		soundEngineOnExt[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_start_ext",1.4125376,1.0,500};
-		soundEngineOffInt[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_stop_int",1.0,1.0};
-		soundEngineOffExt[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_stop_ext",1.4125376,1.0,500};
+		soundGetIn[] = {"ca\sounds\Air\AV8\ext\ext-jetair-cabine-close1",0.056234132,1};
+		soundGetOut[] = {"ca\sounds\Air\AV8\ext\ext-jetair-cabine-open1",0.056234132,1,30};
+		soundDammage[] = {"ca\sounds\Air\AV8\int\alarm_loop1",0.001,1};
+		soundEngineOnInt[] = {"ca\sounds\Air\AV8\int\int-av8b-start-1",0.56234133,1.0};
+		soundEngineOnExt[] = {"ca\sounds\Air\AV8\ext\ext-jetair-start1",0.7943282,1.0,700};
+		soundEngineOffInt[] = {"ca\sounds\Air\AV8\int\int-av8b-stop-1",0.56234133,1.0};
+		soundEngineOffExt[] = {"ca\sounds\Air\AV8\ext\ext-jetair-stop1",0.7943282,1.0,700};
 		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.1,1};
 		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.1,1.5};
 		soundGearUp[] = {"A3\Sounds_F_EPC\CAS_01\gear_up",0.7943282,1.0,150};
@@ -1267,52 +1274,54 @@ class CfgVehicles
 		soundFlapsDown[] = {"A3\Sounds_F_EPC\CAS_01\Flaps_Down",0.63095737,1.0,100};
 		class Sounds
 		{
+		class Sounds
+		{
 			class EngineLowOut
 			{
-				sound[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_engine_idle_ext",1.7782794,1.0,2100};
+				sound[] = {"ca\sounds\Air\AV8\ext\ext-jetair-engine-low1",2.5118864,1.0,1300};
 				frequency = "1.0 min (rpm + 0.5)";
-				volume = "camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+				volume = "engineOn*camPos*(rpm factor[0.85, 0])";
 			};
 			class EngineHighOut
 			{
-				sound[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_engine_ext",1.9952624,1.2,2500};
+				sound[] = {"ca\sounds\Air\AV8\ext\ext-jetair-engine-high3",2.5118864,1.3,1600};
 				frequency = "1";
-				volume = "camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+				volume = "engineOn*camPos*(rpm factor[0.55, 1.0])";
 			};
 			class ForsageOut
 			{
-				sound[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_forsage_ext",2.5118864,1.2,2800};
+				sound[] = {"ca\sounds\Air\AV8\ext\ext-jetair-forsage1",3.1622777,1.1,2000};
 				frequency = "1";
-				volume = "engineOn*camPos*(thrust factor[0.6, 1.0])";
-				cone[] = {3.14,3.92,2.0,0.5};
+				volume = "engineOn*camPos*(thrust factor[0.5, 1.0])";
+				cone[] = {3.14,3.92,2.0,0.4};
 			};
 			class WindNoiseOut
 			{
-				sound[] = {"A3\Sounds_F\air\Plane_Fighter_03\noise",0.56234133,1.0,150};
+				sound[] = {"ca\sounds\Air\AV8\ext\ext-jetair-wind1",1.0,1.0,100};
 				frequency = "(0.1+(1.2*(speed factor[1, 150])))";
 				volume = "camPos*(speed factor[1, 150])";
 			};
 			class EngineLowIn
 			{
-				sound[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_engine_idle_int",1.0,1.0};
+				sound[] = {"ca\sounds\Air\AV8\int\int-av8b-engine-low",1.0,1.0};
 				frequency = "1.0 min (rpm + 0.5)";
-				volume = "(1-camPos)*((rpm factor[0.7, 0.1])*(rpm factor[0.1, 0.7]))";
+				volume = "(1-camPos)*(engineOn*(rpm factor[0.85, 0]))";
 			};
 			class EngineHighIn
 			{
-				sound[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_engine_int",1.0,1.2};
+				sound[] = {"ca\sounds\Air\AV8\int\int-av8b-engine",1.0,1.0};
 				frequency = "1";
-				volume = "(1-camPos)*(rpm factor[0.85, 1.0])";
+				volume = "(1-camPos)*(engineOn*(rpm factor[0.55, 1.0]))";
 			};
 			class ForsageIn
 			{
-				sound[] = {"A3\Sounds_F_EPC\CAS_01\CAS_01_forsage_int",1.0,1.2};
+				sound[] = {"ca\sounds\Air\AV8\int\int-av8b-forsage-1",0.31622776,1.1};
 				frequency = "1";
-				volume = "(1-camPos)*(engineOn*(thrust factor[0.6, 1.0]))";
+				volume = "(1-camPos)*(engineOn*(thrust factor[0.5, 1.0]))";
 			};
 			class WindNoiseIn
 			{
-				sound[] = {"A3\Sounds_F\air\Plane_Fighter_03\noise",0.5011872,1.0};
+				sound[] = {"ca\sounds\Air\AV8\int\int-jetair-wind1",0.4466836,1.0};
 				frequency = "(0.1+(1.2*(speed factor[1, 150])))";
 				volume = "(1-camPos)*(speed factor[1, 150])";
 			};
@@ -1356,5 +1365,25 @@ class CfgVehicles
 		transportFuel = 0;
 		transportSoldier = 1;
 		class Eventhandlers{};
+	};
+};
+class CfgNonAIVehicles
+{
+	class ProxyDriver;
+	class ProxyWeapon;
+	class ProxyMissile_AGM_02_F: ProxyWeapon
+	{
+		model = "\A3\Weapons_F\Ammo\Missile_AGM_02_F";
+		simulation = "maverickweapon";
+	};
+	class Proxygbu12: ProxyWeapon
+	{
+		model = "\MEUAV8B\GBU12";
+		simulation = "maverickweapon";
+	};
+	class ProxyAIM9XSidewinder: ProxyWeapon
+	{
+		model = "\MEUAV8B\AIM9XSidewinder"; 
+		simulation = "maverickweapon";
 	};
 };

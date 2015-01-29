@@ -20,7 +20,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			looped=false;
 			terminal = 1;
 			soundEnabled=0;
-			connectTo[] = {DeadState,0.1};
+			connectTo[] = {"unconscious",0.1};
 		};
 		class Crew;
 		class AV8B_Pilot: Crew
