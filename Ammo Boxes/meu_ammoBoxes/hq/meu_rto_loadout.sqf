@@ -1,4 +1,4 @@
-// REVISION 27OCT14
+// REVISION 15/JAN/15
 
 //15th RTO Loadout
 
@@ -11,8 +11,8 @@
  removeuniform _unit;
  removevest _unit;
  removeheadgear _unit;
- _unit addvest "V_mas_mar_PlateCarrier2_rgr_d";
- _unit addheadgear "H_mas_mar_HelmetBind_v";
+ _unit addvest "MEF_Vest_Tan_Infantry";
+ _unit addheadgear "MEF_Wood_Helmet_LWH";
 
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
@@ -28,20 +28,20 @@ _unit additem "itemGPS";
 
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
 
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_T_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_T_Stanag";
 
- _unit addweapon "M4Car";
- _unit addPrimaryWeaponItem "FHQ_optic_ACOG";
- _unit addPrimaryWeaponItem "FHQ_acc_ANPEQ15";
+ _unit addweapon "CUP_arifle_M4CAR_black"; 
+ _unit addPrimaryWeaponItem "CUP_optic_ACOG";
+ _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 
  _unit addweapon "rangefinder";
  _unit assignitem "rangefinder";
@@ -65,4 +65,4 @@ _unit additem "itemGPS";
  _unit additem "AGM_Bandage";
  _unit additem "AGM_EarBuds";
 
- _unit adduniform "U_mas_mar_B_IndUniform1_v";
+ _unit adduniform "MEF_Wood_IN_MARPAT_LS";

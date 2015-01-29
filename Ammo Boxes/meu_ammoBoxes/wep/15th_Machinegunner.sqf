@@ -1,4 +1,4 @@
-// REVISION 11NOV14
+// REVISION 15/JAN/15
 
 //15th Weapons MG Gunner
 //15thMEU Realism Unit, Weapons Platoon
@@ -14,40 +14,38 @@
  removeuniform _unit;
  removevest _unit;
  removeheadgear _unit;
- _unit addvest "V_mas_mar_PlateCarrier1_rgr_d";
- _unit addheadgear "H_mas_mar_HelmetBind_v";
+ _unit addvest "MEF_Vest_Tan_Infantry_L";
+ _unit addheadgear "MEF_Wood_Goggles_Helmet_LWH";
 
 
  _unit unassignItem "nvgoggles";
  _unit removeItem "nvgoggles";
 
 
- _unit addbackpack "B_Kitbag_cbr";
+ _unit addbackpack "MEF_Wood_Kitbag";
 
 
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
- (unitBackpack _unit) additemCargo ["FHQ_acc_ANPEQ15",1];
- (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) additemCargo ["SmokeshellBlue",1];
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
 
- _unit addmagazine "100Rnd_M240_762x51_T_Stanag";
- _unit addmagazine "100Rnd_M240_762x51_T_Stanag";
- _unit addmagazine "100Rnd_M240_762x51_T_Stanag";
+ _unit addmagazine "MEU_100Rnd_M240_762x51";
+ _unit addmagazine "MEU_100Rnd_M240_762x51";
+ _unit addmagazine "MEU_100Rnd_M240_762x51_T";
 
 
- _unit addweapon "LMG_mas_M240_F";
- _unit addPrimaryWeaponItem "M145";
+ _unit addweapon "CUP_lmg_M240";
+ _unit addPrimaryWeaponItem "CUP_optic_ElcanM145";
 
 
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
 
 
- _unit addweapon "hgun_mas_m9_F";
+ _unit addweapon "CUP_hgun_M9";
 
 
  _unit addmagazine "HandGrenade";
@@ -59,4 +57,4 @@
  _unit additem "AGM_EarBuds";
 
 
- _unit adduniform "U_mas_mar_B_IndUniform1_v";
+ _unit adduniform "MEF_Wood_IN_MARPAT_LS";

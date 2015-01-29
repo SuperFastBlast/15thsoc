@@ -1,4 +1,4 @@
-// REVISION 27OCT14
+// REVISION 15/JAN/15
 
 //Bravo (AAV) Company crewman loadout
 
@@ -13,7 +13,7 @@
  removevest _unit;
  removeheadgear _unit;
  
- _unit addvest "V_mas_mar_PlateCarrier1_rgr_d";
+ _unit addvest "MEF_Vest_Tan_Armor";
  _unit addheadgear "H_HelmetCrew_I";
 
 
@@ -43,27 +43,27 @@
 // _unit assignitem "itemRadio"; //Commented out due to TFAR funkyness upon spawn in causing a dissapearing radio
 
 
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
- _unit addmagazine "30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
+ _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
  
- _unit addweapon "M4Car";
+ _unit addweapon "CUP_arifle_M4CAR_black";
  _unit addPrimaryWeaponItem "optic_Hamr";
- _unit addPrimaryWeaponItem "acc_pointer_IR";
+ _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 
 
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
 
 
- _unit addweapon "hgun_mas_m9_F";
+ _unit addweapon "CUP_hgun_M9";
 
 
  _unit addweapon "Binocular";

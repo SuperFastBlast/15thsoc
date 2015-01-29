@@ -1,8 +1,8 @@
 // Infantry
-// REVISION 28OCT14
+// REVISION 15/JAN/15
 [
-	["M882_9mm", 4],
-	["30Rnd_M855A1_556x45_Stanag", 10],
+	["MEU_M882_9mm", 4],
+	["MEU_30Rnd_M855A1_556x45_Stanag", 10],
 	["Trixie_SMAW_HEDP", 3],
 	["Trixie_SMAW_HEAA", 2],
 	["DemoCharge_Remote_Mag",4],
@@ -16,7 +16,7 @@
 	["SmokeShellYellow", 2],
 	["SmokeShellBlue", 2],
 	["HandGrenade", 2],
-	["REV1_flash", 2],
+	["AGM_M84", 2],
 	["M433_40mm_HEDP_Shell", 4],
 	["1Rnd_Smoke_Grenade_shell", 4],
 	["1Rnd_SmokeRed_Grenade_shell", 2],

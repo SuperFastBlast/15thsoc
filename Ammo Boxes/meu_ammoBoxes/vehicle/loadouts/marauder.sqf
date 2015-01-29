@@ -1,10 +1,10 @@
 //15th Marauder Vehicle
 //By: 2ndLt Callaghan
-// REVISION 03DEC14
+// REVISION 15/JAN/15
 
 [
 	["meu_AT4", 2],
-	["30Rnd_M855A1_556x45_T_Stanag", 20],
+	["MEU_30Rnd_M855A1_556x45_T_Stanag", 20],
 	["SmokeShell", 6],
 	["SmokeShellGreen", 6],
 	["DemoCharge_Remote_Mag", 2],

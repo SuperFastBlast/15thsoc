@@ -1,4 +1,4 @@
-// REVISION 14OCT14
+// REVISION 15/JAN/15
  
  _unit = _this select 1;
  
@@ -24,11 +24,11 @@
  _unit addbackpack "B_Parachute";
  
  //WEAPONS
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
- _unit additem "hgun_mas_m9_F"; //Use this to hide pistol in clothes
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit additem "CUP_hgun_M9"; //Use this to hide pistol in clothes
 
  //EQUIPMENT ADD
  _unit addweapon "Binocular";

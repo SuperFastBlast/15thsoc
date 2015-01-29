@@ -1,9 +1,9 @@
 /// Infantry - Rifle
-// REVISION 28OCT14
+// REVISION 15/JAN/15
 [
-	["M882_9mm", 4],
-	["30Rnd_M855A1_556x45_Stanag", 10],
-	["200Rnd_M249_556x45_Stanag", 4],
+	["MEU_M882_9mm", 4],
+	["MEU_30Rnd_M855A1_556x45_Stanag", 10],
+	["MEU_200Rnd_M249_556x45_Stanag", 4],
 	["ClaymoreDirectionalMine_Remote_Mag",2],
 	["itemRadio", 2],
 	["AGM_Bandage", 6],
@@ -13,7 +13,7 @@
 	["SmokeShellYellow", 2],
 	["SmokeShellBlue", 2],
 	["HandGrenade", 2],
-	["REV1_flash", 2],
+	["AGM_M84", 2],
 	["M433_40mm_HEDP_Shell", 4],
 	["1Rnd_Smoke_Grenade_shell", 4],
 	["1Rnd_SmokeRed_Grenade_shell", 2],

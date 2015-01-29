@@ -1,4 +1,4 @@
-// REVISION 14OCT14
+// REVISION 15/JAN/15
  
  _unit = _this select 1;
  
@@ -9,7 +9,7 @@
  removeuniform _unit;
  removevest _unit;
  removeheadgear _unit;
- _unit addvest "V_mas_mar_PlateCarrier1_rgr_g";
+ _unit addvest "MEF_Vest_Tan_Armor_L";
  _unit addheadgear "H_CrewHelmetHeli_B"; 
  
  _unit unassignItem "itemRadio";
@@ -22,12 +22,12 @@
  _unit assignItem "AV_ESS_tan"; 
 
  //M9 and Ammo
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
- _unit addmagazine "M882_9mm";
- _unit addweapon "hgun_mas_m9_F";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addmagazine "MEU_M882_9mm";
+ _unit addweapon "CUP_hgun_M9";
 
  //EQUIPMENT ADD
  _unit addweapon "Binocular";
