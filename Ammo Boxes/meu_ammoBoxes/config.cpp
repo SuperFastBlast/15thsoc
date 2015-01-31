@@ -3149,15 +3149,15 @@ class CfgVehicles{
 				name = "CUP_optic_Eotech533";
 			};
 			class _xx_CUP_acc_ANPEQ_15 {
-				count = 20;
+				count = 30;
 				name = "CUP_acc_ANPEQ_15";
 			};
 			class _xx_optic_tws {
-				count = 2;
+				count = 5;
 				name = "optic_tws";
 			};
 			class _xx_CUP_optic_AN_PVS_10 {
-				count = 50;
+				count = 40;
 				name = "CUP_optic_AN_PVS_10";
 			};
 			class _xx_acc_pointer_IR {
@@ -3167,11 +3167,11 @@ class CfgVehicles{
 
 // HELMETS
 			class _xx_MEF_Wood_Goggles_Helmet_LWH {
-				count = 15;
+				count = 30;
 				name = "MEF_Wood_Goggles_Helmet_LWH";
 			};
 			class _xx_MEF_Wood_Helmet_LWH {
-				count = 15;
+				count = 30;
 				name = "MEF_Wood_Helmet_LWH";
 			};
 			class _xx_H_HelmetCrew_I {
@@ -3329,16 +3329,16 @@ class CfgVehicles{
 
 // UNIFORMS
 			class _xx_MEF_Vest_Tan_Infantry {
-				count = 15;
+				count = 30;
 				name = "MEF_Vest_Tan_Infantry";
 			};
 			class _xx_MEF_Vest_Tan_Infantry_L {
-				count = 15;
+				count = 30;
 				name = "MEF_Vest_Tan_Infantry_L";
 			};
 			class _xx_MEF_Wood_IN_MARPAT_LS {
-				count = 10;
-				name = "U_mas_mar_B_CombatUniform_veg";
+				count = 30;
+				name = "MEF_Wood_IN_MARPAT_LS";
 			};
 			
 // MEDICAL
