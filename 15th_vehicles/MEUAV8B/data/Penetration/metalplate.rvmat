@@ -1,13 +1,5 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 4.88
-//Thu Jan 22 20:38:00 2015 : Source 'file' date Thu Jan 22 20:38:00 2015
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
 
-#define _ARMA_
-
-//Class Ca : data\penetration\metalplate.rvmat{
-surfaceInfo = "ca\data\Penetration\metalPlate.bisurf";
+surfaceInfo = "MEUAV8B\data\Penetration\metalPlate.bisurf";
 ambient[] = {0.490196,0.592157,0.556863,1.0};
 diffuse[] = {0.490196,0.592157,0.556863,1.0};
 forcedDiffuse[] = {0.0,0.0,0.0,0.0};
@@ -16,4 +8,3 @@ specular[] = {0.0,0.0,0.0,1.0};
 specularPower = 1.0;
 PixelShaderID = "Normal";
 VertexShaderID = "Basic";
-//};
