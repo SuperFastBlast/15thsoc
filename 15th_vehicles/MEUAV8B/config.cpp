@@ -94,6 +94,7 @@ class CfgAmmo
 		deflectingChance = 0;
 		deflectingRandomness = 0;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		trackLead = 0;
 		tracerScale = 1;
 		tracerStartTime = 0.1;
 		tracerEndTime = 4;
@@ -202,7 +203,7 @@ class CfgMagazines
 	{
 		ammo = "MEU_B_25mm";
 		tracersevery = 1;
-		nvgOnly = 0;
+		maxLeadSpeed=50;
 	};
 	class 24Rnd_Missiles;
 	class MEU_14Rnd_Rockets: 24Rnd_Missiles
@@ -260,6 +261,7 @@ class CfgWeapons
 		magazines[] = {"MEU_300Rnd_25mm_shells_T"};
 		class manual: manual
 		{
+			canLock=2;
 			displayname = "GAU-12 Cannon 25mm";
 		};
 	};
@@ -353,15 +355,13 @@ class CfgVehicles
 		mapSize = 14;
 		side = 1;
 		faction = "BLU_F";
-		displayName = "AV-8B Harrier II (CAS)";
+		displayName = "MEU AV-8B Harrier II (CAS)";
 		vehicleClass = "Air";
 		accuracy = 0.3;
 		typicalCargo[] = {"B_Pilot_F"};
 		simulation = "airplane";
-		getInAction = "GetInHigh";
-		getOutAction = "GetOutHigh";
-		memoryPointsGetInDriver = "pos_driver";
-		memoryPointsGetInDriverDir = "pos_driver_dir";
+		getInAction = "pilot_plane_cas_01_Enter";
+		getOutAction = "pilot_plane_cas_01_Exit";
 		getInRadius = 20;
 		precisegetinout = 1;
 		driverAction = "AV8B_Pilot";
@@ -370,6 +370,7 @@ class CfgVehicles
 		driverCanSee=31;
 		LockDetectionSystem = 8;
 		incomingMissileDetectionSystem = 16;
+		driverLeftHandAnimName = "lever_pilot";
 		driverRightHandAnimName = "stick_pilot";
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		dammageHalf[] = {"\MEUAV8B\data\ah1z_monitor_glass_ca.paa","\MEUAV8B\data\ah1z_monitor_glass_destr_co.paa"};
@@ -440,18 +441,24 @@ class CfgVehicles
 				effect = "ExhaustsEffectJet";
 			};
 		};
-		  class MFD
+   class MFD
   {
-   class HUD
+   class statichud // STATIC HUD
    {
-    enableParallax = 1;
-    topLeft = "HUD LH";
-    topRight = "HUD PH";
-    bottomLeft = "HUD LD";
-    borderLeft = 0.07;
-    borderRight = 0.07;
-    borderTop = 0;
-    borderBottom = 0;
+      enableParallax = 0;
+         class Pos10Vector
+          {
+             type = "vector";
+             pos0[] = {0.485,0.4};
+             pos10[] = {1.225,1.1};
+          };
+          topLeft = "HUD LH";
+          topRight = "HUD PH";
+          bottomLeft = "HUD LD";
+          borderLeft = 0;
+          borderRight = 0;
+          borderTop = 0;
+          borderBottom = 0;
     color[] = {0.0,0.5,0.4,1.0};
     class Bones
     {
@@ -465,7 +472,7 @@ class CfgVehicles
       type = "fixed";
       pos[] = {0.4975,"(0.383)"};
      };
-     class Velocity
+     class Velocity: Pos10Vector
      {
       type = "vector";
       source = "velocity";
@@ -501,7 +508,17 @@ class CfgVehicles
       maxAngle = 200.75;
       aspectRatio = 1;
      };
-     class Level0
+             class ILS_H
+             {
+                type = "ils";
+                pos0[] = {0.5,0.4};
+                pos3[] = {0.722,0.4};
+             };
+             class ILS_W: ILS_H
+             {
+                pos3[] = {0.5,0.61};
+             };
+     class Level0: Pos10Vector
      {
       pos0[] = {0.4975,0.38};
       pos10[] = {1.4675,1.48};
@@ -588,721 +605,870 @@ class CfgVehicles
      {
       angle = -50;
      };
-     class LevelP55: Level0
-     {
-      angle = 55;
-     };
-     class LevelM55: Level0
-     {
-      angle = -55;
-     };
-     class LevelP60: Level0
-     {
-      angle = 60;
-     };
-     class LevelM60: Level0
-     {
-      angle = -60;
-     };
-     class LevelP65: Level0
-     {
-      angle = 65;
-     };
-     class LevelM65: Level0
-     {
-      angle = -65;
-     };
-     class LevelP70: Level0
-     {
-      angle = 70;
-     };
-     class LevelM70: Level0
-     {
-      angle = -70;
-     };
-     class LevelP75: Level0
-     {
-      angle = 75;
-     };
-     class LevelM75: Level0
-     {
-      angle = -75;
-     };
-     class LevelP80: Level0
-     {
-      angle = 80;
-     };
-     class LevelM80: Level0
-     {
-      angle = -80;
-     };
-     class LevelP85: Level0
-     {
-      angle = 85;
-     };
-     class LevelM85: Level0
-     {
-      angle = -85;
-     };
-     class LevelP90: Level0
-     {
-      angle = 90;
-     };
-     class LevelM90: Level0
-     {
-      angle = -90;
-     };
     };
-    class Draw
-    {
-     alpha = 1.0;
-     color[] = {0.0,0.5,0.4};
-     condition = "on";
-     class PlaneW
-     {
-      type = "line";
-      points[] = {{ "PlaneW",{ -0.03,0 },1 },{ "PlaneW",{ -0.01,0 },1 },{  },{ "PlaneW",{ 0.03,0 },1 },{ "PlaneW",{ 0.01,0 },1 },{  },{ "PlaneW",{ 0,-0.0340206 },1 },{ "PlaneW",{ 0,-0.0113402 },1 },{  },{ "PlaneW",{ 0,0.0340206 },1 },{ "PlaneW",{ 0,0.0113402 },1 }};
-     };
-     class PlaneHeading
-     {
-      type = "line";
-      points[] = {{ "Velocity",{ 0,-0.0226804 },1 },{ "Velocity",{ 0.014,-0.0158763 },1 },{ "Velocity",{ 0.02,0 },1 },{ "Velocity",{ 0.014,0.0158763 },1 },{ "Velocity",{ 0,0.0226804 },1 },{ "Velocity",{ -0.014,0.0158763 },1 },{ "Velocity",{ -0.02,0 },1 },{ "Velocity",{ -0.014,-0.0158763 },1 },{ "Velocity",{ 0,-0.0226804 },1 },{  },{ "Velocity",{ 0.04,0 },1 },{ "Velocity",{ 0.02,0 },1 },{  },{ "Velocity",{ -0.04,0 },1 },{ "Velocity",{ -0.02,0 },1 },{  },{ "Velocity",{ 0,-0.0453608 },1 },{ "Velocity",{ 0,-0.0226804 },1 }};
-     };
-     class Static
-     {
-      type = "line";
-      points[] = {{ { 0.0925,0.445103 },1 },{ { 0.1075,0.445103 },1 },{  },{ { 0.1,0.436598 },1 },{ { 0.1,0.453608 },1 },{  },{ { 0.14687,0.42507 },1 },{ { 0.16187,0.42507 },1 },{  },{ { 0.15437,0.416564 },1 },{ { 0.15437,0.433575 },1 },{  },{ { 0.180473,0.372621 },1 },{ { 0.195473,0.372621 },1 },{  },{ { 0.187973,0.364116 },1 },{ { 0.187973,0.381126 },1 },{  },{ { 0.180473,0.307791 },1 },{ { 0.195473,0.307791 },1 },{  },{ { 0.187973,0.299286 },1 },{ { 0.187973,0.316296 },1 },{  },{ { 0.14687,0.255343 },1 },{ { 0.16187,0.255343 },1 },{  },{ { 0.15437,0.246838 },1 },{ { 0.15437,0.263848 },1 },{  },{ { 0.0925,0.235309 },1 },{ { 0.1075,0.235309 },1 },{  },{ { 0.1,0.226804 },1 },{ { 0.1,0.243814 },1 },{  },{ { 0.0381299,0.255343 },1 },{ { 0.0531299,0.255343 },1 },{  },{ { 0.0456299,0.246838 },1 },{ { 0.0456299,0.263848 },1 },{  },{ { 0.00452728,0.307791 },1 },{ { 0.0195273,0.307791 },1 },{  },{ { 0.0120273,0.299286 },1 },{ { 0.0120273,0.316296 },1 },{  },{ { 0.00452728,0.372621 },1 },{ { 0.0195273,0.372621 },1 },{  },{ { 0.0120273,0.364116 },1 },{ { 0.0120273,0.381126 },1 },{  },{ { 0.0381299,0.42507 },1 },{ { 0.0531299,0.42507 },1 },{  },{ { 0.0456299,0.416564 },1 },{ { 0.0456299,0.433575 },1 },{  },{ "Speed_Instrument",{ 0,0.065 },1 },{ "Speed_Instrument",{ 0,0.085 },1 },{  },{ { 0.8925,0.445103 },1 },{ { 0.9075,0.445103 },1 },{  },{ { 0.9,0.436598 },1 },{ { 0.9,0.453608 },1 },{  },{ { 0.94687,0.42507 },1 },{ { 0.96187,0.42507 },1 },{  },{ { 0.95437,0.416564 },1 },{ { 0.95437,0.433575 },1 },{  },{ { 0.980473,0.372621 },1 },{ { 0.995473,0.372621 },1 },{  },{ { 0.987973,0.364116 },1 },{ { 0.987973,0.381126 },1 },{  },{ { 0.980473,0.307791 },1 },{ { 0.995473,0.307791 },1 },{  },{ { 0.987973,0.299286 },1 },{ { 0.987973,0.316296 },1 },{  },{ { 0.94687,0.255343 },1 },{ { 0.96187,0.255343 },1 },{  },{ { 0.95437,0.246838 },1 },{ { 0.95437,0.263848 },1 },{  },{ { 0.8925,0.235309 },1 },{ { 0.9075,0.235309 },1 },{  },{ { 0.9,0.226804 },1 },{ { 0.9,0.243814 },1 },{  },{ { 0.83813,0.255343 },1 },{ { 0.85313,0.255343 },1 },{  },{ { 0.84563,0.246838 },1 },{ { 0.84563,0.263848 },1 },{  },{ { 0.804527,0.307791 },1 },{ { 0.819527,0.307791 },1 },{  },{ { 0.812027,0.299286 },1 },{ { 0.812027,0.316296 },1 },{  },{ { 0.804527,0.372621 },1 },{ { 0.819527,0.372621 },1 },{  },{ { 0.812027,0.364116 },1 },{ { 0.812027,0.381126 },1 },{  },{ { 0.83813,0.42507 },1 },{ { 0.85313,0.42507 },1 },{  },{ { 0.84563,0.416564 },1 },{ { 0.84563,0.433575 },1 },{  },{ "ASL_Instrument",{ 0,0.065 },1 },{ "ASL_Instrument",{ 0,0.085 },1 },{  },{ { 0.5,0.107732 },1 },{ { 0.51,0.130412 },1 },{ { 0.49,0.130412 },1 },{ { 0.5,0.107732 },1 },{  },{ { 0.619959,0.715263 },1 },{ { 0.631439,0.746694 },1 },{  },{ { 0.58291,0.741475 },1 },{ { 0.588087,0.763383 },1 },{  },{ { 0.540574,0.751025 },1 },{ { 0.543184,0.773512 },1 },{  },{ { 0.4975,0.742887 },1 },{ { 0.4975,0.776907 },1 },{  },{ { 0.454426,0.751025 },1 },{ { 0.451816,0.773512 },1 },{  },{ { 0.41209,0.741475 },1 },{ { 0.406913,0.763383 },1 },{  },{ { 0.375041,0.715263 },1 },{ { 0.363561,0.746694 },1 }};
-     };
+     class draw
+          {
+             alpha = 0.4;
+             color[] = {0.0,0.5,0.4};
+             condition = "on";
+             class PlaneW
+             {
+                clipTL[] = {0.0,1.0};
+                clipBR[] = {1.0,0.0};
+                type = "line";
+                points[] =
+                {
+                   { "PlaneW",{ -0.08,0 },1 },
+                   { "PlaneW",{ -0.03,0 },1 },
+                   { "PlaneW",{ -0.015,0.0283784 },1 },
+                   { "PlaneW",{ 0.0,0 },1 },
+                   { "PlaneW",{ 0.015,0.0283784 },1 },
+                   { "PlaneW",{ 0.03,0 },1 },
+                   { "PlaneW",{ 0.08,0 },1 }
+                };
+             };
      class HorizonBankRot
      {
       type = "line";
       points[] = {{ "HorizonBankRot",{ 0,0.396907 },1 },{ "HorizonBankRot",{ 0.01,0.419588 },1 },{ "HorizonBankRot",{ -0.01,0.419588 },1 },{ "HorizonBankRot",{ 0,0.396907 },1 }};
      };
-     class Horizont
+             class Horizont
+             {
+                clipTL[] = {0.0,0.0};
+                clipBR[] = {1.0,1.0};
+                class Dimmed
+                {
+                   class Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "Level0",{ -0.2,0 },1 },
+                         { "Level0",{ -0.05,0 },1 },
+                         {  },
+                         { "Level0",{ 0.05,0 },1 },
+                         { "Level0",{ 0.2,0 },1 }
+                      };
+                   };
+                   class VALM_1_0
+                   {
+                      type = "text";
+                      source = "static";
+                      text = 0;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"Level0",{ -0.23,-0.025 },1};
+                      right[] = {"Level0",{ -0.13,-0.025 },1};
+                      down[] = {"Level0",{ -0.23,0.025 },1};
+                   };
+                   class VALM_2_0: VALM_1_0
+                   {
+                      align = "right";
+                      pos[] = {"Level0",{ 0.22,-0.025 },1};
+                      right[] = {"Level0",{ 0.32,-0.025 },1};
+                      down[] = {"Level0",{ 0.22,0.025 },1};
+                   };
+                   class LevelM5: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM5",{ -0.2,-0.03 },1 },
+                         { "LevelM5",{ -0.2,0 },1 },
+                         { "LevelM5",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM5",{ -0.1,0 },1 },
+                         { "LevelM5",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM5",{ 0.05,0 },1 },
+                         { "LevelM5",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM5",{ 0.15,0 },1 },
+                         { "LevelM5",{ 0.2,0 },1 },
+                         { "LevelM5",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_5
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -5;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM5",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM5",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM5",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_5: VALM_1_5
+                   {
+                      align = "right";
+                      pos[] = {"LevelM5",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM5",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM5",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP5: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP5",{ -0.2,0.03 },1 },
+                         { "LevelP5",{ -0.2,0 },1 },
+                         { "LevelP5",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP5",{ 0.05,0 },1 },
+                         { "LevelP5",{ 0.2,0 },1 },
+                         { "LevelP5",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_5
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "5";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP5",{ -0.23,0.035 },1};
+                      right[] = {"LevelP5",{ -0.13,0.035 },1};
+                      down[] = {"LevelP5",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_5: VALP_1_5
+                   {
+                      align = "right";
+                      pos[] = {"LevelP5",{ 0.22,0.035 },1};
+                      right[] = {"LevelP5",{ 0.32,0.035 },1};
+                      down[] = {"LevelP5",{ 0.22,0.085 },1};
+                   };
+                   class LevelM10: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM10",{ -0.2,-0.03 },1 },
+                         { "LevelM10",{ -0.2,0 },1 },
+                         { "LevelM10",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM10",{ -0.1,0 },1 },
+                         { "LevelM10",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM10",{ 0.05,0 },1 },
+                         { "LevelM10",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM10",{ 0.15,0 },1 },
+                         { "LevelM10",{ 0.2,0 },1 },
+                         { "LevelM10",
+                         { 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_10
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -10;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM10",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM10",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM10",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_10: VALM_1_10
+                   {
+                      align = "right";
+                      pos[] = {"LevelM10",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM10",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM10",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP10: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP10",{ -0.2,0.03 },1 },
+                         { "LevelP10",{ -0.2,0 },1 },
+                         { "LevelP10",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP10",{ 0.05,0 },1 },
+                         { "LevelP10",{ 0.2,0 },1 },
+                         { "LevelP10",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_10
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "10";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP10",{ -0.23,0.035 },1};
+                      right[] = {"LevelP10",{ -0.13,0.035 },1};
+                      down[] = {"LevelP10",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_10: VALP_1_10
+                   {
+                      align = "right";
+                      pos[] = {"LevelP10",{ 0.22,0.035 },1};
+                      right[] = {"LevelP10",{ 0.32,0.035 },1};
+                      down[] = {"LevelP10",{ 0.22,0.085 },1};
+                   };
+                   class LevelM15: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM15",{ -0.2,-0.03 },1 },
+                         { "LevelM15",{ -0.2,0 },1 },
+                         { "LevelM15",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM15",{ -0.1,0 },1 },
+                         { "LevelM15",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM15",{ 0.05,0 },1 },
+                         { "LevelM15",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM15",{ 0.15,0 },1 },
+                         { "LevelM15",{ 0.2,0 },1 },
+                         { "LevelM15",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_15
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -15;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM15",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM15",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM15",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_15: VALM_1_15
+                   {
+                      align = "right";
+                      pos[] = {"LevelM15",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM15",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM15",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP15: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP15",{ -0.2,0.03 },1 },
+                         { "LevelP15",{ -0.2,0 },1 },
+                         { "LevelP15",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP15",{ 0.05,0 },1 },
+                         { "LevelP15",{ 0.2,0 },1 },
+                         { "LevelP15",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_15
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "15";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP15",{ -0.23,0.035 },1};
+                      right[] = {"LevelP15",{ -0.13,0.035 },1};
+                      down[] = {"LevelP15",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_15: VALP_1_15
+                   {
+                      align = "right";
+                      pos[] = {"LevelP15",{ 0.22,0.035 },1};
+                      right[] = {"LevelP15",{ 0.32,0.035 },1};
+                      down[] = {"LevelP15",{ 0.22,0.085 },1};
+                   };
+                   class LevelM20: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM20",{ -0.2,-0.03 },1 },
+                         { "LevelM20",{ -0.2,0 },1 },
+                         { "LevelM20",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM20",{ -0.1,0 },1 },
+                         { "LevelM20",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM20",{ 0.05,0 },1 },
+                         { "LevelM20",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM20",{ 0.15,0 },1 },
+                         { "LevelM20",{ 0.2,0 },1 },
+                         { "LevelM20",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_20
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -20;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM20", { -0.23,-0.085 },1};
+                      right[] = {"LevelM20", { -0.13,-0.085 },1};
+                      down[] = {"LevelM20", { -0.23,-0.035 },1};
+                   };
+                   class VALM_2_20: VALM_1_20
+                   {
+                      align = "right";
+                      pos[] = {"LevelM20",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM20",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM20",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP20: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP20",{ -0.2,0.03 },1 },
+                         { "LevelP20",{ -0.2,0 },1 },
+                         { "LevelP20",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP20",{ 0.05,0 },1 },
+                         { "LevelP20",{ 0.2,0 },1 },
+                         { "LevelP20",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_20
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "20";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP20",{ -0.23,0.035 },1};
+                      right[] = {"LevelP20",{ -0.13,0.035 },1};
+                      down[] = {"LevelP20",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_20: VALP_1_20
+                   {
+                      align = "right";
+                      pos[] = {"LevelP20",{ 0.22,0.035 },1};
+                      right[] = {"LevelP20",{ 0.32,0.035 },1};
+                      down[] = {"LevelP20", { 0.22,0.085 },1};
+                   };
+                   class LevelM25: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM25",{ -0.2,-0.03 },1 },
+                         { "LevelM25",{ -0.2,0 },1 },
+                         { "LevelM25",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM25",{ -0.1,0 },1 },
+                         { "LevelM25",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM25",{ 0.05,0 },1 },
+                         { "LevelM25",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM25",{ 0.15,0 },1 },
+                         { "LevelM25",{ 0.2,0 },1 },
+                         { "LevelM25",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_25
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -25;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM25",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM25",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM25",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_25: VALM_1_25
+                   {
+                      align = "right";
+                      pos[] = {"LevelM25",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM25",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM25",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP25: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP25",{ -0.2,0.03 },1 },
+                         { "LevelP25",{ -0.2,0 },1 },
+                         { "LevelP25",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP25",{ 0.05,0 },1 },
+                         { "LevelP25",{ 0.2,0 },1 },
+                         { "LevelP25",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_25
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "25";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP25",{ -0.23,0.035 },1};
+                      right[] = {"LevelP25",{ -0.13,0.035 },1};
+                      down[] = {"LevelP25",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_25: VALP_1_25
+                   {
+                      align = "right";
+                      pos[] = {"LevelP25",{ 0.22,0.035 },1};
+                      right[] = {"LevelP25",{ 0.32,0.035 },1};
+                      down[] = {"LevelP25",{ 0.22,0.085 },1};
+                   };
+                   class LevelM30: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM30",{ -0.2,-0.03 },1 },
+                         { "LevelM30",{ -0.2,0 },1 },
+                         { "LevelM30",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM30",{ -0.1,0 },1 },
+                         { "LevelM30",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM30",{ 0.05,0 },1 },
+                         { "LevelM30",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM30",{ 0.15,0 },1 },
+                         { "LevelM30",{ 0.2,0 },1 },
+                         { "LevelM30",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_30
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -30;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM30",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM30",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM30",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_30: VALM_1_30
+                   {
+                      align = "right";
+                      pos[] = {"LevelM30",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM30",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM30",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP30: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP30",{ -0.2,0.03 },1 },
+                         { "LevelP30",{ -0.2,0 },1 },
+                         { "LevelP30",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP30",{ 0.05,0 },1 },
+                         { "LevelP30",{ 0.2,0 },1 },
+                         { "LevelP30",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_30
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "30";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP30",{ -0.23,0.035 },1};
+                      right[] = {"LevelP30",{ -0.13,0.035 },1};
+                      down[] = {"LevelP30",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_30: VALP_1_30
+                   {
+                      align = "right";
+                      pos[] = {"LevelP30",{ 0.22,0.035 },1};
+                      right[] = {"LevelP30",{ 0.32,0.035 },1};
+                      down[] = {"LevelP30",{ 0.22,0.085 },1};
+                   };
+                   class LevelM35: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM35",{ -0.2,-0.03 },1 },
+                         { "LevelM35",{ -0.2,0 },1 },
+                         { "LevelM35",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM35",{ -0.1,0 },1 },
+                         { "LevelM35",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM35",{ 0.05,0 },1 },
+                         { "LevelM35",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM35",{ 0.15,0 },1 },
+                         { "LevelM35",{ 0.2,0 },1 },
+                         { "LevelM35",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_35
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -35;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM35",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM35",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM35",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_35: VALM_1_35
+                   {
+                      align = "right";
+                      pos[] = {"LevelM35",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM35",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM35",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP35: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP35",{ -0.2,0.03 },1 },
+                         { "LevelP35",{ -0.2,0 },1 },
+                         { "LevelP35",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP35",{ 0.05,0 },1 },
+                         { "LevelP35",{ 0.2,0 },1 },
+                         { "LevelP35",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_35
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "35";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP35",{ -0.23,0.035 },1};
+                      right[] = {"LevelP35",{ -0.13,0.035 },1};
+                      down[] = {"LevelP35",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_35: VALP_1_35
+                   {
+                      align = "right";
+                      pos[] = {"LevelP35",{ 0.22,0.035 },1};
+                      right[] = {"LevelP35",{ 0.32,0.035 },1};
+                      down[] = {"LevelP35",{ 0.22,0.085 },1};
+                   };
+                   class LevelM40: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM40",{ -0.2,-0.03 },1 },
+                         { "LevelM40",{ -0.2,0 },1 },
+                         { "LevelM40",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM40",{ -0.1,0 },1 },
+                         { "LevelM40",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM40",{ 0.05,0 },1 },
+                         { "LevelM40",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM40",{ 0.15,0 },1 },
+                         { "LevelM40",{ 0.2,0 },1 },
+                         { "LevelM40",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_40
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -40;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM40",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM40",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM40",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_40: VALM_1_40
+                   {
+                      align = "right";
+                      pos[] = {"LevelM40",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM40",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM40",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP40: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP40",{ -0.2,0.03 },1 },
+                         { "LevelP40",{ -0.2,0 },1 },
+                         { "LevelP40",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP40",{ 0.05,0 },1 },
+                         { "LevelP40",{ 0.2,0 },1 },
+                         { "LevelP40",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_40
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "40";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP40",{ -0.23,0.035 },1};
+                      right[] = {"LevelP40",{ -0.13,0.035 },1};
+                      down[] = {"LevelP40",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_40: VALP_1_40
+                   {
+                      align = "right";
+                      pos[] = {"LevelP40",{ 0.22,0.035 },1};
+                      right[] = {"LevelP40",{ 0.32,0.035 },1};
+                      down[] = {"LevelP40",{ 0.22,0.085 },1};
+                   };
+                   class LevelM45: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM45",{ -0.2,-0.03 },1 },
+                         { "LevelM45",{ -0.2,0 },1 },
+                         { "LevelM45",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM45",{ -0.1,0 },1 },
+                         { "LevelM45",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM45",{ 0.05,0 },1 },
+                         { "LevelM45",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM45",{ 0.15,0 },1 },
+                         { "LevelM45",{ 0.2,0 },1 },
+                         { "LevelM45",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_45
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -45;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM45",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM45",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM45",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_45: VALM_1_45
+                   {
+                      align = "right";
+                      pos[] = {"LevelM45",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM45",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM45",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP45: Level0
+                   {
+                   type = "line";
+                   points[] =
+                   {
+                      { "LevelP45",{ -0.2,0.03 },1 },
+                      { "LevelP45",{ -0.2,0 },1 },
+                      { "LevelP45",{ -0.05,0 },1 },
+                      {  },
+                      { "LevelP45",{ 0.05,0 },1 },
+                      { "LevelP45",{ 0.2,0 },1 },
+                      { "LevelP45",{ 0.2,0.03 },1 }
+                   };
+                   };
+                   class VALP_1_45
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "45";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP45", { -0.23,0.035 },1};
+                      right[] = {"LevelP45", { -0.13,0.035 },1};
+                      down[] = {"LevelP45", { -0.23,0.085 },1};
+                   };
+                   class VALP_2_45: VALP_1_45
+                   {
+                      align = "right";
+                      pos[] = {"LevelP45",{ 0.22,0.035 },1};
+                      right[] = {"LevelP45",{ 0.32,0.035 },1};
+                      down[] = {"LevelP45",{ 0.22,0.085 },1};
+                   };
+                   class LevelM50: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelM50",{ -0.2,-0.03 },1 },
+                         { "LevelM50",{ -0.2,0 },1 },
+                         { "LevelM50",{ -0.15,0 },1 },
+                         {  },
+                         { "LevelM50",{ -0.1,0 },1 },
+                         { "LevelM50",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelM50",{ 0.05,0 },1 },
+                         { "LevelM50",{ 0.1,0 },1 },
+                         {  },
+                         { "LevelM50",{ 0.15,0 },1 },
+                         { "LevelM50",{ 0.2,0 },1 },
+                         { "LevelM50",{ 0.2,-0.03 },1 }
+                      };
+                   };
+                   class VALM_1_50
+                   {
+                      type = "text";
+                      source = "static";
+                      text = -50;
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelM50",{ -0.23,-0.085 },1};
+                      right[] = {"LevelM50",{ -0.13,-0.085 },1};
+                      down[] = {"LevelM50",{ -0.23,-0.035 },1};
+                   };
+                   class VALM_2_50: VALM_1_50
+                   {
+                      align = "right";
+                      pos[] = {"LevelM50",{ 0.22,-0.085 },1};
+                      right[] = {"LevelM50",{ 0.32,-0.085 },1};
+                      down[] = {"LevelM50",{ 0.22,-0.035 },1};
+                   };
+                   class LevelP50: Level0
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "LevelP50",{ -0.2,0.03 },1 },
+                         { "LevelP50",{ -0.2,0 },1 },
+                         { "LevelP50",{ -0.05,0 },1 },
+                         {  },
+                         { "LevelP50",{ 0.05,0 },1 },
+                         { "LevelP50",{ 0.2,0 },1 },
+                         { "LevelP50",{ 0.2,0.03 },1 }
+                      };
+                   };
+                   class VALP_1_50
+                   {
+                      type = "text";
+                      source = "static";
+                      text = "50";
+                      align = "left";
+                      scale = 1;
+                      sourceScale = 1;
+                      pos[] = {"LevelP50",{ -0.23,0.035 },1};
+                      right[] = {"LevelP50",{ -0.13,0.035 },1};
+                      down[] = {"LevelP50",{ -0.23,0.085 },1};
+                   };
+                   class VALP_2_50: VALP_1_50
+                   {
+                      align = "right";
+                      pos[] = {"LevelP50",{ 0.22,0.035 },1};
+                      right[] = {"LevelP50",{ 0.32,0.035 },1};
+                      down[] = {"LevelP50",{ 0.22,0.085 },1};
+                   };
+		};
+             };
+             class PlaneHeading
+             {
+                clipTL[] = {0.0,1.0};
+                clipBR[] = {1.0,0.0};
+                type = "line";
+                points[] =
+                {
+                   { "Velocity",{ 0,-0.0189189 },1 },
+                   { "Velocity",{ 0.014,-0.0132432 },1 },
+                   { "Velocity",{ 0.02,0 },1 },
+                   { "Velocity",{ 0.014,0.0132432 },1 },
+                   { "Velocity",{ 0,0.0189189 },1 },
+                   { "Velocity",{ -0.014,0.0132432 },1 },
+                   { "Velocity",{ -0.02,0 },1 },
+                   { "Velocity",{ -0.014,-0.0132432 },1 },
+                   { "Velocity",{ 0,-0.0189189 },1 },
+                   {  },
+                   { "Velocity",{ 0.04,0 },1 },
+                   { "Velocity",{ 0.02,0 },1 },
+                   {  },
+                   { "Velocity",{ -0.04,0 },1 },
+                   { "Velocity",{ -0.02,0 },1 },
+                   {  },
+                   { "Velocity",{ 0,-0.0378378 },1 },
+                   { "Velocity",{ 0,-0.0189189 },1 },
+                   {  }
+                };
+             };
+             class Static
+             {
+                clipTL[] = {0.0,0.1};
+                clipBR[] = {1.0,0.0};
+                type = "line";
+                points[] =
+                {
+                   {{ 0.21,0.52 },1 },
+                   {{ 0.19,0.5 },1 },
+                   {{ 0.21,0.48 },1 },
+                   {},
+                   {{ 0.18,0.2 },1 },
+                   {{ 0.18,0.85 },1 },
+                   {},
+                   {{ 0.79,0.52 },1 },
+                   {{ 0.81,0.5 },1 },
+                   {{ 0.79,0.48 },1 },
+                   {},
+                   {{ 0.82,0.2 },1 },
+                   {{ 0.82,0.85 },1 },
+                   {},
+                   {{ 0.52,"0.08+0.01" },1 },
+                   {{ 0.5,"0.06+0.01" },1 },
+                   {{ 0.48,"0.08+0.01" },1 },
+                   {  },
+                   {{ 0.2,"0.055+0.01" },1 },
+                   {{ 0.8,"0.055+0.01" },1 },
+                   {}
+                };
+             };
+     class SpeedNumberbox
      {
-      clipTL[] = {0.0,0.15};
-      clipBR[] = {1.0,0.75};
-      class Dimmed
+      class Text
       {
-       class Level0
-       {
-        type = "line";
-        points[] = {{ "Level0",{ 0.4,0.0 },1 },{ "Level0",{ 0.05,0.0 },1 },{  },{ "Level0",{ -0.05,0.0 },1 },{ "Level0",{ -0.4,0.0 },1 }};
-       };
-       class LevelM5: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM5",{ -0.2,0.005 },1 },{ "LevelM5",{ -0.17,0.004 },1 },{  },{ "LevelM5",{ -0.14,0.003 },1 },{ "LevelM5",{ -0.11,0.002 },1 },{  },{ "LevelM5",{ -0.08,0.001 },1 },{ "LevelM5",{ -0.05,0 },1 },{ "LevelM5",{ -0.05,-0.03 },1 },{  },{ "LevelM5",{ 0.05,-0.03 },1 },{ "LevelM5",{ 0.05,0 },1 },{ "LevelM5",{ 0.08,0.001 },1 },{  },{ "LevelM5",{ 0.11,0.002 },1 },{ "LevelM5",{ 0.14,0.003 },1 },{  },{ "LevelM5",{ 0.17,0.004 },1 },{ "LevelM5",{ 0.2,0.005 },1 }};
-       };
-       class VALM_1_5
-       {
-        type = "text";
-        source = "static";
-        text = -5;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM5",{ -0.18,-0.082 },1};
-        right[] = {"LevelM5",{ -0.1,-0.082 },1};
-        down[] = {"LevelM5",{ -0.18,-0.032 },1};
-       };
-       class LevelP5: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP5",{ -0.2,0.03 },1 },{ "LevelP5",{ -0.2,0 },1 },{ "LevelP5",{ -0.05,0 },1 },{  },{ "LevelP5",{ 0.05,0 },1 },{ "LevelP5",{ 0.2,0 },1 },{ "LevelP5",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_5
-       {
-        type = "text";
-        source = "static";
-        text = "5";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP5",{ -0.18,0.032 },1};
-        right[] = {"LevelP5",{ -0.1,0.032 },1};
-        down[] = {"LevelP5",{ -0.18,0.082 },1};
-       };
-       class LevelM10: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM10",{ -0.2,0.01 },1 },{ "LevelM10",{ -0.17,0.008 },1 },{  },{ "LevelM10",{ -0.14,0.006 },1 },{ "LevelM10",{ -0.11,0.004 },1 },{  },{ "LevelM10",{ -0.08,0.002 },1 },{ "LevelM10",{ -0.05,0 },1 },{ "LevelM10",{ -0.05,-0.03 },1 },{  },{ "LevelM10",{ 0.05,-0.03 },1 },{ "LevelM10",{ 0.05,0 },1 },{ "LevelM10",{ 0.08,0.002 },1 },{  },{ "LevelM10",{ 0.11,0.004 },1 },{ "LevelM10",{ 0.14,0.006 },1 },{  },{ "LevelM10",{ 0.17,0.008 },1 },{ "LevelM10",{ 0.2,0.01 },1 }};
-       };
-       class VALM_1_10
-       {
-        type = "text";
-        source = "static";
-        text = -10;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM10",{ -0.18,-0.082 },1};
-        right[] = {"LevelM10",{ -0.1,-0.082 },1};
-        down[] = {"LevelM10",{ -0.18,-0.032 },1};
-       };
-       class LevelP10: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP10",{ -0.2,0.03 },1 },{ "LevelP10",{ -0.2,0 },1 },{ "LevelP10",{ -0.05,0 },1 },{  },{ "LevelP10",{ 0.05,0 },1 },{ "LevelP10",{ 0.2,0 },1 },{ "LevelP10",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_10
-       {
-        type = "text";
-        source = "static";
-        text = "10";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP10",{ -0.18,0.032 },1};
-        right[] = {"LevelP10",{ -0.1,0.032 },1};
-        down[] = {"LevelP10",{ -0.18,0.082 },1};
-       };
-       class LevelM15: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM15",{ -0.2,0.015 },1 },{ "LevelM15",{ -0.17,0.012 },1 },{  },{ "LevelM15",{ -0.14,0.009 },1 },{ "LevelM15",{ -0.11,0.006 },1 },{  },{ "LevelM15",{ -0.08,0.003 },1 },{ "LevelM15",{ -0.05,0 },1 },{ "LevelM15",{ -0.05,-0.03 },1 },{  },{ "LevelM15",{ 0.05,-0.03 },1 },{ "LevelM15",{ 0.05,0 },1 },{ "LevelM15",{ 0.08,0.003 },1 },{  },{ "LevelM15",{ 0.11,0.006 },1 },{ "LevelM15",{ 0.14,0.009 },1 },{  },{ "LevelM15",{ 0.17,0.012 },1 },{ "LevelM15",{ 0.2,0.015 },1 }};
-       };
-       class VALM_1_15
-       {
-        type = "text";
-        source = "static";
-        text = -15;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM15",{ -0.18,-0.082 },1};
-        right[] = {"LevelM15",{ -0.1,-0.082 },1};
-        down[] = {"LevelM15",{ -0.18,-0.032 },1};
-       };
-       class LevelP15: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP15",{ -0.2,0.03 },1 },{ "LevelP15",{ -0.2,0 },1 },{ "LevelP15",{ -0.05,0 },1 },{  },{ "LevelP15",{ 0.05,0 },1 },{ "LevelP15",{ 0.2,0 },1 },{ "LevelP15",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_15
-       {
-        type = "text";
-        source = "static";
-        text = "15";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP15",{ -0.18,0.032 },1};
-        right[] = {"LevelP15",{ -0.1,0.032 },1};
-        down[] = {"LevelP15",{ -0.18,0.082 },1};
-       };
-       class LevelM20: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM20",{ -0.2,0.02 },1 },{ "LevelM20",{ -0.17,0.016 },1 },{  },{ "LevelM20",{ -0.14,0.012 },1 },{ "LevelM20",{ -0.11,0.008 },1 },{  },{ "LevelM20",{ -0.08,0.004 },1 },{ "LevelM20",{ -0.05,0 },1 },{ "LevelM20",{ -0.05,-0.03 },1 },{  },{ "LevelM20",{ 0.05,-0.03 },1 },{ "LevelM20",{ 0.05,0 },1 },{ "LevelM20",{ 0.08,0.004 },1 },{  },{ "LevelM20",{ 0.11,0.008 },1 },{ "LevelM20",{ 0.14,0.012 },1 },{  },{ "LevelM20",{ 0.17,0.016 },1 },{ "LevelM20",{ 0.2,0.02 },1 }};
-       };
-       class VALM_1_20
-       {
-        type = "text";
-        source = "static";
-        text = -20;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM20",{ -0.18,-0.082 },1};
-        right[] = {"LevelM20",{ -0.1,-0.082 },1};
-        down[] = {"LevelM20",{ -0.18,-0.032 },1};
-       };
-       class LevelP20: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP20",{ -0.2,0.03 },1 },{ "LevelP20",{ -0.2,0 },1 },{ "LevelP20",{ -0.05,0 },1 },{  },{ "LevelP20",{ 0.05,0 },1 },{ "LevelP20",{ 0.2,0 },1 },{ "LevelP20",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_20
-       {
-        type = "text";
-        source = "static";
-        text = "20";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP20",{ -0.18,0.032 },1};
-        right[] = {"LevelP20",{ -0.1,0.032 },1};
-        down[] = {"LevelP20",{ -0.18,0.082 },1};
-       };
-       class LevelM25: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM25",{ -0.2,0.025 },1 },{ "LevelM25",{ -0.17,0.02 },1 },{  },{ "LevelM25",{ -0.14,0.015 },1 },{ "LevelM25",{ -0.11,0.01 },1 },{  },{ "LevelM25",{ -0.08,0.005 },1 },{ "LevelM25",{ -0.05,0 },1 },{ "LevelM25",{ -0.05,-0.03 },1 },{  },{ "LevelM25",{ 0.05,-0.03 },1 },{ "LevelM25",{ 0.05,0 },1 },{ "LevelM25",{ 0.08,0.005 },1 },{  },{ "LevelM25",{ 0.11,0.01 },1 },{ "LevelM25",{ 0.14,0.015 },1 },{  },{ "LevelM25",{ 0.17,0.02 },1 },{ "LevelM25",{ 0.2,0.025 },1 }};
-       };
-       class VALM_1_25
-       {
-        type = "text";
-        source = "static";
-        text = -25;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM25",{ -0.18,-0.082 },1};
-        right[] = {"LevelM25",{ -0.1,-0.082 },1};
-        down[] = {"LevelM25",{ -0.18,-0.032 },1};
-       };
-       class LevelP25: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP25",{ -0.2,0.03 },1 },{ "LevelP25",{ -0.2,0 },1 },{ "LevelP25",{ -0.05,0 },1 },{  },{ "LevelP25",{ 0.05,0 },1 },{ "LevelP25",{ 0.2,0 },1 },{ "LevelP25",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_25
-       {
-        type = "text";
-        source = "static";
-        text = "25";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP25",{ -0.18,0.032 },1};
-        right[] = {"LevelP25",{ -0.1,0.032 },1};
-        down[] = {"LevelP25",{ -0.18,0.082 },1};
-       };
-       class LevelM30: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM30",{ -0.2,0.03 },1 },{ "LevelM30",{ -0.17,0.024 },1 },{  },{ "LevelM30",{ -0.14,0.018 },1 },{ "LevelM30",{ -0.11,0.012 },1 },{  },{ "LevelM30",{ -0.08,0.006 },1 },{ "LevelM30",{ -0.05,0 },1 },{ "LevelM30",{ -0.05,-0.03 },1 },{  },{ "LevelM30",{ 0.05,-0.03 },1 },{ "LevelM30",{ 0.05,0 },1 },{ "LevelM30",{ 0.08,0.006 },1 },{  },{ "LevelM30",{ 0.11,0.012 },1 },{ "LevelM30",{ 0.14,0.018 },1 },{  },{ "LevelM30",{ 0.17,0.024 },1 },{ "LevelM30",{ 0.2,0.03 },1 }};
-       };
-       class VALM_1_30
-       {
-        type = "text";
-        source = "static";
-        text = -30;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM30",{ -0.18,-0.082 },1};
-        right[] = {"LevelM30",{ -0.1,-0.082 },1};
-        down[] = {"LevelM30",{ -0.18,-0.032 },1};
-       };
-       class LevelP30: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP30",{ -0.2,0.03 },1 },{ "LevelP30",{ -0.2,0 },1 },{ "LevelP30",{ -0.05,0 },1 },{  },{ "LevelP30",{ 0.05,0 },1 },{ "LevelP30",{ 0.2,0 },1 },{ "LevelP30",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_30
-       {
-        type = "text";
-        source = "static";
-        text = "30";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP30",{ -0.18,0.032 },1};
-        right[] = {"LevelP30",{ -0.1,0.032 },1};
-        down[] = {"LevelP30",{ -0.18,0.082 },1};
-       };
-       class LevelM35: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM35",{ -0.2,0.035 },1 },{ "LevelM35",{ -0.17,0.028 },1 },{  },{ "LevelM35",{ -0.14,0.021 },1 },{ "LevelM35",{ -0.11,0.014 },1 },{  },{ "LevelM35",{ -0.08,0.007 },1 },{ "LevelM35",{ -0.05,0 },1 },{ "LevelM35",{ -0.05,-0.03 },1 },{  },{ "LevelM35",{ 0.05,-0.03 },1 },{ "LevelM35",{ 0.05,0 },1 },{ "LevelM35",{ 0.08,0.007 },1 },{  },{ "LevelM35",{ 0.11,0.014 },1 },{ "LevelM35",{ 0.14,0.021 },1 },{  },{ "LevelM35",{ 0.17,0.028 },1 },{ "LevelM35",{ 0.2,0.035 },1 }};
-       };
-       class VALM_1_35
-       {
-        type = "text";
-        source = "static";
-        text = -35;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM35",{ -0.18,-0.082 },1};
-        right[] = {"LevelM35",{ -0.1,-0.082 },1};
-        down[] = {"LevelM35",{ -0.18,-0.032 },1};
-       };
-       class LevelP35: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP35",{ -0.2,0.03 },1 },{ "LevelP35",{ -0.2,0 },1 },{ "LevelP35",{ -0.05,0 },1 },{  },{ "LevelP35",{ 0.05,0 },1 },{ "LevelP35",{ 0.2,0 },1 },{ "LevelP35",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_35
-       {
-        type = "text";
-        source = "static";
-        text = "35";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP35",{ -0.18,0.032 },1};
-        right[] = {"LevelP35",{ -0.1,0.032 },1};
-        down[] = {"LevelP35",{ -0.18,0.082 },1};
-       };
-       class LevelM40: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM40",{ -0.2,0.04 },1 },{ "LevelM40",{ -0.17,0.032 },1 },{  },{ "LevelM40",{ -0.14,0.024 },1 },{ "LevelM40",{ -0.11,0.016 },1 },{  },{ "LevelM40",{ -0.08,0.008 },1 },{ "LevelM40",{ -0.05,0 },1 },{ "LevelM40",{ -0.05,-0.03 },1 },{  },{ "LevelM40",{ 0.05,-0.03 },1 },{ "LevelM40",{ 0.05,0 },1 },{ "LevelM40",{ 0.08,0.008 },1 },{  },{ "LevelM40",{ 0.11,0.016 },1 },{ "LevelM40",{ 0.14,0.024 },1 },{  },{ "LevelM40",{ 0.17,0.032 },1 },{ "LevelM40",{ 0.2,0.04 },1 }};
-       };
-       class VALM_1_40
-       {
-        type = "text";
-        source = "static";
-        text = -40;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM40",{ -0.18,-0.082 },1};
-        right[] = {"LevelM40",{ -0.1,-0.082 },1};
-        down[] = {"LevelM40",{ -0.18,-0.032 },1};
-       };
-       class LevelP40: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP40",{ -0.2,0.03 },1 },{ "LevelP40",{ -0.2,0 },1 },{ "LevelP40",{ -0.05,0 },1 },{  },{ "LevelP40",{ 0.05,0 },1 },{ "LevelP40",{ 0.2,0 },1 },{ "LevelP40",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_40
-       {
-        type = "text";
-        source = "static";
-        text = "40";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP40",{ -0.18,0.032 },1};
-        right[] = {"LevelP40",{ -0.1,0.032 },1};
-        down[] = {"LevelP40",{ -0.18,0.082 },1};
-       };
-       class LevelM45: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM45",{ -0.2,0.045 },1 },{ "LevelM45",{ -0.17,0.036 },1 },{  },{ "LevelM45",{ -0.14,0.027 },1 },{ "LevelM45",{ -0.11,0.018 },1 },{  },{ "LevelM45",{ -0.08,0.009 },1 },{ "LevelM45",{ -0.05,0 },1 },{ "LevelM45",{ -0.05,-0.03 },1 },{  },{ "LevelM45",{ 0.05,-0.03 },1 },{ "LevelM45",{ 0.05,0 },1 },{ "LevelM45",{ 0.08,0.009 },1 },{  },{ "LevelM45",{ 0.11,0.018 },1 },{ "LevelM45",{ 0.14,0.027 },1 },{  },{ "LevelM45",{ 0.17,0.036 },1 },{ "LevelM45",{ 0.2,0.045 },1 }};
-       };
-       class VALM_1_45
-       {
-        type = "text";
-        source = "static";
-        text = -45;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM45",{ -0.18,-0.082 },1};
-        right[] = {"LevelM45",{ -0.1,-0.082 },1};
-        down[] = {"LevelM45",{ -0.18,-0.032 },1};
-       };
-       class LevelP45: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP45",{ -0.2,0.03 },1 },{ "LevelP45",{ -0.2,0 },1 },{ "LevelP45",{ -0.05,0 },1 },{  },{ "LevelP45",{ 0.05,0 },1 },{ "LevelP45",{ 0.2,0 },1 },{ "LevelP45",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_45
-       {
-        type = "text";
-        source = "static";
-        text = "45";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP45",{ -0.18,0.032 },1};
-        right[] = {"LevelP45",{ -0.1,0.032 },1};
-        down[] = {"LevelP45",{ -0.18,0.082 },1};
-       };
-       class LevelM50: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM50",{ -0.2,0.05 },1 },{ "LevelM50",{ -0.17,0.04 },1 },{  },{ "LevelM50",{ -0.14,0.03 },1 },{ "LevelM50",{ -0.11,0.02 },1 },{  },{ "LevelM50",{ -0.08,0.01 },1 },{ "LevelM50",{ -0.05,0 },1 },{ "LevelM50",{ -0.05,-0.03 },1 },{  },{ "LevelM50",{ 0.05,-0.03 },1 },{ "LevelM50",{ 0.05,0 },1 },{ "LevelM50",{ 0.08,0.01 },1 },{  },{ "LevelM50",{ 0.11,0.02 },1 },{ "LevelM50",{ 0.14,0.03 },1 },{  },{ "LevelM50",{ 0.17,0.04 },1 },{ "LevelM50",{ 0.2,0.05 },1 }};
-       };
-       class VALM_1_50
-       {
-        type = "text";
-        source = "static";
-        text = -50;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM50",{ -0.18,-0.082 },1};
-        right[] = {"LevelM50",{ -0.1,-0.082 },1};
-        down[] = {"LevelM50",{ -0.18,-0.032 },1};
-       };
-       class LevelP50: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP50",{ -0.2,0.03 },1 },{ "LevelP50",{ -0.2,0 },1 },{ "LevelP50",{ -0.05,0 },1 },{  },{ "LevelP50",{ 0.05,0 },1 },{ "LevelP50",{ 0.2,0 },1 },{ "LevelP50",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_50
-       {
-        type = "text";
-        source = "static";
-        text = "50";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP50",{ -0.18,0.032 },1};
-        right[] = {"LevelP50",{ -0.1,0.032 },1};
-        down[] = {"LevelP50",{ -0.18,0.082 },1};
-       };
-       class LevelM55: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM55",{ -0.2,0.055 },1 },{ "LevelM55",{ -0.17,0.044 },1 },{  },{ "LevelM55",{ -0.14,0.033 },1 },{ "LevelM55",{ -0.11,0.022 },1 },{  },{ "LevelM55",{ -0.08,0.011 },1 },{ "LevelM55",{ -0.05,0 },1 },{ "LevelM55",{ -0.05,-0.03 },1 },{  },{ "LevelM55",{ 0.05,-0.03 },1 },{ "LevelM55",{ 0.05,0 },1 },{ "LevelM55",{ 0.08,0.011 },1 },{  },{ "LevelM55",{ 0.11,0.022 },1 },{ "LevelM55",{ 0.14,0.033 },1 },{  },{ "LevelM55",{ 0.17,0.044 },1 },{ "LevelM55",{ 0.2,0.055 },1 }};
-       };
-       class VALM_1_55
-       {
-        type = "text";
-        source = "static";
-        text = -55;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM55",{ -0.18,-0.082 },1};
-        right[] = {"LevelM55",{ -0.1,-0.082 },1};
-        down[] = {"LevelM55",{ -0.18,-0.032 },1};
-       };
-       class LevelP55: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP55",{ -0.2,0.03 },1 },{ "LevelP55",{ -0.2,0 },1 },{ "LevelP55",{ -0.05,0 },1 },{  },{ "LevelP55",{ 0.05,0 },1 },{ "LevelP55",{ 0.2,0 },1 },{ "LevelP55",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_55
-       {
-        type = "text";
-        source = "static";
-        text = "55";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP55",{ -0.18,0.032 },1};
-        right[] = {"LevelP55",{ -0.1,0.032 },1};
-        down[] = {"LevelP55",{ -0.18,0.082 },1};
-       };
-       class LevelM60: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM60",{ -0.2,0.06 },1 },{ "LevelM60",{ -0.17,0.048 },1 },{  },{ "LevelM60",{ -0.14,0.036 },1 },{ "LevelM60",{ -0.11,0.024 },1 },{  },{ "LevelM60",{ -0.08,0.012 },1 },{ "LevelM60",{ -0.05,0 },1 },{ "LevelM60",{ -0.05,-0.03 },1 },{  },{ "LevelM60",{ 0.05,-0.03 },1 },{ "LevelM60",{ 0.05,0 },1 },{ "LevelM60",{ 0.08,0.012 },1 },{  },{ "LevelM60",{ 0.11,0.024 },1 },{ "LevelM60",{ 0.14,0.036 },1 },{  },{ "LevelM60",{ 0.17,0.048 },1 },{ "LevelM60",{ 0.2,0.06 },1 }};
-       };
-       class VALM_1_60
-       {
-        type = "text";
-        source = "static";
-        text = -60;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM60",{ -0.18,-0.082 },1};
-        right[] = {"LevelM60",{ -0.1,-0.082 },1};
-        down[] = {"LevelM60",{ -0.18,-0.032 },1};
-       };
-       class LevelP60: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP60",{ -0.2,0.03 },1 },{ "LevelP60",{ -0.2,0 },1 },{ "LevelP60",{ -0.05,0 },1 },{  },{ "LevelP60",{ 0.05,0 },1 },{ "LevelP60",{ 0.2,0 },1 },{ "LevelP60",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_60
-       {
-        type = "text";
-        source = "static";
-        text = "60";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP60",{ -0.18,0.032 },1};
-        right[] = {"LevelP60",{ -0.1,0.032 },1};
-        down[] = {"LevelP60",{ -0.18,0.082 },1};
-       };
-       class LevelM65: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM65",{ -0.2,0.065 },1 },{ "LevelM65",{ -0.17,0.052 },1 },{  },{ "LevelM65",{ -0.14,0.039 },1 },{ "LevelM65",{ -0.11,0.026 },1 },{  },{ "LevelM65",{ -0.08,0.013 },1 },{ "LevelM65",{ -0.05,0 },1 },{ "LevelM65",{ -0.05,-0.03 },1 },{  },{ "LevelM65",{ 0.05,-0.03 },1 },{ "LevelM65",{ 0.05,0 },1 },{ "LevelM65",{ 0.08,0.013 },1 },{  },{ "LevelM65",{ 0.11,0.026 },1 },{ "LevelM65",{ 0.14,0.039 },1 },{  },{ "LevelM65",{ 0.17,0.052 },1 },{ "LevelM65",{ 0.2,0.065 },1 }};
-       };
-       class VALM_1_65
-       {
-        type = "text";
-        source = "static";
-        text = -65;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM65",{ -0.18,-0.082 },1};
-        right[] = {"LevelM65",{ -0.1,-0.082 },1};
-        down[] = {"LevelM65",{ -0.18,-0.032 },1};
-       };
-       class LevelP65: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP65",{ -0.2,0.03 },1 },{ "LevelP65",{ -0.2,0 },1 },{ "LevelP65",{ -0.05,0 },1 },{  },{ "LevelP65",{ 0.05,0 },1 },{ "LevelP65",{ 0.2,0 },1 },{ "LevelP65",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_65
-       {
-        type = "text";
-        source = "static";
-        text = "65";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP65",{ -0.18,0.032 },1};
-        right[] = {"LevelP65",{ -0.1,0.032 },1};
-        down[] = {"LevelP65",{ -0.18,0.082 },1};
-       };
-       class LevelM70: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM70",{ -0.2,0.07 },1 },{ "LevelM70",{ -0.17,0.056 },1 },{  },{ "LevelM70",{ -0.14,0.042 },1 },{ "LevelM70",{ -0.11,0.028 },1 },{  },{ "LevelM70",{ -0.08,0.014 },1 },{ "LevelM70",{ -0.05,0 },1 },{ "LevelM70",{ -0.05,-0.03 },1 },{  },{ "LevelM70",{ 0.05,-0.03 },1 },{ "LevelM70",{ 0.05,0 },1 },{ "LevelM70",{ 0.08,0.014 },1 },{  },{ "LevelM70",{ 0.11,0.028 },1 },{ "LevelM70",{ 0.14,0.042 },1 },{  },{ "LevelM70",{ 0.17,0.056 },1 },{ "LevelM70",{ 0.2,0.07 },1 }};
-       };
-       class VALM_1_70
-       {
-        type = "text";
-        source = "static";
-        text = -70;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM70",{ -0.18,-0.082 },1};
-        right[] = {"LevelM70",{ -0.1,-0.082 },1};
-        down[] = {"LevelM70",{ -0.18,-0.032 },1};
-       };
-       class LevelP70: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP70",{ -0.2,0.03 },1 },{ "LevelP70",{ -0.2,0 },1 },{ "LevelP70",{ -0.05,0 },1 },{  },{ "LevelP70",{ 0.05,0 },1 },{ "LevelP70",{ 0.2,0 },1 },{ "LevelP70",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_70
-       {
-        type = "text";
-        source = "static";
-        text = "70";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP70",{ -0.18,0.032 },1};
-        right[] = {"LevelP70",{ -0.1,0.032 },1};
-        down[] = {"LevelP70",{ -0.18,0.082 },1};
-       };
-       class LevelM75: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM75",{ -0.2,0.075 },1 },{ "LevelM75",{ -0.17,0.06 },1 },{  },{ "LevelM75",{ -0.14,0.045 },1 },{ "LevelM75",{ -0.11,0.03 },1 },{  },{ "LevelM75",{ -0.08,0.015 },1 },{ "LevelM75",{ -0.05,0 },1 },{ "LevelM75",{ -0.05,-0.03 },1 },{  },{ "LevelM75",{ 0.05,-0.03 },1 },{ "LevelM75",{ 0.05,0 },1 },{ "LevelM75",{ 0.08,0.015 },1 },{  },{ "LevelM75",{ 0.11,0.03 },1 },{ "LevelM75",{ 0.14,0.045 },1 },{  },{ "LevelM75",{ 0.17,0.06 },1 },{ "LevelM75",{ 0.2,0.075 },1 }};
-       };
-       class VALM_1_75
-       {
-        type = "text";
-        source = "static";
-        text = -75;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM75",{ -0.18,-0.082 },1};
-        right[] = {"LevelM75",{ -0.1,-0.082 },1};
-        down[] = {"LevelM75",{ -0.18,-0.032 },1};
-       };
-       class LevelP75: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP75",{ -0.2,0.03 },1 },{ "LevelP75",{ -0.2,0 },1 },{ "LevelP75",{ -0.05,0 },1 },{  },{ "LevelP75",{ 0.05,0 },1 },{ "LevelP75",{ 0.2,0 },1 },{ "LevelP75",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_75
-       {
-        type = "text";
-        source = "static";
-        text = "75";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP75",{ -0.18,0.032 },1};
-        right[] = {"LevelP75",{ -0.1,0.032 },1};
-        down[] = {"LevelP75",{ -0.18,0.082 },1};
-       };
-       class LevelM80: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM80",{ -0.2,0.08 },1 },{ "LevelM80",{ -0.17,0.064 },1 },{  },{ "LevelM80",{ -0.14,0.048 },1 },{ "LevelM80",{ -0.11,0.032 },1 },{  },{ "LevelM80",{ -0.08,0.016 },1 },{ "LevelM80",{ -0.05,0 },1 },{ "LevelM80",{ -0.05,-0.03 },1 },{  },{ "LevelM80",{ 0.05,-0.03 },1 },{ "LevelM80",{ 0.05,0 },1 },{ "LevelM80",{ 0.08,0.016 },1 },{  },{ "LevelM80",{ 0.11,0.032 },1 },{ "LevelM80",{ 0.14,0.048 },1 },{  },{ "LevelM80",{ 0.17,0.064 },1 },{ "LevelM80",{ 0.2,0.08 },1 }};
-       };
-       class VALM_1_80
-       {
-        type = "text";
-        source = "static";
-        text = -80;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM80",{ -0.18,-0.082 },1};
-        right[] = {"LevelM80",{ -0.1,-0.082 },1};
-        down[] = {"LevelM80",{ -0.18,-0.032 },1};
-       };
-       class LevelP80: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP80",{ -0.2,0.03 },1 },{ "LevelP80",{ -0.2,0 },1 },{ "LevelP80",{ -0.05,0 },1 },{  },{ "LevelP80",{ 0.05,0 },1 },{ "LevelP80",{ 0.2,0 },1 },{ "LevelP80",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_80
-       {
-        type = "text";
-        source = "static";
-        text = "80";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP80",{ -0.18,0.032 },1};
-        right[] = {"LevelP80",{ -0.1,0.032 },1};
-        down[] = {"LevelP80",{ -0.18,0.082 },1};
-       };
-       class LevelM85: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM85",{ -0.2,0.085 },1 },{ "LevelM85",{ -0.17,0.068 },1 },{  },{ "LevelM85",{ -0.14,0.051 },1 },{ "LevelM85",{ -0.11,0.034 },1 },{  },{ "LevelM85",{ -0.08,0.017 },1 },{ "LevelM85",{ -0.05,0 },1 },{ "LevelM85",{ -0.05,-0.03 },1 },{  },{ "LevelM85",{ 0.05,-0.03 },1 },{ "LevelM85",{ 0.05,0 },1 },{ "LevelM85",{ 0.08,0.017 },1 },{  },{ "LevelM85",{ 0.11,0.034 },1 },{ "LevelM85",{ 0.14,0.051 },1 },{  },{ "LevelM85",{ 0.17,0.068 },1 },{ "LevelM85",{ 0.2,0.085 },1 }};
-       };
-       class VALM_1_85
-       {
-        type = "text";
-        source = "static";
-        text = -85;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM85",{ -0.18,-0.082 },1};
-        right[] = {"LevelM85",{ -0.1,-0.082 },1};
-        down[] = {"LevelM85",{ -0.18,-0.032 },1};
-       };
-       class LevelP85: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP85",{ -0.2,0.03 },1 },{ "LevelP85",{ -0.2,0 },1 },{ "LevelP85",{ -0.05,0 },1 },{  },{ "LevelP85",{ 0.05,0 },1 },{ "LevelP85",{ 0.2,0 },1 },{ "LevelP85",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_85
-       {
-        type = "text";
-        source = "static";
-        text = "85";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP85",{ -0.18,0.032 },1};
-        right[] = {"LevelP85",{ -0.1,0.032 },1};
-        down[] = {"LevelP85",{ -0.18,0.082 },1};
-       };
-       class LevelM90: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelM90",{ -0.2,0.09 },1 },{ "LevelM90",{ -0.17,0.072 },1 },{  },{ "LevelM90",{ -0.14,0.054 },1 },{ "LevelM90",{ -0.11,0.036 },1 },{  },{ "LevelM90",{ -0.08,0.018 },1 },{ "LevelM90",{ -0.05,0 },1 },{ "LevelM90",{ -0.05,-0.03 },1 },{  },{ "LevelM90",{ 0.05,-0.03 },1 },{ "LevelM90",{ 0.05,0 },1 },{ "LevelM90",{ 0.08,0.018 },1 },{  },{ "LevelM90",{ 0.11,0.036 },1 },{ "LevelM90",{ 0.14,0.054 },1 },{  },{ "LevelM90",{ 0.17,0.072 },1 },{ "LevelM90",{ 0.2,0.09 },1 }};
-       };
-       class VALM_1_90
-       {
-        type = "text";
-        source = "static";
-        text = -90;
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelM90",{ -0.18,-0.082 },1};
-        right[] = {"LevelM90",{ -0.1,-0.082 },1};
-        down[] = {"LevelM90",{ -0.18,-0.032 },1};
-       };
-       class LevelP90: Level0
-       {
-        type = "line";
-        points[] = {{ "LevelP90",{ -0.2,0.03 },1 },{ "LevelP90",{ -0.2,0 },1 },{ "LevelP90",{ -0.05,0 },1 },{  },{ "LevelP90",{ 0.05,0 },1 },{ "LevelP90",{ 0.2,0 },1 },{ "LevelP90",{ 0.2,0.03 },1 }};
-       };
-       class VALP_1_90
-       {
-        type = "text";
-        source = "static";
-        text = "90";
-        align = "right";
-        scale = 1;
-        sourceScale = 1;
-        pos[] = {"LevelP90",{ -0.18,0.032 },1};
-        right[] = {"LevelP90",{ -0.1,0.032 },1};
-        down[] = {"LevelP90",{ -0.18,0.082 },1};
-       };
+       type = "text";
+       source = "static";
+       text = "SPD";
+       align = "right";
+       scale = 1;
+      pos[] = {{ 0.2,0.311856 },1};
+      right[] = {{ 0.26,0.311856 },1};
+      down[] = {{ 0.2,0.368557 },1};
       };
-     };
+      class Box
+      {
+       type = "line";
+       points[] = {{ { 0.18,0.368557 },1 },{ { -1,0.368557 },1 },{ { -1,0.311856 },1 },{ { 0.18,0.311856 },1 },{ { 0.18,0.368557 },1 }};
+      };
+};
      class SpeedNumber
      {
       type = "text";
@@ -1314,10 +1480,32 @@ class CfgVehicles
       right[] = {{ 0.16,0.311856 },1};
       down[] = {{ 0.1,0.368557 },1};
      };
-     class AltNumber: SpeedNumber
+     class AltNumberASL
      {
+      class Text
+      {
+       type = "text";
+       source = "static";
+       text = "ASL";
+       align = "left";
+       scale = 1;
+      pos[] = {{ 0.8,0.311856 },1};
+      right[] = {{ 0.86,0.311856 },1};
+      down[] = {{ 0.8,0.368557 },1};
+      };
+      class Box
+      {
+       type = "line";
+       points[] = {{ { 0.82,0.368557 },1 },{ { 1,0.368557 },1 },{ { 1,0.311856 },1 },{ { 0.82,0.311856 },1 },{ { 0.82,0.368557 },1 }};
+      };
+};
+     class AltNumber
+     {
+	type = "text";
       source = "altitudeASL";
       sourceScale = 1;
+	align = "center";
+	scale = 1;
       pos[] = {{ 0.9,0.311856 },1};
       right[] = {{ 0.96,0.311856 },1};
       down[] = {{ 0.9,0.368557 },1};
@@ -1328,7 +1516,7 @@ class CfgVehicles
       {
        type = "text";
        source = "static";
-       text = "H";
+       text = "AGL";
        align = "left";
        scale = 1;
        pos[] = {{ 0.8,0.53866 },1};
@@ -1338,22 +1526,23 @@ class CfgVehicles
       class Box
       {
        type = "line";
-       points[] = {{ { 0.81,0.595361 },1 },{ { 1,0.595361 },1 },{ { 1,0.53866 },1 },{ { 0.81,0.53866 },1 },{ { 0.81,0.595361 },1 }};
+       points[] = {{ { 0.82,0.595361 },1 },{ { 1,0.595361 },1 },{ { 1,0.53866 },1 },{ { 0.82,0.53866 },1 },{ { 0.82,0.595361 },1 }};
       };
       class AltNumber
       {
        type = "text";
        source = "altitudeAGL";
        sourceScale = 1;
-       align = "left";
+       align = "center";
        scale = 1;
-       pos[] = {{ 0.99,0.53866 },1};
-       right[] = {{ 1.05,0.53866 },1};
-       down[] = {{ 0.99,0.595361 },1};
+       pos[] = {{ 0.9,0.53866 },1};
+       right[] = {{ 0.96,0.53866 },1};
+       down[] = {{ 0.9,0.595361 },1};
       };
-     };
+};
      class Gear
      {
+	condition = "ils";
       color[] = {0.0,0.125,0.1};
       class Text
       {
@@ -1366,25 +1555,10 @@ class CfgVehicles
        right[] = {{ 1.05,0.822165 },1};
        down[] = {{ 0.99,0.878866 },1};
       };
-      class Highlighted
-      {
-       condition = "ils";
-       color[] = {0.0,0.375,0.3};
-       class Text
-       {
-        type = "text";
-        source = "static";
-        text = "GEAR";
-        align = "left";
-        scale = 1;
-        pos[] = {{ 0.99,0.822165 },1};
-        right[] = {{ 1.05,0.822165 },1};
-        down[] = {{ 0.99,0.878866 },1};
-       };
-      };
      };
      class Flaps
      {
+	condition = "flaps";
       color[] = {0.0,0.125,0.1};
       class Text
       {
@@ -1397,25 +1571,10 @@ class CfgVehicles
        right[] = {{ 1.05,0.878866 },1};
        down[] = {{ 0.99,0.935567 },1};
       };
-      class Highlighted
-      {
-       condition = "flaps";
-       color[] = {0.0,0.375,0.3};
-       class Text
-       {
-        type = "text";
-        source = "static";
-        text = "FLAPS";
-        align = "left";
-        scale = 1;
-        pos[] = {{ 0.99,0.878866 },1};
-        right[] = {{ 1.05,0.878866 },1};
-        down[] = {{ 0.99,0.935567 },1};
-       };
-      };
      };
      class Lights
      {
+condition = "lights";
       color[] = {0.0,0.125,0.1};
       class Text
       {
@@ -1428,25 +1587,10 @@ class CfgVehicles
        right[] = {{ 0.07,0.822165 },1};
        down[] = {{ 0.01,0.878866 },1};
       };
-      class Highlighted
-      {
-       condition = "lights";
-       color[] = {0.0,0.375,0.3};
-       class Text
-       {
-        type = "text";
-        source = "static";
-        text = "LIGHTS";
-        align = "right";
-        scale = 1;
-        pos[] = {{ 0.01,0.822165 },1};
-        right[] = {{ 0.07,0.822165 },1};
-        down[] = {{ 0.01,0.878866 },1};
-       };
-      };
      };
      class CollisionLights
      {
+condition = "collisionlights";
       color[] = {0.0,0.125,0.1};
       class Text
       {
@@ -1458,22 +1602,6 @@ class CfgVehicles
        pos[] = {{ 0.01,0.878866 },1};
        right[] = {{ 0.07,0.878866 },1};
        down[] = {{ 0.01,0.935567 },1};
-      };
-      class Highlighted
-      {
-       condition = "collisionlights";
-       color[] = {0.0,0.375,0.3};
-       class Text
-       {
-        type = "text";
-        source = "static";
-        text = "ANTI-COL";
-        align = "right";
-        scale = 1;
-        pos[] = {{ 0.01,0.878866 },1};
-        right[] = {{ 0.07,0.878866 },1};
-        down[] = {{ 0.01,0.935567 },1};
-       };
       };
      };
      class Stall
@@ -1539,36 +1667,314 @@ class CfgVehicles
       right[] = {0.26,0.0198454};
       down[] = {0.2,0.0765464};
      };
-     class Bomb
-     {
-      condition = "bomb";
-      class Circle
-      {
-       type = "line";
-       points[] = {{ "center",{ 0,-0.113402 },1 },{ "center",{ 0.01736,-0.111678 },1 },{ "center",{ 0.0342,-0.106564 },1 },{ "center",{ 0.05,-0.0982062 },1 },{ "center",{ 0.06428,-0.086866 },1 },{ "center",{ 0.0766,-0.0728948 },1 },{ "center",{ 0.0866,-0.056701 },1 },{ "center",{ 0.09397,-0.0387835 },1 },{ "center",{ 0.09848,-0.0196866 },1 },{ "center",{ 0.1,0 },1 },{ "center",{ 0.09848,0.0196866 },1 },{ "center",{ 0.09397,0.0387835 },1 },{ "center",{ 0.0866,0.056701 },1 },{ "center",{ 0.0766,0.0728948 },1 },{ "center",{ 0.06428,0.086866 },1 },{ "center",{ 0.05,0.0982062 },1 },{ "center",{ 0.0342,0.106564 },1 },{ "center",{ 0.01736,0.111678 },1 },{ "center",{ 0,0.113402 },1 },{ "center",{ -0.01736,0.111678 },1 },{ "center",{ -0.0342,0.106564 },1 },{ "center",{ -0.05,0.0982062 },1 },{ "center",{ -0.06428,0.086866 },1 },{ "center",{ -0.0766,0.0728948 },1 },{ "center",{ -0.0866,0.056701 },1 },{ "center",{ -0.09397,0.0387835 },1 },{ "center",{ -0.09848,0.0196866 },1 },{ "center",{ -0.1,0 },1 },{ "center",{ -0.09848,-0.0196866 },1 },{ "center",{ -0.09397,-0.0387835 },1 },{ "center",{ -0.0866,-0.056701 },1 },{ "center",{ -0.0766,-0.0728948 },1 },{ "center",{ -0.06428,-0.086866 },1 },{ "center",{ -0.05,-0.0982062 },1 },{ "center",{ -0.0342,-0.106564 },1 },{ "center",{ -0.01736,-0.111678 },1 },{ "center",{ 0,-0.113402 },1 },{  },{ "Velocity",0.001,"center",{ 0.0,0.0 },1 },{ "Velocity",{ 0.0,0.0 },1 }};
-      };
-     };
-     class AAMissile
-     {
-      condition = "AAmissile";
-      class Circle
-      {
-       type = "line";
-       points[] = {{ "center",{ 0,-0.226804 },1 },{ "center",{ 0.03472,-0.223357 },1 },{ "center",{ 0.0684,-0.213128 },1 },{ "center",{ 0.1,-0.196412 },1 },{ "center",{ 0.12856,-0.173732 },1 },{ "center",{ 0.1532,-0.14579 },1 },{ "center",{ 0.1732,-0.113402 },1 },{ "center",{ 0.18794,-0.077567 },1 },{ "center",{ 0.19696,-0.0393732 },1 },{ "center",{ 0.2,0 },1 },{ "center",{ 0.19696,0.0393732 },1 },{ "center",{ 0.18794,0.077567 },1 },{ "center",{ 0.1732,0.113402 },1 },{ "center",{ 0.1532,0.14579 },1 },{ "center",{ 0.12856,0.173732 },1 },{ "center",{ 0.1,0.196412 },1 },{ "center",{ 0.0684,0.213128 },1 },{ "center",{ 0.03472,0.223357 },1 },{ "center",{ 0,0.226804 },1 },{ "center",{ -0.03472,0.223357 },1 },{ "center",{ -0.0684,0.213128 },1 },{ "center",{ -0.1,0.196412 },1 },{ "center",{ -0.12856,0.173732 },1 },{ "center",{ -0.1532,0.14579 },1 },{ "center",{ -0.1732,0.113402 },1 },{ "center",{ -0.18794,0.077567 },1 },{ "center",{ -0.19696,0.0393732 },1 },{ "center",{ -0.2,0 },1 },{ "center",{ -0.19696,-0.0393732 },1 },{ "center",{ -0.18794,-0.077567 },1 },{ "center",{ -0.1732,-0.113402 },1 },{ "center",{ -0.1532,-0.14579 },1 },{ "center",{ -0.12856,-0.173732 },1 },{ "center",{ -0.1,-0.196412 },1 },{ "center",{ -0.0684,-0.213128 },1 },{ "center",{ -0.03472,-0.223357 },1 },{ "center",{ 0,-0.226804 },1 }};
-      };
-     };
-     class ATMissile
-     {
-      condition = "ATmissile";
-      class Circle
-      {
-       type = "line";
-       points[] = {{ "center",{ 0,-0.181443 },1 },{ "center",{ 0.027776,-0.178685 },1 },{ "center",{ 0.05472,-0.170502 },1 },{ "center",{ 0.08,-0.15713 },1 },{ "center",{ 0.102848,-0.138986 },1 },{ "center",{ 0.12256,-0.116632 },1 },{ "center",{ 0.13856,-0.0907216 },1 },{ "center",{ 0.150352,-0.0620536 },1 },{ "center",{ 0.157568,-0.0314986 },1 },{ "center",{ 0.16,0 },1 },{ "center",{ 0.157568,0.0314986 },1 },{ "center",{ 0.150352,0.0620536 },1 },{ "center",{ 0.13856,0.0907216 },1 },{ "center",{ 0.12256,0.116632 },1 },{ "center",{ 0.102848,0.138986 },1 },{ "center",{ 0.08,0.15713 },1 },{ "center",{ 0.05472,0.170502 },1 },{ "center",{ 0.027776,0.178685 },1 },{ "center",{ 0,0.181443 },1 },{ "center",{ -0.027776,0.178685 },1 },{ "center",{ -0.05472,0.170502 },1 },{ "center",{ -0.08,0.15713 },1 },{ "center",{ -0.102848,0.138986 },1 },{ "center",{ -0.12256,0.116632 },1 },{ "center",{ -0.13856,0.0907216 },1 },{ "center",{ -0.150352,0.0620536 },1 },{ "center",{ -0.157568,0.0314986 },1 },{ "center",{ -0.16,0 },1 },{ "center",{ -0.157568,-0.0314986 },1 },{ "center",{ -0.150352,-0.0620536 },1 },{ "center",{ -0.13856,-0.0907216 },1 },{ "center",{ -0.12256,-0.116632 },1 },{ "center",{ -0.102848,-0.138986 },1 },{ "center",{ -0.08,-0.15713 },1 },{ "center",{ -0.05472,-0.170502 },1 },{ "center",{ -0.027776,-0.178685 },1 },{ "center",{ 0,-0.181443 },1 }};
-      };
-     };
-    };
-   };
-  };
+             class ILS
+             {
+                condition = "ils";
+                class Glideslope
+                {
+                   clipTL[] = {0.0,0.0};
+                   clipBR[] = {1.0,1.0};
+                   class ILS
+                   {
+                      type = "line";
+                      points[] =
+                      {
+                         { "ILS_W",{ -0.24,0 },1 },
+                         { "ILS_W",{ 0.24,0 },1 },
+                         {  },
+                         { "ILS_W",{ 0,0.0227027 },1 },
+                         { "ILS_W",{ 0,-0.0227027 },1 },
+                         {  },
+                         { "ILS_W",{ 0.12,0.0227027 },1 },
+                         { "ILS_W",{ 0.12,-0.0227027 },1 },
+                         {  },
+                         { "ILS_W",{ 0.24,0.0227027 },1 },
+                         { "ILS_W",{ 0.24,-0.0227027 },1 },
+                         {  },
+                         { "ILS_W",{ -0.12,0.0227027 },1 },
+                         { "ILS_W",{ -0.12,-0.0227027 },1 },
+                         {  },
+                         { "ILS_W",{ -0.24,0.0227027 },1 },
+                         { "ILS_W",{ -0.24,-0.0227027 },1 },
+                         {  },
+                         { "ILS_H",{ 0,-0.227027 },1 },
+                         { "ILS_H",{ 0,0.227027 },1 },
+                         {  },
+                         { "ILS_H",{ 0.024,0 },1 },
+                         { "ILS_H",{ -0.024,0 },1 },
+                         {  },
+                         { "ILS_H",{ 0.024,0.113514 },1 },
+                         { "ILS_H",{ -0.024,0.113514 },1 },
+                         {  },
+                         { "ILS_H",{ 0.024,0.227027 },1 },
+                         { "ILS_H",{ -0.024,0.227027 },1 },
+                         {  },
+                         { "ILS_H",{ 0.024,-0.113514 },1 },
+                         { "ILS_H",{ -0.024,-0.113514 },1 },
+                         {  },
+                         { "ILS_H",{ 0.024,-0.227027 },1 },
+                         { "ILS_H",{ -0.024,-0.227027 },1 }
+                      };
+                   };
+                };
+             };         
+          };
+       };
+   class parallaxhud //MOVING HUD
+    {
+     enableParallax = 1;
+          class Pos10Vector
+          {
+             type = "vector";
+             pos0[] = {0.485,0.4};
+             pos10[] = {1.225,1.1};
+          };
+      topLeft = "HUD LH";
+          topRight = "HUD PH";
+          bottomLeft = "HUD LD";
+          borderLeft = 0;
+          borderRight = 0;
+          borderTop = 0;
+          borderBottom = 0;
+          color[] = {0.0,0.5,0.4,1.0};
+          class bones
+          {
+             class WeaponAim: Pos10Vector
+             {
+                source = "weapon";
+             };
+             class Target: Pos10Vector
+             {
+                source = "target";
+             };
+             class Velocity: Pos10Vector
+             {
+                type = "vector";
+                source = "velocity";
+                pos0[] = {0.5,0.4};
+                pos10[] = {1.24,1.1};
+             };         
+          };
+          class draw
+          {
+             class RadarTargets
+             {
+                type = "radar";
+                pos0[] = {0.485,0.4};
+                pos10[] = {1.225,1.1};
+                points[] =
+                {
+                   {{ -0.05,-0.0472973 },1 },
+                   {{ 0.05,-0.0472973 },1 },
+                   {{ 0.05,0.0472973 },1 },
+                   {{ -0.05,0.0472973 },1 },
+                   {{ -0.05,-0.0472973 },1 }
+                };
+             };
+             class MGun
+             {
+             condition = "mgun";
+             class Circle
+             {
+                type = "line";
+                points[] =
+                {
+                   { "WeaponAim",{ 0.01,0 },1 },
+                   { "WeaponAim",{ -0.01,0 },1 },
+                   {  },
+                   { "WeaponAim",{ 0,0.00945946 },1 },
+                   { "WeaponAim",{ 0,-0.00945946 },1 },
+                   {  },
+                   { "WeaponAim",{ 0,-0.0662162 },1 },
+                   { "WeaponAim",{ 0.049,-0.0463514 },1 },
+                   { "WeaponAim",{ 0.07,0 },1 },
+                   { "WeaponAim",{ 0.049,0.0463514 },1 },
+                   { "WeaponAim",{ 0,0.0662162 },1 },
+                   { "WeaponAim",{ -0.049,0.0463514 },1 },
+                   { "WeaponAim",{ -0.07,0 },1 },
+                   { "WeaponAim",{ -0.049,-0.0463514 },1 },
+                   { "WeaponAim",{ 0,-0.0662162 },1 },
+                   {  },
+                   { "WeaponAim",{ 0,-0.132432 },1 },
+                   { "WeaponAim",{ 0.07,-0.115216 },1 },
+                   { "WeaponAim",{ 0.1218,-0.0662162 },1 },
+                   { "WeaponAim",{ 0.14,0 },1 },
+                   { "WeaponAim",{ 0.1218,0.0662162 },1 },
+                   { "WeaponAim",{ 0.07,0.115216 },1 },
+                   { "WeaponAim",{ 0,0.132432 },1 },
+                   { "WeaponAim",{ -0.07,0.115216 },1 },
+                   { "WeaponAim",{ -0.1218,0.0662162 },1 },
+                   { "WeaponAim",{ -0.14,0 },1 },
+                   { "WeaponAim",{ -0.1218,-0.0662162 },1 },
+                   { "WeaponAim",{ -0.07,-0.115216 },1 },
+                   { "WeaponAim",{ 0,-0.132432 },1 },
+                   {  },
+                   { "WeaponAim",{ 0,-0.132432 },1 },
+                   { "WeaponAim",{ 0,-0.151351 },1 },
+                   {  },
+                   { "WeaponAim",{ -0.07,-0.11469 },1 },
+                   { "WeaponAim",{ -0.08,-0.131074 },1 },
+                   {  },
+                   { "WeaponAim",{ -0.121244,-0.0662162 },1 },
+                   { "WeaponAim",{ -0.138564,-0.0756757 },1 },
+                   {  },
+                   { "WeaponAim",{ -0.14,5.78881e-009 },1 },
+                   { "WeaponAim",{ -0.16,6.61578e-009 },1 },
+                   {  },
+                   { "WeaponAim",{ -0.121244,0.0662162 },1 },
+                   { "WeaponAim",{ -0.138564,0.0756757 },1 },
+                   {  },
+                   { "WeaponAim",{ -0.07,0.11469 },1 },
+                   { "WeaponAim",{ -0.08,0.131074 },1 },
+                   {  },
+                   { "WeaponAim",{ 1.22392e-008,0.132432 },1 },
+                   { "WeaponAim",{ 1.39876e-008,0.151351 },1 },
+                   {  },
+                   { "WeaponAim",{ 0.07,0.11469 },1 },
+                   { "WeaponAim",{ 0.08,0.131074 },1 },
+                   {  },
+                   { "WeaponAim",{ 0.121244,0.0662162 },1 },
+                   { "WeaponAim",{ 0.138564,0.0756757 },1 },
+                   {  },
+                   { "WeaponAim",{ 0.14,-1.57924e-009 },1 },
+                   { "WeaponAim",{ 0.16,-1.80485e-009 },1 },
+                   {  },
+                   { "WeaponAim",{ 0.121244,-0.0662162 },1 },
+                   { "WeaponAim",{ 0.138564,-0.0756757 },1 },
+                   {  },
+                   { "WeaponAim",{ 0.07,-0.11469 },1 },
+                   { "WeaponAim",{ 0.08,-0.131074 },1 },
+                   {  }
+                   };
+                };
+             };
+             class Bomb
+             {
+                condition = "bomb";
+                class Circle
+                {
+                   type = "line";
+                   points[] =
+                   {
+                      { "WeaponAim",{ 0,-0.0945946 },1 },
+                      { "WeaponAim",{ 0.05,-0.0822973 },1 },
+                      { "WeaponAim",{ 0.087,-0.0472973 },1 },
+                      { "WeaponAim",{ 0.1,0 },1 },
+                      { "WeaponAim",{ 0.087,0.0472973 },1 },
+                      { "WeaponAim",{ 0.05,0.0822973 },1 },
+                      { "WeaponAim",{ 0,0.0945946 },1 },
+                      { "WeaponAim",{ -0.05,0.0822973 },1 },
+                      { "WeaponAim",{ -0.087,0.0472973 },1 },
+                      { "WeaponAim",{ -0.1,0 },1 },
+                      { "WeaponAim",{ -0.087,-0.0472973 },1 },
+                      { "WeaponAim",{ -0.05,-0.0822973 },1 },
+                      { "WeaponAim",{ 0,-0.0945946 },1 },
+                      {  },
+                      { "Velocity",0.001,"WeaponAim",{ 0.0,0.0 },1 },
+                      { "Velocity",{ 0.0,0.0 },1 },
+                      {  },
+                      { "Target",{ 0,-0.0662162 },1 },
+                      { "Target",{ 0.07,0 },1 },
+                      { "Target",{ 0,0.0662162 },1 },
+                      { "Target",{ -0.07,0 },1 },
+                      { "Target",{ 0,-0.0662162 },1 }
+                   };
+                };
+             };
+             class AAMissile
+             {
+                condition = "AAmissile";
+                class Circle
+                {
+                   type = "line";
+                   points[] =
+                   {
+                      { "WeaponAim",{ 0,-0.236486 },1 },
+                      { "WeaponAim",{ 0.125,-0.205743 },1 },
+                      { "WeaponAim",{ 0.2175,-0.118243 },1 },
+                      { "WeaponAim",{ 0.25,0 },1 },
+                      { "WeaponAim",{ 0.2175,0.118243 },1 },
+                      { "WeaponAim",{ 0.125,0.205743 },1 },
+                      { "WeaponAim",{ 0,0.236486 },1 },
+                      { "WeaponAim",{ -0.125,0.205743 },1 },
+                      { "WeaponAim",{ -0.2175,0.118243 },1 },
+                      { "WeaponAim",{ -0.25,0 },1 },
+                      { "WeaponAim",{ -0.2175,-0.118243 },1 },
+                      { "WeaponAim",{ -0.125,-0.205743 },1 },
+                      { "WeaponAim",{ 0,-0.236486 },1 },
+                      {  },
+                      { "Target",{ 0,-0.0662162 },1 },
+                      { "Target",{ 0.07,0 },1 },
+                      { "Target",{ 0,0.0662162 },1 },
+                      { "Target",{ -0.07,0 },1 },
+                      { "Target",{ 0,-0.0662162 },1 }
+                      };
+                   };
+             };
+             class ATMissile
+             {
+                condition = "ATmissile";
+                class Circle
+                {
+                   type = "line";
+                   points[] =
+                   {
+                      { "WeaponAim",{ 0,-0.17027 },1 },
+                      { "WeaponAim",{ 0.09,-0.148135 },1 },
+                      { "WeaponAim",{ 0.1566,-0.0851351 },1 },
+                      { "WeaponAim",{ 0.18,0 },1 },
+                      { "WeaponAim",{ 0.1566,0.0851351 },1 },
+                      { "WeaponAim",{ 0.09,0.148135 },1 },
+                      { "WeaponAim",{ 0,0.17027 },1 },
+                      { "WeaponAim",{ -0.09,0.148135 },1 },
+                      { "WeaponAim",{ -0.1566,0.0851351 },1 },
+                      { "WeaponAim",{ -0.18,0 },1 },
+                      { "WeaponAim",{ -0.1566,-0.0851351 },1 },
+                      { "WeaponAim",{ -0.09,-0.148135 },1 },
+                      { "WeaponAim",{ 0,-0.17027 },1 },
+                      {  },
+                      { "Target",{ 0,-0.0662162 },1 },
+                      { "Target",{ 0.07,0 },1 },
+                      { "Target",{ 0,0.0662162 },1 },
+                      { "Target",{ -0.07,0 },1 },
+                      { "Target",{ 0,-0.0662162 },1 }
+                   };
+                };
+             };
+             class Rockets
+             {
+                condition = "Rocket";
+                class Circle
+                {
+                   type = "line";
+                   points[] =
+                   {
+                      { "WeaponAim",{ 0.01,0 },1 },
+                      { "WeaponAim",{ -0.01,0 },1 },
+                      {  },
+                      { "WeaponAim",{ 0,0.00945946 },1 },
+                      { "WeaponAim",{ 0,-0.00945946 },1 },
+                      {  },
+                      { "WeaponAim",{ 0,-0.113514 },1 },
+                      { "WeaponAim",{ 0.06,-0.0987568 },1 },
+                      { "WeaponAim",{ 0.1044,-0.0567568 },1 },
+                      { "WeaponAim",{ 0.12,0 },1 },
+                      { "WeaponAim",{ 0.1044,0.0567568 },1 },
+                      { "WeaponAim",{ 0.06,0.0987568 },1 },
+                      { "WeaponAim",{ 0,0.113514 },1 },
+                      { "WeaponAim",{ -0.06,0.0987568 },1 },
+                      { "WeaponAim",{ -0.1044,0.0567568 },1 },
+                      { "WeaponAim",{ -0.12,0 },1 },
+                      { "WeaponAim",{ -0.1044,-0.0567568 },1 },
+                      { "WeaponAim",{ -0.06,-0.0987568 },1 },
+                      { "WeaponAim",{ 0,-0.113514 },1 },
+                      {  }
+                   };
+                };
+             };      
+          };
+	};
+	};
 		maxSpeed = 1040;
 		landingSpeed = 200;
 		acceleration = 300;
@@ -1577,6 +1983,7 @@ class CfgVehicles
 		elevatorSensitivity = 0.6;
 		driveOnComponent[] = {"Wheel_1","Wheel_2","Wheel_3_1","Wheel_3_2"};
 		envelope[] = {0.0,0.2,1.2,3.0,5.1,7.0,7.3,7,6.3,5.2,3.8,1.8,0.5,0};
+		enableGPS = 1;
 		irScanGround=True;
 		laserScanner = 1;
 		irScanRangeMin = 500;
