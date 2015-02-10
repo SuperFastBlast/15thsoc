@@ -362,7 +362,7 @@ class CfgVehicles
 		simulation = "airplane";
 		getInAction = "pilot_plane_cas_01_Enter";
 		getOutAction = "pilot_plane_cas_01_Exit";
-		getInRadius = 20;
+		getInRadius = 10;
 		precisegetinout = 1;
 		driverAction = "AV8B_Pilot";
 		radarType = 4;
@@ -372,6 +372,37 @@ class CfgVehicles
 		incomingMissileDetectionSystem = 16;
 		driverLeftHandAnimName = "lever_pilot";
 		driverRightHandAnimName = "stick_pilot";
+		maxSpeed = 1040;
+		landingSpeed = 200;
+		acceleration = 300;
+		vtol = 1;
+ 		altFullForce = 9000;
+ 		altNoForce = 20000;
+		rudderInfluence = 0.5;
+		aileronSensitivity = 0.8;
+		elevatorSensitivity = 0.8;
+  		flapsFrictionCoef = 0.32;
+  		minFireTime = 30;
+		driveOnComponent[] = {"Wheel_1","Wheel_2","Wheel_3_1","Wheel_3_2"};
+		envelope[] = {0.0,0.2,1.2,3.0,5.1,7.0,7.3,7,6.3,5.2,3.8,1.8,0.5,0};
+		enableGPS = 1;
+		irScanGround=True;
+		laserScanner = 1;
+		irScanRangeMin = 500;
+		irScanRangeMax = 10000;
+		irScanToEyeFactor = 1;
+		irTarget = true;
+		armor = 60;
+		damageResistance = 0.01246;
+		cost = 20000000;
+		weapons[] = {"master_arms_safe","MEU_gatling_25mm","MEU_GBU12BombLauncher","MEU_Maverick_F","SidewinderLaucher_AV8B","MEU_FFAR_Smallpod","CMFlareLauncher"};
+		magazines[] = {"MEU_300Rnd_25mm_shells_T","MEU_Missile_AGM_02_F", "MEU_GBU12_LGB","MEU_Sidewinder","MEU_14Rnd_Rockets","240Rnd_CMFlare_Chaff_Magazine"};
+		insideSoundCoef = 0.09;
+		fov = 0.4;
+		gunAimDown = 0.07;
+		type = 2;
+		threat[] = {1,1,1};
+		availableForSupportTypes[] = {"CAS_Bombing"};
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		dammageHalf[] = {"\MEUAV8B\data\ah1z_monitor_glass_ca.paa","\MEUAV8B\data\ah1z_monitor_glass_destr_co.paa"};
 		dammageFull[] = {"\MEUAV8B\data\ah1z_monitor_glass_ca.paa","\MEUAV8B\data\ah1z_monitor_glass_destr_co.paa"};
@@ -401,8 +432,8 @@ class CfgVehicles
 				outerAngle = 90;
 				coneFadeCoef = 5;
 				useFlare = 1;
-				flareSize = 1.5;
-				flareMaxDistance = 500;
+				flareSize = 4;
+				flareMaxDistance = 800;
 				class Attenuation
 				{
 					start = 0;
@@ -1975,32 +2006,7 @@ condition = "collisionlights";
           };
 	};
 	};
-		maxSpeed = 1040;
-		landingSpeed = 200;
-		acceleration = 300;
-		vtol = 1;
-		aileronSensitivity = 0.8;
-		elevatorSensitivity = 0.6;
-		driveOnComponent[] = {"Wheel_1","Wheel_2","Wheel_3_1","Wheel_3_2"};
-		envelope[] = {0.0,0.2,1.2,3.0,5.1,7.0,7.3,7,6.3,5.2,3.8,1.8,0.5,0};
-		enableGPS = 1;
-		irScanGround=True;
-		laserScanner = 1;
-		irScanRangeMin = 500;
-		irScanRangeMax = 10000;
-		irScanToEyeFactor = 1;
-		irTarget = true;
-		armor = 60;
-		damageResistance = 0.01246;
-		cost = 20000000;
-		weapons[] = {"master_arms_safe","MEU_gatling_25mm","MEU_GBU12BombLauncher","MEU_Maverick_F","SidewinderLaucher_AV8B","MEU_FFAR_Smallpod","CMFlareLauncher"};
-		magazines[] = {"MEU_300Rnd_25mm_shells_T","MEU_Missile_AGM_02_F", "MEU_GBU12_LGB","MEU_Sidewinder","MEU_14Rnd_Rockets","240Rnd_CMFlare_Chaff_Magazine"};
-		insideSoundCoef = 0.09;
-		fov = 0.5;
-		gunAimDown = 0.07;
-		type = 2;
-		threat[] = {1,1,1};
-		availableForSupportTypes[] = {"CAS_Bombing"};
+
 		class AnimationSources
 		{
 			class VTOL
@@ -2016,7 +2022,7 @@ condition = "collisionlights";
 		};
 		class Library
 		{
-			libTextDesc = "$STR_LIB_AV8B2";
+			libTextDesc = "MEU AV8B2";
 		};
 		attenuationEffectType = "HeliAttenuation";
 		soundGetIn[] = {"meuAV8b\ext\ext-jetair-cabine-close1",0.056234132,1};
