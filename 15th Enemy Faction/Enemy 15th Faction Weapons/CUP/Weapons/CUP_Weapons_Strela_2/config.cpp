@@ -20,22 +20,24 @@ class CfgAmmo
   hit = 66;
   indirectHit = 50;
   indirectHitRange = 8;
-  maneuvrability = 5;
+  maneuvrability = 10;
   simulationStep = 0.002;
-  trackOversteer = 0.75;
+  trackOversteer = 1;
   trackLead = 1;
-  airLock = 1;
+  airLock = 2;
   irLock = 1;
   cost = 7500;
-  maxSpeed = 470;
-  initTime = 0.3;
-  sideAirFriction = 0.162;
+  maxSpeed = 800;
+  initSpeed = 115;
+  initTime = 0.25;
+  airFriction = 0.026
+  sideAirFriction = 0.003;
   thrustTime = 2.5;
-  thrust = 232;
-  fuseDistance = 120;
+  thrust = 385;
+  fuseDistance = 50;
   timeToLive = 17;
   whistleDist = 16;
-  weaponLockSystem = "16 + 2";
+  weaponLockSystem = "2 + 16";
   cmImmunity = 0.8;
  };
 };
@@ -52,14 +54,8 @@ class Titan_AA;
   type = "6 * 256";
   picture = "\CUP\Weapons\CUP_Weapons_Strela_2\data\ui\m_igla_ca.paa";
   model = "\CUP\Weapons\CUP_Weapons_Ammunition\9K38_Igla\CUP_9K38_Igla";
-  initSpeed = 40;
-  maxLeadSpeed = 320;
   descriptionShort = "Range: 800-4200 m <br/>Type: ground-air <br/>Used in: 9K32";
   mass = 219;
-  maxThrowHoldTime = 2;
-  maxThrowIntensityCoef = 1.4;
-  minThrowIntensityCoef = 0.3;
-  simulation = "ProxyMagazines";
  };
 };
 class CfgWeapons
@@ -76,7 +72,7 @@ class CfgWeapons
   model = "\CUP\Weapons\CUP_Weapons_Strela_2\strela_launcher";
   nameSound = "aalauncher";
   modelOptics = "-";
-  magazines[] = {"CUP_Strela_2_M"};
+  magazines[] = {"Titan_AA"};
   cameraDir = "";
   cursorAim = "\a3\weapons_f\data\clear_empty";
   cursor = "missile";
@@ -103,7 +99,7 @@ class CfgWeapons
   value = 20;
   canLock = 2;
   recoil = "recoil_single_titan";
-  minRange = 10;
+  minRange = 100;
   minRangeProbab = 0.3;
   midRange = 2500;
   midRangeProbab = 0.8;
@@ -114,14 +110,14 @@ class CfgWeapons
   weaponLockDelay = 3;
   weaponLockSystem = 1;
   cmImmunity = 0.9;
-  lockAcquire = 0;
+  lockAcquire = 1;
   class OpticsModes
   {
    class Ironsight
    {
     opticsid = 1;
     usemodeloptics = 0;
-    distancezoommax = 300;
+    distancezoommax = 1300;
     distancezoommin = 300;
     memorypointcamera = "eye";
     opticsdisableperipherialvision = 0;

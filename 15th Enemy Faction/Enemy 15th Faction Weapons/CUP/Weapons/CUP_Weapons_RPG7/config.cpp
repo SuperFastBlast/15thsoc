@@ -34,7 +34,8 @@ class CfgAmmo
 		CraterEffects = "ATRocketCrater";
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
-		whistleDist = 4;
+		whistleDist = 40;
+		airLock = 1;
 		class CamShakeExplode
 		{
 			power = "(55 * 0.2)";
@@ -85,7 +86,8 @@ class CfgAmmo
 		CraterEffects = "ATRocketCrater";
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
-		whistleDist = 2;
+		whistleDist = 40;
+		airLock = 1;
 		class CamShakeExplode
 		{
 			power = "(55 * 0.2)";
@@ -136,7 +138,8 @@ class CfgAmmo
 		CraterEffects = "ATRocketCrater";
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
-		whistleDist = 4;
+		whistleDist = 40;
+		airLock = 1;
 		class CamShakeExplode
 		{
 			power = "(55 * 0.2)";
@@ -169,8 +172,8 @@ class CfgAmmo
 	class CUP_R_OG7_AT: RocketBase
 	{
 		initSpeed = 115;
-		hit = 140;
-		indirectHit = 40;
+		hit = 120; //was 140
+		indirectHit = 30;
 		indirectHitRange = 20;
 		model = "\CUP\Weapons\CUP_Weapons_Ammunition\OG7V\CUP_OG7V_Fly.p3d";
 		proxyShape = "\CUP\Weapons\CUP_Weapons_Ammunition\OG7V\CUP_OG7V.p3d";
@@ -187,7 +190,8 @@ class CfgAmmo
 		CraterEffects = "ATRocketCrater";
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
-		whistleDist = 24;
+		whistleDist = 40;
+		airLock = 1;
 		class CamShakeExplode
 		{
 			power = "(55 * 0.2)";
@@ -217,7 +221,7 @@ class CfgAmmo
 			distance = 1;
 		};
 	};
-}:
+};
 class CfgMagazines
 {
  class CA_Magazine;
@@ -315,16 +319,17 @@ class CfgWeapons
   };
   reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Reload",1,1,35};
   drySound[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Dry",1,1,35};
-  soundFly[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Fly",0.31622776,1.5,900};
+  soundFly[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Fly",0.3,1.5,900};
   weaponSoundEffect = "DefaultRifle";
   reloadAction = "ReloadRPG";
   picture = "\CUP\Weapons\CUP_Weapons_RPG7\data\ui\gear_rpg7_X_ca.paa";
   recoil = "recoil_single_law";
+  magazineReloadTime = 4;
   aiRateOfFire = 10;
-  aiRateOfFireDistance = 250;
+  aiRateOfFireDistance = 450;
   minRange = 10;
   midRange = 200;
-  maxRange = 300;
+  maxRange = 450;
   class Library
   {
    libTextDesc = "RPG-7V. 'nuff said";

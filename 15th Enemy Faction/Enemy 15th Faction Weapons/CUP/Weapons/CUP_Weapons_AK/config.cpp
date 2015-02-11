@@ -20,7 +20,7 @@ class CfgAmmo
 		hit = 8;
 		indirectHit = 0;
 		indirectHitRange = 0;
-		cost = 1;
+		cost = 3;
 		airFriction = -0.001412;
 		caliber = 0.5;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
@@ -29,29 +29,33 @@ class CfgAmmo
 		tracerEndTime = 0;
 		nvgOnly = 0;
 		initSpeed = 900;
+		airLock = 1;
 	};
 	class CUP_B_545x39_Ball_Tracer_Green: CUP_B_545x39_Ball
 	{
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
+		cost = 3;
 		tracerScale = 1;
 		tracerStartTime = 0.05;
 		tracerEndTime = 1;
+		airLock = 1;
 	};
 	class CUP_B_762x39_Ball: BulletBase
 	{
-		hit = 9;
+		hit = 4;
 		indirectHit = 0;
 		indirectHitRange = 0;
 		cartridge = "FxCartridge_762";
 		visibleFire = 18;
 		audibleFire = 18;
-		cost = 1;
+		cost = 5;
 		typicalSpeed = 710;
 		tracerColor[] = {0,0,0,0};
 		tracerColorR[] = {0,0,0,0};
 		airFriction = -0.00195;
 		caliber = 0.83;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
+		airLock = 1;
 	};
 };
 	class CfgMagazines
@@ -84,6 +88,7 @@ class CfgAmmo
 	{
 		scope = 2;
 		type = 16;
+		cost = 8;
 		displayName = "VOG-25 (HE)";
 		displayNameShort = "HE Grenade";
 		picture = "\CUP\Weapons\CUP_Weapons_AK\Data\UI\m_gp25_he_ca.paa";
@@ -258,9 +263,9 @@ class CfgWeapons
 			recoilProne = "recoil_single_prone_mk20";
 			dispersion = 0.00125;
 			minRange = 2;
-			minRangeProbab = 0.3;
+			minRangeProbab = 0.2;
 			midRange = 300;
-			midRangeProbab = 0.7;
+			midRangeProbab = 0.4;
 			maxRange = 600;
 			maxRangeProbab = 0.04;
 		};
@@ -298,7 +303,7 @@ class CfgWeapons
 			minRange = 50;
 			minRangeProbab = 0.3;
 			midRange = 200;
-			midRangeProbab = 0.7;
+			midRangeProbab = 0.5;
 			maxRange = 500;
 			maxRangeProbab = 0.05;
 			showToPlayer = 0;
@@ -445,9 +450,9 @@ class CfgWeapons
 			recoilProne = "recoil_single_primary_prone_5outof10";
 			dispersion = 0.0018;
 			minRange = 2;
-			minRangeProbab = 0.3;
+			minRangeProbab = 0.2;
 			midRange = 200;
-			midRangeProbab = 0.7;
+			midRangeProbab = 0.3;
 			maxRange = 400;
 			maxRangeProbab = 0.05;
 		};
@@ -522,9 +527,9 @@ class CfgWeapons
 			dispersion = 0.0018;
 			minRange = 0;
 			minRangeProbab = 0.1;
-			midRange = 100;
+			midRange = 150;
 			midRangeProbab = 0.7;
-			maxRange = 200;
+			maxRange = 300;
 			maxRangeProbab = 0.05;
 		};
 		class Library
@@ -546,8 +551,8 @@ class CfgWeapons
 		picture = "\CUP\Weapons\CUP_Weapons_AK\data\UI\gear_rpk74_X_CA.paa";
 		magazines[] = {"CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M","CUP_30Rnd_545x39_AK_M","CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M"};
 		displayname = "RPK 74";
-		aiDispersionCoefY = 14;
-		aiDispersionCoefX = 14;
+		aiDispersionCoefY = 18;
+		aiDispersionCoefX = 18;
 		handAnim[] = {"OFP2_ManSkeleton","\CUP\Weapons\CUP_Weapons_AK\Data\Anim\AK.rtm"};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_AK\data\sfx\RPK_Dry",0.56234133,1,10};
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_AK\data\sfx\RPK_Reload",0.39810717,1,30};
@@ -583,10 +588,10 @@ class CfgWeapons
 			recoilProne = "recoil_auto_prone_mk20";
 			dispersion = 0.00125;
 			minRange = 0;
-			minRangeProbab = 0.1;
-			midRange = 150;
+			minRangeProbab = 0.3;
+			midRange = 300;
 			midRangeProbab = 0.7;
-			maxRange = 300;
+			maxRange = 600;
 			maxRangeProbab = 0.05;
 		};
 		class manual: Mode_FullAuto
@@ -635,11 +640,11 @@ class CfgWeapons
 			aiRateOfFire = 0.5;
 			aiRateOfFireDistance = 50;
 			minRange = 10;
-			minRangeProbab = 0.05;
+			minRangeProbab = 0.15;
 			midRange = 20;
-			midRangeProbab = 0.58;
+			midRangeProbab = 0.78;
 			maxRange = 50;
-			maxRangeProbab = 0.04;
+			maxRangeProbab = 0.14;
 			showToPlayer = 0;
 		};
 		class short: close
@@ -648,11 +653,11 @@ class CfgWeapons
 			aiRateOfFire = 1.5;
 			aiRateOfFireDistance = 300;
 			minRange = 50;
-			minRangeProbab = 0.05;
+			minRangeProbab = 0.15;
 			midRange = 200;
-			midRangeProbab = 0.58;
+			midRangeProbab = 0.78;
 			maxRange = 400;
-			maxRangeProbab = 0.04;
+			maxRangeProbab = 0.14;
 		};
 		class medium: close
 		{
@@ -660,11 +665,11 @@ class CfgWeapons
 			aiRateOfFire = 2.5;
 			aiRateOfFireDistance = 600;
 			minRange = 200;
-			minRangeProbab = 0.05;
+			minRangeProbab = 0.15;
 			midRange = 400;
-			midRangeProbab = 0.58;
+			midRangeProbab = 0.78;
 			maxRange = 600;
-			maxRangeProbab = 0.04;
+			maxRangeProbab = 0.14;
 		};
 		class far: close
 		{
@@ -672,11 +677,11 @@ class CfgWeapons
 			aiRateOfFire = 4;
 			aiRateOfFireDistance = 1000;
 			minRange = 400;
-			minRangeProbab = 0.05;
+			minRangeProbab = 0.15;
 			midRange = 600;
-			midRangeProbab = 0.4;
+			midRangeProbab = 0.7;
 			maxRange = 800;
-			maxRangeProbab = 0.01;
+			maxRangeProbab = 0.11;
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -709,11 +714,11 @@ class CfgWeapons
 			dispersion = 0.00125;
 			aiRateOfFireDistance = 650;
 			minRange = 400;
-			minRangeProbab = 0;
+			minRangeProbab = 0.05;
 			midRange = 600;
-			midRangeProbab = 0;
+			midRangeProbab = 0.1;
 			maxRange = 800;
-			maxRangeProbab = 0;
+			maxRangeProbab = 0.05;
 		};
 		class Library
 		{

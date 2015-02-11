@@ -22,7 +22,7 @@ class cfgammo
 		cartridge = "FxCartridge_762";
 		visibleFire = 6;
 		audibleFire = 9;
-		cost = 1.2;
+		cost = 5;
 		airLock = 1;
 		typicalSpeed = 800;
 		caliber = 1.6;
@@ -195,8 +195,8 @@ class CfgWeapons
 			maxRange = 900;
 			maxRangeProbab = 0.01;
 		};
-		aiDispersionCoefY = 21;
-		aiDispersionCoefX = 21;
+		aiDispersionCoefY = 25;
+		aiDispersionCoefX = 25;
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_PK\data\sfx\Reload",1,1,35};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_PK\data\sfx\Dry",1,1,35};
 		class WeaponSlotsInfo: WeaponSlotsInfo

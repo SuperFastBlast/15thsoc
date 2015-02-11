@@ -19,7 +19,7 @@ class CFGAmmo
 		hit = 6;
 		cartridge = "FxCartridge_9mm";
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
-		cost = 5;
+		cost = 20;
 		typicalSpeed = 350;
 		airFriction = -0.002751;
 		caliber = 0.33;
@@ -43,7 +43,7 @@ class CFGAmmo
 		initSpeed = 350;
 		audibleFire = 0.035;
 		visibleFireTime = 2;
-		cost = 5;
+		cost = 15;
 		typicalSpeed = 310;
 		airFriction = -0.001893;
 	};
