@@ -3,7 +3,7 @@ class CfgPatches
 	class CAF_M72A6
 	{
 		units[] = {};
-		weapons[] = {"M72A6"};
+		weapons[] = {"caf_M72A6"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F"};
 	};

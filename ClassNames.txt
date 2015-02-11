@@ -1,0 +1,255 @@
+15th UNIFORMS
+*****************
+Uniform
+"MEF_Wood_MARPAT_LS" - MEF NATO varient (Has Pads) uniform Woodland
+"MEF_Wood_MARPAT_RS" - MEF NATO varient (Has Pads) uniform Woodland W/Rolled sleeves
+"MEF_Desert_MARPAT_LS" - MEF NATO varient (Has Pads) uniform Desert
+"MEF_Desert_MARPAT_RS" - MEF NATO varient (Has Pads) uniform Desert W/Rolled sleeves
+
+"MEF_Wood_IN_MARPAT_LS" - MEF AAF varient (No Pads) uniform Woodland
+"MEF_Wood_IN_MARPAT_RS" - MEF AAF varient (No Pads) uniform Woodland W/Rolled sleeves
+"MEF_Des_IN_MARPAT_LS" - MEF AAF varient (No Pads) uniform Desert
+"MEF_Des_IN_MARPAT_RS" - MEF AAF varient (No Pads) uniform Desert W/Rolled sleeves
+
+Hats
+"MEF_Boonie_Des" - MEF Boonie Desert
+"MEF_Boonie_Wood" - MEF Boonie Woodland
+"MEF_Desert_8Point" - MEF Hat Desert
+"MEF_Woodland_8Point" - MEF Hat Woodland
+"MEF_Desert_Helmet_LWH" - MEF LWH Desert
+"MEF_Desert_Goggles_Helmet_LWH" - MEF LWH w/Goggles Desert
+"MEF_Wood_Helmet_LWH" - MEF LWH Woodland
+"MEF_Wood_Goggles_Helmet_LWH" - MEF LWH w/Goggles Woodland
+
+Vests
+"MEF_Vest_Tan_Infantry" - MEF Plate Carrier Heavy
+"MEF_Vest_Tan_Infantry_L" - MEF Plate Carrier Light
+
+Backpacks
+"MEF_TAN_Carryall"
+"MEF_Wood_Carryall"
+"MEF_Des_Carryall"
+"MEF_TAN_Kitbag"
+"MEF_Wood_Kitbag"
+"MEF_Des_Kitbag"
+"MEF_TAN_Assault"
+"MEF_Wood_Assault"
+"MEF_Des_Assault"
+"MEF_TAN_Tactical"
+"MEF_Wood_Tactical"
+"MEF_Des_Tactical"
+
+
+*****************
+15th AIRCRAFT
+*****************
+"meu_AH1Z" - Gunfighter AH1
+"meu_UH1Y" - Gunfighter UH1
+"MEUAV8B2" - New Avenger AV8B Harrier REPLACING - "Cha_av8b" - All of Chairbornes AV8b's and types.
+"BAF_Merlin_HC3_DG1" - New Warhorse REPLACING - "CH49_Warhorse" - ARMA 3 (Old Warhorse)
+"meu_MV22" - Red Dragon MV22
+"JS_JC_FA18F" - Duel Seat Viking F18
+
+*****************
+15th GROUND VICS
+*****************
+"AAVB" - Gator Woodland
+"Burnes_aav_des" - Gator Desert
+"Cha_LAV25A2" - Maurader LAV-25 Woodland
+"Cha_Des1_LAV25A2" - Maurader LAV-25 Desert
+"Cha_Win1_LAV25A2" - Maurader LAV-25 Snow
+"DAR_MaxxProPlus" - GCE MaxPro Plus
+"DAR_MaxxPro_MK19" - GCE MaxPro Mk19
+"DAR_MK23AD" - GCE Armed MTVR Woodland
+"DAR_MK23ADT" - GCE Armed MTVR Desert
+"DAR_MK27" - GCE MTVR Extended
+"DAR_MK27T" - GCE MTVR extended covered Woodland
+"DAR_LHS_16" - GCE MTVR Ammo Truck Woodland
+"DAR_LHS_8" - GCE MTVR Fuel Truck Woodland
+"Burnes_M1A2_MEU_01" - Titan unknown as to what means what or what Titan uses
+"Burnes_M1A2_MEU_02" - Titan unknown as to what means what or what Titan uses
+"Burnes_M1A2_MEU_03" - Titan unknown as to what means what or what Titan uses
+"Burnes_M1A2_MEU_04" - Titan unknown as to what means what or what Titan uses
+"Burnes_M1A2_MEU_05" - Titan unknown as to what means what or what Titan uses
+
+*****************
+15th SEA Vics
+*****************
+"15thCRRCboat" - CRRC
+"Burnes_LCAC_1" - LCAC
+
+*****************
+15th WEAPONS
+*****************
+MX2A Thermal Handheld Optic
+"meu_MX2A_tan"
+
+AT 4 CS
+"meu_AT4_CS" 
+
+AT 4
+"meu_AT4"
+
+LAW M72
+"caf_m72a6"
+
+ M1911
+"CUP_hgun_Colt1911"  
+Ammo
+"MEU_T2AAF_45ACP"
+
+Silencer for M9
+"CUP_muzzle_snds_M9"
+
+ M9
+"CUP_hgun_M9"
+Ammo
+"MEU_M882_9mm"
+
+Silencer for M4
+"CUP_muzzle_snds_M16"
+
+M16's
+"CUP_arifle_M16A4_Base"
+"CUP_arifle_M16A4_GL"
+
+M4 Carbine
+"CUP_arifle_M4CAR_BUIS_GL"
+"CUP_arifle_M4CAR_black"
+
+M4A1
+"CUP_arifle_M4A1_BUIS_GL"
+"CUP_arifle_M4A1_black"
+
+Ammo
+"MEU_FlareYellow_M203"
+"MEU_FlareWhite_M203"
+"MEU_FlareGreen_M203"
+"MEU_FlareRed_M203"
+"M433_40mm_HEDP_Shell"
+"MEU_30Rnd_M855A1_556x45_Stanag"
+"MEU_30Rnd_M855A1_556x45_T_Stanag"
+
+Mk 12
+"CUP_srifle_Mk12SPR"
+Ammo
+"MEU_30x556_Mk262_Mag"
+
+M1014
+"CUP_sgun_M1014"
+Ammo
+"MEU_8Rnd_12Gauge_Pellets"
+"MEU_8Rnd_12Gauge_Slug"
+
+M249
+"CUP_lmg_M249"
+Ammo
+"MEU_200Rnd_M249_556x45_Stanag"
+"MEU_200Rnd_M249_556x45_T_Stanag"
+
+M240
+"CUP_lmg_M240"
+Ammo
+"MEU_100Rnd_M240_762x51"
+"MEU_100Rnd_M240_762x51_T"
+
+Silencer for M110
+"CUP_muzzle_snds_M110"
+
+M110
+"CUP_srifle_M110"
+Ammo
+"MEU_20x762_Mag"
+
+M107
+"CUP_srifle_M107_Base"
+Ammo
+"MEU_10x127_HEIAP_Mag"
+
+Silencer for M40A5 and M27 IAR
+"Trixie_Cyclone"
+
+M40A5
+"MEU_m40a5" 
+Ammo
+"MEU_5x762_Mag"
+
+M27 IAR
+"ej_IAR30" 
+
+ SMAW
+"Trixie_SMAW"  
+Ammo
+"Trixie_SMAW_HEAA"
+"Trixie_SMAW_HEDP"
+
+ M32
+"M32" 
+Ammo
+"6Rnd_HE_M32" - M32 40MM 6 rounds
+"6Rnd_FlareWhite_M32" - M32 Flare
+"6Rnd_FlareGreen_M32" - M32 Flare
+"6Rnd_FlareRed_M32" - M32 Flare
+"6Rnd_FlareYellow_M32" - M32 Flare
+"6Rnd_FlareCIR_M32" - M32 Flare
+"6Rnd_Smoke_M32" - M32 Smoke
+"6Rnd_SmokeRed_M32" - M32 Smoke
+"6Rnd_SmokeGreen_M32" - M32 Smoke
+"6Rnd_SmokeYellow_M32" - M32 Smoke
+"6Rnd_SmokePurple_M32" - M32 Smoke
+"6Rnd_SmokeOrange_M32" - M32 Smoke 
+
+*****************
+ENEMY WEAPONS
+*****************
+
+RPG7:
+CUP_launch_RPG7V
+Ammo
+CUP_OG7_M
+CUP_PG7V_M
+CUP_PG7VR_M
+
+Strela-2:
+CUP_launch_9K32Strela
+Ammo
+Titan_AA
+
+PKM:
+CUP_lmg_PKM
+Ammo
+CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M
+
+
+RPK:
+CUP_arifle_RPK74
+Ammo
+CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M
+
+AKM:
+CUP_arifle_AKM
+Ammo
+CUP_30Rnd_762x39_AK47_M
+
+AK74:
+CUP_arifle_AK74
+Ammo
+CUP_30Rnd_545x39_AK_M
+CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M
+
+AK74 with GP-25:
+CUP_arifle_AK74_sf_gl_h
+Ammo
+CUP_1Rnd_HE_GP25_M
+CUP_30Rnd_545x39_AK_M
+CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M
+
+Makarov:
+CUP_hgun_Makarov
+Ammo
+CUP_8Rnd_9x18_Makarov_M
+
+SVD:
+CUP_srifle_SVD_pso
+Ammo
+CUP_10Rnd_762x54_SVD_M
