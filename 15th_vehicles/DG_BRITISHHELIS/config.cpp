@@ -184,8 +184,9 @@ class CfgVehicles
 						Merlin_Cargo_BAF, Merlin_Cargo01_BAF};
 		memoryPointsGetInCargo[] = {"pos cargo"};
 		memoryPointsGetInCargoDir[] = {"pos cargo dir"};
+		driverCanEject=1;
+		cargoCanEject = 1;
 
-		
 		transportSoldier = 14;
 		transportMaxBackpacks = 28;
 		
@@ -432,18 +433,22 @@ class CfgVehicles
 		washDownStrength = "1.0f";
 		washDownDiameter = "40.0f";
 		gForceShakeAttenuation = 0.5;
-		cyclicasideforcecoef = 1.0;//banking
-		cyclicforwardforcecoef = 1.5;//fowards backwards.
+		cyclicasideforcecoef = 0.7;//banking
+		cyclicforwardforcecoef = 1.0;//fowards backwards.
 		frontRotorForceCoef = 1;//front rotor(strenth of lift)
-		backRotorForceCoef = 0.7;//tailrotor(strength of horzontal movement=)	
+		backRotorForceCoef = 0.5;//tailrotor(strength of horzontal movement=)
+		altFullForce = 5000;
+		altNoForce = 10000;	
 				
 		// Guns and equipment
 		weapons[] = {CMFlareLauncher};
 		magazines[] = {120Rnd_CMFlare_Chaff_Magazine,120Rnd_CMFlare_Chaff_Magazine,120Rnd_CMFlare_Chaff_Magazine};
 		LockDetectionSystem = 0x00111000;
 		IncommingMisslieDetectionSystem = CM_Missile;
-		irScanRangeMin=0;
-		irScanRangeMax=1000;
+		irScanGround=True;
+		irScanRangeMin=2000;
+		irScanRangeMax=8000;
+		irScanToEyeFactor = 2;
 		nightVision=1;
 		numberPhysicalWheels = 3;
 		unitInfoTypeRTD = "RscUnitInfoAirRTDFullDigital";

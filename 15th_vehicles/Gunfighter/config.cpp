@@ -109,7 +109,6 @@ class CfgVehicles
 		irTarget = true;
 
 		//Adding PhysX stuff here
-		driveOnComponent[] = {"Skids"};
 		selectionHRotorStill = "mainRotorStatic";
 		selectionHRotorMove = "mainRotorBlurred";
 		selectionVRotorStill = "tailRotorStatic";
@@ -117,11 +116,12 @@ class CfgVehicles
 		altFullForce = 5000;
 		altNoForce = 10000;
 		bodyFrictionCoef = 0.6;
-		cyclicasideforcecoef = 1;//banking
-		cyclicforwardforcecoef = 1.5;//fowards backwards.
+		cyclicasideforcecoef = 0.7;//banking
+		cyclicforwardforcecoef = 1.0;//fowards backwards.
 		frontRotorForceCoef = 1;//front rotor(strenth of lift)
-		backRotorForceCoef = 0.7;//tailrotor(strength of horzontal movement=)
+		backRotorForceCoef = 0.5;//tailrotor(strength of horzontal movement=)
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
+		unitInfoTypeRTD = "RscUnitInfoAirRTDFullDigital";
 		simulation = "helicopterrtd";
 		class RotorLibHelicopterProperties
 		{
@@ -138,6 +138,7 @@ class CfgVehicles
 			horizontalWingsAngleCollMax = 0;
 			maxMainRotorStress = 185000;
 			maxTailRotorStress = 30000;
+			rtd_center = "rtd_center"; //Needs a memory point in the model. Have it centred, then move it up or down to make the wheels touch the ground properly. 
 		};
 		maxSpeed = 296;
 		fuelCapacity=1200;
@@ -194,8 +195,9 @@ class CfgVehicles
 		getInRadius = 2.5;
 		memoryPointCM[]  = {"flare_launcher1","flare_launcher2"};
 		memoryPointCMDir[] = {"flare_launcher1_dir","flare_launcher2_dir"};
-		radarType = 8;
-		LockDetectionSystem = "1 + 8 + 4";
+		radarType = 4;
+		showAllTargets = 2;
+		LockDetectionSystem = "1 + 2 + 8 + 4";
 		incomingMissileDetectionSystem = 16;
 		armor=60;
 		armorStructural = 1;
@@ -208,7 +210,7 @@ class CfgVehicles
 		weapons[]={"master_arms_safe","FFARLauncher","CMFlareLauncher"};
 		magazines[]={"38Rnd_FFAR","240Rnd_CMFlare_Chaff_Magazine"};
 		hiddenSelectionsTextures[] = {"gunfighter\ah1z\data\ah1z_body_co.paa","gunfighter\ah1z\data\ah1z_engines_co.paa"};
-
+		insideSoundCoef = 0.09;
 		attenuationEffectType = "HeliAttenuation";
 		soundGeneralCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_1",1.0,1,100};
 		soundGeneralCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_2",1.0,1,100};
@@ -225,16 +227,16 @@ class CfgVehicles
 		soundWaterCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_1",1.0,1,100};
 		soundWaterCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_2",1.0,1,100};
 		soundWaterCrashes[] = {"soundWaterCollision1",0.5,"soundWaterCollision2",0.5};
-		soundDammage[] = {"Gunfighter\sounds\alarm_loop1",0.001,1};
+		soundDammage[] = {"Gunfighter\sounds\alarm_loop1",0.3,1};
 		soundGetIn[] = {"Gunfighter\Sounds\heli_door_01",0.31622776,1};
 		soundGetOut[] = {"Gunfighter\Sounds\heli_door_02",0.31622776,1,50};
 		soundEnviron[] = {"","db-30",1.0};
-		soundEngineOnInt[] = {"Gunfighter\sounds\AHint\AH_1Z_Start_in.wss", 0.8316228, 1.000000};
-		soundEngineOnExt[] = {"Gunfighter\sounds\AHext\AH_1Z_Start_out.wss", 1.77828, 1.000000, 700};
-		soundEngineOffInt[] = {"Gunfighter\sounds\AHint\AH_1Z_Stop_in.wss", 0.8316228, 1.0000000};
-		soundEngineOffExt[] = {"Gunfighter\sounds\AHext\AH_1Z_Stop_out.wss", 1.77828, 1.0000000, 700};
-		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_1",1.0,1};
-		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_2",1.0,1};
+		soundEngineOnInt[] = {"Gunfighter\sounds\AHint\AHStartin.wss", 0.8316228, 1.000000};
+		soundEngineOnExt[] = {"Gunfighter\sounds\AHext\AHStartout.wss", 1.77828, 1.000000, 700};
+		soundEngineOffInt[] = {"Gunfighter\sounds\AHint\AHStopin.wss", 0.8316228, 1.0000000};
+		soundEngineOffExt[] = {"Gunfighter\sounds\AHext\AHStopout.wss", 1.77828, 1.0000000, 700};
+		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_1",2.0,1.5};
+		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_2",2.0,1.5};
 		rotorDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_2",1.0,1.0};
 		rotorDamageOut[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_ext_2",2.5118864,1.0,300};
 		rotorDamage[] = {"rotorDamageInt","rotorDamageOut"};
@@ -249,34 +251,34 @@ class CfgVehicles
 		landingSoundOut[] = {"landingSoundOut0",0.5,"landingSoundOut1",0.5};
 		class Sounds {
 			class Engineext {
-				sound[] = {"Gunfighter\sounds\AHext\AH1_Engineout.wss", db10.000000, 1.000000, 800};
+				sound[] = {"Gunfighter\sounds\AHext\AHEngineout.wss", db10.000000, 1.000000, 800};
 				frequency = "rotorSpeed";
 				volume = "camPos*((rotorSpeed-0.72)*4)";
 			};
 			class RotorLowext {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorLow.wss", db14.500000, 1.000000, 1600};
+				sound[] = {"Gunfighter\sounds\AHint\AHRotorLow.wss", db14.500000, 1.000000, 1600};
 				frequency = "rotorSpeed";
 				volume = "camPos*(0 max (rotorSpeed-0.1))";
 				cone[] = {1.8, 3.14, 2.0, 0.9};
 			};
 			class RotorHighext {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorHigh.wss", db14.000000, 1.000000, 1800};
+				sound[] = {"Gunfighter\sounds\AHint\AHRotorHigh.wss", db14.000000, 1.000000, 1800};
 				frequency = "rotorSpeed";
 				volume = "camPos*10*(0 max (rotorThrust-0.95))";
 				cone[] = {1.8, 3.14, 2.0, 0.9};
 			};
 			class EngineInt {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_EngineIn.wss", db6.200000, 1.000000};
+				sound[] = {"Gunfighter\sounds\AHint\AHEngineIn.wss", db6.200000, 1.000000};
 				frequency = "rotorSpeed";
 				volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
 			};
 			class RotorLowInt {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorLow.wss", db6.600000, 1.000000};
+				sound[] = {"Gunfighter\sounds\AHint\AHRotorLow.wss", db6.600000, 1.000000};
 				frequency = "rotorSpeed";
 				volume = "2*(1-camPos)*((rotorSpeed factor[0.3, 1.1]) min (rotorSpeed factor[1.1, 0.3]))";
 			};
 			class RotorHighInt {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorHigh.wss", db6.200000, 1.000000};
+				sound[] = {"Gunfighter\sounds\AHint\AHRotorHigh.wss", db6.200000, 1.000000};
 				frequency = "rotorSpeed";
 				volume = "(1-camPos)*3*(rotorThrust-0.9)";
 			};
@@ -418,34 +420,34 @@ class CfgVehicles
 			class SoundEvents{};
 		class Sounds {
 			class Engineext {
-				sound[] = {"Gunfighter\sounds\AHext\AH1_Engineout.wss", db10.000000, 1.000000, 800};
+				sound[] = {"Gunfighter\sounds\AHext\AHEngineout.wss", db10.000000, 1.000000, 800};
 				frequency = "rotorSpeed";
 				volume = "camPos*((rotorSpeed-0.72)*4)";
 			};
 			class RotorLowext {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorLow.wss", db14.500000, 1.000000, 1600};
+				sound[] = {"Gunfighter\sounds\AHint\AHRotorLow.wss", db14.500000, 1.000000, 1600};
 				frequency = "rotorSpeed";
 				volume = "camPos*(0 max (rotorSpeed-0.1))";
 				cone[] = {1.8, 3.14, 2.0, 0.9};
 			};
 			class RotorHighext {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorHigh.wss", db14.000000, 1.000000, 1800};
+				sound[] = {"Gunfighter\sounds\AHint\AHRotorHigh.wss", db14.000000, 1.000000, 1800};
 				frequency = "rotorSpeed";
 				volume = "camPos*10*(0 max (rotorThrust-0.95))";
 				cone[] = {1.8, 3.14, 2.0, 0.9};
 			};
 			class EngineInt {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_EngineIn.wss", db6.200000, 1.000000};
+				sound[] = {"Gunfighter\sounds\AHint\AHEngineIn.wss", db6.200000, 1.000000};
 				frequency = "rotorSpeed";
 				volume = "(1-camPos)*((rotorSpeed-0.75)*4)";
 			};
 			class RotorLowInt {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorLow.wss", db6.600000, 1.000000};
+				sound[] = {"Gunfighter\sounds\AHint\AHRotorLow.wss", db6.600000, 1.000000};
 				frequency = "rotorSpeed";
 				volume = "2*(1-camPos)*((rotorSpeed factor[0.3, 1.1]) min (rotorSpeed factor[1.1, 0.3]))";
 			};
 			class RotorHighInt {
-				sound[] = {"Gunfighter\sounds\AHint\AH1_RotorHigh.wss", db6.200000, 1.000000};
+				sound[] = {"Gunfighter\sounds\AHint\AHRotorHigh.wss", db6.200000, 1.000000};
 				frequency = "rotorSpeed";
 				volume = "(1-camPos)*3*(rotorThrust-0.9)";
 			};
@@ -1119,7 +1121,7 @@ class CfgVehicles
 		cargocansee = 31;
 		camouflage = 7;
 		crewVulnerable = 1;
-		driveOnComponent[] = {"Skids"};
+		unitInfoTypeRTD = "RscUnitInfoAirRTDFullDigital";
 		simulation = "helicopterrtd";
 		class RotorLibHelicopterProperties
 		{
@@ -1161,10 +1163,10 @@ class CfgVehicles
 		washDownStrength = "1.0f";
 		washDownDiameter = "40.0f";
 		gForceShakeAttenuation = 0.5;
-		cyclicasideforcecoef = 1.0;//banking
-		cyclicforwardforcecoef = 1.5;//fowards backwards.
+		cyclicasideforcecoef = 0.7;//banking
+		cyclicforwardforcecoef = 1.0;//fowards backwards.
 		frontRotorForceCoef = 1;//front rotor(strenth of lift)
-		backRotorForceCoef = 0.7;//tailrotor(strength of horzontal movement=)
+		backRotorForceCoef = 0.5;//tailrotor(strength of horzontal movement=)
 		liftForceCoef = 1.3;
 		maxfordingdepth = 0.55;
 		mainBladeRadius = 6.2;
@@ -1205,8 +1207,8 @@ class CfgVehicles
 		precision = 200;
 		memoryPointCM[]  = {"flare_launcher1","flare_launcher2"};
 		memoryPointCMDir[] = {"flare_launcher1_dir","flare_launcher2_dir"};
-		radarType = 8;
-		LockDetectionSystem = "2 + 8 + 4";
+		radarType = 4;
+		LockDetectionSystem = "1 + 2 + 8 + 4";
 		incomingMissileDetectionSystem = 16;
 		precisegetinout = 1;
 		memoryPointsGetInCargo[] = {"pos cargo"};
@@ -2163,7 +2165,7 @@ class CfgVehicles
 				"gunfighter\uh1y\data\uh1y_cockpit_destruct.rvmat"
 			};
 		};
-
+		insideSoundCoef = 0.09;
 		attenuationEffectType = "HeliAttenuation";
 		soundGeneralCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_1",1.0,1,100};
 		soundGeneralCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_2",1.0,1,100};
@@ -2188,8 +2190,8 @@ class CfgVehicles
 		soundEngineOnExt[] = {"Gunfighter\sounds\UHext\ext-motor-start",1.7466836,1.0,700};
 		soundEngineOffInt[] = {"Gunfighter\sounds\UHint\int-stop-final",0.8466836,1.0};
 		soundEngineOffExt[] = {"Gunfighter\sounds\UHext\ext-motor-stop",1.7466836,1.0,700};
-		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",1.0,1};
-		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",1.0,1.5};
+		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",2.0,1.5};
+		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",2.0,1.5};
 		rotorDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_open_1",1.0,1.0};
 		rotorDamageOut[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_ext_1",2.5118864,1.0,150};
 		rotorDamage[] = {"rotorDamageInt","rotorDamageOut"};
