@@ -85,10 +85,10 @@ class CfgAmmo
 	{
 		hit=75;
 		indirectHit=10;
-		indirectHitRange=2;
+		indirectHitRange=10;
 		cost=25;
 		airLock=1;
-		explosive=0.30000001;
+		explosive=0.3;
 		caliber=2.3299999;
 		deflecting=0;
 		deflectingChance = 0;
@@ -102,7 +102,8 @@ class CfgAmmo
 		typicalSpeed = 1030;
 		visibleFire = 32;
 		audibleFire = 32;
-		visibleFireTime = 4;
+		visibleFireTime = 15;
+		audiblefiretime = 15;
 	};
  	class MEU_Maverick_AT: MissileBase
  	{
@@ -318,8 +319,8 @@ class CfgWeapons
 		maxRangeProbab = 0.01;
 		CanLock = 2;
 		weaponLockDelay = 3;
-		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.316228,1};
-		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.316228,2.5};
+		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.8,1};
+		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.8,2.5};
 		reloadTime = 0.1;
 		magazineReloadTime = 30;
 		magazines[] = {"MEU_Sidewinder"};
@@ -366,25 +367,42 @@ class CfgVehicles
 		precisegetinout = 1;
 		driverAction = "AV8B_Pilot";
 		radarType = 4;
-		showAllTargets = 2;
 		driverCanSee=31;
 		LockDetectionSystem = 8;
 		incomingMissileDetectionSystem = 16;
 		driverLeftHandAnimName = "lever_pilot";
 		driverRightHandAnimName = "stick_pilot";
+		fuelCapacity=1200;
+		fuelConsumptionRate=0.138;
+
 		maxSpeed = 1040;
 		landingSpeed = 200;
 		acceleration = 300;
 		vtol = 1;
- 		altFullForce = 9000;
- 		altNoForce = 20000;
-		rudderInfluence = 0.5;
+ 		altFullForce = 13636;
+ 		altNoForce = 35000;
+		rudderInfluence = 0.01;
 		aileronSensitivity = 0.8;
-		elevatorSensitivity = 0.8;
+		elevatorSensitivity = 1.5;
+		aileronControlsSensitivityCoef = 3;
+		elevatorControlsSensitivity = 2;
+		rudderControlsSensitivityCoef = 4;
+		elevatorCoef[] = {0.6,0.9,0.5,0.4,0.35,0.3,0.3};
+		aileronCoef[] = {0.6,1.0,0.95,0.9,0.85,0.8,0.75};
+		rudderCoef[] = {0.6,1.0,1.0,0.9,0.8,0.7,0.6};
   		flapsFrictionCoef = 0.32;
+		angleOfIndicence = 0.05235987;
+		draconicForceXCoef = 7.4;
+		draconicForceYCoef = 3.0;
+		draconicForceZCoef = 0.1;
+		draconicTorqueXCoef = 1.2;
+		draconicTorqueYCoef = 3.0;
+		envelope[] = {0.0,0.2,1.2,3.0,5.1,7.0,7.3,7,6.3,5.2,3.8,1.8,0.5,0};
+		thrustCoef[] = {0.9,0.8,0.9,1.3,1.2,1.2,1.1,1.0,0.9,0.2,0.1,0.0,0.0};
+		landingAoa = 0.174533;
+
   		minFireTime = 30;
 		driveOnComponent[] = {"Wheel_1","Wheel_2","Wheel_3_1","Wheel_3_2"};
-		envelope[] = {0.0,0.2,1.2,3.0,5.1,7.0,7.3,7,6.3,5.2,3.8,1.8,0.5,0};
 		enableGPS = 1;
 		irScanGround=True;
 		laserScanner = 1;

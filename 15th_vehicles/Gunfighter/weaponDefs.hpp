@@ -11,7 +11,7 @@ class CfgAmmo
 	class B_20mm_AP: B_20mm
 	{
 		hit = 60;
-		indirectHit = 20;
+		indirectHit = 10;
 		indirectHitRange = 10;
 		visibleFire = 40;
 		audibleFire = 40;
