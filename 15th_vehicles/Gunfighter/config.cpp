@@ -85,7 +85,6 @@ class CfgVehicles
 	};
 	class meu_AH1Z: Helicopter
 	{
-
 		destrType="DestructWreck";
 		crew = "B_Helipilot_F";
 		scope=2;
@@ -235,8 +234,8 @@ class CfgVehicles
 		soundEngineOnExt[] = {"Gunfighter\sounds\AHext\AHStartout.wss", 1.77828, 1.000000, 700};
 		soundEngineOffInt[] = {"Gunfighter\sounds\AHint\AHStopin.wss", 0.8316228, 1.0000000};
 		soundEngineOffExt[] = {"Gunfighter\sounds\AHext\AHStopout.wss", 1.77828, 1.0000000, 700};
-		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_1",2.0,1.5};
-		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_2",2.0,1.5};
+		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_1",3.0,1.0,2};
+		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\opfor_lock_2",3.0,1.0,2};
 		rotorDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_2",1.0,1.0};
 		rotorDamageOut[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_ext_2",2.5118864,1.0,300};
 		rotorDamage[] = {"rotorDamageInt","rotorDamageOut"};
@@ -963,6 +962,8 @@ class CfgVehicles
 				minTurn = -120;
 				maxTurn = 120;
 				initTurn = 0;
+				gunnerCanEject=1;
+				stabilizedInAxes = 4;
 				gunnerOpticsModel = "";
 				gunnerForceOptics = 0;
 				turretInfoType = "RscOptics_Heli_Attack_01_gunner";
@@ -970,7 +971,6 @@ class CfgVehicles
 				maxverticalrotspeed = 3;
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200};
 				discreteDistanceInitIndex = 9;
-				stabilizedInAxes = 3;
 				class OpticsIn {
 				class Wide {
 					gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
@@ -1007,7 +1007,7 @@ class CfgVehicles
 						initFov = 0.010;
 						minFov = 0.010;
 						maxFov = 0.010;
-						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
+						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
 					
 						};
 			};
@@ -1116,9 +1116,6 @@ class CfgVehicles
 		cargoCanEject = 1;
 		driverCanEject = 1;
 		getInRadius = 2.5;
-		driverCanSee=31;
-		gunnercansee = 31;
-		cargocansee = 31;
 		camouflage = 7;
 		crewVulnerable = 1;
 		unitInfoTypeRTD = "RscUnitInfoAirRTDFullDigital";
@@ -1187,6 +1184,11 @@ class CfgVehicles
 
 		//end PhysX stuff
 
+		commanderCanSee = "31";
+		gunnerCanSee = "31";
+		driverCanSee = "31";
+		cargocansee = "31";
+		turretcansee = "31";
 		armor = 30;
 		armorStructural = 1;
 		damageResistance = 0.004;
@@ -1223,6 +1225,7 @@ class CfgVehicles
 
 		gunnerUsesPilotView=1;
 		gunnerOpticsModel = "";
+		enableManualFire = 1;
 
 		transportSoldier=1;
 		crew="B_Helipilot_F";
@@ -1261,71 +1264,11 @@ class CfgVehicles
 		class cargoturret;
 		class Turrets: Turrets
 		{
-			class MainTurret: MainTurret //Left Doorgun
+			class CoPilotObs: Mainturret
 			{
-				isCopilot = 0;
-				body="mainTurret";
-				gun="mainGun";
-				minElev=-60; maxElev=+30; initElev=-0;
-				minTurn=-5; maxTurn=185; initTurn=0;
-				soundServo[]={,db-40,1.0};
-				animationSourceHatch="";
-				stabilizedInAxes = "StabilizedInAxesNone";
-				gunBeg="muzzle_1";
-				gunEnd="chamber_1";
-				gunnerCanEject = 1;
-				weapons[]={"master_arms_safe","M134_minigun"};
-				magazines[]={"5000Rnd_762x51_Belt"};
-				gunnerName="Crew-Chief";
-				gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
-				gunnerOutOpticsShowCursor=1;
-				gunnerOpticsShowCursor=1;
-				gunnerAction="UH1Y_Gunner";
-				gunnerInAction="UH1Y_Gunner";
-				commanding= -1;
-				turretCanSee = "1 + 2 + 4 + 8 + 16";
-				primaryGunner=1;
-				class ViewOptics
-				{
-					initAngleX=0;
-					minAngleX=-30;
-					maxAngleX=30;
-					initAngleY=0;
-					minAngleY=-100;
-					maxAngleY=100;
-					initFov=1;
-					minFov=0.25;
-					maxFov=0.8;
-				};
-				gunnerCompartments = Compartment2;
-			};
-			class RightDoorGun: MainTurret
-			{
-				isCopilot = 0;
-				body="Turret2";
-				gun="Gun_2";
-				proxyIndex=2;
-				animationSourceBody="Turret_2";
-				animationSourceGun="Gun_2";
-				stabilizedInAxes = 3;
-				selectionFireAnim="zasleh_1";
-				gunnerName="DoorGunner";
-				commanding=-2;
-				minTurn=-180; maxTurn=0; initTurn=0;
-				weapons[]={"master_arms_safe","M134_minigun_2"};
-				gunBeg="muzzle_2"; //gunBeg=endpoint of the gun
-				gunEnd="chamber_2"; //gunEnd=chamber of the gun
-				memoryPointGun="machinegun_2";
-				memoryPointGunnerOptics="gunnerview_2";
-				turretCanSee = "1 + 2 + 4 + 8 + 16";
-				primaryGunner=2;
-			};
-			class CoPilotObs: MainTurret
-			{
-				enableManualFire = 0;
 				isCopilot = 1;
 				gunnerCanEject = 1;
-				stabilizedInAxes = 3;
+				CanEject = 1;
 				gunnerName="Co-Pilot";
 				gunnerAction="UH1Y_Gunner02";
 				gunnerInAction="UH1Y_Gunner02";
@@ -1333,6 +1276,7 @@ class CfgVehicles
 				memoryPointsGetInGunnerDir = "pos codriver dir";
 				selectionFireAnim = "";
 				castGunnerShadow = 1;
+				stabilizedInAxes = 4;
 				viewGunnerShadow = 1;
 				body="ObsTurret";
 				proxyIndex=3;
@@ -1344,19 +1288,24 @@ class CfgVehicles
 				minTurn = -180;
 				maxTurn = 180;
 				initTurn = 0;
+				turretCanSee = "31";
 				animationSourceBody="ObsTurret";
 				animationSourceGun="ObsGun";
 				outGunnerMayFire = 1; //Engine assumes helicopter gunner is turned out.
 				gunBeg="gun_end"; //gunBeg=endpoint of the gun
 				gunEnd="gun_begin"; //gunEnd=chamber of the gun
 				memoryPointGun="gun_end";
+				gunnerLeftHandAnimName = "lever_copilot";
+				gunnerRightHandAnimName = "stick_copilot";
+				gunnerLeftLegAnimName = "pedalL";
+				gunnerRightLegAnimName = "pedalR";
 				commanding= -3;
 				laser = 1;
 				memoryPointGunnerOptics = "commanderview";
 				gunnerCompartments = "Compartment2";
 				weapons[]={"Laserdesignator_mounted"};
 				magazines[]={"Laserbatteries"};
-				primaryGunner=3;
+				primaryGunner=0;
 				startEngine = 0;
 				soundServo[]={,db-40,1.0};
 				gunnerForceOptics="false";
@@ -1430,6 +1379,68 @@ class CfgVehicles
 						gunnerOpticsEffect[]={};
 					};
 				};
+			};
+			class MainTurret: MainTurret //Left Doorgun
+			{
+				CanEject = 1;
+				isCopilot = 0;
+				body="mainTurret";
+				gun="mainGun";
+				minElev=-60; maxElev=+30; initElev=-0;
+				minTurn=-5; maxTurn=185; initTurn=0;
+				soundServo[]={,db-40,1.0};
+				animationSourceHatch="";
+				gunBeg="muzzle_1";
+				gunEnd="chamber_1";
+				gunnerCanEject = 1;
+				weapons[]={"master_arms_safe","M134_minigun"};
+				magazines[]={"5000Rnd_762x51_Belt"};
+				gunnerName="Crew-Chief";
+				gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+				gunnerOutOpticsShowCursor=1;
+				gunnerOpticsShowCursor=1;
+				gunnerAction="UH1Y_Gunner";
+				gunnerInAction="UH1Y_Gunner";
+				commanding= -2;
+				turretCanSee = "31";
+				primaryGunner=1;
+				class ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=100;
+					initFov=1;
+					minFov=0.25;
+					maxFov=0.8;
+				};
+				gunnerCompartments = Compartment2;
+				soundAttenuationTurret = "HeliAttenuationGunner";
+				disableSoundAttenuation = 0;
+			};
+			class RightDoorGun: MainTurret
+			{
+				isCopilot = 0;
+				body="Turret2";
+				gun="Gun_2";
+				proxyIndex=2;
+				animationSourceBody="Turret_2";
+				animationSourceGun="Gun_2";
+				selectionFireAnim="zasleh_1";
+				gunnerName="DoorGunner";
+				commanding=-3;
+				minTurn=-180; maxTurn=0; initTurn=0;
+				weapons[]={"master_arms_safe","M134_minigun_2"};
+				gunBeg="muzzle_2"; //gunBeg=endpoint of the gun
+				gunEnd="chamber_2"; //gunEnd=chamber of the gun
+				memoryPointGun="machinegun_2";
+				memoryPointGunnerOptics="gunnerview_2";
+				turretCanSee = "31";
+				primaryGunner=0;
+				soundAttenuationTurret = "HeliAttenuationGunner";
+				disableSoundAttenuation = 0;
 			};
 		class CargoTurret_01: CargoTurret /// position for Firing from Vehicles
 		{
@@ -2190,8 +2201,8 @@ class CfgVehicles
 		soundEngineOnExt[] = {"Gunfighter\sounds\UHext\ext-motor-start",1.7466836,1.0,700};
 		soundEngineOffInt[] = {"Gunfighter\sounds\UHint\int-stop-final",0.8466836,1.0};
 		soundEngineOffExt[] = {"Gunfighter\sounds\UHext\ext-motor-stop",1.7466836,1.0,700};
-		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",2.0,1.5};
-		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",2.0,1.5};
+		soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",3.0,1.0,2};
+		soundIncommingMissile[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",3.0,1.0,2};
 		rotorDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_open_1",1.0,1.0};
 		rotorDamageOut[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_ext_1",2.5118864,1.0,150};
 		rotorDamage[] = {"rotorDamageInt","rotorDamageOut"};

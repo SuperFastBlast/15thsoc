@@ -7,28 +7,16 @@ class CfgAmmo
 	class MissileCore;
 	class MissileBase;
 	class B_762x51_Ball;
-	class B_30mm_HE;
 	class B_20mm;
-	class B_30x113mm_M789_HEDP: B_30mm_HE
-	{
-		hit=67;indirectHit=15;indirectHitRange=1; // AP/HE mix
-		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
-		tracerScale=2;
-		tracerStartTime = 0.1; // seconds
-		tracerEndTime = 2.3; // seconds
-		explosive = 0.3; //To get explosive particle effects
-		caliber = 2.5;
-		airFriction = -0.00078;
-	};
-
 	class B_20mm_AP: B_20mm
 	{
 		hit = 60;
-		indirectHit = 10;
-		indirectHitRange = 2;
-		visibleFire = 28;
-		audibleFire = 28;
-		visibleFireTime = 3;
+		indirectHit = 20;
+		indirectHitRange = 10;
+		visibleFire = 40;
+		audibleFire = 40;
+		visibleFireTime = 15;
+		audiblefiretime = 15;
 		deflecting=0;
 		deflectingChance = 0;
 		deflectingRandomness = 0;
@@ -38,9 +26,11 @@ class CfgAmmo
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 		tracerScale = 1.8;
 		tracerStartTime = 0.1;
-		tracerEndTime = 2;
+		tracerEndTime = 2.3;
 		airFriction = -0.00077;
 		caliber = 2.33;
+		whistleDist = 50;
+		whistleOnFire = 1;
 	};
 
 	class M_Sidewinder_AA: MissileBase
@@ -53,7 +43,7 @@ class CfgAmmo
 		maneuvrability = 27;
 		simulationStep = 0.002;
 		airLock = 1;
-		irLock = 1;
+		irLock = 0;
 		cost = 15000;
 		maxSpeed = 828;
 		timeToLive = 35;
@@ -67,6 +57,8 @@ class CfgAmmo
 		CraterEffects = "AAMissileCrater";
 		explosionEffects = "AAMissileExplosion";
 		effectsMissile = "missile3";
+		weaponlocksystem = "2 + 4 + 8";
+		cmimmunity = 0.8;
 		whistleDist = 20;
 	};
 
@@ -155,31 +147,6 @@ class CfgMagazines
 		tracersEvery = 2;
 		nameSound = "cannon";
 	};
-
-	class 100Rnd_762x51_M240: VehicleMagazine
-	{
-		scope = 1;
-		displayName = "100rnd_M240";
-		count=100;
-		ammo = "B_762x51_Ball";
-		initSpeed = 900;
-		tracersEvery = 4;
-		lastRoundsTracer = 4;
-		nameSound="mgun";
-		descriptionShort = "100RND_M240";
-	};
-	class 1200Rnd_30x113mm_M789_HEDP: VehicleMagazine
-	{
-		scope = 1;
-		displayName = "1200Rnd 30x113mm M789 HEDP";
-		ammo="B_30x113mm_M789_HEDP";
-		count=1200;
-		initSpeed = 805;
-		tracersEvery = 1;
-		maxLeadSpeed=500;
-		nameSound="cannon";
-		airLock=1;
-	};
 	class 8Rnd_Hellfire: VehicleMagazine
 	{
 		scope = 2;
@@ -254,13 +221,14 @@ class CfgWeapons
 		midRangeProbab = 0.09;
 		maxRange = 9000;
 		maxRangeProbab = 0.01;
-		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.316228,1};
-		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.316228,2.5};
+		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.8,1};
+		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.8,2.5};
 		reloadTime = 0.1;
 		magazineReloadTime = 30;
 		magazines[] = {"2Rnd_Sidewinder_AH1Z"};
 		cursor = "missile";
 		cursorSize = 1;
+		weaponlockdelay = 3;
 		sounds[] = {StandardSound};
 			class StandardSound
 			{
@@ -545,8 +513,8 @@ class FFARLauncher_14:FFARLauncher
 	cursor = "EmptyCursor";
 	cursoraim = "EmptyCursor";
 	cursoraimon = "EmptyCursor";
-	lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.316228,1};
-	lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.316228,2.5};
+	lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.8,1};
+	lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.8,2.5};
 	laserPos = "sensors";
 	magazines[] = {"8Rnd_Hellfire"};
 	maxrange = 9000;
@@ -572,91 +540,5 @@ class FFARLauncher_14:FFARLauncher
 			};
 
 
-	};
-	class M230: CannonCore
-	{
-		scope = 1;
-		displayName = "M230";
-		nameSound="cannon";
-		autoFire = 1;
-		magazines[] = {"1200Rnd_30x113mm_M789_HEDP"};
-		canLock = 2;
-
-		flash = gunfire;
-		flashSize = 0.1;
-		recoil = Empty;
-		ballisticsComputer = 1;
-
-		aiDispersionCoefX = 6; // 2
-		ffMagnitude = 0.5;
-		ffFrequency = 11;
-		ffCount = 6;
-
-		cursor= "EmptyCursor";
-		cursorAim= "mg";
-		cursorSize = 1;
-		modes[] = {"manual","close","short","medium","far"};
-		class manual: CannonCore
-		{
-      displayName = "M230";
-      autoFire = 1;
-	    sound[]={"gunfighter\sounds\a10vulcanVII",db5,1,1100};
-
-      reloadTime = 0.096;
-	    dispersion=0.002;
-			soundContinuous = 0;
-			initspeed = 820;
-
-			showToPlayer = true;
-			burst = 1;
-			multiplier = 1;
-			aiRateOfFire = 0.5;
-			aiRateOfFireDistance = 50;
-
-			minRange=1;minRangeProbab=0.001;
-			midRange=2;midRangeProbab=0.001;
-			maxRange=3;maxRangeProbab=0.001;
-			ffMagnitude = 0.5;
-			ffFrequency = 11;
-			ffCount = 6;
-		};
-		class close: manual
-		{
-      showToPlayer = false;
-      soundBurst = false;
-      burst = 15; //Rg 6;
-			aiRateOfFire = 0.5;
-			aiRateOfFireDistance = 400;
-			minRange=0;minRangeProbab=0.04;
-			midRange=200;midRangeProbab=0.2;
-			maxRange=400;maxRangeProbab=0.1;
-		};
-		class short: close
-		{
-			burst = 10; //Rg 6;
-			aiRateOfFire = 1;
-			aiRateOfFireDistance = 600; //Rg 200;
-			minRange=200;minRangeProbab=0.1;
-			midRange=500;midRangeProbab=0.2; //Rg 100;
-			maxRange=800;maxRangeProbab=0.1; //Rg 200;
-		};
-		class medium: close
-		{
-			burst = 7; //Rg 8;
-			aiRateOfFire = 2; //Rg 4;
-			aiRateOfFireDistance = 800; //Rg 400;
-			minRange=600;minRangeProbab=0.1;
-			midRange=800;midRangeProbab=0.2; //Rg 300;
-			maxRange=1000;maxRangeProbab=0.1; //Rg 400;
-		};
-		class far: close
-		{
-			burst = 4; //Rg 7;
-			aiRateOfFire = 3; //Rg 7;
-			aiRateOfFireDistance = 1000; //Rg 600;
-			minRange=800;minRangeProbab=0.1;
-			midRange=1000;midRangeProbab=0.2; //Rg 500;
-			maxRange=1500;maxRangeProbab=0.4; //Rg 600;
-		};
 	};
 };
