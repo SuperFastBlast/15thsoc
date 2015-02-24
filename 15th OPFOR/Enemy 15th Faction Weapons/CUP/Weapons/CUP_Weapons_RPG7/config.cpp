@@ -35,6 +35,7 @@ class CfgAmmo
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
 		whistleDist = 40;
+		whistleonfire = 1;
 		airLock = 1;
 		class CamShakeExplode
 		{
@@ -87,6 +88,7 @@ class CfgAmmo
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
 		whistleDist = 40;
+		whistleonfire = 1;
 		airLock = 1;
 		class CamShakeExplode
 		{
@@ -139,6 +141,7 @@ class CfgAmmo
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
 		whistleDist = 40;
+		whistleonfire = 1;
 		airLock = 1;
 		class CamShakeExplode
 		{
@@ -191,6 +194,7 @@ class CfgAmmo
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
 		whistleDist = 40;
+		whistleonfire = 1;
 		airLock = 1;
 		class CamShakeExplode
 		{

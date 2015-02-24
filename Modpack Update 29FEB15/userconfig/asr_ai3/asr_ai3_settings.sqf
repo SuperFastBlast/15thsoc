@@ -8,7 +8,7 @@
 
 asr_ai3_main_enabled 		= 1;		// All the other settings matter only if we have 1 here; set 0 to disable all scripted features
 asr_ai3_main_radionet 		= 1;		// AI groups share known enemy locations over radio
-asr_ai3_main_radiorange 	= 1000;		// Maximum range for AI radios (warning: increasing this impacts game performance)
+asr_ai3_main_radiorange 	= 300;		// Maximum range for AI radios (warning: increasing this impacts game performance)
 asr_ai3_main_seekcover 		= 1;		// Set to 1 if AI should move to near cover in combat when they're exposed in the open, 0 to disable.
 asr_ai3_main_throwsmoke		= 0.9;		// AI throws smoke when hit for cover (set 0 to disable or a number up to 1 to enable, higher number means better chance to do it)
 asr_ai3_main_usebuildings 	= 0.9;		// Chance the AI group will enter nearby building positions for cover (0 to 1 values, 0 will disable the feature)
