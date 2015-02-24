@@ -24,6 +24,7 @@ class CfgAmmo
 		thrust = 280;
 		thrustTime = 1;
 		maxSpeed = 295;
+		airFriction = -0.0096;
 		sideAirFriction = 0.5;
 		timeToLive = 4.5;
 		fuseDistance = 5;
@@ -75,6 +76,7 @@ class CfgAmmo
 		thrust = 280;
 		thrustTime = 1;
 		maxSpeed = 295;
+		airFriction = -0.0096;
 		sideAirFriction = 0.5;
 		timeToLive = 4.5;
 		fuseDistance = 5;
@@ -126,6 +128,7 @@ class CfgAmmo
 		thrust = 165;
 		thrustTime = 1;
 		maxSpeed = 200;
+		airFriction = -0.0096;
 		sideAirFriction = 0.5;
 		timeToLive = 4.5;
 		fuseDistance = 5;
@@ -177,6 +180,7 @@ class CfgAmmo
 		thrust = 280;
 		thrustTime = 1;
 		maxSpeed = 295;
+		airFriction = -0.0096;
 		sideAirFriction = 0.5;
 		timeToLive = 4.5;
 		fuseDistance = 5;

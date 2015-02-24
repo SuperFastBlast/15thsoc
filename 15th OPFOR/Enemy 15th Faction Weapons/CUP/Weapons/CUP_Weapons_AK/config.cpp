@@ -69,7 +69,7 @@ class CfgAmmo
 		count = 30;
 		picture = "\CUP\Weapons\CUP_Weapons_AK\data\ui\m_ak74_ca.paa";
 		tracersEvery = 0;
-		lastRoundsTracer = 3:
+		lastRoundsTracer = 3;
 		descriptionShort = "30 Rnd AK Magazine";
 		mass = 12;
 	};

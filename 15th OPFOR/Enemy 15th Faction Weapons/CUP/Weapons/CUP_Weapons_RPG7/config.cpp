@@ -19,13 +19,14 @@ class CfgAmmo
 		hit = 416;
 		indirectHit = 40;
 		indirectHitRange = 4;
-		model = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7V\CUP_PG7V_fly.p3d";
-		proxyShape = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7V\CUP_PG7V.p3d";
+		model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7V\CUP_PG7V_fly.p3d";
+		proxyShape = "\CUP\Weapons\CUP_Weapons_RPG7\PG7V\CUP_PG7V.p3d";
 		cost = 100;
 		initTime = 0.1;
 		thrust = 280;
 		thrustTime = 1;
 		maxSpeed = 295;
+		airFriction = -0.096;
 		sideAirFriction = 0.5;
 		timeToLive = 4.5;
 		fuseDistance = 5;
@@ -35,7 +36,6 @@ class CfgAmmo
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
 		whistleDist = 40;
-		whistleonfire = 1;
 		airLock = 1;
 		class CamShakeExplode
 		{
@@ -72,13 +72,14 @@ class CfgAmmo
 		hit = 640;
 		indirectHit = 20;
 		indirectHitRange = 2;
-		model = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7VL\CUP_PG7VL_Fly.p3d";
-		proxyShape = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7VL\CUP_PG7VL.p3d";
+		model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7VL\CUP_PG7VL_Fly.p3d";
+		proxyShape = "\CUP\Weapons\CUP_Weapons_RPG7\PG7VL\CUP_PG7VL.p3d";
 		cost = 200;
 		initTime = 0.1;
 		thrust = 280;
 		thrustTime = 1;
 		maxSpeed = 295;
+		airFriction = -0.096;
 		sideAirFriction = 0.5;
 		timeToLive = 4.5;
 		fuseDistance = 5;
@@ -88,7 +89,6 @@ class CfgAmmo
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
 		whistleDist = 40;
-		whistleonfire = 1;
 		airLock = 1;
 		class CamShakeExplode
 		{
@@ -125,13 +125,14 @@ class CfgAmmo
 		hit = 1000;
 		indirectHit = 40;
 		indirectHitRange = 4;
-		model = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7VR\CUP_PG7VR_Fly.p3d";
-		proxyShape = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7VR\CUP_PG7VR.p3d";
+		model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7VR\CUP_PG7VR_Fly.p3d";
+		proxyShape = "\CUP\Weapons\CUP_Weapons_RPG7\PG7VR\CUP_PG7VR.p3d";
 		cost = 300;
 		initTime = 0.15;
 		thrust = 165;
 		thrustTime = 1;
 		maxSpeed = 200;
+		airFriction = -0.096;
 		sideAirFriction = 0.5;
 		timeToLive = 4.5;
 		fuseDistance = 5;
@@ -141,7 +142,6 @@ class CfgAmmo
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
 		whistleDist = 40;
-		whistleonfire = 1;
 		airLock = 1;
 		class CamShakeExplode
 		{
@@ -178,13 +178,14 @@ class CfgAmmo
 		hit = 120; //was 140
 		indirectHit = 30;
 		indirectHitRange = 20;
-		model = "\CUP\Weapons\CUP_Weapons_Ammunition\OG7V\CUP_OG7V_Fly.p3d";
-		proxyShape = "\CUP\Weapons\CUP_Weapons_Ammunition\OG7V\CUP_OG7V.p3d";
-		cost = 100;
+		model = "\CUP\Weapons\CUP_Weapons_RPG7\OG7V\CUP_OG7V_Fly.p3d";
+		proxyShape = "\CUP\Weapons\CUP_Weapons_RPG7\OG7V\CUP_OG7V.p3d";
+		cost = 40;
 		initTime = 0.1;
 		thrust = 280;
 		thrustTime = 1;
 		maxSpeed = 295;
+		airFriction = -0.096;
 		sideAirFriction = 0.5;
 		timeToLive = 4.5;
 		fuseDistance = 5;
@@ -194,7 +195,6 @@ class CfgAmmo
 		explosionEffects = "ATRocketExplosion";
 		effectsMissile = "missile2";
 		whistleDist = 40;
-		whistleonfire = 1;
 		airLock = 1;
 		class CamShakeExplode
 		{
@@ -233,7 +233,7 @@ class CfgMagazines
  class CUP_PG7V_M: CA_LauncherMagazine
  {
   scope = 2;
-  model = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7V\CUP_PG7V";
+  model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7V\CUP_PG7V";
   modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7_launcher_loaded";
   displayName = "PG-7V";
   ammo = "CUP_R_PG7V_AT";
@@ -245,7 +245,7 @@ class CfgMagazines
  class CUP_PG7VL_M: CA_LauncherMagazine
  {
   scope = 2;
-  model = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7VL\CUP_PG7VL";
+  model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7VL\CUP_PG7VL";
   modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7L_launcher_loaded";
   displayName = "PG-7VL";
   ammo = "CUP_R_PG7VL_AT";
@@ -257,7 +257,7 @@ class CfgMagazines
  class CUP_PG7VR_M: CA_LauncherMagazine
  {
   scope = 2;
-  model = "\CUP\Weapons\CUP_Weapons_Ammunition\PG7VR\CUP_PG7VR";
+  model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7VR\CUP_PG7VR";
   modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7VR_launcher_loaded";
   displayName = "PG-7VR";
   ammo = "CUP_R_PG7VR_AT";
@@ -270,7 +270,7 @@ class CfgMagazines
  class CUP_OG7_M: CA_LauncherMagazine
  {
   scope = 2;
-  model = "\CUP\Weapons\CUP_Weapons_Ammunition\OG7V\CUP_OG7V";
+  model = "\CUP\Weapons\CUP_Weapons_RPG7\OG7V\CUP_OG7V";
   modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7o_launcher_loaded";
   displayName = "OG7";
   ammo = "CUP_R_OG7_AT";
@@ -303,6 +303,7 @@ class CfgWeapons
    mass = 153;
   };
   scope = 2;
+  inertia = 1;
   displayName = "RPG-7V";
   model = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7_launcher.p3d";
   handAnim[] = {"OFP2_ManSkeleton","\CUP\Weapons\CUP_Weapons_RPG7\data\anim\RPG7.rtm"};
@@ -322,8 +323,8 @@ class CfgWeapons
    soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
   };
   reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Reload",1,1,35};
-  drySound[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Dry",1,1,35};
-  soundFly[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Fly",0.3,1.5,900};
+  drySound[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Dry",2,1,35};
+  soundFly[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Fly",10,1,900};
   weaponSoundEffect = "DefaultRifle";
   reloadAction = "ReloadRPG";
   picture = "\CUP\Weapons\CUP_Weapons_RPG7\data\ui\gear_rpg7_X_ca.paa";
