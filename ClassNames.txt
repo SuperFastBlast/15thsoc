@@ -66,11 +66,8 @@ Backpacks
 "DAR_MK27T" - GCE MTVR extended covered Woodland
 "DAR_LHS_16" - GCE MTVR Ammo Truck Woodland
 "DAR_LHS_8" - GCE MTVR Fuel Truck Woodland
-"Burnes_M1A2_MEU_01" - Titan unknown as to what means what or what Titan uses
-"Burnes_M1A2_MEU_02" - Titan unknown as to what means what or what Titan uses
-"Burnes_M1A2_MEU_03" - Titan unknown as to what means what or what Titan uses
-"Burnes_M1A2_MEU_04" - Titan unknown as to what means what or what Titan uses
-"Burnes_M1A2_MEU_05" - Titan unknown as to what means what or what Titan uses
+"Burnes_M1A2_MEU_03" - M1A1 AIM Desert - Used when situation calls for a desert variant.
+"Burnes_M1A2_MEU_04" - M1A1 AIM Woodland - Used when situation calls for a woodland variant
 
 *****************
 15th SEA Vics
@@ -85,10 +82,10 @@ MX2A Thermal Handheld Optic
 "meu_MX2A_tan"
 
 AT 4 CS
-"meu_AT4_CS" 
+"tf47_at4_heat" 
 
 AT 4
-"meu_AT4"
+"tf47_at4_hp"
 
 LAW M72
 "caf_m72a6"

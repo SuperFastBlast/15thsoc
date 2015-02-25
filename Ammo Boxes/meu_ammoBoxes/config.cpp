@@ -617,13 +617,13 @@ class CfgVehicles{
 				count = 5;
 				weapon = "MEU_M40A5";
 			};
-			class _xx_meu_AT4 {
+			class _xx_tf47_at4_hp {
 				count = 20;
-				weapon = "meu_AT4";
+				weapon = "tf47_at4_hp";
 			};
-			class _xx_meu_AT4_CS {
+			class _xx_tf47_at4_heat {
 				count = 20;
-				weapon = "meu_AT4_CS";
+				weapon = "tf47_at4_heat";
 			};
 			class _xx_caf_m72a6 {
 				count = 10;
@@ -1292,13 +1292,13 @@ class CfgVehicles{
 				count = 20;
 				weapon = "ej_IAR30";
 			};
-			class _xx_meu_AT4 {
+			class _xx_tf47_at4_hp {
 				count = 20;
-				weapon = "meu_AT4";
+				weapon = "tf47_at4_hp";
 			};
-			class _xx_meu_AT4_CS {
+			class _xx_tf47_at4_heat {
 				count = 20;
-				weapon = "meu_AT4_CS";
+				weapon = "tf47_at4_heat";
 			};
 			class _xx_CAF_M72A6 {
 				count = 5;
@@ -2259,9 +2259,9 @@ class CfgVehicles{
 				count = 12;
 				weapon = "CUP_arifle_M4CAR_black";
 			};
-			class _xx_meu_AT4 {
+			class _xx_tf47_at4_hp {
 			     count = 10;
-				 weapon = "meu_AT4";
+				 weapon = "tf47_at4_hp";
 			};
 		};
 	};
@@ -2441,9 +2441,9 @@ class CfgVehicles{
 				count = 10;
 				weapon = "ej_IAR30";
 			};
-			class _xx_meu_AT4 {
+			class _xx_tf47_at4_hp {
 				count = 20;
-				weapon = "meu_AT4";
+				weapon = "tf47_at4_hp";
 			};
 		};
 	};
@@ -2773,9 +2773,9 @@ class CfgVehicles{
 				count = 5;
 				weapon = "CAF_M72A6";
 			};
-			class _xx_meu_AT4 {
+			class _xx_tf47_at4_hp {
 				count = 20;
-				weapon = "meu_AT4";
+				weapon = "tf47_at4_hp";
 			};
 		};
 	};
@@ -2949,9 +2949,9 @@ class CfgVehicles{
          
         class TransportWeapons {
      
-            class _xx_meu_AT4 {
+            class _xx_tf47_at4_hp {
                 count = 10;
-                weapon = "meu_AT4";
+                weapon = "tf47_at4_hp";
             };
             class _xx_caf_m72a6 {
                 count = 4;
@@ -3045,9 +3045,9 @@ class CfgVehicles{
 		
 		class TransportWeapons {
 	
-			class _xx_meu_AT4 {
+			class _xx_tf47_at4_hp {
 				count = 3;
-				weapon = "meu_AT4";
+				weapon = "tf47_at4_hp";
 			};
 		};
 	};
@@ -3514,9 +3514,9 @@ class CfgVehicles{
 				count = 20;
 				weapon = "ej_IAR30";
 			};
-			class _xx_meu_AT4 {
+			class _xx_tf47_at4_hp {
 				count = 20;
-				weapon = "meu_AT4";
+				weapon = "tf47_at4_hp";
 			};
 			class _xx_CUP_srifle_M110 {
 				count = 6;
@@ -3960,13 +3960,13 @@ class CfgVehicles{
 				count = 20;
 				weapon = "ej_IAR30";
 			};
-			class _xx_meu_AT4 {
+			class _xx_tf47_at4_hp {
 				count = 20;
-				weapon = "meu_AT4";
+				weapon = "tf47_at4_hp";
 			};
-			class _xx_meu_AT4_CS {
+			class _xx_tf47_at4_heat {
 				count = 20;
-				weapon = "meu_AT4_CS";
+				weapon = "tf47_at4_heat";
 			};
 			class _xx_CAF_M72A6 {
 				count = 5;
