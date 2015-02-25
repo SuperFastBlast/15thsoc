@@ -912,6 +912,10 @@ class CfgVehicles{
 				count = 5;
 				name = "CUP_optic_Eotech533";
 			};
+			class _xx_CUP_optic_Eotech533Grey {
+				count = 5;
+				name = "CUP_optic_Eotech533Grey";
+			};
 			class _xx_CUP_optic_AN_PVS_10 {
 				count = 50;
 				name = "CUP_optic_AN_PVS_10";
