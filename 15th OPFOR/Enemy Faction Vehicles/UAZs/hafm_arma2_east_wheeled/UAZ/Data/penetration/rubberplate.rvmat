@@ -1,0 +1,13 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.45
+//Mon Apr 07 16:40:41 2014 : Source 'file' date Mon Apr 07 16:40:41 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class ca : data\penetration\rubberplate.rvmat{
+surfaceInfo = HAFM_ArmA2_East_Wheeled\UAZ\data\Penetration\rubberPlate.bisurf;
+diffuse[] = {0.5,0.5,1.0,1.0};
+ambient[] = {0.5,0.5,1.0,1.0};
+//};
