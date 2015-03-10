@@ -118,6 +118,9 @@ class CfgWeapons
 		picture = "\CUP\Weapons\CUP_Weapons_M1014\data\ui\gear_M1014_X_ca.paa";
 		magazines[] = {"MEU_8Rnd_12Gauge_Pellets","MEU_8Rnd_12Gauge_Slug"};
 		inertia = 0.5;
+		dexterity = 1.5;
+  		maxRecoilSway = 0.0125;
+  		swayDecaySpeed = 1.25;
 		bullet1[] = {"a3\sounds_f\weapons\Shells\shotgun\metal_shotgun_01",0.5011872,1,15};
 		bullet2[] = {"A3\Sounds_F\weapons\shells\shotgun\metal_shotgun_02",0.5011872,1,15};
 		bullet3[] = {"A3\Sounds_F\weapons\shells\shotgun\metal_shotgun_03",0.5011872,1,15};
@@ -156,16 +159,16 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
+    				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s1",1.3,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s2",1.3,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s3",1.3,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s4",1.3,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s1",1.3,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s2",1.3,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s3",1.3,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M1014\data\sfx\M1014_s4",1.3,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			dispersion = 0.005;

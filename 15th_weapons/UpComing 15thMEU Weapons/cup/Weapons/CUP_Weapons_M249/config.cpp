@@ -96,7 +96,7 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo;
 	};
-	class CUP_lmg_M249_para: Rifle_Long_Base_F
+	class CUP_lmg_M249: Rifle_Long_Base_F
 	{
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0.5011872,1,15};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02",0.5011872,1,15};
@@ -113,10 +113,10 @@ class CfgWeapons
 		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
 		scope = 2;
 		selectionFireAnim = "muzzleFlash";
-		model = "\CUP\Weapons\CUP_Weapons_M249\CUP_M249.p3d";
-		picture = "\CUP\Weapons\CUP_Weapons_M249\data\ui\gear_m249para_X_ca.paa";
+		model = "\CUP\Weapons\CUP_Weapons_M249\CUP_M249_iron.p3d";
+		picture = "\CUP\Weapons\CUP_Weapons_M249\data\ui\gear_m249_X_ca.paa";
 		UiPicture = "\A3\weapons_f\data\UI\icon_mg_CA.paa";
-		displayName = "M249 Para";
+		displayName = "M249";
 		class Library
 		{
 			libTextDesc = "Shooty thing";
@@ -132,6 +132,9 @@ class CfgWeapons
 		cursorAim = "EmptyCursor";
 		initSpeed = 915;
 		inertia = 0.7;
+		dexterity = 1.3;
+  		maxRecoilSway = 0.0125;
+  		swayDecaySpeed = 1.25;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 165.8;
@@ -151,23 +154,25 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\sfx7",1.1220185,1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\sfx8",1.1220185,1,10};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+    closure1[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Closure_Mk200_01",0.25118864,1,10};
+    closure2[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Closure_Mk200_02",0.25118864,1,10};
+    closure3[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Closure_Mk200_03",0.25118864,1,10};
+    soundClosure[] = {"closure1",0.33,"closure2",0.33,"closure3",0.34};;
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s1",1.2,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s2",1.2,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s3",1.2,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s4",1.2,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s1",1.2,1,1800};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s2",1.2,1,1800};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s3",1.2,1,1800};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\M249_s4",1.2,1,1800};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-25",0.8912509,1,200};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-26",0.8912509,1,200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+    begin1[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Silencer_Mk200_01",0.8912509,1,200};
+    begin2[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Silencer_Mk200_02",0.8912509,1,200};
+    begin3[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Silencer_Mk200_03",0.8912509,1,200};
+    soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			soundContinuous = 0;
 			soundBurst = 0;
@@ -233,16 +238,8 @@ class CfgWeapons
 		aiDispersionCoefX = 21;
 		reloadAction = "GestureReloadM200";
 		magazineReloadTime = 6;
-		dexterity = 0.51;
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\Reload",1,1,35};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M249\data\sfx\Dry",1,1,35};
 		magazines[] = {"MEU_30Rnd_M855A1_556x45_Stanag","MEU_30Rnd_M855A1_556x45_T_Stanag","MEU_200Rnd_M249_556x45_Stanag","MEU_200Rnd_M249_556x45_T_Stanag"};
-	};
-	class CUP_lmg_M249: CUP_lmg_M249_para
-	{
-		model = "\CUP\Weapons\CUP_Weapons_M249\CUP_M249_iron.p3d";
-		picture = "\CUP\Weapons\CUP_Weapons_M249\data\ui\gear_m249_X_ca.paa";
-		displayName = "M249";
-		initSpeed = 915;
 	};
 };

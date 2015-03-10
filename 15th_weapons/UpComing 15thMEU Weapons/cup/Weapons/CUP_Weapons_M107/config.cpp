@@ -98,6 +98,8 @@ class CfgWeapons
 		selectionFireAnim = "muzzleFlashNOROT";
 		dexterity = 0.45;
 		inertia = 1;
+		  maxRecoilSway = 0.03;
+  		swayDecaySpeed = 1.25;
 	AGM_Bipod = 1;
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.015;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
@@ -117,24 +119,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+    closure1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Lynx\Closure_Lynx_01",0.39810717,1,40};
+    closure2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Lynx\Closure_Lynx_02",0.39810717,1,40};
+    soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\M107_s1",2.51189,1,1300};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\M107_s2",2.51189,1,1300};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\M107_s3",2.51189,1,1300};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\M107_s4",2.51189,1,1300};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\M107_s1",2.51189,1,1800};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\M107_s2",2.51189,1,1800};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\M107_s3",2.51189,1,1800};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\M107_s4",2.51189,1,1800};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    begin1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Mk18\Silencer_Mk18_01",1.0,1,600};
+    begin2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Mk18\Silencer_Mk18_02",1.0,1,600};
+    begin3[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Mk18\Silencer_Mk18_03",1.0,1,600};
+    soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
 			};
 			recoil = "recoil_single_gm6";
 			recoilProne = "recoil_single_prone_gm6";

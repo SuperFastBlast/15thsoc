@@ -117,6 +117,8 @@ class CfgWeapons
 		selectionFireAnim = "muzzleFlash";
 		scope = 2;
 		initSpeed = 381;
+  		inertia = 0.2;
+  		dexterity = 1.8;
 		model = "\CUP\Weapons\CUP_Weapons_M9\CUP_M9.p3d";
 		modelOptics = "-";
 		picture = "\CUP\Weapons\CUP_Weapons_M9\data\ui\gear_m9_X_ca.paa";
@@ -137,8 +139,8 @@ class CfgWeapons
 		class BaseSoundModeType
 		{
 			weaponSoundEffect = "DefaultRifle";
-			closure1[] = {"A3\sounds_f\weapons\closure\closure_handgun_3",1.0351422,1,10};
-			closure2[] = {"A3\sounds_f\weapons\closure\closure_handgun_3",1.0351422,1.1,10};
+    closure1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Rook40\Closure_Rook40_01",0.15848932,1,10};
+    closure2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Rook40\Closure_Rook40_02",0.15848932,1.1,10};
 			soundClosure[] = {"closure1",0.5,"closure2",0.5};
 		};
 		class StandardSound: BaseSoundModeType
@@ -151,9 +153,10 @@ class CfgWeapons
 		};
 		class SilencedSound: BaseSoundModeType
 		{
-			begin1[] = {"A3\sounds_f\weapons\silenced\silent-07",0.56234133,1,200};
-			begin2[] = {"A3\sounds_f\weapons\silenced\silent-08",0.56234133,1,200};
-			soundBegin[] = {"begin1",0.5,"begin2",0.5};
+    begin1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Rook40\Rook40_01",1.0,1,1200};
+    begin2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Rook40\Rook40_02",1.0,1,1200};
+    begin3[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Rook40\Rook40_03",1.0,1,1200};
+    soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
 		};
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M9\data\sfx\Reload",1,1,35};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M9\data\sfx\Dry",1,1,35};

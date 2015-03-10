@@ -60,6 +60,8 @@ class CfgWeapons
 	{
 		scope = 2;
 		initSpeed = 251;
+		dexterity = 1.7;
+		inertia = 0.2;
 		model = "\CUP\Weapons\CUP_Weapons_Colt1911\CUP_Colt1911.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_Colt1911\data\ui\gear_colt1911_X_ca.paa";
 		magazines[] = {"MEU_T2AAF_45ACP"};
@@ -87,8 +89,8 @@ class CfgWeapons
 		class BaseSoundModeType
 		{
 			weaponSoundEffect = "DefaultRifle";
-			closure1[] = {"A3\Sounds_F\weapons\closure\closure_handgun_3",1.0351422,1,30};
-			closure2[] = {"A3\Sounds_F\weapons\closure\closure_handgun_3",1.0351422,1.1,30};
+    closure1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\closure_4_Five_01",0.31622776,1,10};
+    closure2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\closure_4_Five_02",0.31622776,1.1,10};
 			soundClosure[] = {"closure1",0.5,"closure2",0.5};
 		};
 		class StandardSound: BaseSoundModeType
@@ -101,15 +103,15 @@ class CfgWeapons
 		};
 		class SilencedSound: BaseSoundModeType
 		{
-			begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",0.56234133,1,600};
-			begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",0.56234133,1,600};
-			soundBegin[] = {"begin1",0.5,"begin2",0.5};
+    begin1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4_Five_01",1.0,1,600};
+    begin2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4_Five_02",1.0,1,600};
+    begin3[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4_Five_03",1.0,1,600};
+    soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin2",0.34};
 		};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\Dry",0.39810717,1,20};
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\Reload",0.56234133,1,30};
 		recoil = "recoil_pistol_heavy";
 		recoilProne = "recoil_prone_pistol_heavy";
-		inertia = 0.2;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 30.5;

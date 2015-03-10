@@ -131,6 +131,9 @@ class CfgWeapons
 		cursor = "mg";
 		cursorAim = "EmptyCursor";
 		inertia = 0.8;
+		dexterity = 1.2;
+		maxRecoilSway = 0.0125;
+  		swayDecaySpeed = 1.25;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 242;
@@ -149,16 +152,16 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\sfx7",1.1220185,1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\sfx8",1.1220185,1,10};
-				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+    closure1[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Zafir\Closure_zafir_01",0.56234133,1,10};
+    closure2[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Zafir\Closure_zafir_02",0.56234133,1,10};
+    soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s1",1.3,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s2",1.3,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s3",1.3,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s4",1.3,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s1",1.3,1,1800};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s2",1.3,1,1800};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s3",1.3,1,1800};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\M240_s4",1.3,1,1800};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
@@ -229,7 +232,6 @@ class CfgWeapons
 		};
 		aiDispersionCoefY = 21;
 		aiDispersionCoefX = 21;
-		dexterity = 0.51;
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\Reload",1,1,35};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M240\data\sfx\Dry",1,1,35};
 		magazines[] = {"MEU_100Rnd_M240_762x51","MEU_100Rnd_M240_762x51_T"};

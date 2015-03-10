@@ -78,9 +78,9 @@ class CfgAmmo
 	class B_MEU_M855a1: B_556x45_Ball
 	{
 		hit=8.4;
-		airFriction = -0.0011336614;
 		caliber = 0.855;
 		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+		typicalSpeed = 990;
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
@@ -92,7 +92,7 @@ class CfgAmmo
 	class B_MEU_M8556: B_556x45_Ball_Tracer_Red
 	{
 		hit=8.4;
-		airFriction = -0.0011336614;
+		typicalSpeed = 990;
 		caliber = 0.855;
 		deflecting=20;
 		deflectingChance = 100;
@@ -180,6 +180,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		ammo = "B_MEU_M855a1";
+		initSpeed = 990;
 		count = 30;
 		mass = 11.8;
 		lastroundstracer = 3;
@@ -190,6 +191,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		ammo = "B_MEU_M8556";
+		initSpeed = 990;
 		mass = 11.8;
 		count = 30;
 		tracersevery = 1;
@@ -287,9 +289,6 @@ class CfgWeapons
 		tBody = 100;
 		selectionFireAnim = "muzzleFlash";
 		value = 8;
-		inertia = 0.5;
-		dexterity = 1.5;
-		initSpeed = 948;
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Reload",1,1,35};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Dry",1,1,35};
 		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.3,1};
@@ -306,24 +305,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			reloadTime = 0.0799999;
 			recoil = "recoil_single_primary_4outof10";
@@ -342,24 +341,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			soundBurst = 0;
 			reloadTime = 0.0799999;
@@ -392,9 +391,10 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound
 		{
-			weaponSoundEffect = "DefaultRifle";
-			begin1[] = {"\CUP\Weapons\CUP_Weapons_M16\M203_s1",0.100000,1,400};
-			soundBegin[] = {"begin1",1};
+   		weaponSoundEffect = "DefaultRifle";
+   		begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.70794576,1,200};
+   		begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.70794576,1,200};
+   		soundBegin[] = {"begin1",0.5,"begin2",0.5};
 		};
 			magazines[] = {"MEU_FlareYellow_M203","MEU_FlareWhite_M203","MEU_FlareGreen_M203","MEU_FlareRed_M203","M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 			useModelOptics = 0;
@@ -404,6 +404,11 @@ class CfgWeapons
 			discreteDistanceCameraPoint[] = {"OP_eye_50","OP_eye_75","OP_eye_100","OP_eye_150","OP_eye_200","OP_eye_250","OP_eye_300","OP_eye_350","OP_eye_400"};
 			discreteDistanceInitIndex = 1;
 		};
+		inertia = 0.5;
+		dexterity = 1.5;
+		initSpeed = 948;
+		maxRecoilSway = 0.0125;
+  		swayDecaySpeed = 1.25;
 	};
 	class CUP_arifle_M16A4_Base: CUP_arifle_M16_Base
 	{
@@ -484,24 +489,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			reloadtime = 0.0799999;
 			recoil = "recoil_single_primary_4outof10";
@@ -520,24 +525,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			soundBurst = 0;
 			reloadtime = 0.0799999;
@@ -570,9 +575,10 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound
 		{
-			weaponSoundEffect = "DefaultRifle";
-			begin1[] = {"\CUP\Weapons\CUP_Weapons_M16\M203_s1",0.100000,1,400};
-			soundBegin[] = {"begin1",1};
+   		weaponSoundEffect = "DefaultRifle";
+   		begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.70794576,1,200};
+   		begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.70794576,1,200};
+   		soundBegin[] = {"begin1",0.5,"begin2",0.5};
 		};
 			magazines[] = {"MEU_FlareYellow_M203","MEU_FlareWhite_M203","MEU_FlareGreen_M203","MEU_FlareRed_M203","M433_40mm_HEDP_Shell","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareCIR_F","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell"};
 			useModelOptics = 0;
@@ -610,6 +616,8 @@ class CfgWeapons
 		};
 		inertia = 0.4;
 		dexterity = 1.6;
+  		maxRecoilSway = 0.0125;
+  		swayDecaySpeed = 1.25;
 	};
 	class CUP_arifle_M4CAR_BUIS_GL: CUP_arifle_M4A1_BUIS_Base
 	{
@@ -634,24 +642,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			reloadtime = 0.0799999;
 			recoil = "recoil_single_primary_4outof10";
@@ -670,24 +678,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			soundBurst = 0;
 			reloadtime = 0.0799999;
@@ -723,24 +731,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			reloadtime = 0.0799999;
 			recoil = "recoil_single_primary_4outof10";
@@ -759,24 +767,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s1",1.1,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s2",1.1,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s3",1.1,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_s4",1.1,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			soundBurst = 0;
 			reloadtime = 0.0799999;
@@ -843,6 +851,8 @@ class CfgWeapons
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Dry",1,1,35};
 		inertia = 0.7;
 		dexterity = 1.3;
+		maxRecoilSway = 0.0125;
+  		swayDecaySpeed = 1.25;
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
@@ -855,24 +865,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2","db-12",1,10};
-				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3","db-12",1,10};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s1",1.4,1,1000};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s2",1.4,1,1000};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s3",1.4,1,1000};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s4",1.4,1,1000};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s1",1.4,1,1400};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s2",1.4,1,1400};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s3",1.4,1,1400};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\SPR_s4",1.4,1,1400};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    			begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_01",0.7943282,1,400};
+    			begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_02",0.7943282,1,400};
+    			begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_03",0.7943282,1,400};
+    			soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 			};
 			reloadTime = 0.075;
 			recoil = "recoil_single_mk20";

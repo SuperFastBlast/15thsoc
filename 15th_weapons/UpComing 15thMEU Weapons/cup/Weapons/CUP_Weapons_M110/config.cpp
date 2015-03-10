@@ -115,12 +115,16 @@ class CfgWeapons
 		scope = 2;
 		displayName = "M110";
 		initSpeed = 783;
+		inertia = 0.7;
+		dexterity = 1.3;
+		maxRecoilSway = 0.0125;
+  		swayDecaySpeed = 1.25;
 		selectionFireAnim = "muzzleFlash";
 		model = "CUP\Weapons\CUP_Weapons_M110\CUP_M110";
 		magazines[] = {"MEU_20x762_Mag"};
 		picture = "\CUP\Weapons\CUP_Weapons_M110\data\ui\gear_M110_X_CA.paa";
 		reloadTime = 2;
-		changeFiremodeSound[] = {"A3\sounds_f\weapons\closure\firemode_changer_2",0.25118864,1,20};
+		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Mk18\firemode_Mk18",0.25118864,1,5};
 		modes[] = {"Single"};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -136,7 +140,6 @@ class CfgWeapons
 			};
 			class CowsSlot{};
 		};
-		inertia = 0.7;
 		class ItemInfo
 		{
 			priority = 1;
@@ -155,24 +158,24 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-				closure1[] = {"A3\sounds_f\weapons\closure\ebr-3",1.1220185,1.2,30};
-				closure2[] = {"A3\sounds_f\weapons\closure\ebr-3",1.1220185,1,30};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
 				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s1",1.3,1,1400};
-				begin2[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s2",1.3,1,1400};
-				begin3[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s3",1.3,1,1400};
-				begin4[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s4",1.3,1,1400};
+				begin1[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s1",1.3,1,1800};
+				begin2[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s2",1.3,1,1800};
+				begin3[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s3",1.3,1,1800};
+				begin4[] = {"CUP\Weapons\CUP_Weapons_M110\data\sfx\M110_s4",1.3,1,1800};
 				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				begin1[] = {"A3\sounds_f\weapons\silenced\silent-18",1,1,300};
-				begin2[] = {"A3\sounds_f\weapons\silenced\silent-19",1,1,300};
-				begin3[] = {"A3\sounds_f\weapons\silenced\silent-11",1,1,300};
-				soundBegin[] = {"begin1",0.333,"begin2",0.333,"begin3",0.333};
+    begin1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Mk18\Silencer_Mk18_01",1.0,1,600};
+    begin2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Mk18\Silencer_Mk18_02",1.0,1,600};
+    begin3[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Mk18\Silencer_Mk18_03",1.0,1,600};
+    soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
 			};
 			weaponSoundEffect = "DefaultRifle";
 			reloadTime = 0.085;
