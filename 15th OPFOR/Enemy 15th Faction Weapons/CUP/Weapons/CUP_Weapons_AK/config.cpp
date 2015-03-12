@@ -230,6 +230,8 @@ class CfgWeapons
 		modes[] = {"FullAuto","Single","Burst"};
 		magazines[] = {"CUP_30Rnd_545x39_AK_M","CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M"};
 		selectionFireAnim = "muzzleFlash";
+		reloadAction = "GestureReloadMX";
+		jsrs_soundeffect = "JSRS2_Distance_Effects_Ak74";
 		drySound[] = {"CUP\Weapons\CUP_Weapons_AK\data\sfx\AK74_Dry",0.56234133,1,10};
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_AK\data\sfx\AK74_Reload",0.39810717,1,30};
 		changeFiremodeSound[] = {"A3\sounds_f\weapons\closure\firemode_changer_2",0.25118864,1,20};
@@ -374,7 +376,7 @@ class CfgWeapons
 	class CUP_arifle_AK74: CUP_arifle_AK_Base
 	{
 		scope = 2;
-		model = "\CUP\Weapons\CUP_Weapons_AK\AK_74";
+		model = "\CUP\Weapons\CUP_Weapons_AK\CUP_AK_74";
 		displayName = "AK74";
 		handAnim[] = {"OFP2_ManSkeleton","\CUP\Weapons\CUP_Weapons_AK\Data\Anim\AK.rtm"};
 		picture = "\CUP\Weapons\CUP_Weapons_AK\data\ui\gear_ak74_X_CA.paa";
@@ -393,7 +395,7 @@ class CfgWeapons
 	class CUP_arifle_AK74_GL: CUP_arifle_AK_Base
 	{
 		scope = 2;
-		model = "\CUP\Weapons\CUP_Weapons_AK\ak74gl";
+		model = "\CUP\Weapons\CUP_Weapons_AK\CUP_ak74gl";
 		displayName = "AK74 GL";
 		picture = "\CUP\Weapons\CUP_Weapons_AK\data\UI\gear_ak74gl_X_CA.paa";
 		handAnim[] = {"OFP2_ManSkeleton","\CUP\Weapons\CUP_Weapons_AK\Data\Anim\AK_gl.rtm"};
@@ -413,10 +415,11 @@ class CfgWeapons
 	class CUP_arifle_AKM: CUP_arifle_AK_Base
 	{
 		scope = 2;
-		model = "\CUP\Weapons\CUP_Weapons_AK\akm";
+		model = "\CUP\Weapons\CUP_Weapons_AK\CUP_akm";
 		picture = "\CUP\Weapons\CUP_Weapons_AK\data\UI\gear_akm_X_CA.paa";
 		magazines[] = {"CUP_30Rnd_762x39_AK47_M"};
 		displayname = "AK 47";
+		jsrs_soundeffect = "JSRS2_Distance_Effects_Ak47";
 		handAnim[] = {"OFP2_ManSkeleton","\CUP\Weapons\CUP_Weapons_AK\Data\Anim\AK.rtm"};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_AK\data\sfx\AK47_Dry",0.56234133,1,10};
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_AK\data\sfx\AK47_Reload",0.39810717,1,30};
@@ -547,12 +550,14 @@ class CfgWeapons
 	class CUP_arifle_RPK74: CUP_arifle_AK74
 	{
 		scope = 2;
-		model = "\CUP\Weapons\CUP_Weapons_AK\RPK_74";
+		model = "\CUP\Weapons\CUP_Weapons_AK\CUP_RPK_74";
 		picture = "\CUP\Weapons\CUP_Weapons_AK\data\UI\gear_rpk74_X_CA.paa";
 		magazines[] = {"CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M","CUP_30Rnd_545x39_AK_M","CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M"};
 		displayname = "RPK 74";
 		aiDispersionCoefY = 18;
 		aiDispersionCoefX = 18;
+  		jsrs_soundeffect = "JSRS2_Distance_Effects_RPK";
+  		AGM_Bipod = 1;
 		handAnim[] = {"OFP2_ManSkeleton","\CUP\Weapons\CUP_Weapons_AK\Data\Anim\AK.rtm"};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_AK\data\sfx\RPK_Dry",0.56234133,1,10};
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_AK\data\sfx\RPK_Reload",0.39810717,1,30};

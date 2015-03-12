@@ -77,12 +77,14 @@ class CfgWeapons
 	class CUP_srifle_SVD: Rifle_Base_F
 	{
 		scope = 2;
-		model = "CUP\Weapons\CUP_Weapons_SVD\svd.p3d";
+		model = "CUP\Weapons\CUP_Weapons_SVD\CUP_svd.p3d";
 		dexterity = 1.57;
 		inertia = 0.7;
 		displayName = "Dragunov SVD";
 		handAnim[] = {"OFP2_ManSkeleton","CUP\Weapons\CUP_Weapons_SVD\Data\anim\svd.rtm"};
 		picture = "\CUP\Weapons\CUP_Weapons_SVD\data\ui\gear_svd_X_ca.paa";
+		jsrs_soundeffect = "JSRS2_Distance_Effects_SVD";
+		reloadAction = "GestureReloadEBR";
 		modes[] = {"Single"};
 		class Single: Mode_SemiAuto
 		{
@@ -113,7 +115,7 @@ class CfgWeapons
 			closure2[] = {"A3\sounds_f\weapons\closure\ebr-3",1.1220185,1,30};
 			soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			weaponSoundEffect = "DefaultRifle";
-			reloadTime = 0.15;
+			reloadTime = 2;
 			recoil = "recoil_single_ebr";
 			recoilProne = "recoil_single_prone_ebr";
 			dispersion = 0.00025;
@@ -153,7 +155,7 @@ class CfgWeapons
 	};
 	class CUP_srifle_SVD_des: CUP_srifle_SVD
 	{
-		model = "CUP\Weapons\CUP_Weapons_SVD\svd_des.p3d";
+		model = "CUP\Weapons\CUP_Weapons_SVD\CUP_svd_des.p3d";
 		dexterity = 1.57;
 		displayName = "Dragunov SVD Desert";
 		class Library
@@ -165,7 +167,7 @@ class CfgWeapons
 	class CUP_srifle_SVD_des_ghillie_pso: CUP_srifle_SVD
 	{
 		inertia = 0.8;
-		model = "CUP\Weapons\CUP_Weapons_SVD\svd_desert.p3d";
+		model = "CUP\Weapons\CUP_Weapons_SVD\CUP_svd_desert.p3d";
 		dexterity = 1.57;
 		displayName = "SVD Desert Camo";
 		picture = "\CUP\Weapons\CUP_Weapons_SVD\data\ui\gear_svd_desert_X_ca.paa";
@@ -206,7 +208,7 @@ class CfgWeapons
 	};
 	class CUP_srifle_SVD_wdl_ghillie: CUP_srifle_SVD_des_ghillie_pso
 	{
-		model = "CUP\Weapons\CUP_Weapons_SVD\svd_camo.p3d";
+		model = "CUP\Weapons\CUP_Weapons_SVD\CUP_svd_camo.p3d";
 		dexterity = 1.57;
 		displayName = "SVD Camo";
 		picture = "\CUP\Weapons\CUP_Weapons_SVD\data\ui\gear_svd_desert_X_ca.paa";

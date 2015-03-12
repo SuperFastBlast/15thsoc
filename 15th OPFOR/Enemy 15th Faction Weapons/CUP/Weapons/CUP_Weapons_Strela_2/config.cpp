@@ -26,7 +26,7 @@ class CfgAmmo
   trackLead = 1;
   airLock = 2;
   irLock = 1;
-  cost = 7500;
+  cost = 500;
   maxSpeed = 800;
   initSpeed = 115;
   initTime = 0.25;
@@ -69,16 +69,20 @@ class CfgWeapons
  {
   scope = 2;
   displayName = "Strela-2 9K32";
-  model = "\CUP\Weapons\CUP_Weapons_Strela_2\strela_launcher";
+  model = "\CUP\Weapons\CUP_Weapons_Strela_2\CUP_strela_launcher";
   nameSound = "aalauncher";
   modelOptics = "-";
-  magazines[] = {"Titan_AA"};
+  magazines[] = {"Titan_AA","CUP_Strela_2_M"};
   cameraDir = "";
   cursorAim = "\a3\weapons_f\data\clear_empty";
   cursor = "missile";
   cursorSize = 1;
   reloadAction = "ReloadRPG";
   sounds[] = {"StandardSound"};
+  jsrs_soundeffect = "JSRS2_Distance_Effects_Stinger";
+  AGM_Backblast_Angle = 30;
+  AGM_Backblast_Range = 2;
+  AGM_Backblast_Damage = 0.5;
   class BaseSoundModeType
   {
    weaponSoundEffect = "DefaultRifle";
@@ -94,8 +98,8 @@ class CfgWeapons
   reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_Strela_2\data\sfx\Reload",1,1,35};
   drySound[] = {"CUP\Weapons\CUP_Weapons_Strela_2\data\sfx\Dry",1,1,35};
   soundFly[] = {"CUP\Weapons\CUP_Weapons_Strela_2\data\sfx\Fly","db40",1.5,700};
-  lockingTargetSound[] = {"\CUP\Weapons\CUP_Weapons_Javelin\data\sfx\locking_target",0.31622776,1};
-  lockedTargetSound[] = {"\CUP\Weapons\CUP_Weapons_Javelin\data\sfx\locked_target",0.31622776,2.5};
+  lockingTargetSound[] = {};
+  lockedTargetSound[] = {};
   value = 20;
   canLock = 2;
   recoil = "recoil_single_titan";

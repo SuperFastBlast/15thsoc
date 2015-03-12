@@ -21,7 +21,7 @@ class CfgAmmo
 		indirectHitRange = 4;
 		model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7V\CUP_PG7V_fly.p3d";
 		proxyShape = "\CUP\Weapons\CUP_Weapons_RPG7\PG7V\CUP_PG7V.p3d";
-		cost = 100;
+		cost = 20;
 		initTime = 0.1;
 		thrust = 280;
 		thrustTime = 1;
@@ -37,6 +37,7 @@ class CfgAmmo
 		effectsMissile = "missile2";
 		whistleDist = 40;
 		airLock = 1;
+		allowAgainstInfantry = 1;
 		class CamShakeExplode
 		{
 			power = "(55 * 0.2)";
@@ -90,6 +91,7 @@ class CfgAmmo
 		effectsMissile = "missile2";
 		whistleDist = 40;
 		airLock = 1;
+		allowAgainstInfantry = 1;
 		class CamShakeExplode
 		{
 			power = "(55 * 0.2)";
@@ -180,7 +182,7 @@ class CfgAmmo
 		indirectHitRange = 20;
 		model = "\CUP\Weapons\CUP_Weapons_RPG7\OG7V\CUP_OG7V_Fly.p3d";
 		proxyShape = "\CUP\Weapons\CUP_Weapons_RPG7\OG7V\CUP_OG7V.p3d";
-		cost = 40;
+		cost = 15;
 		initTime = 0.1;
 		thrust = 280;
 		thrustTime = 1;
@@ -196,6 +198,7 @@ class CfgAmmo
 		effectsMissile = "missile2";
 		whistleDist = 40;
 		airLock = 1;
+		allowAgainstInfantry = 1;
 		class CamShakeExplode
 		{
 			power = "(55 * 0.2)";
@@ -234,7 +237,7 @@ class CfgMagazines
  {
   scope = 2;
   model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7V\CUP_PG7V";
-  modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7_launcher_loaded";
+  modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\CUP_rpg7_launcher_loaded";
   displayName = "PG-7V";
   ammo = "CUP_R_PG7V_AT";
   picture = "\CUP\Weapons\CUP_Weapons_RPG7\data\ui\m_pg7_ca.paa";
@@ -246,7 +249,7 @@ class CfgMagazines
  {
   scope = 2;
   model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7VL\CUP_PG7VL";
-  modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7L_launcher_loaded";
+  modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\CUP_rpg7L_launcher_loaded";
   displayName = "PG-7VL";
   ammo = "CUP_R_PG7VL_AT";
   picture = "\CUP\Weapons\CUP_Weapons_RPG7\data\ui\m_PG7VL_ca.paa";
@@ -258,7 +261,7 @@ class CfgMagazines
  {
   scope = 2;
   model = "\CUP\Weapons\CUP_Weapons_RPG7\PG7VR\CUP_PG7VR";
-  modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7VR_launcher_loaded";
+  modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\CUP_rpg7VR_launcher_loaded";
   displayName = "PG-7VR";
   ammo = "CUP_R_PG7VR_AT";
   picture = "\CUP\Weapons\CUP_Weapons_RPG7\data\ui\M_PG7VR_ca.paa";
@@ -271,7 +274,7 @@ class CfgMagazines
  {
   scope = 2;
   model = "\CUP\Weapons\CUP_Weapons_RPG7\OG7V\CUP_OG7V";
-  modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7o_launcher_loaded";
+  modelSpecial = "\CUP\Weapons\CUP_Weapons_RPG7\CUP_rpg7o_launcher_loaded";
   displayName = "OG7";
   ammo = "CUP_R_OG7_AT";
   picture = "\CUP\Weapons\CUP_Weapons_RPG7\data\ui\M_OG7V_ca.paa";
@@ -305,7 +308,11 @@ class CfgWeapons
   scope = 2;
   inertia = 1;
   displayName = "RPG-7V";
-  model = "\CUP\Weapons\CUP_Weapons_RPG7\rpg7_launcher.p3d";
+  AGM_Backblast_Angle = 45;
+  AGM_Backblast_Range = 20;
+  AGM_Backblast_Damage = 1;
+  jsrs_soundeffect = "JSRS2_Distance_Effects_rpg";
+  model = "\CUP\Weapons\CUP_Weapons_RPG7\CUP_rpg7_launcher.p3d";
   handAnim[] = {"OFP2_ManSkeleton","\CUP\Weapons\CUP_Weapons_RPG7\data\anim\RPG7.rtm"};
   modelOptics = "-";
   magazines[] = {"CUP_PG7V_M","CUP_PG7VL_M","CUP_PG7VR_M","CUP_OG7_M"};
@@ -324,7 +331,7 @@ class CfgWeapons
   };
   reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Reload",1,1,35};
   drySound[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Dry",2,1,35};
-  soundFly[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Fly",10,1,900};
+  soundFly[] = {"CUP\Weapons\CUP_Weapons_RPG7\data\sfx\Fly","db25",1,500};
   weaponSoundEffect = "DefaultRifle";
   reloadAction = "ReloadRPG";
   picture = "\CUP\Weapons\CUP_Weapons_RPG7\data\ui\gear_rpg7_X_ca.paa";

@@ -84,12 +84,13 @@ class CfgWeapons
 	class CUP_hgun_Makarov: Pistol_Base_F
 	{
 		scope = 2;
-		model = "\CUP\Weapons\CUP_Weapons_Makarov\makarov.p3d";
+		model = "\CUP\Weapons\CUP_Weapons_Makarov\CUP_makarov.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_Makarov\data\UI\gear_makarov_x_ca.paa";
 		UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
 		magazines[] = {"CUP_8Rnd_9x18_Makarov_M","CUP_8Rnd_9x18_MakarovSD_M"};
 		reloadAction = "GestureReloadPistol";
 		displayname = "Makarov";
+		jsrs_soundeffect = "JSRS2_Distance_Effects_PM";
 		dexterity = 2;
 		bullet1[] = {"A3\sounds_f\weapons\shells\9mm\metal_9mm_01",0.5011872,1,15};
 		bullet2[] = {"A3\sounds_f\weapons\shells\9mm\metal_9mm_02",0.5011872,1,15};
