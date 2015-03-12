@@ -448,6 +448,18 @@ class CfgVehicles{
 				count = 50;
 				magazine = "1Rnd_SmokeBlue_Grenade_shell";
 			};
+            class _xx_MEU_FlareWhite_M203 {
+                count = 10;
+                magazine = "MEU_FlareWhite_M203";
+            };
+            class _xx_MEU_FlareGreen_M203 {
+                count = 10;
+                magazine = "MEU_FlareGreen_M203";
+            };
+            class _xx_MEU_FlareRed_M203 {
+                count = 10;
+                magazine = "MEU_FlareRed_M203";
+            };
 			class _xx_6Rnd_Smoke_M32 {
 				count = 15;
 				magazine = "6Rnd_Smoke_M32";
@@ -589,9 +601,9 @@ class CfgVehicles{
 				count = 25;
 				weapon = "CUP_arifle_M4A1_BUIS_GL";
 			};
-			class _xx_CUP_lmg_M249 {
+			class _xx_CUP_lmg_M249_para {
 				count = 5;
-				weapon = "CUP_lmg_M249";
+				weapon = "CUP_lmg_M249_para";
 			};
 			class _xx_ej_IAR30 {
 				count = 5;
