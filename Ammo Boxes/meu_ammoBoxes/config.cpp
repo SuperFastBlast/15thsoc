@@ -731,6 +731,10 @@ class CfgVehicles{
 				count = 50;
 				name = "AGM_EarBuds";
 			};
+			class _xx_AGM_CableTie {
+				count = 50;
+				name = "AGM_CableTie";
+			};
 
 // HELMETS
 			class _xx_MEF_Wood_Helmet_LWH {
