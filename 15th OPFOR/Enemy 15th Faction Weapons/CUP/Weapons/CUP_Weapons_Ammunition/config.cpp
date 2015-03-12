@@ -7,7 +7,6 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"CUP_Weapons_WeaponsCore"};
-	};
 };
 class CfgAmmo
 {
@@ -220,4 +219,3 @@ class CfgAmmo
 			distance = 1;
 		};
 	};
-};

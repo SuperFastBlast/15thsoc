@@ -98,12 +98,10 @@ class CfgWeapons
 		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0.7943282,1,15};
 		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
 		reloadAction = "GestureReloadM200";
-		model = "CUP\Weapons\CUP_Weapons_PK\CUP_PK_MG_proxy";
+		model = "CUP\Weapons\CUP_Weapons_PK\PK_MG_proxy";
 		displayName = "PKM";
 		inertia = 0.8;
 		dexterity = 1.2;
-		jsrs_soundeffect = "JSRS2_Distance_Effects_PK";
-		AGM_Bipod = 1;
 		picture = "\CUP\Weapons\CUP_Weapons_PK\data\ui\gear_pkm_X_ca.paa";
 		UiPicture = "\A3\weapons_f\data\UI\icon_mg_CA.paa";
 		cursor = "mg";
