@@ -2,10 +2,22 @@
 Key words for some of my short hand on notes
 Orig. = original
 ----------------------------------------------------
-List of magazines & weapons to add to the inventory :
-Basic supplys, stanags, grenates and med supplies.
-----------------------------------------------------
-check on adding Ctab and LR radios to the SOV
+
+
+List to add:
+Work on turrets
+FFV
+Add Physx
+Add cTab compatibility
+Add LR radios
+Add inventory
+
+Add crewed version
+Add sounds
+
+
+
+
 */
 ////////////stiff under this goes in cfgvehicles
 				//Picture = "\CA\wheeled_e\Data\UI\Picture_hmmwv_sov_CA.paa"; grab these later
