@@ -219,14 +219,28 @@ class CfgVehicles
 		{
 		   class Light
 		   {
-				   color[] = {0.8, 0.8, 1.0, 1.0};
-				   ambient[] = {0.07, 0.07, 0.07, 1.0};
+				color[] = {7000,7500,10000,1};
+				ambient[] = {100,100,100,0};
 				   position = "light_1_1_pos";
 				   direction = "light_1_1_dir";
 				   hitpoint = "light_1_1_pos";
 				   selection = "L svetlo";
 				   size = 1;
-				   brightness = 1.0;
+				innerAngle = 20;
+				outerAngle = 60;
+				coneFadeCoef = 10;
+				intensity = 50;
+				useFlare = 1;
+				dayLight = 0;
+				FlareSize = 8;
+				flareMaxDistance = 300;
+				class Attenuation
+				{
+					start = 1;
+					constant = 0;
+					linear = 0;
+					quadratic = 4;
+				};
 		   };
 		};
 		
@@ -237,7 +251,7 @@ class CfgVehicles
 				name = "light_nav_right";
 				color[] = {0.006, 0.12, 0.006,1.0};
 				ambient[] = {0.01, 0.1, 0.01,1.0};
-				brightness = 0.001;
+				brightness = 0.05;
 				blinking = false;
 			};
 			class WhiteBlinking
@@ -245,7 +259,7 @@ class CfgVehicles
 				name = "light_nav_top";
 				color[]={0.0388,0.0388,0.0388,1.0};
 				ambient[]={0.03,0.023,0.0056,1.0};
-				brightness=0.001;
+				brightness=0.05;
 				blinking = true;
 			};
 			class RedStill
@@ -253,7 +267,7 @@ class CfgVehicles
 				name="light_nav_left";
 				color[]={0.12,0.006,0.006,1.0};
 				ambient[]={0.1,0.01,0.01,1.0};
-				brightness=0.001;
+				brightness=0.05;
 				blinking=false;
 			};
 		};		

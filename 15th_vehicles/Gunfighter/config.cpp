@@ -895,7 +895,8 @@ class CfgVehicles
 				intensity = 50;
 				useFlare = 1;
 				dayLight = 0;
-				FlareSize = 6;
+				FlareSize = 8;
+				flareMaxDistance = 300;
 				class Attenuation
 				{
 					start = 1;
@@ -963,7 +964,7 @@ class CfgVehicles
 				maxTurn = 120;
 				initTurn = 0;
 				gunnerCanEject=1;
-				stabilizedInAxes = 4;
+				stabilizedInAxes = 3;
 				gunnerOpticsModel = "";
 				gunnerForceOptics = 0;
 				turretInfoType = "RscOptics_Heli_Attack_01_gunner";
@@ -1276,7 +1277,7 @@ class CfgVehicles
 				memoryPointsGetInGunnerDir = "pos codriver dir";
 				selectionFireAnim = "";
 				castGunnerShadow = 1;
-				stabilizedInAxes = 4;
+				stabilizedInAxes = 3;
 				viewGunnerShadow = 1;
 				body="ObsTurret";
 				proxyIndex=3;
@@ -2133,7 +2134,8 @@ class CfgVehicles
 				intensity = 50;
 				useFlare = 1;
 				dayLight = 0;
-				FlareSize = 6;
+				FlareSize = 8;
+				flareMaxDistance = 300;
 				class Attenuation
 				{
 					start = 1;
