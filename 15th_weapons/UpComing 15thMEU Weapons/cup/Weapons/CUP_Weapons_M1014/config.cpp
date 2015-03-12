@@ -114,6 +114,7 @@ class CfgWeapons
 	class CUP_sgun_M1014: Rifle_Base_F
 	{
 		scope = 2;
+		jsrs_soundeffect = "JSRS2_Distance_Effects_Shotgun";
 		model = "CUP\Weapons\CUP_Weapons_M1014\CUP_M1014";
 		picture = "\CUP\Weapons\CUP_Weapons_M1014\data\ui\gear_M1014_X_ca.paa";
 		magazines[] = {"MEU_8Rnd_12Gauge_Pellets","MEU_8Rnd_12Gauge_Slug"};

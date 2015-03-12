@@ -59,6 +59,7 @@ class CfgWeapons
 	class CUP_hgun_Colt1911: Pistol_Base_F
 	{
 		scope = 2;
+		jsrs_soundeffect = "JSRS2_Distance_Effects_1911";
 		initSpeed = 251;
 		dexterity = 1.7;
 		inertia = 0.2;

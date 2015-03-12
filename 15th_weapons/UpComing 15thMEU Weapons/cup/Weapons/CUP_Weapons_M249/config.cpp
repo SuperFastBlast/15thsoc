@@ -121,6 +121,7 @@ class CfgWeapons
 		{
 			libTextDesc = "Shooty thing";
 		};
+	jsrs_soundeffect = "JSRS2_Distance_Effects_M249";
 	AGM_Bipod = 1;
     AGM_Jamming_Reliability = 0.001;    // malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.013;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
@@ -156,8 +157,7 @@ class CfgWeapons
 				weaponSoundEffect = "DefaultRifle";
     closure1[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Closure_Mk200_01",0.25118864,1,10};
     closure2[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Closure_Mk200_02",0.25118864,1,10};
-    closure3[] = {"A3\Sounds_F\arsenal\weapons\Machineguns\Mk200\Closure_Mk200_03",0.25118864,1,10};
-    soundClosure[] = {"closure1",0.33,"closure2",0.33,"closure3",0.34};;
+    soundClosure[] = {"closure1",0.33,"closure2",0.33};
 			};
 			class StandardSound: BaseSoundModeType
 			{

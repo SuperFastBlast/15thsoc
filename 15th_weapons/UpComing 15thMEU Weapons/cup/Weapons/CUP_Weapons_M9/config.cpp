@@ -115,6 +115,7 @@ class CfgWeapons
 		distanceZoomMin = 50;
 		distanceZoomMax = 50;
 		selectionFireAnim = "muzzleFlash";
+		jsrs_soundeffect = "JSRS2_Distance_Effects_M9";
 		scope = 2;
 		initSpeed = 381;
   		inertia = 0.2;

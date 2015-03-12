@@ -43,6 +43,11 @@ class CfgWeapons
         picture = "\Trixie_Recon\UI\m40a3ng.paa";
         model = "Trixie_Recon\trixie_m40a3_ng.p3d"; 
         handAnim[] = {"OFP2_ManSkeleton","\trixie_recon\anim\M24.rtm"};
+        inertia = 0.5;
+        dexterity = 1.5;
+	jsrs_soundeffect = "JSRS2_Distance_Effects_BigSniper";
+		  maxRecoilSway = 0.03;
+  		swayDecaySpeed = 1.25;
 	AGM_Bipod = 1;
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
@@ -54,7 +59,7 @@ class CfgWeapons
 		discretedistanceinitindex = 0;
 		reloadaction = "GestureReloadEBR";
 		reloadmagazinesound[] = {"trixie_recon\sound\M24Reload", 0.501187, 1, 10};
-		drySound[] = {"A3\sounds_f\weapons\Other\dry3",0.31622776,1,10};
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\dry_Rahim",0.25118864,1,20};
 		class WeaponSlotsInfo
 		{
 			allowedslots[] = {901};
@@ -77,23 +82,24 @@ class CfgWeapons
 			
 			class BaseSoundModeType
 			{
- 				closure1[] = {"A3\sounds_f\weapons\closure\ebr-3",1.1220185,1.2,30};
-			    closure2[] = {"A3\sounds_f\weapons\closure\ebr-3",1.1220185,1,30};
-		    	soundClosure[] = {"closure1",0.5,"closure2",0.5};
-		    	weaponSoundEffect = "DefaultRifle";
+weaponSoundEffect = "DefaultRifle";
+    closure1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Closure_rahim_01",0.39810717,1.2,30};
+    closure2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Closure_rahim_02",0.39810717,1,30};
+    soundClosure[] = {"closure1",0.5,"closure2",0.5};
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"trixie_recon\sound\M24_s1", 1.58489, 1, 1200};
-			    begin2[] = {"trixie_recon\sound\M24_s1", 1.58489, 1, 1200};
-			    begin3[] = {"trixie_recon\sound\M24_s1", 1.58489, 1, 1200};
+			    begin1[] = {"trixie_recon\sound\M24_s1", 1.58489, 1, 1800};
+			    begin2[] = {"trixie_recon\sound\M24_s1", 1.58489, 1, 1800};
+			    begin3[] = {"trixie_recon\sound\M24_s1", 1.58489, 1, 1800};
 			    soundbegin[] = {"begin1", 1,"begin2", 1,"begin3", 1};
 			};
 	        class SilencedSound: BaseSoundModeType
             {
-               begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
-               begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
-               soundBegin[] = {"begin1",0.5,"begin2",0.5};
+       begin1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Silencer_Rahim_01",1.0,1,600};
+    begin2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Silencer_Rahim_02",1.0,1,600};
+    begin3[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Silencer_Rahim_03",1.0,1,600};
+    soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
             };
 			reloadTime = 1.5;
 		    dispersion = 0.0005;
@@ -112,10 +118,10 @@ class CfgWeapons
 			
 			class BaseSoundModeType
 			{
- 				closure1[] = {"A3\sounds_f\weapons\closure\ebr-3",1.1220185,1.2,30};
-			    closure2[] = {"A3\sounds_f\weapons\closure\ebr-3",1.1220185,1,30};
-		    	soundClosure[] = {"closure1",0.5,"closure2",0.5};
-		    	weaponSoundEffect = "DefaultRifle";
+weaponSoundEffect = "DefaultRifle";
+    closure1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Closure_rahim_01",0.39810717,1.2,30};
+    closure2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Closure_rahim_02",0.39810717,1,30};
+    soundClosure[] = {"closure1",0.5,"closure2",0.5};
  			};
  			class StandardSound: BaseSoundModeType
  			{
@@ -126,9 +132,10 @@ class CfgWeapons
 			};
 	        class SilencedSound: BaseSoundModeType
             {
-               begin1[] = {"A3\sounds_f\weapons\silenced\silent-23",1.0,1,200};
-               begin2[] = {"A3\sounds_f\weapons\silenced\silent-24",1.0,1,200};
-               soundBegin[] = {"begin1",0.5,"begin2",0.5};
+       begin1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Silencer_Rahim_01",1.0,1,600};
+    begin2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Silencer_Rahim_02",1.0,1,600};
+    begin3[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Rahim\Silencer_Rahim_03",1.0,1,600};
+    soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
             };
 			reloadTime = 1.5;
 		    dispersion = 0.0005;

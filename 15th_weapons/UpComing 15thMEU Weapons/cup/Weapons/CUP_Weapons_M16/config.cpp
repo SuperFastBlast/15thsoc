@@ -78,9 +78,10 @@ class CfgAmmo
 	class B_MEU_M855a1: B_556x45_Ball
 	{
 		hit=8.4;
+		airFriction = -0.0011336614; 
 		caliber = 0.855;
 		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
-		typicalSpeed = 990;
+		typicalSpeed = 945;
 		deflecting=20;
 		deflectingChance = 100;
 		deflectingRandomness = 0.5;
@@ -92,7 +93,8 @@ class CfgAmmo
 	class B_MEU_M8556: B_556x45_Ball_Tracer_Red
 	{
 		hit=8.4;
-		typicalSpeed = 990;
+		airFriction = -0.0011336614; 
+		typicalSpeed = 945;
 		caliber = 0.855;
 		deflecting=20;
 		deflectingChance = 100;
@@ -180,7 +182,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		ammo = "B_MEU_M855a1";
-		initSpeed = 990;
+		initSpeed = 945;
 		count = 30;
 		mass = 11.8;
 		lastroundstracer = 3;
@@ -191,7 +193,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		ammo = "B_MEU_M8556";
-		initSpeed = 990;
+		initSpeed = 945;
 		mass = 11.8;
 		count = 30;
 		tracersevery = 1;
@@ -293,6 +295,7 @@ class CfgWeapons
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Dry",1,1,35};
 		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.3,1};
 		magazines[] = {"MEU_30Rnd_M855A1_556x45_Stanag","MEU_30Rnd_M855A1_556x45_T_Stanag"};
+	jsrs_soundeffect = "JSRS2_Distance_Effects_M16";
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
@@ -406,14 +409,14 @@ class CfgWeapons
 		};
 		inertia = 0.5;
 		dexterity = 1.5;
-		initSpeed = 948;
+		initSpeed = -1.025;
 		maxRecoilSway = 0.0125;
   		swayDecaySpeed = 1.25;
 	};
 	class CUP_arifle_M16A4_Base: CUP_arifle_M16_Base
 	{
 		scope = 2;
-		initSpeed = 948;
+		initSpeed = -1.025;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M16A4.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M16A4_X_ca.paa";
 		inertia = 0.5;
@@ -442,7 +445,7 @@ class CfgWeapons
 	class CUP_arifle_M16A4_GL: CUP_arifle_M16_Base
 	{
 		scope = 2;
-		initSpeed = 948;
+		initSpeed = -1.025;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M16A4GL.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M16A4GL_X_ca.paa";
 		handAnim[] = {"OFP2_ManSkeleton","CUP\Weapons\CUP_Weapons_M16\data\anim\M16GL.rtm"};
@@ -473,10 +476,11 @@ class CfgWeapons
 	class CUP_arifle_M4_Base: CUP_arifle_M16A4_Base
 	{
 		scope = 0;
-		initSpeed = 880;
+		initSpeed = -0.936;
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\Reload",1,1,35};
 		changeFiremodeSound[]={"A3\sounds_f\weapons\closure\firemode_changer_2",0.3,1};
 		drySound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Dry",1,1,35};
+	jsrs_soundeffect = "JSRS2_Distance_Effects_M4";
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
@@ -599,7 +603,7 @@ class CfgWeapons
 	class CUP_arifle_M4A1_BUIS_Base: CUP_arifle_M4_Base
 	{
 		scope = 0;
-		initSpeed = 880;
+		initSpeed = -0.936;
 		class WeaponSlotsInfo
 		{
 			class CowsSlot{};
@@ -622,7 +626,7 @@ class CfgWeapons
 	class CUP_arifle_M4CAR_BUIS_GL: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
-		initSpeed = 880;
+		initSpeed = -0.936;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4_black_GL.p3d";
 		displayName = "M4 Carbine M203";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M4GL_X_ca.paa";
@@ -718,7 +722,7 @@ class CfgWeapons
 	class CUP_arifle_M4CAR_black: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
-		initSpeed = 880;
+		initSpeed = -0.936;
 		displayName = "M4 Carbine";
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4A1_BUIS_black.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_m4blk_X_ca.paa";
@@ -807,7 +811,7 @@ class CfgWeapons
 	class CUP_arifle_M4A1_BUIS_GL: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
-		initSpeed = 880;
+		initSpeed = -0.936;
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4_black_GL.p3d";
 		displayName = "M4A1 M203";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_M4GL_X_ca.paa";
@@ -828,7 +832,7 @@ class CfgWeapons
 	class CUP_arifle_M4A1_black: CUP_arifle_M4A1_BUIS_Base
 	{
 		scope = 2;
-		initSpeed = 880;
+		initSpeed = -0.936;
 		displayName = "M4A1";
 		model = "\CUP\Weapons\CUP_Weapons_M16\CUP_M4A1_BUIS_black.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M16\data\ui\gear_m4blk_X_ca.paa";

@@ -29,9 +29,8 @@ class CfgWeapons
     };
 	class ej_IARal_base: Rifle_Base_F
 	{
-		changeFiremodeSound[]=
-		{
-			"A3\sounds_f\weapons\closure\firemode_changer_2",0.3,1};
+	changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\firemode_Mx",0.17782794,1,5};
+	jsrs_soundeffect = "JSRS2_Distance_Effects_M4";
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
@@ -43,7 +42,10 @@ class CfgWeapons
 		discretedistanceinitindex=1;
 		dispersion=9.9999997e-005;
 		dexterity=1.8;
-		initSpeed = 880;
+		inertia = 0.5;
+		initSpeed = -0.946;
+		maxRecoilSway = 0.0125;
+  		swayDecaySpeed = 1.25;
 		displayname="M27 IAR";
 		distancezoommax=300;
 		distancezoommin=300;
@@ -148,16 +150,16 @@ class CfgWeapons
 			class BaseSoundModeType
 			{	
 			weaponSoundEffect = "DefaultRifle";
-			closure1[]={"A3\sounds_f\weapons\closure\closure_rifle_2", db-12, 1,10};
-			closure2[]={"A3\sounds_f\weapons\closure\closure_rifle_3", db-12, 1,10};
-			soundClosure[]={closure1,0.5, closure2,0.5};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 
 			class StandardSound: BaseSoundModeType
 			{
-			begin1[] = {"\IARal\M27_S1.wav", db4, 1,1200};
-			begin2[] = {"\IARal\M27_S1.wav", db4, 1,1200};
-			begin3[] = {"\IARal\M27_S1.wav", db4, 1,1200};
+			begin1[] = {"\IARal\M27_S1.wav", db4, 1,1400};
+			begin2[] = {"\IARal\M27_S1.wav", db4, 1,1400};
+			begin3[] = {"\IARal\M27_S1.wav", db4, 1,1400};
 			soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5};
 			};
 
@@ -188,9 +190,9 @@ class CfgWeapons
 			class BaseSoundModeType
 			{	
 			weaponSoundEffect = "DefaultRifle";
-			closure1[]={"A3\sounds_f\weapons\closure\closure_rifle_2", db-12, 1,10};
-			closure2[]={"A3\sounds_f\weapons\closure\closure_rifle_3", db-12, 1,10};
-			soundClosure[]={closure1,0.5, closure2,0.5};
+    				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_01",0.31622776,1,10};
+    				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\Closure_Mx_02",0.31622776,1.1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 
 			class StandardSound: BaseSoundModeType
@@ -222,7 +224,7 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=6.0; /// AI should have some degree of greater dispersion for initial shoots
 		aiDispersionCoefX=4.0; /// AI should have some degree of greater dispersion for initial shoots
-		drySound[]={"A3\sounds_f\weapons\Other\dry_1", db-5, 1, 10}; /// custom made sounds
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\MX\dry_Mx",0.56234133,1,10}; /// custom made sounds
 		reloadMagazineSound[] = {"\IARal\M4R.wss",1,1,30};
 	};
 	class ej_IAR30: ej_IARal_base

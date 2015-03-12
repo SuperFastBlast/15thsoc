@@ -124,6 +124,7 @@ class CfgWeapons
 		magazines[] = {"MEU_20x762_Mag"};
 		picture = "\CUP\Weapons\CUP_Weapons_M110\data\ui\gear_M110_X_CA.paa";
 		reloadTime = 2;
+		reloadAction = "GestureReloadMX";
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Mk18\firemode_Mk18",0.25118864,1,5};
 		modes[] = {"Single"};
 		class WeaponSlotsInfo: WeaponSlotsInfo
@@ -144,6 +145,7 @@ class CfgWeapons
 		{
 			priority = 1;
 		};
+	jsrs_soundeffect = "JSRS2_Distance_Effects_BigSniper";
 	AGM_Bipod = 1;
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.012;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.

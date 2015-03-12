@@ -72,6 +72,7 @@ class CfgWeapons
 		maxZeroing = 2000;
 		initSpeed = 853;
 		cursor = "srifle";
+		jsrs_soundeffect = "JSRS2_Distance_Effects_BigSniper";
 		model = "CUP\Weapons\CUP_Weapons_M107\CUP_M107.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_M107\data\UI\gear_M107_x_ca.paa";
 		class WeaponSlotsInfo: WeaponSlotsInfo
@@ -119,8 +120,8 @@ class CfgWeapons
 			class BaseSoundModeType
 			{
 				weaponSoundEffect = "DefaultRifle";
-    closure1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Lynx\Closure_Lynx_01",0.39810717,1,40};
-    closure2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Lynx\Closure_Lynx_02",0.39810717,1,40};
+    closure1[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Lynx\Closure_gm6_01",0.39810717,1,40};
+    closure2[] = {"A3\Sounds_F\arsenal\weapons\LongRange\Lynx\Closure_gm6_02",0.39810717,1,40};
     soundClosure[] = {"closure1",0.5,"closure2",0.5};
 			};
 			class StandardSound: BaseSoundModeType

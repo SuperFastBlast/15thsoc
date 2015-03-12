@@ -119,6 +119,7 @@ class CfgWeapons
 		{
 			libTextDesc = "M240";
 		};
+	jsrs_soundeffect = "JSRS2_Distance_Effects_M240";
 	AGM_Bipod = 1;
     AGM_Jamming_Reliability = 0.001;    // 40 malfunctions on 10,000 rounds fired.
     AGM_Overheating_Increment = 0.015;  // How much the weapon heats up for every shot. Max temperature is 3. 250 shots for max temp.
