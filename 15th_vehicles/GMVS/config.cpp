@@ -204,10 +204,12 @@ class CfgVehicles {
 			class SideTurret: MainTurret
 			{
 				gunnerName = "Front Gun";
-				weapons[] = {"M240_veh"};// check definitions for this
+				weapons[] = {"m240_veh"}; // check definitions for this
 				magazines[] = {"100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240"}; // check definitions for this
 				soundServo[] = {"",0.0001,1.1}; // \ca\wheeled\Data\Sound\servo3 orgi.
 				gunnerAction = "HMMWV_Gunner02_EP1";
+				gunnerRightHandAnimName = "OtocHlaven_2";
+				gunnerLeftHandAnimName = "OtocHlaven_2";
 				commanding = 1;
 				primaryGunner = 1;
 				primaryObserver = 1;
@@ -232,17 +234,17 @@ class CfgVehicles {
 			class ReloadAnim
 			{
 				source = "reload";
-				weapon = "M240_veh";
+				weapon = "m240_veh";
 			};
 			class ReloadMagazine
 			{
 				source = "reloadmagazine";
-				weapon = "M240_veh";
+				weapon = "m240_veh";
 			};
 			class Revolving
 			{
 				source = "revolving";
-				weapon = "M240_veh";
+				weapon = "m240_veh";
 			};
 		};
 
@@ -258,3 +260,225 @@ class CfgVehicles {
 		}; //end GMVS
 
 }; //endCfgVehicles
+
+class cfgWeapons
+{
+	class Default;
+	class Mgun;
+	class Mguncore;
+	class m240_veh: Mgun
+	{
+		class GunClouds{};
+		bullet1[] = {"A3\Sounds_F\weapons\bullets\7_62-dirt1",1.0,1,15};
+		bullet2[] = {"A3\Sounds_F\weapons\bullets\7_62-dirt2",1.0,1,15};
+		bullet3[] = {"A3\Sounds_F\weapons\bullets\7_62-dirt3",1.0,1,15};
+		bullet4[] = {"A3\Sounds_F\weapons\bullets\7_62-dirt4",1.0,1,15};
+		bullet5[] = {"A3\Sounds_F\weapons\bullets\7_62-hard1",1.0,1,15};
+		bullet6[] = {"A3\Sounds_F\weapons\bullets\7_62-hard2",1.0,1,15};
+		bullet7[] = {"A3\Sounds_F\weapons\bullets\7_62-hard3",1.0,1,15};
+		bullet8[] = {"A3\Sounds_F\weapons\bullets\7_62-hard4",1.0,1,15};
+		bullet9[] = {"A3\Sounds_F\weapons\bullets\7_62-metal1",1.0,1,15};
+		bullet10[] = {"A3\Sounds_F\weapons\bullets\7_62-metal2",1.0,1,15};
+		bullet11[] = {"A3\Sounds_F\weapons\bullets\7_62-metal3",1.0,1,15};
+		bullet12[] = {"A3\Sounds_F\weapons\bullets\7_62-metal4",1.0,1,15};
+		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
+		scope = 1;
+		displayName = "M240B";
+		cursor = "EmptyCursor";
+		cursorAim = "mg";
+		magazines[] = {"100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240"};
+		canLock = "LockNo";
+		modes[] = {"manual","close","short","medium","far"};
+		ballisticsComputer = 2;
+		magazineReloadTime = 4;
+		class GunParticles
+		{
+			class effect1
+			{
+				positionName = "usti hlavne_2";
+				directionName = "konec hlavne_2";
+				effectName = "MachineGunCloud";
+			};
+		};
+		class Manual: Mgun
+		{
+			displayName = "M240B";
+			sounds[] = {"StandardSound"};
+			class StandardSound
+			{
+				weaponSoundEffect = "DefaultRifle";
+				begin1[] = {"",1.0,1,1200}; //replace sound \mas_cars\hmmwv\sounds\mk48_s1
+				begin2[] = {"",1.0,1,1200}; //replace sound \mas_cars\hmmwv\sounds\mk48_s2
+				begin3[] = {"",1.0,1,1200}; //replace sound \mas_cars\hmmwv\sounds\mk48_s3
+				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
+			};
+			reloadTime = 0.075;
+			dispersion = 0.00125;
+			showToPlayer = 1;
+			soundContinuous = 0;
+			burst = 1;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDistance = 50;
+			minRange = 1;
+			minRangeProbab = 0.01;
+			midRange = 2;
+			midRangeProbab = 0.01;
+			maxRange = 3;
+			maxRangeProbab = 0.01;
+			};
+			class close: Manual
+		{
+			showToPlayer = 0;
+			soundBurst = 0;
+			burst = 15;
+			aiRateOfFire = 1;
+			aiRateOfFireDistance = 50;
+			minRange = 0;
+			minRangeProbab = 0.05;
+			midRange = 20;
+			midRangeProbab = 0.7;
+			maxRange = 50;
+			maxRangeProbab = 0.1;
+		};
+		class short: close
+		{
+			burst = 10;
+			aiRateOfFire = 2;
+			aiRateOfFireDistance = 300;
+			minRange = 50;
+			minRangeProbab = 0.05;
+			midRange = 150;
+			midRangeProbab = 0.7;
+			maxRange = 300;
+			maxRangeProbab = 0.1;
+		};
+		class medium: Manual
+		{
+			showToPlayer = 0;
+			soundBurst = 0;
+			burst = 7;
+			aiRateOfFire = 4;
+			aiRateOfFireDistance = 600;
+			minRange = 200;
+			minRangeProbab = 0.05;
+			midRange = 400;
+			midRangeProbab = 0.7;
+			maxRange = 600;
+			maxRangeProbab = 0.1;
+		};
+		class far: medium
+		{
+			burst = 4;
+			aiRateOfFire = 5;
+			aiRateOfFireDistance = 1000;
+			minRange = 400;
+			minRangeProbab = 0.05;
+			midRange = 750;
+			midRangeProbab = 0.4;
+			maxRange = 1000;
+			maxRangeProbab = 0.01;
+		};
+		jsrs_soundeffect = ""; //replace JSRS2_Distance_Effects_PK
+	};
+};//end cfgWeapons
+
+class CfgAmmo
+{
+	class BulletCore;
+	class BulletBase: BulletCore{};
+	class B_762x51_Ball;
+	class B_762x51_Tracer_Red;
+	class 100Rnd_762x51_M240: B_762x51_Ball
+	{
+		hit = 12;
+	};
+	class G_40mm_HE;
+	class 200Rnd_40mm_G_belt: G_40mm_HE
+	{
+		caliber = 1.5;
+		hit = 8;
+		indirecthit = 10;
+		indirecthitrange = 5.5;
+		whistledist = 5.5;
+	};
+	class 96Rnd_40mm_G_belt: G_40mm_HE
+	{
+		caliber = 1.5;
+		hit = 8;
+		indirecthit = 10;
+		indirecthitrange = 5.5;
+		whistledist = 5.5;
+	};
+	class 64Rnd_40mm_G_belt: G_40mm_HE
+	{
+		caliber = 1.5;
+		hit = 8;
+		indirecthit = 10;
+		indirecthitrange = 5.5;
+		whistledist = 5.5;
+	};
+	class 32Rnd_40mm_G_belt: G_40mm_HE
+	{
+		caliber = 1.5;
+		hit = 8;
+		indirecthit = 10;
+		indirecthitrange = 5.5;
+		whistledist = 5.5;
+	};
+};
+
+class cfgMagazines
+{
+	class Default;
+	class CA_Magazine: Default{};
+	class VehicleMagazine: CA_Magazine{};
+	class 150Rnd_762x51_Box;
+	class 100Rnd_762x51_M240: 150Rnd_762x51_Box
+	{
+		ammo = "100Rnd_762x51_M240";
+		count = 100;
+		displayname = "100rnd 7.62mm Box";
+		mass = 30;
+	};
+	class 200Rnd_40mm_G_belt: VehicleMagazine
+	{
+		scope = 2;
+		displayName = "High Explosive";
+		ammo = "200Rnd_40mm_G_belt";
+		count = 200;
+		initSpeed = 185;
+		maxLeadSpeed = 100;
+		nameSound = "grenadelauncher";
+	};
+	class 96Rnd_40mm_G_belt: VehicleMagazine
+	{
+		scope = 2;
+		displayName = "High Explosive";
+		ammo = "200Rnd_40mm_G_belt";
+		count = 96;
+		initSpeed = 185;
+		maxLeadSpeed = 100;
+		nameSound = "grenadelauncher";
+	};
+	class 64Rnd_40mm_G_belt: VehicleMagazine
+	{
+		scope = 2;
+		displayName = "High Explosive";
+		ammo = "200Rnd_40mm_G_belt";
+		count = 64;
+		initSpeed = 185;
+		maxLeadSpeed = 100;
+		nameSound = "grenadelauncher";
+	};
+	class 32Rnd_40mm_G_belt: VehicleMagazine
+	{
+		scope = 2;
+		displayName = "High Explosive";
+		ammo = "200Rnd_40mm_G_belt";
+		count = 32;
+		initSpeed = 185;
+		maxLeadSpeed = 100;
+		nameSound = "grenadelauncher";
+	};
+}; // end cfgMagazines
+	
