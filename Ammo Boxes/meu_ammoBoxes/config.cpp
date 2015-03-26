@@ -601,10 +601,6 @@ class CfgVehicles{
 				count = 25;
 				weapon = "CUP_arifle_M4A1_BUIS_GL";
 			};
-			class _xx_CUP_lmg_M249_para {
-				count = 5;
-				weapon = "CUP_lmg_M249_para";
-			};
 			class _xx_ej_IAR30 {
 				count = 5;
 				weapon = "ej_IAR30";
