@@ -82,10 +82,10 @@ MX2A Thermal Handheld Optic
 "meu_MX2A_tan"
 
 AT 4 CS
-"tf47_at4_heat" 
+"meu_AT4_CS" 
 
 AT 4
-"tf47_at4_hp"
+"meu_AT4"
 
 LAW M72
 "caf_m72a6"
