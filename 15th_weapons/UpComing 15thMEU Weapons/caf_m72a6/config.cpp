@@ -8,6 +8,46 @@ class CfgPatches
 		requiredAddons[] = {"A3_Weapons_F"};
 	};
 };
+class CfgVehicles
+{
+	class Thing;
+	class CAF_M72a6_USED_TUBE: Thing
+	{
+		scope = 1;
+		side = -1;
+		model = "caf_m72a6\caf_M72a6_launcher_loaded.p3d";
+		icon = "";
+		displayName = "";
+		nameSound = "";
+		destrType = "DestructNo";
+		simulation = "thingx";
+		mapSize = 0;
+		accuracy = 0;
+		armor = 5;
+		weight = 200;
+		airFriction2[] = {0.3,0.3,0.3};
+		airFriction1[] = {0.3,0.3,0.3};
+		airFriction0[] = {0.3,0.3,0.3};
+	};
+	class WeaponHolder_Single_F;
+	class caf_M72A6: WeaponHolder_Single_F
+	{
+		scope = 2;
+		curatorScope = 2;
+		model = "\A3\Weapons_F\DummyLauncher_Single.p3d";
+		mapSize = 0.8;
+		displayName = "M72 LAW";
+		vehicleClass = "WeaponsSecondary";
+		class TransportWeapons
+		{
+			class caf_M72A6
+			{
+				weapon = "caf_M72A6";
+				count = 1;
+			};
+		};
+	};
+};
 class Mode_SemiAuto;
 class SlotInfo;
 class CowsSlot;
@@ -41,6 +81,9 @@ class CfgAmmo
 		maneuvrability = 0;
 		allowAgainstInfantry = 1;
 		model = "\CAF_M72A6\firedRound.p3d";
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 25;
+
 	};
 };
 class CfgMagazines
@@ -102,8 +145,11 @@ class CfgWeapons
 		modelOptics = "-";
 		magazines[] = {"1Rnd_M72a6"};
 		magazineReloadTime = 3;
+		inertia = 0.9;
+  		dexterity = 1.1;
 		reloadMagazineSound[] = {"CAF_M72A6\data\sound\m72a6_load.ogg",0.00031622776,1,20};
-		drySound[] = {"A3\sounds_f\weapons\other\dry6.wav",0.0001,1,10};
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Dry_NLAW",0.17782794,1,15};
+		changeFiremodeSound[] = {"A3\sounds_f\dummysound",0.56234133,1,20};
 		sounds[] = {"StandardSound"};
 		class BaseSoundModeType
 		{
@@ -114,13 +160,7 @@ class CfgWeapons
 			begin1[] = {"CAF_M72A6\data\sound\m72a6Fire.ogg",1.9952624,1,1000};
 			soundBegin[] = {"begin1",1};
 		};
-        soundFly[] = 
-		{
-		"\a3\sounds_f\weapons\Rockets\rocket_fly_2",
-		10,
-		1.8,
-		300
-		};
+        	soundFly[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Fly_NLAW",0.56234133,1.5,700};
 		picture = "\caf_m72a6\data\inv\m72a6.paa";
 		UiPicture = "\A3\Weapons_F\Data\UI\icon_at_CA.paa";
 		recoil = "launcherBase";
@@ -169,53 +209,5 @@ class Extended_PostInit_EventHandlers
 	class caf_disposable
 	{
 		init = "call compile preProcessFileLineNumbers 'caf_m72a6\data\scripts\XEH_PostInit_Once.sqf'";
-	};
-};
-class CfgVehicles
-{
-	class Thing;
-	class CAF_M72a6_USED_TUBE: Thing
-	{
-		scope = 1;
-		side = -1;
-		model = "caf_m72a6\caf_M72a6_launcher_loaded.p3d";
-		icon = "";
-		displayName = "";
-		nameSound = "";
-		destrType = "DestructNo";
-		simulation = "thingx";
-		mapSize = 0;
-		accuracy = 0;
-		armor = 5;
-		weight = 200;
-		airFriction2[] = {0.3,0.3,0.3};
-		airFriction1[] = {0.3,0.3,0.3};
-		airFriction0[] = {0.3,0.3,0.3};
-	};
-	class ReammoBox_F;
-	class Can_M72_Base: ReammoBox_F
-	{
-		scope = 0;
-		hiddenSelections[] = {"Camo_Signs","Camo"};
-		hiddenSelectionsTextures[] = {"\caf_m72a6\data\tex\AmmoBox_m72a6_CA.paa","A3\Weapons_F\Ammoboxes\data\AmmoBox_CO.paa"};
-	};
-	class CAF_M72A6_AMMO: Can_M72_Base
-	{
-		scope = 2;
-		displayName = "M72A6 CRATE";
-		model = "\A3\weapons_F\AmmoBoxes\WpnsBox_large_F";
-		icon = "iconCrateLarge";
-		transportMaxWeapons = 40;
-		transportMaxMagazines = 200;
-		class TransportMagazines
-		{
-			class _xx_1Rnd_M72a6
-			{
-				weapon = "1Rnd_M72a6";
-				count = 40;
-			};
-		};
-		class TransportItems{};
-		accuracy = 1000;
 	};
 };

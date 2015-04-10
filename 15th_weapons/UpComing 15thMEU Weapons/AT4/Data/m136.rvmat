@@ -1,1 +1,92 @@
- raP       ö   ambient   €?  €?  €?  €?diffuse   €?  €?  €?  €?forcedDiffuse                 emmisive               €?specular ÍÌL>ÍÌL>ÍÌL>  €?specularPower   €B PixelShaderID Super  VertexShaderID Super  Stage1 I   Stage2 ò   Stage3 ¬   Stage4 V   Stage5 ÿ   Stage6 ¨   Stage7 S  ö    texture AT4\Data\m136_nohq.paa  uvSource tex  uvTransform —  ò   aside   €?        up       €?    dir             pos             ò    texture ca\weapons\data\detailmaps\metal_detail_dt.paa  uvSource tex  uvTransform Q  ¬   aside   €@        up        @    dir             pos             ¬    texture #(argb,8,8,3)color(0,0,0,0,MC)  uvSource tex  uvTransform û  V   aside   €?        up       €?    dir             pos             V    texture #(rgb,8,8,3)color(1,1,1,1,AS)  uvSource tex  uvTransform ¤  ÿ   aside   €?        up       €?    dir             pos             ÿ    texture AT4\Data\m136_smdi.paa  uvSource tex  uvTransform M  ¨   aside   €?        up       €?    dir             pos             ¨    texture #(ai,64,64,1)fresnel(5.64,1.81)  uvSource tex  uvTransform ø  S   aside   €?        up       €?    dir             pos             S    texture ca\data\env_land_co.paa  uvSource tex  uvTransform ›  ö   aside   €?        up       €?    dir             pos             ö      
+ambient[]={1.000000,1.000000,1.000000,1.000000};
+diffuse[]={1.000000,1.000000,1.000000,1.000000};
+forcedDiffuse[]={0.000000,0.000000,0.000000,0.000000};
+emmisive[]={0.000000,0.000000,0.000000,1.000000};
+specular[]={0.200000,0.200000,0.200000,1.000000};
+specularPower=64.000000;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage1
+{
+	texture="at4\data\m136_NOHQ.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage2
+{
+	texture="a3\weapons_f\data\detailmaps\metal_detail_dt.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={4.000000,0.000000,0.000000};
+		up[]={0.000000,2.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,MC)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage4
+{
+	texture="#(rgb,8,8,3)color(1,1,1,1,AS)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage5
+{
+	texture="at4\data\m136_SMDI.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage6
+{
+	texture="#(ai,64,64,1)fresnel(5.64,1.81)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage7
+{
+	texture="a3\Data_f\env_land_co.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};

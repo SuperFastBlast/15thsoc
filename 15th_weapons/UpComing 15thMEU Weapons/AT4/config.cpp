@@ -2,12 +2,11 @@ class CfgPatches
  {
 	class AT4 {
 		units[] = {};
-		weapons[] = {};
+		weapons[] = {"meu_AT4","meu_AT4_CS"};
 		requiredVersion = 1.00;
 		requiredAddons[] = {"A3_Weapons_F","inko_disposable_a3"};
 	};
 };
-
 class CfgAmmo
 {
 	
@@ -37,6 +36,8 @@ class CfgAmmo
 		timetolive = 100;
 		visiblefire = 28;
 		whistledist = 2;
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 25;
 		AGM_Backblast_Angle = 60; // angle of the backblast area
         AGM_Backblast_Range = 25; // maximum range of the backblast
         AGM_Backblast_Damage = 1; // maximum damage of the backblast
@@ -76,6 +77,8 @@ class CfgAmmo
 		timetolive = 100;
 		visiblefire = 28;
 		whistledist = 2;
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 25;
 		AGM_Backblast_Angle = 60;   // angle of the backblast area
         AGM_Backblast_Range = 0;   // maximum range of the backblast
         AGM_Backblast_Damage = 0; // maximum damage of the backblast
@@ -225,42 +228,13 @@ class CfgWeapons
 		};
 		class StandardSound: BaseSoundModeType
 		{
-			begin1[]=
-			{
-				"AT4\sound\rocket1.wss",
-				1.9952624,
-				1,
-				1000
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
+			begin1[]={"AT4\sound\rocket1.wss",1.9952624,1,1000};
+			soundBegin[]={"begin1",1};
 		};
-		drySound[]=
-		{
-			"",
-			9.9999997e-005,
-			1,
-			10
-		};
-		reloadMagazineSound[]=
-		{
-			"\a3\sounds_f\weapons\Launcher\nlaw_final_2",
-			0.00031622776,
-			1,
-			20
-		};
-		soundFly[]=
-		{
-			"\a3\sounds_f\weapons\Rockets\rocket_fly_2",
-			10,
-			1.8,
-			300
-		};
-		
-		
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Dry_NLAW",0.17782794,1,15};
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Reload_NLAW",1.0,1,10};
+		soundFly[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Fly_NLAW",0.56234133,1.5,700};
+		changeFiremodeSound[] = {"A3\sounds_f\dummysound",0.56234133,1,20};
 		class OpticsModes 
 		{
 			class Hamr2Collimator : Hamr2Collimator
@@ -349,42 +323,13 @@ class CfgWeapons
 		};
 		class StandardSound: BaseSoundModeType
 		{
-			begin1[]=
-			{
-				"AT4\sound\rocket1.wss",
-				1.9952624,
-				1,
-				1000
-			};
-			soundBegin[]=
-			{
-				"begin1",
-				1
-			};
+			begin1[]={"AT4\sound\rocket1.wss",1.9952624,1,1000};
+			soundBegin[]={"begin1",1};
 		};
-		drySound[]=
-		{
-			"",
-			9.9999997e-005,
-			1,
-			10
-		};
-		reloadMagazineSound[]=
-		{
-			"\a3\sounds_f\weapons\Launcher\nlaw_final_2",
-			0.00031622776,
-			1,
-			20
-		};
-		soundFly[]=
-		{
-			"\a3\sounds_f\weapons\Rockets\rocket_fly_2",
-			10,
-			1.8,
-			300
-		};
-		
-		
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Dry_NLAW",0.17782794,1,15};
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Reload_NLAW",1.0,1,10};
+		soundFly[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Fly_NLAW",0.56234133,1.5,700};
+		changeFiremodeSound[] = {"A3\sounds_f\dummysound",0.56234133,1,20};
 		class OpticsModes 
 		{
 			class Hamr2Collimator : Hamr2Collimator
@@ -429,37 +374,42 @@ class CfgWeapons
 };
 class cfgVehicles
 {
-	class NATO_Box_Base;
-	class AT4_box: NATO_Box_Base
+
+		class WeaponHolder_Single_F;
+	class meu_AT4: WeaponHolder_Single_F
 	{
 		scope = 2;
-		accuracy = 1000;
-		side = 1;
-		faction = "blu_f";
-		displayName = "[15th] AT-4 Box";
-		model = "\A3\weapons_F\AmmoBoxes\WpnsBox_F";
-		
-		
-
-		class TransportMagazines
-		{
-			
-		};
+		curatorScope = 2;
+		model = "\A3\Weapons_F\DummyLauncher_Single.p3d";
+		mapSize = 0.8;
+		displayName = "AT4";
+		vehicleClass = "WeaponsSecondary";
 		class TransportWeapons
 		{
 			class meu_AT4
 			{
 				weapon = "meu_AT4";
-				count = 50;
-			};
-			class meu_AT4_CS
-			{
-				weapon = "meu_AT4_CS";
-				count = 50;
+				count = 1;
 			};
 		};
 	};
-	
+	class meu_AT4_CS: WeaponHolder_Single_F
+	{
+		scope = 2;
+		curatorScope = 2;
+		model = "\A3\Weapons_F\DummyLauncher_Single.p3d";
+		mapSize = 0.8;
+		displayName = "AT4 CS";
+		vehicleClass = "WeaponsSecondary";
+		class TransportWeapons
+		{
+			class meu_AT4_CS
+			{
+				weapon = "meu_AT4_CS";
+				count = 1;
+			};
+		};
+	};
 	class Thing;
 	class AT4_Used_Tube : Thing
 	{
