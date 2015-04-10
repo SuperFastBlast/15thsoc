@@ -109,7 +109,7 @@ class CfgMagazines
 		displaynameshort = "HEAT";
 		modelSpecial = "\AT4\m136_launcher_loaded.p3d";
 		picture = "\AT4\Data\m_smaw_ca.paa"; 
-		scope = 2;
+		scope = 1;
 		ammo = "R_AT_HEAT";
 		reloadtime = 0.5;
 		hit = 480;
@@ -134,7 +134,7 @@ class CfgMagazines
 		displaynameshort = "CS";
 		modelSpecial = "\AT4\m136_launcher_loaded.p3d";
 		picture = "\AT4\Data\m_smaw_ca.paa"; 
-		scope = 2;
+		scope = 1;
 		ammo = "R_AT_CS";
 		reloadtime = 0.5;
 		hit = 380;

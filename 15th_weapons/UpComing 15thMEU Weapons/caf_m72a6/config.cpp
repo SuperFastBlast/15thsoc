@@ -100,7 +100,7 @@ class CfgMagazines
 		allowedSlots[] = {701,801,901};
 		caf_disposable = 1;
 		displayName = "M72A6";
-		scope = 2;
+		scope = 1;
 		count = 1;
 		ammo = "60MM_ROCKET";
 		picture = "\caf_m72a6\data\inv\60mm_rocket.paa";
