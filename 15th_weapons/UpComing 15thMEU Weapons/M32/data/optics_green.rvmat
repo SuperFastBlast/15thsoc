@@ -73,10 +73,10 @@ class Stage6
 };
 class Stage7
 {
-	texture="M32\Data\env_land_optic_co.paa";
+	texture="A3\Data_F\env_land_optic_co.paa";
 	uvSource="none";
 };
 class StageTI
 {
-	texture="M32\Data\Default_TI_CA.paa";
+	texture="a3\data_f\default_ti_ca.paa";
 };

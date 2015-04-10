@@ -8,7 +8,7 @@ renderFlags[]=
 {
 	"NoAlphaWrite"
 };
-nextPass="Ca\weapons_E\GrenadeLauncher\data\m32\2ndpass_alphaNoShadow.rvmat";
+nextPass="m32\data\2ndpass_alphaNoShadow.rvmat";
 PixelShaderID="Glass";
 VertexShaderID="Glass";
 class Stage1
@@ -18,6 +18,6 @@ class Stage1
 };
 class Stage2
 {
-	texture="Ca\weapons_E\GrenadeLauncher\data\m32\env_co.pac";
+	texture="A3\data_f\env_co.paa";
 	uvSource="none";
 };

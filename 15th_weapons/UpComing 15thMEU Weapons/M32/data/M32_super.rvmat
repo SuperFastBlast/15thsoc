@@ -24,7 +24,7 @@ class Stage1
 };
 class Stage2
 {
-	texture="M32\Data\metal_detail_dt.paa";
+	texture="a3\weapons_f\data\detailmaps\metal_detail_dt.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -77,6 +77,6 @@ class Stage6
 };
 class Stage7
 {
-	texture="M32\Data\env_land_co.paa";
+	texture="A3\Data_f\env_land_co.paa";
 	uvSource="none";
 };

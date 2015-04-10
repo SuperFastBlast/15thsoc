@@ -7,11 +7,39 @@ class CfgPatches
 		weapons[] = {"M32"};
 		requiredVersion = 1.02;
 		requiredAddons[] = {"A3_Weapons_F"};
-		magazines[] = {"M433_40mm_HEDP_Shell","6Rnd_HE_M32", "6Rnd_FlareWhite_M32", "6Rnd_FlareGreen_M32", "6Rnd_FlareRed_M32", "6Rnd_FlareYellow_M32", "6Rnd_FlareCIR_M32", "6Rnd_Smoke_M32", "6Rnd_SmokeRed_M32", "6Rnd_SmokeGreen_M32", "6Rnd_SmokeYellow_M32", "6Rnd_SmokePurple_M32", "6Rnd_SmokeOrange_M32", "1Rnd_HE_Grenade_shell", "UGL_FlareWhite_F", "UGL_FlareGreen_F", "UGL_FlareRed_F", "UGL_FlareYellow_F", "UGL_FlareCIR_F", "1Rnd_Smoke_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeYellow_Grenade_shell", "1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeBlue_Grenade_shell", "1Rnd_SmokeOrange_Grenade_shell"};
+		magazines[] = {"6Rnd_HE_M32", "6Rnd_FlareWhite_M32", "6Rnd_FlareGreen_M32", "6Rnd_FlareRed_M32", "6Rnd_FlareYellow_M32", "6Rnd_FlareCIR_M32", "6Rnd_Smoke_M32", "6Rnd_SmokeRed_M32", "6Rnd_SmokeGreen_M32", "6Rnd_SmokeYellow_M32", "6Rnd_SmokePurple_M32", "6Rnd_SmokeOrange_M32", "1Rnd_HE_Grenade_shell", "UGL_FlareWhite_F", "UGL_FlareGreen_F", "UGL_FlareRed_F", "UGL_FlareYellow_F", "UGL_FlareCIR_F", "1Rnd_Smoke_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeYellow_Grenade_shell", "1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeBlue_Grenade_shell", "1Rnd_SmokeOrange_Grenade_shell"};
 	
 	};
 };
-
+class CfgVehicles
+{
+	class WeaponHolder_Single_F;
+	class M32: WeaponHolder_Single_F
+	{
+		scope = 2;
+		curatorScope = 2;
+		model = "\A3\Weapons_F\DummyWeapon_Single.p3d";
+		mapSize = 0.4;
+		displayName = "M32";
+		vehicleClass = "WeaponsPrimary";
+		class TransportWeapons
+		{
+			class M32
+			{
+				weapon = "M32";
+				count = 1;
+			};
+		};
+		class TransportMagazines
+		{
+			class 6Rnd_HE_M32
+			{
+				magazine = "6Rnd_HE_M32";
+				count = 1;
+			};
+		};
+	};
+};
 #define magentry(mag, num)      \
 		class _xx_##mag       	\
 		{          				\
@@ -33,9 +61,9 @@ class CfgAmmo
 	class Flarecore;
 	class MEUFlare: Flarecore
 	{
-		timeToLive = 120;
+		timeToLive = 50;
 		muzzleEffect = "BIS_fnc_effectFiredRifle";
-		intensity = 80000;
+		intensity = 60000;
 	};
 	class MEU_F_40mm_White: MEUFlare
 	{
@@ -45,7 +73,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 50;
+		brightness = 30;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -58,7 +86,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 50;
+		brightness = 30;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -71,7 +99,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 50;
+		brightness = 30;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -84,7 +112,7 @@ class CfgAmmo
 		deflecting = 30;
 		smokeColor[] = {1,1,1,0.5};
 		effectFlare = "CounterMeasureFlare";
-		brightness = 50;
+		brightness = 30;
 		size = 1;
 		triggerTime = 3;
 		triggerSpeedCoef = 1;
@@ -96,6 +124,8 @@ class CfgAmmo
         indirectHit = 25;
         indirectHitRange = 5;
         caliber = 3;
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 15;
         class CamShakeHit
         {
             power = 30;
@@ -202,7 +232,7 @@ class CfgMagazines
 	};
 
 };
-	
+class Mode_SemiAuto;	
 class CfgWeapons
 {
 	class weaponslotsinfo;
@@ -217,6 +247,8 @@ class CfgWeapons
 		displayName= "M32 MGL";
 		magazines[] = {"M433_40mm_HEDP_Shell","6Rnd_HE_M32", "6Rnd_FlareWhite_M32", "6Rnd_FlareGreen_M32", "6Rnd_FlareRed_M32", "6Rnd_FlareYellow_M32", "6Rnd_FlareCIR_M32", "6Rnd_Smoke_M32", "6Rnd_SmokeRed_M32", "6Rnd_SmokeGreen_M32", "6Rnd_SmokeYellow_M32", "6Rnd_SmokePurple_M32", "6Rnd_SmokeOrange_M32", "1Rnd_HE_Grenade_shell", "UGL_FlareWhite_F", "UGL_FlareGreen_F", "UGL_FlareRed_F", "UGL_FlareYellow_F", "UGL_FlareCIR_F", "1Rnd_Smoke_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeYellow_Grenade_shell", "1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeBlue_Grenade_shell", "1Rnd_SmokeOrange_Grenade_shell"};
 		reloadTime=0.5;
+		recoil = "recoil_single_mx";
+		recoilProne = "recoil_single_prone_mx";
 		weaponinfotype = "RscWeaponZeroing";
 		discretedistance[] = {100, 200, 300, 400};
 		discretedistancecamerapoint[] = {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4"};
@@ -231,65 +263,18 @@ class CfgWeapons
 		muzzlepos = "usti granatometu";
 		reloadaction = "ReloadMagazine";
 		reloadMagazineSound[]={"m32\sounds\m32_r.wss",1,1,10};
-	    drySound[]={"A3\sounds_f\Weapons\other\sfx5",0.56234133,1,10};
+	        drySound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Rook40\dry_Rook40",0.2238721,1,20};
+		changeFiremodeSound[] = {"A3\sounds_f\dummysound",0.56234133,1,20};
 		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass = 117;
-		};
-       	muzzles[]=
-		{
-			"this"
-		};
-		changeFiremodeSound[] = {"A3\sounds_f\weapons\closure\firemode_changer_2",0.25118864,1,10};
+		{mass = 117;};
+		muzzles[]={"this"};
 		sounds[] = {"StandardSound"};
 		class StandardSound
-		{
-			weaponSoundEffect="DefaultRifle";
-			begin1[]=
 			{
-			 "m32\sounds\m32_s1.wss",1.1220185,1,200
-			};
-			soundBegin[]=
-			{
-			 "begin1",1
+   		begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.70794576,1,200};
+   		begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.70794576,1,200};
+   		soundBegin[] = {"begin1",0.5,"begin2",0.5};
 			};
 		};
-	};
-};
-
-class CfgVehicles 
-{
-	class NATO_Box_Base;
-	class M32_equipbox: NATO_Box_Base
-	{
-		scope = 2;
-		accuracy = 1000;
-		displayName = "M32 + Ammo Box";
-		model = "\A3\weapons_F\AmmoBoxes\WpnsBox_F";
-
-		class TransportItems
-		{
-			itementry(acc_flashlight, 3);
-			itementry(acc_pointer_ir, 3);
-		};
-		class TransportWeapons
-		{
-			wepentry(M32, 10);
-		};
-		class TransportMagazines
-		{
-			magentry(6Rnd_HE_M32, 5);
-			magentry(6Rnd_FlareWhite_M32, 5);
-			magentry(6Rnd_FlareGreen_M32, 5);
-			magentry(6Rnd_FlareRed_M32, 5);	
-			magentry(6Rnd_FlareYellow_M32, 5);
-			magentry(6Rnd_FlareCIR_M32, 5);
-			magentry(6Rnd_Smoke_M32, 5);
-			magentry(6Rnd_SmokeRed_M32, 5);
-			magentry(6Rnd_SmokeGreen_M32, 5);
-			magentry(6Rnd_SmokeYellow_M32, 5);
-			magentry(6Rnd_SmokePurple_M32, 5);
-			magentry(6Rnd_SmokeOrange_M32, 5);						
-		};
-	};
-};		
+};	
+	
