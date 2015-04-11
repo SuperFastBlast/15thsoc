@@ -73,6 +73,6 @@ class Stage6
 };
 class Stage7
 {
-	texture = "trixie_recon\data\env_land_optic_co.paa";
+	texture = "A3\data_F\env_land_optic_co.paa";
 	uvSource = "none";
 };

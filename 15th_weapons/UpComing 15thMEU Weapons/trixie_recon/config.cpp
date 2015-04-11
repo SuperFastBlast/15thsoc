@@ -61,7 +61,6 @@ class asdg_OpticRail;
 class asdg_OpticRail1913: asdg_OpticRail {
 };
 class Mode_SemiAuto;
-class Mode_Burst;
 class Mode_FullAuto;
 class asdg_MuzzleSlot_556;
 class ItemCore;
@@ -128,6 +127,7 @@ class CfgWeapons
 			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
 			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
 			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
+			class asdg_UnderSlot;
 			
 			class cowslot
 			{
@@ -153,9 +153,9 @@ class CfgWeapons
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_short_01",2.81838,1,1200};
-			    begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_short_02",2.81838,1,1200};
-			    begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_short_03",2.81838,1,1200};
+			    begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_01",2.81838,1,1200};
+			    begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_02",2.81838,1,1200};
+			    begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_03",2.81838,1,1200};
 			    soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
 			class SoundTails
 				{
@@ -193,9 +193,9 @@ class CfgWeapons
 			};
 	        class SilencedSound: BaseSoundModeType
             {
-       begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_short_01",1,1,400};
-    begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_short_02",1,1,400};
-    begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_short_03",1,1,400};
+       begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_01",1,1,400};
+    begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_02",1,1,400};
+    begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_03",1,1,400};
     soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 class SoundTails
 				{
