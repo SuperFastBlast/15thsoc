@@ -10,6 +10,36 @@ class CfgPatches
 		magazines[] = {"MEU_T2AAF_45ACP"};
 	};
 };
+class CfgVehicles
+{
+	class WeaponHolder_Single_F;
+	class CUP_Weapon_hgun_Colt1911: WeaponHolder_Single_F
+	{
+		author = "CUP";
+		scope = 2;
+		curatorScope = 2;
+		model = "A3\Weapons_F\DummyPistol_Single.p3d";
+		mapSize = 0.4;
+		displayName = "M1911";
+		vehicleClass = "WeaponsHandguns";
+		class TransportWeapons
+		{
+			class CUP_hgun_Colt1911
+			{
+				weapon = "CUP_hgun_Colt1911";
+				count = 1;
+			};
+		};
+		class TransportMagazines
+		{
+			class MEU_T2AAF_45ACP
+			{
+				magazine = "MEU_T2AAF_45ACP";
+				count = 1;
+			};
+		};
+	};
+};
 class CfgAmmo
 {
 	class B_9x21_Ball;
@@ -29,6 +59,10 @@ class CfgAmmo
         typicalSpeed = 251;
 	initSpeed = 251;
         airFriction = -0.0018;
+		dangerRadiusHit= -1;
+		dangerRadiusBulletClose= 15;
+		suppressionRadiusHit= 10;
+		suppressionRadiusBulletClose= 10;
    };
 };
 class CfgMagazines
@@ -47,8 +81,15 @@ class CfgMagazines
 		descriptionShort = "45 ACP rounds for M1911";
 	};
 };
+class asdg_SlotInfo;
+class asdg_FrontSideRail;
+class asdg_OpticRail;
+class asdg_OpticRail1913: asdg_OpticRail {};
 class Mode_SemiAuto;
+class Mode_FullAuto;
 class SlotInfo;
+class asdg_MuzzleSlot_556;
+class asdg_UnderSlot;
 class CfgWeapons
 {
 	class Pistol;
@@ -63,7 +104,7 @@ class CfgWeapons
 		initSpeed = 251;
 		dexterity = 1.7;
 		inertia = 0.2;
-		model = "\CUP\Weapons\CUP_Weapons_Colt1911\CUP_Colt1911.p3d";
+		model = "CUP\Weapons\CUP_Weapons_Colt1911\CUP_Colt1911.p3d";
 		picture = "\CUP\Weapons\CUP_Weapons_Colt1911\data\ui\gear_colt1911_X_ca.paa";
 		magazines[] = {"MEU_T2AAF_45ACP"};
 		displayname = "M1911";
@@ -73,56 +114,127 @@ class CfgWeapons
 			libTextDesc = "M1911 Pistol";
 		};
 		reloadTime = 0.13;
-		bullet1[] = {"A3\Sounds_F\weapons\shells\9mm\metal_9mm_01",0.5011872,1,15};
-		bullet2[] = {"A3\Sounds_F\weapons\shells\9mm\metal_9mm_02",0.5011872,1,15};
-		bullet3[] = {"A3\Sounds_F\weapons\shells\9mm\metal_9mm_03",0.5011872,1,15};
-		bullet4[] = {"A3\Sounds_F\weapons\shells\9mm\metal_9mm_04",0.5011872,1,15};
-		bullet5[] = {"A3\Sounds_F\weapons\shells\9mm\dirt_9mm_01",0.39810717,1,15};
-		bullet6[] = {"A3\Sounds_F\weapons\shells\9mm\dirt_9mm_02",0.39810717,1,15};
-		bullet7[] = {"A3\Sounds_F\weapons\shells\9mm\dirt_9mm_03",0.39810717,1,15};
-		bullet8[] = {"A3\Sounds_F\weapons\shells\9mm\dirt_9mm_04",0.39810717,1,15};
-		bullet9[] = {"A3\Sounds_F\weapons\shells\9mm\grass_9mm_01",0.2238721,1,15};
-		bullet10[] = {"A3\Sounds_F\weapons\shells\9mm\grass_9mm_02",0.2238721,1,15};
-		bullet11[] = {"A3\Sounds_F\weapons\shells\9mm\grass_9mm_03",0.2238721,1,15};
-		bullet12[] = {"A3\Sounds_F\weapons\shells\9mm\grass_9mm_04",0.2238721,1,15};
-		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
+		modes[] = {"Single"};
+		class Single: Mode_SemiAuto
+		{
 		sounds[] = {"StandardSound","SilencedSound"};
-		class BaseSoundModeType
-		{
-			weaponSoundEffect = "DefaultRifle";
-    closure1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\closure_4_Five_01",0.31622776,1,10};
-    closure2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\closure_4_Five_02",0.31622776,1.1,10};
-			soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			class BaseSoundModeType
+			{
+				closure1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\closure_4_Five_01",0.31622776,1,10};
+				closure2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\closure_4_Five_02",0.31622776,1.1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_short_01",2.5118864,1,1400};
+				begin2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_short_02",2.5118864,1,1400};
+				begin3[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_short_03",2.5118864,1,1400};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.33};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_interior",1.4125376,1,1400};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_trees",1.0,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_forest",1.0,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_meadows",1.0,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\4-Five_tail_houses",1.0,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_01",1.0,1,600};
+				begin2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_02",1.0,1,600};
+				begin3[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_short_03",1.0,1,600};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin2",0.34};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_interior",1.0,1,600};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_trees",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_forest",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_meadows",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4-Five_tail_houses",1.0,1,600};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+			};
 		};
-		class StandardSound: BaseSoundModeType
-		{
-			begin1[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\M1911_S1",0.794328,1,700};
-			begin2[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\M1911_S2",0.794328,1,700};
-			begin3[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\M1911_S3",0.794328,1,700};
-			begin4[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\M1911_S4",0.794328,1,700};
-			soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
-		};
-		class SilencedSound: BaseSoundModeType
-		{
-    begin1[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4_Five_01",1.0,1,600};
-    begin2[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4_Five_02",1.0,1,600};
-    begin3[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\Silencer_4_Five_03",1.0,1,600};
-    soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin2",0.34};
-		};
-		drySound[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\Dry",0.39810717,1,20};
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\dry_4_Five",0.39810717,1,20};
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\Reload",0.56234133,1,30};
 		recoil = "recoil_pistol_heavy";
 		recoilProne = "recoil_prone_pistol_heavy";
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 			mass = 30.5;
-			class CowsSlot{};
-			class MuzzleSlot: SlotInfo
+			class MuzzleSlot
 			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				access = 1;
+				displayName = "Muzzle SLot";
+				linkProxy = "A3\data_f\proxies\weapon_slots\MUZZLE";
 				compatibleItems[] = {"muzzle_snds_acp"};
+			};
+			class asdg_FrontSideRail_rifles: asdg_FrontSideRail{};
+			class asdg_OpticRail_rifles: asdg_OpticRail1913{};
+			class asdg_OpticRail1913_long: asdg_OpticRail1913{};
+			class asdg_UnderSlot;
+			class cowslot
+			{
+				access = 1;
+				compatibleItems[] = {};
+				displayName = "Optics Slot";
+				iconPicture = "A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.52,0.36};
+				iconScale = 0.15;
+				linkProxy = "A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
 			};
 		};
 	};
 };
-//};

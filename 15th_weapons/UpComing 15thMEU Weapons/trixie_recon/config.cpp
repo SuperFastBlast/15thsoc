@@ -153,9 +153,9 @@ class CfgWeapons
  			};
  			class StandardSound: BaseSoundModeType
  			{
-			    begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_01",2.81838,1,1200};
-			    begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_02",2.81838,1,1200};
-			    begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_03",2.81838,1,1200};
+			    begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_short_01",2.81838,1,1200};
+			    begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_short_02",2.81838,1,1200};
+			    begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_short_03",2.81838,1,1200};
 			    soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
 			class SoundTails
 				{
@@ -193,9 +193,9 @@ class CfgWeapons
 			};
 	        class SilencedSound: BaseSoundModeType
             {
-       begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_01",1,1,400};
-    begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_02",1,1,400};
-    begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_03",1,1,400};
+       begin1[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_short_06_01",1,1,400};
+    begin2[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_short_02",1,1,400};
+    begin3[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\silencer_DMR_06_short_03",1,1,400};
     soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin1",0.34};
 class SoundTails
 				{
