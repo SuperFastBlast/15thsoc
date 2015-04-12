@@ -1,0 +1,2 @@
+﻿Interior too bright (shadow issue)
+Eye point for zoomed mode needs to move back a bit.

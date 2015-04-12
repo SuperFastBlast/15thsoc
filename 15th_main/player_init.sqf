@@ -1,1 +1,0 @@
-call compile preprocessFileLineNumbers "\15th_main\lomgr\player_init.sqf";
