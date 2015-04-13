@@ -174,8 +174,8 @@ scope = 2;
 		modes[] = {"manual","close","short","medium","far"};
 		class manual: Mode_FullAuto
 		{
-			recoil = "recoil_auto_machinegun_10outof10";
-			recoilprone = "recoil_auto_machinegun_prone_7outof10";
+			recoil = "recoil_auto_primary_6outof10";
+			recoilprone = "recoil_auto_primary_prone_4outof10";
 			dispersion = 0.00101;
 			sounds[] = {"StandardSound"};
 			class BaseSoundModeType

@@ -182,8 +182,8 @@ class CfgWeapons
 		modes[] = {"manual","close","short","medium","far"};
 		class manual: Mode_FullAuto
 		{
-	    	recoil = "recoil_auto_machinegun_7outof10";
-	    	recoilprone = "recoil_auto_machinegun_prone_4outof10";
+	    	recoil = "recoil_auto_primary_5outof10";
+	    	recoilprone = "recoil_auto_primary_prone_4outof10";
 			dispersion = 0.0031;
 
 			sounds[] = {"StandardSound","SilencedSound"};
