@@ -60,9 +60,9 @@ class CfgAmmo
 		audibleFire=16; // how much can AI hear 
 		audibleFireTime=15; //how long can hear
 		dangerRadiusHit= -1;
-		dangerRadiusBulletClose= 20;
-		suppressionRadiusHit= 15;
-		suppressionRadiusBulletClose= 15;
+		dangerRadiusBulletClose= 18;
+		suppressionRadiusHit= 7;
+		suppressionRadiusBulletClose= 13;
 	};
 	class B_MEU_M62: B_762x51_Tracer_Red 
 	{
@@ -82,9 +82,9 @@ class CfgAmmo
 		tracerscale = 1;
 		tracerstarttime = 0.06;
 		dangerRadiusHit= -1;
-		dangerRadiusBulletClose= 20;
-		suppressionRadiusHit= 15;
-		suppressionRadiusBulletClose= 15;
+		dangerRadiusBulletClose= 18;
+		suppressionRadiusHit= 6;
+		suppressionRadiusBulletClose= 10;
 	};
 };
 class CfgMagazines

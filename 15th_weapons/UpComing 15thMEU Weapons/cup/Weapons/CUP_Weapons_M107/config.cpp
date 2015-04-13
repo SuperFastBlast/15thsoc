@@ -58,7 +58,7 @@ class CfgAmmo
 		muzzleEffect = "BIS_Effects_HeavySniper";
 		dangerRadiusHit= -1;
 		dangerRadiusBulletClose= 20;
-		suppressionRadiusHit= 15;
+		suppressionRadiusHit= 7;
 		suppressionRadiusBulletClose= 15;
 	};
 };

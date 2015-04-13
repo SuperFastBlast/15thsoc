@@ -60,8 +60,8 @@ class CfgAmmo
 		airFriction = -0.00715;
 		dangerRadiusHit= -1;
 		dangerRadiusBulletClose= 20;
-		suppressionRadiusHit= 15;
-		suppressionRadiusBulletClose= 15;
+		suppressionRadiusHit= 4;
+		suppressionRadiusBulletClose= 8;
 		class CamShakeFire
 		{
 			power = 3;
@@ -89,8 +89,8 @@ class CfgAmmo
 		airFriction = -0.00715;
 		dangerRadiusHit= -1;
 		dangerRadiusBulletClose= 20;
-		suppressionRadiusHit= 15;
-		suppressionRadiusBulletClose= 15;
+		suppressionRadiusHit= 4;
+		suppressionRadiusBulletClose= 8;
 		class CamShakeFire
 		{
 			power = 3;

@@ -60,9 +60,9 @@ class CfgAmmo
 	initSpeed = 251;
         airFriction = -0.0018;
 		dangerRadiusHit= -1;
-		dangerRadiusBulletClose= 15;
-		suppressionRadiusHit= 10;
-		suppressionRadiusBulletClose= 10;
+		dangerRadiusBulletClose= 12;
+		suppressionRadiusHit= 4;
+		suppressionRadiusBulletClose= 8;
    };
 };
 class CfgMagazines

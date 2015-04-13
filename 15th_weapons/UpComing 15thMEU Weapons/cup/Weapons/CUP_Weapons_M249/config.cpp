@@ -59,10 +59,10 @@ class CfgAmmo
 		visibleFireTime=18;
 		audibleFire=16;
 		audibleFireTime=10;
-		dangerRadiusHit= -1;
-		dangerRadiusBulletClose= 20;
-		suppressionRadiusHit= 15;
-		suppressionRadiusBulletClose= 15;
+		dangerRadiusBulletClose = 14;
+		dangerRadiusHit = -1;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 6;
 	};
 	class B_MEU_M8556_SAW: B_556x45_Ball_Tracer_Red 
 	{
@@ -81,10 +81,10 @@ class CfgAmmo
 		tracerendtime = 1.4;
 		tracerscale = 1;
 		tracerstarttime = 0.06;
-		dangerRadiusHit= -1;
-		dangerRadiusBulletClose= 20;
-		suppressionRadiusHit= 15;
-		suppressionRadiusBulletClose= 15;
+		dangerRadiusBulletClose = 14;
+		dangerRadiusHit = -1;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 6;
 	};
 };
 class CfgMagazines

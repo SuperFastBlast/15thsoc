@@ -79,9 +79,9 @@ class CfgAmmo
         visibleFire = 7;
         audibleFire = 5;
 		dangerRadiusHit= -1;
-		dangerRadiusBulletClose= 15;
-		suppressionRadiusHit= 10;
-		suppressionRadiusBulletClose= 10;
+		dangerRadiusBulletClose= 12;
+		suppressionRadiusHit= 4;
+		suppressionRadiusBulletClose= 8;
     };
 };
 class CfgMagazines
