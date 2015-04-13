@@ -19,7 +19,7 @@ class CfgAmmo
 	{
 		hit = 8000;
 		indirectHit = 8000;
-		indirectHitRange = 32;
+		indirectHitRange = 35;
 		model = "\CUP\Weapons\CUP_Weapons_Put\CUP_Satchel.p3d";
 		whistleDist = 40;
 		soundHit[] = {"A3\Sounds_F\weapons\Mines\mine_debris_7",5.1622777,1,1500};
@@ -29,13 +29,15 @@ class CfgAmmo
 		mineTrigger = "TimeTrigger";
 		triggerWhenDestroyed = 2;
 		defaultMagazine = "CUP_PipeBomb_M";
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 50;
 	};
 	class CUP_PipeBomb_Ammo: PipeBombBase
 	{
 		simulation = "shotPipeBomb";
 		hit = 8000;
 		indirectHit = 8000;
-		indirectHitRange = 32;
+		indirectHitRange = 35;
 		model = "\CUP\Weapons\CUP_Weapons_Put\CUP_Satchel.p3d";
 		whistleDist = 40;
 		soundHit[] = {"A3\Sounds_F\weapons\Mines\mine_debris_7",5.1622777,1,1500};
@@ -45,6 +47,8 @@ class CfgAmmo
 		mineTrigger = "RemoteTrigger";
 		triggerWhenDestroyed = 2;
 		defaultMagazine = "CUP_PipeBomb_M";
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 50;
 	};
 	class CUP_Mine_Ammo: MineBase
 	{
@@ -59,6 +63,8 @@ class CfgAmmo
 		mineInconspicuousness = 40;
 		mineTrigger = "TankTriggerMagnetic";
 		defaultMagazine = "CUP_Mine_M";
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 10;
 	};
 	class CUP_MineE_Ammo: CUP_Mine_Ammo
 	{
