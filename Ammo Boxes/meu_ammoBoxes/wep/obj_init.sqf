@@ -8,8 +8,8 @@ if (isServer) then
 	_crate addBackpackCargoGlobal ["MEF_Wood_Assault", 5];   
 	_crate addBackpackCargoGlobal ["MEF_Wood_Kitbag", 5];   
 	_crate addBackpackCargoGlobal ["B_UAV_01_backpack_F", 5];
-	_crate addBackpackCargoGlobal ["I_Mortar_01_support_F", 5];   
-	_crate addBackpackCargoGlobal ["I_Mortar_01_weapon_F", 5];
+	_crate addBackpackCargoGlobal ["O_Mortar_01_support_F", 5];   
+	_crate addBackpackCargoGlobal ["O_Mortar_01_weapon_F", 5];
 };
 
 _crate addAction ["<t color=""#01019E"">" + ("15th Loadout Manager") + "</t>","\15th_main\lomgr\gui_start.sqf"]; 

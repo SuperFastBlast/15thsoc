@@ -4,6 +4,7 @@ _crate allowDamage false;
 if (isServer) then
 {
 	_crate addBackpackCargoGlobal ["tf_rt1523g", 5];
+	_crate addBackpackCargoGlobal ["tf_rt1523g_big", 5];
 	_crate addBackpackCargoGlobal ["MEF_Wood_Assault", 5];   
 	_crate addBackpackCargoGlobal ["MEF_Wood_Kitbag", 5];    
 	_crate addBackpackCargoGlobal ["B_UAV_01_backpack_F", 5];

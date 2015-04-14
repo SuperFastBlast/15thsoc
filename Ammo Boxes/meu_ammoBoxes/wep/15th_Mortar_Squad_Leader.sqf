@@ -28,7 +28,7 @@
  _unit additem "itemRadio";
 
 
- _unit addbackpack "I_Mortar_01_support_F";
+ _unit addbackpack "O_Mortar_01_support_F";
 
 
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
@@ -51,7 +51,7 @@
 
 
  _unit addweapon "CUP_arifle_M4CAR_black";
- _unit addPrimaryWeaponItem "CUP_optic_ACOG";
+ _unit addPrimaryWeaponItem "CUP_optic_ACOG1";
  _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 
  _unit addweapon "rangefinder";

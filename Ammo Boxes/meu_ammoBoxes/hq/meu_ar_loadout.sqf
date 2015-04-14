@@ -33,7 +33,7 @@
  _unit addmagazine "MEU_200Rnd_M249_556x45_Stanag";
 
  _unit addweapon "CUP_lmg_M249";
- _unit addPrimaryWeaponItem "CUP_optic_ACOG";
+ _unit addPrimaryWeaponItem "CUP_optic_ACOG1";
  _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 
  _unit addmagazine "MEU_M882_9mm";

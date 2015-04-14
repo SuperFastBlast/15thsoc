@@ -67,7 +67,7 @@
 
 
  _unit addweapon "CUP_arifle_M4CAR_BUIS_GL";
- _unit addPrimaryWeaponItem "CUP_optic_ACOG";
+ _unit addPrimaryWeaponItem "CUP_optic_ACOG1";
  _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 
 

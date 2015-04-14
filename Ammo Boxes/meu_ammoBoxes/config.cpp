@@ -66,9 +66,9 @@ class CfgVehicles{
 				count = 25;
 				name = "optic_Hamr";
 			};
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 50;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};
 			class _xx_optic_Aco {
 				count = 25;
@@ -126,9 +126,9 @@ class CfgVehicles{
 				count = 5;
 				name = "CUP_optic_Eotech533";
 			};
-			class _xx_CUP_optic_AN_PVS_10 {
+			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
-				name = "CUP_optic_AN_PVS_10";
+				name = "CUP_optic_AN_PVS_101";
 			};
 			class _xx_CUP_optic_CompM2_Black {
 				count = 5;
@@ -146,7 +146,7 @@ class CfgVehicles{
 				name = "MEF_Wood_Helmet_LWH";
 			};
 			class _xx_MEF_Boonie_Wood {
-				count = 15;
+				count = 30;
 				name = "MEF_Boonie_Wood";
 			};
 
@@ -601,6 +601,10 @@ class CfgVehicles{
 				count = 25;
 				weapon = "CUP_arifle_M4A1_BUIS_GL";
 			};
+			class _xx_CUP_lmg_M249 {
+				count = 5;
+				weapon = "CUP_lmg_M249";
+			};
 			class _xx_ej_IAR30 {
 				count = 5;
 				weapon = "ej_IAR30";
@@ -673,9 +677,9 @@ class CfgVehicles{
 				count = 5;
 				name = "acc_pointer_IR";
 			};	
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 5;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};		
 			class _xx_CUP_acc_ANPEQ_15 {
 				count = 5;
@@ -888,9 +892,9 @@ class CfgVehicles{
 				count = 15;
 				name = "acc_pointer_IR";
 			};
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 50;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};
 			class _xx_optic_acog_holo {
 				count = 10;
@@ -928,9 +932,9 @@ class CfgVehicles{
 				count = 5;
 				name = "CUP_optic_Eotech533Grey";
 			};
-			class _xx_CUP_optic_AN_PVS_10 {
+			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
-				name = "CUP_optic_AN_PVS_10";
+				name = "CUP_optic_AN_PVS_101";
 			};
 			class _xx_CUP_optic_CompM2_Black {
 				count = 5;
@@ -1359,9 +1363,9 @@ class CfgVehicles{
 				count = 5;
 				name = "acc_pointer_IR";
 			};
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 50;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};
 			class _xx_optic_acog_holo {
 				count = 5;
@@ -1379,9 +1383,9 @@ class CfgVehicles{
 				count = 5;
 				name = "CUP_optic_Eotech533";
 			};
-			class _xx_CUP_optic_CUP_optic_AN_PVS_10 {
+			class _xx_CUP_optic_CUP_optic_AN_PVS_101 {
 				count = 50;
-				name = "CUP_optic_AN_PVS_10";
+				name = "CUP_optic_AN_PVS_101";
 			};
 			class _xx_CUP_optic_CompM2_Black {
 				count = 5;
@@ -1769,9 +1773,9 @@ class CfgVehicles{
 				count = 20;
 				name = "CUP_optic_CompM4";
 			};	
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 20;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};	
 			class _xx_CUP_acc_ANPEQ_15 {
 				count = 20;
@@ -1781,9 +1785,9 @@ class CfgVehicles{
 				count = 20;
 				name = "CUP_optic_Eotech533";
 			};
-			class _xx_CUP_optic_AN_PVS_10 {
+			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
-				name = "CUP_optic_AN_PVS_10";
+				name = "CUP_optic_AN_PVS_101";
 			};
 			class _xx_CUP_optic_CompM2_Black {
 				count = 20;
@@ -2338,9 +2342,9 @@ class CfgVehicles{
 				count = 15;
 				name = "acc_flashlight";
 			};			
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 15;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};
 			class _xx_NVGoggles_OPFOR {
 				count = 15;
@@ -2483,9 +2487,9 @@ class CfgVehicles{
 				count = 5;
 				name = "acc_pointer_IR";
 			};	
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 5;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};
 			class _xx_CUP_optic_LeupoldMk4 {
 				count = 25;
@@ -2511,9 +2515,9 @@ class CfgVehicles{
 				count = 5;
 				name = "CUP_optic_Eotech533";
 			};
-			class _xx_CUP_optic_AN_PVS_10 {
+			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
-				name = "CUP_optic_AN_PVS_10";
+				name = "CUP_optic_AN_PVS_101";
 			};
 			class _xx_CUP_optic_CompM2_Black {
 				count = 5;
@@ -3148,9 +3152,9 @@ class CfgVehicles{
 				count = 20;
 				name = "optic_nvs";
 			};
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 20;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};
 			class _xx_CUP_optic_CompM4 {
 				count = 20;
@@ -3172,9 +3176,9 @@ class CfgVehicles{
 				count = 5;
 				name = "optic_tws";
 			};
-			class _xx_CUP_optic_AN_PVS_10 {
+			class _xx_CUP_optic_AN_PVS_101 {
 				count = 40;
-				name = "CUP_optic_AN_PVS_10";
+				name = "CUP_optic_AN_PVS_101";
 			};
 			class _xx_acc_pointer_IR {
 				count = 20;
@@ -3607,17 +3611,17 @@ class CfgVehicles{
 				count = 12;
 				name = "CUP_acc_ANPEQ_15";
 			};
-			class _xx_CUP_optic_ACOG {
+			class _xx_CUP_optic_ACOG1 {
 				count = 15;
-				name = "CUP_optic_ACOG";
+				name = "CUP_optic_ACOG1";
 			};
 			class _xx_CUP_optic_Eotech533 {
 				count = 10;
 				name = "CUP_optic_Eotech533";
 			};
-			class _xx_CUP_optic_AN_PVS_10 {
+			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
-				name = "CUP_optic_AN_PVS_10";
+				name = "CUP_optic_AN_PVS_101";
 			};
 // GOGGLES
 			class _xx_NVGoggles_OPFOR {
