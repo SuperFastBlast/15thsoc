@@ -1,3 +1,4 @@
+#include "script_macros.hpp"
 
 class CfgPatches
 {
@@ -2988,23 +2989,30 @@ class CfgVehicles{
 		transportMaxitems = 9999;
 		SLX_XEH_DISABLED = 0;
 		scope = 0;
-		class TransportItems {
-		
+		class TransportItems {	
 // MEDICAL
-		    class _xx_AGM_Bandage  {
+			MEU_CLASS_ITEM(AGM_Bandage,25)
+			MEU_CLASS_ITEM(AGM_Epipen,25)
+		    
+			/* class _xx_AGM_Bandage  {
 			     count = 25; 
 				 name = "AGM_Bandage";
 			};
 		    class _xx_AGM_Epipen  {
 			     count = 25; 
 				 name = "AGM_Epipen";
-			};
+			}; */
 		};
 	
 	
 		class TransportMagazines {
 // EQUIPMENT
-			class _xx_Chemlight_red {
+			MEU_CLASS_MAGAZINE(Chemlight_red,3)
+			MEU_CLASS_MAGAZINE(Chemlight_blue,3)
+			MEU_CLASS_MAGAZINE(Chemlight_green,3)
+			
+			
+			/* class _xx_Chemlight_red {
 				count = 3;
 				magazine = "Chemlight_red";
 			};
@@ -3015,21 +3023,32 @@ class CfgVehicles{
 			class _xx_Chemlight_ {
 				count = 3;
 				magazine = "Chemlight_green";
-			};
+			}; */
 		
 // AMMO
-
-			class _xx_MEU_30Rnd_M855A1_556x45_Stanag {
+			MEU_CLASS_MAGAZINE(MEU_30Rnd_M855A1_556x45_Stanag,50)
+			MEU_CLASS_MAGAZINE(MEU_200Rnd_M249_556x45_Stanag,6)
+			
+			/* class _xx_MEU_30Rnd_M855A1_556x45_Stanag {
 				count = 50;
 				magazine = "MEU_30Rnd_M855A1_556x45_Stanag";
 			};
 			class _xx_MEU_200Rnd_M249_556x45_Stanag {
 				count = 6;
 				magazine = "MEU_200Rnd_M249_556x45_Stanag";
-			};
+			}; */
 			
 // GRENADE, SMOKE, M203
-			class _xx_HandGrenade {
+			MEU_CLASS_MAGAZINE(HandGrenade,6)
+			MEU_CLASS_MAGAZINE(AGM_M84,6)
+			MEU_CLASS_MAGAZINE(SmokeShell,18)
+			MEU_CLASS_MAGAZINE(SmokeShellPurple,2)
+			MEU_CLASS_MAGAZINE(SmokeShellBlue,2)
+			MEU_CLASS_MAGAZINE(SmokeShellRed,6)
+			MEU_CLASS_MAGAZINE(SmokeShellGreen,12)
+			MEU_CLASS_MAGAZINE(M433_40mm_HEDP_Shell,12)
+						
+			/* class _xx_HandGrenade {
 				count = 6;
 				magazine = "HandGrenade";
 			};
@@ -3060,15 +3079,17 @@ class CfgVehicles{
 			class _xx_M433_40mm_HEDP_Shell {
 				count = 12;
 				magazine = "M433_40mm_HEDP_Shell";
-			};
+			}; */
 		};
 		
 		class TransportWeapons {
-	
-			class _xx_meu_AT4 {
+			
+			MEU_CLASS_WEAPON(meu_AT4,3)
+			
+			/* class _xx_meu_AT4 {
 				count = 3;
 				weapon = "meu_AT4";
-			};
+			}; */
 		};
 	};
 	class Box_NATO_AmmoVeh_F;
@@ -3083,39 +3104,50 @@ class CfgVehicles{
 			class clearCargo
 			{
 				userActionID = 50;
-				displayName = "<t color=""#99FF00"">Clear Cargo</t>";
+				//displayName = "<t color=""#99FF00"">Clear Cargo</t>";
+				displayName = MEU_GREEN_NAME(Clear Cargo);
 				displayNameDefault = "";
 				position = "mph_axis";
 				radius = 10;
 				animPeriod = 2;
 				onlyForplayer = 1;
 				condition = "(alive this) && (driver (vehicle player) == player) && (vehicle player in vehicles)";
-				statement = "[player,0,true,true] call meu_fnc_vehicleLoadout;";
+				statement = "[player,[],true,true] call meu_fnc_vehicleLoadout;";
 			};
 			class rifle: clearCargo
 			{
-				displayName = "<t color=""#FF0000"">Rifle Loadout</t>";
-				statement = "[player,1,false,true] call meu_fnc_vehicleLoadout;";
+				//displayName = "<t color=""#FF0000"">Rifle Loadout</t>";
+				//statement = "[player,1,false,true] call meu_fnc_vehicleLoadout;";
+				displayName = MEU_RED_NAME(Rifle Loadout);
+				statement = MEU_VICLOADOUT(infantry_rifle.sqf);
 			};
 			class weapons: clearCargo
 			{
-				displayName = "<t color=""#FF0000"">Weapons Loadout</t>";
-				statement = "[player,2,false,true] call meu_fnc_vehicleLoadout;";
+				//displayName = "<t color=""#FF0000"">Weapons Loadout</t>";
+				//statement = "[player,2,false,true] call meu_fnc_vehicleLoadout;";
+				displayName = MEU_RED_NAME(Weapons Loadout);
+				statement = MEU_VICLOADOUT(infantry_mg.sqf);
 			};
 			class assault: clearCargo
 			{
-				displayName = "<t color=""#FF0000"">Assault Loadout</t>";
-				statement = "[player,3,false,true] call meu_fnc_vehicleLoadout;";
+				//displayName = "<t color=""#FF0000"">Assault Loadout</t>";
+				//statement = "[player,3,false,true] call meu_fnc_vehicleLoadout;";
+				displayName = MEU_RED_NAME(Assault Loadout);
+				statement = MEU_VICLOADOUT(infantry_assault.sqf);
 			};
 			class bas: clearCargo
 			{
-				displayName = "<t color=""#FF0000"">Medical Loadout</t>";
-				statement = "[player,4,false,true] call meu_fnc_vehicleLoadout;";
+				//displayName = "<t color=""#FF0000"">Medical Loadout</t>";
+				//statement = "[player,4,false,true] call meu_fnc_vehicleLoadout;";
+				displayName = MEU_RED_NAME(Medical Loadout);
+				statement = MEU_VICLOADOUT(bas.sqf);
 			};
 			class marauder: clearCargo
 			{
-				displayName = "<t color=""#FF0000"">Marauder Loadout</t>";
-				statement = "[player,5,false,true] call meu_fnc_vehicleLoadout;";
+				//displayName = "<t color=""#FF0000"">Marauder Loadout</t>";
+				//statement = "[player,5,false,true] call meu_fnc_vehicleLoadout;";
+				displayName = MEU_RED_NAME(Marauder Loadout);
+				statement = MEU_VICLOADOUT(marauder.sqf);
 			};
 		};
 	};
@@ -4074,7 +4106,7 @@ class CfgFunctions
 		{
 			class vehicleLoadout
 			{
-				file = "\meu_ammoBoxes\vehicle\functions\fnc_vehicleLoadout.sqf";
+				file = "\meu_ammoBoxes\vehicle\functions\fn_vehicleLoadout.sqf";
 			};
 		};
 };
