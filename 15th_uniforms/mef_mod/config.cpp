@@ -3,9 +3,9 @@ class CfgPatches
 {
     class mef_mod
     {
-        units[] = {"MEF_WMARPAT_TAN_LS_RM","MEF_WMARPAT_TAN_RS_RM","MEF_DMARPAT_LS_RM","MEF_DMARPAT_OD_LS_RM","MEF_DMARPAT_TAN_LS_RM","MEF_DMARPAT_RS_RM","MEF_DMARPAT_OD_RS_RM","MEF_DMARPAT_TAN_RS_RM","MEF_DMARPAT_LS_BA","MEF_DMARPAT_LS_BR","MEF_DMARPAT_LS_BT","MEF_DMARPAT_LS_BS","MEF_WMARPAT_LS_BA","MEF_WMARPAT_LS_BR","MEF_WMARPAT_LS_BT","MEF_WMARPAT_LS_BS","MEF_WMARPAT_LS","MEF_WMARPAT_LS_MG","MEF_WMARPAT_LS_MO","MEF_WMARPAT_LS_AS","MEF_WMARPAT_LS_AT","MEF_WMARPAT_LS_UL","MEF_WMARPAT_RS","MEF_WMARPAT_RS_MG","MEF_WMARPAT_RS_MO","MEF_WMARPAT_RS_AS","MEF_WMARPAT_RS_AT","MEF_WMARPAT_RS_UL","MEF_WMARPAT_TS","MEF_WMARPAT_TS_MG","MEF_WMARPAT_TS_MO","MEF_WMARPAT_TS_AS","MEF_WMARPAT_TS_AT","MEF_WMARPAT_TS_UL","MEF_WMARPAT_LS_HA","MEF_WMARPAT_LS_HM","MEF_DMARPAT_LS_TC","MEF_DMARPAT_LS_TO","MEF_DMARPAT_LS_MM","MEF_DMARPAT_LS_IA","MEF_DMARPAT_LS_ML","MEF_DMARPAT_LS_UL","MEF_DMARPAT_RS","MEF_DMARPAT_RS_TO","MEF_DMARPAT_RS_MM","MEF_DMARPAT_RS_IA","MEF_DMARPAT_RS_ML","MEF_DMARPAT_RS_UL","MEF_DMARPAT_TS",
-"MEF_DMARPAT_TS_TO","MEF_DMARPAT_TS_MM","MEF_DMARPAT_TS_IA","MEF_DMARPAT_TS_ML","MEF_DMARPAT_TS_UL","MEF_WMARPAT_LS_RM","MEF_WMARPAT_OD_LS_RM","MEF_WMARPAT_LS_DV","MEF_WMARPAT_RS_RM","MEF_WMARPAT_OD_RS_RM","MEF_DMARPAT_LS_DV","MEF_IN_WMARPAT_LS","MEF_IN_WMARPAT_RS","MEF_IN_DMARPAT_LS","MEF_IN_DMARPAT_RS","MEF_WMARPAT_LS_RL_RH","MEF_WMARPAT_LS_BA_RH","MEF_WMARPAT_LS_BR_RH","MEF_WMARPAT_LS_BT_RH","MEF_WMARPAT_LS_BS_RH","MEF_DMARPAT_LS_RL_RH","MEF_DMARPAT_LS_BA_RH","MEF_DMARPAT_LS_BR_RH","MEF_DMARPAT_LS_BT_RH","MEF_DMARPAT_LS_BS_RH","MEF_USMC_Huron","MEF_USMC_Ghosthawk","MEF_USMC_Pawnee","MEF_USMC_Hummingbird","MEF_USMC_Blackfoot"};
-        weapons[] = {"MEF_Wood_MARPAT_LS","MEF_Desert_MARPAT_LS","MEF_Vest_Tan_Infantry","MEF_Vest_Tan_Armor","MEF_Vest_Tan_Medical","MEF_Woodland_Helmet_MICH","MEF_Desert_Helmet_MICH"};
+        units[] = {"MEF_TAN_F_Pilot","MEF_TAN_H_Pilot","MEF_OD_F_Pilot","MEF_IN_SNOW_LS","MEF_S_LS_Rpr","MEF_S_LS_HC","MEF_S_LS_Exp2","MEF_S_LS_Exp","MEF_USMC_Huron","MEF_IN_DMARPAT_RS","MEF_D_LS_Rpr","MEF_D_LS_HC","MEF_D_LS_Exp2","MEF_D_LS_Exp","MEF_IN_DMARPAT_LS","MEF_IN_WMARPAT_RS","MEF_W_LS_Rpr","MEF_W_LS_HC","MEF_W_LS_Exp2","MEF_W_LS_Exp","MEF_IN_WMARPAT_LS","MEF_WMARPAT_LS","MEF_WMARPAT_RS","MEF_WMARPAT_TS","MEF_DMARPAT_LS","MEF_DMARPAT_RS","MEF_DMARPAT_TS",
+"MEF_RECON_WBLK","MEF_RECON_WBLK_RS","MEF_RECON_WOD","MEF_RECON_WOD_RS","MEF_RECON_WTAN","MEF_RECON_WTAN_RS","MEF_RECON_WDIV","MEF_RECON_DBLK","MEF_RECON_DBLK_RS","MEF_RECON_DOD","MEF_RECON_DOD_RS","MEF_RECON_DTAN","MEF_RECON_DTAN_RS","MEF_RECON_DDIV"};
+        weapons[] = {"MEF_TAN_HP_Uni","MEF_TAN_F_SUIT","MEF_OD_F_SUIT","MEF_Vest_Tan_v2_Infantry","MEF_Snow_Goggles_Helmet_LWH","MEF_Snow_Helmet_LWH","MEF_Wood_MARPAT_TS","MEF_Wood_MARPAT_RS","MEF_Wood_MARPAT_LS","MEF_Desert_MARPAT_TS","MEF_Desert_MARPAT_RS","MEF_Desert_MARPAT_LS","MEF_DBLK_RS","MEF_DBLK","MEF_WBLK_RS","MEF_WBLK","MEF_DOD_RS","MEF_DOD","MEF_WOD_RS","MEF_WOD","MEF_DTAN_RS","MEF_DTAN","MEF_WTAN_RS","MEF_WTAN","MEF_DDIV","MEF_WDIV","MEF_Wood_IN_MARPAT_RS","MEF_Wood_IN_MARPAT_LS","MEF_Des_IN_MARPAT_LS","MEF_Des_IN_MARPAT_RS","MEF_Vest_Tan_Medical","MEF_Vest_Tan_Medical_L","MEF_Vest_Tan_Infantry","MEF_Vest_Tan_Infantry_L","MEF_Vest_Tan_Armor","MEF_Vest_Tan_Armor_L","MEF_Tan_Range_Belt","MEF_Desert_Helmet_MICH","MEF_woodland_Helmet_MICH","MEF_Boonie_Wood","MEF_Boonie_Des","MEF_Woodland_8Point","MEF_Desert_8Point","MEF_Wood_Goggles_Helmet_LWH","MEF_Wood_Helmet_LWH","MEF_Desert_Goggles_Helmet_LWH","MEF_Desert_Helmet_LWH"};
 	author[] = {"Mattastic"};
         requiredVersion = 0.1;
         requiredAddons[] = {"A3_Characters_F_BLUFOR","A3_Characters_F","A3_Weapons_F_Ammoboxes","A3_Air_F_Heli_Heli_Transport_03","A3_Air_F"};
@@ -16,68 +16,54 @@ class UniformSlotInfo
 	slotType = 0;
 	linkProxy = "-";
 };
-//////////Marine Expeditionary Force//////////
+//////////Marine Expeditionary Unit//////////
 class CfgFactionClasses 
 {
-	class MEF 
+	class MEF
 	{
-		displayName = "Marine Expeditionary Force";
-		icon = "\mef_mod\mef_icon.paa";	
+		displayName = "15th MEU";
+		icon = "\mef_mod\15thintro.paa";	
 		priority = 1;
 		side = 1;
 	};
 };
-//////////Marine Expeditionary Force Unit Types//////////
+//////////Marine Expeditionary Unit Types//////////
 class CfgVehicleClasses 
 {
 	class MEF_A3_Units_1 
 	{
-		displayName = "3/9 Marines [WOOD]";
+		displayName = "2/4 Marines [WOOD]";
 	};
-	class MEF_A3_Units_2 
+	class MEF_A3_Units_2
 	{
-		displayName = "2nd Medical Btn [WOOD]";
+		displayName = "2/4 Marines [DESERT]";
 	};
 	class MEF_A3_Units_3
 	{
-		displayName = "3/9 Marines [DESERT]";
+		displayName = "ACE Personnel";
 	};
 	class MEF_A3_Units_4
 	{
-		displayName = "Marine Aircraft Wing";
+		displayName = "2/4 Marines [SNOW]";
 	};
 	class MEF_A3_Units_5
 	{
-		displayName = "3/9 Marines II [WOOD]";
+		displayName = "MEF Tieovers [WOOD]";
 	};
 	class MEF_A3_Units_6
 	{
-		displayName = "3/9 Marines II [DESERT]";
-	};
-	class MEF_A3_Units_9
-	{
-		displayName = "Infantry Billets [WOOD]";
-	};
-	class MEF_A3_Units_10
-	{
-		displayName = "Infantry Billets [DESERT]";
-	};
-	class MEF_A3_Units_11
-	{
-		displayName = "2nd Recon Btn [WOOD]";
-	};
-	class MEF_A3_Units_12
-	{
-		displayName = "2nd Recon Btn [DESERT]";
+		displayName = "MEF Tieovers [DESERT]";
 	};
 };
 class CfgVehicles
 {
-//////////3rd Battalion 9th Marines Woodland//////////
+//////////2rd Battalion 4th Marines Woodland//////////
 	class B_soldier_exp_F;
 	class B_Soldier_base_F;
 	class B_Soldier_02_f;
 	class B_Soldier_03_f;
+	class B_soldier_repair_F;
+	class B_Helipilot_F;
 	class B_medic_F;
 	class B_Soldier_A_F;
 	class B_Soldier_TL_F;
@@ -87,15 +73,27 @@ class CfgVehicles
 	class B_AssaultPack_Base;
 	class B_TacticalPack_oli;
 	class B_Heli_Transport_03_F;
+	class b_soldier_survival_F;
 	
 				class MEF_WMARPAT_LS : B_Soldier_base_F
 				{
 					side = 1;
 					scope = 2;
-					displayName = "0311 Rifleman";
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					_generalMacro = "MEF_WMARPAT_LS";
+					displayName = "MEF NATO Uniform LS";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_1";
+					vehicleClass = "MEF_A3_Units_5";
 					backpack = "MEF_Wood_Kitbag";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
@@ -106,94 +104,15 @@ class CfgVehicles
 					uniformClass = "MEF_Wood_MARPAT_LS";
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_LS_MG : MEF_WMARPAT_LS
-				{
-					_generalMacro = "MEF_WMARPAT_LS";
-					attendant = true;
-					displayName = "0331 Machine Gunner";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_LS_MO : MEF_WMARPAT_LS_MG
-				{
-					_generalMacro = "MEF_WMARPAT_LS";
-					attendant = true;
-					displayName = "0341 Mortarman";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_LS_AS : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					_generalMacro = "MEF_WMARPAT_LS";
-					attendant = true;
-					displayName = "0351 Infantry Assaultman";
-					vehicleClass = "MEF_A3_Units_1";
-					faction = "MEF";
-					canDeactivateMines = 1;
-					detectSkill = 80;
-					icon = "iconManExplosive";
-					picture = "pictureExplosive";
-					nakedUniform = "U_BasicBody";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Wood_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};	
-				};
-				class MEF_WMARPAT_LS_AT : MEF_WMARPAT_LS_AS
-				{
-					_generalMacro = "MEF_WMARPAT_LS";
-					attendant = true;
-					displayName = "0352 Antitank Missileman";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_LS_UL : MEF_WMARPAT_LS_AT
-				{
-					_generalMacro = "MEF_WMARPAT_LS";
-					attendant = true;
-					displayName = "0369 Unit Leader";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
 				};
 /////////////////ROLLED SHIRT///////////////////////
 				class MEF_WMARPAT_RS : B_Soldier_03_f
 				{
 					side = 1;
 					scope = 2;
-					displayName = "0311 Rifleman RS";
-					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_1";
-					backpack = "MEF_Wood_Kitbag";
+					_generalMacro = "MEF_WMARPAT_RS";
+					displayName = "MEF NATO Uniform RS";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
 					magazines[] = {};
@@ -203,92 +122,15 @@ class CfgVehicles
 					uniformClass = "MEF_Wood_MARPAT_RS";
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_RS_MG : MEF_WMARPAT_RS
-				{
-					_generalMacro = "MEF_WMARPAT_RS";
-					attendant = true;
-					displayName = "0331 Machine Gunner RS";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_RS_MO : MEF_WMARPAT_RS_MG
-				{
-					_generalMacro = "MEF_WMARPAT_RS";
-					attendant = true;
-					displayName = "0341 Mortarman RS";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_RS_AS : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					_generalMacro = "MEF_WMARPAT_RS";
-					faction = "MEF";
-					vehicleClass = "MEF_A3_Units_1";
-					nakedUniform = "U_BasicBody"
-					attendant = true;
-					displayName = "0351 Infantry Assaultman RS";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Wood_MARPAT_RS";
-					icon = "iconManExplosive";
-					picture = "pictureExplosive";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_RS_AT : MEF_WMARPAT_RS_AS
-				{
-					_generalMacro = "MEF_WMARPAT_RS";
-					attendant = true;
-					displayName = "0352 Antitank Missileman RS";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_RS_UL : MEF_WMARPAT_RS_AT
-				{
-					_generalMacro = "MEF_WMARPAT_RS";
-					attendant = true;
-					displayName = "0369 Unit Leader RS";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
 				};
 ////////////////TEE SHIRT//////////////////
 				class MEF_WMARPAT_TS : B_soldier_AR_F
 				{
 					side = 1;
 					scope = 2;
-					displayName = "0311 Rifleman TS";
-					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_1";
-					backpack = "MEF_Wood_Kitbag";
+					_generalMacro = "MEF_WMARPAT_TS";
+					displayName = "MEF NATO Uniform TS";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
 					magazines[] = {};
@@ -299,121 +141,24 @@ class CfgVehicles
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
 				};
-				class MEF_WMARPAT_TS_MG : MEF_WMARPAT_TS
-				{
-					_generalMacro = "MEF_WMARPAT_TS";
-					attendant = true;
-					displayName = "0331 Machine Gunner TS";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_TS_MO : MEF_WMARPAT_TS_MG
-				{
-					_generalMacro = "MEF_WMARPAT_TS";
-					attendant = true;
-					displayName = "0341 Mortarman TS";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","optic_Hamr","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","optic_Hamr","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_TS_AS : MEF_WMARPAT_TS_MO
-				{
-					_generalMacro = "MEF_WMARPAT_TS";
-					attendant = true;
-					displayName = "0351 Infantry Assaultman TS";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_TS_AT : MEF_WMARPAT_TS_AS
-				{
-					_generalMacro = "MEF_WMARPAT_TS";
-					attendant = true;
-					displayName = "0352 Antitank Missileman TS";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_WMARPAT_TS_UL : MEF_WMARPAT_TS_AT
-				{
-					_generalMacro = "MEF_WMARPAT_TS";
-					attendant = true;
-					displayName = "0369 Unit Leader TS";
-					backpack = "MEF_Wood_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-//////////2nd Medical Battalion Woodland//////////
-				class MEF_WMARPAT_LS_HA : B_medic_F
-				{
-		class SpeechVariants
-		{
-			class Default
-			{
-				speechSingular[] = {"veh_infantry_medic_s"};
-				speechPlural[] = {"veh_infantry_medic_p"};
-			};
-		};
-					textSingular = "$STR_A3_nameSound_veh_infantry_medic_s";
-					textPlural = "$STR_A3_nameSound_veh_infantry_medic_p";
-					nameSound = "veh_infantry_medic_s";
-					side = 1;
-					_generalMacro = "B_medic_F";
-					scope = 2;
-					displayName = "HM-8404 FMS Technician";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_2";
-					icon = "iconManMedic";
-					backpack = "MEF_Wood_Tactical";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Medical","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Medical","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Wood_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
-					picture = "pictureHeal";
-				};
-				class MEF_WMARPAT_LS_HM : MEF_WMARPAT_LS_HA
-				{
-					_generalMacro = "MEF_WMARPAT_LS_HA";
-					attendant = true;
-					displayName = "HM-8404 Desert MARPAT";
-				};
 //////////3rd Battalion 9th Marines Desert//////////
-				class MEF_DMARPAT_LS_TC : B_Soldier_A_F
+				class MEF_DMARPAT_LS : B_Soldier_A_F
 				{
-					side = 1;
-					_generalMacro = "B_Soldier_A_F;";
-					scope = 2;
-					displayName = "0311 Rifleman";
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					_generalMacro = "MEF_DMARPAT_LS";
+					displayName = "MEF NATO Uniform LS";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_3";
+					vehicleClass = "MEF_A3_Units_6";
 					backpack = "MEF_Des_Kitbag";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
@@ -424,93 +169,15 @@ class CfgVehicles
 					uniformClass = "MEF_Desert_MARPAT_LS";
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_LS_TO : MEF_DMARPAT_LS_TC
-				{
-					_generalMacro = "MEF_DMARPAT_LS_TC";
-					attendant = true;
-					displayName = "0331 Machine Gunner";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_LS_MM : MEF_DMARPAT_LS_TO
-				{
-					_generalMacro = "MEF_DMARPAT_LS";
-					attendant = true;
-					displayName = "0341 Mortarman";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_LS_IA : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					_generalMacro = "MEF_DMARPAT_LS";
-					attendant = true;
-					displayName = "0351 Infantry Assaultman";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_3";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Desert_MARPAT_LS";
-					icon = "iconManExplosive";
-					picture = "pictureExplosive";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_LS_ML : MEF_DMARPAT_LS_IA
-				{
-					_generalMacro = "MEF_DMARPAT_LS";
-					attendant = true;
-					displayName = "0352 Antitank Missileman";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_LS_UL : MEF_DMARPAT_LS_ML
-				{
-					_generalMacro = "MEF_DMARPAT_LS";
-					attendant = true;
-					displayName = "0369 Unit Leader";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
 				};
 /////////////////ROLLED SHIRT///////////////////////
 				class MEF_DMARPAT_RS : B_Soldier_TL_F
 				{
 					side = 1;
-					_generalMacro = "B_Soldier_TL_F;";
 					scope = 2;
-					displayName = "0311 Rifleman RS";
-					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_3";
-					backpack = "MEF_Des_Kitbag";
+					_generalMacro = "MEF_DMARPAT_RS";
+					displayName = "MEF NATO Uniform RS";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
 					magazines[] = {};
@@ -520,93 +187,15 @@ class CfgVehicles
 					uniformClass = "MEF_Desert_MARPAT_RS";
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_RS_TO : MEF_DMARPAT_RS
-				{
-					_generalMacro = "MEF_DMARPAT_RS";
-					attendant = true;
-					displayName = "0331 Machine Gunner RS";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_RS_MM : MEF_DMARPAT_RS_TO
-				{
-					_generalMacro = "MEF_DMARPAT_RS";
-					attendant = true;
-					displayName = "0341 Mortarman RS";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_RS_IA : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					_generalMacro = "MEF_DMARPAT_RS";
-					attendant = true;
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_3";
-					displayName = "0351 Infantry Assaultman RS";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					icon = "iconManExplosive";
-					picture = "pictureExplosive";
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Desert_MARPAT_RS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_RS_ML : MEF_DMARPAT_RS_IA
-				{
-					_generalMacro = "MEF_DMARPAT_RS";
-					attendant = true;
-					displayName = "0352 Antitank Missileman RS";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_RS_UL : MEF_DMARPAT_RS_ML
-				{
-					_generalMacro = "MEF_DMARPAT_RS";
-					attendant = true;
-					displayName = "0369 Unit Leader RS";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
 				};
 ////////////////TEE SHIRT//////////////////
 				class MEF_DMARPAT_TS : B_soldier_AR_F
 				{
 					side = 1;
-					_generalMacro = "B_soldier_AR_F;";
 					scope = 2;
-					displayName = "0311 Rifleman TS";
-					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_3";
-					backpack = "MEF_Des_Kitbag";
+					_generalMacro = "MEF_DMARPAT_TS";
+					displayName = "MEF NATO Uniform TS";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
 					magazines[] = {};
@@ -617,574 +206,1115 @@ class CfgVehicles
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
 				};
-				class MEF_DMARPAT_TS_TO : MEF_DMARPAT_TS
+////////////////RECON UNIFORMS//////////////////
+///////////////WOOD////////////////////////////
+				class MEF_RECON_WBLK : B_Soldier_base_F
 				{
-					_generalMacro = "MEF_DMARPAT_TS";
-					attendant = true;
-					displayName = "0331 Machine Gunner TS";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_TS_MM : MEF_DMARPAT_TS_TO
-				{
-					_generalMacro = "MEF_DMARPAT_TS";
-					attendant = true;
-					displayName = "0341 Mortarman TS";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_TS_IA : MEF_DMARPAT_TS_MM
-				{
-					_generalMacro = "MEF_DMARPAT_TS";
-					attendant = true;
-					displayName = "0351 Infantry Assaultman TS";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_TS_ML : MEF_DMARPAT_TS_IA
-				{
-					_generalMacro = "MEF_DMARPAT_TS";
-					attendant = true;
-					displayName = "0352 Antitank Missileman TS";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-				class MEF_DMARPAT_TS_UL : MEF_DMARPAT_TS_ML
-				{
-					_generalMacro = "MEF_DMARPAT_TS";
-					attendant = true;
-					displayName = "0369 Unit Leader TS";
-					backpack = "MEF_Des_Carryall";
-					weapons[] = {"Throw","Put"};
-					respawnweapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-				};
-//////////////////////////2nd Recon Battalion Woodland////////////////////////////////////////////////
-				class MEF_WMARPAT_LS_RM : B_soldier_exp_F
-				{
+					canHideBodies = true;
 					side = 1;
 					scope = 2;
-					displayName = "0321 Recon Man [BLK]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_11";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Wood_MARPAT_RM_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_blk_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_OD_LS_RM : B_soldier_exp_F
-				{
-					scope = 2;
-					side = 1;
-					displayName = "0321 Recon Man [OD]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_11";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_OD_WMARPAT_RM_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_od_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_TAN_LS_RM : B_soldier_exp_F
-				{
-					scope = 2;
-					side = 1;
-					displayName = "0321 Recon Man [TAN]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_11";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_TAN_WMARPAT_RM_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_tan_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_LS_DV : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0324 Recon Man [Diver]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_11";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"H_Watchcap_blk","V_RebreatherB","G_Diving","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"H_Watchcap_blk","V_RebreatherB","G_Diving","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Wood_MARPAT_RM_DV";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_blk_wmarpat_co.paa"};
-				};
-/////////////////ROLLED SHIRT///////////////////////
-				class MEF_WMARPAT_RS_RM : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0321 Recon Man RS [BLK]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_11";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Wood_MARPAT_RM_RS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_blk_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_OD_RS_RM : B_soldier_exp_F
-				{
-					scope = 2;
-					side = 1;
-					displayName = "0321 Recon Man RS [OD]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_11";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_OD_WMARPAT_RM_RS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_od_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_TAN_RS_RM : B_soldier_exp_F
-				{
-					scope = 2;
-					side = 1;
-					displayName = "0321 Recon Man RS [TAN]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_11";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_TAN_WMARPAT_RM_RS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_tan_wmarpat_co.paa"};
-				};
-//////////////////////////2nd Recon Battalion Desert////////////////////////////////////////////////
-				class MEF_DMARPAT_LS_RM : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0321 Recon Man [BLK]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_12";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Des_MARPAT_RM_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_blk_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_OD_LS_RM : B_soldier_exp_F
-				{
-					scope = 2;
-					side = 1;
-					displayName = "0321 Recon Man [OD]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_12";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_OD_DMARPAT_RM_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_od_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_TAN_LS_RM : B_soldier_exp_F
-				{
-					scope = 2;
-					side = 1;
-					displayName = "0321 Recon Man [TAN]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_12";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_TAN_DMARPAT_RM_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_tan_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_LS_DV : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0324 Recon Man [Diver]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_12";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"H_Watchcap_blk","V_RebreatherB","G_Diving","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"H_Watchcap_blk","V_RebreatherB","G_Diving","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Desert_MARPAT_RM_DV";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-///////////////////////Rolled Sleeve///////////////////////////////////
-				class MEF_DMARPAT_RS_RM : B_soldier_exp_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0321 Recon Man RS [BLK]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_12";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};	
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Des_MARPAT_RM_RS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_blk_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_OD_RS_RM : B_soldier_exp_F
-				{
-					scope = 2;
-					side = 1;
-					displayName = "0321 Recon Man RS [OD]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_12";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_OD_DMARPAT_RM_RS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_od_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_TAN_RS_RM : B_soldier_exp_F
-				{
-					scope = 2;
-					side = 1;
-					displayName = "0321 Recon Man RS [TAN]";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_12";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_TAN_DMARPAT_RM_RS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_tan_dmarpat_co.paa"};
-				};
-////////////////////////Infantry Billets Woodland//////////////////////////////
-				class MEF_WMARPAT_LS_BA : B_Soldier_base_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0311 Auto Rifleman";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_9";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Wood_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_LS_BR : B_Soldier_base_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0311 Asst. Auto Rifleman";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_9";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Wood_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_LS_BT : B_Soldier_base_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0369 Fire Team Leader";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_9";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Wood_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
-				};
-				class MEF_WMARPAT_LS_BS : B_Soldier_base_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0369 Squad Leader";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_9";
-					backpack = "MEF_Wood_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Wood_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Wood_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
-				};
-////////////////////////Infantry Billets Desert//////////////////////////////
-				class MEF_DMARPAT_LS_BA : B_Soldier_base_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0311 Auto Rifleman";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_10";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Desert_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_LS_BR : B_Soldier_base_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0311 Asst. Auto Rifleman";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_10";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Desert_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_LS_BT : B_Soldier_base_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0369 Fire Team Leader";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_10";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Desert_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-				class MEF_DMARPAT_LS_BS : B_Soldier_base_F
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0369 Squad Leader";
-					faction = "MEF";
-					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_10";
-					backpack = "MEF_Des_Kitbag";
-					weapons[] = {"Throw","Put"};
-					respawnWeapons[] = {"Throw","Put"};
-					magazines[] = {};
-					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					respawnLinkedItems[] = {"MEF_Desert_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","NVGoggles","G_Bandanna_khk","ItemMap","ItemCompass","ItemGPS","ItemWatch","FirstAidKit","FirstAidKit"};
-					uniformClass = "MEF_Desert_MARPAT_LS";
-					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
-				};
-///////////////////////IND Variant Units//////////////////////////////
-				class MEF_IN_WMARPAT_LS : B_Soldier_02_f
-				{
-					side = 1;
-					scope = 2;
-					displayName = "0311 Rifleman [IND,Wood]";
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_WBLK";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon Black Uniform";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_5";
-					backpack = "MEF_Wood_Assault";
+					backpack = "MEF_Wood_Kitbag";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
 					magazines[] = {};
 					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Woodland_Helmet_MICH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Woodland_Helmet_MICH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_WBLK";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_blk_wmarpat_co.paa"};
+				};
+				class MEF_RECON_WBLK_RS : B_Soldier_03_f
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_WBLK_RS";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon Black Uniform RS";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_5";
+					backpack = "MEF_Wood_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_WBLK_RS";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_blk_wmarpat_co.paa"};
+				};
+				class MEF_RECON_WOD : B_Soldier_A_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_WOD";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon OD Uniform";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_5";
+					backpack = "MEF_Wood_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_WOD";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_od_wmarpat_co.paa"};
+				};
+				class MEF_RECON_WOD_RS : B_Soldier_TL_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_WOD_RS";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon OD Uniform RS";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_5";
+					backpack = "MEF_Wood_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_WOD_RS";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_od_wmarpat_co.paa"};
+				};
+				class MEF_RECON_WTAN : B_Soldier_A_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_WTAN";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon Tan Uniform";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_5";
+					backpack = "MEF_Wood_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_WTAN";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_tan_wmarpat_co.paa"};
+				};
+				class MEF_RECON_WTAN_RS : B_Soldier_03_f
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_WTAN_RS";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon Tan Uniform RS";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_5";
+					backpack = "MEF_Wood_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_WTAN_RS";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_tan_wmarpat_co.paa"};
+				};
+				class MEF_RECON_WDIV : b_soldier_survival_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_WDIV";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon Diver Uniform";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_5";
+					backpack = "MEF_Wood_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_WDIV";
+				hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_wmarpat_co.paa"};
+				};
+////////////////DESERT///////////////
+				class MEF_RECON_DBLK : B_Soldier_base_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_DBLK";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon Black Uniform";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_6";
+					backpack = "MEF_Des_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_DBLK";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_blk_dmarpat_co.paa"};
+				};
+				class MEF_RECON_DBLK_RS : B_Soldier_03_f
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_DBLK_RS";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon Black Uniform RS";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_6";
+					backpack = "MEF_Des_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_DBLK_RS";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_blk_dmarpat_co.paa"};
+				};
+				class MEF_RECON_DOD : B_Soldier_A_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_DOD";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon OD Uniform";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_6";
+					backpack = "MEF_Des_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_DOD";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_od_wmarpat_co.paa"};
+				};
+				class MEF_RECON_DOD_RS : B_Soldier_TL_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_DOD_RS";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon OD Uniform RS";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_6";
+					backpack = "MEF_Des_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_DOD_RS";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_od_dmarpat_co.paa"};
+				};
+				class MEF_RECON_DTAN : B_Soldier_A_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_DTAN";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon TAN Uniform";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_6";
+					backpack = "MEF_Des_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_DTAN";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_tan_dmarpat_co.paa"};
+				};
+				class MEF_RECON_DTAN_RS : B_Soldier_03_f
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_RECON_DTAN_RS";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon TAN Uniform RS";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_6";
+					backpack = "MEF_Des_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_DTAN_RS";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_tan_dmarpat_co.paa"};
+				};
+				class MEF_RECON_DDIV : b_soldier_survival_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_DDIV";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					displayName = "Recon Driver Uniform";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_6";
+					backpack = "MEF_Des_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_DDIV";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_dmarpat_co.paa"};
+				};
+///////////////////////IND Variant Units - What we USE in the 15th//////////////////////////////
+////////////////WOOD///////////////////
+				class MEF_IN_WMARPAT_LS : B_Soldier_base_F
+				{
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					_generalMacro = "MEF_IN_WMARPAT_LS";
+					displayName = "MEF Rifleman [LS-Wood]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_1";
+					backpack = "MEF_Wood_Assault";
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Wood_Helmet_LH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
 					uniformClass = "MEF_Wood_IN_MARPAT_LS";
 					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_u2_wm_co.paa"};
 				};
-				class MEF_IN_WMARPAT_RS : B_Soldier_02_f
+				class MEF_W_LS_Exp : MEF_IN_WMARPAT_LS
 				{
 					side = 1;
 					scope = 2;
-					displayName = "0311 Rifleman [IND,RS,Wood]";
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 3;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_W_LS_Exp";
+					displayName = " MEF Assault [LS-Wood]";
+					vehicleClass = "MEF_A3_Units_1";
+					backpack = "MEF_Wood_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+				};
+				class MEF_W_LS_Exp2 : MEF_IN_WMARPAT_LS
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_W_LS_Exp2";
+					displayName = " MEF Recon [LS-Wood]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_5";
+					vehicleClass = "MEF_A3_Units_1";
+					backpack = "MEF_Wood_Kitbag";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+				};
+				class MEF_W_LS_HC : B_medic_F
+				{
+					side = 1;
+					attendant = true;
+					_generalMacro = "MEF_W_LS_HC";
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					displayName = " MEF Hospital Corpsman (LS-Wood)";
+					faction = "MEF";
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_1";
+					icon = "iconManMedic";
+					backpack = "MEF_Wood_Carryall";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Medical","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Medical","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_MARPAT_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_u2_wm_co.paa"};
+					picture = "pictureHeal";
+				};
+				class MEF_W_LS_Rpr: B_soldier_repair_F
+				{
+					attendant = true;
+					_generalMacro = "MEF_W_LS_Rpr";
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+  					engineer = 1;
+  					detectSkill = 40;
+					displayName = "MEF Combat Engineer [LS-Wood]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_1";
 					backpack = "MEF_Wood_Assault";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
 					magazines[] = {};
 					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Woodland_Helmet_MICH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Woodland_Helmet_MICH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Wood_IN_MARPAT_RS";
+					linkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_MARPAT_LS";
 					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_u2_wm_co.paa"};
+					icon = "iconManEngineer";
+  					picture = "pictureRepair";
 				};
-				class MEF_IN_DMARPAT_LS : B_Soldier_02_f
+				class MEF_IN_WMARPAT_RS : B_Soldier_02_f
 				{
 					side = 1;
 					scope = 2;
-					displayName = "0311 Rifleman [IND,Des]";
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					_generalMacro = "MEF_IN_WMARPAT_RS";
+					displayName = "MEF Rifleman [RS-Wood]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_6";
+					vehicleClass = "MEF_A3_Units_1";
+					backpack = "MEF_Wood_Assault";
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_MARPAT_RS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_02.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_u2_wm_co.paa"};
+				};
+////////////////DESERT///////////////////
+				class MEF_IN_DMARPAT_LS : B_Soldier_base_F
+				{
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					_generalMacro = "MEF_IN_DMARPAT_LS";
+					displayName = "MEF Rifleman [LS-Des]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_2";
+					backpack = "MEF_Des_Assault";
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Des_IN_MARPAT_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
+				};
+				class MEF_D_LS_Exp : B_soldier_exp_F
+				{
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 3;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_D_LS_Exp";
+					displayName = "MEF Assault [LS-Des]";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_2";
 					backpack = "MEF_Des_Assault";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
 					magazines[] = {};
 					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Helmet_MICH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Desert_Helmet_MICH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					linkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
 					uniformClass = "MEF_Des_IN_MARPAT_LS";
-					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_02.p3d";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
 					hiddenSelections[] = {"Camo"};
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
+				};
+				class MEF_D_LS_Exp2 : B_soldier_exp_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_D_LS_Exp2";
+					displayName = "Recon [LS-Des]";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_2";
+					backpack = "MEF_Des_Assault";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Des_IN_MARPAT_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
+				};
+				class MEF_D_LS_HC : B_medic_F
+				{
+					side = 1;
+					attendant = true;
+					_generalMacro = "MEF_D_LS_HC";
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					displayName = "Hospital Corpsman (LS-Des)";
+					faction = "MEF";
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_2";
+					icon = "iconManMedic";
+					backpack = "MEF_Des_Carryall";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Des_IN_MARPAT_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
+					picture = "pictureHeal";
+				};	
+				class MEF_D_LS_Rpr: B_soldier_repair_F
+				{
+					attendant = true;
+					_generalMacro = "MEF_D_LS_Rpr";
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+  					engineer = 1;
+  					detectSkill = 40;
+					displayName = "Combat Engineer [LS-Des]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_2";
+					backpack = "MEF_Des_Assault";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Des_IN_MARPAT_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
+					icon = "iconManEngineer";
+  					picture = "pictureRepair";
 				};
 				class MEF_IN_DMARPAT_RS : B_Soldier_02_f
 				{
 					side = 1;
 					scope = 2;
-					displayName = "0311 Rifleman [IND,RS,Des]";
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					_generalMacro = "MEF_IN_DMARPAT_LS";
+					displayName = "MEF Rifleman [RS-Des]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
-					vehicleClass = "MEF_A3_Units_6";
+					vehicleClass = "MEF_A3_Units_2";
+					backpack = "MEF_Des_Assault";
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Des_IN_MARPAT_RS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_02.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
+				};
+////////////////SNOW///////////////////
+				class MEF_IN_SNOW_LS : B_Soldier_base_F
+				{
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					_generalMacro = "MEF_IN_SNOW_LS";
+					displayName = "MEF Rifleman [Snow]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_4";
+					backpack = "MEF_TAN_Assault";
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_SNOW_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\snowcamo\mef_u2_sm_co.paa"};
+				};
+				class MEF_S_LS_Exp : B_soldier_exp_F
+				{
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 3;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_S_LS_Exp";
+					displayName = "MEF Assault [Snow]";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_4";
 					backpack = "MEF_Des_Assault";
 					weapons[] = {"Throw","Put"};
 					respawnweapons[] = {"Throw","Put"};
 					magazines[] = {};
 					respawnmagazines[] = {};
-					linkedItems[] = {"MEF_Desert_Helmet_MICH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					respawnLinkedItems[] = {"MEF_Desert_Helmet_MICH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
-					uniformClass = "MEF_Des_IN_MARPAT_RS";
-					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_02.p3d";
+					linkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_SNOW_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
 					hiddenSelections[] = {"Camo"};
-					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\snowcamo\mef_u2_sm_co.paa"};
+				};
+				class MEF_S_LS_Exp2 : B_soldier_exp_F
+				{
+					canHideBodies = true;
+					side = 1;
+					scope = 2;
+					audible = .04;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 2;
+					threat[] = {1,0.2,0.05};
+					_generalMacro = "MEF_S_LS_Exp2";
+					displayName = "Recon [Snow]";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					icon = "iconManExplosive";
+					picture = "pictureExplosive";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_4";
+					backpack = "MEF_Des_Assault";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_SNOW_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\snowcamo\mef_u2_sm_co.paa"};
+				};
+				class MEF_S_LS_HC : B_medic_F
+				{
+					side = 1;
+					attendant = true;
+					_generalMacro = "MEF_S_LS_HC";
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					displayName = "Hospital Corpsman (Snow)";
+					faction = "MEF";
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_4";
+					icon = "iconManMedic";
+					backpack = "MEF_Des_Carryall";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_SNOW_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\snowcamo\mef_u2_sm_co.paa"};
+					picture = "pictureHeal";
+				};	
+				class MEF_S_LS_Rpr: B_soldier_repair_F
+				{
+					attendant = true;
+					_generalMacro = "MEF_S_LS_Rpr";
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+  					engineer = 1;
+  					detectSkill = 40;
+					displayName = "Combat Engineer [Snow]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_4";
+					backpack = "MEF_Des_Assault";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_SNOW_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\snowcamo\mef_u2_sm_co.paa"};
+					icon = "iconManEngineer";
+  					picture = "pictureRepair";
+				};
+////////////////////Pilots///////////////////////
+				class MEF_TAN_H_Pilot : B_Soldier_base_F
+				{
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {0.9,0.05,0.05};
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					displayName = "Crew Chief [Coveralls,TAN]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_3";
+					backpack = "MEF_TAN_Assault";
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"H_CrewHelmetHeli_B","V_TacVest_khk","NVGoggles","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"H_CrewHelmetHeli_B","V_TacVest_khk","NVGoggles","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_TAN_HP_Uni";
+					model = "\A3\Characters_F\Common\coveralls.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\pilot\coveralls_sand_co.paa"};
+				};
+				class MEF_OD_F_Pilot : B_Soldier_base_F
+				{
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {0.9,0.05,0.05};
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					displayName = "Pilot [Flight Suit,OD]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_3";
+					backpack = "MEF_TAN_Assault";
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"H_CrewHelmetHeli_B","V_TacVest_khk","NVGoggles","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"H_CrewHelmetHeli_B","V_TacVest_khk","NVGoggles","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_OD_F_SUIT";
+					model = "\A3\Characters_F\Common\pilot_f.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\pilot\pilot_suit_rus_co.paa"};
+				};
+				class MEF_TAN_F_Pilot : B_Soldier_base_F
+				{
+					side = 1;
+					scope = 2;
+					audible = .05;
+					accuracy = 0.25;
+					camouflage = 1.4;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {0.9,0.05,0.05};
+					canDeactivateMines = 1;
+					detectSkill = 10;
+					displayName = "Pilot [Flight Suit,TAN]";
+					faction = "MEF";
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_3";
+					backpack = "MEF_TAN_Assault";
+					weapons[] = {"Throw","Put"};
+					respawnWeapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"H_CrewHelmetHeli_B","V_TacVest_khk","NVGoggles","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"H_CrewHelmetHeli_B","V_TacVest_khk","NVGoggles","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_TAN_F_SUIT";
+					model = "\A3\Characters_F\Common\pilot_f.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\pilot\pilot_suit_tan_co.paa"};
 				};
 //////////////////MEF Backpacks////////////////////
 				class MEF_TAN_Carryall : B_Carryall_khk
@@ -1289,8 +1419,6 @@ class CfgVehicles
 					_generalMacro = "B_Heli_Transport_03_F";
 					side = 1;
 					scope = 2;
-					faction = "MEF";
-					vehicleClass = "MEF_A3_Units_4";
 					crew = "B_Helipilot_F";
 					displayName = "MEF Huron [CH-67]";
 					typicalCargo[] = {"B_Helipilot_F"};
@@ -1310,15 +1438,16 @@ class CfgGroups
 	{
 		class MEF
 		{
-			name = "MEF";
+			name = "15th MEU";
 			class Infantry
 			{
 				name = "Infantry";
 				class MEF_InfSquad
 				{
-					name = "Infantry Squad";
+					name = "[Wood] Infantry Squad";
 					side = 1;
 					faction = "MEF";
+					rarityGroup = 0.3;
 					class Unit0
 					{
 						side = 1;
@@ -1392,9 +1521,10 @@ class CfgGroups
 				};
 				class MEF_InfTeam
 				{
-					name = "Fire Team";
+					name = "[Wood] Fire Team";
 					side = 1;
 					faction = "MEF";
+					rarityGroup = 0.3;
 					class Unit0
 					{
 						side = 1;
@@ -1426,43 +1556,45 @@ class CfgGroups
 				};
 				class MEF_InfTeam_AT
 				{
-					name = "Team Anti-Tank";
+					name = "[Wood] Team Anti-Tank";
 					side = 1;
 					faction = "MEF";
+					rarityGroup = 0.3;
 					class Unit0
 					{
 						side = 1;
-						vehicle = "MEF_DMARPAT_RS_IA";
+						vehicle = "MEF_WMARPAT_LS";
 						rank = "LIEUTENANT";
 						position[] = {0,5,0};
 					};
 					class Unit1
 					{
 						side = 1;
-						vehicle = "MEF_DMARPAT_RS_IA";
+						vehicle = "MEF_WMARPAT_LS";
 						rank = "SERGEANT";
 						position[] = {3,0,0};
 					};
 					class Unit2
 					{
 						side = 1;
-						vehicle = "MEF_DMARPAT_RS_IA";
+						vehicle = "MEF_WMARPAT_LS";
 						rank = "CORPORAL";
 						position[] = {5,0,0};
 					};
 					class Unit3
 					{
 						side = 1;
-						vehicle = "MEF_DMARPAT_RS_IA";
+						vehicle = "MEF_WMARPAT_LS";
 						rank = "CORPORAL";
 						position[] = {7,0,0};
 					};
 				};
 				class MEF_InfSentry
 				{
-					name = "Security Patrol";
+					name = " [Wood] Security Patrol";
 					side = 1;
 					faction = "MEF";
+					rarityGroup = 0.3;
 					class Unit0
 					{
 						side = 1;
@@ -1494,6 +1626,7 @@ class cfgWeapons
 	class ItemCore;
     class HeadgearItem;
     class H_HelmetB;
+	class V_PlateCarrierIA1_dgtl;
 	class V_Rangemaster_belt;
 	class U_B_CombatUniform_mcam;
     
@@ -1525,7 +1658,7 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_WMARPAT_RS_MG";		
+			uniformClass = "MEF_WMARPAT_RS";		
             containerClass = "Supply60"; 
             mass = 75.5;
 			hiddenSelections[] = {"Camo"};
@@ -1542,7 +1675,7 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_WMARPAT_TS_MG";		
+			uniformClass = "MEF_WMARPAT_TS";		
             containerClass = "Supply60"; 
             mass = 75.5;
 			hiddenSelections[] = {"Camo"};
@@ -1559,7 +1692,7 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02"; 
-            uniformClass = "MEF_DMARPAT_LS_TO";
+            uniformClass = "MEF_DMARPAT_LS";
             containerClass = "Supply60"; 
             mass = 75.5;
 			hiddenSelections[] = {"Camo"};
@@ -1576,7 +1709,7 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_DMARPAT_RS_TO";		
+			uniformClass = "MEF_DMARPAT_RS";		
             containerClass = "Supply60"; 
             mass = 75.5;
 			hiddenSelections[] = {"Camo"};
@@ -1599,7 +1732,7 @@ class cfgWeapons
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_Wood_MARPAT_RM_LS : Uniform_Base
+	class MEF_WBLK : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [Black]"; 
@@ -1610,13 +1743,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-            uniformClass = "MEF_WMARPAT_LS_RM";
+            uniformClass = "MEF_RECON_WBLK";
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_Wood_MARPAT_RM_RS : Uniform_Base
+	class MEF_WBLK_RS : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [Black] RS"; 
@@ -1627,13 +1760,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_WMARPAT_RS_RM";		
+			uniformClass = "MEF_RECON_WBLK_RS";		
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_OD_WMARPAT_RM_LS : Uniform_Base
+	class MEF_WOD : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [OD]"; 
@@ -1644,13 +1777,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-            uniformClass = "MEF_WMARPAT_OD_LS_RM";
+            uniformClass = "MEF_RECON_WOD";
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_OD_WMARPAT_RM_RS : Uniform_Base
+	class MEF_WOD_RS : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [OD] RS"; 
@@ -1661,13 +1794,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_WMARPAT_OD_RS_RM";		
+			uniformClass = "MEF_RECON_WOD_RS";		
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_TAN_WMARPAT_RM_LS : Uniform_Base
+	class MEF_WTAN : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [TAN]"; 
@@ -1678,13 +1811,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-            uniformClass = "MEF_WMARPAT_TAN_LS_RM";
+            uniformClass = "MEF_RECON_WTAN";
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_TAN_WMARPAT_RM_RS : Uniform_Base
+	class MEF_WTAN_RS : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [TAN] RS"; 
@@ -1695,14 +1828,14 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_WMARPAT_TAN_RS_RM";		
+			uniformClass = "MEF_RECON_WTAN_RS";		
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
 ///////////////////////////////////////////Desert Recon
-	class MEF_Des_MARPAT_RM_LS : Uniform_Base
+	class MEF_DBLK : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [Black]"; 
@@ -1713,13 +1846,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-            uniformClass = "MEF_DMARPAT_LS_RM";
+            uniformClass = "MEF_RECON_DBLK";
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_Des_MARPAT_RM_RS : Uniform_Base
+	class MEF_DBLK_RS : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [Black] RS"; 
@@ -1730,13 +1863,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_DMARPAT_RS_RM";		
+			uniformClass = "MEF_RECON_DBLK_RS";		
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_OD_DMARPAT_RM_LS : Uniform_Base
+	class MEF_DOD : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [OD]"; 
@@ -1747,13 +1880,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-            uniformClass = "MEF_DMARPAT_OD_LS_RM";
+            uniformClass = "MEF_RECON_DOD_RS";
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_OD_DMARPAT_RM_RS : Uniform_Base
+	class MEF_DOD_RS : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [OD] RS"; 
@@ -1764,13 +1897,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_DMARPAT_OD_RS_RM";		
+			uniformClass = "MEF_RECON_DOD_RS";		
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_TAN_DMARPAT_RM_LS : Uniform_Base
+	class MEF_DTAN : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [TAN]"; 
@@ -1781,13 +1914,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-            uniformClass = "MEF_DMARPAT_TAN_LS_RM";
+            uniformClass = "MEF_RECON_DTAN";
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_TAN_DMARPAT_RM_RS : Uniform_Base
+	class MEF_DTAN_RS : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [TAN] RS"; 
@@ -1798,13 +1931,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_DMARPAT_TAN_RS_RM";		
+			uniformClass = "MEF_RECON_DTAN_RS";		
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_Wood_MARPAT_RM_DV : Uniform_Base
+	class MEF_WDIV : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [Diver]"; 
@@ -1815,13 +1948,13 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_WMARPAT_LS_DV";		
+			uniformClass = "MEF_RECON_WDIV";		
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
-	class MEF_Desert_MARPAT_RM_DV : Uniform_Base
+	class MEF_DDIV : Uniform_Base
 	{ 
         scope = 2; 
         displayName = "Combat Tactical Uniform [Diver]"; 
@@ -1832,7 +1965,7 @@ class cfgWeapons
 		
         class ItemInfo : UniformItem { 
             uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02";
-			uniformClass = "MEF_DMARPAT_LS_DV";		
+			uniformClass = "MEF_RECON_DDIV";		
             containerClass = "Supply50"; 
             mass = 30;
 			hiddenSelections[] = {"Camo"};
@@ -1903,6 +2036,74 @@ class cfgWeapons
             uniformClass = "MEF_IN_DMARPAT_RS";
             containerClass = "Supply60"; 
             mass = 75.5;
+			hiddenSelections[] = {"Camo"};
+        };
+	};
+	class MEF_Wood_IN_SNOW_LS : U_B_CombatUniform_mcam
+	{ 
+        scope = 2; 
+        displayName = "Combat Utility Uniform II [SNOW]"; 
+        picture = "\mef_mod\icons\ico_u2_sm_ca.paa"; 
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver"; 
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\snowcamo\mef_u2_sm_co.paa"};
+		
+        class ItemInfo : UniformItem { 
+            uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02"; 
+            uniformClass = "MEF_IN_SNOW_LS";
+            containerClass = "Supply50"; 
+            mass = 30;
+			hiddenSelections[] = {"Camo"};
+        };
+	};
+	class MEF_TAN_HP_Uni : U_B_CombatUniform_mcam
+	{ 
+        scope = 2; 
+        displayName = "Combat Utility Coverall [Tan]"; 
+        picture = "\mef_mod\icons\icon_u_ir_tancoveralls_ca.paa"; 
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver"; 
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\pilot\coveralls_sand_co.paa"};
+		
+        class ItemInfo : UniformItem { 
+            uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02"; 
+            uniformClass = "MEF_TAN_H_Pilot";
+            containerClass = "Supply50"; 
+            mass = 30;
+			hiddenSelections[] = {"Camo"};
+        };
+	};
+	class MEF_OD_F_SUIT : U_B_CombatUniform_mcam
+	{ 
+        scope = 2; 
+        displayName = "Combat Flight Suit [OD]"; 
+        picture = "\mef_mod\icons\icon_u_ir_odpilotcoveralls_ca.paa"; 
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver"; 
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\pilot\pilot_suit_rus_co.paa"};
+		
+        class ItemInfo : UniformItem { 
+            uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02"; 
+            uniformClass = "MEF_OD_F_Pilot";
+            containerClass = "Supply50"; 
+            mass = 30;
+			hiddenSelections[] = {"Camo"};
+        };
+	};
+	class MEF_TAN_F_SUIT : U_B_CombatUniform_mcam
+	{ 
+        scope = 2; 
+        displayName = "Combat Flight Suit [TAN]"; 
+        picture = "\mef_mod\icons\icon_u_ir_tanpilotcoveralls_ca.paa"; 
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver"; 
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\mef_mod\textures\pilot\pilot_suit_tan_co.paa"};
+		
+        class ItemInfo : UniformItem { 
+            uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02"; 
+            uniformClass = "MEF_TAN_F_Pilot";
+            containerClass = "Supply50"; 
+            mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
 	};
@@ -2015,6 +2216,24 @@ class cfgWeapons
 			hiddenSelections[] = {"camo"};
 		};
 	};
+	class MEF_Vest_Tan_v2_Infantry : V_PlateCarrierIA1_dgtl
+	{
+        scope = 2;
+        displayName = "Plate Carrier V2 [Infantry]";
+        picture = "\mef_mod\icons\ico_v2_ct_ca";
+        model = "\a3\characters_f_beta\indep\equip_ia_vest02";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\mef_mod\textures\tan_vest\mef_v2_ct_co.paa"};
+        
+        class ItemInfo : VestItem {
+            uniformModel = "\a3\characters_f_beta\indep\equip_ia_vest02";
+            containerClass = "Supply200";
+            mass = 300;
+            armor = 50;
+            passThrough = 0.1;
+            hiddenSelections[] = {"camo"};
+        };
+	};
 	class MEF_Tan_Range_Belt : V_Rangemaster_belt
 	{
         scope = 2;
@@ -2034,6 +2253,44 @@ class cfgWeapons
         };
 	};
 //////////MEF MARPAT Helmets//////////
+	class MEF_Snow_Goggles_Helmet_LWH : ItemCore 
+	{
+        scope = 2;
+        weaponPoolAvailable = 1;
+        displayName = "Headgear [LWH w/ Goggles] Snow";
+        picture = "\mef_mod\icons\icon_h_i_helmetg_canvas_cv.paa";
+        model = "\mef_mod\textures\hats\mas_usmchelmet_googles";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\mef_mod\textures\hats\usmc_marpatmggb_cw.paa"};
+        
+        class ItemInfo : HeadgearItem {
+            mass = 45;
+            uniformModel = "\mef_mod\textures\hats\mas_usmchelmet_googles.p3d";
+            modelsides[] = {3, 1};
+            armor = 50;
+            passThrough = 1;
+            hiddenSelections[] = {"camo"};
+        };
+	};
+	class MEF_Snow_Helmet_LWH : ItemCore 
+	{
+        scope = 2;
+        weaponPoolAvailable = 1;
+        displayName = "Headgear [LWH] Snow";
+        picture = "\mef_mod\icons\icon_h_i_helmet_canvas_cd.paa";
+        model = "\mef_mod\textures\hats\mas_usmchelmet";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\mef_mod\textures\hats\usmc_marpatmggb_cw.paa"};
+        
+        class ItemInfo : HeadgearItem {
+            mass = 45;
+            uniformModel = "\mef_mod\textures\hats\mas_usmchelmet.p3d";
+            modelsides[] = {3, 1};
+            armor = 50;
+            passThrough = 1;
+            hiddenSelections[] = {"camo"};
+        };
+	};
     class MEF_Woodland_Helmet_MICH : ItemCore
 	{
         scope = 2;
