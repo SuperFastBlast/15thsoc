@@ -1,11 +1,22 @@
-// crate init
+/* 
+fn_crate
+grab meu crate config data and apply it
+fight9 
 
+params:
+_this: object - the crate
+*/
 
-private ["_crate","_cfg","_folder"];
+#include "\meu_ammoBoxes\script_macros.hpp"
+
+private ["_crate","_cfg"];
 // params
-_crate = _this select 0;
+_crate = [_this,0,objNull,[[],objNull]] call BIS_fnc_param;
 
-// no damage
+// check
+if (isNull _crate) exitWith {false};
+
+// damage
 _crate allowDamage false;
 
 // config
@@ -17,18 +28,14 @@ if (isNumber (_cfg >> "MEU_MANAGER")) then {
 			_crate addAction ["<t color=""#01019E"">" + ("15th Loadout Manager") + "</t>","\15th_main\lomgr\gui_start.sqf"];
 	};
 };
-// folder
-if (isText (_cfg >> "MEU_FOLDER")) then {
-	_folder = getText (_cfg >> "MEU_FOLDER");
-};
+
 // loadouts
 if (isArray (_cfg >> "MEU_LOADOUTS")) then {
 	private "_array";
 	_array = getArray (_cfg >> "MEU_LOADOUTS");
 	{
-		private ["_name","_file"];
-		_name = _x select 0;
-		_file = _X select 1;
-		_crate addAction [ ("<t color=""#DB3503"">" + _name + "</t>"), (_folder + "\" + _file) ];
+		_crate addAction [ ("<t color=""#DB3503"">" + (_x select 0) + "</t>"), MEU_ADDON_ROOT + (_x select 1) ];
 	} forEach _array;
 };
+
+true

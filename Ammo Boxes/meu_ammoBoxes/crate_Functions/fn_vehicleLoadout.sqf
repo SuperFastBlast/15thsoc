@@ -1,5 +1,15 @@
-// updated fn_vehicleLoadout
-// fight9
+/* 
+fn_vehicleLoadout
+fight9
+version 2
+
+params:
+_this select 0: vehicle or array of vehicles
+_this select 1: Array of classnames or array of sub-arrays with classname and count
+_this select 2: bool: true to clear cargo, false to keep
+_this select 3: bool: true to show notification, false to not
+
+*/
 
 private ["_units","_gear","_clear","_note"];
 
