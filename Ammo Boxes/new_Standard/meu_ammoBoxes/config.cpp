@@ -1503,13 +1503,13 @@ class CfgVehicles
 			/*  
 			how to add new loadouts:			
 			MEU_VIC_LOADOUT(class - any one word, action display name, file with loadout)
-			note: no quotations on these
+			note: no quotations on class
 			*/	
-			MEU_VIC_LOADOUT(rifle,Rifle Loadout,vehicle\infantry_rifle.sqf)
-			MEU_VIC_LOADOUT(weapons,Weapons Loadout,vehicle\infantry_mg.sqf)
-			MEU_VIC_LOADOUT(assualt,Assault Loadout,vehicle\infantry_assault.sqf)
-			MEU_VIC_LOADOUT(bas,Medical Loadout,vehicle\bas.sqf)
-			MEU_VIC_LOADOUT(marauder,Marauder Loadout,vehicle\marauder.sqf)
+			MEU_VIC_LOADOUT(rifle,"Rifle Loadout","vehicle\infantry_rifle.sqf")
+			MEU_VIC_LOADOUT(weapons,"Weapons Loadout","vehicle\infantry_mg.sqf")
+			MEU_VIC_LOADOUT(assualt,"Assault Loadout","vehicle\infantry_assault.sqf")
+			MEU_VIC_LOADOUT(bas,"Medical Loadout","vehicle\bas.sqf")
+			MEU_VIC_LOADOUT(marauder,"Marauder Loadout","vehicle\marauder.sqf")
 		};
 	};
 };

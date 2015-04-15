@@ -29,9 +29,9 @@
 		supplyRadius = 0; \
 		MEU_INIT_EVENT("_this call meu_fnc_crate;")
 		
-#define MEU_VIC_FUNCTION(FILE) 	#[player,call compile preprocessFileLineNumbers (MEU_ADDON_ROOT + #FILE),false,true] call meu_fnc_vehicleLoadout
-#define MEU_RED_NAME(TEXT) 		QUOTE(<t color='#FF0000'>TEXT</t>)
-#define MEU_GREEN_NAME(TEXT) 	QUOTE(<t color='#99FF00'>TEXT</t>)
+#define MEU_VIC_FUNCTION(FILE) 	#[player,call compile preprocessFileLineNumbers (MEU_ADDON_ROOT + FILE),false,true] call meu_fnc_vehicleLoadout
+#define MEU_RED_NAME(TEXT) 		__EVAL("<t color='#FF0000'>" + TEXT + "</t>")
+#define MEU_GREEN_NAME(TEXT) 	__EVAL("<t color='#99FF00'>" + TEXT + "</t>")
 
 #define MEU_VIC_LOADOUT(CLASS,TEXT,FILE)	class CLASS##: clearCargo { \
 				displayName = MEU_RED_NAME(TEXT); \
@@ -40,7 +40,7 @@
 				
 #define MEU_VIC_LOADOUT_CLEAR	class clearCargo { \
 				userActionID = 50; \
-				displayName = MEU_GREEN_NAME(Clear Cargo); \
+				displayName = MEU_GREEN_NAME("Clear Cargo"); \
 				displayNameDefault = ""; \
 				position = "mph_axis"; \
 				radius = 10; \
