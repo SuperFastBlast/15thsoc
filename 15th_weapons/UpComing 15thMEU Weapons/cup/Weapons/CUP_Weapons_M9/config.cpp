@@ -174,7 +174,16 @@ class CfgWeapons
   		dexterity = 1.8;
 		model = "CUP\Weapons\CUP_Weapons_M9\CUP_M9.p3d";
 		modelOptics = "-";
+		reloadAction = "GestureReloadPistol";
+		magazines[] = {"MEU_M882_9mm"};
+		displayName = "M9 Beretta";
+		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M9\data\sfx\Reload",1,1,35};
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Rook40\dry_Rook40",0.2238721,1,20};
+		recoil = "recoil_pistol_rook40";
 		picture = "\CUP\Weapons\CUP_Weapons_M9\data\ui\gear_m9_X_ca.paa";
+		modes[] = {"Single"};
+		class Single: Mode_SemiAuto
+		{
 		sounds[] = {"StandardSound","SilencedSound"};
 		class BaseSoundModeType
 			{
@@ -262,14 +271,10 @@ class CfgWeapons
 					};
 				};
 			};
-		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M9\data\sfx\Reload",1,1,35};
-		drySound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\Rook40\dry_Rook40",0.2238721,1,20};
 		recoil = "recoil_pistol_light";
 		recoilProne = "recoil_prone_pistol_light";
 		reloadtime = 0.13;
-		reloadAction = "GestureReloadPistol";
-		magazines[] = {"MEU_M882_9mm"};
-		displayName = "M9 Beretta";
+		};
 		class Library
 		{
 			libTextDesc = "M9 Semiautomatic Pistol";

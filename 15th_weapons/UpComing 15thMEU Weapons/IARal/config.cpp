@@ -112,6 +112,7 @@ class CfgWeapons
 		midrangeprobab=0.69999999;
 		minrange=2;
 		minrangeprobab=0.30000001;
+		recoil = "recoil_mk20";
 		drySound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\DMR_05_Dry",0.251189,1,20};
 		changeFiremodeSound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_05_Cyrus\DMR_05_Safety",0.112202,1,5};
 		reloadMagazineSound[] = {"\IARal\M4R.wss",1,1,30};

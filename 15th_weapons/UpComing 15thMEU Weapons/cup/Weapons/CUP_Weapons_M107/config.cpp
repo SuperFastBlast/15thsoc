@@ -144,6 +144,7 @@ class CfgWeapons
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
 		displayName = "M107";
 		reloadtime = 0.75;
+		recoil = "recoil_gm6";
 		handanim[] = {"OFP2_ManSkeleton","CUP\Weapons\CUP_Weapons_M107\data\anim\M107b.rtm"};
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M107\data\sfx\Reload",1,1,35};
 		drySound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_dry",0.56234133,1,15};

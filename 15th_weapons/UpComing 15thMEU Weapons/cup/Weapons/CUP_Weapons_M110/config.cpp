@@ -207,6 +207,7 @@ class CfgWeapons
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second. 1500 seconds / 25 minutes for a complete cooldown from max temp.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_Overheating_allowSwapBarrel = 0;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		recoil = "recoil_ebr";
 		reloadMagazineSound[] = {"\CUP\Weapons\CUP_Weapons_M110\data\sfx",1,1,35};
 		drySound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_03_MkI_EMR\DMR_03_Dry",0.251189,1,20};
 		class Single: Mode_SemiAuto
@@ -299,7 +300,6 @@ class CfgWeapons
 					};
 				};
 			};
-			weaponSoundEffect = "DefaultRifle";
 			reloadTime = 0.085;
 			recoil = "recoil_single_ebr";
 			recoilProne = "recoil_single_prone_ebr";

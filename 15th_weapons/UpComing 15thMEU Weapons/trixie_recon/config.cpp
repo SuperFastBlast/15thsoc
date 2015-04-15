@@ -105,6 +105,7 @@ class CfgWeapons
 		discretedistance[] = {100};
 		discretedistanceinitindex = 0;
 		reloadaction = "GestureReloadEBR";
+		recoil = "recoil_dmr_01";
 		drySound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_dry",0.251189,1,20};
 		changeFiremodeSound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_06_Mk14\DMR_06_Safety",0.251189,1,5};
 		reloadmagazinesound[] = {"trixie_recon\sound\M24Reload", 0.501187, 1, 10};

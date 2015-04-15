@@ -108,6 +108,9 @@ class CfgWeapons
 		picture = "\CUP\Weapons\CUP_Weapons_Colt1911\data\ui\gear_colt1911_X_ca.paa";
 		magazines[] = {"MEU_T2AAF_45ACP"};
 		displayname = "M1911";
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\dry_4_Five",0.39810717,1,20};
+		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\Reload",0.56234133,1,30};
+		recoil = "recoil_pistol_4five";
 		descriptionShort = "M1911";
 		class Library
 		{
@@ -204,11 +207,9 @@ class CfgWeapons
 					};
 				};
 			};
-		};
-		drySound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\4-Five\dry_4_Five",0.39810717,1,20};
-		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_Colt1911\data\sfx\Reload",0.56234133,1,30};
 		recoil = "recoil_pistol_heavy";
 		recoilProne = "recoil_prone_pistol_heavy";
+		};
 		class WeaponSlotsInfo
 		{
 			mass = 30.5;

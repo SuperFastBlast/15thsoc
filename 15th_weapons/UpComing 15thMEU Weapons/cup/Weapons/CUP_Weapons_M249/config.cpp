@@ -156,7 +156,7 @@ class CfgWeapons
     AGM_Overheating_Cooldown = 0.009;   // How fast the weapon cools down every second.
     AGM_Overheating_Dispersion = 0.001; // Base dispersion in radians when the weapon is overheated. Increases the hotter the weapons gets.
     AGM_Overheating_allowSwapBarrel = 1;   // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
-		descriptionShort = "M249 Para";
+		descriptionShort = "M249";
 		cursor = "mg";
 		cursorAim = "EmptyCursor";
 		initSpeed = 915;
@@ -164,6 +164,7 @@ class CfgWeapons
 		dexterity = 1.3;
   		maxRecoilSway = 0.0125;
   		swayDecaySpeed = 1.25;
+		recoil = "recoil_mk200";
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 165.8;

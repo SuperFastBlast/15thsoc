@@ -303,6 +303,7 @@ class CfgWeapons
 		tBody = 100;
 		selectionFireAnim = "muzzleFlash";
 		value = 8;
+		recoil = "recoil_mk20";
 		reloadMagazineSound[] = {"CUP\Weapons\CUP_Weapons_M16\data\sfx\M16_Reload",1,1,35};
 		magazines[] = {"MEU_30Rnd_M855A1_556x45_Stanag","MEU_30Rnd_M855A1_556x45_T_Stanag"};
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\firemode_Mk20",0.25118864,1,5};

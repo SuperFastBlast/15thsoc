@@ -161,8 +161,9 @@ scope = 2;
 		cursorAim = "EmptyCursor";
 		inertia = 0.8;
 		dexterity = 1.2;
-		maxRecoilSway = 0.003;
+		maxRecoilSway = 0.0125;
   		swayDecaySpeed = 1.25;
+		recoil = "recoil_zafir";
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 242;
@@ -175,8 +176,8 @@ scope = 2;
 		class manual: Mode_FullAuto
 		{
 			recoil = "recoil_auto_primary_5outof10";
-			recoilprone = "recoil_auto_primary_prone_2outof10";
-			dispersion = 0.00101;
+			recoilprone = "recoil_auto_primary_prone_3outof10";
+			dispersion = 0.0030;
 			sounds[] = {"StandardSound"};
 			class BaseSoundModeType
 			{
