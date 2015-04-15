@@ -15,7 +15,7 @@
  removevest _unit;
  removeheadgear _unit;
  _unit addvest "MEF_Vest_Tan_Infantry_L";
- _unit addheadgear "MEF_Woodland_Helmet_MICH";
+ _unit addheadgear "MEF_Wood_Goggles_Helmet_LWH";
 
 
   _unit unassignItem "nvgoggles";
@@ -37,7 +37,7 @@
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
- (unitBackpack _unit) addmagazineCargo ["Trixie_SMAW_HEDP",1];
+ (unitBackpack _unit) addmagazineCargo ["CUP_SMAW_HEDP_M_N",1];
  (unitBackpack _unit) addmagazineCargo ["DemoCharge_Remote_Mag",1];
  (unitBackpack _unit) addmagazineCargo ["SatchelCharge_Remote_Mag",1];
  (unitBackpack _unit) additemCargo ["itemandroid",1];
@@ -67,7 +67,7 @@
 
 
  _unit addweapon "CUP_arifle_M4CAR_BUIS_GL";
- _unit addPrimaryWeaponItem "CUP_optic_ACOG1";
+ _unit addPrimaryWeaponItem "CUP_optic_ACOG";
  _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 
 

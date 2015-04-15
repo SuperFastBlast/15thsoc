@@ -56,7 +56,7 @@
  _unit addmagazine "SmokeShellGreen";
  _unit addmagazine "SmokeShellGreen";
 
- _unit adduniform "nomex_olive";
+ _unit adduniform "MEF_OD_F_SUIT";
  
  //Bandages
  _unit additem "AGM_Bandage";

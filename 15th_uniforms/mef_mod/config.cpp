@@ -5,7 +5,7 @@ class CfgPatches
     {
         units[] = {"MEF_TAN_F_Pilot","MEF_TAN_H_Pilot","MEF_OD_F_Pilot","MEF_IN_SNOW_LS","MEF_S_LS_Rpr","MEF_S_LS_HC","MEF_S_LS_Exp2","MEF_S_LS_Exp","MEF_USMC_Huron","MEF_IN_DMARPAT_RS","MEF_D_LS_Rpr","MEF_D_LS_HC","MEF_D_LS_Exp2","MEF_D_LS_Exp","MEF_IN_DMARPAT_LS","MEF_IN_WMARPAT_RS","MEF_W_LS_Rpr","MEF_W_LS_HC","MEF_W_LS_Exp2","MEF_W_LS_Exp","MEF_IN_WMARPAT_LS","MEF_WMARPAT_LS","MEF_WMARPAT_RS","MEF_WMARPAT_TS","MEF_DMARPAT_LS","MEF_DMARPAT_RS","MEF_DMARPAT_TS",
 "MEF_RECON_WBLK","MEF_RECON_WBLK_RS","MEF_RECON_WOD","MEF_RECON_WOD_RS","MEF_RECON_WTAN","MEF_RECON_WTAN_RS","MEF_RECON_WDIV","MEF_RECON_DBLK","MEF_RECON_DBLK_RS","MEF_RECON_DOD","MEF_RECON_DOD_RS","MEF_RECON_DTAN","MEF_RECON_DTAN_RS","MEF_RECON_DDIV"};
-        weapons[] = {"MEF_TAN_HP_Uni","MEF_TAN_F_SUIT","MEF_OD_F_SUIT","MEF_Vest_Tan_v2_Infantry","MEF_Snow_Goggles_Helmet_LWH","MEF_Snow_Helmet_LWH","MEF_Wood_MARPAT_TS","MEF_Wood_MARPAT_RS","MEF_Wood_MARPAT_LS","MEF_Desert_MARPAT_TS","MEF_Desert_MARPAT_RS","MEF_Desert_MARPAT_LS","MEF_DBLK_RS","MEF_DBLK","MEF_WBLK_RS","MEF_WBLK","MEF_DOD_RS","MEF_DOD","MEF_WOD_RS","MEF_WOD","MEF_DTAN_RS","MEF_DTAN","MEF_WTAN_RS","MEF_WTAN","MEF_DDIV","MEF_WDIV","MEF_Wood_IN_MARPAT_RS","MEF_Wood_IN_MARPAT_LS","MEF_Des_IN_MARPAT_LS","MEF_Des_IN_MARPAT_RS","MEF_Vest_Tan_Medical","MEF_Vest_Tan_Medical_L","MEF_Vest_Tan_Infantry","MEF_Vest_Tan_Infantry_L","MEF_Vest_Tan_Armor","MEF_Vest_Tan_Armor_L","MEF_Tan_Range_Belt","MEF_Desert_Helmet_MICH","MEF_woodland_Helmet_MICH","MEF_Boonie_Wood","MEF_Boonie_Des","MEF_Woodland_8Point","MEF_Desert_8Point","MEF_Wood_Goggles_Helmet_LWH","MEF_Wood_Helmet_LWH","MEF_Desert_Goggles_Helmet_LWH","MEF_Desert_Helmet_LWH"};
+        weapons[] = {"OliveCoveralls","MEF_TAN_HP_Uni","MEF_TAN_F_SUIT","MEF_OD_F_SUIT","MEF_Vest_Tan_v2_Infantry","MEF_Snow_Goggles_Helmet_LWH","MEF_Snow_Helmet_LWH","MEF_Wood_MARPAT_TS","MEF_Wood_MARPAT_RS","MEF_Wood_MARPAT_LS","MEF_Desert_MARPAT_TS","MEF_Desert_MARPAT_RS","MEF_Desert_MARPAT_LS","MEF_DBLK_RS","MEF_DBLK","MEF_WBLK_RS","MEF_WBLK","MEF_DOD_RS","MEF_DOD","MEF_WOD_RS","MEF_WOD","MEF_DTAN_RS","MEF_DTAN","MEF_WTAN_RS","MEF_WTAN","MEF_DDIV","MEF_WDIV","MEF_Wood_IN_MARPAT_RS","MEF_Wood_IN_MARPAT_LS","MEF_Des_IN_MARPAT_LS","MEF_Des_IN_MARPAT_RS","MEF_Vest_Tan_Medical","MEF_Vest_Tan_Medical_L","MEF_Vest_Tan_Infantry","MEF_Vest_Tan_Infantry_L","MEF_Vest_Tan_Armor","MEF_Vest_Tan_Armor_L","MEF_Tan_Range_Belt","MEF_Desert_Helmet_MICH","MEF_woodland_Helmet_MICH","MEF_Boonie_Wood","MEF_Boonie_Des","MEF_Woodland_8Point","MEF_Desert_8Point","MEF_Wood_Goggles_Helmet_LWH","MEF_Wood_Helmet_LWH","MEF_Desert_Goggles_Helmet_LWH","MEF_Desert_Helmet_LWH"};
 	author[] = {"Mattastic"};
         requiredVersion = 0.1;
         requiredAddons[] = {"A3_Characters_F_BLUFOR","A3_Characters_F","A3_Weapons_F_Ammoboxes","A3_Air_F_Heli_Heli_Transport_03","A3_Air_F"};
@@ -2055,6 +2055,23 @@ class cfgWeapons
             mass = 30;
 			hiddenSelections[] = {"Camo"};
         };
+	};
+	class U_B_HeliPilotCoveralls;
+	class OliveCoveralls: U_B_HeliPilotCoveralls
+	{
+		scope = 2;
+		displayName = "Combat Utility Coverall [Olive]";
+		picture = "\A3\characters_f\data\ui\icon_U_B_coveralls_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_civilian_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Data\coveralls_sage_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "B_Soldier_04_f";
+			containerClass = "Supply50";
+			mass = 30;
+		};
 	};
 	class MEF_TAN_HP_Uni : U_B_CombatUniform_mcam
 	{ 

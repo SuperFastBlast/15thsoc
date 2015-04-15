@@ -56,7 +56,7 @@
  _unit addmagazine "SmokeShellGreen";
  _unit addmagazine "SmokeShellGreen";
 
- _unit adduniform "overall_db";
+ _unit adduniform "MEF_TAN_HP_Uni";
  
  //Bandages
  _unit additem "AGM_Bandage";

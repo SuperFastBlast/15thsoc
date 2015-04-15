@@ -54,7 +54,7 @@
  _unit addmagazine "MEU_30Rnd_M855A1_556x45_Stanag";
  
  _unit addweapon "CUP_arifle_M4CAR_black";
- _unit addPrimaryWeaponItem "optic_Hamr";
+ _unit addPrimaryWeaponItem "CUP_optic_ACOG";
  _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 
 
@@ -84,4 +84,4 @@
  _unit additem "AGM_EarBuds";
 
 
- _unit adduniform "Nomex_olive";
+ _unit adduniform "OliveCoveralls";

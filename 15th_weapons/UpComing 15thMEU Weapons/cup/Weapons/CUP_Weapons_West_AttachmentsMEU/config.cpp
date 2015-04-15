@@ -466,7 +466,7 @@ class CfgWeapons
 		author = "CUP";
 		scope = 2;
 		inertia = 0.1;
-		displayName = "Trijicon ACOG TA31F M4 Sighted";
+		displayName = "Trijicon ACOG TA31F M4/M27";
 		picture = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_Generic\data\UI\gear_acco_ACOG_ca.paa";
 		model = "CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_generic\CUP_acog.p3d";
 		descriptionShort = "Advanced Combat Optical Gunsight";
@@ -514,7 +514,7 @@ class CfgWeapons
 		author = "CUP";
 		scope = 2;
 		inertia = 0.1;
-		displayName = "Trijicon ACOG TA31F M16 Sighted";
+		displayName = "Trijicon ACOG TA31F M16/M249";
 		picture = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_Generic\data\UI\gear_acco_ACOG_ca.paa";
 		model = "CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_generic\CUP_acog.p3d";
 		descriptionShort = "Advanced Combat Optical Gunsight";
@@ -562,7 +562,7 @@ class CfgWeapons
 		author = "CUP";
 		scope = 2;
 		inertia = 0.1;
-		displayName = "Trijicon ACOG M4 sighted";
+		displayName = "Trijicon ACOG M4/M27";
 		picture = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_RCO\data\ui\gear_acco_ACOG_RCO_ca.paa";
 		model = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_RCO\CUP_acog_2.p3d";
 		descriptionShort = "Advanced Combat Optical Gunsight";
@@ -610,7 +610,7 @@ class CfgWeapons
 		author = "CUP";
 		scope = 2;
 		inertia = 0.1;
-		displayName = "Trijicon ACOG M16 Sighted";
+		displayName = "Trijicon ACOG M16/M249";
 		picture = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_RCO\data\ui\gear_acco_ACOG_RCO_ca.paa";
 		model = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_RCO\CUP_acog_2.p3d";
 		descriptionShort = "Advanced Combat Optical Gunsight";
@@ -657,7 +657,7 @@ class CfgWeapons
 	class CUP_optic_RCO_desert: CUP_optic_RCO
 	{
 		author = "CUP";
-		displayName = "Trijicon ACOG M4 Sighted (desert)";
+		displayName = "Trijicon ACOG M4/M27(desert)";
 		picture = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_RCO\data\ui\gear_acco_ACOG_RCO_desert_ca.paa";
 		model = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_RCO\CUP_acog_2_desert.p3d";
 	};
@@ -666,7 +666,7 @@ class CfgWeapons
 	class CUP_optic_RCO_desert1: CUP_optic_RCO1
 	{
 		author = "CUP";
-		displayName = "Trijicon ACOG M16 sighted (desert)";
+		displayName = "Trijicon ACOG M16/M249(desert)";
 		picture = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_RCO\data\ui\gear_acco_ACOG_RCO_desert_ca.paa";
 		model = "\CUP\Weapons\CUP_Weapons_West_Attachments\ACOG_RCO\CUP_acog_2_desert.p3d";
 	};
@@ -675,7 +675,7 @@ class CfgWeapons
 		author = "CUP";
 		scope = 2;
 		inertia = 0.3;
-		displayName = "AN/PVS-10 Night Vision Scope (M4 Sighted)";
+		displayName = "AN/PVS-10 Night Vision Scope (M4/M27)";
 		picture = "\CUP\Weapons\CUP_Weapons_West_Attachments\AN_PVS_10\data\ui\gear_acco_an_pvs_10_ca.paa";
 		model = "\CUP\Weapons\CUP_Weapons_West_Attachments\AN_PVS_10\CUP_AN_PVS_10.p3d";
 		descriptionShort = "Night Vision Scope";
@@ -710,7 +710,7 @@ class CfgWeapons
 		author = "CUP";
 		scope = 2;
 		inertia = 0.3;
-		displayName = "AN/PVS-10 Night Vision Scope (M16 Sighted)";
+		displayName = "AN/PVS-10 Night Vision Scope (M16/M249)";
 		picture = "\CUP\Weapons\CUP_Weapons_West_Attachments\AN_PVS_10\data\ui\gear_acco_an_pvs_10_ca.paa";
 		model = "\CUP\Weapons\CUP_Weapons_West_Attachments\AN_PVS_10\CUP_AN_PVS_10.p3d";
 		descriptionShort = "Night Vision Scope";

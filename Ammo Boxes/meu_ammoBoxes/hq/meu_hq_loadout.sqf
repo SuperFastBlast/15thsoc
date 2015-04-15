@@ -44,7 +44,7 @@
  _unit addmagazine "MEU_30Rnd_M855A1_556x45_T_Stanag";
 
  _unit addweapon "CUP_arifle_M4CAR_black"; 
- _unit addPrimaryWeaponItem "CUP_optic_ACOG1";
+ _unit addPrimaryWeaponItem "CUP_optic_ACOG";
  _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
 
 

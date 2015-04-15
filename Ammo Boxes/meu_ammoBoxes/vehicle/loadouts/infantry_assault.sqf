@@ -3,8 +3,8 @@
 [
 	["MEU_M882_9mm", 4],
 	["MEU_30Rnd_M855A1_556x45_Stanag", 10],
-	["Trixie_SMAW_HEDP", 3],
-	["Trixie_SMAW_HEAA", 2],
+	["CUP_SMAW_HEDP_M_N", 3],
+	["CUP_SMAW_HEAA_M_N", 2],
 	["DemoCharge_Remote_Mag",4],
 	["ClaymoreDirectionalMine_Remote_Mag",2],
 	["SatchelCharge_Remote_Mag",2],

@@ -66,6 +66,10 @@ class CfgVehicles{
 				count = 25;
 				name = "optic_Hamr";
 			};
+			class _xx_CUP_optic_ACOG {
+				count = 50;
+				name = "CUP_optic_ACOG";
+			};
 			class _xx_CUP_optic_ACOG1 {
 				count = 50;
 				name = "CUP_optic_ACOG1";
@@ -125,6 +129,10 @@ class CfgVehicles{
 			class _xx_CUP_optic_Eotech533 {
 				count = 5;
 				name = "CUP_optic_Eotech533";
+			};
+			class _xx_CUP_optic_AN_PVS_10 {
+				count = 50;
+				name = "CUP_optic_AN_PVS_10";
 			};
 			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
@@ -416,13 +424,13 @@ class CfgVehicles{
 			};
 			
 // LAUNCHED
-			class _xx_Trixie_SMAW_HEAA {
+			class _xx_CUP_SMAW_HEAA_M_N {
 				count = 50;
-				magazine = "Trixie_SMAW_HEAA";
+				magazine = "CUP_SMAW_HEAA_M_N";
 			};
-			class _xx_Trixie_SMAW_HEDP {
+			class _xx_CUP_SMAW_HEDP_M_N {
 				count = 50;
-				magazine = "Trixie_SMAW_HEDP";
+				magazine = "CUP_SMAW_HEDP_M_N";
 			};
 			class _xx_M433_40mm_HEDP_Shell {
 				count = 50;
@@ -641,9 +649,9 @@ class CfgVehicles{
 				count = 10;
 				weapon = "caf_m72a6";
 			};
-			class _xx_Trixie_SMAW {
+			class _xx_CUP_launch_Mk153Mod0 {
 				count = 3;
-				weapon = "Trixie_SMAW";
+				weapon = "CUP_launch_Mk153Mod0";
 			};
 			class _xx_M32 {
 				count = 5;
@@ -657,7 +665,7 @@ class CfgVehicles{
 	};
 		class B_supplyCrate_F;
 		class Box_meu_bas: B_supplyCrate_F {
-		displayname = "[15th] Battalion Aid Station ";
+		displayname = "[15th] BAS Box";
 		scope=2;
 		transportmaxmagazines = 9999;
 		transportmaxweapons = 9999;
@@ -676,10 +684,22 @@ class CfgVehicles{
 			class _xx_acc_pointer_IR {
 				count = 5;
 				name = "acc_pointer_IR";
+			};
+			class _xx_CUP_optic_ACOG {
+				count = 5;
+				name = "CUP_optic_ACOG";
 			};	
 			class _xx_CUP_optic_ACOG1 {
 				count = 5;
 				name = "CUP_optic_ACOG1";
+			};
+			class _xx_CUP_optic_AN_PVS_10 {
+				count = 50;
+				name = "CUP_optic_AN_PVS_10";
+			};
+			class _xx_CUP_optic_AN_PVS_101 {
+				count = 50;
+				name = "CUP_optic_AN_PVS_101";
 			};		
 			class _xx_CUP_acc_ANPEQ_15 {
 				count = 5;
@@ -723,6 +743,10 @@ class CfgVehicles{
 				count = 5;
 				name = "ItemMap";
 			};
+			class _xx_AGM_MapTools {
+				count = 25;
+				name = "AGM_MapTools";
+			};
 			class _xx_Binocular {
 				count = 5;
 				name = "Binocular";
@@ -746,6 +770,18 @@ class CfgVehicles{
 			class _xx_AGM_CableTie {
 				count = 50;
 				name = "AGM_CableTie";
+			};
+			class _xx_MEU_FlareGreen_M203 {
+				count = 25;
+				name = "MEU_FlareGreen_M203";
+			};
+			class _xx_MEU_Flareyellow_M203 {
+				count = 25;
+				name = "MEU_Flareyellow_M203";
+			};
+			class _xx_MEU_FlareWhite_M203 {
+				count = 25;
+				name = "MEU_FlareWhite_M203";
 			};
 
 // HELMETS
@@ -814,6 +850,18 @@ class CfgVehicles{
 				count = 20;
 				magazine = "AGM_M84";
 			};
+			class _xx_AGM_HandFlare_White {
+				count = 50;
+				magazine = "AGM_HandFlare_White";
+			};
+			class _xx_AGM_HandFlare_Green {
+				count = 50;
+				magazine = "AGM_HandFlare_Green";
+			};
+			class _xx_AGM_HandFlare_Yellow {
+				count = 50;
+				magazine = "AGM_HandFlare_Yellow";
+			};
 			class _xx_Chemlight_green {
 				count = 50;
 				magazine = "Chemlight_green";
@@ -846,6 +894,14 @@ class CfgVehicles{
 				count = 50;
 				magazine = "SmokeShellGreen";
 			};
+			class _xx_SmokeShellyellow {
+				count = 50;
+				magazine = "SmokeShellyellow";
+			};
+			class _xx_SmokeShellorange {
+				count = 50;
+				magazine = "SmokeShellorange";
+			};
 			class _xx_HandGrenade {
 				count = 20;
 				magazine = "HandGrenade";
@@ -861,6 +917,14 @@ class CfgVehicles{
 			class _xx_CUP_hgun_M9 {
 				count = 5;
 				weapon = "CUP_hgun_M9";
+			};
+			class _xx_CUP_arifle_M16A4_base {
+				count = 5;
+				weapon = "CUP_arifle_M16A4_base";
+			};
+			class _xx_CUP_arifle_M4CAR_black {
+				count = 5;
+				weapon = "CUP_arifle_M4CAR_Black";
 			};
 			class _xx_CUP_arifle_M16A4_GL {
 				count = 5;
@@ -891,6 +955,10 @@ class CfgVehicles{
 			class _xx_acc_pointer_IR {
 				count = 15;
 				name = "acc_pointer_IR";
+			};
+			class _xx_CUP_optic_ACOG {
+				count = 50;
+				name = "CUP_optic_ACOG";
 			};
 			class _xx_CUP_optic_ACOG1 {
 				count = 50;
@@ -931,6 +999,10 @@ class CfgVehicles{
 			class _xx_CUP_optic_Eotech533Grey {
 				count = 5;
 				name = "CUP_optic_Eotech533Grey";
+			};
+			class _xx_CUP_optic_AN_PVS_10 {
+				count = 50;
+				name = "CUP_optic_AN_PVS_10";
 			};
 			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
@@ -1363,6 +1435,10 @@ class CfgVehicles{
 				count = 5;
 				name = "acc_pointer_IR";
 			};
+			class _xx_CUP_optic_ACOG {
+				count = 50;
+				name = "CUP_optic_ACOG";
+			};
 			class _xx_CUP_optic_ACOG1 {
 				count = 50;
 				name = "CUP_optic_ACOG1";
@@ -1382,6 +1458,10 @@ class CfgVehicles{
 			class _xx_CUP_optic_Eotech533 {
 				count = 5;
 				name = "CUP_optic_Eotech533";
+			};
+			class _xx_CUP_optic_CUP_optic_AN_PVS_10 {
+				count = 50;
+				name = "CUP_optic_AN_PVS_10";
 			};
 			class _xx_CUP_optic_CUP_optic_AN_PVS_101 {
 				count = 50;
@@ -1579,13 +1659,13 @@ class CfgVehicles{
 				count = 100;
 				magazine = "MEU_100Rnd_M240_762x51_T";
 			};
-			class _xx_Trixie_SMAW_HEDP {
+			class _xx_CUP_SMAW_HEDP_M_N {
 				count = 50;
-				magazine = "Trixie_SMAW_HEDP";
+				magazine = "CUP_SMAW_HEDP_M_N";
 			};
-			class _xx_Trixie_SMAW_HEAA {
+			class _xx_CUP_SMAW_HEAA_M_N {
 				count = 50;
-				magazine = "Trixie_SMAW_HEAA";
+				magazine = "CUP_SMAW_HEAA_M_N";
 			};
 
 //Smoke 203
@@ -1730,9 +1810,9 @@ class CfgVehicles{
 				count = 20;
 				weapon = "CUP_lmg_M240";
 			};
-			class _xx_Trixie_SMAW {
+			class _xx_CUP_launch_Mk153Mod0 {
 				count = 20;
-				weapon = "Trixie_SMAW";
+				weapon = "CUP_launch_Mk153Mod0";
 			};
 			class _xx_Laserdesignator {
 				count = 1;
@@ -1772,6 +1852,10 @@ class CfgVehicles{
 			class _xx_CUP_optic_CompM4 {
 				count = 20;
 				name = "CUP_optic_CompM4";
+			};
+			class _xx_CUP_optic_ACOG {
+				count = 20;
+				name = "CUP_optic_ACOG";
 			};	
 			class _xx_CUP_optic_ACOG1 {
 				count = 20;
@@ -1784,6 +1868,10 @@ class CfgVehicles{
 			class _xx_CUP_optic_Eotech533 {
 				count = 20;
 				name = "CUP_optic_Eotech533";
+			};
+			class _xx_CUP_optic_AN_PVS_10 {
+				count = 50;
+				name = "CUP_optic_AN_PVS_10";
 			};
 			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
@@ -1851,13 +1939,21 @@ class CfgVehicles{
 			};
 
 // UNIFORMS			
-			class _xx_Nomex_olive {
-				count = 10;
-				name = "Nomex_olive";
+			class _xx_OliveCoveralls {
+				count = 5;
+				name = "OliveCoveralls";
 			};
-			class _xx_overall_db {
-				count = 10;
-				name = "overall_db";
+			class _xx_MEF_TAN_HP_Uni {
+				count = 5;
+				name = "MEF_TAN_HP_Uni";
+			};
+			class _xx_MEF_OD_F_SUIT {
+				count = 5;
+				name = "MEF_OD_F_SUIT";
+			};
+			class _xx_MEF_TAN_F_SUIT {
+				count = 5;
+				name = "MEF_TAN_F_SUIT";
 			};
 // GOGGLES
 			class _xx_AV_ESS_tan {
@@ -2209,9 +2305,9 @@ class CfgVehicles{
 				count = 15;
 				name = "MEF_Wood_IN_MARPAT_LS";
 			};
-			class _xx_Nomex_olive {
+			class _xx_OliveCoveralls {
 				count = 10;
-				name = "Nomex_olive";
+				name = "OliveCoveralls";
 			};
 
 // VESTS
@@ -2341,6 +2437,10 @@ class CfgVehicles{
 			class _xx_acc_flashlight {
 				count = 15;
 				name = "acc_flashlight";
+			};
+			class _xx_CUP_optic_ACOG {
+				count = 15;
+				name = "CUP_optic_ACOG";
 			};			
 			class _xx_CUP_optic_ACOG1 {
 				count = 15;
@@ -2486,6 +2586,10 @@ class CfgVehicles{
 			class _xx_acc_pointer_IR {
 				count = 5;
 				name = "acc_pointer_IR";
+			};
+			class _xx_CUP_optic_ACOG {
+				count = 5;
+				name = "CUP_optic_ACOG";
 			};	
 			class _xx_CUP_optic_ACOG1 {
 				count = 5;
@@ -2514,6 +2618,10 @@ class CfgVehicles{
 			class _xx_CUP_optic_Eotech533 {
 				count = 5;
 				name = "CUP_optic_Eotech533";
+			};
+			class _xx_CUP_optic_AN_PVS_10 {
+				count = 50;
+				name = "CUP_optic_AN_PVS_10";
 			};
 			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;
@@ -2891,13 +2999,13 @@ class CfgVehicles{
                 count = 4;
                 magazine = "DemoCharge_Remote_Mag";
             };
-            class _xx_Trixie_SMAW_HEAA {
+            class _xx_CUP_SMAW_HEAA_M_N {
                 count = 6;
-                magazine = "Trixie_SMAW_HEAA";
+                magazine = "CUP_SMAW_HEAA_M_N";
             };
-            class _xx_Trixie_SMAW_HEDP {
+            class _xx_CUP_SMAW_HEDP_M_N {
                 count = 6;
-                magazine = "Trixie_SMAW_HEDP";
+                magazine = "CUP_SMAW_HEDP_M_N";
             };
              
 // GRENADE, SMOKE, M203
@@ -3152,6 +3260,10 @@ class CfgVehicles{
 				count = 20;
 				name = "optic_nvs";
 			};
+			class _xx_CUP_optic_ACOG {
+				count = 20;
+				name = "CUP_optic_ACOG";
+			};
 			class _xx_CUP_optic_ACOG1 {
 				count = 20;
 				name = "CUP_optic_ACOG1";
@@ -3175,6 +3287,10 @@ class CfgVehicles{
 			class _xx_optic_tws {
 				count = 5;
 				name = "optic_tws";
+			};
+			class _xx_CUP_optic_AN_PVS_10 {
+				count = 40;
+				name = "CUP_optic_AN_PVS_10";
 			};
 			class _xx_CUP_optic_AN_PVS_101 {
 				count = 40;
@@ -3406,7 +3522,7 @@ class CfgVehicles{
 				count = 100;
 				magazine = "MEU_20x762_Mag";
 			};
-			class _xx_Trixie_30x556_Mk262_Mag {
+			class _xx_MEU_30x556_Mk262_Mag {
 				count = 100;
 				magazine = "MEU_30x556_Mk262_Mag";
 			};
@@ -3611,6 +3727,10 @@ class CfgVehicles{
 				count = 12;
 				name = "CUP_acc_ANPEQ_15";
 			};
+			class _xx_CUP_optic_ACOG {
+				count = 15;
+				name = "CUP_optic_ACOG";
+			};
 			class _xx_CUP_optic_ACOG1 {
 				count = 15;
 				name = "CUP_optic_ACOG1";
@@ -3618,6 +3738,10 @@ class CfgVehicles{
 			class _xx_CUP_optic_Eotech533 {
 				count = 10;
 				name = "CUP_optic_Eotech533";
+			};
+			class _xx_CUP_optic_AN_PVS_10 {
+				count = 50;
+				name = "CUP_optic_AN_PVS_10";
 			};
 			class _xx_CUP_optic_AN_PVS_101 {
 				count = 50;

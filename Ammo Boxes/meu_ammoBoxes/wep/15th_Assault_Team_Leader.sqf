@@ -33,8 +33,8 @@
  (unitBackpack _unit) additemCargo ["AGM_Bandage",3];
  (unitBackpack _unit) additemCargo ["acc_flashlight",1];
  (unitBackpack _unit) additemCargo ["NVGoggles_OPFOR",1];
- (unitBackpack _unit) addmagazineCargo ["Trixie_SMAW_HEDP",1];
- (unitBackpack _unit) addmagazineCargo ["Trixie_SMAW_HEAA",1];
+ (unitBackpack _unit) addmagazineCargo ["CUP_SMAW_HEDP_M_N",1];
+ (unitBackpack _unit) addmagazineCargo ["CUP_SMAW_HEAA_M_N",1];
  (unitBackpack _unit) additemCargo ["SmokeshellBlue",1];
  (unitBackpack _unit) additemCargo ["AV_ESS_tan_clr",1];
 
@@ -52,9 +52,9 @@
 
 
  _unit addweapon "CUP_arifle_M4CAR_black";
- _unit addPrimaryWeaponItem "CUP_optic_ACOG1";
+ _unit addPrimaryWeaponItem "CUP_optic_ACOG";
  _unit addPrimaryWeaponItem "CUP_acc_ANPEQ_15";
- _unit addweapon "Trixie_SMAW";
+ _unit addweapon "CUP_launch_Mk153Mod0";
 
 
  _unit addweapon "rangefinder";
