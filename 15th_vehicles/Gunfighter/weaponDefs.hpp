@@ -22,6 +22,7 @@ class CfgAmmo
 		deflectingRandomness = 0;
 		cost = 25;
 		airLock = 1;
+		nvgOnly = 1;
 		explosive = 0.3;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 		tracerScale = 1.8;
@@ -31,6 +32,46 @@ class CfgAmmo
 		caliber = 2.33;
 		whistleDist = 50;
 		whistleOnFire = 1;
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 25;
+  soundHit1[] = {"A3\Sounds_F\weapons\Explosion\gr_explosion_1",3.1622777,1,1300};
+  soundHit2[] = {"A3\Sounds_F\weapons\Explosion\gr_explosion_2",3.1622777,1,1300};
+  soundHit3[] = {"A3\Sounds_F\weapons\Explosion\gr_explosion_3",3.1622777,1,1300};
+  soundHit4[] = {"A3\Sounds_F\weapons\Explosion\gr_explosion_4",3.1622777,1,1300};
+  soundHit5[] = {"A3\Sounds_F\weapons\Explosion\gr_explosion_5",3.1622777,1,1300};
+  soundHit6[] = {"A3\Sounds_F\weapons\Explosion\gr_explosion_6",3.1622777,1,1300};
+  multiSoundHit[] = {"soundHit1",0.2,"soundHit2",0.2,"soundHit3",0.2,"soundHit4",0.1,"soundHit5",0.15,"soundHit6",0.15};
+  explosionSoundEffect = "DefaultExplosion";
+  CraterEffects = "ExploAmmoCrater";
+  explosionEffects = "ExploAmmoExplosion";
+  class CamShakeExplode
+  {
+   power = "(20*0.2)";
+   duration = "((round (20^0.5))*0.2 max 0.2)";
+   frequency = 20;
+   distance = "((1 + 20^0.5)*8)";
+  };
+  class CamShakeHit
+  {
+   power = 20;
+   duration = "((round (20^0.25))*0.2 max 0.2)";
+   frequency = 20;
+   distance = 1;
+  };
+  class CamShakeFire
+  {
+   power = "(20^0.25)";
+   duration = "((round (20^0.5))*0.2 max 0.2)";
+   frequency = 20;
+   distance = "((20^0.5)*8)";
+  };
+  class CamShakePlayerFire
+  {
+   power = 0.01;
+   duration = 0.1;
+   frequency = 20;
+   distance = 1;
+  };
 	};
 
 	class M_Sidewinder_AA: MissileBase
@@ -75,7 +116,7 @@ class CfgAmmo
 	fusedistance = 500;
 	hit = 1400;
 	indirecthit = 50;
-	indirecthitrange = 6.5;
+	indirecthitrange = 10;
 	inittime = 0;
 	irlock = 0;
 	laserlock = 1;
@@ -96,6 +137,8 @@ class CfgAmmo
 	trackoversteer = 1;
 	weaponlocksystem = "2 + 16 + 4";
 	whistledist = 8;
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 25;
 	class Hiteffects 
 	{
 	hitwater = "ImpactEffectsSmall";
@@ -116,6 +159,8 @@ class CfgAmmo
 		timeToLive = 20;
 		fuseDistance = 40;
 		whistleDist = 24;
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 35;
 	};
 };
 
@@ -221,8 +266,8 @@ class CfgWeapons
 		midRangeProbab = 0.09;
 		maxRange = 9000;
 		maxRangeProbab = 0.01;
-		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.8,1};
-		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",0.8,2.5};
+		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",1,1};
+		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_3",1,2.5};
 		reloadTime = 0.1;
 		magazineReloadTime = 30;
 		magazines[] = {"2Rnd_Sidewinder_AH1Z"};
@@ -233,13 +278,10 @@ class CfgWeapons
 			class StandardSound
 			{
 			weaponSoundEffect  = "DefaultRifle";
-			begin1[]={"A3\Sounds_F\weapons\Rockets\missile_2",1.1220185,1.3,1000};
+			begin1[]={"A3\Sounds_F\weapons\Rockets\missile_2",1.1220185,1.3,2000};
 			soundBegin[] = {Begin1,0.33};
-
-
 			};
 	};
-
 	class M197: CannonCore
 	{
 		scope = 1;
@@ -259,10 +301,8 @@ class CfgWeapons
 			sounds[] = {StandardSound};
 			class StandardSound{
 			weaponSoundEffect  = "DefaultRifle";
-			begin1[]={"gunfighter\sounds\a10vulcanVII",db5,1,1100};
+			begin1[]={"gunfighter\sounds\a10vulcanVII",db5,1,4500};
 			soundBegin[] = {Begin1,0.33};
-
-
 			};
 			reloadTime = 0.06;
 			dispersion = 0.00025;
@@ -357,7 +397,7 @@ class CfgWeapons
 			sounds[] = {StandardSound};
 			class StandardSound{
 			weaponSoundEffect  = "DefaultRifle";
-			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,1100};
+			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,2000};
 			soundBegin[] = {Begin1,0.33};
 			};
 			soundFly[]=
@@ -387,18 +427,8 @@ class CfgWeapons
 			};
 			class StandardSound
 			{
-				begin1[]=
-				{
-					"A3\Sounds_F\weapons\Rockets\new_rocket_8",
-					1.7782794,
-					1.2,
-					1600
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,2000};
+			soundBegin[] = {Begin1,0.33};
 				weaponSoundEffect="DefaultRifle";
 			};
 			soundFly[]=
@@ -429,18 +459,8 @@ class CfgWeapons
 			};
 			class StandardSound
 			{
-				begin1[]=
-				{
-					"A3\Sounds_F\weapons\Rockets\new_rocket_8",
-					2.5,
-					1.2,
-					1600
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,2000};
+			soundBegin[] = {Begin1,0.33};
 				weaponSoundEffect="DefaultRifle";
 			};
 			soundFly[]=
@@ -473,18 +493,8 @@ class CfgWeapons
 			};
 			class StandardSound
 			{
-				begin1[]=
-				{
-					"A3\Sounds_F\weapons\Rockets\new_rocket_8",
-					2.5,
-					1.2,
-					1600
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+			begin1[] = {"\gunfighter\Sounds\RocketLauncher_Shot21",3.1622777,1,2000};
+			soundBegin[] = {Begin1,0.33};
 				weaponSoundEffect="DefaultRifle";
 			};
 			soundFly[]=
@@ -534,7 +544,7 @@ class FFARLauncher_14:FFARLauncher
 			class StandardSound
 			{
 			weaponSoundEffect  = "DefaultRifle";
-			Begin1[] = {"A3\Sounds_F\weapons\Rockets\missile_1", 1.12202, 1.3, 1100};
+			Begin1[] = {"A3\Sounds_F\weapons\Rockets\missile_1", 1.12202, 1.3, 2000};
 			soundfly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1", 1, 1.1, 700};
 			soundBegin[] = {Begin1,0.33};
 			};

@@ -91,7 +91,7 @@ class CfgVehicles
 		side=1;
 		faction = "BLU_F";
 		displayName="AH-1Z Cobra";
-		accuracy=1000;
+		accuracy=1;
 		// crewVulnerable = 0; // does not have bulletproof glass canopy
 		driveraction = "AH1Z_Pilot";
 		memoryPointsGetInDriver= "pos_driver";
@@ -100,6 +100,7 @@ class CfgVehicles
 		getOutAction = "GetOutHigh";
 		typicalCargo[]={"B_Helipilot_F", "B_Helipilot_F"};
 		driverCompartments = "Compartment1";
+		gunnerUsesPilotView=false;
 		enableManualFire = 1;
 		irScanGround=True;
 		irScanRangeMin=2000;
@@ -121,22 +122,23 @@ class CfgVehicles
 		backRotorForceCoef = 0.5;//tailrotor(strength of horzontal movement=)
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		unitInfoTypeRTD = "RscUnitInfoAirRTDFullDigital";
+		driveOnComponent[] = {"Skids"};
 		simulation = "helicopterrtd";
 		class RotorLibHelicopterProperties
 		{
 			RTDconfig = "gunfighter\RTD_Heli_Light_03.xml";
-			defaultCollective = 0.675;
-			autoHoverCorrection[] = {3.5,5.2,0};
-			retreatBladeStallWarningSpeed = 92.778;
-			maxTorque = 4500;
+			defaultCollective = 0.7;
+			autoHoverCorrection[] = {4,3.3,0};
+			maxTorque = 2700;
 			stressDamagePerSec = 0.0033333332;
+			retreatBladeStallWarningSpeed = 87.5;
 			maxHorizontalStabilizerLeftStress = 10000;
 			maxHorizontalStabilizerRightStress = 10000;
 			maxVerticalStabilizerStress = 10000;
 			horizontalWingsAngleCollMin = 0;
 			horizontalWingsAngleCollMax = 0;
-			maxMainRotorStress = 185000;
-			maxTailRotorStress = 30000;
+			maxMainRotorStress = 110000;
+			maxTailRotorStress = 25000;
 			rtd_center = "rtd_center"; //Needs a memory point in the model. Have it centred, then move it up or down to make the wheels touch the ground properly. 
 		};
 		maxSpeed = 296;
@@ -147,12 +149,12 @@ class CfgVehicles
 		enableSweep = true;
 		precision = 200;
 		availableForSupportTypes[]={"CAS_Heli"};
-		camouflage = 7;
+		camouflage = 50;
 		maxfordingdepth = 1;
 		sensitivity = 3;
 		sensitivityear = 3;
 		canBeShot = true;
-		audible = 5;
+		audible = 7;
 		
 		minGForce = 0.2;
 		maxGForce = 2;
@@ -160,8 +162,10 @@ class CfgVehicles
 		washDownDiameter = "40.0f";
 		gForceShakeAttenuation = 0.5;
 		neutralMainRotorDive = 0;
-		mainBladeRadius = 6.2;
-		tailBladeRadius = 1.3;
+		mainBladeRadius = 6.1;
+		tailBladeRadius = 1.2;
+  		mainBladeCenter = "-main_rotor";
+  		tailBladeCenter = "-tail_rotor";
 
 		maxMainRotorDive = 0;
 		minMainRotorDive = -0;
@@ -200,8 +204,9 @@ class CfgVehicles
 		incomingMissileDetectionSystem = 16;
 		armor=60;
 		armorStructural = 1;
-		damageResistance = 0.004;
-		cost=10000;
+		damageResistance = 0.01039;
+		epeImpulseDamageCoef = 20;
+		cost=50000000;
 		model="gunfighter\ah1z\ah1z.p3d";
 		picture = "gunfighter\ui\ah1z_CA";
 		mapSize = 15.5;
@@ -837,74 +842,98 @@ class CfgVehicles
 		};
 		class MarkerLights
 		{
-			class WhiteStill
-			{
-				name = "bily pozicni";
-				color[] = {0.0388,0.0388,0.0388,1.0};
-				ambient[] = {0.03,0.023,0.0056,1.0};
-				brightness = 0.05;
-				blinking = "false";
-			};
 			class RedStill
 			{
 				name = "cerveny pozicni";
-				color[] = {1000,0,0,1};
-				ambient[] = {1,0,0,1};
-				brightness = 0.05;
+				color[] = {0.8,0.0,0.0};
+				ambient[] = {0.08,0.0,0.0};
 				blinking = "false";
+				intensity = 75;
+				drawLight = 1;
+				drawLightSize = 0.15;
+				drawLightCenterSize = 0.04;
+				dayLight = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 25;
+					quadratic = 50;
+					hardLimitStart = 0.75;
+					hardLimitEnd = 1;
+				};
 			};
-			class GreenStill
+			class WhiteStill: RedStill
+			{
+				name = "bily pozicni";
+				color[] = {1.0,1.0,1.0};
+				ambient[] = {0.1,0.1,0.1};
+				blinking = "false";
+				drawLightSize = 0.2;
+				intensity = 75;
+			};
+			class GreenStill: RedStill
 			{
 				name = "zeleny pozicni";
-				color[] = {0.03,0.3,0.03,1};
-				ambient[] = {0.003,0.03,0.003,1};
-				brightness = 0.05;
+				color[] = {0.0,0.8,0.0};
+				ambient[] = {0.0,0.08,0.0};
 				blinking = "false";
+				intensity = 75;
 			};
-			class WhiteBlinking
+			class WhiteBlinking: RedStill
 			{
 				name = "bily pozicni blik";
-				color[] = {0.0388,0.0388,0.0388,1};
-				ambient[] = {0.03,0.023,0.0056,1};
-				brightness = 0.05;
-				blinking = "true";
+				color[] = {1.0,1.0,1.0};
+				ambient[] = {0.1,0.1,0.1};
+				blinking = 1;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.2;
+				drawLightCenterSize = 0.04;
+				intensity = 75;
 			};
-			class RedBlinking
+			class RedBlinking: RedStill
 			{
 				name = "cerveny pozicni blik";
-				color[] = {0.12,0.006,0.006,1.0};
-				ambient[] = {0.1,0.01,0.01,1.0};
-				brightness = 0.001;
-				blinking = "true";
+				color[] = {0.9,0.15,0.1};
+				ambient[] = {0.09,0.015,0.01};
+				blinking = 1;
+				blinkingPattern[] = {0.2,1.3};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.25;
+				drawLightCenterSize = 0.08;
+				intensity = 75;
 			};
 		};
 		class Reflectors
 		{
 			class Middle
 			{
-				color[] = {7000,7500,10000,1};
-				ambient[] = {100,100,100,0};
-				position = "L svetlo";
-				direction = "konec L svetla";
+				position = "gun_begin";
+				direction = "gunnerview";
 				hitpoint = "L svetlo";
 				selection = "L svetlo";
 				size = 1;
-				innerAngle = 20;
-				outerAngle = 60;
-				coneFadeCoef = 10;
-				intensity = 50;
+				color[] = {0.07,0.99,0.89};
+				ambient[] = {0.0085,0.0095,0.01};
+				innerAngle = 45;
+				outerAngle = 90;
+				coneFadeCoef = 5;
+				intensity = 100000;
 				useFlare = 1;
 				dayLight = 0;
-				FlareSize = 8;
+				FlareSize = 4;
 				flareMaxDistance = 300;
 				class Attenuation
 				{
-					start = 1;
+					start = 0;
 					constant = 0;
-					linear = 0;
-					quadratic = 4;
+					linear = 5;
+					quadratic = 2;
+					hardLimitStart = 400;
+					hardLimitEnd = 500;
 				};
-			};
+		   };
 		};
 		class HitPoints: HitPoints
 		{
@@ -975,6 +1004,7 @@ class CfgVehicles
 				class OpticsIn {
 				class Wide {
 					gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+					directionStabilized=0;
 					initanglex = 0;
 					initangley = 0;
 					initfov = 0.466;
@@ -990,6 +1020,7 @@ class CfgVehicles
 				};
 				class Medium: Wide {
 					gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+					directionStabilized=0;
 					initfov = 0.093;
 					maxfov = 0.093;
 					minfov = 0.093;
@@ -997,6 +1028,7 @@ class CfgVehicles
 				};
 				class Narrow: Wide {
 					gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+					directionStabilized=0;
 					initfov = 0.020;
 					maxfov = 0.020;
 					minfov = 0.020;
@@ -1005,6 +1037,7 @@ class CfgVehicles
 					class Far: Wide
 					{
 						opticsDisplayName = "F";
+						directionStabilized=0;
 						initFov = 0.010;
 						minFov = 0.010;
 						maxFov = 0.010;
@@ -1016,15 +1049,15 @@ class CfgVehicles
 				{
 					class Monocular
 					{
-						initAngleX = 0;
-						minAngleX = -30;
-						maxAngleX = 30;
-						initAngleY = 0;
-						minAngleY = -100;
-						maxAngleY = 100;
-						initFov = 1.1;
-						minFov = 0.133;
-						maxFov = 1.1;
+      					initAngleX = 10;
+      					minAngleX = -75;
+      					maxAngleX = 85;
+      					initAngleY = 0;
+      					minAngleY = -170;
+      					maxAngleY = 170;
+      					initFov = 1.1;
+      					minFov = 0.133;
+      					maxFov = 1.1;
 						visionMode[] = {"Normal","NVG"};
 						gunnerOpticsModel = "";
 						gunnerOpticsEffect[] = {};
@@ -1039,17 +1072,6 @@ class CfgVehicles
 				source = "revolving";
 				weapon = "M197";
 			};
-			class mainRotor_folded
-			{
-				source = "user";
-      				animPeriod = 0.001;
-      				initPhase = 1;
-			};
-			class mainRotor_unfolded:mainRotor_folded
-			{
-                                 initPhase = 0;
-			};
-			class rotorShaft_unfolded:mainRotor_unfolded{};
 		};
 		class Library
 		{
@@ -1098,7 +1120,7 @@ class CfgVehicles
 		destrType="DestructWreck";
 		scope = 2;
 		side=1;
-		audible = 5;
+		audible = 7;
 		maximumLoad = 2500;
 		AGM_FastRoping = 1;
 		AGM_FastRoping_Positions[] = {{1.4, -0.15, 0.10}, {-1.4, -0.15, 0.10}};
@@ -1108,7 +1130,7 @@ class CfgVehicles
 		picture = "gunfighter\UI\picture_UH1Y_CA.paa";
 		icon="gunfighter\UI\icon_UH1Y_CA.paa";
 		mapSize = 15;
-		cost=500000;
+		cost=5000000;
 		displayName = "UH1Y Venom";
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		faction = "BLU_F";
@@ -1117,9 +1139,10 @@ class CfgVehicles
 		cargoCanEject = 1;
 		driverCanEject = 1;
 		getInRadius = 2.5;
-		camouflage = 7;
+		camouflage = 50;
 		crewVulnerable = 1;
 		unitInfoTypeRTD = "RscUnitInfoAirRTDFullDigital";
+		driveOnComponent[] = {"Skids"};
 		simulation = "helicopterrtd";
 		class RotorLibHelicopterProperties
 		{
@@ -1142,8 +1165,8 @@ class CfgVehicles
 		{
 		  	libTextDesc = "UH1Y";
 		};
-		fuelCapacity = 800;
-		fuelConsumptionRate = 0.103;
+		fuelCapacity = 1200;
+		fuelConsumptionRate = 0.138;
 		selectionHRotorStill = "mala vrtule staticka";
 		selectionHRotorMove = "mala vrtule blur";
 		selectionVRotorStill = "velka vrtule staticka";
@@ -1167,11 +1190,13 @@ class CfgVehicles
 		backRotorForceCoef = 0.5;//tailrotor(strength of horzontal movement=)
 		liftForceCoef = 1.3;
 		maxfordingdepth = 0.55;
-		mainBladeRadius = 6.2;
-		tailBladeRadius = 1.3;
+		mainBladeRadius = 6.1;
+		tailBladeRadius = 1.2;
+  		mainBladeCenter = "velka vrtule";
+  		tailBladeCenter = "mala vrtule";
 		sensitivity = 3;
 		sensitivityear = 3;
-		accuracy=1000;
+		accuracy=1;
 		maxMainRotorDive = 0;
 		minMainRotorDive = -0;
 		mainrotordive = 0;
@@ -1192,7 +1217,8 @@ class CfgVehicles
 		turretcansee = "31";
 		armor = 30;
 		armorStructural = 1;
-		damageResistance = 0.004;
+		damageResistance = 0.01039;
+		epeImpulseDamageCoef = 20;
 		weapons[]={"master_arms_safe","FFARLauncher_14","CMFlareLauncher"};
 		magazines[]={"14Rnd_FFAR","240Rnd_CMFlare_Chaff_Magazine"};
 		
@@ -1224,7 +1250,7 @@ class CfgVehicles
 		cargoAction[]={"UH1Y_Cargo02","UH1Y_Cargo03","UH1Y_Cargo03","UH1Y_Cargo02","UH1Y_Cargo01","UH1Y_Cargo01","UH1Y_Cargo01"};
 		cargoIsCoDriver[] = {0,0,0,0,0,0,0,0,0};
 
-		gunnerUsesPilotView=1;
+		gunnerUsesPilotView=false;
 		gunnerOpticsModel = "";
 		enableManualFire = 1;
 
@@ -1246,12 +1272,12 @@ class CfgVehicles
 			class _xx_FirstAidKit
 			{
 				name = "FirstAidKit";
-				count = 20;
+				count = 5;
 			};
 			class _xx_Medikit
 			{
 				name = "Medikit";
-				count = 3;
+				count = 1;
 			};
 		};
 		initCargoAngleY= 10; // cargo viewing limitations
@@ -1325,7 +1351,7 @@ class CfgVehicles
 						initFov = 0.466;
 						minFov = 0.466;
 						maxFov = 0.466;
-						visionMode[] = {"Normal","Ti"};
+						visionMode[] = {"Normal","NVG","Ti"};
 						thermalMode[] = {0,1};
 						gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
 					
@@ -1362,20 +1388,15 @@ class CfgVehicles
 					{
 					class Monocular
 					{
-						initAngleX=0;
-						minAngleX=-30;
-						maxAngleX=30;
-						initAngleY=0;
-						minAngleY=-100;
-						maxAngleY=100;
-						initFov=1.1;
-						minFov=0.133;
-						maxFov=1.1;
-						visionMode[]=
-						{
-							"Normal",
-							"NVG"
-						};
+      					initAngleX = 10;
+      					minAngleX = -75;
+      					maxAngleX = 85;
+      					initAngleY = 0;
+      					minAngleY = -170;
+      					maxAngleY = 170;
+      					initFov = 1.1;
+      					minFov = 0.133;
+      					maxFov = 1.1;
 						gunnerOpticsModel="";
 						gunnerOpticsEffect[]={};
 					};
@@ -1390,6 +1411,7 @@ class CfgVehicles
 				minElev=-60; maxElev=+30; initElev=-0;
 				minTurn=-5; maxTurn=185; initTurn=0;
 				soundServo[]={,db-40,1.0};
+				selectionFireAnim="zasleh_1";
 				animationSourceHatch="";
 				gunBeg="muzzle_1";
 				gunEnd="chamber_1";
@@ -1467,7 +1489,7 @@ class CfgVehicles
 	gunnerName = "Passenger (BenchLeft)";	/// name of the position in the Action menu
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
-	proxyIndex = 8;	/// what cargo proxy is used according to index in the model
+	proxyIndex = 2;	/// what cargo proxy is used according to index in the model
 	maxElev = 10; /// what is the highest possible elevation of the turret
 	minElev = -65; /// what is the lowest possible elevation of the turret
 	maxTurn = 120; /// what is the left-most possible turn of the turret
@@ -1531,7 +1553,7 @@ class CfgVehicles
 	gunnerName = "Passenger (Right)";	/// name of the position in the Action menu
 	memoryPointGunnerOptics = "Eye";
 	gunnerCanEject = 1;
-	proxyIndex = 9;	/// what cargo proxy is used according to index in the model
+	proxyIndex = 3;	/// what cargo proxy is used according to index in the model
 	maxElev = 10; /// what is the highest possible elevation of the turret
 	minElev = -65; /// what is the lowest possible elevation of the turret
 	maxTurn = 88; /// what is the left-most possible turn of the turret
@@ -2074,76 +2096,100 @@ class CfgVehicles
 				};
 			};
 		};
-		class MarkerLights
+				class MarkerLights
 		{
-			class WhiteStill
-			{
-				name = "bily pozicni";
-				color[] = {0.0388,0.0388,0.0388,1.0};
-				ambient[] = {0.03,0.023,0.0056,1.0};
-				brightness = 0.05;
-				blinking = "false";
-			};
 			class RedStill
 			{
 				name = "cerveny pozicni";
-				color[] = {1000,0,0,1};
-				ambient[] = {1,0,0,1};
-				brightness = 0.05;
+				color[] = {0.8,0.0,0.0};
+				ambient[] = {0.08,0.0,0.0};
 				blinking = "false";
+				intensity = 75;
+				drawLight = 1;
+				drawLightSize = 0.15;
+				drawLightCenterSize = 0.04;
+				dayLight = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 25;
+					quadratic = 50;
+					hardLimitStart = 0.75;
+					hardLimitEnd = 1;
+				};
 			};
-			class GreenStill
+			class WhiteStill: RedStill
+			{
+				name = "bily pozicni";
+				color[] = {1.0,1.0,1.0};
+				ambient[] = {0.1,0.1,0.1};
+				blinking = "false";
+				drawLightSize = 0.2;
+				intensity = 75;
+			};
+			class GreenStill: RedStill
 			{
 				name = "zeleny pozicni";
-				color[] = {0.03,0.3,0.03,1};
-				ambient[] = {0.003,0.03,0.003,1};
-				brightness = 0.05;
+				color[] = {0.0,0.8,0.0};
+				ambient[] = {0.0,0.08,0.0};
 				blinking = "false";
+				intensity = 75;
 			};
-			class WhiteBlinking
+			class WhiteBlinking: RedStill
 			{
 				name = "bily pozicni blik";
-				color[] = {0.0388,0.0388,0.0388,1};
-				ambient[] = {0.03,0.023,0.0056,1};
-				brightness = 0.05;
-				blinking = "true";
+				color[] = {1.0,1.0,1.0};
+				ambient[] = {0.1,0.1,0.1};
+				blinking = 1;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.2;
+				drawLightCenterSize = 0.04;
+				intensity = 75;
 			};
-			class RedBlinking
+			class RedBlinking: RedStill
 			{
 				name = "cerveny pozicni blik";
-				color[] = {0.12,0.006,0.006,1.0};
-				ambient[] = {0.1,0.01,0.01,1.0};
-				brightness = 0.001;
-				blinking = "true";
+				color[] = {0.9,0.15,0.1};
+				ambient[] = {0.09,0.015,0.01};
+				blinking = 1;
+				blinkingPattern[] = {0.2,1.3};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.25;
+				drawLightCenterSize = 0.08;
+				intensity = 75;
 			};
 		};
 		class Reflectors
 		{
 			class Middle
 			{
-				color[] = {7000,7500,10000,1};
-				ambient[] = {100,100,100,0};
-				position = "svetlo";
-				direction = "svetlo konec";
+				position = "gun_begin";
+				direction = "gun_end";
 				hitpoint = "svetlo";
 				selection = "svetlo";
 				size = 1;
-				innerAngle = 20;
-				outerAngle = 60;
-				coneFadeCoef = 10;
-				intensity = 50;
+				color[] = {0.07,0.99,0.89};
+				ambient[] = {0.0085,0.0095,0.01};
+				innerAngle = 45;
+				outerAngle = 90;
+				coneFadeCoef = 5;
+				intensity = 100000;
 				useFlare = 1;
 				dayLight = 0;
-				FlareSize = 8;
+				FlareSize = 4;
 				flareMaxDistance = 300;
 				class Attenuation
 				{
-					start = 1;
+					start = 0;
 					constant = 0;
-					linear = 0;
-					quadratic = 4;
+					linear = 5;
+					quadratic = 2;
+					hardLimitStart = 400;
+					hardLimitEnd = 500;
 				};
-			};
+		   };
 		};
 
 		// TODO: add destruction of glass

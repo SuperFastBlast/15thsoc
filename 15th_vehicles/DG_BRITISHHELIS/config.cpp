@@ -98,12 +98,12 @@ class CfgVehicles
 		faction = BLU_F;
 
         driveOnComponent[] = {"Wheels"};
-		camouflage = 7;
+		camouflage = 10;
 		maxfordingdepth = 1;
 		sensitivity = 3;
 		sensitivityear = 3;
 		canBeShot = true;
-		audible = 5;		
+		audible = 7;		
 		
         AGM_FastRoping = 1;         //  X    Z    Y
         AGM_FastRoping_Positions[] = {{0.6, -5, -0.5}, {-0.2, -5, -0.5}};		
@@ -140,7 +140,7 @@ class CfgVehicles
 					maxFov				= 0.5;	/// Field of view size settings
                     visionMode[] 		= {"Normal","NVG", "TI"};	/// what vision modes are available
                     thermalMode[] 		= {0,1};			/// not necessary as there is no TI mode defined, but just in case
-                    gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d"; /// some optics model
+                    gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F"; /// some optics model
 				};
 				showMiniMapInOptics				= true;	/// allows showing GPS mini map in optics
 				showUAVViewpInOptics			= true;	/// allows showing UAV feed in this optics
@@ -186,6 +186,7 @@ class CfgVehicles
 		memoryPointsGetInCargoDir[] = {"pos cargo dir"};
 		driverCanEject=1;
 		cargoCanEject = 1;
+		gunnerUsesPilotView=false;
 
 		transportSoldier = 14;
 		transportMaxBackpacks = 28;
@@ -219,56 +220,94 @@ class CfgVehicles
 		{
 		   class Light
 		   {
-				color[] = {7000,7500,10000,1};
-				ambient[] = {100,100,100,0};
-				   position = "light_1_1_pos";
-				   direction = "light_1_1_dir";
-				   hitpoint = "light_1_1_pos";
+				   position = "FLIR_begin";
+				   direction = "FLIR_end";
+				   hitpoint = "L svetlo";
 				   selection = "L svetlo";
-				   size = 1;
-				innerAngle = 20;
-				outerAngle = 60;
-				coneFadeCoef = 10;
-				intensity = 50;
+				size = 1;
+				color[] = {0.07,0.99,0.89};
+				ambient[] = {0.0085,0.0095,0.01};
+				innerAngle = 45;
+				outerAngle = 90;
+				coneFadeCoef = 5;
+				intensity = 100000;
 				useFlare = 1;
 				dayLight = 0;
-				FlareSize = 8;
+				FlareSize = 4;
 				flareMaxDistance = 300;
 				class Attenuation
 				{
-					start = 1;
+					start = 0;
 					constant = 0;
-					linear = 0;
-					quadratic = 4;
+					linear = 5;
+					quadratic = 2;
+					hardLimitStart = 400;
+					hardLimitEnd = 500;
 				};
 		   };
 		};
 		
 		class MarkerLights
 		{
-			class GreenStill
-			{
-				name = "light_nav_right";
-				color[] = {0.006, 0.12, 0.006,1.0};
-				ambient[] = {0.01, 0.1, 0.01,1.0};
-				brightness = 0.05;
-				blinking = false;
-			};
-			class WhiteBlinking
-			{
-				name = "light_nav_top";
-				color[]={0.0388,0.0388,0.0388,1.0};
-				ambient[]={0.03,0.023,0.0056,1.0};
-				brightness=0.05;
-				blinking = true;
-			};
 			class RedStill
 			{
 				name="light_nav_left";
-				color[]={0.12,0.006,0.006,1.0};
-				ambient[]={0.1,0.01,0.01,1.0};
-				brightness=0.05;
-				blinking=false;
+				color[] = {0.8,0.0,0.0};
+				ambient[] = {0.08,0.0,0.0};
+				blinking = "false";
+				intensity = 75;
+				drawLight = 1;
+				drawLightSize = 0.15;
+				drawLightCenterSize = 0.04;
+				dayLight = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 25;
+					quadratic = 50;
+					hardLimitStart = 0.75;
+					hardLimitEnd = 1;
+				};
+			};
+			class GreenStill: Redstill
+			{
+				name = "light_nav_right";
+				color[] = {0.0,0.8,0.0};
+				ambient[] = {0.0,0.08,0.0};
+				blinking = "false";
+				intensity = 75;
+			};
+			class WhiteStill: Redstill
+			{
+				name = "bily pozicni";
+				color[] = {1.0,1.0,1.0};
+				ambient[] = {0.1,0.1,0.1};
+				blinking = 0;
+			};
+			class WhiteBlinking: Redstill
+			{
+				name = "light_nav_top";
+				color[] = {1.0,1.0,1.0};
+				ambient[] = {0.1,0.1,0.1};
+				blinking = 1;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.2;
+				drawLightCenterSize = 0.04;
+				intensity = 75;
+			};
+			class RedBlinking: RedStill
+			{
+				name = "cerveny pozicni blik";
+				color[] = {0.9,0.15,0.1};
+				ambient[] = {0.09,0.015,0.01};
+				blinking = 1;
+				blinkingPattern[] = {0.2,1.3};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.25;
+				drawLightCenterSize = 0.08;
+				intensity = 75;
 			};
 		};		
 		
@@ -312,7 +351,7 @@ class CfgVehicles
 					pointPosition		= "FLIR_begin"; 	/// memory point of PiP origin
 					pointDirection		= "FLIR_end"; 	/// memory point of PiP direction
 					renderQuality 		= 4;			/// what quality should the PiP be
-					renderVisionMode 	= 0;			/// zero means standard vision
+					renderVisionMode 	= 2;			/// zero means standard vision
 					fov 				= 0.466;			/// what is the angle of the PiP field of view
 				}; 	
 			};
@@ -431,10 +470,13 @@ class CfgVehicles
 		};
 		
 		maxSpeed = 309; // according to our library
-		accuracy=1.5;
+		accuracy=1;
 		cost=10000000;
+		fuelCapacity=1500;
+		fuelConsumptionRate=0.138;
 		armor=60;
-		damageResistance = 0.00555;
+		damageResistance = 0.01039;
+		epeImpulseDamageCoef = 20;
 		vehicleClass = "Air";
 		laserScanner = true;
 		MainRotorSpeed = 1.0;
@@ -526,6 +568,7 @@ class OpticsIn
 	class WideNGS
 	{
 		opticsDisplayName = "W";
+		directionStabilized=0;
 		initAngleX = 0;
 		minAngleX = -35;
 		maxAngleX = 10;
@@ -538,8 +581,7 @@ class OpticsIn
 		visionMode[] = {"Normal","NVG", "Ti"};
 		thermalMode[] = {0, 1};
 		gunnerOpticsColor[]= {0.15000001,1,0.15000001,1};
-		gunnerOpticsModel = "A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
-		directionStabilized=0;
+		gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
 		opticsPPEffects[]=
 		{
 			"OpticsCHAbera2",
@@ -549,6 +591,7 @@ class OpticsIn
 	class Wide 
 	{
 		opticsDisplayName = "W";
+		directionStabilized=0;
 		initAngleX = 0;
 		minAngleX = -35;
 		maxAngleX = 10;
@@ -561,9 +604,7 @@ class OpticsIn
 		visionMode[] = {"Normal","NVG", "Ti"};
 		thermalMode[] = {0, 1};
 		gunnerOpticsColor[]= {0.15000001,1,0.15000001,1};
-		gunnerOpticsModel = "A3\Weapons_F\Reticle\Optics_Gunner_MBT_02_w_F.p3d";
-		//gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-		directionStabilized=1;
+		gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
 		opticsPPEffects[]=
 		{
 			"OpticsCHAbera2",
@@ -580,11 +621,9 @@ class OpticsIn
 		initFov = 0.2;
 		minFov = 0.2;
 		maxFov = 0.2;
-		//gunnerOpticsModel = "A3\Weapons_F\Reticle\Optics_Gunner_MBT_02_w_F.p3d";
-		//gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-		gunnerOpticsModel = "A3\Weapons_F\Reticle\Optics_Gunner_MBT_02_m_F.p3d";
+		gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
 		gunnerOpticsColor[]= {0,0,0,1};
-		directionStabilized=1;	// Camera Stabilizing Boolean
+		directionStabilized=0;	// Camera Stabilizing Boolean
 		opticsPPEffects[]=
 		{
 			"OpticsCHAbera2",
@@ -597,18 +636,16 @@ class OpticsIn
 		initFov = 0.1;
 		minFov = 0.1;
 		maxFov = 0.1;
-		directionStabilized=1;	// Camera Stabilizing Boolean
+		directionStabilized=0;	// Camera Stabilizing Boolean
 		gunnerOpticsColor[]= {0,0,0,1};
-		//gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
-		gunnerOpticsModel = "A3\Weapons_F\Reticle\Optics_Gunner_MBT_02_m_F.p3d";
+		gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
 	};
 	class Narrow : Wide 
 	{
 		opticsDisplayName = "N";
 		gunnerOpticsColor[]= {0,0,0,1};
-		gunnerOpticsModel = "A3\Weapons_F\Reticle\Optics_Gunner_MBT_02_n_F.p3d";
-		//gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		directionStabilized=1;	// Camera Stabilizing Boolean
+		gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
+		directionStabilized=0;	// Camera Stabilizing Boolean
 		initFov = 0.02;
 		minFov = 0.02;
 		maxFov = 0.02;
@@ -617,9 +654,8 @@ class OpticsIn
 	{
 		opticsDisplayName = "N";
 		gunnerOpticsColor[]= {0,0,0,1};
-		gunnerOpticsModel = "A3\Weapons_F\Reticle\Optics_Gunner_MBT_02_n_F.p3d";
-		//gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		directionStabilized=1;	// Camera Stabilizing Boolean
+		gunnerOpticsModel = "\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F";
+		directionStabilized=0;	// Camera Stabilizing Boolean
 		initFov = 0.01;
 		minFov = 0.01;
 		maxFov = 0.01;
@@ -630,10 +666,15 @@ class OpticsIn
 						{
 							class Monocular // 1x-3.5x
 							{
-								initAngleX=0; minAngleX=-30; maxAngleX=+30;
-								initAngleY=0; minAngleY=-100; maxAngleY=+100;
-								initFov=1.1; minFov=0.133; maxFov=1.1;
-								visionMode[] = {"Normal","NVG"};
+      							initAngleX = 10;
+      							minAngleX = -75;
+     							maxAngleX = 85;
+      							initAngleY = 0;
+      							minAngleY = -170;
+      							maxAngleY = 170;
+      							initFov = 1.1;
+      							minFov = 0.133;
+      							maxFov = 1.1;
 								gunnerOpticsModel = "";
 								gunnerOpticsEffect[] = {};
 							};
@@ -1363,97 +1404,49 @@ class OpticsIn
 			};
 			class RainInt
 			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\rain1_int",
-					1,
-					1,
-					100
-				};
+			sound[]={"A3\Sounds_F\vehicles\noises\rain1_int",1,1,100};
 				frequency=1;
 				volume="(1-camPos)*(rain - rotorSpeed/2)*2";
 			};
 			class SlingLoadDownExt
 			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
-					1,
-					1,
-					500
-				};
+				sound[]={"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",1,1,500};
 				frequency=1;
 				volume="camPos*(slingLoadActive factor [0,-1])";
 			};
 			class SlingLoadUpExt
 			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
-					1,
-					1,
-					500
-				};
+				sound[]={"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",1,1,500};
 				frequency=1;
 				volume="camPos*(slingLoadActive factor [0,1])";
 			};
 			class SlingLoadDownInt
 			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
-					1,
-					1,
-					500
-				};
+				sound[]={"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",1,1,500};
 				frequency=1;
 				volume="(1-camPos)*(slingLoadActive factor [0,-1])";
 			};
 			class SlingLoadUpInt
 			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
-					1,
-					1,
-					500
-				};
+				sound[]={"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",1,1,500};
 				frequency=1;
 				volume="(1-camPos)*(slingLoadActive factor [0,1])";
 			};
 			class WindInt
 			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\wind_closed",
-					0.70794576,
-					1,
-					50
-				};
+				sound[]={"A3\Sounds_F\vehicles\air\noises\wind_closed",0.70794576,1,50};
 				frequency=1;
 				volume="(1-camPos)*(speed factor[5, 50])*(speed factor[5, 50])";
 			};
 			class GStress
 			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\vehicle_stress2d",
-					0.70794576,
-					1,
-					50
-				};
+				sound[]={"A3\Sounds_F\vehicles\noises\vehicle_stress2d",0.70794576,1,50};
 				frequency=1;
 				volume="engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
 			};
 			class SpeedStress
 			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\vehicle_stress3",
-					0.70794576,
-					1,
-					50
-				};
+				sound[]={"A3\Sounds_F\vehicles\noises\vehicle_stress3",0.70794576,1,50};
 				frequency=1;
 				volume="(1-camPos)*(speed factor[40,60])";
 			};
@@ -1467,335 +1460,173 @@ class OpticsIn
 			{
 				class EngineExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Transport_02\Heli_Transport_02_ext_engine",
-						1.2589254,
-						1,
-						900
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\Heli_Transport_02\Heli_Transport_02_ext_engine",1.2589254,1,900};
 					frequency="rotorSpeed";
 					volume="camPos*(rotorSpeed-0.72)*4";
 				};
 				class RotorExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Transport_02\Heli_Transport_02_ext_rotor",
-						1.7782794,
-						1,
-						2000
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\Heli_Transport_02\Heli_Transport_02_ext_rotor",1.7782794,1,2000};
 					frequency="rotorSpeed * rotorSpeed * (1 - rotorThrust/6)";
 					volume="camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
 					cone[]={1.6,3.1400001,1.6,0.94999999};
 				};
 				class RotorNoiseExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Transport_02\rotor_swist",
-						0.70794576,
-						1,
-						800
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\Heli_Transport_02\rotor_swist",0.70794576,1,800};
 					frequency=1;
 					volume="camPos * (rotorThrust factor [0.7, 0.9])";
 					cone[]={0.69999999,1.3,1,0};
 				};
 				class EngineInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Transport_02\Heli_Transport_02_int_engine",
-						1,
-						1
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\Heli_Transport_02\Heli_Transport_02_int_engine",1,1};
 					frequency="rotorSpeed";
 					volume="(1-camPos)*(rotorSpeed-0.75)*4";
 				};
 				class RotorInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Transport_02\Heli_Transport_02_int_rotor",
-						1.2589254,
-						1
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\Heli_Transport_02\Heli_Transport_02_int_rotor",1.2589254,1};
 					frequency="rotorSpeed * rotorSpeed * (1 - rotorThrust/6)";
 					volume="(1-camPos)*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
 				};
 				class TransmissionDamageExt_phase1
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",
-						1,
-						1,
-						150
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",1,1,150};
 					frequency="0.66 + rotorSpeed / 3";
 					volume="camPos * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
 				};
 				class TransmissionDamageExt_phase2
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",
-						1,
-						1,
-						150
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",1,1,150};
 					frequency="0.66 + rotorSpeed / 3";
 					volume="camPos * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
 				};
 				class TransmissionDamageInt_phase1
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",
-						1,
-						1,
-						150
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",1,1,150};
 					frequency="0.66 + rotorSpeed / 3";
 					volume="(1 - camPos) * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
 				};
 				class TransmissionDamageInt_phase2
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",
-						1,
-						1,
-						150
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",1,1,150};
 					frequency="0.66 + rotorSpeed / 3";
 					volume="(1 - camPos) * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
 				};
 				class damageAlarmInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",
-						0.31622776,
-						1
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",0.31622776,1};
 					frequency=1;
 					volume="engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
 				};
 				class damageAlarmExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",
-						0.2238721,
-						1,
-						20
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",0.2238721,1,20};
 					frequency=1;
 					volume="engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
 				};
 				class rotorLowAlarmInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-						0.31622776,
-						1
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",0.31622776,1};
 					frequency=1;
 					volume="engineOn * (1 - camPos) * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
 				};
 				class rotorLowAlarmExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-						0.2238721,
-						1,
-						20
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",0.2238721,1,20};
 					frequency=1;
 					volume="engineOn * camPos * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
 				};
 				class scrubLandInt
 				{
 					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\wheelsInt",
-						1,
-						1,
-						100
-					};
+					{"A3\Sounds_F\vehicles\air\noises\wheelsInt",1,1,100};
 					frequency=1;
 					volume="2 * (1-camPos) * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
 				};
 				class scrubLandExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\dummysound",
-						1,
-						1,
-						100
-					};
+					sound[]={"A3\Sounds_F\dummysound",1,1,100};
 					frequency=1;
 					volume="camPos * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
 				};
 				class scrubBuildingInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\wheelsInt",
-						1,
-						1,
-						100
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\wheelsInt",1,1,100};
 					frequency=1;
 					volume="(1-camPos) * (scrubBuilding factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
 				};
 				class scrubBuildingExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\dummysound",
-						1,
-						1,
-						100
-					};
+					sound[]={"A3\Sounds_F\dummysound",1,1,100};
 					frequency=1;
 					volume="camPos * (scrubBuilding factor[0.02, 0.05])";
 				};
 				class scrubTreeInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",
-						1,
-						1,
-						100
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",1,1,100};
 					frequency=1;
 					volume="(1 - camPos) * ((scrubTree) factor [0, 0.01])";
 				};
 				class scrubTreeExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",
-						1,
-						1,
-						100
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",1,1,100};
 					frequency=1;
 					volume="camPos * ((scrubTree) factor [0, 0.01])";
 				};
 				class RainExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\noises\rain1_ext",
-						1,
-						1,
-						100
-					};
+					sound[]={"A3\Sounds_F\vehicles\noises\rain1_ext",1,1,100};
 					frequency=1;
 					volume="camPos * (rain - rotorSpeed/2) * 2";
 				};
 				class RainInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\noises\rain1_int",
-						1,
-						1,
-						100
-					};
+					sound[]={"A3\Sounds_F\vehicles\noises\rain1_int",1,1,100};
 					frequency=1;
 					volume="(1-camPos)*(rain - rotorSpeed/2)*2";
 				};
 				class SlingLoadDownExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
-						1,
-						1,
-						500
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",1,1,500};
 					frequency=1;
 					volume="camPos*(slingLoadActive factor [0,-1])";
 				};
 				class SlingLoadUpExt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
-						1,
-						1,
-						500
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",1,1,500};
 					frequency=1;
 					volume="camPos*(slingLoadActive factor [0,1])";
 				};
 				class SlingLoadDownInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
-						1,
-						1,
-						500
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",1,1,500};
 					frequency=1;
 					volume="(1-camPos)*(slingLoadActive factor [0,-1])";
 				};
 				class SlingLoadUpInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
-						1,
-						1,
-						500
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",1,1,500};
 					frequency=1;
 					volume="(1-camPos)*(slingLoadActive factor [0,1])";
 				};
 				class WindInt
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\wind_closed",
-						0.70794576,
-						1,
-						50
-					};
+					sound[]={"A3\Sounds_F\vehicles\air\noises\wind_closed",0.70794576,1,50};
 					frequency=1;
 					volume="(1-camPos)*(speed factor[5, 50])*(speed factor[5, 50])";
 				};
 				class GStress
 				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\noises\vehicle_stress2d",
-						0.70794576,
-						1,
-						50
-					};
+					sound[]={"A3\Sounds_F\vehicles\noises\vehicle_stress2d",0.70794576,1,50};
 					frequency=1;
 					volume="engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
 				};
 				class SpeedStress
 				{
 					sound[]=
-					{
-						"A3\Sounds_F\vehicles\noises\vehicle_stress3",
-						0.70794576,
-						1,
-						50
-					};
+					{"A3\Sounds_F\vehicles\noises\vehicle_stress3",0.70794576,1,50};
 					frequency=1;
 					volume="(1-camPos)*(speed factor[40,60])";
 				};

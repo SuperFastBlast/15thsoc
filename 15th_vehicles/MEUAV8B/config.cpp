@@ -37,7 +37,7 @@ class CfgMovesWomen: CfgMovesBasic
 		AV8B_Pilot = "";
 	};
 };
-class DefaultEventhandlers;
+class defaultEventhandlers;
 class CfgPatches
 {
 	class MEUAV8B
@@ -51,21 +51,15 @@ class CfgPatches
 };
 class CfgAmmo
 {
+	class Rocketbase;
 	class MissileBase;
 	class B_25mm;
-	class LaserBombCore;
- 	class MEU_GBU12: LaserBombCore
+	class Bo_GBU12_LGB;
+ 	class MEU_GBU12: Bo_GBU12_LGB
  	{
-  	hit = 5000;
+  	hit = 500;
   	indirectHit = 1100;
-  	indirectHitRange = 12;
-  	soundHit1[] = {"A3\Sounds_F\weapons\Explosion\expl_big_1",2.5118864,1,2400};
-	soundHit2[] = {"A3\Sounds_F\weapons\Explosion\expl_big_2",2.5118864,1,2400};
-	soundHit3[] = {"A3\Sounds_F\weapons\Explosion\expl_big_3",2.5118864,1,2400};
-	soundHit4[] = {"A3\Sounds_F\weapons\Explosion\expl_shell_1",2.5118864,1,2400};
-	soundHit5[] = {"A3\Sounds_F\weapons\Explosion\expl_shell_2",2.5118864,1,2400};
-	multiSoundHit[] = {"soundHit1",0.2,"soundHit2",0.2,"soundHit3",0.2,"soundHit4",0.2,"soundHit5",0.2};
-	explosionSoundEffect = "DefaultExplosion";
+  	indirectHitRange = 175;
   	model = "\meuav8b\gbu12fly";
   	proxyShape = "\meuav8b\gbu12_proxy";
   	trackOversteer = 1;
@@ -73,6 +67,7 @@ class CfgAmmo
   	maneuvrability = 20;
   	CraterEffects = "BombCrater";
  	explosionEffects = "BombExplosion";
+	explosionSoundEffect = "DefaultExplosion";
   	explosionTime = 2;
   	fuseDistance = 35;
   	whistleDist = 24;
@@ -80,20 +75,51 @@ class CfgAmmo
 	nvLock = 1;
 	laserlock = 1;
 	maverickWeaponIndexOffset = 0;
+	dangerRadiusHit= -1;
+	suppressionRadiusHit= 350;
+  class CamShakeExplode
+  {
+   power = "(230*0.2)";
+   duration = "((round (230^0.5))*0.2 max 0.2)";
+   frequency = 20;
+   distance = "((30 + 230^0.5)*8)";
+  };
+  class CamShakeHit
+  {
+   power = 230;
+   duration = "((round (230^0.25))*0.2 max 0.2)";
+   frequency = 20;
+   distance = 1;
+  };
+  class CamShakeFire
+  {
+   power = "(230^0.25)";
+   duration = "((round (230^0.5))*0.2 max 0.2)";
+   frequency = 20;
+   distance = "((230^0.5)*8)";
+  };
+  class CamShakePlayerFire
+  {
+   power = 5;
+   duration = 0.1;
+   frequency = 20;
+   distance = 1;
+  };
  };
 	class MEU_B_25mm: B_25mm
 	{
 		hit=75;
-		indirectHit=10;
+		indirectHit=12;
 		indirectHitRange=10;
 		cost=25;
 		airLock=1;
-		explosive=0.3;
-		caliber=2.3299999;
+		explosive=0.4;
+		caliber=3.8;
 		deflecting=0;
 		deflectingChance = 0;
 		deflectingRandomness = 0;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		soundFly[] = {"A3\Sounds_F\weapons\Explosion\cannon_fly",1.0,1,50};
 		trackLead = 0;
 		tracerScale = 1;
 		tracerStartTime = 0.1;
@@ -104,18 +130,46 @@ class CfgAmmo
 		audibleFire = 32;
 		visibleFireTime = 15;
 		audiblefiretime = 15;
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 25;
+  class CamShakeExplode
+  {
+   power = "(25*0.2)";
+   duration = "((round (25^0.5))*0.2 max 0.2)";
+   frequency = 20;
+   distance = "((2 + 25^0.5)*8)";
+  };
+  class CamShakeHit
+  {
+   power = 25;
+   duration = "((round (25^0.25))*0.2 max 0.2)";
+   frequency = 20;
+   distance = 1;
+  };
+  class CamShakeFire
+  {
+   power = "(25^0.25)";
+   duration = "((round (25^0.5))*0.2 max 0.2)";
+   frequency = 20;
+   distance = "((25^0.5)*8)";
+  };
+  class CamShakePlayerFire
+  {
+   power = 0.01;
+   duration = 0.1;
+   frequency = 20;
+   distance = 1;
+  };
 	};
  	class MEU_Maverick_AT: MissileBase
  	{
 	
   	model = "\MEUAV8B\agm65_fly";
   	proxyShape = "\MEUAV8B\agm65_proxy";
-	craterEffects = "AAMissileCrater";
-	explosionEffects = "AAMissileExplosion";
-	muzzleEffect = "BIS_fnc_effectFiredHeliRocket";
   	hit = 2100;
   	indirectHit = 85;
-  	indirectHitRange = 8;
+  	indirectHitRange = 10;
+	soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2",0.5011872,1.3,400};
   	cost = 1500;
 	airLock = 0;
 	laserLock = 1;
@@ -136,8 +190,13 @@ class CfgAmmo
   	maxSpeed = 828;
   	thrustTime = 5;
   	thrust = 240;
-  	effectsMissile = "missile3";
+  	craterEffects = "AAMissileCrater";
+	effectsMissile = "missile3";
+	explosionEffects = "AAMissileExplosion";
+	muzzleEffect = "BIS_fnc_effectFiredHeliRocket";
   	whistleDist = 20;
+	dangerRadiusHit= -1;
+	suppressionRadiusHit= 25;
 	maverickWeaponIndexOffset = 0;
 		class CamShakeExplode
 		{
@@ -177,6 +236,7 @@ class CfgAmmo
 		indirectHitRange = 10;
 		maneuvrability = 27;
 		simulationStep = 0.002;
+		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2",0.5011872,1.3,400};
 		airLock = 1;
 		irLock = 1;
 		cost = 15000;
@@ -189,11 +249,28 @@ class CfgAmmo
 		thrustTime = 5.0;
 		thrust = 2900;
 		fuseDistance = 500;
-		CraterEffects = "AAMissileCrater";
-		explosionEffects = "AAMissileExplosion";
-		effectsMissile = "missile3";
+  	craterEffects = "AAMissileCrater";
+	effectsMissile = "missile3";
+	explosionEffects = "AAMissileExplosion";
+	muzzleEffect = "BIS_fnc_effectFiredHeliRocket";
 		whistleDist = 20;
 		maverickWeaponIndexOffset = 0;
+	};
+	class R_Hydra: RocketBase
+	{
+		hit = 250;
+		indirectHit = 50;
+		indirectHitRange = 15;
+		cost = 200;
+		maxSpeed = 740;
+		thrustTime = 1.1;
+		thrust = 570;
+		sideAirFriction = 0.2;
+		timeToLive = 20;
+		fuseDistance = 40;
+		whistleDist = 24;
+		dangerRadiusHit= -1;
+		suppressionRadiusHit= 35;
 	};
 };
 class CfgMagazines
@@ -204,12 +281,19 @@ class CfgMagazines
 	{
 		ammo = "MEU_B_25mm";
 		tracersevery = 1;
-		maxLeadSpeed=50;
+		nameSound = "cannon";
 	};
 	class 24Rnd_Missiles;
 	class MEU_14Rnd_Rockets: 24Rnd_Missiles
 	{
+		displayName = "FFAR";
+		ammo = "R_Hydra";
 		count = 14;
+		initSpeed = 44;
+		maxLeadSpeed = 200;
+		nameSound = "rockets";
+		sound[] = {"A3\Sounds_F\weapons\Rockets\missile_1", 1.12202, 1.3, 1100};
+		reloadSound[] = {"A3\sounds_f\dummysound",0.00031622776,1};
 	};
 
 	class MEU_Missile_AGM_02_F: VehicleMagazine
@@ -259,11 +343,30 @@ class CfgWeapons
 	};
 	class MEU_gatling_25mm: gatling_25mm
 	{
+  		nameSound = "cannon";
+  		burst = 0;
+  		reloadTime = 0.034;
+		autoFire = 0;
+		displayName = "GAU-12 Cannon 25mm";
 		magazines[] = {"MEU_300Rnd_25mm_shells_T"};
 		class manual: manual
 		{
+			burst = 0;
+			autoFire = 1;
 			canLock=2;
 			displayname = "GAU-12 Cannon 25mm";
+			reloadTime = 0.034;
+   			sounds[] = {"StandardSound"};
+   			class StandardSound
+   			{
+    			begin1[] = {"A3\Sounds_F\Weapons\gatling\gatling5",db5,1,4500};
+    			soundBegin[] = {"begin1",0.33};
+    			weaponSoundEffect = "DefaultRifle";
+			closure1[] = {"A3\sounds_f\weapons\gatling\gatling_rotation_short_2",0.31622776,1,20};
+    			closure2[] = {"A3\sounds_f\weapons\gatling\gatling_rotation_short_3",0.31622776,1,20};
+    			soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			soundContinuous = 0;
+   };
 		};
 	};
 	class Missile_AGM_02_Plane_CAS_01_F;
@@ -330,7 +433,7 @@ class CfgWeapons
 			class StandardSound
 			{
 			weaponSoundEffect  = "DefaultRifle";
-			begin1[]={"A3\Sounds_F\weapons\Rockets\missile_2",1.1220185,1.3,1000};
+			begin1[]={"A3\Sounds_F\weapons\Rockets\missile_2",1.1220185,1.3,2000};
 			soundBegin[] = {Begin1,0.33};
 
 
@@ -348,6 +451,7 @@ class CfgVehicles
 	class MEUAV8B2: Plane
 	{
 		scope = 2;
+		simulation = "airplane";
 		crew = "B_Pilot_F";
 		destrType = "DestructWreck";
 		model = "\MEUav8b\av8b2";
@@ -358,9 +462,9 @@ class CfgVehicles
 		faction = "BLU_F";
 		displayName = "MEU AV-8B Harrier II (CAS)";
 		vehicleClass = "Air";
-		accuracy = 0.3;
+		accuracy = 1;
+		camouflage = 10;
 		typicalCargo[] = {"B_Pilot_F"};
-		simulation = "airplane";
 		getInAction = "pilot_plane_cas_01_Enter";
 		getOutAction = "pilot_plane_cas_01_Exit";
 		getInRadius = 10;
@@ -378,8 +482,8 @@ class CfgVehicles
 		maxSpeed = 1040;
 		landingSpeed = 200;
 		acceleration = 300;
-		vtol = 1;
- 		altFullForce = 13636;
+		vtol = 4;
+ 		altFullForce = 15000;
  		altNoForce = 35000;
 		rudderInfluence = 0.03;
 		aileronSensitivity = 0.8;
@@ -400,7 +504,6 @@ class CfgVehicles
 		envelope[] = {0.0,0.2,1.2,3.0,5.1,7.0,7.3,7,6.3,5.2,3.8,1.8,0.5,0};
 		thrustCoef[] = {0.9,0.8,0.9,1.3,1.2,1.2,1.1,1.0,0.9,0.2,0.1,0.1,0.0};
 		landingAoa = 0.174533;
-
   		minFireTime = 30;
 		driveOnComponent[] = {"Wheel_1","Wheel_2","Wheel_3_1","Wheel_3_2"};
 		enableGPS = 1;
@@ -412,12 +515,12 @@ class CfgVehicles
 		irTarget = true;
 		armor = 60;
 		damageResistance = 0.01246;
+		epeImpulseDamageCoef = 20;
 		cost = 20000000;
 		weapons[] = {"master_arms_safe","MEU_gatling_25mm","MEU_GBU12BombLauncher","MEU_Maverick_F","SidewinderLaucher_AV8B","MEU_FFAR_Smallpod","CMFlareLauncher"};
 		magazines[] = {"MEU_300Rnd_25mm_shells_T","MEU_Missile_AGM_02_F", "MEU_GBU12_LGB","MEU_Sidewinder","MEU_14Rnd_Rockets","240Rnd_CMFlare_Chaff_Magazine"};
 		insideSoundCoef = 0.09;
 		fov = 0.4;
-		gunAimDown = 0.07;
 		type = 2;
 		threat[] = {1,1,1};
 		availableForSupportTypes[] = {"CAS_Bombing"};
@@ -434,6 +537,71 @@ class CfgVehicles
 		waterEffect = "HeliWater";
 		memoryPointLRocket = "L raketa";
 		memoryPointRRocket = "P raketa";
+class MarkerLights
+		{
+			class RedStill
+			{
+				name = "cerveny pozicni";
+				color[] = {0.8,0.0,0.0};
+				ambient[] = {0.08,0.0,0.0};
+				blinking = "false";
+				intensity = 75;
+				drawLight = 1;
+				drawLightSize = 0.15;
+				drawLightCenterSize = 0.04;
+				dayLight = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 25;
+					quadratic = 50;
+					hardLimitStart = 0.75;
+					hardLimitEnd = 1;
+				};
+			};
+			class WhiteStill: RedStill
+			{
+				name = "bily pozicni";
+				color[] = {1.0,1.0,1.0};
+				ambient[] = {0.1,0.1,0.1};
+				blinking = "false";
+				drawLightSize = 0.2;
+				intensity = 75;
+			};
+			class GreenStill: RedStill
+			{
+				name = "zeleny pozicni";
+				color[] = {0.0,0.8,0.0};
+				ambient[] = {0.0,0.08,0.0};
+				blinking = "false";
+				intensity = 75;
+			};
+			class WhiteBlinking: RedStill
+			{
+				name = "bily pozicni blik";
+				color[] = {1.0,1.0,1.0};
+				ambient[] = {0.1,0.1,0.1};
+				blinking = 1;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.2;
+				drawLightCenterSize = 0.04;
+				intensity = 75;
+			};
+			class RedBlinking: RedStill
+			{
+				name = "cerveny pozicni blik";
+				color[] = {0.9,0.15,0.1};
+				ambient[] = {0.09,0.015,0.01};
+				blinking = 1;
+				blinkingPattern[] = {0.2,1.3};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.25;
+				drawLightCenterSize = 0.08;
+				intensity = 75;
+			};
+		};
 		class Reflectors
 		{
 			class Left
@@ -451,7 +619,7 @@ class CfgVehicles
 				coneFadeCoef = 5;
 				useFlare = 1;
 				flareSize = 4;
-				flareMaxDistance = 800;
+				flareMaxDistance = 300;
 				class Attenuation
 				{
 					start = 0;
@@ -2034,7 +2202,7 @@ condition = "collisionlights";
 			};
 			class Muzzle_flash
 			{
-				source = "ammorandom";
+				source = "machinegun";
 				weapon = "MEU_gatling_25mm";
 			};
 		};
@@ -2131,22 +2299,6 @@ condition = "collisionlights";
 				position = "body_vapour_R_S";
 			};
 		};
-	};
-	class MEUAV8BWreck: PlaneWreck
-	{
-		scope = 1;
-		class Armory
-		{
-			disabled = 1;
-		};
-		model = "\MEUav8b\AV8BWreck";
-		typicalCargo[] = {};
-		irTarget = 0;
-		transportAmmo = 0;
-		transportRepair = 0;
-		transportFuel = 0;
-		transportSoldier = 1;
-		class Eventhandlers{};
 	};
 };
 class CfgNonAIVehicles

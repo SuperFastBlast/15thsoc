@@ -17,7 +17,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "gunfighter\destruct\destr_glass_plexi_full_nohq.paa";
+	texture = "a3\data_f\destruct\destr_glass_plexi_full_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -29,7 +29,7 @@ class Stage1
 };
 class Stage2
 {
-	texture = "gunfighter\destruct\destr_glass_plexi_full_ca.paa";
+	texture = "a3\data_f\destruct\destr_glass_plexi_full_ca.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -41,7 +41,7 @@ class Stage2
 };
 class Stage3
 {
-	texture = "gunfighter\destruct\destr_glass_plexi_full_ca.paa";
+	texture = "a3\data_f\destruct\destr_glass_plexi_full_ca.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -65,7 +65,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "gunfighter\destruct\destr_glass_plexi_full_smdi.paa";
+	texture = "a3\data_f\destruct\destr_glass_plexi_full_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -89,7 +89,7 @@ class Stage6
 };
 class Stage7
 {
-	texture = "gunfighter\destruct\env_land_co.paa";
+	texture = "a3\data_f\env_land_co.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
