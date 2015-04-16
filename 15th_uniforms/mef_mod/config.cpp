@@ -3,7 +3,7 @@ class CfgPatches
 {
     class mef_mod
     {
-        units[] = {"MEF_TAN_F_Pilot","MEF_TAN_H_Pilot","MEF_OD_F_Pilot","MEF_IN_SNOW_LS","MEF_S_LS_Rpr","MEF_S_LS_HC","MEF_S_LS_Exp2","MEF_S_LS_Exp","MEF_USMC_Huron","MEF_IN_DMARPAT_RS","MEF_D_LS_Rpr","MEF_D_LS_HC","MEF_D_LS_Exp2","MEF_D_LS_Exp","MEF_IN_DMARPAT_LS","MEF_IN_WMARPAT_RS","MEF_W_LS_Rpr","MEF_W_LS_HC","MEF_W_LS_Exp2","MEF_W_LS_Exp","MEF_IN_WMARPAT_LS","MEF_WMARPAT_LS","MEF_WMARPAT_RS","MEF_WMARPAT_TS","MEF_DMARPAT_LS","MEF_DMARPAT_RS","MEF_DMARPAT_TS",
+        units[] = {"MEF_S_LS_ReconHC","MEF_D_LS_ReconHC","MEF_W_LS_ReconHC","MEF_TAN_F_Pilot","MEF_TAN_H_Pilot","MEF_OD_F_Pilot","MEF_IN_SNOW_LS","MEF_S_LS_Rpr","MEF_S_LS_HC","MEF_S_LS_Exp2","MEF_S_LS_Exp","MEF_USMC_Huron","MEF_IN_DMARPAT_RS","MEF_D_LS_Rpr","MEF_D_LS_HC","MEF_D_LS_Exp2","MEF_D_LS_Exp","MEF_IN_DMARPAT_LS","MEF_IN_WMARPAT_RS","MEF_W_LS_Rpr","MEF_W_LS_HC","MEF_W_LS_Exp2","MEF_W_LS_Exp","MEF_IN_WMARPAT_LS","MEF_WMARPAT_LS","MEF_WMARPAT_RS","MEF_WMARPAT_TS","MEF_DMARPAT_LS","MEF_DMARPAT_RS","MEF_DMARPAT_TS",
 "MEF_RECON_WBLK","MEF_RECON_WBLK_RS","MEF_RECON_WOD","MEF_RECON_WOD_RS","MEF_RECON_WTAN","MEF_RECON_WTAN_RS","MEF_RECON_WDIV","MEF_RECON_DBLK","MEF_RECON_DBLK_RS","MEF_RECON_DOD","MEF_RECON_DOD_RS","MEF_RECON_DTAN","MEF_RECON_DTAN_RS","MEF_RECON_DDIV"};
         weapons[] = {"OliveCoveralls","MEF_TAN_HP_Uni","MEF_TAN_F_SUIT","MEF_OD_F_SUIT","MEF_Vest_Tan_v2_Infantry","MEF_Snow_Goggles_Helmet_LWH","MEF_Snow_Helmet_LWH","MEF_Wood_MARPAT_TS","MEF_Wood_MARPAT_RS","MEF_Wood_MARPAT_LS","MEF_Desert_MARPAT_TS","MEF_Desert_MARPAT_RS","MEF_Desert_MARPAT_LS","MEF_DBLK_RS","MEF_DBLK","MEF_WBLK_RS","MEF_WBLK","MEF_DOD_RS","MEF_DOD","MEF_WOD_RS","MEF_WOD","MEF_DTAN_RS","MEF_DTAN","MEF_WTAN_RS","MEF_WTAN","MEF_DDIV","MEF_WDIV","MEF_Wood_IN_MARPAT_RS","MEF_Wood_IN_MARPAT_LS","MEF_Des_IN_MARPAT_LS","MEF_Des_IN_MARPAT_RS","MEF_Vest_Tan_Medical","MEF_Vest_Tan_Medical_L","MEF_Vest_Tan_Infantry","MEF_Vest_Tan_Infantry_L","MEF_Vest_Tan_Armor","MEF_Vest_Tan_Armor_L","MEF_Tan_Range_Belt","MEF_Desert_Helmet_MICH","MEF_woodland_Helmet_MICH","MEF_Boonie_Wood","MEF_Boonie_Des","MEF_Woodland_8Point","MEF_Desert_8Point","MEF_Wood_Goggles_Helmet_LWH","MEF_Wood_Helmet_LWH","MEF_Desert_Goggles_Helmet_LWH","MEF_Desert_Helmet_LWH"};
 	author[] = {"Mattastic"};
@@ -686,7 +686,7 @@ class CfgVehicles
 					cost = 1;
 					threat[] = {1,0.1,0.05};
 					_generalMacro = "MEF_IN_WMARPAT_LS";
-					displayName = "MEF Rifleman [LS-Wood]";
+					displayName = "15th Rifleman [Wood]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_1";
@@ -717,7 +717,7 @@ class CfgVehicles
 					cost = 3;
 					threat[] = {1,0.2,0.05};
 					_generalMacro = "MEF_W_LS_Exp";
-					displayName = " MEF Assault [LS-Wood]";
+					displayName = "15th Assault/EOD [Wood]";
 					vehicleClass = "MEF_A3_Units_1";
 					backpack = "MEF_Wood_Kitbag";
 					weapons[] = {"Throw","Put"};
@@ -736,7 +736,7 @@ class CfgVehicles
 					canHideBodies = true;
 					side = 1;
 					scope = 2;
-					audible = .04;
+					audible = .03;
 					accuracy = 0.25;
 					camouflage = 0.6;
 					oxygenCapacity = 80;
@@ -745,7 +745,7 @@ class CfgVehicles
 					cost = 2;
 					threat[] = {1,0.2,0.05};
 					_generalMacro = "MEF_W_LS_Exp2";
-					displayName = " MEF Recon [LS-Wood]";
+					displayName = "15th Recon [Wood]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_1";
@@ -775,10 +775,44 @@ class CfgVehicles
   					maxGunElev = 80;
 					cost = 1;
 					threat[] = {1,0.1,0.05};
-					displayName = " MEF Hospital Corpsman (LS-Wood)";
+					displayName = "15th Hospital Corpsman (Wood)";
 					faction = "MEF";
 					canDeactivateMines = 1;
 					detectSkill = 10;
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_1";
+					icon = "iconManMedic";
+					backpack = "MEF_Wood_Carryall";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Medical","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Wood_Helmet_LWH","MEF_Vest_Tan_Medical","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_MARPAT_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\wmarpat\mef_u2_wm_co.paa"};
+					picture = "pictureHeal";
+				};
+				class MEF_W_LS_ReconHC : B_medic_F
+				{
+					side = 1;
+					attendant = true;
+					_generalMacro = "MEF_W_LS_ReconHC";
+					scope = 2;
+					audible = .03;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					displayName = "15th Recon Corpsman (Wood)";
+					faction = "MEF";
+					canDeactivateMines = 1;
+					detectSkill = 80;
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_1";
 					icon = "iconManMedic";
@@ -811,7 +845,7 @@ class CfgVehicles
 					threat[] = {1,0.1,0.05};
   					engineer = 1;
   					detectSkill = 40;
-					displayName = "MEF Combat Engineer [LS-Wood]";
+					displayName = "15th Combat Engineer [Wood]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_1";
@@ -874,7 +908,7 @@ class CfgVehicles
 					cost = 1;
 					threat[] = {1,0.1,0.05};
 					_generalMacro = "MEF_IN_DMARPAT_LS";
-					displayName = "MEF Rifleman [LS-Des]";
+					displayName = "15th Rifleman [Des]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_2";
@@ -905,7 +939,7 @@ class CfgVehicles
 					cost = 3;
 					threat[] = {1,0.2,0.05};
 					_generalMacro = "MEF_D_LS_Exp";
-					displayName = "MEF Assault [LS-Des]";
+					displayName = "15th Assault/EOD [Des]";
 					canDeactivateMines = 1;
 					detectSkill = 80;
 					icon = "iconManExplosive";
@@ -939,7 +973,7 @@ class CfgVehicles
 					cost = 2;
 					threat[] = {1,0.2,0.05};
 					_generalMacro = "MEF_D_LS_Exp2";
-					displayName = "Recon [LS-Des]";
+					displayName = "15th Recon [Des]";
 					canDeactivateMines = 1;
 					detectSkill = 80;
 					icon = "iconManExplosive";
@@ -993,6 +1027,40 @@ class CfgVehicles
 					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
 					picture = "pictureHeal";
 				};	
+				class MEF_D_LS_ReconHC : B_medic_F
+				{
+					side = 1;
+					attendant = true;
+					_generalMacro = "MEF_D_LS_ReconHC";
+					scope = 2;
+					audible = .03;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					displayName = "15th Recon Corpsman (LS-Des)";
+					faction = "MEF";
+					canDeactivateMines = 1;
+					detectSkill = 80;
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_2";
+					icon = "iconManMedic";
+					backpack = "MEF_Des_Carryall";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Desert_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Des_IN_MARPAT_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\dmarpat\mef_u2_dm_co.paa"};
+					picture = "pictureHeal";
+				};
 				class MEF_D_LS_Rpr: B_soldier_repair_F
 				{
 					attendant = true;
@@ -1009,7 +1077,7 @@ class CfgVehicles
 					threat[] = {1,0.1,0.05};
   					engineer = 1;
   					detectSkill = 40;
-					displayName = "Combat Engineer [LS-Des]";
+					displayName = "15th Combat Engineer [Des]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_2";
@@ -1072,7 +1140,7 @@ class CfgVehicles
 					cost = 1;
 					threat[] = {1,0.1,0.05};
 					_generalMacro = "MEF_IN_SNOW_LS";
-					displayName = "MEF Rifleman [Snow]";
+					displayName = "15th Rifleman [Snow]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_4";
@@ -1103,7 +1171,7 @@ class CfgVehicles
 					cost = 3;
 					threat[] = {1,0.2,0.05};
 					_generalMacro = "MEF_S_LS_Exp";
-					displayName = "MEF Assault [Snow]";
+					displayName = "15th Assault/EOD [Snow]";
 					canDeactivateMines = 1;
 					detectSkill = 80;
 					icon = "iconManExplosive";
@@ -1137,7 +1205,7 @@ class CfgVehicles
 					cost = 2;
 					threat[] = {1,0.2,0.05};
 					_generalMacro = "MEF_S_LS_Exp2";
-					displayName = "Recon [Snow]";
+					displayName = "15th Recon [Snow]";
 					canDeactivateMines = 1;
 					detectSkill = 80;
 					icon = "iconManExplosive";
@@ -1171,10 +1239,44 @@ class CfgVehicles
   					maxGunElev = 80;
 					cost = 1;
 					threat[] = {1,0.1,0.05};
-					displayName = "Hospital Corpsman (Snow)";
+					displayName = "15th Hospital Corpsman (Snow)";
 					faction = "MEF";
 					canDeactivateMines = 1;
 					detectSkill = 10;
+					nakedUniform = "U_BasicBody";
+					vehicleClass = "MEF_A3_Units_4";
+					icon = "iconManMedic";
+					backpack = "MEF_Des_Carryall";
+					weapons[] = {"Throw","Put"};
+					respawnweapons[] = {"Throw","Put"};
+					magazines[] = {};
+					respawnmagazines[] = {};
+					linkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					respawnLinkedItems[] = {"MEF_Snow_Goggles_Helmet_LWH","MEF_Vest_Tan_Infantry","ItemMap","ItemCompass","ItemGPS","ItemWatch"};
+					uniformClass = "MEF_Wood_IN_SNOW_LS";
+					model = "\A3\Characters_F_Beta\INDEP\ia_soldier_01.p3d";
+					hiddenSelections[] = {"Camo"};
+					hiddenSelectionsTextures[] = {"\mef_mod\textures\snowcamo\mef_u2_sm_co.paa"};
+					picture = "pictureHeal";
+				};
+				class MEF_S_LS_ReconHC : B_medic_F
+				{
+					side = 1;
+					attendant = true;
+					_generalMacro = "MEF_S_LS_ReconHC";
+					scope = 2;
+					audible = .03;
+					accuracy = 0.25;
+					camouflage = 0.6;
+					oxygenCapacity = 80;
+  					minGunElev = -80;
+  					maxGunElev = 80;
+					cost = 1;
+					threat[] = {1,0.1,0.05};
+					displayName = "15th Recon Corpsman (Snow)";
+					faction = "MEF";
+					canDeactivateMines = 1;
+					detectSkill = 80;
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_4";
 					icon = "iconManMedic";
@@ -1207,7 +1309,7 @@ class CfgVehicles
 					threat[] = {1,0.1,0.05};
   					engineer = 1;
   					detectSkill = 40;
-					displayName = "Combat Engineer [Snow]";
+					displayName = "15th Combat Engineer [Snow]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_4";
@@ -1270,7 +1372,7 @@ class CfgVehicles
 					threat[] = {0.9,0.05,0.05};
 					canDeactivateMines = 1;
 					detectSkill = 10;
-					displayName = "Pilot [Flight Suit,OD]";
+					displayName = "Pilot [Flight Suit,Olive]";
 					faction = "MEF";
 					nakedUniform = "U_BasicBody";
 					vehicleClass = "MEF_A3_Units_3";
