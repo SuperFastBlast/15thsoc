@@ -1,0 +1,37 @@
+// 15th Loadout Manager 2
+// Fight9
+// built on Riouken's framework
+
+/*  
+TODO:
+consider removing "delete" and "close" buttons
+update favorites addaction button?
+option to hide defaults on crate scroll actions - favorites?
+
+Fixed:
+- black images
+- random hint errors
+- rpt error on usage
+- loaded magazines not saving
+- some goggles not supported
+- assigned radios not loading
+- packed weapons attachments/mags not saving (albeit, loaded seperated)
+- local backpack items
+- loaded designator battery not saving
+- loaded earbuds not saving
+
+Added:
+- view saved gear
+- rename loadouts
+- default loadouts
+- quick save
+- freakin favorites!
+- save TFAR freqs on assigned radio - loads on all radios
+- can disable "gear in box" check (box setVariable ["meu_boxRestrictions",false])
+- better initialization
+- better organization
+- better optimisation
+- better error messages
+- super sexy GUI
+
+*/

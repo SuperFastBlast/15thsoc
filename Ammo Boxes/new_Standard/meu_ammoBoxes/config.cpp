@@ -50,9 +50,13 @@ class CfgFunctions
 {
 	class meu {
 		class crate {
-			file = "\meu_ammoBoxes\crate_Functions"
+			file = "\meu_ammoBoxes\crateFunctions";
 			class vehicleLoadout {};
 			class crate {};
+		};
+		class manager {
+			file = "\meu_ammoBoxes\loadoutManager";
+			class manager {};
 		};
 	};
 };
@@ -1514,3 +1518,4 @@ class CfgVehicles
 	};
 };
 
+#include "\meu_ammoBoxes\loadoutManager\manager_dialog.hpp"
