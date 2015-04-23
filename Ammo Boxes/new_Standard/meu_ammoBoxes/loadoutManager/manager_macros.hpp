@@ -139,7 +139,7 @@
 			"COLORS: The Colors Of The Manager Change With Your Arma Settings", \
 			"UPDATE: Loaded Magazines And Batteries Are Now Saved", \
 			"TIP: Take An Extra Laser Designator Battery To Save The Loaded One", \
-			"TIP: The Circle And Up Arrow Mark Favorite Loadouts (SHIFT + Double Click)", \
+			"TIP: The Group Icons Mark Favorite Loadouts (SHIFT + Double Click)", \
 			"TIP: You Can Delete Saved Loadouts With The DEL Key" \
 		]
 

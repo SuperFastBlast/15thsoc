@@ -17,6 +17,7 @@
 		transportMaxBackpacks = 9999; \
 		transportMaxitems = 9999; \
 		scope = 2;  \
+		vehicleClass = "meu_ammoBoxes"; \
 		MEU_INIT_EVENT("_this call meu_fnc_crate;")
 
 // eventhander		
@@ -27,6 +28,7 @@
 		transportAmmo = 0; \
 		scope = 2; \
 		supplyRadius = 0; \
+		vehicleClass = "meu_ammoBoxes"; \
 		MEU_INIT_EVENT("_this call meu_fnc_crate;")
 		
 #define MEU_VIC_FUNCTION(FILE) 	#[player,call compile preprocessFileLineNumbers (MEU_ADDON_ROOT + FILE),false,true] call meu_fnc_vehicleLoadout

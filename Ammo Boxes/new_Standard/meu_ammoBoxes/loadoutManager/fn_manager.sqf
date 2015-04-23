@@ -94,7 +94,7 @@ switch (toLower _fnc) do {
 	
 	case "listgear": {
 		// add gear to tree
-		private ["_tree","_gear","_expand","_fnc_tvParentAdd","_fnc_tvChildAdd","_fnc_tvParantAndChild","_fnc_picture"];
+		private ["_tree","_gear","_expand","_fnc_tvParentAdd","_fnc_tvChildAdd","_fnc_tvParantAndChild","_fnc_picture","_checking"];
 		_tree = [_params,0,CTRL(MEU_CTRL_GEARTREE)] call BIS_fnc_param;
 		_gear = [_params,1,CALL_FNC("playerGear",[])]call BIS_fnc_param;
 		
@@ -103,13 +103,16 @@ switch (toLower _fnc) do {
 		
 		// if current gear list, then expand trees.. also controls _fnc_picture's X's 
 		_expand = ctrlIDC _tree == MEU_CTRL_GEARTREE;
+		_checking = meu_managerBOX getVariable ["meu_boxRestrictions",false];
 		tvClear _tree;
-
+		
 		_fnc_picture = {
 			// if showing saved loadout, only show picture if item is in the box
 			GET_PARENT(_this);
-			if ("ItemRadio" in _parents && {"ItemRadio" in _boxGear}) exitWith {(getText (configFile >> _config >> _this >> "picture"))};
-			if !(_expand || {_this in _boxGear}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
+			//if ("ItemRadio" in _parents && {"ItemRadio" in _boxGear})exitWith {(getText (configFile >> _config >> _this >> "picture"))};
+			if CHECK_IS_RADIO exitWith {(getText (configFile >> _config >> _this >> "picture"))};
+			//if !(_expand || {_this in _boxGear}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
+			if !(_expand || {_checking || _this in _boxGear}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
 			(getText (configFile >> _config >> _this >> "picture"))			
 		};	
 		_fnc_tvParantAndChild = {
@@ -499,6 +502,7 @@ switch (toLower _fnc) do {
 					
 					_m = ["message",[format ["Loadout was deleted:<br/><br/>%1",ERROR_TEXT(_old)],[]]] call FUNCTION_NAME;
 					
+					GUI_REFRESH
 					_r = true;
 				} else {
 					_m = ["message",[WARN_TEXT("Please select a save slot."),[]]] call FUNCTION_NAME;
@@ -834,6 +838,9 @@ switch (toLower _fnc) do {
 			_handle = [nil,player] execVM ("meu_ammoBoxes\" + _this);
 			waitUntil { scriptDone _handle };
 			
+			// clear any hint
+			Hint "";
+						
 			// refresh list
 			GUI_REFRESH
 		};

@@ -61,6 +61,14 @@ class CfgFunctions
 	};
 };
 
+class CfgVehicleClasses
+{
+	class meu_ammoBoxes
+	{
+		displayName = "[15th] Ammo Boxes";
+	};
+};
+
 class CfgVehicles
 {
 	class B_supplyCrate_F;
@@ -89,7 +97,6 @@ class CfgVehicles
 			MEU_CLASS_ITEM(optic_Arco,25)
 			MEU_CLASS_ITEM(optic_Hamr,25)
 			MEU_CLASS_ITEM(CUP_optic_ACOG,50)
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,50)
 			MEU_CLASS_ITEM(optic_Aco,25)
 			MEU_CLASS_ITEM(optic_Holosight,25)
 			MEU_CLASS_ITEM(optic_SOS,25)
@@ -105,7 +112,6 @@ class CfgVehicles
 			MEU_CLASS_ITEM(CUP_acc_ANPEQ_15,5)
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,5)
 			MEU_CLASS_ITEM(CUP_optic_AN_PVS_10,5)
-			MEU_CLASS_ITEM(CUP_optic_AN_PVS_101,5)
 			MEU_CLASS_ITEM(CUP_optic_CompM2_Black,5)
 			// HELMETS
 			MEU_CLASS_ITEM(MEF_Wood_Goggles_Helmet_LWH,15)
@@ -281,9 +287,7 @@ class CfgVehicles
 			MEU_CLASS_ITEM(acc_flashlight,5)
 			MEU_CLASS_ITEM(acc_pointer_IR,5)
 			MEU_CLASS_ITEM(CUP_optic_ACOG,5)
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,5)
 			MEU_CLASS_ITEM(CUP_optic_AN_PVS_10,50)
-			MEU_CLASS_ITEM(CUP_optic_AN_PVS_101,50)
 			MEU_CLASS_ITEM(CUP_acc_ANPEQ_15,5)
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,15)
 			MEU_CLASS_ITEM(CUP_optic_CompM2_Black,5)
@@ -386,7 +390,6 @@ class CfgVehicles
 			MEU_CLASS_ITEM(acc_flashlight,15)
 			MEU_CLASS_ITEM(acc_pointer_IR,15)
 			MEU_CLASS_ITEM(CUP_optic_ACOG,50)
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,50)
 			MEU_CLASS_ITEM(optic_acog_holo,10)
 			MEU_CLASS_ITEM(optic_Arco,15)
 			MEU_CLASS_ITEM(optic_mrco,15)
@@ -397,7 +400,6 @@ class CfgVehicles
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,5)
 			MEU_CLASS_ITEM(CUP_optic_Eotech533Grey,5)
 			MEU_CLASS_ITEM(CUP_optic_AN_PVS_10,50)
-			MEU_CLASS_ITEM(CUP_optic_AN_PVS_101,50)
 			MEU_CLASS_ITEM(CUP_optic_CompM2_Black,5)
 			MEU_CLASS_ITEM(optic_tws,15)
 			// GOGGLES
@@ -543,13 +545,11 @@ class CfgVehicles
 			MEU_CLASS_ITEM(acc_flashlight,5) 
 			MEU_CLASS_ITEM(acc_pointer_IR,5) 
 			MEU_CLASS_ITEM(CUP_optic_ACOG,50) 
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,50) 
 			MEU_CLASS_ITEM(optic_acog_holo,5) 
 			MEU_CLASS_ITEM(optic_Arco,15) 
 			MEU_CLASS_ITEM(optic_Hamr,15) 
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,5) 
 			MEU_CLASS_ITEM(CUP_optic_AN_PVS_10,50) 
-			MEU_CLASS_ITEM(CUP_optic_AN_PVS_101,50) 
 			MEU_CLASS_ITEM(CUP_optic_CompM2_Black,5) 
 			MEU_CLASS_ITEM(CUP_acc_ANPEQ_15,5) 
 			MEU_CLASS_ITEM(optic_tws,5) 
@@ -683,11 +683,9 @@ class CfgVehicles
 			MEU_CLASS_ITEM(optic_Hamr,15)
 			MEU_CLASS_ITEM(CUP_optic_CompM4,20)
 			MEU_CLASS_ITEM(CUP_optic_ACOG,20)
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,20)
 			MEU_CLASS_ITEM(CUP_acc_ANPEQ_15,20)
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,20)
 			MEU_CLASS_ITEM(CUP_optic_AN_PVS_10,50)
-			MEU_CLASS_ITEM(CUP_optic_AN_PVS_101,50)
 			MEU_CLASS_ITEM(CUP_optic_CompM2_Black,20)
 			// MEDICAL
 			MEU_CLASS_ITEM(AGM_Bandage,300)
@@ -914,7 +912,6 @@ class CfgVehicles
 			MEU_CLASS_ITEM(CUP_acc_ANPEQ_15,15)
 			MEU_CLASS_ITEM(acc_flashlight,15)
 			MEU_CLASS_ITEM(CUP_optic_ACOG,15)
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,15)
 			MEU_CLASS_ITEM(NVGoggles_OPFOR,15)
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,15)
 			MEU_CLASS_ITEM(AGM_EarBuds,50)
@@ -987,7 +984,6 @@ class CfgVehicles
 			MEU_CLASS_ITEM(acc_flashlight,5)
 			MEU_CLASS_ITEM(acc_pointer_IR,5)
 			MEU_CLASS_ITEM(CUP_optic_ACOG,5)
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,5)
 			MEU_CLASS_ITEM(CUP_optic_LeupoldMk4,25)
 			MEU_CLASS_ITEM(optic_Arco,15)
 			MEU_CLASS_ITEM(optic_Hamr,15)
@@ -995,7 +991,6 @@ class CfgVehicles
 			MEU_CLASS_ITEM(CUP_acc_ANPEQ_15,5)
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,5)
 			MEU_CLASS_ITEM(CUP_optic_AN_PVS_10,50)
-			MEU_CLASS_ITEM(CUP_optic_AN_PVS_101,50)
 			MEU_CLASS_ITEM(CUP_optic_CompM2_Black,5)
 			MEU_CLASS_ITEM(optic_tws,5)
 			MEU_CLASS_ITEM(optic_tws_mg,5)
@@ -1111,10 +1106,8 @@ class CfgVehicles
 			MEU_CLASS_ITEM(optic_Hamr,12)
 			MEU_CLASS_ITEM(CUP_acc_ANPEQ_15,12)
 			MEU_CLASS_ITEM(CUP_optic_ACOG,15)
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,15)
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,10)
 			MEU_CLASS_ITEM(CUP_optic_AN_PVS_10,50)
-			MEU_CLASS_ITEM(CUP_optic_AN_PVS_101,50)
 			// GOGGLES
 			MEU_CLASS_ITEM(NVGoggles_OPFOR,100)
 			MEU_CLASS_ITEM(AV_ESS_blk_clr,100)
@@ -1259,13 +1252,11 @@ class CfgVehicles
 			MEU_CLASS_ITEM(optic_Holosight,20) 
 			MEU_CLASS_ITEM(optic_nvs,20) 
 			MEU_CLASS_ITEM(CUP_optic_ACOG,20) 
-			MEU_CLASS_ITEM(CUP_optic_ACOG1,20) 
 			MEU_CLASS_ITEM(CUP_optic_CompM4,20) 
 			MEU_CLASS_ITEM(FHQ_optic_HWS,20) 
 			MEU_CLASS_ITEM(CUP_optic_Eotech533,20)
 			MEU_CLASS_ITEM(optic_tws,5) 
 			MEU_CLASS_ITEM(CUP_optic_AN_PVS_10,40) 
-			MEU_CLASS_ITEM(CUP_optic_AN_PVS_101,40) 
 			// HELMETS
 			MEU_CLASS_ITEM(MEF_Wood_Goggles_Helmet_LWH,30)
 			MEU_CLASS_ITEM(MEF_Wood_Helmet_LWH,30)
