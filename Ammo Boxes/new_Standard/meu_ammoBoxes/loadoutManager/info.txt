@@ -41,7 +41,3 @@ issues:
 // change tip about favorites 
 // stop white X when restrictions are disabled
 // clear hint on default load
-
-Remove wrong classnames from ammoboxes
-- CUP_optic_ACOG1
-- CUP_optic_AN_PVS_101
