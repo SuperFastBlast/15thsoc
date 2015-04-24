@@ -18,7 +18,7 @@
 		transportMaxitems = 9999; \
 		scope = 2;  \
 		vehicleClass = "meu_ammoBoxes"; \
-		MEU_INIT_EVENT("_this call meu_fnc_crate;")
+		MEU_INIT_EVENT("_this spawn meu_fnc_crate;")
 
 // eventhander		
 #define MEU_INIT_EVENT(STRING) 		class EventHandlers { init = STRING; };
@@ -29,7 +29,7 @@
 		scope = 2; \
 		supplyRadius = 0; \
 		vehicleClass = "meu_ammoBoxes"; \
-		MEU_INIT_EVENT("_this call meu_fnc_crate;")
+		MEU_INIT_EVENT("_this spawn meu_fnc_crate;")
 		
 #define MEU_VIC_FUNCTION(FILE) 	#[player,call compile preprocessFileLineNumbers (MEU_ADDON_ROOT + FILE),false,true] call meu_fnc_vehicleLoadout
 #define MEU_RED_NAME(TEXT) 		__EVAL("<t color='#FF0000'>" + TEXT + "</t>")

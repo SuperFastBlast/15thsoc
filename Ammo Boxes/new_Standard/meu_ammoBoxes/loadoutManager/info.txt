@@ -4,7 +4,6 @@
 
 /*  
 TODO:
-consider removing "delete" and "close" buttons
 update favorites addaction button?
 option to hide defaults on crate scroll actions - favorites?
 
@@ -36,8 +35,4 @@ Added:
 
 */
 
-issues: 
-// didnt refresh after deleting loadout - dedicated 
-// change tip about favorites 
-// stop white X when restrictions are disabled
-// clear hint on default load
+

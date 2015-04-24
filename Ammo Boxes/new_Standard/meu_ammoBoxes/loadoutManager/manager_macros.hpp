@@ -32,13 +32,14 @@
 #define WARN_TEXT(A)			(format ["<t color ='%1'>%2</t>",COLOR_WARNING_HTML,A])
 #define ERROR_TEXT(A)			(format ["<t color ='%1'>%2</t>",COLOR_ERROR_HTML,A])
 #define CTRL(CTRL)				(_display displayCtrl CTRL)
-#define GUI_REFRESH				{ CALL_FNC(_x,[]) } forEach ["listGear","listSaved","listDefault"];
+#define GUI_REFRESH(INDEX)		CALL_FNC("listSaved",[INDEX]);{ CALL_FNC(_x,[]) } forEach ["listGear","listDefault"];
 #define QUOTE(A) 				#A
 #define CHECK_TYPE(A,B)			typeName A == typeName B
 #define ICON_HELPTIPS			"\A3\ui_f\data\map\markers\military\warning_CA.paa"
 #define ICON_FAVORITE			"\A3\ui_f\data\map\GroupIcons\badge_gs.paa" //markers\military\flag_ca.paa" //start_CA.paa"
 #define ICON_CRATE				"\A3\ui_f\data\map\VehicleIcons\iconcrate_ca.paa" 
 
+// gui profile colors <-- TODO: Redo this better
 #define COLOR_ERROR_HTML		(["IGUI","ERROR_RGB"] call bis_fnc_displaycolorget) call BIS_fnc_colorRGBtoHTML
 #define COLOR_WARNING_HTML		(["IGUI","WARNING_RGB"] call bis_fnc_displaycolorget) call BIS_fnc_colorRGBtoHTML
 #define COLOR_MU_BG_HTML		(["GUI","BCG_RGB"] call bis_fnc_displaycolorget) call BIS_fnc_colorRGBtoHTML
@@ -68,6 +69,7 @@
 #define MEU_CTRL_BUTTONDELETE	15051
 #define MEU_CTRL_BUTTONDEFAULT	15052
 #define MEU_CTRL_BUTTONSAVE		15053
+#define MEU_CTRL_BUTTONCLOSE	15054
 #define MEU_CTRL_SAVEBG			15060
 #define MEU_CTRL_SAVEEDIT		15061
 #define MEU_CTRL_SAVESAVE		15062
@@ -76,6 +78,7 @@
 #define MEU_CTRL_SAVECLEAR		15065
 #define MEU_CTRL_SAVERENAME		15066
 
+// groups
 #define MEU_SAVE_GROUP 			[MEU_CTRL_SAVEBG,MEU_CTRL_SAVEEDIT,MEU_CTRL_SAVESAVE,MEU_CTRL_SAVECANCEL,MEU_CTRL_SAVETEXT,MEU_CTRL_SAVECLEAR,MEU_CTRL_SAVERENAME]
 #define MEU_DISABLE_GROUP		[MEU_CTRL_GEARTREE,MEU_CTRL_SAVEDLIST,MEU_CTRL_DEFAULTLIST,MEU_CTRL_BUTTONSAVE,MEU_CTRL_BUTTONDEFAULT,MEU_CTRL_BUTTONDELETE,MEU_CTRL_BUTTONLOAD,MEU_CTRL_PREVTREE,MEU_CTRL_PREVBG,MEU_CTRL_PREVCLOSE,MEU_CTRL_PREVTEXT]
 #define MEU_PREV_GROUP			[MEU_CTRL_PREVTREE,MEU_CTRL_PREVBG,MEU_CTRL_PREVCLOSE,MEU_CTRL_PREVTEXT]
@@ -87,10 +90,10 @@
 #define ADD_RESTRICT_X(ITEM)		_restricted pushBack ITEM
 #define CHECK_STRING(IND)			(_gear select IND != "")
 #define CHECK_STRING_X(ITEM)		(ITEM != "")
-#define CHECK_COUNT(IND)			(count GEAR(IND) > 0) // (_gear select IND)
-#define CHECK_BOX(IND)				(!_checking || {(_gear select IND) in _boxGear}) // (_gear select IND in _boxGear) 
+#define CHECK_COUNT(IND)			(count GEAR(IND) > 0) 
+#define CHECK_BOX(IND)				(!_checking || {(_gear select IND) in _boxGear})
 #define CHECK_BOX_X(ITEM)			(!_checking || {ITEM in _boxGear})
-#define CHECK_IS_RADIO				("ItemRadio" in _parents && {!_checking || "ItemRadio" in _boxGear})	//("ItemRadio" in _parents && {"ItemRadio" in _boxGear})
+#define CHECK_IS_RADIO				("ItemRadio" in _parents && {!_checking || "ItemRadio" in _boxGear})
 #define GET_PARENT(ITEM)			private ["_class","_parent"];_class = [ITEM] call BIS_fnc_classWeapon;_parents = [_class,true] call BIS_fnc_returnParents;
 
 #define ADD_STRING(IND,SCRIPT) 		if CHECK_STRING(IND) then { \
@@ -128,7 +131,7 @@
 										} forEach GEAR(IND); \
 									};
 
-
+// tooltip tips used randomly
 #define MEU_HELP_TIPS			[ \
 			"TIP: Double Click On A Saved Loadout To See The Items", \
 			"TIP: The White X Denotes Gear That Is Not In The Box", \

@@ -93,6 +93,7 @@ class meu_loadoutManager
 			h = 18 * GUI_GRID_H; 
 			
 			onMouseButtonDblClick = STR_CALL_FUNC("buttons",_this);
+			onSetFocus = STR_CALL_FUNC("listDefault",[]);
 			
 			deletable = 0;
 			fade = 0;
@@ -216,6 +217,8 @@ class meu_loadoutManager
 			y = 14.07 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.8 * GUI_GRID_W;
 			h = 8.9 * GUI_GRID_H;
+			
+			onSetFocus = STR_CALL_FUNC("listSaved",[-1]);
 		};
 		////////////////////////////
 		//// TEXT
@@ -224,8 +227,12 @@ class meu_loadoutManager
 		{
 			idc = -1;
 			text = "\meu_ammoBoxes\loadoutManager\logo256.paa";
-			x = 11.7 * GUI_GRID_W + GUI_GRID_X; 
+			/* x = 11.7 * GUI_GRID_W + GUI_GRID_X; // new logo
 			y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 10 * GUI_GRID_W;
+			h = 10 * GUI_GRID_H; */
+			x = 11.6 * GUI_GRID_W + GUI_GRID_X; // ega logo
+			y = 3.6 * GUI_GRID_H + GUI_GRID_Y;
 			w = 10 * GUI_GRID_W;
 			h = 10 * GUI_GRID_H;
 			style = 0x30 + 0x800;
@@ -343,7 +350,11 @@ class meu_loadoutManager
 			tooltip = "Double Click On A Saved Loadout To See The Items.";
 			action = "";
 			
-			x = 19 * GUI_GRID_W + GUI_GRID_X;
+			/* x = 19 * GUI_GRID_W + GUI_GRID_X; // new logo
+			y = 4.2 * GUI_GRID_H + GUI_GRID_Y;
+			w = 1 * GUI_GRID_W;
+			h = 0.9 * GUI_GRID_H; */
+			x = 19.8 * GUI_GRID_W + GUI_GRID_X; // ega logo
 			y = 4.2 * GUI_GRID_H + GUI_GRID_Y;
 			w = 1 * GUI_GRID_W;
 			h = 0.9 * GUI_GRID_H;
@@ -354,9 +365,12 @@ class meu_loadoutManager
 			text = ICON_FAVORITE;
 			tooltip = "Set Selected As Favorite.";
 			action = "";
-			//color[] = {0,0,0,0.7};
 			
-			x = 13 * GUI_GRID_W + GUI_GRID_X;
+			/* x = 13 * GUI_GRID_W + GUI_GRID_X; // new logo
+			y = 4.2 * GUI_GRID_H + GUI_GRID_Y;
+			w = 1.2 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H; */
+			x = 12.2 * GUI_GRID_W + GUI_GRID_X; // ega logo
 			y = 4.2 * GUI_GRID_H + GUI_GRID_Y;
 			w = 1.2 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
@@ -483,7 +497,9 @@ class meu_loadoutManager
 		class meu_LOButtonSave: meu_LOButton_RscButton_base
 		{
 			idc = MEU_CTRL_BUTTONSAVE;
-			x = 28.97 * GUI_GRID_W + GUI_GRID_X;
+			/* x = 28.97 * GUI_GRID_W + GUI_GRID_X;
+			y = 24.03 * GUI_GRID_H + GUI_GRID_Y; */
+			x = 34 * GUI_GRID_W + GUI_GRID_X;
 			y = 24.03 * GUI_GRID_H + GUI_GRID_Y;
 			text = "SAVE";
 			toolTip = "Save Current";
@@ -493,7 +509,7 @@ class meu_loadoutManager
 		};
 		class meu_LOButtonClose: meu_LOButton_RscButton_base
 		{
-			idc = -1;
+			idc = MEU_CTRL_BUTTONCLOSE;
 			x = 34 * GUI_GRID_W + GUI_GRID_X;
 			y = 24.03 * GUI_GRID_H + GUI_GRID_Y;
 			action = "closeDialog 0;";
@@ -647,6 +663,25 @@ class meu_loadoutManager
 			text = "Loadout Name";
 			shadow = 0;
 			SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 35) * 1)";
+		};
+	};
+};
+
+class cfgHints
+{
+	class meu_manager
+	{
+		displayname = "[15th] Ammo Boxes";
+		class meu_usage
+		{
+			displayName = "15th Loadout Manager 2";
+			displayNameShort = "[15th] Ammo Boxes";
+			description = "15th AmmoBoxes come with a loadout manager. There are a few things you should know.%1%1Make your loadouts exactly how you want them. Including your radio frequencies.%1%1%3Double Click%4 - View gear in saved loadout.%1%3CTRL + Double Click%4 - Rename Loadout.%1%3SHFT + Double Click%4 - Add to favorites.%1%3CTRL + Click Save%4 - Quick save loadout with the same name%1%3DEL%4 - Delete Loadout.%1%1Enjoy!";
+			//%1%1Other Info:%1- Packed weapons have thier attachments saved but loaded seperately.%1- To save loaded designator batteries, have an extra in your inventory.%1- GUI colors are set from your Arma profile.%1- Mission Makers can disabled the ""gear in box"" check with %3box setVariable [""meu_boxRestrictions"",false]%4%1-You can add the LOM to any object with %3[""init"",[_crate]] call meu_fnc_manager;%4%1%1
+			tip = "Please report any problems on the forums.";
+			arguments[] = {};
+			image = "\meu_ammoBoxes\loadoutManager\logo256.paa";
+			noImage = false;
 		};
 	};
 };

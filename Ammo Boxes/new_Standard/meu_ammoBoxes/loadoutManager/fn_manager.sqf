@@ -72,19 +72,22 @@ switch (toLower _fnc) do {
 		{ CTRL(_x) ctrlShow false } forEach MEU_SAVE_GROUP;
 		{ CTRL(_x) ctrlShow false } forEach MEU_PREV_GROUP;
 		
+		// hide extra buttons
+		{ CTRL(_X) ctrlShow false } forEach [MEU_CTRL_BUTTONDELETE,MEU_CTRL_BUTTONCLOSE,MEU_CTRL_BUTTONDEFAULT];
+		
 		// populate	
-		GUI_REFRESH
+		GUI_REFRESH(-1)
 		
 		// change icon tooltip on mouse button click
 		CTRL(MEU_CTRL_HELPTIP) ctrlSetTooltip (MEU_HELP_TIPS select floor random count MEU_HELP_TIPS);
 		CTRL(MEU_CTRL_HELPTIP) ctrlSetEventHandler ["MouseButtonClick",
 			format [
-				"((uiNamespace getVariable 'meu_managerGUI') displayCtrl %1) ctrlSetTooltip (%2 select floor random count %2)",
+				"[[""meu_manager"",""meu_usage""], 30,"""", 30,"""", true, true, false, true] call BIS_fnc_advHint;((uiNamespace getVariable 'meu_managerGUI') displayCtrl %1) ctrlSetTooltip (%2 select floor random count %2);",
 				MEU_CTRL_HELPTIP,
 				MEU_HELP_TIPS
 			]
 		];
-		// enable DEL key for saved list
+		// enable DEL key for saved list		
 		CTRL(MEU_CTRL_SAVEDLIST) ctrlSetEventHandler ["keyDown",
 			"if (_this select 1 in [211]) then {[""buttons"",[(uiNamespace getVariable 'meu_managerGUI') displayCtrl 15051]] call meu_fnc_manager;};"				
 		];
@@ -103,16 +106,14 @@ switch (toLower _fnc) do {
 		
 		// if current gear list, then expand trees.. also controls _fnc_picture's X's 
 		_expand = ctrlIDC _tree == MEU_CTRL_GEARTREE;
-		_checking = meu_managerBOX getVariable ["meu_boxRestrictions",false];
+		_checking = meu_managerBOX getVariable ["meu_boxRestrictions",true];
 		tvClear _tree;
 		
 		_fnc_picture = {
 			// if showing saved loadout, only show picture if item is in the box
 			GET_PARENT(_this);
-			//if ("ItemRadio" in _parents && {"ItemRadio" in _boxGear})exitWith {(getText (configFile >> _config >> _this >> "picture"))};
 			if CHECK_IS_RADIO exitWith {(getText (configFile >> _config >> _this >> "picture"))};
-			//if !(_expand || {_this in _boxGear}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
-			if !(_expand || {_checking || _this in _boxGear}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
+			if (!_expand && {_checking} && {!(_this in _boxGear)}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
 			(getText (configFile >> _config >> _this >> "picture"))			
 		};	
 		_fnc_tvParantAndChild = {
@@ -177,7 +178,7 @@ switch (toLower _fnc) do {
 		if (TFAR_CHECK) then {
 			if (count _gear > 15) then {
 				private ["_parent","_childA","_childB"];
-				_parent = _tree tvAdd [ [], "Radio Presets" ]; // picture = "\A3\Weapons_F\Data\UI\gear_item_radio_ca.paa";
+				_parent = _tree tvAdd [ [], "Radio Presets" ];
 				_tree tvSetPicture [ [_parent],"\A3\Weapons_F\Data\UI\gear_item_radio_ca.paa" ];
 				if (count GEAR(15) > 0) then {
 					_childA = _tree tvAdd [ [_parent], "Short Range" ];
@@ -201,7 +202,8 @@ switch (toLower _fnc) do {
 	
 	case "listsaved": {
 		// list saved loadouts
-		private "_savedList";
+		private ["_savedList","_index"];
+		_index = [_params,0,lbCurSel CTRL(MEU_CTRL_SAVEDLIST)] call BIS_fnc_param;
 		_savedList = CTRL(MEU_CTRL_SAVEDLIST);
 		// loop through vars, get names & add to array
 		meuLoadOuts = [];
@@ -218,17 +220,27 @@ switch (toLower _fnc) do {
 			];		
 		};
 		_favs = profileNamespace getVariable ["meu_LO_favs",[]];
-		// add to listBox
+		// clear & remove selected
 		lbClear _savedList;
+		_savedList lbSetCurSel -1; 
+		// add to listBox
 		{
-			private "_index";		
+			private ["_index","_num"];
+			_num = _forEachIndex + 1;
 			_index = _savedList lbAdd (_x select 0);
-			if ( (_forEachIndex + 1) in _favs) then {
-				// if in favs, add icon
+			// if empty, grey text
+			if ( (_x select 0) == (format ["Empty Loadout %1",_num]) ) then {
+				_savedList lbSetColor [_index,[1,1,1,0.25]];
+			};
+			// if in favs, add icon
+			if ( _num in _favs) then {
 				_savedList lbSetPicture [_index,ICON_FAVORITE];
 			};
 		} forEach meuLoadOuts;
-		
+		// set selected again
+		if (_index > -1) then {
+			_savedList lbSetCurSel _index;
+		};
 		_r = true;
 	};
 	
@@ -247,6 +259,7 @@ switch (toLower _fnc) do {
 		
 		_defaultList = CTRL(MEU_CTRL_DEFAULTLIST);
 		lbClear _defaultList;
+		_defaultList lbSetCurSel -1;
 		// get configured loadouts
 		_cfg = configFile >> "CfgVehicles" >> typeOf meu_managerBOX;
 		if (isArray (_cfg >> "MEU_LOADOUTS")) then {
@@ -415,7 +428,7 @@ switch (toLower _fnc) do {
 					// show & disable groups
 					{ CTRL(_x) ctrlShow false } forEach MEU_PREV_GROUP;
 					{ CTRL(_x) ctrlShow true } forEach MEU_SAVE_GROUP;
-					CTRL(MEU_CTRL_SAVERENAME) ctrlShow false; 
+					CTRL(MEU_CTRL_SAVERENAME) ctrlShow false; // disabled rename save
 					{ CTRL(_x) ctrlEnable false } forEach MEU_DISABLE_GROUP;
 					CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor [1,1,1,0.25]; // disabled color
 					
@@ -435,8 +448,6 @@ switch (toLower _fnc) do {
 				{ CTRL(_x) ctrlShow false } forEach MEU_SAVE_GROUP;
 				{ CTRL(_x) ctrlEnable true } forEach MEU_DISABLE_GROUP;
 				CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor (COLOR_WARNING_ARRAY); // tree text color
-				
-				GUI_REFRESH
 				_return = false;
 			};	
 			
@@ -448,6 +459,13 @@ switch (toLower _fnc) do {
 								
 				// set focus away from close button
 				ctrlSetFocus CTRL(MEU_CTRL_HELPTIP); // stop close button getting hit
+				
+				// rename saved is shown
+				if (ctrlEnabled CTRL(MEU_CTRL_SAVERENAME)) exitWith {
+					private "_rename";
+					_rename =["buttons",[CTRL(MEU_CTRL_SAVERENAME)]] call FUNCTION_NAME; 
+					_r = true;
+				};
 				
 				// name
 				_index = lbCurSel CTRL(MEU_CTRL_SAVEDLIST);
@@ -474,7 +492,7 @@ switch (toLower _fnc) do {
 				{ CTRL(_x) ctrlEnable true } forEach MEU_DISABLE_GROUP;
 				CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor (COLOR_WARNING_ARRAY);//[1,0.5,0,1]; // tree text color
 				
-				GUI_REFRESH
+				GUI_REFRESH(_index)
 				
 				// message
 				_m = ["message",[format ["Loadout was saved:<br/><br/>%1",WARN_TEXT(_name)],[]]] call FUNCTION_NAME;
@@ -502,7 +520,7 @@ switch (toLower _fnc) do {
 					
 					_m = ["message",[format ["Loadout was deleted:<br/><br/>%1",ERROR_TEXT(_old)],[]]] call FUNCTION_NAME;
 					
-					GUI_REFRESH
+					GUI_REFRESH(-1)
 					_r = true;
 				} else {
 					_m = ["message",[WARN_TEXT("Please select a save slot."),[]]] call FUNCTION_NAME;
@@ -537,18 +555,19 @@ switch (toLower _fnc) do {
 					};
 					
 					// if CTRL was held, exit with showing name save controls
-					if _heldCtrl exitWith {		
+					if _heldCtrl exitWith {	
+						private "_text";					
+						_text = CTRL(MEU_CTRL_SAVEDLIST) lbText (lbCurSel CTRL(MEU_CTRL_SAVEDLIST));
+						meu_renameIndex = lbCurSel CTRL(MEU_CTRL_SAVEDLIST);
 						// hide/show ctrls
 						{ CTRL(_x) ctrlShow false } forEach MEU_PREV_GROUP;
 						{ CTRL(_x) ctrlShow true } forEach MEU_SAVE_GROUP;
 						CTRL(MEU_CTRL_SAVESAVE) ctrlShow false; // hide gear save
 						{ CTRL(_x) ctrlEnable false } forEach MEU_DISABLE_GROUP;
-						CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor [1,1,1,0.25]; // tree text color
+						CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor [1,1,1,0.25]; // disabled color
 						// get list text and set on RscEdit
-						_text = CTRL(MEU_CTRL_SAVEDLIST) lbText (lbCurSel CTRL(MEU_CTRL_SAVEDLIST));
 						CTRL(MEU_CTRL_SAVEEDIT) ctrlSetText _text;
 						ctrlSetFocus CTRL(MEU_CTRL_SAVESAVE);
-						
 						_return = true;
 					};
 				
@@ -571,6 +590,7 @@ switch (toLower _fnc) do {
 				private ["_index","_variable","_array","_name","_refresh"];
 				// data
 				_index = lbCurSel CTRL(MEU_CTRL_SAVEDLIST);
+				if (_index == -1) then {_index = meu_renameIndex;};
 				_variable = format ["meu_Lo_%1",_index + 1];
 				_array = profileNamespace getVariable [_variable,[]];
 				
@@ -595,8 +615,8 @@ switch (toLower _fnc) do {
 				{ CTRL(_x) ctrlShow false } forEach MEU_SAVE_GROUP;
 				{ CTRL(_x) ctrlEnable true } forEach MEU_DISABLE_GROUP;
 				CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor (COLOR_WARNING_ARRAY);//[1,0.5,0,1]; // tree text color
-				
-				GUI_REFRESH
+				meu_renameIndex = nil;
+				GUI_REFRESH(_index)
 			};
 			
 			// gear preview close
@@ -670,7 +690,7 @@ switch (toLower _fnc) do {
 					profileNamespace setVariable ["meu_Lo_favs",_favs];
 					saveProfileNamespace;
 					
-					GUI_REFRESH;
+					GUI_REFRESH(_index)
 					
 					_r = true;
 				} else {
@@ -692,8 +712,13 @@ switch (toLower _fnc) do {
 		meu_managerBOX = _box; // define for favorites
 		// no selection
 		if (_index < 0) exitWith {
-			_m = ["message",[WARN_TEXT("Please select a loadout."),[]]] call FUNCTION_NAME; 		
-			_r = false;
+			if (lbCurSel CTRL(MEU_CTRL_DEFAULTLIST) > -1) then {
+				_default = CALL_FNC("loadDefault",[]);
+				_r = true;
+			} else {;
+				_m = ["message",[WARN_TEXT("Please select a loadout."),[]]] call FUNCTION_NAME; 		
+				_r = false;
+			};
 		};
 		// data
 		_name = format ["meu_Lo_%1",_index + 1];
@@ -812,7 +837,7 @@ switch (toLower _fnc) do {
 		};
 		
 		// refresh list
-		GUI_REFRESH
+		GUI_REFRESH(_index)
 		
 		_r = true;	
 	};
@@ -842,7 +867,7 @@ switch (toLower _fnc) do {
 			Hint "";
 						
 			// refresh list
-			GUI_REFRESH
+			GUI_REFRESH(-1)
 		};
 		
 		_r = true;
