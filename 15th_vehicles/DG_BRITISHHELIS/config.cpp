@@ -255,7 +255,7 @@ class CfgVehicles
 				color[] = {0.8,0.0,0.0};
 				ambient[] = {0.08,0.0,0.0};
 				blinking = "false";
-				intensity = 75;
+				intensity = 80;
 				drawLight = 1;
 				drawLightSize = 0.15;
 				drawLightCenterSize = 0.04;
@@ -276,30 +276,23 @@ class CfgVehicles
 				color[] = {0.0,0.8,0.0};
 				ambient[] = {0.0,0.08,0.0};
 				blinking = "false";
-				intensity = 75;
+				intensity = 80;
 			};
 			class WhiteStill: Redstill
 			{
 				name = "bily pozicni";
 				color[] = {1.0,1.0,1.0};
 				ambient[] = {0.1,0.1,0.1};
-				blinking = 0;
-			};
-			class WhiteBlinking: Redstill
-			{
-				name = "light_nav_top";
-				color[] = {1.0,1.0,1.0};
-				ambient[] = {0.1,0.1,0.1};
 				blinking = 1;
+				intensity = 80;
 				blinkingPattern[] = {0.1,0.9};
 				blinkingPatternGuarantee = 0;
 				drawLightSize = 0.2;
 				drawLightCenterSize = 0.04;
-				intensity = 75;
 			};
-			class RedBlinking: RedStill
+			class WhiteBlinking: Redstill
 			{
-				name = "cerveny pozicni blik";
+				name = "light_nav_top";
 				color[] = {0.9,0.15,0.1};
 				ambient[] = {0.09,0.015,0.01};
 				blinking = 1;
@@ -307,7 +300,19 @@ class CfgVehicles
 				blinkingPatternGuarantee = 0;
 				drawLightSize = 0.25;
 				drawLightCenterSize = 0.08;
-				intensity = 75;
+				intensity = 90;
+			};
+			class RedBlinking: RedStill
+			{
+				name = "cerveny pozicni blik";
+				color[] = {0.9,0.15,0.1};
+				ambient[] = {0.09,0.015,0.01};
+				blinking = 1;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.2;
+				drawLightCenterSize = 0.04;
+				intensity = 90;
 			};
 		};		
 		

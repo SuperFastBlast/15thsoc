@@ -173,7 +173,7 @@ class CfgVehicles {
 		damperSize = 0.2;	// max. damper amplitude
 		damperForce = 1;	// larger number more stiffness dampers
 		damperDamping = 1;	// larger number less movement in dampers
-		brakeDistance = 17;
+		brakeDistance = 3;
 		armor = 500;
 		armorStructural = 4;
 		damageResistance = 0.5;
@@ -238,7 +238,7 @@ class CfgVehicles {
 		
 		class TransportWeapons {};
 		
-		thrustDelay	= 0.2;
+		thrustDelay	= 0.1;
 		idleRpm = 800;
 		redRpm = 4500;
 		brakeIdleSpeed = 1.78;
@@ -254,13 +254,13 @@ class CfgVehicles {
 			reverseString = "R";
 		};
 		simulation = "carx";
-		dampersBumpCoef = 6.0;
+		//dampersBumpCoef = 6.0;
 		differentialType = "all_limited";
-		frontRearSplit = 0.5;
-		frontBias = 1.3;
-		rearBias = 1.3;
-		centreBias = 1.3;
-		clutchStrength = 55.0;
+		//frontRearSplit = 0.5;
+		//frontBias = 1.3;
+		//rearBias = 1.3;
+		//centreBias = 1.3;
+		clutchStrength = 185;
 		enginePower = 450;
 		maxOmega = 320;
 		peakTorque = 1450;
@@ -282,7 +282,7 @@ class CfgVehicles {
 				mass = 80;
 				MOI = 25;
 				dampingRate = 0.1;
-				maxBrakeTorque = 20000;
+				maxBrakeTorque = 22500;
 				maxHandBrakeTorque = 0;
 				suspTravelDirection[] = {0, -1, 0};
 				suspForceAppPointOffset = "wheel_1_1_axis";

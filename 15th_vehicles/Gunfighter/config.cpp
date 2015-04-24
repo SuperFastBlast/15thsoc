@@ -113,6 +113,7 @@ class CfgVehicles
 		selectionHRotorMove = "mainRotorBlurred";
 		selectionVRotorStill = "tailRotorStatic";
 		selectionVRotorMove = "tailRotorBlurred";
+		selectionDamage = "trup";
 		altFullForce = 5000;
 		altNoForce = 10000;
 		bodyFrictionCoef = 0.6;
@@ -140,6 +141,14 @@ class CfgVehicles
 			maxMainRotorStress = 110000;
 			maxTailRotorStress = 25000;
 			rtd_center = "rtd_center"; //Needs a memory point in the model. Have it centred, then move it up or down to make the wheels touch the ground properly. 
+		};
+		class TransportBackpacks
+		{
+			class _xx_B_Parachute
+			{
+				backpack = "B_Parachute";
+				count = 2;
+			};
 		};
 		maxSpeed = 296;
 		fuelCapacity=1200;
@@ -172,8 +181,8 @@ class CfgVehicles
 		liftForceCoef = 1.3;
 		mainrotordive = 0;
 		backrotordive = 0;
-		mainRotorSpeed = 1.2;
-		backRotorSpeed = 6.1;
+		mainRotorSpeed = -1;
+		backRotorSpeed = 3;
 		flapsFrictionCoef = 0.5;
 
 		driverCanEject=1;
@@ -194,7 +203,7 @@ class CfgVehicles
 		memoryPointLRocket = "Rocket_1";
 		memoryPointRRocket = "Rocket_2";
 		laserScanner = 1;
-		selectionFireAnim = "muzzleflash";
+		selectionFireAnim = "zasleh";
 		getInRadius = 2.5;
 		memoryPointCM[]  = {"flare_launcher1","flare_launcher2"};
 		memoryPointCMDir[] = {"flare_launcher1_dir","flare_launcher2_dir"};
@@ -848,7 +857,7 @@ class CfgVehicles
 				color[] = {0.8,0.0,0.0};
 				ambient[] = {0.08,0.0,0.0};
 				blinking = "false";
-				intensity = 75;
+				intensity = 80;
 				drawLight = 1;
 				drawLightSize = 0.15;
 				drawLightCenterSize = 0.04;
@@ -868,9 +877,12 @@ class CfgVehicles
 				name = "bily pozicni";
 				color[] = {1.0,1.0,1.0};
 				ambient[] = {0.1,0.1,0.1};
-				blinking = "false";
+				blinking = 1;
+				intensity = 80;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
 				drawLightSize = 0.2;
-				intensity = 75;
+				drawLightCenterSize = 0.04;
 			};
 			class GreenStill: RedStill
 			{
@@ -878,23 +890,11 @@ class CfgVehicles
 				color[] = {0.0,0.8,0.0};
 				ambient[] = {0.0,0.08,0.0};
 				blinking = "false";
-				intensity = 75;
+				intensity = 80;
 			};
 			class WhiteBlinking: RedStill
 			{
 				name = "bily pozicni blik";
-				color[] = {1.0,1.0,1.0};
-				ambient[] = {0.1,0.1,0.1};
-				blinking = 1;
-				blinkingPattern[] = {0.1,0.9};
-				blinkingPatternGuarantee = 0;
-				drawLightSize = 0.2;
-				drawLightCenterSize = 0.04;
-				intensity = 75;
-			};
-			class RedBlinking: RedStill
-			{
-				name = "cerveny pozicni blik";
 				color[] = {0.9,0.15,0.1};
 				ambient[] = {0.09,0.015,0.01};
 				blinking = 1;
@@ -902,7 +902,19 @@ class CfgVehicles
 				blinkingPatternGuarantee = 0;
 				drawLightSize = 0.25;
 				drawLightCenterSize = 0.08;
-				intensity = 75;
+				intensity = 90;
+			};
+			class RedBlinking: RedStill
+			{
+				name = "cerveny pozicni blik";
+				color[] = {0.9,0.15,0.1};
+				ambient[] = {0.09,0.015,0.01};
+				blinking = 1;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.2;
+				drawLightCenterSize = 0.04;
+				intensity = 90;
 			};
 		};
 		class Reflectors
@@ -937,35 +949,71 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
+			class HitEngine: HitEngine
+			{
+				armor = 999;
+				name = "motor";
+				convexComponent = "motor";
+			};
 			class HitHRotor: HitHRotor
 			{
-				armor=2.5999999;
-				radius=0.44999999;
-				minimalHit=0.090000004;
-				explosionShielding=2.5;
+				armor = 2.9;
+				radius = 0.4;
+				minimalHit = 0.09;
+				explosionShielding = 2.5;
+				name = "velka vrtule";
 			};
 			class HitVRotor: HitVRotor
 			{
-				armor=1.5;
-				radius=0.059999999;
-				minimalHit=0.050000001;
-				explosionShielding=6;
+				armor = 1.5;
+				radius = 0.06;
+				minimalHit = 0.05;
+				explosionShielding = 6;
+				name = "mala vrtule";
+			};
+			class HitFuel: HitFuel
+			{
+				armor = 1;
+				radius = 0.25;
+				minimalHit = 0.05;
+			};
+			class HitAvionics: HitAvionics
+			{
+				armor = 2;
+				radius = 0.4;
+				minimalHit = 0.05;
+				name = "elektronika";
+				visual = "elektronika";
+			};
+			class HitGlass1: HitGlass2
+			{
+				armor = 2;
+				radius = 0.4;
+				explosionShielding = 6;
 			};
 			class HitGlass2: HitGlass2
 			{
-				armor = 0.5;
+				armor = 2;
+				radius = 0.4;
+				explosionShielding = 6;
 			};
 			class HitGlass3: HitGlass3
 			{
-				armor = 0.5;
+				armor = 2;
+				radius = 0.4;
+				explosionShielding = 6;
 			};
 			class HitGlass4: HitGlass4
 			{
-				armor = 0.5;
+				armor = 2;
+				radius = 0.4;
+				explosionShielding = 6;
 			};
 			class HitGlass5: HitGlass5
 			{
-				armor = 0.5;
+				armor = 2;
+				radius = 0.4;
+				explosionShielding = 6;
 			};
 		};
 		class Turrets: Turrets
@@ -1072,6 +1120,28 @@ class CfgVehicles
 				source = "revolving";
 				weapon = "M197";
 			};
+			class HitGlass1
+			{
+				source = "Hit";
+				hitpoint = "HitGlass1";
+				raw = 1;
+			};
+			class HitGlass2: HitGlass1
+			{
+				hitpoint = "HitGlass2";
+			};
+			class HitGlass3: HitGlass1
+			{
+				hitpoint = "HitGlass3";
+			};
+			class HitGlass4: HitGlass1
+			{
+				hitpoint = "HitGlass4";
+			};
+			class HitGlass5: HitGlass1
+			{
+				hitpoint = "HitGlass4";
+			};
 		};
 		class Library
 		{
@@ -1171,6 +1241,7 @@ class CfgVehicles
 		selectionHRotorMove = "mala vrtule blur";
 		selectionVRotorStill = "velka vrtule staticka";
 		selectionVRotorMove = "velka vrtule Blur";
+		selectionDamage = "trup";
 
 		maxSpeed = 280; 
 		mainRotorSpeed = 1.2;
@@ -1411,7 +1482,7 @@ class CfgVehicles
 				minElev=-60; maxElev=+30; initElev=-0;
 				minTurn=-5; maxTurn=185; initTurn=0;
 				soundServo[]={,db-40,1.0};
-				selectionFireAnim="zasleh_1";
+				selectionFireAnim="zasleh";
 				animationSourceHatch="";
 				gunBeg="muzzle_1";
 				gunEnd="chamber_1";
@@ -1437,7 +1508,25 @@ class CfgVehicles
 					maxAngleY=100;
 					initFov=1;
 					minFov=0.25;
-					maxFov=0.8;
+					maxFov=1.1;
+				};
+				class ViewGunner: ViewOptics
+				{
+					initAngleX = -15;
+					minAngleX = -45;
+					maxAngleX = 45;
+					initFov = 0.75;
+					minFov = 0.375;
+					maxFov = 0.75;
+					visionMode[] = {};
+				};
+				class OpticsIn
+				{
+					class ViewOptics: ViewGunner
+					{
+						gunnerOpticsModel = "\A3\weapons_f\reticle\optics_empty";
+						gunnerOutOpticsModel = "\A3\weapons_f\reticle\optics_empty";
+					};
 				};
 				gunnerCompartments = Compartment2;
 				soundAttenuationTurret = "HeliAttenuationGunner";
@@ -2096,7 +2185,7 @@ class CfgVehicles
 				};
 			};
 		};
-				class MarkerLights
+		class MarkerLights
 		{
 			class RedStill
 			{
@@ -2104,7 +2193,7 @@ class CfgVehicles
 				color[] = {0.8,0.0,0.0};
 				ambient[] = {0.08,0.0,0.0};
 				blinking = "false";
-				intensity = 75;
+				intensity = 80;
 				drawLight = 1;
 				drawLightSize = 0.15;
 				drawLightCenterSize = 0.04;
@@ -2124,9 +2213,12 @@ class CfgVehicles
 				name = "bily pozicni";
 				color[] = {1.0,1.0,1.0};
 				ambient[] = {0.1,0.1,0.1};
-				blinking = "false";
+				blinking = 1;
+				intensity = 80;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
 				drawLightSize = 0.2;
-				intensity = 75;
+				drawLightCenterSize = 0.04;
 			};
 			class GreenStill: RedStill
 			{
@@ -2134,23 +2226,11 @@ class CfgVehicles
 				color[] = {0.0,0.8,0.0};
 				ambient[] = {0.0,0.08,0.0};
 				blinking = "false";
-				intensity = 75;
+				intensity = 80;
 			};
 			class WhiteBlinking: RedStill
 			{
 				name = "bily pozicni blik";
-				color[] = {1.0,1.0,1.0};
-				ambient[] = {0.1,0.1,0.1};
-				blinking = 1;
-				blinkingPattern[] = {0.1,0.9};
-				blinkingPatternGuarantee = 0;
-				drawLightSize = 0.2;
-				drawLightCenterSize = 0.04;
-				intensity = 75;
-			};
-			class RedBlinking: RedStill
-			{
-				name = "cerveny pozicni blik";
 				color[] = {0.9,0.15,0.1};
 				ambient[] = {0.09,0.015,0.01};
 				blinking = 1;
@@ -2158,7 +2238,19 @@ class CfgVehicles
 				blinkingPatternGuarantee = 0;
 				drawLightSize = 0.25;
 				drawLightCenterSize = 0.08;
-				intensity = 75;
+				intensity = 90;
+			};
+			class RedBlinking: RedStill
+			{
+				name = "cerveny pozicni blik";
+				color[] = {0.9,0.15,0.1};
+				ambient[] = {0.09,0.015,0.01};
+				blinking = 1;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.2;
+				drawLightCenterSize = 0.04;
+				intensity = 90;
 			};
 		};
 		class Reflectors
