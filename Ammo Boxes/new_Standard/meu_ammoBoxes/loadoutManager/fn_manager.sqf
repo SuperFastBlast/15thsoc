@@ -683,7 +683,7 @@ switch (toLower _fnc) do {
 				private "_default";
 				_default = CALL_FNC("loadDefault",[]);
 				_r = true;
-			} else {;
+			} else {
 				_m = ["message",[WARN_TEXT("Please select a loadout."),[]]] call FUNCTION_NAME; 		
 				_r = false;
 			};

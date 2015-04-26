@@ -45,8 +45,8 @@
 
 // gear checks
 #define ALLOWED_GOGGLES			["G_B_Diving","AV_ESS_blk","AV_ESS_blk_clr","AV_ESS_tan","AV_ESS_tan_clr","AV_ESS_grn","AV_ESS_grn_clr","G_Aviator","G_Shades_Green","G_Shades_Red","G_Shades_Black","G_Shades_Blue","G_Lowprofile","G_Sport_BlackWhite","G_Sport_Blackyellow","G_Sport_Red","G_Sport_Blackred"]
-#define MEU_CLASS_EARBUDS		"AGM_EarBuds"
-#define MEU_EARBUD_CHECK		player getVariable ["AGM_hasEarPlugsin", false]
+#define MEU_CLASS_EARBUDS		"AGM_EarBuds" // ACE: "ACE_EarPlugs"
+#define MEU_EARBUD_CHECK		player getVariable ["AGM_hasEarPlugsin", false] // ACE: [player] call ace_hearing_fnc_hasEarPlugsIn
 #define TFAR_CHECK				isClass (configfile >> "CfgPatches" >> "task_force_radio")
 #define CHECK_LOADOUT(ARRAY)	( count ARRAY < 2 || {count (ARRAY select 1) < 1} ) 
 #define GEAR(INDEX)				(_gear select INDEX)

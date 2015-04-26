@@ -77,7 +77,7 @@ class CfgVehicles
 	class B_supplyCrate_F;
 	class Box_NATO_AmmoVeh_F;
 	class Box_NATO_WpsSpecial_F;
-	class Box_meu_spectre : Box_NATO_WpsSpecial_F 
+	class Box_meu_spectre: Box_NATO_WpsSpecial_F 
 	{	
 		MEU_CRATE_INFO([15th] Spectre Box)
 		
@@ -370,7 +370,7 @@ class CfgVehicles
 			MEU_CLASS_BAG(MEF_Wood_Carryall,5)
 		};
 	};
-	class Box_meu_inf : B_supplyCrate_F
+	class Box_meu_inf: B_supplyCrate_F
 	{
 		MEU_CRATE_INFO([15th] Infantry Box)	
 
@@ -526,7 +526,7 @@ class CfgVehicles
 			MEU_CLASS_BAG(B_UAV_01_backpack_F,5) 
 		};
 	};
-	class Box_meu_wep : B_supplyCrate_F
+	class Box_meu_wep: B_supplyCrate_F
 	{
 		MEU_CRATE_INFO([15th] Weapons Box)
 
@@ -669,7 +669,7 @@ class CfgVehicles
 			MEU_CLASS_BAG(O_Mortar_01_weapon_F,5)
 		};
 	};
-	class Box_meu_ace : B_supplyCrate_F
+	class Box_meu_ace: B_supplyCrate_F
 	{
 		MEU_CRATE_INFO([15th] ACE Box)
 
@@ -757,7 +757,7 @@ class CfgVehicles
 			MEU_CLASS_BAG(B_Parachute,5)
 		};
 	};
-	class Box_meu_titan : B_supplyCrate_F
+	class Box_meu_titan: B_supplyCrate_F
 	{
 		MEU_CRATE_INFO([15th] Titan Box)
 	
@@ -826,7 +826,7 @@ class CfgVehicles
 			MEU_CLASS_BAG(tf_rt1523g,5)
 		};
 	};
-	class Box_meu_gator : B_supplyCrate_F
+	class Box_meu_gator: B_supplyCrate_F
 	{
 		MEU_CRATE_INFO([15th] Gator Box)
 
@@ -896,7 +896,7 @@ class CfgVehicles
 			MEU_CLASS_BAG(tf_rt1523g,5) 
 		};
 	};
-	class Box_meu_arty : B_supplyCrate_F
+	class Box_meu_arty: B_supplyCrate_F
 	{
 		MEU_CRATE_INFO([15th] Battlestar Box)
 
@@ -971,7 +971,7 @@ class CfgVehicles
 			MEU_CLASS_BAG(B_Mortar_01_weapon_F,5)
 		};
 	};
-	class Box_meu_hq : B_supplyCrate_F
+	class Box_meu_hq: B_supplyCrate_F
 	{
 		MEU_CRATE_INFO([15th] MEU HQ Box)
 
@@ -1239,7 +1239,7 @@ class CfgVehicles
 			MEU_CLASS_BAG(MEF_Wood_Kitbag,5)
 		};
 	};
-	class Box_meu_lar : B_supplyCrate_F
+	class Box_meu_lar: B_supplyCrate_F
 	{
 		MEU_CRATE_INFO([15th] LAR Box)
 	
