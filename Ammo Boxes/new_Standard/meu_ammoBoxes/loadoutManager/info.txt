@@ -2,10 +2,11 @@
 // Fight9
 // built on Riouken's framework
 
-/*  
-TODO:
-update favorites addaction button?
+
+TODO:	
 option to hide defaults on crate scroll actions - favorites?
+mission version?
+change false in "config" to "" --> update "listGear"
 
 Fixed:
 - black images
@@ -33,6 +34,5 @@ Added:
 - better error messages
 - super sexy GUI
 
-*/
 
 

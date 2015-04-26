@@ -1,6 +1,8 @@
-#include "script_macros.hpp"
 
-#define NO_RESUPPLY_BRAVO // delete line to enable box_resuply_bravo
+#define NO_ZEUS_WINDOW 		// delete line to enable the zeus dialog/disable zeus crate
+#define NO_RESUPPLY_BRAVO 	// delete line to enable box_resuply_bravo
+
+#include "script_macros.hpp"
 
 class CfgPatches
 {
@@ -23,7 +25,8 @@ class CfgPatches
 			"Box_meu_vehicle",
 			"Box_meu_lar",
 			"Box_meu_empty",
-			"Box_meu_Boats"
+			"Box_meu_Boats",
+			"Box_meu_zeus"
 		};
 		weapons[] = {};
 		requiredVersion = 3.0; // v3 of config standard
@@ -77,9 +80,7 @@ class CfgVehicles
 	class Box_meu_spectre : Box_NATO_WpsSpecial_F 
 	{	
 		MEU_CRATE_INFO([15th] Spectre Box)
-		icon = "iconCrateLarge";
-		model = "\A3\weapons_F\AmmoBoxes\WpnsBox_large_F";
-			
+		
 		MEU_MANAGER = 1;
 		MEU_LOADOUTS[] = 
 		{
@@ -1471,7 +1472,6 @@ class CfgVehicles
 		#ifndef NO_RESUPPLY_BRAVO
 		MEU_CRATE_INFO([15th] Resupply BRAVO)
 		#else
-		displayname = "[15th] Resupply BRAVO";
 		scope = 0;
 		#endif
 						
@@ -1504,6 +1504,15 @@ class CfgVehicles
 		class TransportBackpacks {			
 			MEU_CLASS_BAG(MEF_Wood_Kitbag,5)
 		};
+	};
+	class Box_meu_zeus: Box_meu_empty
+	{
+		displayname = "[15th] Zues Box";
+		curatorInfoTypeEmpty = "RscDisplayAttributesInventory";
+		model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
+		#ifndef NO_ZEUS_WINDOW		
+		scope = 0;
+		#endif
 	};
 	class Box_meu_vehicle: Box_NATO_AmmoVeh_F
 	{

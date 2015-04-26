@@ -15,44 +15,22 @@ switch (toLower _fnc) do {
 	
 	case "init": {
 		// add action to box
-		private ["_box","_id","_actions","_name"];		
+		private ["_box","_id","_name","_favs"];		
 		_box = [_params,0,[]] call BIS_fnc_param;
 		
 		// main action
 		_name = ACTION_NAME;
-		_id = _box addAction [MU_BG_TEXT(_name),{ CALL_FNC("open",[(_this select 3) select 0]) },[_box],6];
+		_id = _box addAction [MU_BG_TEXT(_name),{ CALL_FNC("open",_this select 3); },[_box],6];
 		_box setVariable ["meu_loadoutManager",true];
 		
 		// get favorites list & add them to box
 		_favs = profileNamespace getVariable ["meu_Lo_favs",[]];
-		_actions = [];
-		{
-			private ["_var","_array","_id","_text"];
-			// check loadout first
-			_var = format ["meu_Lo_%1",_x];
-			_array = profileNamespace getVariable [_var,[]];
-			if (count _array < 2 || {count (_array select 1) < 1}) exitWith {};
-			// action
-			_text = format ["<img image='%2' /> %1",(_array select 0),ICON_FAVORITE];
-			_id = _box addAction [
-				WARN_TEXT(_text), 
-				{
-					private ["_num","_box"];
-					_num = _this select 3 select 0;
-					_box = _this select 3 select 1;
-					["loadSaved",[_num - 1,_box]] call meu_fnc_manager; 
-				},
-				[_x,_box],
-				5,
-				true,
-				true,
-				"",
-				(format ['((profileNamespace getVariable ["meu_Lo_favs",[]]) find %1) > -1',_x])
-			];
-			_actions pushback _x;
+		{ 
+			private "_blah"; 
+			_blah = [_x,[_box]]; 
+			SPAWN_FNC("favorites",_blah); 
 		} forEach _favs;
-		_box setVariable ["meu_loadoutManager_favs",_actions];	
-		
+				
 		_r = _id;
 	};
 	
@@ -71,9 +49,7 @@ switch (toLower _fnc) do {
 		// hide ctrls
 		{ CTRL(_x) ctrlShow false } forEach MEU_SAVE_GROUP;
 		{ CTRL(_x) ctrlShow false } forEach MEU_PREV_GROUP;
-		
-		// hide extra buttons
-		{ CTRL(_X) ctrlShow false } forEach [MEU_CTRL_BUTTONDELETE,MEU_CTRL_BUTTONCLOSE,MEU_CTRL_BUTTONDEFAULT];
+		{ CTRL(_x) ctrlShow false; CTRL(_x) ctrlEnable false; } forEach MEU_EXTRA_BUTTONS;
 		
 		// populate	
 		GUI_REFRESH(-1)
@@ -114,7 +90,7 @@ switch (toLower _fnc) do {
 			GET_PARENT(_this);
 			if CHECK_IS_RADIO exitWith {(getText (configFile >> _config >> _this >> "picture"))};
 			if (!_expand && {_checking} && {!(_this in _boxGear)}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
-			(getText (configFile >> _config >> _this >> "picture"))			
+			(getText (configFile >> _config >> _this >> "picture"))
 		};	
 		_fnc_tvParantAndChild = {
 			// checks for gear before running parent and child fncs
@@ -180,14 +156,14 @@ switch (toLower _fnc) do {
 				private ["_parent","_childA","_childB"];
 				_parent = _tree tvAdd [ [], "Radio Presets" ];
 				_tree tvSetPicture [ [_parent],"\A3\Weapons_F\Data\UI\gear_item_radio_ca.paa" ];
-				if (count GEAR(15) > 0) then {
+				if CHECK_COUNT(15) then {
 					_childA = _tree tvAdd [ [_parent], "Short Range" ];
 					{
 						private "_gChild";
 						_gChild = _tree tvAdd [ [_parent,_childA], _x ];
 					} forEach GEAR(15);
 				};
-				if (count GEAR(16) > 0) then {
+				if CHECK_COUNT(16) then {
 					_childB = _tree tvAdd [ [_parent], "Long Range" ];
 					{
 						private "_gChild";
@@ -202,7 +178,7 @@ switch (toLower _fnc) do {
 	
 	case "listsaved": {
 		// list saved loadouts
-		private ["_savedList","_index"];
+		private ["_savedList","_index","_favs"];
 		_index = [_params,0,lbCurSel CTRL(MEU_CTRL_SAVEDLIST)] call BIS_fnc_param;
 		_savedList = CTRL(MEU_CTRL_SAVEDLIST);
 		// loop through vars, get names & add to array
@@ -220,20 +196,21 @@ switch (toLower _fnc) do {
 			];		
 		};
 		_favs = profileNamespace getVariable ["meu_LO_favs",[]];
-		// clear & remove selected
+		// clear, remove selected, reset text color
 		lbClear _savedList;
 		_savedList lbSetCurSel -1; 
+		_savedList ctrlSetTextColor (COLOR_WARNING_ARRAY);
 		// add to listBox
 		{
 			private ["_index","_num"];
 			_num = _forEachIndex + 1;
 			_index = _savedList lbAdd (_x select 0);
 			// if empty, grey text
-			if ( (_x select 0) == (format ["Empty Loadout %1",_num]) ) then {
+			if CHECK_LOADOUT(_x) then {
 				_savedList lbSetColor [_index,[1,1,1,0.25]];
 			};
 			// if in favs, add icon
-			if ( _num in _favs) then {
+			if (_num in _favs) then {
 				_savedList lbSetPicture [_index,ICON_FAVORITE];
 			};
 		} forEach meuLoadOuts;
@@ -246,16 +223,7 @@ switch (toLower _fnc) do {
 	
 	case "listdefault": {
 		// list configured default loadouts
-		private ["_defaultList","_cfg","_KK_fnc_strReplace"];
-		_KK_fnc_strReplace = {
-			private ["_s","_f","_r","_i"];
-			_s = _this select 0; // replace in
-			_f = _this select 1; // replace what
-			_r = _this select 2; // replace with
-			_i = _s find _f;
-			if (_i < 0) exitWith {_s};
-			(_s select [0, _i]) + _r + (_s select [_i + count _f])
-		};
+		private ["_defaultList","_cfg"];
 		
 		_defaultList = CTRL(MEU_CTRL_DEFAULTLIST);
 		lbClear _defaultList;
@@ -268,7 +236,7 @@ switch (toLower _fnc) do {
 			// add names to listBox
 			{
 				private "_index";	// remove "loadout" from name
-				_index = _defaultList lbAdd ([(_x select 0),"Loadout",""] call _KK_fnc_strReplace);
+				_index = _defaultList lbAdd STR_REPLACE(_x select 0,"Loadout","");
 				_defaultList lbSetData [_index,_x select 1];
 			} forEach _array;
 		} else {
@@ -315,10 +283,7 @@ switch (toLower _fnc) do {
 		
 		// if there is a laser designator in assigned items
 		if ( { 
-				private ["_config","_binos"];
-				_config = CALL_FNC("config",[_x]);
-				_binos = [(configFile >> _config >> _x),"optics",0] call BIS_fnc_returnConfigEntry;
-				if (_binos > 0) then [{TRUE},{FALSE}];
+				([(configFile >> (CALL_FNC("config",[_x])) >> _x),"optics",0] call BIS_fnc_returnConfigEntry) > 0
 			} count _meu_asgnItems > 0		
 		) then {
 			// add one extra battery to container if it has one already - compensates for lost loaded one
@@ -347,7 +312,7 @@ switch (toLower _fnc) do {
 			} forEach _packWeps;
 		};
 		
-		// radio settings
+		// get radio frequencies
 		_meu_swFreqs = [];
 		_meu_lrFreqs = [];
 		if (TFAR_CHECK) then {
@@ -388,17 +353,7 @@ switch (toLower _fnc) do {
 		private ["_button","_return","_KK_fnc_strReplace"];
 		_button = [_params,0,controlNull] call BIS_fnc_param;
 		_return = false;
-		
-		_KK_fnc_strReplace = {
-			private ["_s","_f","_r","_i"];
-			_s = _this select 0;
-			_f = _this select 1;
-			_r = _this select 2;
-			_i = _s find _f;
-			if (_i < 0) exitWith {_s};
-			(_s select [0, _i]) + _r + (_s select [_i + count _f])
-		};
-		
+				
 		switch (ctrlIDC _button) do {
 			
 			// main save button
@@ -414,7 +369,7 @@ switch (toLower _fnc) do {
 					_text = CTRL(MEU_CTRL_SAVEDLIST) lbText _index;
 					_empty = format ["Empty Loadout %1",_index + 1];
 					if (_text == _empty) then {
-						_text = [_text,"Empty ",""] call _KK_fnc_strReplace; 
+						_text = STR_REPLACE(_text,"Empty ",""); 
 					};
 					CTRL(MEU_CTRL_SAVEEDIT) ctrlSetText _text;
 					
@@ -460,11 +415,11 @@ switch (toLower _fnc) do {
 				// set focus away from close button
 				ctrlSetFocus CTRL(MEU_CTRL_HELPTIP); // stop close button getting hit
 				
-				// rename saved is shown
-				if (ctrlEnabled CTRL(MEU_CTRL_SAVERENAME)) exitWith {
+				// rename save button is shown
+				if (ctrlShown CTRL(MEU_CTRL_SAVERENAME)) exitWith {
 					private "_rename";
 					_rename =["buttons",[CTRL(MEU_CTRL_SAVERENAME)]] call FUNCTION_NAME; 
-					_r = true;
+					_return = true;
 				};
 				
 				// name
@@ -477,7 +432,7 @@ switch (toLower _fnc) do {
 				if (_name == "") exitWith { _m = ["message",[WARN_TEXT("Please enter a name."),[]]] call FUNCTION_NAME; };
 				// if they left default empty name
 				if (_name == _empty) then {
-					_name = [_name,"Empty ",""] call _KK_fnc_strReplace; 
+					_name = STR_REPLACE(_text,"Empty ",""); 
 				};
 				
 				_gear = CALL_FNC("playerGear",[]);
@@ -504,16 +459,33 @@ switch (toLower _fnc) do {
 			case MEU_CTRL_BUTTONDELETE: { 
 				// delete selected loadout
 				if ( lbCurSel CTRL(MEU_CTRL_SAVEDLIST) >= 0 ) then {
-					private ["_index","_variable","_name","_old"];
+					private ["_index","_variable","_name","_old","_loadoutNo","_favs","_found"];
 					// format new data
 					_index = lbCurSel CTRL(MEU_CTRL_SAVEDLIST);
 					_old = CTRL(MEU_CTRL_SAVEDLIST) lbText _index;
 					_variable = format ["meu_Lo_%1",_index + 1];
 					_name = format ["Empty Loadout %1",_index + 1];
 					
+					// look for LO in favs
+					_loadoutNo = _index + 1;
+					_favs = profileNamespace getVariable ["meu_Lo_favs",[]];
+					_found = _favs find _loadoutNo;
+					if (_found > -1) then {
+						private ["_blah","_removeFavs"];
+						// if found, make Number negative, remove from array
+						_loadoutNo = _loadoutNo * -1;
+						_favs deleteAt _found;					
+						// call fnc
+						_blah = [_loadoutNo,(allMissionObjects "Reammobox_F")]; 
+						_removeFavs = CALL_FNC("favorites",_blah);
+						profileNamespace setVariable ["meu_Lo_favs",_favs];
+					};
+					
 					// save
 					profileNamespace setVariable [_variable,[_name,[]]];
 					saveProfileNamespace;
+					
+					
 					
 					// refresh
 					{ CTRL(_x) ctrlShow false } forEach MEU_PREV_GROUP;
@@ -521,10 +493,10 @@ switch (toLower _fnc) do {
 					_m = ["message",[format ["Loadout was deleted:<br/><br/>%1",ERROR_TEXT(_old)],[]]] call FUNCTION_NAME;
 					
 					GUI_REFRESH(-1)
-					_r = true;
+					_return = true;
 				} else {
 					_m = ["message",[WARN_TEXT("Please select a save slot."),[]]] call FUNCTION_NAME;
-					_r = false;
+					_return = false;
 				};
 			};
 			
@@ -549,9 +521,9 @@ switch (toLower _fnc) do {
 					_variable = format ["meu_Lo_%1",_index + 1];				
 					_array = profileNamespace getVariable [_variable,[]];
 					// check
-					if (count _array < 2 || {count (_array select 1) < 1}) exitWith {
+					if CHECK_LOADOUT(_array) exitWith {
 						_m = ["message",[WARN_TEXT("The selected slot is empty."),[]]] call FUNCTION_NAME;
-						_r = false;
+						_return = false;
 					};
 					
 					// if CTRL was held, exit with showing name save controls
@@ -587,7 +559,7 @@ switch (toLower _fnc) do {
 			
 			// rename save button
 			case MEU_CTRL_SAVERENAME: {			
-				private ["_index","_variable","_array","_name","_refresh"];
+				private ["_index","_variable","_array","_name","_LO","_favs"];
 				// data
 				_index = lbCurSel CTRL(MEU_CTRL_SAVEDLIST);
 				if (_index == -1) then {_index = meu_renameIndex;};
@@ -603,20 +575,38 @@ switch (toLower _fnc) do {
 				profileNamespace setVariable [_variable,_array];
 				saveProfileNamespace;
 				
-				// hint note if in favorites
+				// rename favorites
+				_LO = _index + 1;
 				_favs = profileNamespace getVariable ["meu_Lo_favs",[]];
-				if ( (_index + 1) in _favs ) then {
-					private ["_text","_m"];
-					_text = format ["Note for favorites:<br />%1",WARN_TEXT("Scroll action name will update next game.")];
-					_m = ["message",[_text,[]]] call FUNCTION_NAME;
+				if (_LO in _favs) then {
+					{	// rename on all boxes
+						// if has manager
+						if ( _x getVariable ["meu_loadoutManager",false] ) then {
+							private ["_index","_box_favs"];
+							_box_favs = _x getVariable ["meu_loadoutManager_favs",[]];
+							// get sub array index 
+							_index = -1;
+							{ 
+								if (_x select 0 == _LO) then {_index = _forEachIndex};
+							} forEach _box_favs;
+							// rename action
+							if (_index > -1) then {
+								private ["_text","_id"];
+								_id = (_box_favs select _index) select 1;
+								_text = format ["<img image='%2' /> %1",_name,ICON_FAVORITE];
+								_x setUserActionText [_id,WARN_TEXT(_text)];
+							};
+						};
+					} forEach (allMissionObjects "Reammobox_F");
 				};
 				
 				// refresh
 				{ CTRL(_x) ctrlShow false } forEach MEU_SAVE_GROUP;
 				{ CTRL(_x) ctrlEnable true } forEach MEU_DISABLE_GROUP;
-				CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor (COLOR_WARNING_ARRAY);//[1,0.5,0,1]; // tree text color
+				CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor (COLOR_WARNING_ARRAY);// tree text color
 				meu_renameIndex = nil;
 				GUI_REFRESH(_index)
+				_return = true;
 			};
 			
 			// gear preview close
@@ -630,89 +620,67 @@ switch (toLower _fnc) do {
 			// set favorite
 			case MEU_CTRL_FAVORITE: {
 				if ( lbCurSel CTRL(MEU_CTRL_SAVEDLIST) >= 0 ) then {
-					private ["_index","_variable","_array","_favs","_loadoutNo","_inArray"];
+					private ["_index","_variable","_array","_favs","_loadoutNo","_found","_fnc","_adjFavs"];
 					// format new data
 					_index = lbCurSel CTRL(MEU_CTRL_SAVEDLIST);
 					_variable = format ["meu_Lo_%1",_index + 1];				
 					_array = profileNamespace getVariable [_variable,[]];
 					// check
-					if (count _array < 2 || {count (_array select 1) < 1}) exitWith {
+					if CHECK_LOADOUT(_array) exitWith {
 						_m = ["message",[WARN_TEXT("The selected slot is empty."),[]]] call FUNCTION_NAME;
-						_r = false;
+						_return = false;
 					};
 					// get array
 					_loadoutNo = _index + 1;
 					_favs = profileNamespace getVariable ["meu_Lo_favs",[]];
-					// find if in favs array
-					_inArray = _favs find _loadoutNo;
-					if (_inArray isEqualTo -1) then {
-						// add to favs array
-						_favs pushBack _loadoutNo;
-						// add action to all ammoboxes
-						{
-							// if has manager
-							if ( _x getVariable ["meu_loadoutManager",false] ) then {
-								private ["_box_favs"];
-								// if doesnt have action already
-								_box_favs = _x getVariable ["meu_loadoutManager_favs",[]];
-								if ( _box_favs find _loadoutNo < 0 ) then {
-									private ["_text","_id"];
-									// add the action
-									_text = format ["<img image='%2' /> %1",(_array select 0),ICON_FAVORITE];
-									_id = _x addAction [
-										WARN_TEXT(_text), 
-										{
-											private ["_num","_box"];
-											_num = _this select 3 select 0;
-											_box = _this select 3 select 1;
-											["loadSaved",[_num - 1,_box]] call FUNCTION_NAME; 
-										},
-										[_loadoutNo,_x],
-										5,
-										true,
-										true,
-										"",
-										(format ['((profileNamespace getVariable ["meu_Lo_favs",[]]) find %1) > -1',_loadoutNo])
-									];
-									// update box's list of favs
-									_box_favs pushBack _loadoutNo;
-									_x setVariable ["meu_loadoutManager_favs",_box_favs];
-								};
-							};
-						} forEach (allMissionObjects "Reammobox_F");
-					} else {
-						// delete from favs array
-						_favs deleteAt _inArray;
-						// will automatically disable actions but not remove
-					};
 					
-					// save
+					// look for No in favs array
+					_found = _favs find _loadoutNo;
+					if (_found > -1) then {
+						// if found, make Number negative, remove from array
+						_loadoutNo = _loadoutNo * -1;
+						_favs deleteAt _found;
+					} else {
+						// else, add to array
+						_favs pushBack _loadoutNo;
+					};
+					// call fnc
+					_fnc = [_loadoutNo,(allMissionObjects "Reammobox_F")]; 
+					_adjFavs = CALL_FNC("favorites",_fnc);
+					
+					// save array
 					profileNamespace setVariable ["meu_Lo_favs",_favs];
 					saveProfileNamespace;
 					
 					GUI_REFRESH(_index)
-					
-					_r = true;
+										
+					_return = true;
 				} else {
-					_m = ["message",[WARN_TEXT("Please select a save slot."),[]]] call FUNCTION_NAME;
-					_r = false;
-				};
+					//_m = ["message",[WARN_TEXT("Please select a save slot."),[]]] call FUNCTION_NAME;
+					_m = [WARN_TEXT("Please select a save slot."),[]];
+					_m = CALL_FNC("message",_m);
+					_return = false;
+				}; 
+				
 			};
+				
 		};
 		
 		_r = _return;
 	};
 	
 	case "loadsaved": {
-		// add gear from saved to player 
-		private ["_index","_name","_array","_gear","_checking","_boxGear","_restricted","_refresh","_create"];
+		// load gear from saved
+		private ["_index","_name","_array","_gear","_checking","_boxGear","_restricted"];
 		// get array from selected index or send loadout number & box
 		_index = [_params,0,(lbCurSel CTRL(MEU_CTRL_SAVEDLIST)),[0]] call BIS_fnc_param;
-		_box = [_params,1,(if (isNil {meu_managerBOX}) then [{objNull},{meu_managerBOX}])] call BIS_fnc_param;
+		_box = [_params,1,(missionNamespace getVariable ["meu_managerBOX",objNull])] call BIS_fnc_param;
 		meu_managerBOX = _box; // define for favorites
 		// no selection
 		if (_index < 0) exitWith {
+			// check for default selection
 			if (lbCurSel CTRL(MEU_CTRL_DEFAULTLIST) > -1) then {
+				private "_default";
 				_default = CALL_FNC("loadDefault",[]);
 				_r = true;
 			} else {;
@@ -725,7 +693,7 @@ switch (toLower _fnc) do {
 		_array = profileNamespace getVariable [_name,[]];	
 		
 		// checks
-		if (count _array < 2 || {count (_array select 1) < 1}) exitWith {
+		if CHECK_LOADOUT(_array) exitWith {
 			_m = ["message",[WARN_TEXT("The selected slot is empty."),[]]] call FUNCTION_NAME;
 			_r = false;
 		};
@@ -770,12 +738,12 @@ switch (toLower _fnc) do {
 		if (TFAR_CHECK) then { // has tfar
 			if (count _gear > 15) then { // has new array size
 				private ["_swFreq","_lrFreq"];
-				if (count GEAR(15) > 0) then { // has freqs saved
+				if CHECK_COUNT(15) then { // has freqs saved
 					_swFreq = false call TFAR_fnc_generateSwSettings;
 					_swFreq set [2,GEAR(15)]; // set 3rd element with saved freqs array
 					(group player) setVariable ["tf_sw_frequency", _swFreq];
 				};
-				if (count GEAR(16) > 0) then {
+				if CHECK_COUNT(16) then {
 					_lrFreq = false call TFAR_fnc_generateLrSettings;
 					_lrFreq set [2,GEAR(16)];
 					(group player) setVariable ["tf_lr_frequency",_lrFreq];
@@ -801,7 +769,7 @@ switch (toLower _fnc) do {
 		// add array outfit items
 		ADD_TO_OUTFIT(3,addItemToUniform);
 		ADD_TO_OUTFIT(5,addItemToVest);
-		if CHECK_STRING(7) then { clearAllItemsFromBackpack player; }; // remove any default pack items	
+		clearAllItemsFromBackpack player;
 		ADD_TO_OUTFIT(8,addItemToBackpack);	
 					
 		// add assigned items
@@ -830,7 +798,8 @@ switch (toLower _fnc) do {
 		
 		// error message
 		if (count _restricted > 0) then {
-			_message = ["message",[ERROR_TEXT("Gear Not Loaded:"),_restricted]] call FUNCTION_NAME;
+			_m = [ERROR_TEXT("Gear Not Loaded:"),_restricted];
+			_m = CALL_FNC("message",_m);
 		} else { 
 			// or clear any previous hint
 			hint ""; 
@@ -910,6 +879,63 @@ switch (toLower _fnc) do {
 		_r = true;
 	};
 	
+	case "favorites": {
+		// handle favorites / positive number to add, negative to remove	
+		private ["_num","_boxes"];
+		// params
+		_num = [_params,0,-1] call BIS_fnc_param;
+		_boxes = [_params,1,[]] call BIS_fnc_param;
+		
+		// run on all sent boxes
+		{	
+			// check for manager
+			if ( _x getVariable ["meu_loadoutManager",false] ) then {
+				// get favs array
+				_box_favs = _x getVariable ["meu_loadoutManager_favs",[]];
+				if (_num >= 0) then {
+					// add to box
+					private ["_var","_array","_text","_id"];
+					_var = format ["meu_Lo_%1",_num];
+					_array = profileNamespace getVariable [_var,[]];
+					// check array size
+					if (count _array == 2 && (count (_array select 1) > 0)) then {
+						// add action
+						_text = format ["<img image='%2' /> %1",(_array select 0),ICON_FAVORITE];
+						_id = _x addAction [
+							WARN_TEXT(_text),
+							{ ["loadSaved",(_this select 3)] call FUNCTION_NAME; },
+							[(_num - 1),_x],
+							5
+						];
+						_box_favs pushBack [_num,_id];
+					};
+					
+				} else {
+					// remove from boxes
+					private ["_LO","_index"];
+					_LO = abs _num;
+					// find loadout in favs
+					_index = -1;
+					{ 
+						if (_x select 0 == _LO) then {_index = _forEachIndex};
+					} forEach _box_favs;
+					if (_index > -1) then {
+						// remove loadout
+						_id = (_box_favs select _index) select 1;
+						_x removeAction _id;
+						_box_favs deleteAt _index;
+					};
+				};
+				// save new array
+				_x setVariable ["meu_loadoutManager_favs",_box_favs];
+				
+			};
+		} forEach _boxes;
+		
+		
+		_r = true;
+	};
+
 };
 
 _r

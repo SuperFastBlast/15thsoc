@@ -11,6 +11,13 @@
 #define MEU_CLASS_BAG(BAG,COUNT) 		class _xx_##BAG {backpack = #BAG; count = COUNT;}
 
 // basic box info
+
+#ifdef 	NO_ZEUS_WINDOW	
+	#define ZEUS	curatorInfoTypeEmpty = ""; 
+#else
+	#define ZEUS	curatorInfoTypeEmpty = "RscDisplayAttributesInventory";
+#endif
+
 #define MEU_CRATE_INFO(NAME) displayname = #NAME; \
 		transportmaxmagazines = 9999; \
 		transportmaxweapons = 9999; \
@@ -18,8 +25,9 @@
 		transportMaxitems = 9999; \
 		scope = 2;  \
 		vehicleClass = "meu_ammoBoxes"; \
-		MEU_INIT_EVENT("_this spawn meu_fnc_crate;")
-
+		MEU_INIT_EVENT("_this spawn meu_fnc_crate;") \
+		ZEUS
+		
 // eventhander		
 #define MEU_INIT_EVENT(STRING) 		class EventHandlers { init = STRING; };
 
@@ -29,7 +37,8 @@
 		scope = 2; \
 		supplyRadius = 0; \
 		vehicleClass = "meu_ammoBoxes"; \
-		MEU_INIT_EVENT("_this spawn meu_fnc_crate;")
+		MEU_INIT_EVENT("_this spawn meu_fnc_crate;") \
+		ZEUS
 		
 #define MEU_VIC_FUNCTION(FILE) 	#[player,call compile preprocessFileLineNumbers (MEU_ADDON_ROOT + FILE),false,true] call meu_fnc_vehicleLoadout
 #define MEU_RED_NAME(TEXT) 		__EVAL("<t color='#FF0000'>" + TEXT + "</t>")
