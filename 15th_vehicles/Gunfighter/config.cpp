@@ -101,6 +101,7 @@ class CfgVehicles
 		typicalCargo[]={"B_Helipilot_F", "B_Helipilot_F"};
 		driverCompartments = "Compartment1";
 		gunnerUsesPilotView=false;
+		gunnerHasFlares = 1;
 		enableManualFire = 1;
 		irScanGround=True;
 		irScanRangeMin=2000;
@@ -1028,6 +1029,7 @@ class CfgVehicles
 				magazines[]={"750Rnd_M197_AH1","8Rnd_Hellfire","2Rnd_Sidewinder_AH1Z","Laserbatteries"};
 				laser = 1;
 				allowTabLock= 1;
+				gunnerHasFlares = 1;
 				memoryPointsGetInGunner= "pos_gunner";
 				memoryPointsGetInGunnerDir= "pos_gunner_dir";
 				gunnerGetInAction = "GetInHigh";
@@ -1367,6 +1369,7 @@ class CfgVehicles
 				isCopilot = 1;
 				gunnerCanEject = 1;
 				CanEject = 1;
+				gunnerHasFlares = 1;
 				gunnerName="Co-Pilot";
 				gunnerAction="UH1Y_Gunner02";
 				gunnerInAction="UH1Y_Gunner02";

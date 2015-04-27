@@ -57,9 +57,9 @@ class CfgAmmo
 	class Bo_GBU12_LGB;
  	class MEU_GBU12: Bo_GBU12_LGB
  	{
-  	hit = 500;
+  	hit = 5000;
   	indirectHit = 1100;
-  	indirectHitRange = 175;
+  	indirectHitRange = 50;
   	model = "\meuav8b\gbu12fly";
   	proxyShape = "\meuav8b\gbu12_proxy";
   	trackOversteer = 1;
@@ -482,7 +482,7 @@ class CfgVehicles
 		maxSpeed = 1040;
 		landingSpeed = 200;
 		acceleration = 300;
-		vtol = 4;
+		vtol = 2;
  		altFullForce = 15000;
  		altNoForce = 35000;
 		rudderInfluence = 0.03;
@@ -537,7 +537,7 @@ class CfgVehicles
 		waterEffect = "HeliWater";
 		memoryPointLRocket = "L raketa";
 		memoryPointRRocket = "P raketa";
-class MarkerLights
+		class MarkerLights
 		{
 			class RedStill
 			{
@@ -545,7 +545,7 @@ class MarkerLights
 				color[] = {0.8,0.0,0.0};
 				ambient[] = {0.08,0.0,0.0};
 				blinking = "false";
-				intensity = 75;
+				intensity = 80;
 				drawLight = 1;
 				drawLightSize = 0.15;
 				drawLightCenterSize = 0.04;
@@ -565,9 +565,12 @@ class MarkerLights
 				name = "bily pozicni";
 				color[] = {1.0,1.0,1.0};
 				ambient[] = {0.1,0.1,0.1};
-				blinking = "false";
+				blinking = 1;
+				intensity = 80;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
 				drawLightSize = 0.2;
-				intensity = 75;
+				drawLightCenterSize = 0.04;
 			};
 			class GreenStill: RedStill
 			{
@@ -575,23 +578,11 @@ class MarkerLights
 				color[] = {0.0,0.8,0.0};
 				ambient[] = {0.0,0.08,0.0};
 				blinking = "false";
-				intensity = 75;
+				intensity = 80;
 			};
 			class WhiteBlinking: RedStill
 			{
 				name = "bily pozicni blik";
-				color[] = {1.0,1.0,1.0};
-				ambient[] = {0.1,0.1,0.1};
-				blinking = 1;
-				blinkingPattern[] = {0.1,0.9};
-				blinkingPatternGuarantee = 0;
-				drawLightSize = 0.2;
-				drawLightCenterSize = 0.04;
-				intensity = 75;
-			};
-			class RedBlinking: RedStill
-			{
-				name = "cerveny pozicni blik";
 				color[] = {0.9,0.15,0.1};
 				ambient[] = {0.09,0.015,0.01};
 				blinking = 1;
@@ -599,7 +590,19 @@ class MarkerLights
 				blinkingPatternGuarantee = 0;
 				drawLightSize = 0.25;
 				drawLightCenterSize = 0.08;
-				intensity = 75;
+				intensity = 90;
+			};
+			class RedBlinking: RedStill
+			{
+				name = "cerveny pozicni blik";
+				color[] = {0.9,0.15,0.1};
+				ambient[] = {0.09,0.015,0.01};
+				blinking = 1;
+				blinkingPattern[] = {0.1,0.9};
+				blinkingPatternGuarantee = 0;
+				drawLightSize = 0.2;
+				drawLightCenterSize = 0.04;
+				intensity = 90;
 			};
 		};
 		class Reflectors
