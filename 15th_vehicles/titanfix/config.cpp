@@ -19,10 +19,6 @@ class CfgPatches
 class DefaultEventhandlers;
 class CfgVehicles
 {
-	class LandVehicle;
-	class Tank;
-	class Tank_F;
-	class Burnes_M1A2_base;
 	class Burnes_M1A2_MEU_base;
 	class Burnes_M1A1_MEU_01_Public: Burnes_M1A2_MEU_base
 	{

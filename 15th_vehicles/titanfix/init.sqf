@@ -9,9 +9,6 @@
 // defines
 #define TAG 				m1
 
-#define IL_TEXT_ON 			"<t color='#FF0000'>Interior Light ON</t>"
-#define IL_TEXT_OFF 		"<t color='#FF0000'>Interior Light OFF</t>"
-
 #define DEBUG(text1)		//systemChat text1;
 
 #define QUOTE(var1)			#var1
@@ -28,6 +25,12 @@
 #define GETVARQ(var1,def)	getVariable [var1,def]
 #define SETVARPQ(var1,def)	setVariable [var1,def,true]
 #define SEL(var1,index)		(var1 select index)
+#define IL_c_red 			[255,0,0]
+#define IL_att_soft			[0,10,10,10]
+#define IL_intensity 		30
+#define IL_position			[0, -2.4, -1]
+#define IL_intensity_mult	0.2
+
 
 // functions
 FUNC(callSignAdd) = {
@@ -36,7 +39,7 @@ FUNC(callSignAdd) = {
 	_t = SEL(_this,0); // tank
 	_n = SEL(_this,1); // num 1 or 2	
 	_s = if (_n == 1) then [{ 7 },{ 8 }];
-	_v = format ['TAG_callSign%1Number',_n];
+	_v = format ['m1_callSign%1Number',_n];
 	_c = _t GETVARQ(_v,0);
 	_c = if (_c == 0) then [{(round random 3) + 1},{_c}];
 	_c = if (_c == 4) then [{ 1 },{ _c + 1 }];
@@ -73,46 +76,62 @@ FUNC(smokeScreen) = {
 	_a
 };
 
-FUNC(interiorLigts) = {
+FUNC(interiorLights) = {
 	// create light inside tank
-	private ["_t","_f"];
+	private ["_t","_f","_m"];
 	_t = SEL(_this,0); // tank
 	_f = SEL(_this,1); // mode: true = on, false = off
-	
+	_m = "";
 	if _f then {
-		// create lights	
+		// create lights
+		private "_l";
+		if !( _t GETVAR(lightsOn,false) ) then {
+			_l = "#lightpoint" createVehicleLocal [0,0,0];
+			//_l lightAttachObject [_t,IL_position];
+			_l attachTo [_t,IL_position];
+			_l setLightDayLight true;
+			_l setLightColor IL_c_red;
+			_l setLightAttenuation IL_att_soft;
+			_l setLightIntensity (IL_intensity * IL_intensity_mult);
+			_t SETVAR(theLights,[_l]);
+			_m = "Light On: " + str _l;
+			_t SETVAR(lightsOn,true);
+		};
 	} else {
 		// delete lights
+		private "_l";
+		_t SETVAR(lightsOn,false);
+		_l = _t GETVAR(theLights,[]);
+		{ deleteVehicle _x } forEach _l;
+		_m = "Light Off";
 	};
-	
-	
+	_m = 'FUNC(interiorLigts) :' + _m;
+	DEBUG(_m);
+	_f
 };
 
 // Tank Init
 if (local _this) then {
 	// set vehicle call signs
-	{ [_this,_x] spawn FUNC(callSignAdd); } forEach [1,2];
+	_n = [_this,1] spawn FUNC(callSignAdd);
+	_n = [_this,2] spawn FUNC(callSignAdd);
 };
 
 // addactions
-_this addaction ["Show Ammo Count","\Burnes_M1A2\Burnes_ammoCount.sqf",[],1.5,true,true,"","_this in units _target && _this != driver _target"];
-
-_this addAction ["<t color='#FF0000'>Smoke Screen ON</t>",{_this spawn FUNC(smokeScreen);},[],2,true,false,"",'_this in [commander _target] && !(_target GETVAR(smoking,false) )'];
+_this addaction ["Show Ammo Count","\Burnes_M1A2\Burnes_ammoCount.sqf",[],1.5,true,true,"","_this in _target && _this != driver _target"];
+_this addAction ["<t color='#FF0000'>Smoke Screen ON</t>",{ _this spawn FUNC(smokeScreen); },[],2,true,false,"",'_this in [commander _target] && !( _target GETVAR(smoking,false) )'];
+_this addAction ["<t color='#33CC33'>CPS Thermal ON</t>",{ SEL(_this,0) setObjectTexture [6,"#(argb,512,512,1)r2t(rendertarget3,1.0)"]; },[],0,true,false,"","_this in [commander _target]"];
+_this addAction ["<t color='#33CC33'>CPS Night-Vision ON</t>",{ SEL(_this,0) setObjectTexture [6,"#(argb,512,512,1)r2t(rendertarget300,1.0)"]; },[],0,true,false,"","_this in [commander _target]"];
+_this addAction ["<t color='#33CC33'>CPS Colour ON</t>",{ SEL(_this,0) setObjectTexture [6,"#(argb,512,512,1)r2t(rendertarget3000,1.0)"]; },[],0,true,false,"","_this in [commander _target]"];
+_this addAction ["<t color='#FFFF00'>Cycle Call Sign 1</t>",{ [SEL(_this,0),1] spawn FUNC(callSignAdd); },[],0,true,false,"","_this in [commander _target]"];
+_this addAction ["<t color='#FFFF00'>Cycle Call Sign 2</t>",{ [SEL(_this,0),2] spawn FUNC(callSignAdd); },[],0,true,false,"","_this in [commander _target]"];
+_this addAction ["Dump AGM Range Data","\Burnes_M1A2\Burnes_DumpRange.sqf",[],1,true,true,"","_this in [gunner _target]"];
+_this addAction ["<t color='#FF0000'>Interior Light ON</t>",{ [SEL(_this,0),true] call FUNC(interiorLights); },[],0,true,true,"",'_this in _target && !( _target GETVAR(lightsOn,false) )'];
+_this addAction ["<t color='#FF0000'>Interior Light OFF</t>",{ [SEL(_this,0),false] call FUNC(interiorLights); },[],0,true,true,"",'_this in _target && ( _target GETVAR(lightsOn,false) )'];
 
 //_this addAction ["Open Hatch",{SEL(_this,0) animate ["InteriorHatch",1];},[],1.5,true,true,"","_this in [commander _target] && (_target animationPhase ""InteriorHatch"" == 0)"];
 //_this addAction ["Close Hatch",{SEL(_this,0) animate ["InteriorHatch",0];},[],1.5,true,true,"","_this in [commander _target] && (_target animationPhase ""InteriorHatch"" == 1)"];
 
-_this addAction ["<t color='#33CC33'>CPS Thermal ON</t>",{SEL(_this,0) setObjectTexture [6,"#(argb,512,512,1)r2t(rendertarget3,1.0)"];},[],0,true,false,"","_this in [commander _target]"];
-_this addAction ["<t color='#33CC33'>CPS Night-Vision ON</t>",{SEL(_this,0) setObjectTexture [6,"#(argb,512,512,1)r2t(rendertarget300,1.0)"];},[],0,true,false,"","_this in [commander _target]"];
-_this addAction ["<t color='#33CC33'>CPS Colour ON</t>",{SEL(_this,0) setObjectTexture [6,"#(argb,512,512,1)r2t(rendertarget3000,1.0)"];},[],0,true,false,"","_this in [commander _target]"];
-
-_this addAction ["<t color='#FFFF00'>Cycle Call Sign 1</t>",{[SEL(_this,0),1] spawn FUNC(callSignAdd);},[],0,true,false,"","_this in [commander _target]"];
-_this addAction ["<t color='#FFFF00'>Cycle Call Sign 2</t>",{[SEL(_this,0),2] spawn FUNC(callSignAdd);},[],0,true,false,"","_this in [commander _target]"];
-
-_this addAction ["Dump AGM Range Data","\Burnes_M1A2\Burnes_DumpRange.sqf",[],1,true,true,"","_this in [gunner _target]"];
-
-//_this addAction [ IL_TEXT_ON ];
-//_this addAction [ IL_TEXT_OFF ];
 
 DEBUG("M1A2 Init Completed.")
 
