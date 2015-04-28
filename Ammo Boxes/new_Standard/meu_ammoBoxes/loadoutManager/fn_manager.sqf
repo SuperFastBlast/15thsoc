@@ -58,9 +58,10 @@ switch (toLower _fnc) do {
 		CTRL(MEU_CTRL_HELPTIP) ctrlSetTooltip (MEU_HELP_TIPS select floor random count MEU_HELP_TIPS);
 		CTRL(MEU_CTRL_HELPTIP) ctrlSetEventHandler ["MouseButtonClick",
 			format [
-				"[[""meu_manager"",""meu_usage""], 30,"""", 30,"""", true, true, false, true] call BIS_fnc_advHint;((uiNamespace getVariable 'meu_managerGUI') displayCtrl %1) ctrlSetTooltip (%2 select floor random count %2);",
-				MEU_CTRL_HELPTIP,
-				MEU_HELP_TIPS
+				'hint parseText %3;((uiNamespace getVariable "meu_managerGUI") displayCtrl %1) ctrlSetTooltip (%2 select floor random count %2);',
+				MEU_CTRL_HELPTIP, //[[""meu_manager"",""meu_usage""], 30,"""", 30,"""", true, true, true, true] call BIS_fnc_advHint;
+				MEU_HELP_TIPS,
+				str MEU_HELP_HINT
 			]
 		];
 		// enable DEL key for saved list		
@@ -830,7 +831,7 @@ switch (toLower _fnc) do {
 		_null = _file spawn {
 			private "_handle";
 			_handle = [nil,player] execVM ("meu_ammoBoxes\" + _this);
-			waitUntil { scriptDone _handle };
+			//waitUntil { scriptDone _handle };
 			
 			// clear any hint
 			Hint "";
@@ -912,7 +913,7 @@ switch (toLower _fnc) do {
 					
 				} else {
 					// remove from boxes
-					private ["_LO","_index"];
+					private ["_LO","_index","_id"];
 					_LO = abs _num;
 					// find loadout in favs
 					_index = -1;

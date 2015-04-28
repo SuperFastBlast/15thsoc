@@ -667,7 +667,7 @@ class meu_loadoutManager
 	};
 };
 
-class cfgHints
+/* class cfgHints
 {
 	class meu_manager
 	{
@@ -684,4 +684,4 @@ class cfgHints
 			noImage = false;
 		};
 	};
-};
+}; */

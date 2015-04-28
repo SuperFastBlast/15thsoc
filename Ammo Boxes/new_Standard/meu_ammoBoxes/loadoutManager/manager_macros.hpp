@@ -107,6 +107,8 @@
 			"TIP: You Can Delete Saved Loadouts With The DEL Key" \
 		]
 
+#define MEU_HELP_HINT 	"<t color='#85a2af' size='1.2' underline='1'>15TH LOADOUT MANAGER 2</t><br /><br />15th AmmoBoxes come with a loadout manager. There are a few things you should know.<br /><br />Make your loadouts exactly how you want them. Including your radio frequencies.<br /><br /><t align='left'><t color='#015DC5'>Double Click</t> - View gear in saved loadout.<br /><t color='#015DC5'>CTRL + Double Click</t> - Rename Loadout.<br /><t color='#015DC5'>SHFT + Double Click</t> - Add to favorites.<br /><t color='#015DC5'>CTRL + Click Save</t> - Quick save loadout with the same name<br /><t color='#015DC5'>DEL</t> - Delete Loadout.</t><br /><br />Enjoy!"
+		
 // controls
 #define MEU_CTRL_GEARTREE		15040
 #define MEU_CTRL_SAVEDLIST		15041
