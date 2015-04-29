@@ -24,6 +24,7 @@
 		transportMaxBackpacks = 9999; \
 		transportMaxitems = 9999; \
 		scope = 2;  \
+		supplyRadius = 5; \
 		vehicleClass = "meu_ammoBoxes"; \
 		MEU_INIT_EVENT("_this spawn meu_fnc_crate;") \
 		ZEUS

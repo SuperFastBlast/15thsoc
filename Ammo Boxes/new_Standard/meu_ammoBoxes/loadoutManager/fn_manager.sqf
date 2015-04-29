@@ -20,7 +20,7 @@ switch (toLower _fnc) do {
 		
 		// main action
 		_name = ACTION_NAME;
-		_id = _box addAction [MU_BG_TEXT(_name),{ CALL_FNC("open",_this select 3); },[_box],6];
+		_id = _box addAction [MU_BG_TEXT(_name),{ CALL_FNC("open",_this select 3); },[_box],6,true,true,"","_this distance _target < 10"];
 		_box setVariable ["meu_loadoutManager",true];
 		
 		// get favorites list & add them to box
@@ -831,7 +831,7 @@ switch (toLower _fnc) do {
 		_null = _file spawn {
 			private "_handle";
 			_handle = [nil,player] execVM ("meu_ammoBoxes\" + _this);
-			//waitUntil { scriptDone _handle };
+			waitUntil { scriptDone _handle };
 			
 			// clear any hint
 			Hint "";
@@ -888,7 +888,8 @@ switch (toLower _fnc) do {
 		_boxes = [_params,1,[]] call BIS_fnc_param;
 		
 		// run on all sent boxes
-		{	
+		{
+			private ["_box_favs"];
 			// check for manager
 			if ( _x getVariable ["meu_loadoutManager",false] ) then {
 				// get favs array
@@ -906,7 +907,11 @@ switch (toLower _fnc) do {
 							WARN_TEXT(_text),
 							{ ["loadSaved",(_this select 3)] call FUNCTION_NAME; },
 							[(_num - 1),_x],
-							5
+							5,
+							true,
+							true,
+							"",
+							"_this distance _target < 10"
 						];
 						_box_favs pushBack [_num,_id];
 					};

@@ -35,7 +35,7 @@ if (isArray (_cfg >> "MEU_LOADOUTS")) then {
 	private "_array";
 	_array = getArray (_cfg >> "MEU_LOADOUTS");
 	{
-		_crate addAction [ ("<t color=""#DB3503"">" + (_x select 0) + "</t>"), MEU_ADDON_ROOT + (_x select 1) ];
+		_crate addAction [ ("<t color=""#DB3503"">" + (_x select 0) + "</t>"), MEU_ADDON_ROOT + (_x select 1),[],3,true,true,"","_this distance _target < 10" ];
 	} forEach _array;
 };
 
