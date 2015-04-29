@@ -58,12 +58,15 @@ switch (toLower _fnc) do {
 		CTRL(MEU_CTRL_HELPTIP) ctrlSetTooltip (MEU_HELP_TIPS select floor random count MEU_HELP_TIPS);
 		CTRL(MEU_CTRL_HELPTIP) ctrlSetEventHandler ["MouseButtonClick",
 			format [
-				'hint parseText %3;((uiNamespace getVariable "meu_managerGUI") displayCtrl %1) ctrlSetTooltip (%2 select floor random count %2);',
-				MEU_CTRL_HELPTIP, //[[""meu_manager"",""meu_usage""], 30,"""", 30,"""", true, true, true, true] call BIS_fnc_advHint;
-				MEU_HELP_TIPS,
-				str MEU_HELP_HINT
+				'
+					uiNamespace setVariable ["BIS_fnc_advHint_hintHandlers",true];
+					[["meu_manager","meu_usage"], 30,"", 20,"", true, true, false, true] call BIS_fnc_advHint;
+					((uiNamespace getVariable "meu_managerGUI") displayCtrl %1) ctrlSetTooltip (%2 select floor random count %2);
+				',
+				MEU_CTRL_HELPTIP,
+				MEU_HELP_TIPS
 			]
-		];
+		]; 
 		// enable DEL key for saved list		
 		CTRL(MEU_CTRL_SAVEDLIST) ctrlSetEventHandler ["keyDown",
 			"if (_this select 1 in [211]) then {[""buttons"",[(uiNamespace getVariable 'meu_managerGUI') displayCtrl 15051]] call meu_fnc_manager;};"				
