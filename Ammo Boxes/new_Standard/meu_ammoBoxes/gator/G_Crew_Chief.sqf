@@ -84,4 +84,4 @@
  _unit additem "AGM_EarBuds";
 
 
- _unit adduniform "Nomex_olive";
+ _unit adduniform "OliveCoveralls";

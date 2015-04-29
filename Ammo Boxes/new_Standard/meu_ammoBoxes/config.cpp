@@ -865,8 +865,8 @@ class CfgVehicles
 			MEU_CLASS_ITEM(MEF_Wood_IN_MARPAT_LS,15)
 			MEU_CLASS_ITEM(OliveCoveralls,10)
 			// VESTS		
-			MEU_CLASS_ITEM(MEF_Vest_Tan_Armor,15)
-			MEU_CLASS_ITEM(MEF_Vest_Tan_Armor_L,15)
+			MEU_CLASS_ITEM(MEF_Vest_Tan_Infantry,15)
+			MEU_CLASS_ITEM(MEF_Vest_Tan_Infantry_L,15)
 			// MEDICAL
 			MEU_CLASS_ITEM(AGM_Bandage,300)
 			MEU_CLASS_ITEM(AGM_Epipen,100)

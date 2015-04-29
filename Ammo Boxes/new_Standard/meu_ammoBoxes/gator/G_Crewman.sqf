@@ -13,7 +13,7 @@
  removevest _unit;
  removeheadgear _unit;
  
- _unit addvest "MEF_Vest_Tan_Armor";
+ _unit addvest "MEF_Vest_Tan_Infantry";
  _unit addheadgear "H_HelmetCrew_I";
 
 
@@ -84,4 +84,4 @@
  _unit additem "AGM_EarBuds";
 
 
- _unit adduniform "Nomex_olive";
+ _unit adduniform "OliveCoveralls";
