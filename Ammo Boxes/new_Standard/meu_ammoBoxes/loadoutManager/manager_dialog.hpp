@@ -667,7 +667,7 @@ class meu_loadoutManager
 	};
 };
 
-/* class cfgHints
+class cfgHints
 {
 	class meu_manager
 	{
@@ -675,13 +675,12 @@ class meu_loadoutManager
 		class meu_usage
 		{
 			displayName = "15th Loadout Manager 2";
-			displayNameShort = "[15th] Ammo Boxes";
-			description = "15th AmmoBoxes come with a loadout manager. There are a few things you should know.%1%1Make your loadouts exactly how you want them. Including your radio frequencies.%1%1%3Double Click%4 - View gear in saved loadout.%1%3CTRL + Double Click%4 - Rename Loadout.%1%3SHFT + Double Click%4 - Add to favorites.%1%3CTRL + Click Save%4 - Quick save loadout with the same name%1%3DEL%4 - Delete Loadout.%1%1Enjoy!";
-			//%1%1Other Info:%1- Packed weapons have thier attachments saved but loaded seperately.%1- To save loaded designator batteries, have an extra in your inventory.%1- GUI colors are set from your Arma profile.%1- Mission Makers can disabled the ""gear in box"" check with %3box setVariable [""meu_boxRestrictions"",false]%4%1-You can add the LOM to any object with %3[""init"",[_crate]] call meu_fnc_manager;%4%1%1
+			displayNameShort = "The Best In The Business.";
+			description = "15th AmmoBoxes come with a loadout manager. There are a few things you should know.%1%1Make your loadouts exactly how you want them. Including your radio frequencies.%1%1%3Double Click%4 - View gear in saved loadout.%1%3CTRL + Double Click%4 - Rename Loadout.%1%3SHFT + Double Click%4 - Add to favorites.%1%3CTRL + Click Save%4 - Quick save loadout with the same name%1%3DEL%4 - Delete Loadout.%1%1Other Info:%1- Packed weapons have thier attachments saved but loaded seperately.%1- To save loaded designator batteries, have an extra in your inventory.%1- GUI colors are set from your Arma profile.%1- Mission Makers can disabled the ""gear in box"" check with %3box setVariable [""meu_boxRestrictions"",false]%4%1-You can add the LOM to any object with %3[""init"",[box]] call meu_fnc_manager;%4%1%1Enjoy!";
 			tip = "Please report any problems on the forums.";
 			arguments[] = {};
 			image = "\meu_ammoBoxes\loadoutManager\logo256.paa";
 			noImage = false;
 		};
 	};
-}; */
+};
