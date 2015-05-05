@@ -48,12 +48,14 @@
 #define MEU_CLASS_EARBUDS		"AGM_EarBuds" // ACE: "ACE_EarPlugs"
 #define MEU_EARBUD_CHECK		player getVariable ["AGM_hasEarPlugsin", false] // ACE: [player] call ace_hearing_fnc_hasEarPlugsIn
 #define TFAR_CHECK				isClass (configfile >> "CfgPatches" >> "task_force_radio")
+#define ACTION_CONDITION		"_this distance _target < 10"
 #define CHECK_LOADOUT(ARRAY)	( count ARRAY < 2 || {count (ARRAY select 1) < 1} ) 
 #define GEAR(INDEX)				(_gear select INDEX)
 #define ADD_RESTRICT_X(ITEM)	_restricted pushBack ITEM
 #define CHECK_STRING_X(ITEM)	(ITEM != "")
 #define CHECK_COUNT(INDEX)		(count GEAR(INDEX) > 0) 
-#define CHECK_BOX_X(ITEM)		(!_checking || {ITEM in _boxGear})
+#define CHECK_CLASS(INDEX)		!(CALL_FNC("config",[ITEM]) isEqualTO false) // TODO: change false to ""
+#define CHECK_BOX_X(ITEM)		(CHECK_CLASS(ITEM) && {!_checking || ITEM in _boxGear}) // (!_checking || {ITEM in _boxGear})
 #define CHECK_IS_RADIO			("ItemRadio" in _parents && {!_checking || "ItemRadio" in _boxGear})
 #define GET_PARENT(ITEM)		private ["_class","_parent"];_class = [ITEM] call BIS_fnc_classWeapon;_parents = [_class,true] call BIS_fnc_returnParents;
 

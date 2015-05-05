@@ -20,7 +20,7 @@ switch (toLower _fnc) do {
 		
 		// main action
 		_name = ACTION_NAME;
-		_id = _box addAction [MU_BG_TEXT(_name),{ CALL_FNC("open",_this select 3); },[_box],6,true,true,"","_this distance _target < 10"];
+		_id = _box addAction [MU_BG_TEXT(_name),{ CALL_FNC("open",_this select 3); },[_box],6,true,true,"",ACTION_CONDITION];
 		_box setVariable ["meu_loadoutManager",true];
 		
 		// get favorites list & add them to box
@@ -54,7 +54,7 @@ switch (toLower _fnc) do {
 		// populate	
 		GUI_REFRESH(-1)
 		
-		// change icon tooltip on mouse button click
+		// change icon tooltip & call advanced hint on mouse click
 		CTRL(MEU_CTRL_HELPTIP) ctrlSetTooltip (MEU_HELP_TIPS select floor random count MEU_HELP_TIPS);
 		CTRL(MEU_CTRL_HELPTIP) ctrlSetEventHandler ["MouseButtonClick",
 			format [
@@ -354,7 +354,7 @@ switch (toLower _fnc) do {
 	
 	case "buttons": {
 		// handle GUI buttons per IDC
-		private ["_button","_return","_KK_fnc_strReplace"];
+		private ["_button","_return"];
 		_button = [_params,0,controlNull] call BIS_fnc_param;
 		_return = false;
 				
@@ -449,7 +449,7 @@ switch (toLower _fnc) do {
 				// refresh
 				{ CTRL(_x) ctrlShow false } forEach MEU_SAVE_GROUP;
 				{ CTRL(_x) ctrlEnable true } forEach MEU_DISABLE_GROUP;
-				CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor (COLOR_WARNING_ARRAY);//[1,0.5,0,1]; // tree text color
+				CTRL(MEU_CTRL_GEARTREE) ctrlSetTextColor (COLOR_WARNING_ARRAY); // tree text color
 				
 				GUI_REFRESH(_index)
 				
@@ -660,7 +660,6 @@ switch (toLower _fnc) do {
 										
 					_return = true;
 				} else {
-					//_m = ["message",[WARN_TEXT("Please select a save slot."),[]]] call FUNCTION_NAME;
 					_m = [WARN_TEXT("Please select a save slot."),[]];
 					_m = CALL_FNC("message",_m);
 					_return = false;
@@ -802,7 +801,7 @@ switch (toLower _fnc) do {
 		
 		// error message
 		if (count _restricted > 0) then {
-			_m = [ERROR_TEXT("Gear Not Loaded:"),_restricted];
+			_m = [ERROR_TEXT("Gear Not Available:"),_restricted];
 			_m = CALL_FNC("message",_m);
 		} else { 
 			// or clear any previous hint
@@ -855,13 +854,13 @@ switch (toLower _fnc) do {
 			if (isClass (configFile >> "CfgWeapons" >> _item)) exitWith {"CfgWeapons"};
 			if (isClass (configFile >> "CfgVehicles" >> _item)) exitWith {"CfgVehicles"};
 			if (isClass (configFile >> "CfgGlasses" >> _item)) exitWith {"CfgGlasses"};
-			false // can isEqualTo check
+			false // TODO: Change to ""
 		};
 		_r = _config;
 	};
 	
 	case "message": {
-		// formated messages
+		// formatted messages
 		private ["_message","_gear","_text"];		
 		_message = [_params,0,""] call BIS_fnc_param;
 		_gear = [_params,1,[]] call BIS_fnc_param;
@@ -914,7 +913,7 @@ switch (toLower _fnc) do {
 							true,
 							true,
 							"",
-							"_this distance _target < 10"
+							ACTION_CONDITION
 						];
 						_box_favs pushBack [_num,_id];
 					};

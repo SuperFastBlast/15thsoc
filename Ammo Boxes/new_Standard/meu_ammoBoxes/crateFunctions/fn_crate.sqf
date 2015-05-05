@@ -23,12 +23,16 @@ _crate allowDamage false;
 _cfg = configFile >> "CfgVehicles" >> typeOf _crate;
 
 // manager
-if (isNumber (_cfg >> "MEU_MANAGER")) then {
+/* if (isNumber (_cfg >> "MEU_MANAGER")) then {
 	if (getNumber (_cfg >> "MEU_MANAGER") > 0) then {
 			//_crate addAction ["<t color=""#01019E"">" + ("15th Loadout Manager") + "</t>","\15th_main\lomgr\gui_start.sqf"];
 			_LOM = ["init",[_crate]] call meu_fnc_manager;
 	};
+}; */
+if ([_cfg,"MEU_MANAGER",0] call BIS_fnc_returnConfigEntry > 0) then {
+	_LOM = ["init",[_crate]] call meu_fnc_manager;
 };
+
 
 // loadouts
 if (isArray (_cfg >> "MEU_LOADOUTS")) then {

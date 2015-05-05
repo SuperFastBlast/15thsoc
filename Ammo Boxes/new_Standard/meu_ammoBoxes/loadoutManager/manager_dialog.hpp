@@ -8,8 +8,6 @@
 #define LIST_TEXT_COLORS	COLOR_WARNING_CONFIG
 #define MAIN_BG_COLOR		{0,0,0,0.8}
 
-
-
 #define GUI_GRID_X	(0)
 #define GUI_GRID_Y	(-0.1)
 #define GUI_GRID_W	(0.025)
