@@ -1,48 +1,65 @@
 /*%FSM<COMPILE "B:\Steam\SteamApps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, fn_bitchinBetty">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"init",0,250,-58.506897,-319.039917,31.493103,-269.039856,0.000000,"init"};
-item1[] = {"fork",2,250,-55.551636,-127.060730,34.448380,-77.060745,0.000000,"fork"};
-item2[] = {"above_1000m",4,218,-260.787781,-321.488098,-170.787872,-271.488098,0.000000,"above 1000m"};
-item3[] = {"exit",1,250,-55.883392,65.394562,34.116638,115.394547,0.000000,"exit"};
+item0[] = {"start",0,250,-56.931427,-317.464478,33.068573,-267.464417,0.000000,"start"};
+item1[] = {"fork",2,250,-57.127075,-127.060730,32.872940,-77.060745,0.000000,"fork"};
+item2[] = {"above_1000m",4,218,-249.550110,-134.459778,-159.550385,-84.459869,1.000000,"above 1000m"};
+item3[] = {"end",1,250,-55.883392,65.394562,34.116638,115.394547,0.000000,"end"};
 item4[] = {"true",8,218,-57.316284,-216.886475,32.683716,-166.886475,0.000000,"true"};
-item5[] = {"dead",4,218,-55.883331,-17.713623,34.116669,32.286377,5.000000,"dead"};
-item6[] = {"wait",2,250,-260.787506,-222.618118,-170.787537,-172.618118,0.000000,"wait"};
-item7[] = {"below_1000m",4,218,-260.787598,-120.882309,-170.787567,-70.882309,0.000000,"below 1000m"};
-item8[] = {"play",2,4346,-262.220459,-29.176819,-172.220444,20.823181,0.000000,"play"};
-item9[] = {"angle",4,218,144.722687,-292.830139,234.722687,-242.830139,1.000000,"angle"};
-item10[] = {"play_1",2,250,144.722717,-193.960144,234.722733,-143.960144,0.000000,"play"};
+item5[] = {"dead_empty",4,218,-57.458771,-19.289063,32.541229,30.710938,5.000000,"dead/empty"};
+item6[] = {"above_true",2,250,-249.549988,-211.427750,-159.550018,-161.427765,0.000000,"above true"};
+item7[] = {"below_1000m",4,4314,-344.077026,-83.589752,-254.077026,-33.589752,2.000000,"below 1000m"};
+item8[] = {"__altitude_",2,250,-343.981537,-273.465637,-253.981537,-223.465637,0.000000,"""altitude"""};
+item9[] = {"__40_degrees",4,218,94.381622,-82.149246,184.381622,-32.149246,3.000000,"-40 degrees"};
+item10[] = {"__pull_up_",2,250,94.381714,-268.105743,184.381729,-218.105743,0.000000,"""pull up"""};
+item11[] = {"not_local",4,218,180.910522,-318.040222,270.910522,-268.040222,1.000000,"not local"};
+item12[] = {"",7,210,222.175659,86.970215,230.175659,94.970215,0.000000,""};
 link0[] = {0,4};
-link1[] = {1,2};
-link2[] = {1,5};
-link3[] = {1,9};
-link4[] = {2,6};
-link5[] = {4,1};
-link6[] = {5,3};
-link7[] = {6,5};
-link8[] = {6,7};
-link9[] = {6,9};
+link1[] = {0,11};
+link2[] = {1,2};
+link3[] = {1,5};
+link4[] = {1,7};
+link5[] = {1,9};
+link6[] = {2,6};
+link7[] = {4,1};
+link8[] = {5,3};
+link9[] = {6,4};
 link10[] = {7,8};
 link11[] = {8,4};
 link12[] = {9,10};
 link13[] = {10,4};
-globals[] = {0.000000,0,0,0,0,640,480,1,13,6316128,1,-441.888672,320.753723,122.122101,-362.362183,998,634,1};
-window[] = {0,-1,-1,-32000,-32000,827,89,1483,39,1,1016};
+link14[] = {11,12};
+link15[] = {12,3};
+globals[] = {0.000000,0,0,0,0,640,480,1,15,6316128,1,-423.970032,302.311829,129.832855,-331.552643,922,634,1};
+window[] = {0,-1,-1,-32000,-32000,827,89,1483,39,1,940};
 *//*%FSM</HEAD>*/
 class FSM
 {
         fsmName = "fn_bitchinBetty";
         class States
         {
-                /*%FSM<STATE "init">*/
-                class init
+                /*%FSM<STATE "start">*/
+                class start
                 {
-                        name = "init";
+                        name = "start";
                         itemno = 0;
-                        init = /*%FSM<STATEINIT""">*/"_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;" \n
+                         "" \n
+                         "_height = false;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
+                                /*%FSM<LINK "not_local">*/
+                                class not_local
+                                {
+                                        itemno = 11;
+                                        priority = 1.000000;
+                                        to="end";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!local _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "true">*/
                                 class true
                                 {
@@ -66,82 +83,23 @@ class FSM
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
-                                /*%FSM<LINK "dead">*/
-                                class dead
+                                /*%FSM<LINK "dead_empty">*/
+                                class dead_empty
                                 {
                                         itemno = 5;
                                         priority = 5.000000;
-                                        to="exit";
+                                        to="end";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!alive _unit"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _unit || {count crew _unit < 1}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "angle">*/
-                                class angle
+                                /*%FSM<LINK "__40_degrees">*/
+                                class __40_degrees
                                 {
                                         itemno = 9;
-                                        priority = 1.000000;
-                                        to="play_1";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_pitch = _unit call BIS_fnc_getPitchBank;" \n
-                                         "" \n
-                                         "(_pitch select 0) < -40 && {_t < time}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "above_1000m">*/
-                                class above_1000m
-                                {
-                                        itemno = 2;
-                                        priority = 0.000000;
-                                        to="wait";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"getPosATL _unit select 2 > 1000"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "exit">*/
-                class exit
-                {
-                        name = "exit";
-                        itemno = 3;
-                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "wait">*/
-                class wait
-                {
-                        name = "wait";
-                        itemno = 6;
-                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "dead">*/
-                                class dead
-                                {
-                                        itemno = 5;
-                                        priority = 5.000000;
-                                        to="exit";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!alive _unit"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "angle">*/
-                                class angle
-                                {
-                                        itemno = 9;
-                                        priority = 1.000000;
-                                        to="play_1";
+                                        priority = 3.000000;
+                                        to="__pull_up_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"_pitch = _unit call BIS_fnc_getPitchBank;" \n
                                          "" \n
@@ -153,22 +111,45 @@ class FSM
                                 class below_1000m
                                 {
                                         itemno = 7;
-                                        priority = 0.000000;
-                                        to="play";
+                                        priority = 2.000000;
+                                        to="__altitude_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"getPosATL _unit select 2 < 1000"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"getPosATL _unit select 2 < 1000  && {_height}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "above_1000m">*/
+                                class above_1000m
+                                {
+                                        itemno = 2;
+                                        priority = 1.000000;
+                                        to="above_true";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"getPosATL _unit select 2 > 1000 && {!_height}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
                 };
                 /*%FSM</STATE>*/
-                /*%FSM<STATE "play">*/
-                class play
+                /*%FSM<STATE "end">*/
+                class end
                 {
-                        name = "play";
-                        itemno = 8;
-                        init = /*%FSM<STATEINIT""">*/"[[""meu_alititude"",true],""BIS_fnc_playSound"",crew _unit] call BIS_fnc_MP;"/*%FSM</STATEINIT""">*/;
+                        name = "end";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "above_true">*/
+                class above_true
+                {
+                        name = "above_true";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_height = true;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -186,12 +167,40 @@ class FSM
                         };
                 };
                 /*%FSM</STATE>*/
-                /*%FSM<STATE "play_1">*/
-                class play_1
+                /*%FSM<STATE "__altitude_">*/
+                class __altitude_
                 {
-                        name = "play_1";
+                        name = "__altitude_";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"[[""meu_alititude"",true],""BIS_fnc_playSound"",crew _unit] call BIS_fnc_MP;" \n
+                         "" \n
+                         "_height = false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="fork";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__pull_up_">*/
+                class __pull_up_
+                {
+                        name = "__pull_up_";
                         itemno = 10;
-                        init = /*%FSM<STATEINIT""">*/"[[""meu_pullup"",true],""BIS_fnc_playSound"",crew _unit] call BIS_fnc_MP;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[[""meu_pullup"",true],""BIS_fnc_playSound"",crew _unit] call BIS_fnc_MP;" \n
+                         "" \n
+                         "" \n
+                         "//_unit say ""meu_pullup"";"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -210,10 +219,10 @@ class FSM
                 };
                 /*%FSM</STATE>*/
         };
-        initState="init";
+        initState="start";
         finalStates[] =
         {
-                "exit",
+                "end",
         };
 };
 /*%FSM</COMPILE>*/
