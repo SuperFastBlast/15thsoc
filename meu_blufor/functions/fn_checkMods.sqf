@@ -11,15 +11,11 @@ _this select 0: STRING - "kick","warn", or "rpt" - OPTIONAL
 _this select 1: ARRAY - CfgPatches classes to check - OPTIONAL
 _this select 2: ARRAY - CfgPatches classes to blacklist - OPTIONAL
 
-EXAMPLES:
-[] call meu_fnc_checkMods; // kick all players without same versions on default mods
-["warn"] call meu_fnc_checkMods; // warn player only on default mods
-["kick",["alive_mod"]] call meu_fnc_checkMods; // kick players without same alive mod version
 */
 
 #define DEFAULT_MODS_CHECK 	["cba_main","task_force_radio","meu_blufor","meu_opfor","meu_ammoBoxes"]
 #define DEFAULT_MODS_NAMES 	["CBA","TFAR","15thMEU","15thOPFOR","15thAMMO"]
-#define DEFAULT_BLACKLIST	["mcc_sandbox","Blastcore_VEP","TracersWAR","MRF_Rangefinder","JSRS2LITE_4Five45","DragonFyre_LITE_4Five45"] // SoS,jsrs
+#define DEFAULT_BLACKLIST	["mcc_sandbox","Blastcore_VEP","TracersWAR","MRF_Rangefinder","JSRS2LITE_4Five45","DragonFyre_4Five45","DragonFyre_LITE_4Five45"," speedofsound_pure_4five"]
 
 #define SCRIPT_NAME meu_fnc_checkMods
 #define DUB(var1,var2)		##var1##_##var2
@@ -115,9 +111,9 @@ if isServer then {
 				
 				// Add warning of kick
 				_warning = if (GVAR(Punish) ==  "kick") then {
-					parseText "<t size='1' color='#ff0000'>You will be kicked, fix your mods!</t>"
+					parseText "<t size='1' color='#ff0000'>You will be kicked - fix your mods before returning!</t>"
 				} else { // just warn
-					parseText "<t size='1' color='#ff0000'>Warning: Fix your mods!</t>"
+					parseText "<t size='1' color='#ff0000'>You've been warned! Fix your mods!</t>"
 				};
 				_textArray pushBack _warning;
 				

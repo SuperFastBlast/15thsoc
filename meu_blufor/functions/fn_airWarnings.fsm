@@ -1,0 +1,229 @@
+/*%FSM<COMPILE "B:\Steam\SteamApps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, fn_airWarnings">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-58.506897,-319.039917,31.493103,-269.039856,0.000000,"init"};
+item1[] = {"fork",2,250,-55.551636,-127.060730,34.448380,-77.060745,0.000000,"fork"};
+item2[] = {"above_1000m",4,218,-260.787781,-321.488098,-170.787872,-271.488098,0.000000,"above 1000m"};
+item3[] = {"exit",1,250,-55.883392,65.394562,34.116638,115.394547,0.000000,"exit"};
+item4[] = {"true",8,218,-57.316284,-216.886475,32.683716,-166.886475,0.000000,"true"};
+item5[] = {"dead",4,218,-55.883331,-17.713623,34.116669,32.286377,5.000000,"dead"};
+item6[] = {"wait",2,250,-260.787506,-222.618118,-170.787537,-172.618118,0.000000,"wait"};
+item7[] = {"below_1000m",4,218,-260.787598,-120.882309,-170.787567,-70.882309,0.000000,"below 1000m"};
+item8[] = {"play",2,4346,-262.220459,-29.176819,-172.220444,20.823181,0.000000,"play"};
+item9[] = {"angle",4,218,144.722687,-292.830139,234.722687,-242.830139,1.000000,"angle"};
+item10[] = {"play_1",2,250,144.722717,-193.960144,234.722733,-143.960144,0.000000,"play"};
+link0[] = {0,4};
+link1[] = {1,2};
+link2[] = {1,5};
+link3[] = {1,9};
+link4[] = {2,6};
+link5[] = {4,1};
+link6[] = {5,3};
+link7[] = {6,5};
+link8[] = {6,7};
+link9[] = {6,9};
+link10[] = {7,8};
+link11[] = {8,4};
+link12[] = {9,10};
+link13[] = {10,4};
+globals[] = {0.000000,0,0,0,0,640,480,1,13,6316128,1,-343.179230,371.837128,117.695313,-336.533539,998,634,1};
+window[] = {0,-1,-1,-32000,-32000,837,283,1677,49,1,1016};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "fn_airWarnings";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;" \n
+                         "" \n
+                         "" \n
+                         "systemChat format [ ""FSM Started: %1"",_unit];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="fork";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "fork">*/
+                class fork
+                {
+                        name = "fork";
+                        itemno = 1;
+                        init = /*%FSM<STATEINIT""">*/"_t = time + 5;" \n
+                         "" \n
+                         "systemChat format [""FSM Fork: Time: %1"",_t];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "dead">*/
+                                class dead
+                                {
+                                        itemno = 5;
+                                        priority = 5.000000;
+                                        to="exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "angle">*/
+                                class angle
+                                {
+                                        itemno = 9;
+                                        priority = 1.000000;
+                                        to="play_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_pitch = _unit call BIS_fnc_getPitchBank;" \n
+                                         "" \n
+                                         "(_pitch select 0) < -40 && {_t < time}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "above_1000m">*/
+                                class above_1000m
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"getPosATL _unit select 2 > 1000"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "exit">*/
+                class exit
+                {
+                        name = "exit";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""FSM Ended"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "wait">*/
+                class wait
+                {
+                        name = "wait";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"systemChat ""FSM above 1000m"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "dead">*/
+                                class dead
+                                {
+                                        itemno = 5;
+                                        priority = 5.000000;
+                                        to="exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "angle">*/
+                                class angle
+                                {
+                                        itemno = 9;
+                                        priority = 1.000000;
+                                        to="play_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_pitch = _unit call BIS_fnc_getPitchBank;" \n
+                                         "" \n
+                                         "(_pitch select 0) < -40 && {_t < time}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "below_1000m">*/
+                                class below_1000m
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="play";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"getPosATL _unit select 2 < 1000"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "play">*/
+                class play
+                {
+                        name = "play";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"playSound ""meu_alititude"";" \n
+                         "" \n
+                         "systemChat ""FSM below 1000m"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="fork";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "play_1">*/
+                class play_1
+                {
+                        name = "play_1";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "playSound ""meu_pullup"";" \n
+                         "" \n
+                         "systemChat ""FSM Angle"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="fork";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "exit",
+        };
+};
+/*%FSM</COMPILE>*/

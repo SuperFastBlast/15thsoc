@@ -1,5 +1,5 @@
 
-#define VERSION_DATE	05.27.2015 // release date
+#define VERSION_DATE	05.27.2015 // version
 
 class CfgPatches
 {
