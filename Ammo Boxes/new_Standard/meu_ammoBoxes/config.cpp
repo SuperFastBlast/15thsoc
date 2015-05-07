@@ -1,4 +1,6 @@
 
+#define VERSION_DATE	05.27.2015 // release date
+
 #define NO_ZEUS_WINDOW 		// delete line to enable the zeus dialog/disable zeus crate
 #define NO_RESUPPLY_BRAVO 	// delete line to enable box_resuply_bravo
 
@@ -29,8 +31,9 @@ class CfgPatches
 			"Box_meu_zeus"
 		};
 		weapons[] = {};
-		requiredVersion = 3.0; // v3 of config standard
+		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F"};
+		version = VERSION_DATE;
 	};
 };
 

@@ -26,6 +26,7 @@
 #define ICON_HELPTIPS			"\A3\ui_f\data\map\markers\military\warning_CA.paa"
 #define ICON_FAVORITE			"\A3\ui_f\data\map\GroupIcons\badge_gs.paa"
 #define ICON_CRATE				"\A3\ui_f\data\map\VehicleIcons\iconcrate_ca.paa" 
+#define ICON_NOTINBOX			"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"
 
 // gui profile colors
 #define COLOR_ERROR_HTML		(["IGUI","ERROR_RGB"] call bis_fnc_displaycolorget) call BIS_fnc_colorRGBtoHTML
@@ -53,9 +54,9 @@
 #define GEAR(INDEX)				(_gear select INDEX)
 #define ADD_RESTRICT_X(ITEM)	_restricted pushBack ITEM
 #define CHECK_STRING_X(ITEM)	(ITEM != "")
-#define CHECK_COUNT(INDEX)		(count GEAR(INDEX) > 0) 
-#define CHECK_CLASS(INDEX)		!(CALL_FNC("config",[ITEM]) isEqualTO false) // TODO: change false to ""
-#define CHECK_BOX_X(ITEM)		(CHECK_CLASS(ITEM) && {!_checking || ITEM in _boxGear}) // (!_checking || {ITEM in _boxGear})
+#define CHECK_COUNT(INDEX)		(count GEAR(INDEX) > 0)
+#define CHECK_CLASS(INDEX)		!(CALL_FNC("config",[ITEM]) isEqualTO "")
+#define CHECK_BOX_X(ITEM)		(CHECK_CLASS(ITEM) && {!_checking || ITEM in _boxGear})
 #define CHECK_IS_RADIO			("ItemRadio" in _parents && {!_checking || "ItemRadio" in _boxGear})
 #define GET_PARENT(ITEM)		private ["_class","_parent"];_class = [ITEM] call BIS_fnc_classWeapon;_parents = [_class,true] call BIS_fnc_returnParents;
 
