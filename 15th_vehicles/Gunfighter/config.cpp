@@ -1192,7 +1192,7 @@ class CfgVehicles
 		destrType="DestructWreck";
 		scope = 2;
 		side=1;
-		audible = 7;
+		audible = 20;
 		maximumLoad = 2500;
 		AGM_FastRoping = 1;
 		AGM_FastRoping_Positions[] = {{1.4, -0.15, 0.10}, {-1.4, -0.15, 0.10}};

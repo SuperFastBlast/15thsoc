@@ -519,7 +519,6 @@ class CfgVehicles
 		cost = 20000000;
 		weapons[] = {"master_arms_safe","MEU_gatling_25mm","MEU_GBU12BombLauncher","MEU_Maverick_F","SidewinderLaucher_AV8B","MEU_FFAR_Smallpod","CMFlareLauncher"};
 		magazines[] = {"MEU_300Rnd_25mm_shells_T","MEU_Missile_AGM_02_F", "MEU_GBU12_LGB","MEU_Sidewinder","MEU_14Rnd_Rockets","240Rnd_CMFlare_Chaff_Magazine"};
-		insideSoundCoef = 0.09;
 		fov = 0.4;
 		type = 2;
 		threat[] = {1,1,1};
@@ -2213,10 +2212,11 @@ condition = "collisionlights";
 		{
 			libTextDesc = "MEU AV8B2";
 		};
+		insideSoundCoef = 0.09;
 		attenuationEffectType = "HeliAttenuation";
 		soundGetIn[] = {"meuAV8b\ext\ext-jetair-cabine-close1",0.056234132,1};
 		soundGetOut[] = {"meuAV8b\ext\ext-jetair-cabine-open1",0.056234132,1,30};
-		soundDammage[] = {"meuAV8b\int\alarm_loop1",0.5,1};
+		soundDammage[] = {"meuAV8b\int\alarm_loop1",1,1};
 		soundEngineOnInt[] = {"meuAV8b\int\int-av8b-start-1",0.56234133,1.0};
 		soundEngineOnExt[] = {"meuAV8b\ext\ext-av8b-stop-1",0.7943282,1.0,700};
 		soundEngineOffInt[] = {"meuAV8b\int\int-av8b-stop-1",0.56234133,1.0};

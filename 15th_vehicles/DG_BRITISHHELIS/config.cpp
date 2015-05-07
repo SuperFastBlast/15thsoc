@@ -98,12 +98,12 @@ class CfgVehicles
 		faction = BLU_F;
 
         driveOnComponent[] = {"Wheels"};
-		camouflage = 10;
+		camouflage = 100;
 		maxfordingdepth = 1;
 		sensitivity = 3;
 		sensitivityear = 3;
 		canBeShot = true;
-		audible = 7;		
+		audible = 20;		
 		
         AGM_FastRoping = 1;         //  X    Z    Y
         AGM_FastRoping_Positions[] = {{0.6, -5, -0.5}, {-0.2, -5, -0.5}};		
@@ -409,7 +409,7 @@ class CfgVehicles
 				position="axis_ramp";
 				radius=3.6;
 				onlyForplayer=false;
-				condition="this animationPhase ""rampa"" > 0.5 AND Alive(this)";
+				condition="this animationPhase ""rampa"" > 0.5 AND (player == (driver this) && (alive this))";
 				statement="this animate [""rampa"",0];";
 				priority=9;
 			};
@@ -420,7 +420,7 @@ class CfgVehicles
 				position="axis_ramp";
 				radius=3.6;
 				onlyForplayer=false;
-				condition="this animationPhase ""rampa"" < 0.5 AND Alive(this)";
+				condition="this animationPhase ""rampa"" < 0.5 AND (player == (driver this) && (alive this))";
 				statement="this animate [""rampa"",1];";
 				priority=9;
 			}; 
