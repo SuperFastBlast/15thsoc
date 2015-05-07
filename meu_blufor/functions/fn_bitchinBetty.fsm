@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "B:\Steam\SteamApps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, fn_airWarnings">*/
+/*%FSM<COMPILE "B:\Steam\SteamApps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, fn_bitchinBetty">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"init",0,250,-58.506897,-319.039917,31.493103,-269.039856,0.000000,"init"};
@@ -26,12 +26,12 @@ link10[] = {7,8};
 link11[] = {8,4};
 link12[] = {9,10};
 link13[] = {10,4};
-globals[] = {0.000000,0,0,0,0,640,480,1,13,6316128,1,-343.179230,371.837128,117.695313,-336.533539,998,634,1};
-window[] = {0,-1,-1,-32000,-32000,837,283,1677,49,1,1016};
+globals[] = {0.000000,0,0,0,0,640,480,1,13,6316128,1,-441.888672,320.753723,122.122101,-362.362183,998,634,1};
+window[] = {0,-1,-1,-32000,-32000,827,89,1483,39,1,1016};
 *//*%FSM</HEAD>*/
 class FSM
 {
-        fsmName = "fn_airWarnings";
+        fsmName = "fn_bitchinBetty";
         class States
         {
                 /*%FSM<STATE "init">*/
@@ -39,10 +39,7 @@ class FSM
                 {
                         name = "init";
                         itemno = 0;
-                        init = /*%FSM<STATEINIT""">*/"_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;" \n
-                         "" \n
-                         "" \n
-                         "systemChat format [ ""FSM Started: %1"",_unit];"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -65,9 +62,7 @@ class FSM
                 {
                         name = "fork";
                         itemno = 1;
-                        init = /*%FSM<STATEINIT""">*/"_t = time + 5;" \n
-                         "" \n
-                         "systemChat format [""FSM Fork: Time: %1"",_t];"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"_t = time + 5;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -114,7 +109,7 @@ class FSM
                 {
                         name = "exit";
                         itemno = 3;
-                        init = /*%FSM<STATEINIT""">*/"systemChat ""FSM Ended"";"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -126,7 +121,7 @@ class FSM
                 {
                         name = "wait";
                         itemno = 6;
-                        init = /*%FSM<STATEINIT""">*/"systemChat ""FSM above 1000m"";"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -173,9 +168,7 @@ class FSM
                 {
                         name = "play";
                         itemno = 8;
-                        init = /*%FSM<STATEINIT""">*/"playSound ""meu_alititude"";" \n
-                         "" \n
-                         "systemChat ""FSM below 1000m"";"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[[""meu_alititude"",true],""BIS_fnc_playSound"",crew _unit] call BIS_fnc_MP;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -198,10 +191,7 @@ class FSM
                 {
                         name = "play_1";
                         itemno = 10;
-                        init = /*%FSM<STATEINIT""">*/"" \n
-                         "playSound ""meu_pullup"";" \n
-                         "" \n
-                         "systemChat ""FSM Angle"";"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[[""meu_pullup"",true],""BIS_fnc_playSound"",crew _unit] call BIS_fnc_MP;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

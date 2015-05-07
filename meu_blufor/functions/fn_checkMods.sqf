@@ -15,7 +15,7 @@ _this select 2: ARRAY - CfgPatches classes to blacklist - OPTIONAL
 
 #define DEFAULT_MODS_CHECK 	["cba_main","task_force_radio","meu_blufor","meu_opfor","meu_ammoBoxes"]
 #define DEFAULT_MODS_NAMES 	["CBA","TFAR","15thMEU","15thOPFOR","15thAMMO"]
-#define DEFAULT_BLACKLIST	["mcc_sandbox","Blastcore_VEP","TracersWAR","MRF_Rangefinder","JSRS2LITE_4Five45","DragonFyre_4Five45","DragonFyre_LITE_4Five45"," speedofsound_pure_4five"]
+#define DEFAULT_BLACKLIST	["mcc_sandbox","Blastcore_VEP","TracersWAR","MRF_Rangefinder","JSRS2LITE_4Five45","JSRS2_4Five45","DragonFyre_4Five45","DragonFyre_LITE_4Five45","speedofsound_pure_4five"]
 
 #define SCRIPT_NAME meu_fnc_checkMods
 #define DUB(var1,var2)		##var1##_##var2
@@ -78,7 +78,7 @@ if isServer then {
 			};
 		} forEach GVAR(Black);
 		
-		// if mismatch
+		// if arrays > 1
 		if (count _errors > 0 || count _black > 0) then {
 			// wait for main display
 			waitUntil { !isNull (findDisplay 46) };	

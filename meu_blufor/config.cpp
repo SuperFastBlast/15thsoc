@@ -23,7 +23,7 @@ class CfgFunctions
 		{
 			file = "meu_blufor\functions";
 			class checkMods {};
-			class airWarnings {ext = ".fsm";};
+			class bitchinBetty {ext = ".fsm";};
 		};
 	};
 };
