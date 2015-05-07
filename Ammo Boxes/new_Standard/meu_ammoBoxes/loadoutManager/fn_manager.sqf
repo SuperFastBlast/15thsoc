@@ -2,6 +2,11 @@
 // fight9
 // built on Riouken's framework
 
+/* TODO
+"loadsaved" - test bino in assigned items
+add option to remove defaults
+ */
+
 #include "manager_macros.hpp"
 
 private ["_fnc","_params"];
@@ -93,7 +98,8 @@ switch (toLower _fnc) do {
 			// if showing saved loadout, only show picture if item is in the box
 			GET_PARENT(_this);
 			if CHECK_IS_RADIO exitWith {(getText (configFile >> _config >> _this >> "picture"))};
-			if (!_expand && {_checking} && {!(_this in _boxGear)}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
+			//if (!_expand && {_checking} && {!(_this in _boxGear)}) exitWith {"\A3\Ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_exit_cross_ca.paa"};
+			if (!_expand && {_checking} && {!(_this in _boxGear)}) exitWith {ICON_NOTINBOX};
 			(getText (configFile >> _config >> _this >> "picture"))
 		};	
 		_fnc_tvParantAndChild = {
@@ -116,7 +122,7 @@ switch (toLower _fnc) do {
 			private ["_gear","_config","_parent"];
 			_gear = _this select 0;
 			_config = CALL_FNC("config",[_gear]);
-			if (_config isEqualTo false) exitWith {false};
+			if (_config isEqualTo "") exitWith {false};
 			_parent = _tree tvAdd [ [], getText (configFile >> _config >> _gear >> "displayname") ];
 			_tree tvSetPicture [ [_parent], _gear call _fnc_picture ];
 			if _expand then {
@@ -133,7 +139,7 @@ switch (toLower _fnc) do {
 				if (_x != "") then {
 					private ["_config","_child"];
 					_config = CALL_FNC("config",[_x]);
-					if !(_config isEqualTo false) then {
+					if !(_config isEqualTo "") then {
 						_child = _tree tvAdd [ [_parent], getText (configFile >> _config >> _x >> "displayname") ];
 						_tree tvSetPicture [ [_parent,_child], _x call _fnc_picture ];
 					};
@@ -783,10 +789,10 @@ switch (toLower _fnc) do {
 					player linkItem "ItemRadio";
 				} else {
 					if CHECK_BOX_X(_x) then {
-						private ["_config","_binos"];
-						_config = CALL_FNC("config",[_x]);
-						_binos = [(configFile >> _config >> _x),"optics",0] call BIS_fnc_returnConfigEntry;
-						if (_binos > 0) then {
+						//private ["_binos"];
+						//_binos = [(configFile >> (CALL_FNC("config",[_x])) >> _x),"optics",0] call BIS_fnc_returnConfigEntry;
+						//if (_binos > 0) then {
+						if (([(configFile >> (CALL_FNC("config",[_x])) >> _x),"optics",0] call BIS_fnc_returnConfigEntry) > 0) then {
 							player addWeapon _x;
 							player assignItem _x; 
 						} else {
@@ -854,7 +860,7 @@ switch (toLower _fnc) do {
 			if (isClass (configFile >> "CfgWeapons" >> _item)) exitWith {"CfgWeapons"};
 			if (isClass (configFile >> "CfgVehicles" >> _item)) exitWith {"CfgVehicles"};
 			if (isClass (configFile >> "CfgGlasses" >> _item)) exitWith {"CfgGlasses"};
-			false // TODO: Change to ""
+			""
 		};
 		_r = _config;
 	};
@@ -870,12 +876,18 @@ switch (toLower _fnc) do {
 		_text = composeText [_header,linebreak,linebreak,_message,linebreak];
 		
 		{
+			private ["_config","_pic","_name"];
 			_config = CALL_FNC("config",[_x]);
-			if !(_config isEqualTo false) then {
+			if !(_config isEqualTo "") then {
 				_name = getText (configFile >> _config >> _x >> "displayname");
 				_pic = getText (configFile >> _config >> _x >> "picture");
-				_text = composeText [_text,lineBreak,image _pic," ",_name];
+				//_text = composeText [_text,lineBreak,image _pic," ",_name];
+			} else {
+				_name = format ["<t color='%2'>%1 - CLASS NOT FOUND</t>",_x,COLOR_ERROR_HTML];
+				_pic = ICON_NOTINBOX;
+				//_text = composeText [_text,lineBreak,image _pic," ",_name];
 			};
+			_text = composeText [_text,lineBreak,image _pic," ",_name];
 		} forEach _gear;
 	
 		hint _text;
