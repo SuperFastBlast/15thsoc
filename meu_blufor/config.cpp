@@ -52,7 +52,7 @@ class CfgVehicles
 	class I_Plane_Fighter_03_CAS_F;
 	class meu_plane_bitchinBetty: I_Plane_Fighter_03_CAS_F
 	{
-		displayName = "Bitchin' Betty Text Plane";
+		displayName = "Bitchin' Betty Test Plane";
 		side = 1;
 		faction = "BLU_F";
 		hiddenSelectionsTextures[] = {"#(rgb,8,8,3)color(0,0,0,1)","#(rgb,8,8,3)color(0,0,0,1)"};

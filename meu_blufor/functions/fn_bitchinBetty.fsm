@@ -2,11 +2,11 @@
 /*%FSM<HEAD>*/
 /*
 item0[] = {"start",0,250,-56.931427,-317.464478,33.068573,-267.464417,0.000000,"start"};
-item1[] = {"fork",2,250,-57.127075,-127.060730,32.872940,-77.060745,0.000000,"fork"};
+item1[] = {"fork",2,4346,-57.127075,-127.060730,32.872940,-77.060745,0.000000,"fork"};
 item2[] = {"above_1000m",4,218,-249.550110,-134.459778,-159.550385,-84.459869,1.000000,"above 1000m"};
 item3[] = {"end",1,250,-55.883392,65.394562,34.116638,115.394547,0.000000,"end"};
 item4[] = {"true",8,218,-57.316284,-216.886475,32.683716,-166.886475,0.000000,"true"};
-item5[] = {"dead_empty",4,4314,-57.458771,-19.289063,32.541229,30.710938,5.000000,"dead/empty"};
+item5[] = {"dead_empty",4,218,-57.458771,-19.289063,32.541229,30.710938,5.000000,"dead/empty"};
 item6[] = {"above_true",2,250,-249.549988,-211.427750,-159.550018,-161.427765,0.000000,"above true"};
 item7[] = {"below_1000m",4,218,-344.077026,-83.589752,-254.077026,-33.589752,2.000000,"below 1000m"};
 item8[] = {"__altitude_",2,250,-343.981537,-273.465637,-253.981537,-223.465637,0.000000,"""altitude"""};
@@ -30,8 +30,8 @@ link12[] = {9,10};
 link13[] = {10,4};
 link14[] = {11,12};
 link15[] = {12,3};
-globals[] = {25.000000,1,0,0,0,640,480,2,16,6316128,1,-378.154327,335.692871,127.046303,-325.724548,998,633,1};
-window[] = {0,-1,-1,-32000,-32000,853,149,1543,47,1,1016};
+globals[] = {25.000000,1,0,0,0,640,480,2,16,6316128,1,-378.154327,335.692871,128.034729,-324.736084,998,633,1};
+window[] = {0,-1,-1,-32000,-32000,945,235,1629,139,1,1016};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -44,12 +44,20 @@ class FSM
                         name = "start";
                         itemno = 0;
                         init = /*%FSM<STATEINIT""">*/"_unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;" \n
-                         "//_pos = [_this,1,""driver"",[""""]] call BIS_fnc_param;" \n
-                         "//_player = [_this,2,player,[objNull]] call BIS_fnc_param;" \n
                          "" \n
                          "_height = false;" \n
                          "" \n
-                         "_t = time + 5;"/*%FSM</STATEINIT""">*/;
+                         "_t = time + 5;" \n
+                         "" \n
+                         "_fnc_getCrew = {" \n
+                         "	private [""_crew"",""_isNull""];" \n
+                         "	_isNull = { if (!isNull _this) then {_crew pushBack _this;}; };" \n
+                         "	_crew = [];" \n
+                         "	{ _x call _isNull } forEach [driver _this, commander _this, gunner _this];" \n
+                         "	_crew" \n
+                         "};" \n
+                         "" \n
+                         "_eh = _unit addEventHandler [""local"",(format [""%1 spawn meu_fnc_bitchinBetty;"",(_unit call BIS_fnc_objectVar)])];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -60,8 +68,7 @@ class FSM
                                         priority = 1.000000;
                                         to="end";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!(local _unit) " \n
-                                         "// || (_pos != ""driver"") || !(isPlayer _player)"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!local _unit && {hasInterface}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -95,8 +102,8 @@ class FSM
                                         priority = 5.000000;
                                         to="end";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!alive _unit " \n
-                                         "//|| {count crew _unit < 1}"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _unit || {!local _unit}" \n
+                                         ""/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -120,7 +127,7 @@ class FSM
                                         priority = 2.000000;
                                         to="__altitude_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"getPosATL _unit select 2 < 1000  && {_height}"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"getPosATL _unit select 2 < 1000 && {_height}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -178,7 +185,7 @@ class FSM
                 {
                         name = "__altitude_";
                         itemno = 8;
-                        init = /*%FSM<STATEINIT""">*/"[[""meu_alititude"",true],""BIS_fnc_playSound"",crew _unit] call BIS_fnc_MP;" \n
+                        init = /*%FSM<STATEINIT""">*/"[[""meu_alititude"",true],""BIS_fnc_playSound"",(_unit call _fnc_getCrew)] call BIS_fnc_MP;" \n
                          "" \n
                          "_height = false;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -203,10 +210,10 @@ class FSM
                 {
                         name = "__pull_up_";
                         itemno = 10;
-                        init = /*%FSM<STATEINIT""">*/"[[""meu_pullup"",true],""BIS_fnc_playSound"",crew _unit] call BIS_fnc_MP;" \n
-                         "_t = time + 5;" \n
+                        init = /*%FSM<STATEINIT""">*/"[[""meu_pullup"",true],""BIS_fnc_playSound"",(_unit call _fnc_getCrew)] call BIS_fnc_MP;" \n
                          "" \n
-                         "//_unit say ""meu_pullup"";"/*%FSM</STATEINIT""">*/;
+                         "_t = time + 5;" \n
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
