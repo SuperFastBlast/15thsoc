@@ -12,7 +12,7 @@
  removeuniform _unit;
  removevest _unit;
  removeheadgear _unit;
- _unit addvest "MEF_Vest_Tan_Armor";
+ _unit addvest "MEF_Vest_Tan_Infantry";
  _unit addheadgear "H_HelmetCrew_I";
 
 
