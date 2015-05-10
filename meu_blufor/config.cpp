@@ -34,12 +34,12 @@ class CfgSounds
 	class meu_alititude
 	{
 		titles[] = {};
-		sound[] = { "meu_blufor\sounds\A10_VMU_Altitude.ogg", 3, 1 };
+		sound[] = { "meu_blufor\sounds\Altitude.ogg", 3, 1 };
 	};
 	class meu_pullup
 	{
 		titles[] = {};
-		sound[] = { "meu_blufor\sounds\A10_VMU_Pullup.ogg", 3, 1 };
+		sound[] = { "meu_blufor\sounds\Pullup.ogg", 3, 1 };
 	};
 };
 

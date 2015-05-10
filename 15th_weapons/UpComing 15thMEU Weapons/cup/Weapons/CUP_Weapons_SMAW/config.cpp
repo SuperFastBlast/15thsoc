@@ -4,7 +4,7 @@ class CfgPatches
 	class CUP_Weapons_SMAW
 	{
 		units[] = {};
-		weapons[] = {"CUP_optic_SMAW_Scope","CUP_launch_Mk153Mod0"};
+		weapons[] = {"CUP_optic_SMAW_NScope","CUP_optic_SMAW_Scope","CUP_launch_Mk153Mod0"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"CUP_Weapons_WeaponsCore","A3_Weapons_F"};
 		magazines[] = {"CUP_SMAW_HEDP_M_N","CUP_SMAW_HEAA_M_N"};
@@ -37,6 +37,11 @@ class CfgVehicles
 				magazine = "CUP_SMAW_HEAA_M_N";
 				count = 1;
 			};
+			class CUP_SMAW_HEDP_M
+			{
+				magazine = "CUP_SMAW_HEDP_M_N";
+				count = 1;
+			};
 		};
 	};
 	class CUP_Item_optic_SMAW_Scope: WeaponHolder_Single_F
@@ -53,6 +58,11 @@ class CfgVehicles
 			class CUP_optic_SMAW_Scope
 			{
 				name = "CUP_optic_SMAW_Scope";
+				count = 1;
+			};
+			class CUP_optic_SMAW_NScope
+			{
+				name = "CUP_optic_SMAW_NScope";
 				count = 1;
 			};
 		};
@@ -214,6 +224,41 @@ class CfgWeapons
 					opticsDisablePeripherialVision = true;
 
 					visionMode[] = {"Normal"};//vison modes
+					// discretefov[] = {0.071945,0.071945,0.071945,0.071945};
+      					discreteDistance[] = {50,100,150,200,250, 300, 350, 400, 450, 500};
+       					discreteDistanceInitIndex = 0;
+					discreteDistanceCameraPoint[] = {"eye_1", "eye_2", "eye_3", "eye_4","eye_5", "eye_6", "eye_7", "eye_8", "eye_9","eye_10"};
+					// memoryPointCamera = "eye";
+					cameraDir = "look";
+				};
+			};
+		};
+	};
+	class CUP_optic_SMAW_NScope: CUP_optic_SMAW_Scope
+	{
+		scope = 2;
+		displayName = "SMAW Optical Scope (NIGHT)";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass = 10;
+			optics = 1;
+			modelOptics = "\CUP\Weapons\CUP_Weapons_SMAW\CUP_optika_TOW.p3d";
+			class OpticsModes
+			{
+				class ShortDot
+				{
+					opticsID = 1;
+					useModelOptics = true;
+					opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur3"};
+					opticsZoomMin = 0.0625;
+					opticsZoomMax = 0.0625;
+					distanceZoomMin = 50;
+					distanceZoomMax = 500;
+					opticsZoomInit = 0.0625;
+					memoryPointCamera = "opticView";
+					opticsFlare = true;
+					opticsDisablePeripherialVision = true;
+					visionMode[] = {"NVG"};//vison modes
 					// discretefov[] = {0.071945,0.071945,0.071945,0.071945};
       					discreteDistance[] = {50,100,150,200,250, 300, 350, 400, 450, 500};
        					discreteDistanceInitIndex = 0;

@@ -402,14 +402,14 @@ class CfgVehicles
 				condition="this animationPhase ""dvere_l"" < 0.5 AND Alive(this)";
 				statement="this animate [""dvere_l"",1];this animate [""dvere_l_pop"",1];";
 			};
-			 class CloseRear // disabled
+			 class CloseRear 
 			{
 				displayName= "<t color='#FF0000'>Close Ramp</t>"; //Red
 				displayNameDefault = ""; 
 				position="axis_ramp";
 				radius=3.6;
 				onlyForplayer=false;
-				condition="this animationPhase ""rampa"" > 0.5 AND (player == (driver this) && (alive this))";
+				condition="(this animationPhase ""rampa"" > 0.5) && (player in [driver this,gunner this]) && (alive this)";
 				statement="this animate [""rampa"",0];";
 				priority=9;
 			};
@@ -420,7 +420,7 @@ class CfgVehicles
 				position="axis_ramp";
 				radius=3.6;
 				onlyForplayer=false;
-				condition="this animationPhase ""rampa"" < 0.5 AND (player == (driver this) && (alive this))";
+				condition="(this animationPhase ""rampa"" < 0.5) && (player in [driver this,gunner this]) && (alive this)";
 				statement="this animate [""rampa"",1];";
 				priority=9;
 			}; 
