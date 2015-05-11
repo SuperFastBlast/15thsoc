@@ -115,7 +115,7 @@ class CfgAmmo
 	explosioneffects = "ATRocketExplosion";
 	fusedistance = 500;
 	hit = 1400;
-	indirecthit = 50;
+	indirecthit = 800;
 	indirecthitrange = 10;
 	inittime = 0;
 	irlock = 0;

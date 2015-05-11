@@ -1,4 +1,4 @@
-
+class DefaultEventhandlers;
 class CfgPatches
 {
 	class MV22
@@ -75,13 +75,12 @@ class CfgVehicles
 	{
 		class Turrets: Turrets
 		{
-			class CopilotTurret;
+			class MainTurret;
 		};
 	class ViewPilot;
 	class AnimationSources;
 	class NewTurret;
 	};
-
 	class MV22: Plane_Base_F
 	{
 		destrType=DestructWreck;
@@ -92,10 +91,14 @@ class CfgVehicles
 		AGM_FastRoping = 1;          //X    Z     Y
         	AGM_FastRoping_Positions[] = {{0, -6.5, -0.6}};    //RAMP {0, 2.476, 6.576} X= 0.605 Y= 2.406 Z= 7.474
 		displayName="MEU MV-22 Osprey";
+		class Eventhandlers: DefaultEventhandlers
+		{
+			init = "if (!isNil {meu_fnc_bitchinBetty}) then {_this spawn meu_fnc_bitchinBetty;};";
+		};
 		vehicleClass = "Air";
 		model = "mv22\mv22.p3d";
-		picture="\mv22\picture_MV22_CA.paa";
-		icon="\mv22\icon_MV22_CA.paa";
+		picture="mv22\picture_MV22_CA.paa";
+		icon="mv22\icon_MV22_CA.paa";
 		mapSize = 28;
 		crew = "B_Helipilot_F";
 		crewVulnerable = true;
@@ -132,7 +135,7 @@ class CfgVehicles
 		memoryPointCM[] = {"flare_launcher1","flare_launcher2"};
 		memoryPointCMDir[] = {"flare_launcher1_dir","flare_launcher2_dir"};
 		//vtol adjustments
-		rudderInfluence=0.25;
+		rudderInfluence=0.30;
 		irScanRangeMin=500;
 		irScanRangeMax=5000;
 		irScanToEyeFactor=2;
@@ -142,7 +145,7 @@ class CfgVehicles
 		landingSpeed=130;
 		acceleration=328;
 		flapsFrictionCoef = 0.32;
-		rudderSensitivity=12;
+		rudderSensitivity=12.5;
 		envelope[] = {0.0,0.15,1.1,3,5,5.83,6.0,5.85,5.5,4.8,3.6,1.8,0};
 		cargoIsCoDriver[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 		cargoProxyIndexes[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24};
@@ -199,7 +202,7 @@ class CfgVehicles
 
 		supplyRadius = 8;
 
-		armor = 25;
+		armor = 40;
 		damageResistance = 0.00172;
 
 		weapons[]=
@@ -213,8 +216,8 @@ class CfgVehicles
 
 		insideSoundCoef = 0.09;
 		attenuationEffectType = "HeliAttenuation";
-		soundGetIn[]={"MV22\sound\close",db-10,1};
-		soundGetOut[]={"MV22\sound\open",db-10,1, 40};
+		soundGetIn[]={"MV22\sound\close",db-10,1,10};
+		soundGetOut[]={"MV22\sound\open",db-10,1,20};
 		soundDammage[]={"MV22\sound\alarm_loop1", 1, 1};
 		soundEngineOnInt[] = {"MV22\sound\int_start", 1, 1.0};
 		soundEngineOnExt[] = {"MV22\sound\ext_start", 1, 1.0, 500};
@@ -224,8 +227,7 @@ class CfgVehicles
 		soundGearDown[] = {"A3\Sounds_F_EPC\CAS_01\gear_down",0.7943282,1.0,150};
 		soundFlapsUp[] = {"MV22\sound\ext-jetair-flaps",0.63095737,1.0,100};
 		soundFlapsDown[] = {"MV22\sound\ext-jetair-flaps",0.63095737,1.0,100};
-		soundLocked[] = {"MV22\sound\warningwarning",30,1,5};
-		soundIncommingMissile[] = {"MV22\sound\MissileMissile",0.8,1,5};
+		soundLocked[] = {"MV22\sound\missile.ogg",30.0,1};
 
 		class Sounds
 		/* EXTERNAL SOUNDS MV22 */
@@ -289,24 +291,24 @@ class CfgVehicles
 			initAngleX=0; minAngleX=-65; maxAngleX=+85; //Rg 45/85;
 			initAngleY=0; minAngleY=-150; maxAngleY=+150;
 		};
-		class CopilotTurret;
+		class cargoturret;
 		class Turrets: Turrets
 		{
-			class CopilotTurret: CopilotTurret
+			class CoPilotObs: NewTurret
 			{
 				isCopilot = 1;
 				gunnerCanEject = 1;
 				CanEject = 1;
 				startEngine=0;
 				gunnerHasFlares=1;
-				body="Turret";
-				gun="Gun";
-				animationSourceBody="Turret";
-				animationSourceGun="Gun";
-				gunBeg="gun_end";
-				gunEnd="gun_begin";
-				memoryPointGunnerOptics="commanderview";
-				memoryPointGun = "gun_end";
+				body="mainTurret";
+				gun="mainGun";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";								
+				        gunBeg="gun_end"; //gunBeg=endpoint of the gun
+				        gunEnd="gun_begin"; //gunEnd=chamber of the gun	
+					memoryPointGunnerOptics="commanderview";
+					memoryPointGun = "gun_end";
 				selectionFireAnim = "";
 				turretCanSee = "31";
 				proxyIndex=1;
@@ -320,25 +322,21 @@ class CfgVehicles
 				minTurn = -180;
 				maxTurn = 180;
 				initTurn = 0;
-				primaryObserver = 0;
 				precisegetinout = 1;
 				turretInfoType="RscOptics_UAV_gunner";
 				weapons[]={"Laserdesignator_mounted"};
 				magazines[]={"Laserbatteries"};
-				soundServo[]={"",0.0099999998,1,30};
 				gunnerAction="MV22_CoPilot";
-				precisegetinout=1;
 				gunnerGetInAction="GetInLow";
 				gunnerGetOutAction="GetOutLow";
 				gunnerRightHandAnimName="stick_pilot";
 				memoryPointsGetInGunner="pos codriver";
 				memoryPointsGetInGunnerDir="pos codriver dir";
 				gunnerCompartments = "Compartment1";
-				inGunnerMayFire="true";
 				primaryGunner=1;
-				commanding=-1;
-				LODTurnedOut=1100;
-				LODTurnedIn=1100;
+				outGunnerMayFire =true;
+				inGunnerMayFire =true;
+				gunnerForceOptics=false;
 				class OpticsIn
 				{
 					class Wide
@@ -404,6 +402,78 @@ class CfgVehicles
 					};
 				};
 			};
+		class CargoTurret_01: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "mortar"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunner = "pos cargo1"; /// specific memory points to allow choice of position
+	memoryPointsGetInGunnerDir = "pos cargodir1";	/// direction of get in action
+	gunnerName = "WalkWay 1";	/// name of the position in the Action menu
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 25;	/// what cargo proxy is used according to index in the model
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = -60; /// what is the left-most possible turn of the turret
+	minTurn = -120; /// what is the right-most possible turn of the turret
+	isPersonTurret = 0; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+	getinradius =0;
+	};
+		class CargoTurret_02: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "mortar"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunner = "pos cargo2"; /// specific memory points to allow choice of position
+	memoryPointsGetInGunnerDir = "pos cargodir2";	/// direction of get in action
+	gunnerName = "WalkWay 2";	/// name of the position in the Action menu
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 26;	/// what cargo proxy is used according to index in the model
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = -60; /// what is the left-most possible turn of the turret
+	minTurn = -120; /// what is the right-most possible turn of the turret
+	isPersonTurret = 0; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+	getinradius =0;
+	};
+		class CargoTurret_03: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "mortar"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunner = "pos cargo3"; /// specific memory points to allow choice of position
+	memoryPointsGetInGunnerDir = "pos cargodir3";	/// direction of get in action
+	gunnerName = "WalkWay 3";	/// name of the position in the Action menu
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 27;	/// what cargo proxy is used according to index in the model
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = -60; /// what is the left-most possible turn of the turret
+	minTurn = -120; /// what is the right-most possible turn of the turret
+	isPersonTurret = 0; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+	getinradius =0;
+	};
+		class CargoTurret_04: CargoTurret /// position for Firing from Vehicles
+		{
+	gunnerAction = "mortar"; /// generic animation for sitting inside with rifle ready
+        gunnerCompartments = "Compartment2"; /// gunner is not able to switch seat
+	memoryPointsGetInGunner = "pos cargo4"; /// specific memory points to allow choice of position
+	memoryPointsGetInGunnerDir = "pos cargodir4";	/// direction of get in action
+	gunnerName = "WalkWay 4";	/// name of the position in the Action menu
+	memoryPointGunnerOptics = "Eye";
+	gunnerCanEject = 1;
+	proxyIndex = 28;	/// what cargo proxy is used according to index in the model
+	maxElev = 10; /// what is the highest possible elevation of the turret
+	minElev = -65; /// what is the lowest possible elevation of the turret
+	maxTurn = -60; /// what is the left-most possible turn of the turret
+	minTurn = -120; /// what is the right-most possible turn of the turret
+	isPersonTurret = 0; /// enables firing from vehicle functionality
+	ejectDeadGunner = 0; /// seatbelts included
+	getinradius =0;
+	};
 		};
 		selectionRotorStill = "engine_static";
 		selectionRotorMove = "engine_blur";
@@ -438,7 +508,7 @@ class CfgVehicles
 		class AnimationSources
 		{
 			class Door_1_1 {source = "user"; animPeriod = 0;};
-			class Ramp {source = "user"; animPeriod = 0;};
+			class Ramp {source = "user"; animPeriod = 7;};
 			class pack_engine_1 {source = "user"; animPeriod = 0/*15*/;};
 			#define ENGINE_PROP_TURN(x,y) class engine_prop_##x##_##y##_turn:pack_engine_1{}
 			ENGINE_PROP_TURN(1,1);
@@ -462,9 +532,10 @@ class CfgVehicles
 				displayName="<t color='#FF0000'>Open Ramp</t>";
 				position="zamerny";
 				radius=5;
-				condition="this animationphase ""ramp_top"" !=1 AND (player == (driver this) && (alive this))";
+				condition="(this animationPhase ""ramp_top"" == 0) && (player in [driver this,gunner this]) && (alive this)";
 				statement="[this,1] execvm ""\mv22\scripts\ramp.sqf""";
 				onlyforplayer=1;
+				priority=9;
 			};
 
 			class rampdown
@@ -472,9 +543,10 @@ class CfgVehicles
 				displayName="<t color='#FF0000'>Close Ramp</t>";
 				position="zamerny";
 				radius=5;
-				condition="this animationphase ""ramp_bottom"" !=0 AND (player == (driver this) && (alive this))";
+				condition="(this animationPhase ""ramp_bottom"" == 1) && (player in [driver this,gunner this]) && (alive this)";
 				statement="[this,0] execvm ""\mv22\scripts\ramp.sqf""";
 				onlyforplayer=1;
+				priority=9;
 			};
 		};
 		class Exhausts
@@ -682,126 +754,104 @@ class CfgVehicles
 			borderBottom = 0.1;
 			class MFD1
 			{
-				/// HUD location memory points
 				topLeft = "HUD LH1";
 				topRight = "HUD PH1";
 				bottomLeft = "HUD LD1";
-				/// adjust position inside of memory points LOD
 				borderLeft = 0;
 				borderRight = 0;
 				borderTop = 0;
 				borderBottom = 0;
-
-				color[]={0,1,0,0.1}; // master color
-				//font<=fontHelicopterHUD;
-				//font<="FontConfig/HUD";
-
-				#define Pos0Center 0.27
-				/// common definition for all vectors projected into HUD space
+				color[] = {0,1,0,0.1};
 				class Pos10Vector
 				{
-					type=vector;
-					// position of 0-degree dive line
-					pos0[]={0.5,Pos0Center};
-					// position of 10 degree bank and 10-degree dive (used to adjust scale)
-					//pos10[]={2.0,Pos0Center+1.3};
-					pos10[]={0.5+0.9,Pos0Center+0.7};
+					type = "vector";
+					pos0[] = {0.5,0.27};
+					pos10[] = {"0.5+0.9","0.27+0.7"};
 				};
 				class Bones{};
 				class Draw
 				{
-					alpha=0.9;
-					//color[]={0.1,0.5,0.05};
-					color[]={0,1,0};
-					clipTL[]={0.0,0.0};
-					clipBR[]={1.0,1.0};
-					condition="on";
+					alpha = 0.9;
+					color[] = {0,1,0};
+					clipTL[] = {0,0};
+					clipBR[] = {1,1};
+					condition = "on";
 					class Altitude
 					{
-						type=text;
-						align=left;
-						scale=1; // text size
-						source=altitudeASL;
-						sourceScale=1;
-#define SETPOS(XX,YY) {__EVAL((XX)+0.33),__EVAL((YY)+0.062)}
-						pos[]={SETPOS(-0.05,-0.02),1};
-						right[]={SETPOS(-0.01,-0.02),1};
-						down[]={SETPOS(-0.05,0.02),1};
-
+						type = "text";
+						align = "left";
+						scale = 1;
+						source = "altitudeASL";
+						sourceScale = 1;
+						pos[] = {{ 0.28,0.042 },1};
+						right[] = {{ 0.32,0.042 },1};
+						down[] = {{ 0.28,0.082 },1};
 					};
 					class Altitude2
 					{
-						type=text;
-						align=left;
-						scale=1; // text size
-						source=altitudeAGL;
-						sourceScale=1;
-#define SETPOS(XX,YY) {__EVAL((XX)+0.5),__EVAL((YY)+0.062)}
-						pos[]={SETPOS(-0.05,-0.02),1};
-						right[]={SETPOS(-0.01,-0.02),1};
-						down[]={SETPOS(-0.05,0.02),1};
-
+						type = "text";
+						align = "left";
+						scale = 1;
+						source = "altitudeAGL";
+						sourceScale = 1;
+						pos[] = {{ 0.45,0.042 },1};
+						right[] = {{ 0.49,0.042 },1};
+						down[] = {{ 0.45,0.082 },1};
 					};
 					class RPM
 					{
-						type=text;
-						align=left;
-						scale=1; // text size
-						source=rpm;
-						sourceScale=100;
-#define SETPOS(XX,YY) {__EVAL((XX)+0.68),__EVAL((YY)+0.2)}
-						pos[]={SETPOS(-0.05,-0.02),1};
-						right[]={SETPOS(-0.01,-0.02),1};
-						down[]={SETPOS(-0.05,0.02),1};
+						type = "text";
+						align = "left";
+						scale = 1;
+						source = "rpm";
+						sourceScale = 100;
+						pos[] = {{ 0.63,0.18 },1};
+						right[] = {{ 0.67,0.18 },1};
+						down[] = {{ 0.63,0.22 },1};
 					};
 					class RPM2
 					{
-						type=text;
-						align=left;
-						scale=1; // text size
-						source=rpm;
-						sourceScale=100;
-#define SETPOS(XX,YY) {__EVAL((XX)+0.852),__EVAL((YY)+0.2)}
-						pos[]={SETPOS(-0.05,-0.02),1};
-						right[]={SETPOS(-0.01,-0.02),1};
-						down[]={SETPOS(-0.05,0.02),1};
+						type = "text";
+						align = "left";
+						scale = 1;
+						source = "rpm";
+						sourceScale = 100;
+						pos[] = {{ 0.802,0.18 },1};
+						right[] = {{ 0.842,0.18 },1};
+						down[] = {{ 0.802,0.22 },1};
 					};
 					class Fuel
 					{
-						type=text;
-						align=left;
-						scale=1; // text size
-						source=fuel;
-						sourceScale=100;
-#define SETPOS(XX,YY) {__EVAL((XX)+0.68),__EVAL((YY)+0.445)}
-						pos[]={SETPOS(-0.05,-0.02),1};
-						right[]={SETPOS(-0.01,-0.02),1};
-						down[]={SETPOS(-0.05,0.02),1};
+						type = "text";
+						align = "left";
+						scale = 1;
+						source = "fuel";
+						sourceScale = 100;
+						pos[] = {{ 0.63,0.425 },1};
+						right[] = {{ 0.67,0.425 },1};
+						down[] = {{ 0.63,0.465 },1};
 					};
 					class Fuel2
 					{
-						type=text;
-						align=left;
-						scale=1; // text size
-						source=fuel;
-						sourceScale=100;
-#define SETPOS(XX,YY) {__EVAL((XX)+0.852),__EVAL((YY)+0.445)}
-						pos[]={SETPOS(-0.05,-0.02),1};
-						right[]={SETPOS(-0.01,-0.02),1};
-						down[]={SETPOS(-0.05,0.02),1};
+						type = "text";
+						align = "left";
+						scale = 1;
+						source = "fuel";
+						sourceScale = 100;
+						pos[] = {{ 0.802,0.425 },1};
+						right[] = {{ 0.842,0.425 },1};
+						down[] = {{ 0.802,0.465 },1};
 					};
-
 					class Speed
 					{
-						type=text;
-						align=left;
-						scale=1; // text size
-						source=speed;
-						sourceScale=__EVAL(3.6/1.609344);
-#define SETPOS(XX,YY) {__EVAL((XX)+0.330),__EVAL((YY)+0.245)}
-						pos[]={SETPOS(-0.05,-0.02),1};
-						right[]={SETPOS(-0.01,-0.02),1};
-						down[]={SETPOS(-0.05,0.02),1};
+						type = "text";
+						align = "left";
+						scale = 1;
+						source = "speed";
+						sourceScale = 2.23694;
+						pos[] = {{ 0.28,0.225 },1};
+						right[] = {{ 0.32,0.225 },1};
+						down[] = {{ 0.28,0.265 },1};
 					};
 				};
 			};
