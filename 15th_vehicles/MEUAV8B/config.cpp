@@ -70,6 +70,7 @@ class CfgAmmo
 	explosionSoundEffect = "DefaultExplosion";
   	explosionTime = 2;
   	fuseDistance = 35;
+	soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1",6,1.5,400};
   	whistleDist = 24;
 	weaponLockSystem = "2 + 16 + 4";
 	nvLock = 1;
@@ -169,7 +170,7 @@ class CfgAmmo
   	hit = 2100;
   	indirectHit = 85;
   	indirectHitRange = 10;
-	soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2",0.5011872,1.3,400};
+	soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2",6,1.3,400};
   	cost = 1500;
 	airLock = 0;
 	laserLock = 1;
@@ -194,7 +195,7 @@ class CfgAmmo
 	effectsMissile = "missile3";
 	explosionEffects = "AAMissileExplosion";
 	muzzleEffect = "BIS_fnc_effectFiredHeliRocket";
-  	whistleDist = 20;
+  	whistleDist = 24;
 	dangerRadiusHit= -1;
 	suppressionRadiusHit= 25;
 	maverickWeaponIndexOffset = 0;
@@ -236,7 +237,7 @@ class CfgAmmo
 		indirectHitRange = 10;
 		maneuvrability = 27;
 		simulationStep = 0.002;
-		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2",0.5011872,1.3,400};
+		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2",6,1.3,400};
 		airLock = 1;
 		irLock = 1;
 		cost = 15000;
@@ -253,7 +254,7 @@ class CfgAmmo
 	effectsMissile = "missile3";
 	explosionEffects = "AAMissileExplosion";
 	muzzleEffect = "BIS_fnc_effectFiredHeliRocket";
-		whistleDist = 20;
+		whistleDist = 24;
 		maverickWeaponIndexOffset = 0;
 	};
 	class R_Hydra: RocketBase
@@ -268,6 +269,7 @@ class CfgAmmo
 		sideAirFriction = 0.2;
 		timeToLive = 20;
 		fuseDistance = 40;
+		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1",6,1.5,400};
 		whistleDist = 24;
 		dangerRadiusHit= -1;
 		suppressionRadiusHit= 35;

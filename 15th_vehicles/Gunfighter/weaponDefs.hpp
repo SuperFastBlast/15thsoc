@@ -128,15 +128,14 @@ class CfgAmmo
 	sideairfriction = 0.08;
 	simulationstep = 0.002;
 	soundHit[] = {"A3\Sounds_F\weapons\Rockets\explosion_missile_01",3.1622777,1,2500};
-	soundFly[] = {"",1,1,400};
-	soundEngine[] = {"",1,1,50};
+	soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1",6,1.5,400};
 	thrust = 366;
 	thrusttime = 2;
 	timetolive = 19;
 	tracklead = 1;
 	trackoversteer = 1;
 	weaponlocksystem = "2 + 16 + 4";
-	whistledist = 8;
+	whistledist = 24;
 		dangerRadiusHit= -1;
 		suppressionRadiusHit= 25;
 	class Hiteffects 
@@ -158,6 +157,7 @@ class CfgAmmo
 		sideAirFriction = 0.2;
 		timeToLive = 20;
 		fuseDistance = 40;
+		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_1",6,1.5,400};
 		whistleDist = 24;
 		dangerRadiusHit= -1;
 		suppressionRadiusHit= 35;

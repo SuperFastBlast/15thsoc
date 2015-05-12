@@ -162,6 +162,8 @@ class CfgVehicles
 		cargocansee = 1 + 2 + 4 + 8 + 16;
 		driverAction = MV22_Pilot;
 		driverInAction = MV22_Pilot;
+		memoryPointsGetInDriver="pos codriver";
+		memoryPointsGetInDriverDir="pos codriver dir";
 		GetInAction = GetInHigh;
 		GetOutAction = GetOutHigh; 
 		memoryPointsGetInCargo[] = {"pos cargo"};
@@ -214,7 +216,7 @@ class CfgVehicles
 			"300Rnd_CMFlare_Chaff_Magazine"
 		};
 
-		insideSoundCoef = 0.09;
+		insideSoundCoef = 0.05;
 		attenuationEffectType = "HeliAttenuation";
 		soundGetIn[]={"MV22\sound\close",db-10,1,10};
 		soundGetOut[]={"MV22\sound\open",db-10,1,20};
@@ -529,24 +531,64 @@ class CfgVehicles
 		{
 			class rampup
 			{
-				displayName="<t color='#FF0000'>Open Ramp</t>";
+				displayName="<t color='#FFD700'>Open Ramp";
 				position="zamerny";
 				radius=5;
 				condition="(this animationPhase ""ramp_top"" == 0) && (player in [driver this,gunner this]) && (alive this)";
 				statement="[this,1] execvm ""\mv22\scripts\ramp.sqf""";
 				onlyforplayer=1;
-				priority=9;
+				priority=-9;
 			};
 
 			class rampdown
 			{
-				displayName="<t color='#FF0000'>Close Ramp</t>";
+				displayName="<t color='#FFD700'>Close Ramp";
 				position="zamerny";
 				radius=5;
 				condition="(this animationPhase ""ramp_bottom"" == 1) && (player in [driver this,gunner this]) && (alive this)";
 				statement="[this,0] execvm ""\mv22\scripts\ramp.sqf""";
 				onlyforplayer=1;
-				priority=9;
+				priority=-9;
+			};
+			class Redlighton
+			{
+				displayName="<t color='#FF0000'>Redlight On";
+				position="redlight";
+				radius=5;
+				condition= "this animationPhase ""Redlight"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Redlight"",1];"; /// and what happens when the action is used
+				onlyforplayer=1;
+				priority=-8;
+			};
+			class Redlightoff
+			{
+				displayName="<t color='#FF0000'>Redlight Off";
+				position="redlight";
+				radius=5;
+				condition= "this animationPhase ""Redlight"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Redlight"",0];"; /// and what happens when the action is used
+				onlyforplayer=1;
+				priority=-8;
+			};
+			class Greenlighton
+			{
+				displayName="<t color='#008000'>Greenlight On";
+				position="redlight";
+				radius=5;
+				condition= "this animationPhase ""Greenlight"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Greenlight"",1];"; /// and what happens when the action is used
+				onlyforplayer=1;
+				priority=-7;
+			};
+			class Greenlightoff
+			{
+				displayName="<t color='#008000'>Greenlight Off";
+				position="redlight";
+				radius=5;
+				condition= "this animationPhase ""Greenlight"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Greenlight"",0];"; /// and what happens when the action is used
+				onlyforplayer=1;
+				priority=-7;
 			};
 		};
 		class Exhausts
