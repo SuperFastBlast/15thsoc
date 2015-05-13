@@ -507,10 +507,10 @@ class CfgVehicles
 		dammageHalf[]={};
 		dammageFull[]={};
 
-		class AnimationSources
+		class AnimationSources: AnimationSources
 		{
 			class Door_1_1 {source = "user"; animPeriod = 0;};
-			class Ramp {source = "user"; animPeriod = 7;};
+			class Ramp {source = "user"; animPeriod = 6;};
 			class pack_engine_1 {source = "user"; animPeriod = 0/*15*/;};
 			#define ENGINE_PROP_TURN(x,y) class engine_prop_##x##_##y##_turn:pack_engine_1{}
 			ENGINE_PROP_TURN(1,1);
@@ -526,6 +526,18 @@ class CfgVehicles
 			ENGINE_PROP_CLOSE(2,2);
 			class pack_engine_2: pack_engine_1{};
 			class turn_wing: pack_engine_1{};
+			class Redlight1
+			{
+				source		 = "user"; /// what is the animation source based on, this time it is user input
+				animPeriod	 = 1; /// how long does it take to switch from 0 to 1 (or vice versa) if used by script
+				initPhase	 = 0; /// what is the value of animation source to start with
+			};
+			class Greenlight1
+			{
+				source		 = "user";
+				animPeriod	 = 1;
+				initPhase	 = 0;
+			};
 		};
 		class UserActions
 		{
@@ -547,6 +559,7 @@ class CfgVehicles
 				radius=5;
 				condition="(this animationPhase ""ramp_bottom"" == 1) && (player in [driver this,gunner this]) && (alive this)";
 				statement="[this,0] execvm ""\mv22\scripts\ramp.sqf""";
+				animPeriod = 0;
 				onlyforplayer=1;
 				priority=-9;
 			};
@@ -555,9 +568,10 @@ class CfgVehicles
 				displayName="<t color='#FF0000'>Redlight On";
 				position="redlight";
 				radius=5;
-				condition= "this animationPhase ""Redlight"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
-				statement= "this animate [""Redlight"",1];"; /// and what happens when the action is used
+				condition= "this animationPhase ""Redlightstart"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Redlightstart"",1];"; /// and what happens when the action is used
 				onlyforplayer=1;
+				animPeriod= 0;
 				priority=-8;
 			};
 			class Redlightoff
@@ -565,8 +579,8 @@ class CfgVehicles
 				displayName="<t color='#FF0000'>Redlight Off";
 				position="redlight";
 				radius=5;
-				condition= "this animationPhase ""Redlight"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
-				statement= "this animate [""Redlight"",0];"; /// and what happens when the action is used
+				condition= "this animationPhase ""Redlightstart"" > 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Redlightstart"",0];"; /// and what happens when the action is used
 				onlyforplayer=1;
 				priority=-8;
 			};
@@ -575,8 +589,9 @@ class CfgVehicles
 				displayName="<t color='#008000'>Greenlight On";
 				position="redlight";
 				radius=5;
-				condition= "this animationPhase ""Greenlight"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
-				statement= "this animate [""Greenlight"",1];"; /// and what happens when the action is used
+				condition= "this animationPhase ""Greenlightstart"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Greenlightstart"",1];"; /// and what happens when the action is used
+				animPeriod = 0;
 				onlyforplayer=1;
 				priority=-7;
 			};
@@ -585,8 +600,9 @@ class CfgVehicles
 				displayName="<t color='#008000'>Greenlight Off";
 				position="redlight";
 				radius=5;
-				condition= "this animationPhase ""Greenlight"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
-				statement= "this animate [""Greenlight"",0];"; /// and what happens when the action is used
+				condition= "this animationPhase ""Greenlightstart"" > 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Greenlightstart"",0];"; /// and what happens when the action is used
+				animPeriod = 0;
 				onlyforplayer=1;
 				priority=-7;
 			};
