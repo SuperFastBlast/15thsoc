@@ -538,6 +538,12 @@ class CfgVehicles
 				animPeriod	 = 1;
 				initPhase	 = 0;
 			};
+			class Greentip1
+			{
+				source		 = "user";
+				animPeriod	 = 1;
+				initPhase	 = 0;
+			};
 		};
 		class UserActions
 		{
@@ -602,6 +608,28 @@ class CfgVehicles
 				radius=5;
 				condition= "this animationPhase ""Greenlightstart"" > 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
 				statement= "this animate [""Greenlightstart"",0];"; /// and what happens when the action is used
+				animPeriod = 0;
+				onlyforplayer=1;
+				priority=-7;
+			};
+			class Formationon
+			{
+				displayName="<t color='#00FF7F'>Formation Lights On";
+				position="redlight";
+				radius=5;
+				condition= "this animationPhase ""Greentipstart"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Greentipstart"",1];"; /// and what happens when the action is used
+				animPeriod = 0;
+				onlyforplayer=1;
+				priority=-7;
+			};
+			class Formationoff
+			{
+				displayName="<t color='#00FF7F'>Formation Lights Off";
+				position="redlight";
+				radius=5;
+				condition= "this animationPhase ""Greentipstart"" > 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Greentipstart"",0];"; /// and what happens when the action is used
 				animPeriod = 0;
 				onlyforplayer=1;
 				priority=-7;

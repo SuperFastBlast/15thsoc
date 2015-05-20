@@ -448,8 +448,8 @@ class CfgVehicles
 	class Plane: Air
 	{
 		class HitPoints;
+		class AnimationSources;
 	};
-	class PlaneWreck;
 	class MEUAV8B2: Plane
 	{
 		scope = 2;
@@ -480,7 +480,10 @@ class CfgVehicles
 		driverRightHandAnimName = "stick_pilot";
 		fuelCapacity=1200;
 		fuelConsumptionRate=0.138;
-
+		class Eventhandlers: DefaultEventhandlers
+		{
+			init = "if (!isNil {meu_fnc_bitchinBetty}) then {_this spawn meu_fnc_bitchinBetty;};";
+		};
 		maxSpeed = 1040;
 		landingSpeed = 200;
 		acceleration = 300;
@@ -2197,8 +2200,14 @@ condition = "collisionlights";
 	};
 	};
 
-		class AnimationSources
+		class AnimationSources: AnimationSources
 		{
+			class Greenlight1
+			{
+				source		 = "user";
+				animPeriod	 = 1;
+				initPhase	 = 0;
+			};
 			class VTOL
 			{
 				source = "user";
@@ -2210,11 +2219,36 @@ condition = "collisionlights";
 				weapon = "MEU_gatling_25mm";
 			};
 		};
+		class UserActions
+		{
+			class Greenlighton
+			{
+				displayName="<t color='#008000'>Formation Lights On";
+				position="zamerny";
+				radius=6;
+				condition= "this animationPhase ""Greenlightstart"" < 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Greenlightstart"",1];"; /// and what happens when the action is used
+				animPeriod = 0;
+				onlyforplayer=1;
+				priority=-7;
+			};
+			class Greenlightoff
+			{
+				displayName="<t color='#008000'>Formation Lights Off";
+				position="zamerny";
+				radius=6;
+				condition= "this animationPhase ""Greenlightstart"" > 0.5 && (player in [driver this,gunner this]) && (alive this)"; /// at what condition is the action displayed
+				statement= "this animate [""Greenlightstart"",0];"; /// and what happens when the action is used
+				animPeriod = 0;
+				onlyforplayer=1;
+				priority=-7;
+			};
+		};
 		class Library
 		{
 			libTextDesc = "MEU AV8B2";
 		};
-		insideSoundCoef = 0.09;
+		insideSoundCoef = 0.05;
 		attenuationEffectType = "HeliAttenuation";
 		soundGetIn[] = {"meuAV8b\ext\ext-jetair-cabine-close1",0.056234132,1};
 		soundGetOut[] = {"meuAV8b\ext\ext-jetair-cabine-open1",0.056234132,1,30};
