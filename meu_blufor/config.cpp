@@ -25,142 +25,48 @@ class CfgFunctions
 			class checkMods {};
 			class bitchinBetty {ext = ".fsm";};
 			class amphibious {};
+			class incomingMissile {};
 		};
 	};
 };
 
 class CfgSounds
-{	//-- TODO: Macro these --//
-	class meu_alititude
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Altitude.ogg", 2, 1 };
-	};
-	class meu_pullup
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Pullup.ogg", 2, 1 };
-	};
-	class meu_missile12H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile12H.ogg", 2, 1 };
-	};
-	class meu_missile12L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile12L.ogg", 2, 1 };
-	};
-	class meu_missile1H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile1H.ogg", 2, 1 };
-	};
-	class meu_missile1L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile1L.ogg", 2, 1 };
-	};
-	class meu_missile2H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile2H.ogg", 2, 1 };
-	};
-	class meu_missile2L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile2L.ogg", 2, 1 };
-	};
-	class meu_missile3H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile3H.ogg", 2, 1 };
-	};
-	class meu_missile3L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile3L.ogg", 2, 1 };
-	};
-	class meu_missile4H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile4H.ogg", 2, 1 };
-	};
-	class meu_missile4L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile4L.ogg", 2, 1 };
-	};
-	class meu_missile5H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile5H.ogg", 2, 1 };
-	};
-	class meu_missile5L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile5L.ogg", 2, 1 };
-	};
-	class meu_missile3H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile3H.ogg", 2, 1 };
-	};
-	class meu_missile6L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile6L.ogg", 2, 1 };
-	};
-	class meu_missile7H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile7H.ogg", 2, 1 };
-	};
-	class meu_missile7L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile7L.ogg", 2, 1 };
-	};
-	class meu_missile8H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile8H.ogg", 2, 1 };
-	};
-	class meu_missile8L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile8L.ogg", 2, 1 };
-	};
-	class meu_missile9H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile9H.ogg", 2, 1 };
-	};
-	class meu_missile9L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile9L.ogg", 2, 1 };
-	};
-	class meu_missile3H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile3H.ogg", 2, 1 };
-	};
-	class meu_missile10L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile10L.ogg", 2, 1 };
-	};
-	class meu_missile11H
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile11H.ogg", 2, 1 };
-	};
-	class meu_missile11L
-	{
-		titles[] = {};
-		sound[] = { "meu_blufor\sounds\Missile11L.ogg", 2, 1 };
-	};
+{
+
+	#define SOUNDPATH(FILE) __EVAL("meu_blufor\sounds\" + FILE)
+	#define CLASSSOUND(CLASSNAME,PATH,NUM1,NUM2) \
+		class CLASSNAME { \
+			titles[] = {}; \
+			sound[] = { SOUNDPATH(PATH), NUM1, NUM2 }; \
+		};
+	#define SOUNDVOLUME 4
+	
+	CLASSSOUND(meu_altitude,"Altitude.ogg",1,1)
+	CLASSSOUND(meu_pullup,"Pullup.ogg",1,1)
+	CLASSSOUND(meu_missile1H,"Missile1H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile1L,"Missile1L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile2H,"Missile2H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile2L,"Missile2L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile3H,"Missile3H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile3L,"Missile3L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile4H,"Missile4H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile4L,"Missile4L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile5H,"Missile5H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile5L,"Missile5L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile6H,"Missile6H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile6L,"Missile6L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile7H,"Missile7H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile7L,"Missile7L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile8H,"Missile8H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile8L,"Missile8L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile9H,"Missile9H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile9L,"Missile9L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile10H,"Missile10H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile10L,"Missile10L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile11H,"Missile11H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile11L,"Missile11L.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile12H,"Missile12H.ogg",SOUNDVOLUME,1)
+	CLASSSOUND(meu_missile12L,"Missile12L.ogg",SOUNDVOLUME,1)
 };
 
 class DefaultEventHandlers;
@@ -186,6 +92,7 @@ class CfgVehicles
 		{
 			init = "if (!isNil {meu_fnc_bitchinBetty}) then {_this spawn meu_fnc_bitchinBetty;};";
 		};
+		soundIncommingMissile[] = {"",0.1,1.5};
 	};
 
 };

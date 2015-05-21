@@ -1,4 +1,4 @@
-// had to do it this way because once I repacked AAV with changes below, it no longer floated.
+// had to do it this way because once I repacked AAV with changes below, it no longer would float.
 
 #define UAFALSE(TEXT)  	class ##TEXT##  {  condition = "false";  };
 #define UANAME(STRING)	displayName = STRING; displayNameDefault = STRING;
@@ -33,25 +33,25 @@
 			};
 			class leftHatchOpen
 			{
-				UANAME("<t color='#6A98FA'>Open Left Hatch")						
-				UACOND("this animationPhase ""leftHatch"" == 0")			
+				UANAME("<t color='#6A98FA'>Open Left Hatch")
+				UACOND("this animationPhase ""leftHatch"" == 0")
 				priority = 0.1;
 			};				
 			class leftHatchClose
 			{
-				UANAME("<t color='#6A98FA'>Close Left Hatch")							
+				UANAME("<t color='#6A98FA'>Close Left Hatch")
 				UACOND("this animationPhase ""leftHatch"" == 1")
 				priority = 0.1;
 			};			
 			class RightHatchOpen
 			{
-				UANAME("<t color='#6A98FA'>Open Right Hatch")							
+				UANAME("<t color='#6A98FA'>Open Right Hatch")
 				UACOND("this animationPhase ""rightHatch"" == 0") 
 				priority = 0;
 			};					
 			class RightHatchClose
 			{
-				UANAME("<t color='#6A98FA'>Close Right Hatch")						
+				UANAME("<t color='#6A98FA'>Close Right Hatch")
 				UACOND("this animationPhase ""RightHatch"" == 1") 
 				priority = 0;
 			};				
@@ -63,8 +63,8 @@
 			};	
 			class rampClose
 			{
-				UANAME("<t color='#45FE2F'>Close Ramp")							
-				UACOND("this animationPhase ""rearRamp"" == 1") 
+				UANAME("<t color='#45FE2F'>Close Ramp")
+				UACOND("this animationPhase ""rearRamp"" == 1")
 				priority = 4;
 			};
 			//-- completely disable these actions --//
@@ -73,7 +73,7 @@
 			UAFALSE(Right)
 			UAFALSE(Stop)
 			UAFALSE(Forward)
-		};	
+		};
 	};
 	
 	class Burnes_aav_des: AAVB 
